@@ -1,0 +1,10 @@
+compile_pdf:
+  image: aergus/latex
+  script:
+    - pdflatex First_Blood.tex
+    - makeglossaries First_Blood
+    - makeindex First_Blood.idx
+    - pdflatex First_Blood.tex
+  artifacts:
+    paths:
+      - First_Blood.pdf
