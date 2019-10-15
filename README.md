@@ -111,7 +111,7 @@ Join me!
 
 You can join by: 
 
-- Putting your complaints on a pdf and emailing them to me.  I'll deal with the code.
+- Emailing complaints to incoming+andonome-first-blood-12979042-issue-@incoming.gitlab.com.
 
 - Contributing art.
 
@@ -122,5 +122,4 @@ You can join by:
 - Writing to me, and if you like how the book's going, join as a dev.
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
-
 
