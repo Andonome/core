@@ -1,0 +1,213 @@
+\usepackage[latin1]{inputenc}
+\usepackage{appendix}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{svg}
+\svgsetup{width=\textwidth}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{makeidx}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{incgraph}
+\usepackage{etoolbox}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+\usepackage{pifont}
+\usepackage{colortbl}
+\usepackage[poster]{tcolorbox}
+\tcbuselibrary{breakable,raster}
+\tcbset{before upper=\setlength{\parindent}{1em}\everypar{{\setbox0\lastbox}\everypar{}},parbox=true,enhanced,colback=white,breakable,arc=6mm,outer arc=1mm}
+
+%%%%%%%%%% Section Headers %%%%%%%%%%
+
+%%% Allow quotes under part headers
+\makeatletter
+\let\old@endpart\@endpart
+\renewcommand\@endpart[1][]{%
+\begin{quote}#1\end{quote}%
+\old@endpart}
+\makeatother
+
+\titleformat{\chapter}[frame]
+{\normalfont}
+{\filright
+\footnotesize
+\enspace SECTION \thesection\enspace}
+{8pt}
+{\Huge\filcenter\bfseries}
+
+\newcommand{\chapnumfont}{
+  \fontsize{144}{0}
+  \selectfont
+}
+
+%%%%%%%%%% Encounter Numbers
+\newcounter{encnum}
+\setcounter{encnum}{1}
+\newcommand{\encsymbol}{\ding{168}}
+\newcommand{\encnum}{\ifnumcomp{\value{encnum}}{=}{1}{$A$}{\arabic{encnum}}\encsymbol\addtocounter{encnum}{1}}
+
+\newcommand{\headingtype}{CHAPTER}
+
+\colorlet{chapnumcol}{black!55}
+
+\titleformat{\chapter}[display]
+{\bfseries}
+{\begin{tikzpicture}
+  \node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
+  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\huge \headingtype~~};
+  \node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\thechapter}};
+\end{tikzpicture}}
+{0pt}
+{\Huge}
+
+\titleformat{\section}[frame]
+{\normalfont}
+{\filright
+\footnotesize
+\enspace SECTION \thesection\enspace}
+{8pt}
+{\Large\bfseries\filcenter}
+
+%\titleformat{\subsection}{\needspace{2\textheight}\large\bfseries}{}{1em}{}[\titlerule]
+%
+%\titleformat{\section}
+%{\needspace{4\textheight}\normalfont\Large\bfseries}{\thesection}
+%{1em}
+%{
+%\vspace{1ex}
+%}[\titlerule]
+%
+%\titleformat{\subsubsection}
+%{\normalfont\normalsize\bfseries}{}{1em}{\ding{227} }
+%
+%\titleformat{\paragraph}[runin]
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%
+%\titleformat{\subparagraph}[runin]
+%{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+%\titlespacing*{\chapter}
+%{0pt}{50pt}{40pt}
+%\titlespacing*{\section}
+%{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph}
+%{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
+\newcommand{\character}[1]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
+
+\newcommand{\monster}[1]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
+
+%%%%%%%%%%%%%%%%%%%% TOGGLES %%%%%%%%%%%%%%%%%%%%
+
+\newtoggle{verbose}
+\settoggle{verbose}{true}
+
+\iftoggle{verbose}{
+	\setcounter{tocdepth}{1}
+	\setcounter{secnumdepth}{1}
+}
+
+\newcounter{enc}
+\newcounter{list}
+\newcounter{spelllevel}
+\setcounter{spelllevel}{0}
+
+
+%%%%%%%%%%%%%%%%%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%
+\makeindex
+\raggedbottom
+
+\newcommand{\currentsphere}{magic}
+\newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}}
+
+\newcommand{\spell}[3]{\subsubsection{#1}
+
+{\it Type: #2, Skill: #3}
+
+\noindent}
+
+% Toggles for knacks
+
+%%%%%%%%%%%%%%%%%%%% Environments %%%%%%%%%%%%%%%%%%%%
+\newenvironment{boxtext}{\begin{quotation}\noindent}{\end{quotation}}
+
+\newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
+
+\tcolorboxenvironment{boxtext}{}
+\tcolorboxenvironment{speechtext}{}
+
+\newenvironment{rolltable}%
+{\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}
+
+
+Roll & Result \\
+\hline
+
+}%
+{\end{tabular}}
+
+
+\newenvironment{exampletext}{\vspace{.3cm}
+
+\hrule
+
+\vspace{.3cm}
+
+\it}{\normalfont}
+
+\newtcolorbox{xpchart}[1]{tabularx={l|p{.9\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
+
+\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{adjusted title=Encounters in #1,arc=1mm,tabularx={XXp{.7\textwidth}},code={\setcounter{enc}{19}\setcounter{list}{18}}}
+
+\newtcolorbox{rollchart}{tabularx={cp{.84\textwidth}},arc=1mm}
+
+\newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\story}[2]{\needspace{4cm}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
+
+
+\newcommand{\best}[1]{\subsubsection{#1}\index{#1}}
+
+%%% Random Number by grabbing last page digit
+\newcounter{random}
+
+\newcommand{\random}{
+		\addtocounter{random}{\thepage}
+	\whileboolexpr{
+		test {\ifnumcomp{\value{random}}{>}{10}}
+	}
+	{\addtocounter{random}{-10}}
+	{\setcounter{age}{\value{random}}}
+}
+
+\newcommand{\randomthree}{
+	\random
+	\whileboolexpr{
+		test {\ifnumcomp{\value{random}}{>}{3}}
+		}
+		{\addtocounter{random}{-3}}
+		{\setcounter{age}{\value{random}}}
+}
+
+\newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
+\newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
+\newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
+\newcounter{gold}
+
