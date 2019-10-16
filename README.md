@@ -2,8 +2,6 @@
 
 First Blood is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
-The most recent stable version is [here](https://gitlab.com/andonome/first-blood/blob/master/Finished_PDFs/First_Blood_Printable.pdf).
-
 # Mechanics
 The most important part of the game is mechanics, and everything revolves around speed.
 
