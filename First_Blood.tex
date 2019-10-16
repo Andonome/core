@@ -1773,6 +1773,7 @@ Quick Spells are challenging, and require the mage know a spell intimately.  The
 \index{Magic!Aldaron}The elves are intimately familiar with this sphere, and usually refer to it as a simple skill, like painting or any other trade. They call it simply `The knowledge of trees', though it deals with much more than wood -- animals can be turned into friends and companions, the weather can be controlled and at the ultimate level the forest itself can be called to uproot and give aid to the mage.
 
 \spelllevel
+
 \spell{Forest's Friendship}{Continuous}{Beast Ken}
 
 Novices of aldaron can befriend any beast, make them confused, send them to sleep or send them into a blind panic. Passive mammals such as sheep are easy to target while aggressive or strange creatures can be very difficult to get to grips with.
@@ -1847,6 +1848,7 @@ Wind can also be made to blow forward in a blast in front of the mage. The blast
 For example, Darren the druid blasts out a scathing wind against a row of goblins -- his Wits of +2 means he affects \setcounter{list}{2}\addtocounter{list}{\value{spelllevel}}\arabic{list} squares; since his Intelligence is +1, each target would lose each \setcounter{enc}{1}\addtocounter{enc}{\value{spelllevel}}\arabic{enc} points of Initiative, however the goblins' Strength bonus is -1, so they finally lose \addtocounter{enc}{1}\arabic{enc} points and cannot move until their next Initiative action. Each moves back (in the direction of the wind) \arabic{enc} squares minus their Strength bonus -- again, since this is -1 they move back \arabic{enc} squares.
 
 \spelllevel
+
 \spell{Animal Possession}{Continuous}{Beast Ken}
 
 The priest can now possess animals, taking their body. The priest retains their own Mind Attributes but takes on those of the animal, instinctively knowing how to move, fly, et c. They retain all their original Skills but few will be of any use. While their Athletics Skill will be required to fly and run, they will not be able to grasp tools or speak, and indeed hearing and understanding humanoid speech can be very different -- animal hearing is not designed to pick up on the same things as humanoid hearing.
@@ -1997,9 +1999,13 @@ The caster turns any nearby liquid into a slippery slime.  Anyone running across
 
 Casters acting quickly often carry their own water.  Throwing water requires 8 initiative for using an item, as usual.
 
-\spell{Web}{Continuous}{Crafts}
+\spell{Web}{Continuous}{Survival}
 
-The caster turns any liquid inta a viscious, sticky substance.  Anyone coming into the liquid gets stuck, and much take a full movement action trying to get free.  This requires a Strength + Athletics roll, TN 7 + the caster's Intelligence.
+The caster turns any liquid inta a viscious, sticky substance.  Anyone coming into the liquid gets stuck, and much take a full movement action trying to get free.
+
+Casters roll their Intelligence + Survival at a TN of 7 + the target's Strength + Athletics. Alternatively, players can avoid being stuck in the web by rolling Strength + Athletics, at TN 7 + the caster's Intelligence + Survival.
+
+Anyone can attempt to break free instea of their usual movement action.
 
 Webbing cannot be used instead of rope -- it's too elastic, and tends to snap when stretched.
 
@@ -2014,6 +2020,7 @@ The only limitation is that precious metals, such as copper, silver and gold, ca
 The caster can now transform things into complex items.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
 
 \spell{Acid}{Continuous}{Survival}
+
 The caster can turn any liquid into a potent acid.  Acidic substances deal $1D6$ Damage plus the caster's Intelligence bonus.
 
 \spell{Desintegration}{Continuous}{Survival}
@@ -2062,7 +2069,7 @@ The mage teleports the target a short distance -- up to \arabic{spelllevel} squa
 
 \spell{Portal}{Instant}{Survival}
 
-The \gls{miracleworker} can open a magical portal from one place to another.  The only restriction is that the two areas can be at maximum \arabic{spelllevel} + the caster's Wits apart.
+The caster can open a magical portal from one place to another.  The only restriction is that the two areas can be at maximum \arabic{spelllevel} + the caster's Wits apart.
 
 Portals cast underwater send water gushing to the other side.  Portals can also be cast with one on the ground, and another on a ceiling, so that anyone stepping inside falls through.
 
