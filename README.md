@@ -1,6 +1,6 @@
 # First Blood
 
-First Blood is a D\&D-style RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
+First Blood is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
 The most recent stable version is [here](https://gitlab.com/andonome/first-blood/blob/master/Finished_PDFs/First_Blood_Printable.pdf).
 
