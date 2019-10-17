@@ -102,44 +102,24 @@ The villagers gathered. They fought, and drove off the invaders while pieces of 
 
 \chapter{Traits}\index{Traits}\pagenumbering{arabic}
 
-These are the \glspl{trait} -- the basic character-describing numbers -- which form the core of a \gls{character}. Almost every roll involves adding some Attribute to a Skill. We are going to begin by describing the \glspl{trait} and making a quick \gls{character}.
+Characters are defined by Traits, and the two main types are Attributes and Skills.  Attributes are innate Traits, deeply tied to who the character is, such as Strength, Speed, Intelligence and Wits.  Skills, meanwhile, are things the character learns.  Here's a squashed character, just to give you an idea of what one looks like:
 
-\section{Attributes}
-Every creature in the world has \gls{attribute} to define its basic aptitudes. How fast can they run? How aware of their environment are they? Each Attribute is rated from -3 to +3, where 0 is a sort of `normal' point. The Attribute's number is referred to as its `bonus', because this number forms the basic bonus to dice rolls characters make.
+\character{Elric the Fighter}
 
-\subsection[Body Attributes]{Body Attributes}
-\index{Body Attributes}\index{Physical Attributes}These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
+\humansoldier
 
-\subsubsection{Strength}
-Strength represents a character's muscles -- their ability to endure, to take damage, lift heavy objects, march for long distances and to wield heavy weapons without penalty.
-
-\subsubsection{Speed}
-Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run. Since it allows characters to flee dangerous situations, a group can be held back by its slowest member. A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat. Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
-
-\subsubsection{Dexterity}
-Dexterity represents someone's hand-eye coordination and natural grace. It's used to dodge, parry, block and also to aim projectile weapons. It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
-
-\subsection{Mind Attributes}
-\index{Mind Attributes}Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
-
-\subsubsection{Intelligence}
-Intelligent characters understand ideas, remember well and always come prepared. They find their own way home and pick up new languages fluidly. Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
-
-\subsubsection{Wits}
-Where intelligence represents how well a character thinks, Wits just tells you how fast they think. The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits. Wits is also the primary Attribute for resisting magical enchantments. Wits is the only Mind Attribute available to animals.
-
-\subsubsection{Charisma}
-Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
+Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and adding a Trait and Skill to the result.  If you roll high enough, you succeed.
 
 \section{Character Creation}\index{Character Creation} \iftoggle{verbose}{
 \includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
 }{}
 
+
 \begin{tcolorbox}[tabularx={cll},arc=1mm,adjusted title=Race]
 
 	Roll & Race & Adjustments \\\hline
 
-	2-3 & Gnoll & +1 Strength, +1 Speed, -1 Intelligence, -2 Charisma\\
+	2-3 & Gnoll & +1 Strength, +1 Speed, -1 Intelligence, -2 Charisma \\
 
 	4-5 & Dwarf & +1 Dexterity, -1 Speed \\
 
@@ -150,10 +130,6 @@ Finally, a character's ability to speak with people, make friends, lie convincin
 	11-12 & Gnome & +1 Intelligence, +1 Dexterity, Strength -2, Speed -1 \\
 
 \end{tcolorbox}
-
-\index{Character Creation}
-
-%It'll be easier to understand the system if you make a character as you follow along\footnote{For a complete and brief list of how to make a character, see page \pageref{charactercreation}.}.
 
 Character creation is random by default -- it helps new players get started quickly.  Either print out a character sheet or make some paper notes as we go. We begin by randomly assigning your race.  Much of character creation is concerned with interpreting your character as it forms -- what kind of person is this you are making? What do the Attribute Bonuses say about them? You will later be deciding on what kind of Skills and training will compliment the character, but the basics will all be random. Grab a pair of D6's and compare the result to the following chart.
 
@@ -181,27 +157,23 @@ Character creation is random by default -- it helps new players get started quic
 
 \end{wrapfigure}
 
-Personally, I've just rolled a `7' so I'm making a human; no surprise there, most characters will be human. I'm getting +1 Strength and -1 Wits. You may think that humans have a normal amount of Wits, but that's just because you've been spending time with too many of them. We and the other races generally consider you to be a little slow on the uptake -- not stupid in the long run, but not terribly bright either. That's fine -- I can roleplay a slightly slow person.
+I've just rolled a '7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
 
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
 
-Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives) and record the result after taking your racial modifiers into account.
-	Determine your race by rolling $2D6$ and comparing your result to the chart.
-
-Next, determine each of your Attributes by rolling $2D6$ and comparing the results to the Attribute bonus chart on the right.  Continue rolling until all 6 Attributes have a value.
-
-Remember to apply your racial bonuses and negatives to your Attribute totals.
+Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
 
 \subsection{Player Chosen Characters}
+
 If players prefer, they can design their own characters. In this case they select a race and take the racial modifiers as a starting point to spend \glspl{xp}.  They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
 
+\iftoggle{verbose}{
 \subsection{The Story of Thenton}
 
-My final results are Strength +1, Speed 0, Dexterity -1, Intelligence 0, Wits -1 and Charisma +1. That doesn't look it speaks of much, but consider what kind of human might be `Charismatic yet clumsy'. Perhaps a noble? It could be a performer, but what kind of performer doesn't have the coordination to play the difficult songs on the banjo? A poet! Imagine a minor noble, perhaps the third son of a townmaster or some such. He's always rushing about then falling over. His poems aren't terribly good (just look at that banal Intelligence score) but he can get better. Meanwhile, he earns his pay, and perhaps attempts to chat up a few ladies, based on his dashing good looks and likeable personality.
+After rolling the dice, my final results are Strength +1, Speed 0, Dexterity -1, Intelligence 0, Wits -1 and Charisma +1. That doesn't look it speaks of much, but consider what kind of human might be `Charismatic yet clumsy'. Perhaps a noble? It could be a performer, but what kind of performer doesn't have the coordination to play the difficult songs on the banjo? A poet! Imagine a minor noble, perhaps the third son of a townmaster or some such. He's always rushing about then falling over. His poems aren't terribly good (just look at that banal Intelligence score) but he can get better. Meanwhile, he earns his pay, and perhaps attempts to chat up a few ladies, based on his dashing good looks and likeable personality.
 
 He just needs a name now -- something which captures the idea of a slightly silly fop, a knightly poet. `Thenton' should do it. Have you finished yours yet? We'll need it in a bit for practice rolls.
 
-\iftoggle{verbose}{
 \begin{exampletext}
 
 	The skinny man greeted Thenton with overbearing enthusiasm as he continued to explained the mission.
@@ -226,6 +198,35 @@ The wizard smiled again.
 
 \end{exampletext}
 }{}
+
+\section{Attributes}
+
+These are the basics Traits which characters must use over and over again for every roll.
+
+\subsection{Body Attributes}\index{Body Attributes}\index{Physical Attributes}
+
+These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
+
+\subsubsection{Strength}
+Strength represents a character's muscles -- their ability to endure, to take damage, lift heavy objects, march for long distances and to wield heavy weapons without penalty.
+
+\subsubsection{Speed}
+Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run. Since it allows characters to flee dangerous situations, a group can be held back by its slowest member. A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat. Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
+
+\subsubsection{Dexterity}
+Dexterity represents someone's hand-eye coordination and natural grace. It's used to dodge, parry, block and also to aim projectile weapons. It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
+
+\subsection{Mind Attributes}
+\index{Mind Attributes}Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
+
+\subsubsection{Intelligence}
+Intelligent characters understand ideas, remember well and always come prepared. They find their own way home and pick up new languages fluidly. Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
+
+\subsubsection{Wits}
+Where intelligence represents how well a character thinks, Wits just tells you how fast they think. The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits. Wits is also the primary Attribute for resisting magical enchantments. Wits is the only Mind Attribute available to animals.
+
+\subsubsection{Charisma}
+Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
 
 \section{Skills}
 
