@@ -8,6 +8,7 @@
 \usepackage{tabularx}
 \usepackage{wrapfig}
 \usepackage{float}
+\usepackage{epigraph}
 \usepackage{makeidx}
 \usepackage[english]{babel}
 \usepackage{multicol}
@@ -16,6 +17,7 @@
 \usepackage{etoolbox}
 \usepackage{float}
 \usepackage{titlesec}
+\usepackage{minitoc}
 \usepackage{needspace}
 \usepackage{tikz}
 \usetikzlibrary{mindmap,trees}
@@ -47,6 +49,8 @@
   \fontsize{144}{0}
   \selectfont
 }
+
+\dominitoc
 
 %%%%%%%%%% Encounter Numbers
 \newcounter{encnum}
@@ -177,8 +181,6 @@ Roll & Result \\
 \newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
 
 
-
-
 %%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\story}[2]{\needspace{4cm}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
@@ -211,4 +213,6 @@ Roll & Result \\
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
 \newcounter{gold}
+
+\newcommand{\sidequest}[1]{\subsection[#1]{#1 -- \encnum}}
 
