@@ -5,6 +5,8 @@ compile_pdf:
     - makeglossaries First_Blood
     - makeindex First_Blood.idx
     - pdflatex First_Blood.tex
+  except:
+    - dev
   artifacts:
     paths:
       - First_Blood.pdf
