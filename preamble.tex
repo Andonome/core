@@ -136,6 +136,7 @@
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
 \newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}}
+\newcommand{\enhancement}{\paragraph{(#1) #2:}}
 
 \newcommand{\spell}[3]{\subsubsection{#1}
 
@@ -207,6 +208,15 @@ Roll & Result \\
 		}
 		{\addtocounter{random}{-3}}
 		{\setcounter{age}{\value{random}}}
+}
+
+\newcommand{\randomtwo}{
+	\random
+	\whileboolexpr{
+		test {\ifnumcomp{\value{random}}{>}{2}}
+		}
+		{\addtocounter{random}{-2}}
+		{\setcounter{list}{\value{random}}}
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
