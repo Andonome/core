@@ -1776,9 +1776,24 @@ Forest's Friendship works on all creatures without an Intelligence score. Umber 
 
 Forest's Friendship replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people.
 
+\enhancement{1}{Animal Mastery} The mage can use any level of the Enchantment sphere on animals.
+
 \spell{Dawn's Light}{Continuous}{Survival}
 
-The mage casts a dim light, light the light of a torch, which surrounds any target.
+The mage casts a dim light, about the strength of a torch, which surrounds any target.
+
+\enhancement{1}{Sunray}
+
+\iftoggle{verbose}{\begin{figure}[t!]
+\centering
+\includegraphics[width=\textwidth]{images/Roch_Hercka/flashing_light.jpg}
+\end{figure}}{}
+
+The \gls{miracleworker} casts a ray of light from any point within range -- the effect might be a floating orb or a shining staff, or even an enemy who lights up with unnatural light and cannot put it out. The light affects 1 area though it can be seen from farther away.
+
+If an area was previously dark then affected creatures not prepared for the light are blinded for \arabic{spelllevel} \glspl{round} minus their Wits Bonus, so an average human with Wits -1 would be blinded for 3 \glspl{round}. Undead creatures coming into contact with the light must make a moral check with a -1 penalty or flee.
+
+Anyone trying to cover their eyes must be Keeping Edgy\footnote{See page \pageref{edgy} for details on Keeping Edgy in combat.} and must be holding their action at the point the spell is cast. A character cannot decide to Keep Edgy after the spell has been declared.
 
 \spelllevel
 
@@ -1812,19 +1827,6 @@ The mist blinds people, and any combat within the uses the rules for Darkness on
 
 Finally, sneaking actions gain a bonus equal to \arabic{spelllevel} plus the caster's Intelligence Bonus.
 
-\spell{Sunray}{Continuous}{Survival}
-
-\iftoggle{verbose}{\begin{figure}[t!]
-\centering
-\includegraphics[width=\textwidth]{images/Roch_Hercka/flashing_light.jpg}
-\end{figure}}{}
-
-The \gls{miracleworker} casts a ray of light from any point within range -- the effect might be a floating orb or a shining staff, or even an enemy who lights up with unnatural light and cannot put it out. The light affects 1 area though it can be seen from farther away.
-
-If an area was previously dark then affected creatures not prepared for the light are blinded for \arabic{spelllevel} \glspl{round} minus their Wits Bonus, so an average human with Wits -1 would be blinded for 3 \glspl{round}. Undead creatures coming into contact with the light must make a moral check with a -1 penalty or flee.
-
-Anyone trying to cover their eyes must be Keeping Edgy\footnote{See page \pageref{edgy} for details on Keeping Edgy in combat.} and must be holding their action at the point the spell is cast. A character cannot decide to Keep Edgy after the spell has been declared.
-
 \spell{Whispering Wind}{Continuous}{Survival}
 
 The mage can also send out whispering messages on the wind, making their words carry across mountains and past houses. The winds can carry up to ten words, and the message can wander for miles around -- up to 2 areas plus 1 per Intelligence Bonus the mage has. This requires an Intelligence roll at TN 7 with a -1 penalty for every area miles away the target is. The target must be easily identifiable, as the wind acts as a semi-sentient extension of the mage's mind, watching out for the target with its own narrow version of vision.
@@ -1857,13 +1859,14 @@ Chief priests of Laiqu\"{e} often prove themselves by going on a mission to tame
 
 \spell{Forest's Call}{Continuous}{Beast Ken}
 
-The caster makes a call to the forest to come and attack the nearby target.  If the target is a player, the \gls{gm} rolls \arabic{spelllevel} times plus the caster's Intelligence on the local encounter table, and the \gls{pc} faces all encounters within the next day, and typically within the next scene.  The \gls{gm} is encouraged to combine all encounters.
+The caster makes a call to the forest to come and attack the nearby target.  If the target is a player, the \gls{gm} rolls \arabic{spelllevel} times plus the caster's Intelligence on the local encounter table, and the \gls{pc} faces all encounters within the next day, and typically within the next scene.  The \gls{gm} is encouraged to combine all encounters into one.
 
 If the target is an \gls{npc}, they lose \arabic{spelllevel} \gls{fp} + the caster's Intelligence.  If this leaves the target on 0 \gls{fp}, the target meets with an unfortunate accident next time they enter a natural environment, and dies.
 
 The curse only lasts while it's maintained, and only takes effect in a natural environment where creatures roam -- not in towns or otherworldly environments.
 
 \spelllevel
+
 \spell{Plantform}{Continuous}{Survival}
 
 The caster can radically alter how plants grow in real time. Plants can be made venomous, or can grow vast amounts of nourishing food. They can create structures such as temporary shelters or walls for protection. Of course such spells require a good body of plant matter to initially cast -- a verdant field with some root-plants or a forest are fine setting. The inside of a cavern or castle are not.
@@ -1921,6 +1924,7 @@ The caster can affect a total area equal to \arabic{spelllevel} squares plus the
 Once the spell is over, all degraded wood remains destroyed -- there is no coming back for any of these items. They become dust or wet mulch to be reclaimed by the natural cycle of life and death.
 
 \spelllevel
+
 \spell{Call of the Verdant Goddess}{Continuous}{Survival}
 
 This final level of the aldaron sphere allows true mastery of nature. Not only can the caster call up sentient plants to aid them in any quest, they can summon storms and destroy wood and therefore anything made from wood.
@@ -1938,6 +1942,7 @@ Such plants can sense their environment through movement -- people walking next 
 The right kind of foliage for this spell isn't always available. If the mage is situated in a desert or a castle's roof, the spell is completely unsuitable.
 
 \spell{Storm}{Continuous}{Survival}
+
 The final level of aldaron allows a mage to summon a mighty storm, possibly including rain, lightning, thunder and hail, as the caster desires. The exact effects of the storm are in the hands of the DM but potential effects include knocking down small buildings, inflicting Fatigue Points on anyone in the storm and random blasts of lightning. A higher Margin suggests more powerful effects. The spell extends from the caster in all directions by a number of areas equal to five plus their Wits.
 
 The storm always presents in a manner appropriate to the local environment. A desert might see a sandstorm rise while a caster out at sea might summon tidal waves.
@@ -1958,6 +1963,14 @@ Any character can decide that a conjuration spell targeting them by spending 5 F
 % +1 level for changing forms - solid/ liquid/ gas
 % +1 level for area
 % +1 level for complicated items, consisting of multiple components, or a complex shape.
+
+%\enhancement{1}{Form Breaking} The mage can turn any state -- solid, liquid or gas -- into any other state.  Air can turn into a liquid, and water can turn into stone.
+
+%\enhancement{1}{Massive Transformation} Spells that would normally target only a limited space can now target a number of squares equal to the spell's level plus the caster's Wits Bonus.  If a caster had Wits +1 and turned water into slime with a second level spell, the spell would affect 3 squares in total.
+
+%\enhancement{1}{Metal} Spells can now target and create non-precious metals, such as copper, bronze and iron.
+
+%\enhancement{2}{Valueable Metal} As above, but the caster can now target and affect any metal.
 
 \spelllevel
 
@@ -2273,7 +2286,7 @@ The priest spends 1 Story Point and gains an addtional 5 Story Points plus their
 
 As usual \gls{gm} is free to veto any ideas, but the player is also allowed 
 
-\spell{Resurrection}{Instant}{None}
+\spell{Resurrection}{Instant}{Medicine}
 
 The priest summons the soul of a recently deceased person back to their body. If they are beyond -3 Hit Points, they must roll a \index{Vitality}Vitality Check again to stay alive, but this time with a +5 bonus. There is no roll for the caster -- the spell is automatic and the spell is instant, so the effects need not be maintained. If the spell is made into a standing spell then the effects count as being continuously cast.
 
@@ -2282,6 +2295,9 @@ The spell also heals the target of a number of HP equal to half the Margin. This
 The spell must be cast within the same scene as the target lost their last HP.
 
 If cast on a member of the undead, the target loses $2D6$ \gls{hp} plus the caster's Intelligence Bonus No roll is made, and no protection can be given from \gls{fp}, \gls{SP} or any other source.
+
+%\spell{Mana Lake}{Continuous}{Empathy}
+% The priest sanctifies and area, creating a mana lake.  The level of the mana lake is equal to the number of Story Points the priest spends.
 
 \iftoggle{verbose}{
 
@@ -2482,6 +2498,7 @@ This ultimate level of illusion magic allows the caster to create negative illus
 Anyone targeting the invisible must use the Blind Fighting rules. DMs may wish to reduce the penalty to strike the illusionist when the terrain helps vision, such as when the invisible creature must walk through water or across snow.
 
 \sphere{Invocation}
+
 \index{Invocation}This is the first choice of spheres for a battle-mage. It is designed specifically to destroy targets with balls of lightning and fire. It also has more subtle uses as casters can extinguish flames, plunging people into darkness.
 
 Armour functions as normal with Invocation, though like any other projectile bolts of fire can attain a Vitals Shot (see page \pageref{vitals}) and bypass armour entirely.
@@ -2493,54 +2510,29 @@ Just like any other long-range spell, Lightning Bolts and other Invocation spell
 If you are using miniatures, it will be easy to see how many people are caught in the blast radius of a spell. The caster can direct which squares are affected so long as they are all joined together; they may be squares forming a larger square, or spread out in a row. However, if your group is more a fan of the mind's eye theatre the assume that for every square in a spell's range has it affects 1 target.
 
 \spelllevel
+
 \spell{Lightning Bolt}{Instant}{Projectiles}
 
 The mage throws out a ball of flaming, crackling light which strikes and burns the target. The Damage is $1D6$ plus the caster's Intelligence.
 
-\spell{Fire Flare}{Instant}{Projectiles}
+\subsubsection{Spell Enhancements}
 
-Alternatively, the mage can make any nearby fire shoot out as a fireball and strike someone. A tavern's fire might explode, striking someone nearby, or someone's lantern-light could leap up and throw itself in the holder's face. The original fire instantly extinguishes, as the spell burns it up. The spell deals the usual Damage for a Lightning Bolt, modified by the size of the fire. A candle might inflict the normal Damage -2, while a bonfire could add up to 3 Damage to the spell.
+\enhancement{1}{Inferno} The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Lightning Bolt at third level would deal $2D6+2$ Damage.
 
-The spell extinguishes the target fire.
+\enhancement{1}{Fireball} The caster turns the flamebolt into a raging fireball, which covers a number of squares equal to the spell's level plus the caster's Wits.
 
-\spelllevel
+Anyone within 1 square's distance of the fireball takes 1 Damage plus the caster's Intelligence Bonus.
 
-\spell{Fireball}{Instant}{Projectiles}
+\enhancement{2}{Inner Furnace} The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
 
-The mage sends out a ball of flaming death from his hands to incinerate a group of enemies in a wide burst. The total area covered is a ball of 2 squares plus the caster's Wits.
+\enhancement{2}{Eternal Flame} The fire cast does not go out unless plunged under water.  Each round it continues to burn, inflicting $1D6$ Damage plus the caster's Intelligence Bonus.
 
-The mage rolls Intelligence + Projectiles, TN 5 (or the opposing player dodges at TN 9). If they miss the fireball flies off in a random direction not too far from the intended targets. Anyone one square away from the area of effect takes 1 Damage plus the mage's Intelligence bonus. Anyone in combat with someone in the fireball's radius counts as being `next to' the fireball.
+If the spell targeted an area with the Fireball enhancement, the area burns, rather than specific people or items inside.
 
-\spell{Massive Flare}{Instant}{Projectiles}
-
-This operates as Fire Flare, except that the size is 2 squares plus the caster's Wits Bonus.
-
-\spelllevel
-\spell{Flaming Arrow}{Instant}{Projectiles}
-
-The mage learns a more potent version of Lightning Bolt and can deal $2D6$ Damage plus their Intelligence bonus with a flaming arrow of fire and lightning.
-
-\spell{Eternal Flame}{Continuous}{Survival}
-
-The mage sets a fire to burn eternally, with neither fuel nor end. An affected piece of woods might burst into flame and after the entire area had turned to charcoal it would continue to burn as a little flame in the middle. A patch of stone or the iron portcullis of a castle might be set to burn eternally. Whatever the substance, the spell affects an area but cannot target people, who can simply move away from the target area. Anyone inside that area suffers $1D6$ Damage plus the caster's Intelligence Bonus. The fire covers a total of 3 squares plus the caster's Wits Bonus.
-
-Targeting people works just as Level 2: Fireball, the only difference is that the flames keep burning for as long as the spell is maintained. This is an effective way of burning down any wooden building, as a fireball spell can simply go out when a fire does not catch.
-
-Of course, such fires can always be put out manually, with sufficient water.
-
-\spelllevel
-\spell{Lightning Storm}{Instant}{Projectiles}
-
-A full storm of lightning is summoned to incinerate all opponents in a wide ball of destruction. This spell covers an area of four squares plus one square per Wits Bonus. The Damage is $2D6$ plus the caster's Intelligence Bonus and anyone next to the blast radius suffers the spell's minimum possible Damage.
-
-\spelllevel
-\spell{Molten Core}{Instant}{Projectiles}
-
-The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
-
-The Damage is $2D6$ plus the caster's Intelligence Bonus.
+If the spell does not have the Inner Furnce enhanvement, it always targets people's outer layers; their swords, armour, clothing, but not the person themselves, unless that person was mostly naked.
 
 \sphere{Metamagic}
+
 \index{Metamagic}
 
 Metamagic allows the \gls{miracleworker} to enhance their other magic spheres -- adding to their range, casting more spells in a \gls{round}, gaining more \gls{mp} to power them and eventually includes the ability to create magical items.
