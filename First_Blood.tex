@@ -1992,7 +1992,7 @@ Smoke, fog, or any other substance can be purified.  The spell affects a number 
 
 \spell{Stonespell}{Continuous}{Crafts}
 
-The caster changes any solid target to stone.  The \gls{tn} is 7 plus the target's Weight Rating.\footnote{A living target's Weight Rating is equal to their \glsentrytext{hp}.}  Once the spell is over, the target turns back to normal.
+The caster changes any solid target to stone, ice, or any other simple, solid, substance.  The \gls{tn} is 7 plus the target's Weight Rating.\footnote{A living target's Weight Rating is equal to their \glsentrytext{hp}.}  Once the spell is over, the target turns back to normal.
 
 Anyone may spend 5 \gls{fp} in order to stipulate that the spell fails.
 
@@ -2032,23 +2032,15 @@ Living creatures turned using Stone Spell into a solid substance, and then turne
 
 \spelllevel
 
+\spell{Acid}{Continuous}{Survival}
+
+The caster can turn any liquid into a potent acid.  Acidic substances deal $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus.
+
 \spell{Artefact}{Continuous}{Varies}
 
 The caster can now transform things into complex items.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
 
-The first leve's enhancements can be added to this level, so a mage could create an \textit{Enlarged Artefact} at third level, and summon an entire wagon.
-
-\spell{Acid}{Continuous}{Survival}
-
-The caster can turn any liquid into a potent acid.  Acidic substances deal $1D6$ Damage plus the caster's Intelligence bonus.
-
-\spell{Improved Slime and Web}{Continuous}{Survival}
-
-Previous spells -- slime and webbing -- can be cast by transforming the air into the desired substance.  The webbing or slime can occupy up to \arabic{spelllevel} squares plus the caster's Wits Bonus.
-
-\spell{Wall}{Continuous}{Crafts}
-
-The caster can turn water into ice, or air into stone, or otherwise make any barrier.  The barrir takes up up to two squares plus the caster's Wits Bonus.  Such barriers can only be broken with a Strength + Crafts roll, \gls{tn} \setcounter{enc}{7}\addtocounter{enc}{\value{spelllevel}} \arabic{enc} plus the caster's Intelligence Bonus.
+The first leve's enhancements can be added to this level, so a mage could create an \textit{Enlarged Artefact} at third level, and summon an entire wagon, or break the necessity to use the right kind of matter and summon a minor seige weapon from thin air.\footnote{Summoned seige weapons do not come locked and loaded.}
 
 \spell{Prison}{Continuous}{Crafts}
 
@@ -2056,49 +2048,36 @@ The caster freezes the water around the target, or turns surrounding air to ston
 
 If the spell completes, the \gls{tn} to break free increases by 2.
 
+This spell is simply an example of stacking spell enhancements together.
+
 \spelllevel
-
-At this level, the prohibition on metal is lifted, with the one exception of gold.  Mages can also summon simple substances over a wide area.
-
-\spell{Greater Artefact}{Continuous}{Crafts}
-
-The caster can turn any substance into a similarly large item of any complexity.  Air is common, so casters usually target air, resulting in the belief that conjurers can pull carts or weaponry from nothing.
-
-Air is also popular as it's not difficult to manipulate.  As usual, any other target increases the basic difficulty by an amount equal to its Weight Rating.
-
-The caster can create any item, occupying a maximum of \arabic{spelllevel} squares plus the caster's Wits.  Cards, cabins, carts, or even siege weapons can be summoned.
-
-If the \gls{miracleworker} can cast the spell quickly, rocks can be conjured above a target's heady, dealing $1D6 + \arabic{spelllevel}$ plus the caster's Intelligence Bonus in Damage.  However, in such cases targets who are Keeping Edgy can resist with their normal Evasion score, which increases the \gls{tn}.
-
-\spell{Disarm}{Continuous}{Crafts}
-
-The caster turns a sword, dagger, or any other weapon to stone, wind, or anything else.  It instantly becomes useless.
 
 \spell{Teleport}{Instant}{Academics}
 
-The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As usual, the target can cancel the spell by spending 5 \gls{fp}.
+The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
 
-\spelllevel
+\enhancement{1}{Portal} The mage can not simply teleport something but open a doorway from one place to another, within the normal range.
 
-\spell{Portal}{Instant}{Survival}
+\enhancement{1}{Unrestrained} The mage can ignore all spacial barriors to the teleportation spell, allowing it to go anywhere the caster is familiar with.
 
-The caster can open a magical portal from one place to another.  The only restriction is that the two areas can be at maximum \arabic{spelllevel} + the caster's Wits apart.
 
-Portals cast underwater send water gushing to the other side.  Portals can also be cast with one on the ground, and another on a ceiling, so that anyone stepping inside falls through.
+	\begin{rollchart}
 
-\spell{Gold}{Continuous}{Crafts}
+		{\bf TN} & {\bf Range} \\\hline
+		16 & Somewhere the caster has heard of. \\
 
-Solid items can finally be turned into gold.  Alchemists are always suspected of trickery when paying for anything.
+		12 & Somewhere the caster once was. \\
 
-\spell{Summon Item}{Continuous}{Crafts}
+		10 & Somewhere the caster has visited a few times. \\
 
-The caster can now summon complex items, made of multiple parts.  Carts, beer, weapons, almost anything.
+		8 & Somewhere the caster has lived. \\
 
-\spelllevel
+		6 & The caster's home. \\
 
-\spell{Gate}{Continuous}{Ether Lore}
+	\end{rollchart}
 
-The mage can finally open a portal from any known place to any other known place, without restriction.  The mage needs only a passing familiarity with the location, and even a detailed third-hand account suffices.
+Particularly crazy casters have used such spells to open portals to strange etherial lands, filling the area with all manner of dangerous and bizarre creatures.
+
 
 \sphere{Enchantment}
 
