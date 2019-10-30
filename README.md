@@ -22,14 +22,14 @@ Combat moves quickly as nobody has many hitpoints.
 
 ### Tactics
 
-Combat starts! You can put your combat-points into *Strike* to hit opponents better, or *Evasion* to stay safe.  You go for the *Strike* as bandits spring from the bushes, then roll for Initiative.
+Combat starts! You can put your combat-points into *Strike* to hit opponents better, or *Evasion* to stay safe.  You decide to go for *Strike* as bandits spring from the bushes, then roll for Initiative.
 
 | The Count | Health | Actions |
 |:--:|:---:|:----------------|
 | Initiative 9 | `8 HP`, `10 FP` | You spend 2 Initiative to protect the priest from harm |
 | Initiative 8 | `8 HP`, `10 FP` | The bandits spend 2 Initiative to move towards you. The priest spends 6 Initiative to attack with a staff. |
 | Initiative 7 | `8 HP`, `10 FP` | You spend 6 Initiative to attack,  and slash a bandit's arm open. |
-| Initiative 6 | `8 HP`, `2 FP` | 2 bandits attack with knives, costing 4 Initiative.  Another two attack with swords, costing 6 Initiative.  Roll to defend against each one, but lose 8 Fate Points. |
+| Initiative 6 | `8 HP`, `2 FP` | 2 bandits attack with knives, costing 4 Initiative.  Another two attack with swords, costing 6 Initiative.  You roll to defend against each one, but they hit, and you lose 8 Fate Points. |
 | Initiative 5 | `8 HP`, `2 FP` | Your companion spends 6 Initiative to attack with an axe, and  finishes off the bandit you wounded. |
 | Initiative 4 | `8 HP`, `2 FP` | |
 | Initiative 3 | `8 HP`, `2 FP` | |
@@ -65,7 +65,7 @@ Story Points allow players to craft a story in-play, once they know the world th
 
 ## Character Creation
 
-Players make randomly generated characters.  This stops the indecision and long reading which threatens to prevaricate a good games night by removing those decisions and the catalogue-perusal of classes and races.  Typically this can produce a full table of new characters down to 15 minutes.
+Players make randomly generated characters.  This stops the indecision and long reading which threatens to prevaricate a good games night by removing those decisions and the catalogue-perusal of classes and races.  Typically this can produce a full table of new characters in about fifteen minutes.
 
 The book contains decision-based character creation as a set of alternative rules, rather than a default.
 
@@ -90,17 +90,17 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 
 # Project Notes
 
-## History
-
-This started as an .odt document, and it's going to take some serious Latex-training to get it all readable.  The initial idea was simply irritation at poor implementation of other games' mechanics.  Fights could take 30 minutes of accountancy-work, and a little fag-packet maths would tell you the optimal way to hit in every round.  That means 30 minutes of waiting for the dice to give you a result that you can't really affect.
-
 ## LaTeX
 
 This thing's written in LaTeX, a magical document format where you describe the layout to the computer, then the computer does the layout for you.  Last time this was written the persistent revisions added up to months of formating and reformating.  If you ever need to write a long work involving anything more than a series of words: do yourself a favour and learn LaTeX.  The basics just take an afternoon.
 
 ## Related Works
 
-Adventures in Fenestra contains a GM's guide, Bestiary, adventures, and a complete world.  It's about 80% of the way to a useable state, and about 30% complete, time-wise.  
+Adventures in Fenestra contains a GM's guide, Bestiary, adventures, and a complete world.  It's about 90% of the way to a useable state.
+
+## Art
+
+Did you know that git can diff svg images?  Not only that, with a little feneggling, git can merge two different changes to art.  I can't envision artists getting terribly excited about this, but it's not going to stop me getting excited about it.
 
 ## Joining
 
@@ -110,11 +110,11 @@ You can join by:
 
 - Emailing complaints to incoming+andonome-first-blood-12979042-issue-@incoming.gitlab.com.
 
-- Contributing art.
-
 - Playtesting.
 
-- Providing precise criticism of the code (I know my code's rubbish, that's not useful unless you're making a suggestion).
+- Feedback on the Latex code.
+
+- Contributing art (svg is preferred).
 
 - Writing to me, and if you like how the book's going, join as a dev.
 
