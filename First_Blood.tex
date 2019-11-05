@@ -2781,6 +2781,12 @@ As Polymorph changes people's form it also changes Strength and therefore HP max
 Finally, the alternate forms someone adopts while polymorphed disrupts one's magical abilities, inflicting a +2 penalty to all spells cast while polymorphed. This penalty can be ignored with sufficient practice in an alternate form, but it requires at least ten years of persistently holding the altered form.
 
 \spelllevel
+
+% Spell: Polymorph, change Str and Spd up to ( spl + Int )
+% Enhance: plantform
+% Enhance: spend Attributes on abilities, like wings.
+% Enhance: spend Attributes on abilities
+
 \spell{Minor Polymorph}{Continuous}{Medicine}
 
 The skin shifter starts off by accessing branches close to them on the tree of life, changing race from one humanoid type to another. A gnome might become an elf or a human might become a dwarf. In each case the Physical Attributes alone change to match the new race. Since humans have Strength +1 and gnomes have Strength -2, a human transforming into a gnome would lose 3 points of Strength while a gnome transforming into a human would gain 3.
@@ -2906,8 +2912,9 @@ People can pick up different Paths of Magic by simply fulfilling different requi
 
 Three of the schools of magic require an Academics Skill slot -- i.e. the character must have a specialisation in just that type of magical background in order to cast such spells. Characters taking on multiple paths of magic cannot use one level's slots to gain two paths. For example, an alchemist would normally learn the Academics Skill at level 1 and take a specialisation in Alchemy. They would then have one slot left for an Academic specialisation but they could not use it to learn Rune magic or Theology because these fields are too different. The mage could only pick up rune magic with a new level of the Academics Skill, and thereafter could only add Divine magic by taking the Academics Skill at level 3 in order to acquire a Theology specialisation.
 
-\section{The Path of Alchemy}
-\index{Alchemy}\textbf{Spheres}: Conjuration, Invocation, Force, Illusion, Metamagic
+\section{The Path of Alchemy}\index{Alchemy}
+
+\textbf{Spheres}: Conjuration, Invocation, Force, Illusion, Metamagic
 
 %\iftoggle{verbose}{ 
 %\begin{wrapfigure}[10]{R}{.2\textwidth}
@@ -2915,9 +2922,13 @@ Three of the schools of magic require an Academics Skill slot -- i.e. the charac
 %\end{wrapfigure}
 %}{}
 
-\noindent The alchemist learns magic through rote repetition and formulae which are usually be invoked through precise hand-gestures and mystical words which are attuned to the background harmonics of the universe. Without the ability to move one's hands and use one's voice, alchemy spells take a -2 penalty to any task roll or a -4 penalty if the mage can neither move nor use their voice. Alchemy was invented by the gnomes but has since become popular with various upper-class humans. This is the typical magic of a standard town wizard. Alchemy requires one slot of Academics in order to be learnt.
+\noindent The alchemist learns magic through rote repetition and formulae which are usually be invoked through precise hand-gestures and mystical words which are attuned to the background harmonics of the universe.  Alchemy was invented by the gnomes but has since become popular with various upper-class humans. This is the typical magic of a standard town wizard. Alchemy requires one slot of Academics in order to be learnt.
 
 Spells summoned by the Path of Alchemy are accompanied by magical sparks and sometimes loud bangs. Their mana stones are always based on precious minerals or rocks such as rubies, sapphire or even diamonds. 
+
+\subsection{Special Considerations}
+
+Without the ability to move one's hands and use one's voice, alchemy spells take a -2 penalty to any task roll or a -4 penalty if the mage can neither move nor use their voice.
 
 Alchemists cannot naturally intuit how the next level of any sphere works. Instead they must pick up levels slowly and through intense study. They only receive new levels during \gls{downtime}, and must pass an Intelligence + Academics roll at \gls{tn} 12. Proper studying material will add a +1 to +3 bonus to this roll. Each month of \gls{downtime} might grant one roll to learn a level of some sphere.
 
@@ -2935,6 +2946,8 @@ Blood magic spells cast quickly appear in a flurry of inky darkness, meanwhile t
 
 Blood sorcerers need only use movements to cast their spells. Without the ability to move freely they suffer a -2 penalty to casting spells.
 
+\subsection{Special Considerations}
+
 Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
 
 Blood sorcerers are barred from ritual castings -- spending all day trying to cast a spell will not help in the slightest. They cannot cast subtle spells, so enchantment effects will always be at least a little noticeable to those watching out for them, at least at the time of casting.
@@ -2951,7 +2964,7 @@ One slot of Academics is required to be able to sufficiently understand the prec
 
 This path is most commonly taken by humans and the occasional gnoll. Gnomes don't acknowledge gods, elves think they are gods and dwarves tend to view their own rune magic as divine in a very general sense.
 
-The path of devotion requires casters to both use their voice and to move their hands, as per Alchemy. Failure to do either results in a -2 penalty. So using one's hands to wield a weapon while being underwater would give a -4 penalty to any spells cast.
+The path of devotion requires casters to both use their voice and to move their hands, as per Alchemy. Failure to do either one results in a -2 penalty. So using one's hands to wield a weapon while being underwater would give a -4 penalty to any spells cast.
 
 \section{The Path of Runes}
 
@@ -2968,11 +2981,13 @@ The path of devotion requires casters to both use their voice and to move their 
 
 When spells are summoned, the runes glow -- whether carved or painted -- then giant, ghostly runes can be seen dancing around the source of the spell. Runecrafters summoning illusions might have their illusions appear with a flurry of glowing symbols of trickery -- each sphere of magic and indeed each spell has its own special runes.
 
+Runecasters must devote a single Academics slot to learning how to properly inscribe runes. Their mana stones are always precious metals inscribed with runes such as armour with platinum runes or swords with golden runic inlays. Those mana stones which have an imprinted spell can be activated by either a command word or a condition.
+
+\subsection{Special Considerations}
+
 Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for Quick Spells. They always use Ritual Spells for the highest level of any Sphere, and can use normal casting after that.
 
 However, in return for this deficite, runecasters can learn their craft far more easily. Each level of a sphere they purchase costs 5 \gls{xp} less than it normally would. While buying Fate 2 would normally cost 10 for the first level and 15 for the second, runecasters merely need to spend 5 \gls{xp} for the first level and 10 for the second. If they ever want to use those same sphere through a different path of magic, they must spend 5 \gls{xp} to `repurchase' each level. For example, someone who could cast both alchemical and runic magic might purchase Conjuration at the second level for a total of 15 \gls{xp}. They could only use it for runic magics, but later they could spend 5 \gls{xp} to be able to cast the first level with either the alchemy path or the runecasting path.
-
-Runecasters must devote a single Academics slot to learning how to properly inscribe runes. Their mana stones are always precious metals inscribed with runes such as armour with platinum runes or swords with golden runic inlays. Those mana stones which have an imprinted spell can be activated by either a command word or a condition.
 
 Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
 
@@ -2986,11 +3001,13 @@ Rune casters mana stones are, of course, runic carvings, and can never be painte
 
 \noindent The character has learnt the magic of song. They can sing illusions into existence, inspire people with great tales and enchant people with a lute. Any instrument, song or performance suffices for casting a spell so long as it is appropriate -- a flute is not usually a good way to magically make people scared.
 
-Just as with rune magic, song magic can never be cast in an instant.  Quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
-
 Song spells appear with a flash of colour -- generally on a cinematically appropriate note. They require some noise to activate so they are difficult to hide, but people will not always make the connection between the start of a spell and the strumming of a lyre.
 
 In order to learn the Path of Song, the mage must have the second level of the Performance Skill. 
+
+\subsection{Special Considerations}
+
+Just as with rune magic, song magic can never be cast in an instant.  Quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
 
 \subsection{Mana Stones}
 
@@ -3128,7 +3145,7 @@ The mage suffers only a -1 penalty rather than the usual -2 when casting a spell
 \subsubsection{Consume Soul}
 The caster can suck the soul from dying humanoids. While something within their normal spell range is dying, they can make a resisted roll against the target where both use their Intelligence Bonuses -- the target receives a penalty for being below 0 HP as usual and the mage receives the normal range penalties for ranged weapons. If the mage is successful they gain back 1 \gls{mp} + the target's Intelligence bonus (to a minimum of 1). This action requires 8 Initiative points and can only be performed when the character is prepared to cast spells that \gls{round}.
 
-This Knack may only be bought at character creation or immediately after the caster is required to take a Vitality Check to avoid death. It may not be taken while following Laiqu\"{e}, Alass\"{e} or V\'{e}re.
+This Knack may only be bought at character creation or immediately after the caster is required to take a Vitality Check to avoid death. It may not be taken while following Laiqu\"{e}, Alass\"{e} or V\'{e}r\"{e}.
 
 \subsubsection{Extreme Focus}
 The spell caster can focus on a spell to the exclusion of all else. During this time they automatically fail any checks to notice things. All ritual spells cast with this focus grant a bonus to the caster's Intelligence score for the purpose of casting spells equal to half the number of Knacks the character has (rounded up).
