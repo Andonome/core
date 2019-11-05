@@ -44,7 +44,7 @@ Neil McDonnell for the basic photograph which became the Polymorph image, Boris 
 \section*{The Right to Improve}
 This book has some serious problems, and that's fine.  I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and change things.  This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
 
-No longer do imaginative \acrshortpl{gm} have to scribble their inspired house rules onto the back of an old banking statement and cellotape it to the last page of the core book.  Instead, you have the complete source code, and can modify it as you please, creating a cohesive book.  If you spot an error, you can correct it.  If you want to add a couple of spells, it's no problem.  Just download the source code from gitlab.com/andonome/first-blood, download a Latex editor, and make the changes you want.  Once you're happy with your changes, you might even send it off to a printing shop for a cheaply bound book all of your own.
+No longer do imaginative \acrshortpl{gm} have to scribble their inspired house rules onto the back of an old banking statement and cellotape it to the last page of the core book.  Instead, you have the complete source code, and can modify it as you please, creating a cohesive book.  If you spot an error, you can correct it.  If you want to add a couple of spells, it's no problem.  Just download the source code from gitlab.com/FirstBloodRPG/, download a Latex editor, and make the changes you want.  Once you're happy with your changes, you might even send it off to a printing shop for a cheaply bound book all of your own.
 
 And if you happen to make some fantastic additions, or even deletions, be sure to add them to another git project, where others can benefit from your genius.
 
@@ -2688,85 +2688,74 @@ Undead also feel no pain and suffer little from scrapes and bruises. As a result
 The undead do not tire -- they take no Fatigue Points. They can walk or dig or fight endlessly, without tiring. They enjoy feeding on souls, but it is not required for them to continue moving. Each has an Aggression score of +2.
 
 \spelllevel
-\spell{Feign Death}{Continuous}{Medicine}
 
-At this first level, the necromancer merely learns how to imitate the undead and a little of commanding them. Once they have feigned death, they ignor all Fatigue Point penalties (but can still become suddenly unconscious due to too many Fatigue Points). They gain a natural \gls{dr} of 1 which is cumulative with armour -- their corpse-like body bleeds less and feels little pain, only bare sensations written in the mind as cold information. While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them. While this spell is active, the necromancer suffers a -2 penalty to all Charisma checks, though this does not affect FP.
+\spell{Deathly}{Continuous}{Medicine}
 
-This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell. It can never be cast on others. While the spell is in effect they suffer no ill effects from Fatigue Points but cannot heal them. Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to Fatigue. The caster faces a real danger of death if ever they gain enough Fatigue Points to push them over a -5 penalty; they may not gain the penalty but must make a Vitals Check to avoid death and then make another roll each time they gain Fatigue. Upon ending the spell, they would immediately fall unconcious.
+The targed enters an eltered state of semi-death. They ignor all Fatigue Point penalties (but can still become suddenly unconscious due to too many Fatigue Points). They gain a natural \gls{dr} of 1 which is cumulative with armour -- their corpse-like body bleeds less and feels little pain, only bare sensations written in the mind as cold information. While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them. While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \gls{fp}.
+
+This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell. It can never be cast on others. While the spell is in effect they suffer no ill effects from Fatigue Points but cannot heal them. Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to Fatigue. The caster faces a real danger of death if ever they gain enough Fatigue Points to push them over a -5 penalty; they may not gain the penalty but must make a Vitals Check to avoid death and then make another roll each time they gain Fatigue.
+
+\enhancement{2}{Gaze}
+
+By adding an additional level to the process, the target can gain the special sight of the undead (in addition to their normal vision).  They can now see all living things, even in the darkness.  Addtionally, the Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
+
+\enhancement{3}{Lichdom}
+
+The total \gls{dr} available to the target raises to 2, as it enters into a temporary state of undeath.  If the target dies while the spell is in effect the state of undeath becomes permanent, even once the spell has gone.
+
+\spell{Death Touch}{Instant}{Medicine}
+
+Even low level necromancers have the terrifying ability to pull someone's soul out with a simple spell.  The spell inflicts $1D6-2$ Damage directly to the target's \gls{hp}.  \Glsentrylongpl{fp} and \glsentrylongpl{sp} can be bypassed entirely.  The caster adds their Intelligence Bonus to the Damage.
+
+\enhancement{1}{Instant}
+
+By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
+
 
 \spell{Command the Dead}{Continuous}{Academics}
 
-The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb. `Dig', `kill them all' or `wait here' are all appropriate commands. To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits score, though most have a negative Wits score, which makes resistance difficult.
+The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb. `Dig',\footnote{The undead are the worst workers due to their stupidity, cannot use weapons, and typically destroy their own hands before they dig very far.  They can be used for anything, but are not necessarily good for much.} `kill them all' or `wait here' are all appropriate commands. To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits score, though most have a negative Wits score, which makes resistance difficult.
 
 This spell replicates all five levels of the enchantment sphere with the mage selecting any effect they wish; however, the mage uses Academics instead of any other Skill because the undead may only be `understood' in some technical sense, and not truly empathised with.
 
-\spelllevel
 \spell{Calling the Dead}{Instant}{Medicine}
 
-The mage can finally create their own zombies from easily accessible realms of malicious spirits. The spell is cast on a corpse and the corpse is imbued with one such malicious spirit. It retains the Strength score (and therefore HP) it had in life. The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly. The creature has neither intelligence nor Charisma scores. Most will attack all living things on sight.
+The mage can create their own zombies from easily accessible realms of malicious spirits. The spell is cast on a small corpse and the corpse is imbued with one such malicious spirit. It retains the Strength score (and therefore HP) it had in life. The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly. The creature has neither intelligence nor Charisma scores. Most will attack all living things on sight.
 
 The mage rolls their Intelligence + Medicine at \gls{tn} 7 to cast the spell. Any Medicine specialisations dealing with the affected species (e.g. `gnolls', or `humans'), or specialisations concerning death rituals can be used.
 
-Only humanoid corpses can be summoned back from the dead at this stage. Elves are difficult to use as their corpses degrade particularly quickly, often turning to dust within a week. Gnolls, humans and nura of all manner make powerful undead warriors.
+At this first level, the mage is limited to fairly small creatures.  The maximum \gls{hp} of the affected creature is equal to 4, plus the mage's Intelligence.  This allows the mage to summon cats, boars, and other animals back from the dead.  More gifted mages might even be able to raise a gnome or even an average human.
 
 Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
 
-\spelllevel
-\spell{Greater Undead}{Instant}{Academics}
+\enhancement{1}{Greater}
 
-The mage can now summon spirits from any realm of dead spirits. This is sometimes used to summon powerful spirits from strange realms, and at other times used to bring back the souls of dead people to hang spectrally in the air while the mage asks questions. In both cases, the spirits in question can be summoned simply to speak, or alternatively placed into a body.
+With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4.  A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
 
-The necromancer rolls their Intelligence + Academics at \gls{tn} 9. Unwilling people can resist the call to bring them back with their Wits Bonus and Deceit Skill. If placed in a body, most returning spirits of the dead go mad with despair at the lack of normal sensation and find a way to end their own existence before long. Spirits who never had a body, those who who wander as disembodied things in the planes beyond, can fare better for short periods, but not much longer. Disembodied spirits are difficult to see, and almost impossible in full sunlight as strong light cuts straight through them. When asked about the afterlife, souls will have different responses, depending upon their deity of choice. Those who never worshipped a god always find themselves wandering alone in a vast and strange afterlife, with dragons and demigods, often hounded but always free to make their own choices.
+\enhancement{1}{Clever}
 
-To avoid madness and to ensure obedience, necromancers summon foul souls from strange bowels in the spirit world. Mages can specify what kind of spirit they wish to summon and then assign exact Traits.
+While the easiest spirits to summon are mindless creatures, more advanced mages can summon smarter creatures.  The creature's basic stats are now Intelligence -2, Wits -2 and Charisma -5.  The mage's Intelligence Bonus, plus each use of this enhancement adds 1 Attribute to the creature's Intelligence and Wits, and 2 levels of any Skill.  Such creatures have a basic mana pool equal to double their Intelligence Bonus.  
 
-\index{Spirits}Spirits are assumed to have Dexterity 0, Speed 0, Intelligence 0 and a Wits score equal to the mage's. Their Charisma score begins at -3. The mage can add to these stats a total equal to 3 plus their Intelligence Bonus. Racial maximums are still in effect and the undead creature's Strength Attribute is, as per previous levels, determined by the corpse. Spirits have a hard time interesting themselves in anything other than eating souls, but they can gain Skills in the normal way up to a maximum equal to their Intelligence bonus. Spirits summoned with Intelligence +2 could gain up to the second level of any Skill.
+For example, a mage with Intelligence +3, using one Clever enhancement, would summon a creature with Intelligence +2, Wits +2, and 4 basic \gls{mp} (6 \gls{mp} in total).
 
-\begin{tcolorbox}[arc=1mm,tabularx={|cp{0.68\textwidth}}]
+The creatures begin with Intelligence -2, Wits equal to -2 plus $1D6$, and Charisma -5.  For each level of the spell, the mage can add 2 Attribute levels plus their Intelligence Bonus.  An Attribute point can be sacrificed in return for 2 levels in any Skill, or two Attribute points can be sacrified in return for a level in a sphere.
 
-		\glsentrytext{tn} & Effect \\\hline
+The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can decide where one of the target's Skill points are placed.  The \gls{gm} decides places the rest of the creature's points.
 
-	+Wits + Deceit & Targets who do not wish to be summoned add their Wits bonus to resist the spell. \\
+\begin{exampletext}
 
-	+2 & The target has been dead more than a century or has never been a living person. \\
+	When he was younger, Hugi witnesses his uncle torn apart by a terrible spirit.  His uncle thought to contain it in a small creature, so he summoned the all powerful creature into the body of a little gnome.
 
-	+1 & The target has been dead more than a decade. \\
+	Hugi's uncle, the runecaster, has Intelligence +2, and applies the enhancement twice.  The resulting creature would have Intelligence and Wits at +2, and 8 levels of Skills.  The runecaster rolls a 10, which barely passes the \gls{tn} of 9.  He assigns two of the Skill points to Academics so that he can ask the spirit the question he wants to know.
 
-	+2 & The target's name is unknown. \\
+	The \gls{gm} decides to assign 3 Skill points to Vigilance, 1 to Tactics, and another to Necromancy.
 
-	-2 & The target's body is present. \\
+	The result was an uncontainable spirit which cast a death touch spell upon the old runecaster, killing him instantly.
 
-	-2 & A personally important item to the target is present. \\
+	Hugi decided never to entertain learning necromantic rune magic after that day.
 
-	-3 & The target has pressing, unfinished business on earth or has a great desire to simply come and wreak havoc. \\
+\end{exampletext}
 
-\end{tcolorbox}
-
-At this level, all kinds of animals can also be summoned as undead -- bears, horses, stranger creatures -- anything no taller than a man.
-
-Necromancers often hunt for powerful souls, researching their likes and original names in order to summon them back. Many historians use pseudonyms when discussing powerful kings and especially when discussing powerful magic-users so that they cannot be summoned back from the dead by a mage to use their abilities at their service.
-
-When summoning a specific soul back from the dead, that soul comes with all their original skills and magic spheres. However, the mage must be able to give them the same Mind Attributes as they had in life. Intelligence and Wits Attributes can be lowered if need be, but if the summoned spirit must have Intelligence +3 and the mage cannot reach this minimum level then the spell fails.
-
-\spelllevel
-\spell{Death Sight}{Continuous}{Medicine}
-
-The mage learns to use the death sight of the undead -- while the spell is active they can see fine in the dark, just as the dead do. This spell also `contains' all of the first level, including the \gls{dr} of 1 and the resistance to Fatigue Points. This level of undeath can be cast upon people, even unwilling people. Targets not used to such a deathly touch often flee -- an immediate morale check is taken at \gls{tn} 12 to withstand the horror of seeing people's souls while their veins immediately run slow and cold. The horror check can be taken with the user's Wits score and either Combat or Academics; academics are often less perturbed by strange ideas, having become used to the strangeness in the world through an open mind.
-
-The spell merely requires an Intelligence + Medicine roll at \gls{tn} 7, just as with level 2. Unwilling targets have no way of resisting this spell. The Charisma penalty for this spell raises to -4 as the target is further touched by a horrifying aura of death.
-
-\spell{Colossal Undead}{Instant}{Academics}
-
-The mage can also summon any creature, no matter the size, from the dead to act as a servant. Umber hulks, dragons -- literally any corpse can have a malicious soul implanted within it. These souls function as per Greater Undead (above). The maximum Strength Bonus of such creatures is 4 plus the mage's Intelligence Bonus -- usually enough to raise any creature from the dead.
-
-\spelllevel
-\spell{Touch of Death}{Continuous}{Medicine}
-
-The mage can finally assume all abilities of the undead -- not simply death sight. They gain a \gls{dr} of 2 which stacks with armour and is immune to Fatigue points. At the end of each day the spell is active, the mage makes an unmodified Charisma roll at \gls{tn} 7; failure indicates death. Not that this will stop the necromancer, it simply means they are now a member of the undead and this spell can be safely cancelled. All Charisma modifiers become permanent and now affect FP totals.
-
-\spell{Hearth Attack}{Instant}{Medicine}
-
-The mage can also reach out and wisp away a target's essential life essence with a spell, draining all heat and vitality, bringing even the boldest hero to death with a word. The spell causes $1D6$ plus their Intelligence Bonus in HP Damage -- it ignores \gls{fp} \& \gls{SP} entirely. It ignores all armour. No roll is made, the target simply needs to be in range and immediately they start to die.
 
 \sphere{Polymorph}
 \iftoggle{verbose}{
@@ -2783,7 +2772,11 @@ Unwilling targets who are to be transformed with Polymorph can spend 5 FP in ord
 
 As Polymorph changes people's form it also changes Strength and therefore HP maximums. All HP lost to Damage remain as lost HP after transformation but might not have any effect. If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed. If someone's maximum HP increases, once again they count as having lost the same number of HP, with no HP being gained or lost through the transformation process. All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
 
-For example, Meldon the elf has 5 HP. He takes 3 HP Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions. He then transforms himself into a bird, lowering to 2 HP. He now has zero Damage but retains his -1 penalty due to Fatigue. After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his HP increases to the point where they can affect him.
+\begin{exampletext}
+
+	Meldon the elf has 5 HP. He takes 3 HP Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions. He then transforms himself into a bird, lowering to 2 HP. He now has zero Damage but retains his -1 penalty due to Fatigue. After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his HP increases to the point where they can affect him.
+
+\end{exampletext}
 
 Finally, the alternate forms someone adopts while polymorphed disrupts one's magical abilities, inflicting a +2 penalty to all spells cast while polymorphed. This penalty can be ignored with sufficient practice in an alternate form, but it requires at least ten years of persistently holding the altered form.
 
