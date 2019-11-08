@@ -353,9 +353,13 @@ Tactics allows people to plan consice victories. The utility quickly fades when 
 
 When going into combat, someone who has time to prepare for a battle by running through instructions with receptive troops gains a bonus to their Initiative equal to their Tactics Skill. This bonus only ever counts for the first \gls{round}.
 
+\tcbox[tcbox width=minimum right]{testing}
+
 Specialisations include massive creatures (5+ Strength), leading many troops (more than 12), leading small forces (between 6 and 12), lone fighting, forests, towns, plains, tunnels.
 
 \subsection{Vigilance}
+
+
 This is the flip side of a number of Skill related to hiding one's doings or presence. It is practiced by guards or the eternally paranoid. It is most often rolled with Wits in order to spot people sneaking about, perhaps fingering a purse or sneaking up behind a potential victim to stab them in the back. One might also add this Skill to Intelligence to spot important facts written on dungeon walls, or use Strength with Vigilance in order to stay up late, despite being laden with Fatigue, in order to remain alert.
 
 \chapter{The Rules}
@@ -2119,6 +2123,7 @@ The mage teleports the target a short distance -- up to \arabic{spelllevel} squa
 	\begin{rollchart}
 
 		{\bf TN} & {\bf Range} \\\hline
+
 		16 & Somewhere the caster has heard of. \\
 
 		12 & Somewhere the caster once was. \\
@@ -2757,18 +2762,20 @@ The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can de
 \end{exampletext}
 
 
-\sphere{Polymorph}
+\sphere{Polymorph}\index{Polymorph}
 \iftoggle{verbose}{
 \begin{wrapfigure}{R}{.37\textwidth}
 \includegraphics[width=.37\textwidth]{images/Roch_Hercka/polymorph.jpg}
 \end{wrapfigure}
 }{}
 
-\index{Polymorph}The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, grasp at other forms of life and shift their body along a different branch, transforming into an animal of some kind or some other race. At later levels the mage can turn into stranger things still -- elemental forms such as pure air or a raging ball of fire.
+The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move their body along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as bears, while smaller creatures find it easier to turn into smaller animals, such as birds or badgers.
+
+Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
 
 Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of. Many conjecture that the face is a facet of one's soul showing in the world. A ginger person transformed into a cat would become a ginger cat. A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep. Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
 
-Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.
+Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.  The undead are completely immunte to the Polymorph sphere.
 
 As Polymorph changes people's form it also changes Strength and therefore HP maximums. All HP lost to Damage remain as lost HP after transformation but might not have any effect. If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed. If someone's maximum HP increases, once again they count as having lost the same number of HP, with no HP being gained or lost through the transformation process. All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
 
@@ -2778,132 +2785,110 @@ As Polymorph changes people's form it also changes Strength and therefore HP max
 
 \end{exampletext}
 
-Finally, the alternate forms someone adopts while polymorphed disrupts one's magical abilities, inflicting a +2 penalty to all spells cast while polymorphed. This penalty can be ignored with sufficient practice in an alternate form, but it requires at least ten years of persistently holding the altered form.
+Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
 
 \spelllevel
 
 % Spell: Polymorph, change Str and Spd up to ( spl + Int )
 % Enhance: plantform
-% Enhance: spend Attributes on abilities, like wings.
-% Enhance: spend Attributes on abilities
+% Enhance (1): ignore difficulty levels for others.
+% Enhnace (2): ignore difficulty levels for species.
+% Enhance (2): spend Attributes on abilities, like wings.
+% Enhance (3): spend Attributes on abilities
 
-\spell{Minor Polymorph}{Continuous}{Medicine}
+\spell{Polymorph}{Continuous}{Medicine}
 
-The skin shifter starts off by accessing branches close to them on the tree of life, changing race from one humanoid type to another. A gnome might become an elf or a human might become a dwarf. In each case the Physical Attributes alone change to match the new race. Since humans have Strength +1 and gnomes have Strength -2, a human transforming into a gnome would lose 3 points of Strength while a gnome transforming into a human would gain 3.
+\begin{wrapfigure}{R}{.4\textwidth}
 
-The roll for this spell is Intelligence + Medicine Skill. The basic \gls{tn} is 7 and every HP increase or decrease the mage wants to affect will increase the \gls{tn} by 1. For example, transforming from a human (with a +1 bonus to Strength) to a gnome (with a -2 penalty to Strength) would mean a \gls{tn} of 10.
+	\begin{tcolorbox}[arc=1mm,tabularx={lcc}]
+	\end{tcolorbox}
+\end{wrapfigure}
 
-Larger and stranger creatures, such as dragons, can use this ability normally, though the large strength difference between themselves and the demi-humans can make turning into, e.g., a gnome, difficult. At no point can someone transform into a race theyare unfamiliar with.
+The basic polymorph spell allows the shapeshifter to add or subtract a number of points of Strength from the target.  This modification must bring the target up or down to the level where they are in line with the target's racial maximums and minimums.  An elf with Strength -1 could turn into a human or gnome easily, but turning a human with Strength +3 into a gnome would require reducing their Strength to +1, but gnomes have a maximum Strength of +1.
 
-Polymorphing into another race is never easy - the body simply doesn't feel right.  All Physical actions suffer +1 to their \gls{tn} while the caster is Polymorphed.
+Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
 
-\spelllevel
-\spell{Polymorph Self}{Continuous}{Beast Ken}
+The polymorphed target always takes a -1 Dexterity penalty due to the new form seeming strange, until they have had time to get used to it.\footnote{Any amount of downtime is a reasonable amount of time.}
 
-	\begin{tcolorbox}[arc=1mm,tabularx={lrrp{.52\textwidth}}]
+Polymorphing into another race does not grant any of its racial abilities.  Changing one's shape to look like an elf will not grant cold-immunity, and polymorphing into a dwarf will not allow one to stomach strong drink.
 
-	Animal & Str. & Spd. & Special \\\hline
+\spell{Animal Transformation}{Continuous}{Beast Ken}
 
-		Badger & -2 & 0 & \glsentrytext{dr} 2 \\
+This spell allows the mage to transform one animal into another.  An animal is defined as any creature without an Intelligence Bonus.  As before, the mage can increase or decrease the target's Strength Bonus by the spell level.
 
-		Bear & +5 & +3 & \gls{dr} 3, +1 Dam after grapple. \\
+The \gls{tn} for such a transformation is always 12, as understanding how animals function is a serious challenge to those used to walking on two legs.
 
-	Beaver & -3 & -1 & +3 Speed in water. \\
+\begin{wrapfigure}{R}{.4\linewidth}
 
-	Bird/ Bat & -5 & +5 & Flight \\
+	\begin{tcolorbox}[arc=1mm,tabularx={lcc}]
 
-	Cat & -5 & +4 & \\
+	Animal & Min Str. & Max Str. \\\hline
 
-		Cow & +2 & +1 & \gls{dr} 1 \\
+	Badger & -4 & -2 \\
 
-	Deer & 0 & +4 & +2 Dam \\
+	Bear & +4 & +6 \\
 
-	Donkey & 0 & +4 & \\
+	Beaver & -5 & -4 \\
 
-	Frog & -5 & -4 & Swim \\
+	Bird/ Bat & -5 & -5 \\
 
-		Goat & -1 & +2 & +2 Dam, \gls{dr} 2, +2 to climbing. \\
+	Cat & -5 & -5 \\
 
-	Horse & +1 & +4 & \\
+	Cow & 0 & +5 \\
 
-	Large Cat & +2 & +4 & +3 Dexterity to climb \\
+	Deer & 0 & +2 \\
 
-	Pig & 0 & 0 & +2 \gls{dr} \\
+	Donkey & 0 & +4 \\
 
-	Rat & -5 & +2 & Disease immunity \\
+	Frog & -5 & -5 \\
 
-	Wolf & -2 & +4 & +3 Dam after grapple \\
+	Goat & -1 & +2 \\
 
-\end{tcolorbox}
+	Horse & +1 & +4 \\
 
-With more advanced training, the shapeshifter can change their entire body into the lower forms of the beasts, with only limited restrictions -- they can reduce weight down to a fifth of the normal size, becoming a wolf, badger or large cat, or can increase up to five times as large, transforming into a small bear or larger cat. Characters who are large and muscular will have an easier time turning into a bear, while shorter, faster characters will find it easier to turn into a bird.
+	Large Cat & +1 & +3 \\
 
-The player rolls Intelligence + Beast Ken at a \gls{tn} of 7 plus the number of HP they are changing. If successful, the character can raise or lower a total number of Attribute points equal to 2 plus their Intelligence Bonus in order to raise or lower Strength, Speed or Dexterity. Characters must bring their Attributes within 1 point of the Attributes of the creatures they are changing into.
+	Pig & 0 & +3 \\
 
-For example, a strong priestess of Laiqu\"{e} attempting to change into a bear might have Strength +3, Speed +2 and Dexterity +1. A bear has a +5 listed in Strength, meaning to transform into a bear someone must have a Strength Bonus between +4 and +6. The listed Speed Attribute is +3 so bears can have anywhere from +2 to +4 in Speed. The character raises her Strength from +3 to +5 then raises Dexterity to +2. Now that the Attributes are in line with what a bear should have, the transformation is finished and the caster turns into a bear.
+	Rat & -5 & -5 \\
 
-Later, the priestess wishes to turn into a bird. She must lower their Strength from +3 to -5. Unfortunately, this requires their Strength to lower by 8 steps and she can only lower it by 3 steps, so the spell is impossible. Others, such as an elf starting at Strength -1, will only have to lower their Strength by 3 in order to attain Strength -4; this is within 1 step of a bird's listed `-5' Strength, so this is acceptable. The elf would then only need to reach up to Speed +4, because a bird must have a Speed Bonus between +4 and +6.
-
-In all cases, the caster can raise or lower their Dexterity by any amount and this will not restrict what animals they can turn into.
-
-Certain animals come with some Special ability. Some are tough, others have bonuses to certain actions such as swimming or flying.
-
-Spells cannot handle partial transformations -- they either succeed or fail entirely. If the mage wants to transform their clothing along with the spell, they need a Margin of +1. Each additional large item (anything with a weight of -1 or more) requires an additional Margin, so transforming while wearing plate armour and carrying a shield and sword would require a Margin of 3. If the Margin is not reached, the clothing either bursts or remains on the ground after the transformation. If the Margin is successfully achieved then the items disappear, only to return after the shapeshifter has transformed back. People in animal forms cannot use tools such as weapons as animal hands do not have the necessary digits.
-
-\spelllevel
-
-\spell{Polymorph Other}{Continuous}{Beast Ken}
-
-This functions as above, but can be used to Polymorph other targets into animals. The mage rolls their Intelligence + Beast Ken and if the target is unwilling, they resist with their Intelligence + Deceit Skill as the mage attempts to understand and thereby shape the target's form.
-
-When casting this spell the mage instantly knows all of the target's Body Attributes in order to make a decision about what kind of animal the target might best be transformed into. The mage can now rearrange or add up to 3 points of Body Attributes plus their Intelligence Bonus.
-
-For example, Darren the priest of Alass\"{e} notices a guard organising bets on who can kill a rat fastest. Disgusted by the needless deaths, James decides to make an example of him. James has Intelligence +1 so he can raise or lower up to 4 Body Attribute Points. The guard has Strength +1 so he cannot be turned into a rat himself. James decides to turn him instead into a badger as it's the closest thing available. Badgers have a listed Strength -2 and Speed 0 so the druid decides that Strength -3 and Speed -1 would be better. The guard's Intelligence is 0 and his Deceit Skill is +1, and since the guard is losing 3 points of Strength, he also loses 3 HP; this raises the \gls{tn} by a further +3 for a final \gls{tn} of 11. The holy man succeeds on the roll and to the horror of all the onlookers, a badger emerges from a ruffled pile of cheap tunic and rusted chain shirt.
-
-Transforming a target's clothing or other items requires a Margin, just as with Level 2.
-
-\spelllevel
-\spell{Greater Polymorph}{Continuous}{Beast Ken}
-
-The mage can now induce partial transformations, essentially `making up' anything they like in terms of final form. The mage might transform them into a minotaur with incredible Strength or a very large mage might become a toughened bat-like creature. The mage can also modify others, making them into monstrosities or gargantuan killing machines.
-
-The mage rolls Intelligence + Beast Ken and as with level 3, if the target is unwilling they resist with their Intelligence + Deceit. As usual, each HP the caster wishes to change increases the \gls{tn} by 1. If successful, the caster gains a number of polymorphing points equal to 4 plus their Intelligence Bonus. Each point can be used to raise or lower a body Attribute as usual or can also be used to add features, including the following:
-
-Adding any feature reduces the shapeshifter's pool of Attribute points by 1, so a shapeshifter with Intelligence +2 might elect to have wings, \gls{dr} 1, decrease Strength by 2 levels and then add 2 levels of Speed.
-
-	\begin{tcolorbox}[arc=1mm,tabularx={lp{.7\textwidth}}]
-		\textbf{Modification} & \textbf{Description} \\\hline
-
-		\textbf{Natural Armour} & Shapeshifters can gain natural \gls{dr}. Each point \ sacrificed grants +1 armour, up to a maximum of 2. This stacks with armour, but the armour must be specially made in order to be wearable by whatever strange form the shapeshifter has chosen. \\
-
-		\textbf{Natural Skill} & The creature gains +2 when performing some particular task such as climbing, swimming or flying. This may be selected up to 3 times. \\
-
-		\textbf{Wings} & Creatures can only use wings to fly if their Speed Bonus is 6 points higher than their Strength. They can glide if their Speed Bonus is 4 points higher than their Strength. Otherwise, the wings are useless. If wings are used as shielding, they count as weapons with -2 Damage, +2 Initiative and +3 Evasion. If the wings successfully shield the target from attack then the target still receives full Damage but the maximum HP loss is 2. Once the target has lost these 2 HP the wings are destroyed and no longer provide cover. \\
+	Wolf & -2 & +1 \\
 
 \end{tcolorbox}
 
-Taking clothes and other items into one's form when transforming works as per level 2.
+\end{wrapfigure}
 
-Creatures with such advanced levels of shapeshifting ability often lose their own race, becoming generic creatures in their own right, electing to transform themselves each day into stranger and more wonderful forms. Eventually, such generic humanoids change their racial maximums and minimums to the range of -4 to +4. When in this generic form the casters appear as grey, almost featureless creatures.
+\enhancement{1}{Trans Species}
 
-\spell{Plant Polymorph}{Continuous}{Survival}
+The polymorpher can now cross the species boundary, making themself or another transform entirely into an animal.
 
-Additionally, mages of this level can transform themselves into any plant they are familiar with: trees, bushes and more are all possible. While in this form, they can be exceedingly difficult to destroy, but are, of course, completely immobile. They have no innate ability to sense their environment beyond a sense of touch, so without further magical assistance they cannot cast spells at others. The plants gain a \gls{dr} equal to double the mage's Strength Bonus as Perfect Armour.
+Such animal transformations are in shape alone, and do not grant any abilities.  Such birds cannot fly,
 
-\spelllevel
-\spell{Elemental Polymorph}{Continuous}{Academics}
+Alternatively, the polymorpher can turn an animal into a person.  This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.  Such creatures start with Intelligence -5 and Charisma 0.\footnote{The GM is encouraged to change the basic Charisma for various animals, as cats obviously start with +3.}
 
-With the final level of Polymorph, the mage can take on an elemental form, turning into pure animated fire, or a fiery humanoid; an ice-man with hardened skin or a whispy air spirit.
+This spell is cast at \gls{tn} 12, as it either targets an animal, or makes someone into one.
 
-The caster rolls Intelligence + Academics while any unwilling targets resist with Intelligence + Deceit. If successful, they gain a total number of points to play with equal to 5 plus their Intelligence Bonus. These additional points can be used just as level 4 of the polymorph sphere and two such points can also be spent to gain any of the following abilities:
+\enhancement{1}{Empathetic}
 
-Modification Description
+Advanced shapeshifters can extend a little mana into their understanding of alternate forms, and discard the usual \gls{tn} restrictions.  All \glspl{tn} become 7.
 
-Perfect Armour\ The mage gains hardened skin, granting +3 \gls{dr}. This is cumulative with armour, if any appropriate armour can be found to fit this strange new form. This cannot be taken at the same time as the \gls{dr} bonus of Polymorph level 4.
+\enhancement{1}{Bolstered}
 
-Burning Touch\ The creature's tough is particularly dangerous, perhaps due to exuding acid or maybe the creature is permanently on fire. The creature is immune to its own Damage type, even from other sources. The creature inflicts +2 Damage on brawling attacks and always inflicts normal Damage, never Fatigue Points.
+While basic shapeshifters can add to or subtract from the Strength Bonus of a target, a \textit{Bolstered} spell allows the caster to add or subtract a number of points equal to the spell level plus their Intelligence Bonus.  This allows a much greater range, so shapeshifters can turn themselves into birds, or bears.
 
-Ephemeral\ The creature's body has little to no substance -- attacks pass straight through them, dealing little to no Damage. They cannot pick up objects or Damage people with a touch but also gains a \gls{dr} of 10 which counts as Perfect armour. It is still possible -- if barely -- to scatter their body with enough force. Ephemeral creatures can float slowly, up to 1 square per \gls{round} in any direction, including upwards. While floating, they are subject to being moved by the wind. If they have the Burning Touch modification (above) they can use it to cause $1D6-2$ Damage upon a successful attack. Creatures with this modification cannot take any additional \gls{dr} from any other source.
+\enhancement{1}{Realistic}
+
+Shapeshifters taking on the basic form of another creature gain no abilities from it.  The \textit{Realistic} enhancement allows them to take on the lot.
+
+Various animal forms have features which can be bought at the cost of one of the Attribute shifts.
+
+\enhancement{2}{Freeform}
+
+The shapeshifter can throw off the limits of existing and known creatures, and turn into anything they might imagine.  Any points which might otherwise have added or subtracted from Attribute points can be spent on special abilities instead.
+
+% 1 ephemeral
+% 1 dangerous - 1D6 damage per round of contact
+
 
 \chapter{The Paths of Magic}
 \label{magic_paths}\index{Magic!Paths of Magic}There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic. Any character with the appropriate requirements can learn to cast magic. Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically. A priest of war may shout a torrent of aurochs into existence where an alchemist uses precise gestures to summon the essential form of an auroch but both are just using the second level of the conjuration sphere.
