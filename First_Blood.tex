@@ -2769,15 +2769,17 @@ The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can de
 \end{wrapfigure}
 }{}
 
-The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move their body along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as bears, while smaller creatures find it easier to turn into smaller animals, such as birds or badgers.
-
-Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
+The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move themselves or others along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as griffins, while smaller, lighter people find it easier to take on the form of birds.  Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
 
 Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of. Many conjecture that the face is a facet of one's soul showing in the world. A ginger person transformed into a cat would become a ginger cat. A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep. Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
 
 Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.  The undead are completely immunte to the Polymorph sphere.
 
-As Polymorph changes people's form it also changes Strength and therefore HP maximums. All HP lost to Damage remain as lost HP after transformation but might not have any effect. If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed. If someone's maximum HP increases, once again they count as having lost the same number of HP, with no HP being gained or lost through the transformation process. All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
+As polymorph changes people's form it also changes Strength and therefore HP maximums. All HP lost to Damage remain as lost HP after transformation but might not have any effect. If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed. If someone's maximum HP increases, once again they count as having lost the same number of HP, with no HP being gained or lost through the transformation process. All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
+
+The new form granted by a polymorph spell always feels a little strange, so anyone who transforms suffers a -1 penalty to Dexterity until they get used to the new form.\footnote{Any amount of downtime is a reasonable amount of time.}
+
+Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
 
 \begin{exampletext}
 
@@ -2785,38 +2787,19 @@ As Polymorph changes people's form it also changes Strength and therefore HP max
 
 \end{exampletext}
 
-Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
-
 \spelllevel
-
-% Spell: Polymorph, change Str and Spd up to ( spl + Int )
-% Enhance: plantform
-% Enhance (1): ignore difficulty levels for others.
-% Enhnace (2): ignore difficulty levels for species.
-% Enhance (2): spend Attributes on abilities, like wings.
-% Enhance (3): spend Attributes on abilities
 
 \spell{Polymorph}{Continuous}{Medicine}
 
-\begin{wrapfigure}{R}{.4\textwidth}
+The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
 
-	\begin{tcolorbox}[arc=1mm,tabularx={lcc}]
-	\end{tcolorbox}
-\end{wrapfigure}
-
-The basic polymorph spell allows the shapeshifter to add or subtract a number of points of Strength from the target.  This modification must bring the target up or down to the level where they are in line with the target's racial maximums and minimums.  An elf with Strength -1 could turn into a human or gnome easily, but turning a human with Strength +3 into a gnome would require reducing their Strength to +1, but gnomes have a maximum Strength of +1.
+Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
 
 Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
 
-The polymorphed target always takes a -1 Dexterity penalty due to the new form seeming strange, until they have had time to get used to it.\footnote{Any amount of downtime is a reasonable amount of time.}
-
-Polymorphing into another race does not grant any of its racial abilities.  Changing one's shape to look like an elf will not grant cold-immunity, and polymorphing into a dwarf will not allow one to stomach strong drink.
+Polymorphing into another race does not grant any of its racial abilities.  Changing one's shape to look like an elf will not grant cold-immunity, and polymorphing into a human will not allow one walk long distances without fatigue.
 
 \spell{Animal Transformation}{Continuous}{Beast Ken}
-
-This spell allows the mage to transform one animal into another.  An animal is defined as any creature without an Intelligence Bonus.  As before, the mage can increase or decrease the target's Strength Bonus by the spell level.
-
-The \gls{tn} for such a transformation is always 12, as understanding how animals function is a serious challenge to those used to walking on two legs.
 
 \begin{wrapfigure}{R}{.4\linewidth}
 
@@ -2824,7 +2807,11 @@ The \gls{tn} for such a transformation is always 12, as understanding how animal
 
 	Animal & Min Str. & Max Str. \\\hline
 
+	Auroch & 0 & +5 \\
+
 	Badger & -4 & -2 \\
+
+	Basilisk & +5 & +8 \\
 
 	Bear & +4 & +6 \\
 
@@ -2834,8 +2821,6 @@ The \gls{tn} for such a transformation is always 12, as understanding how animal
 
 	Cat & -5 & -5 \\
 
-	Cow & 0 & +5 \\
-
 	Deer & 0 & +2 \\
 
 	Donkey & 0 & +4 \\
@@ -2843,6 +2828,8 @@ The \gls{tn} for such a transformation is always 12, as understanding how animal
 	Frog & -5 & -5 \\
 
 	Goat & -1 & +2 \\
+
+	Griffin & -1 & +2 \\
 
 	Horse & +1 & +4 \\
 
@@ -2858,39 +2845,72 @@ The \gls{tn} for such a transformation is always 12, as understanding how animal
 
 \end{wrapfigure}
 
+This spell allows the mage to transform one animal into another.  An animal is defined as any creature without an Intelligence Bonus.  As before, the mage can increase or decrease the target's Strength Bonus by the spell level.
+
+The \gls{tn} for such a transformation is always 12, as understanding how animals function is a serious challenge to those used to walking on two legs.
+
+Such animal transformations are in shape alone, and do not grant any abilities.  Polymorphing into a bird will not let one fly, and taking the shape of a bear will leave a weakened facsimile of the bear's strong teeth and hide.
+
+\enhancement{1}{Bolstered}
+
+\iftoggle{verbose}{
+While basic shapeshifters base their range on the polymorph spell's level, a \textit{Bolstered} spell allows the caster to use a number of points equal to the spell's level plus their Intelligence Bonus.  If a shapeshifter cast this spell at the second level, with Intelligence +1, they could lower an animal's Strength Bonus by 3, or could turn a human into a gnome, since that requires a Strength adjustment of 3.
+
+Those with the \textit{Realistic} enhancement also gain a number of \textit{Form Points} equal to the spell level plus the caster's Intelligence Bonus, instead of simply gaining points equal to the Spell's level.}{
+
+The caster uses the spell level plus their Intelligence Bonus to determine all facets of the spell's potence, rather than just the spell's level.
+
+}
+
+\enhancement{1}{Empathetic}
+
+Advanced shapeshifters can extend a little mana into their understanding of alternate forms, and discard the usual \gls{tn} restrictions.  All \glspl{tn} become 7, and the target no longer suffers a Dexterity penalty for transforming.
+
+\enhancement{1}{Realistic}
+
+The \textit{Realistic} enhancement allows mages to take on creatures' natural abilities with a number of \textit{Form Points} equal to the spell's level.  When transforming a target into an animal, the form of a bird can allow the target to fly, the form of a bear includes teeth, claws and a thick hide.
+
+The Form Points can each be spent on one of the following:
+
+\begin{itemize}
+
+	\item{Claws \& Teeth: +1 Damage}
+	\item{Flight: The creature has wings, and can use them properly.}
+	\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
+	\item{Underwater Breath}
+\end{itemize}
+
+When the target is to transform into an animal, all unused points are applied to the target's Speed Bonus.  Someone transforming into a bird with 3 Form Points could use one to gain realistic flight, and then +2 Speed.
+
+When transforming into another race, the target merely loses their racial ability, and gains any racial abilities of the target which are concerned with the body.  For example, elves who transform into dwarves lose their immunity from natural cold, but gain the dwarvish ability to consume strong drink.
+
 \enhancement{1}{Trans Species}
 
 The polymorpher can now cross the species boundary, making themself or another transform entirely into an animal.
 
-Such animal transformations are in shape alone, and do not grant any abilities.  Such birds cannot fly,
-
 Alternatively, the polymorpher can turn an animal into a person.  This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.  Such creatures start with Intelligence -5 and Charisma 0.\footnote{The GM is encouraged to change the basic Charisma for various animals, as cats obviously start with +3.}
 
-This spell is cast at \gls{tn} 12, as it either targets an animal, or makes someone into one.
+This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one.  It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
 
-\enhancement{1}{Empathetic}
+\spelllevel
 
-Advanced shapeshifters can extend a little mana into their understanding of alternate forms, and discard the usual \gls{tn} restrictions.  All \glspl{tn} become 7.
+\spell{Freeform}
 
-\enhancement{1}{Bolstered}
+The shapeshifter can throw off the limits of existing and known creatures, and turn into flamming bulls, acidic clouds, or anything else they might imagine.  The basic \gls{tn} for the spell is 14 as the alternative forms are alien even to those who are capable of adoptin them, but as usual the \gls{tn} can be reduced by other enhancements.
 
-While basic shapeshifters can add to or subtract from the Strength Bonus of a target, a \textit{Bolstered} spell allows the caster to add or subtract a number of points equal to the spell level plus their Intelligence Bonus.  This allows a much greater range, so shapeshifters can turn themselves into birds, or bears.
+As with the \textit{Realistic} enhancement, the caster gains a number of Form Points equal to the spell's level.  The caster can spend \textit{2} form points to purchase any of the following:
 
-\enhancement{1}{Realistic}
+\begin{itemize}
 
-Shapeshifters taking on the basic form of another creature gain no abilities from it.  The \textit{Realistic} enhancement allows them to take on the lot.
+	\item{Massive Claws \& Teeth: +2 Damage.}
+	\item{Impenetrable Hide: +4 \gls{dr}.}
+	\item{Etherial Form: The caster turns into a thick smoke or mist, becoming immune to almost all physical damage.}
+	\item{Fiery Form: The caster's body is composed mostly of acid, fire, or some other dangerous substance.  }
 
-Various animal forms have features which can be bought at the cost of one of the Attribute shifts.
-
-\enhancement{2}{Freeform}
-
-The shapeshifter can throw off the limits of existing and known creatures, and turn into anything they might imagine.  Any points which might otherwise have added or subtracted from Attribute points can be spent on special abilities instead.
-
-% 1 ephemeral
-% 1 dangerous - 1D6 damage per round of contact
-
+\end{itemize}
 
 \chapter{The Paths of Magic}
+
 \label{magic_paths}\index{Magic!Paths of Magic}There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic. Any character with the appropriate requirements can learn to cast magic. Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically. A priest of war may shout a torrent of aurochs into existence where an alchemist uses precise gestures to summon the essential form of an auroch but both are just using the second level of the conjuration sphere.
 
 People can pick up different Paths of Magic by simply fulfilling different requirements. If someone has access to one sphere of magic through multiple Paths and has bought access to the sphere, then learning the same sphere through the different Path simply requires some \gls{downtime} and study but carries no \gls{xp} cost. If a blood sorcerer were to learn the aldaron sphere as a natural knack and later decided to become an adherent of the goddess Laiqu\"{e}, she could channel the magic through divine means or through her innate abilities. All that is needed is a little time to pick up an understanding of how this same magic works through a different lens.
