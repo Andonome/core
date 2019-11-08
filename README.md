@@ -12,9 +12,8 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 |:---|:---|:---|:---|:---|:---|:---|
 | **Academics** +1 | lifting books: 3 | binding books: 0  | sorting coins: 1 | remembering facts: 2 | outsmarting someone: 0 | storytelling: 2 |
 | **Athletics** +2 | throwing a javelin: 4 | acrobatics: 1 | jumping over a chasm: 2 | judging how to climb: 3 | clocking the best escape route: 1 | falling...with style: 3 |
+| **Deceit** +3 | intimidating an opponent: 5 | sliding a knife up to someone's neck unnoticed: 2 | charging at someone to intimidate them: 3 | crafting a clever ruse: 4 | coming up with a quick lie: 2 | making a false friend: 4 |
 | **Vigilance** +3 | keeping watch all night: 5 | finding a hidden door in the darkness: 2 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
-<!--| **Deceit** +3 | intimidating an opponent: 5 | sliding a knife up to someone's neck unnoticed: 2 | charging at someone to intimidate them: 3 | crafting a clever ruse: 4 | coming up with a quick lie: 2 | making a false friend: 4 |
--->
 
 ### No Class
 Players put their XP wherever they like, so there are no charts for what has to be bought next, and no levelling system.  A fighter is just someone with a good Combat score, and a Paladin is just a fighter with a little devine magic.
