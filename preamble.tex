@@ -71,14 +71,14 @@
 {\Huge}
 
 \titleformat{\section}[frame]
-{\normalfont}
+{\needspace{3cm}\normalfont}
 {\filright
 \footnotesize
 \enspace SECTION \thesection\enspace}
 {8pt}
 {\Large\bfseries\filcenter}
 
-%\titleformat{\subsection}{\needspace{2\textheight}\large\bfseries}{}{1em}{}[\titlerule]
+\titleformat{\subsection}{\needspace{4cm}\large\bfseries}{}{1em}{}[\rule{.5\textwidth}{.2pt}]
 %
 %\titleformat{\section}
 %{\needspace{4\textheight}\normalfont\Large\bfseries}{\thesection}
@@ -133,7 +133,7 @@
 
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
-\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
 
 \newcommand{\spell}[3]{\subsubsection{#1}
@@ -163,7 +163,7 @@ Roll & Result \\
 {\end{tabular}}
 
 
-\newenvironment{exampletext}{\vspace{.3cm}
+\newenvironment{exampletext}{\needspace{4cm}\vspace{.3cm}
 
 \rule{.9\linewidth}{0.2pt}
 
