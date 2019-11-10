@@ -1021,19 +1021,21 @@ Each \gls{round} you select your tactics anew and have a range of options for ma
 
 \newcommand{\initiativechart}{
 
-	\begin{tcolorbox}[title={Initiative Chart},arc=1mm,tabularx={|p{.5\textwidth}c}]
+	\begin{tcolorbox}[title={Initiative Costs},arc=1mm,tabularx={|p{.5\textwidth}c}]
 
-Action & Initiative Cost\ \  \\\hline
+	\textbf{Action} & \textbf{Init. Cost} \\\hline
 
-\textbf{Striking} & \\\hline
+	-- \textbf{Striking} & \\\hline
 
-	Heavy weapon & 6 \\
+	Heavy weapon & 8 \\
+
+	Medium weapon & 6 \\
 
 	Light weapon & 4 \\
 
 	Drawing weapon & 2 \\\hline
 
-	\textbf{Projectiles} & \\\hline
+	-- \textbf{Projectiles} & \\\hline
 
 	Crossbow & 3 \\
 
@@ -1045,17 +1047,19 @@ Action & Initiative Cost\ \  \\\hline
 
 	Thrown weapon & 4 \\\hline
 
-	\textbf{Quick Actions} & \\\hline
+	-- \textbf{Quick Actions} & \\\hline
+
+	Defence & 2 \\
 
 	Guard someone & 2 \\
 
-	Moving & 2 \\
-
 	Keeping Edgy & 2 \\
+
+	Moving & 2 \\
 
 	Speaking & 2 \\\hline
 
-	\textbf{Other} & \\\hline
+	-- \textbf{Other} & \\\hline
 
 	Use magic item & 8 \\
 
@@ -1071,13 +1075,15 @@ Combat works by changing and shaping how resources are allotted to the three `Co
 
 \subsection{Initiative}
 
-At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative. Each character can adjust that number for their personal Initiative score. The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers. Everyone in the fight acts in descending order of Initiative -- highest to lowest.
+\begin{wraptable}[20]{r}{.4\textwidth}
 
-\begin{wraptable}[21]{r}{.4\textwidth}
+\vspace{-2cm}
 
 \initiativechart
 
 \end{wraptable}
+
+At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative. Each character can adjust that number for their personal Initiative score. The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers. Everyone in the fight acts in descending order of Initiative -- highest to lowest.
 
 Each time the character takes an action they pay a cost in Initiative -- once it reaches below 1 that character can no longer act.
 
@@ -1088,7 +1094,14 @@ Heavy weapons are those with a Weight Rating of -1 or greater. Smaller weapons, 
 \subsection{Quick Actions}
 
 Quick Actions can interrupt the usual Initiative priorities. Any time someone attempts a Quick Action, just so long as they have some Initiative score left, can take their action immediately. If two characters interrupt the Initiative flow with Quick Actions then whoever currently has the highest Initiative Score goes first.
-Quick Actions allow characters to guard someone as soon as they see an attack impending upon a friend, or to run away before someone approaches them. The quick actions are shown above by an asterisk.
+
+Quick Actions allow characters to guard someone as soon as they see an attack impending upon a friend, or to run away before someone approaches them. 
+
+\subsubsection{Defence as Action}
+
+Defence takes time and attention, but nobody needs to worry about running out of attention for a defence.  Since Defence is a \textit{Quick Action}, even characters reduced to negative Initiative can defend.
+
+Anyone can forgoe their defence, but any attacks against them will count as a \textit{Sneak Attack}.\footnote{See page \pageref{sneakattack} for details.}
 
 \subsection{Evasion}\index{Combat!Evasion}
 
