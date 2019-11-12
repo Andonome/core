@@ -58,6 +58,12 @@
 
 \newcommand{\headingtype}{CHAPTER}
 
+\newcommand{\sidepic}[2]{
+	\needspace{3cm}\begin{wrapfigure}{O}{.#1\textwidth}
+\includegraphics[width=.#1\textwidth]{images/#2}
+\end{wrapfigure}
+}
+
 \colorlet{chapnumcol}{black!55}
 
 \titleformat{\chapter}[display]
@@ -71,7 +77,7 @@
 {\Huge}
 
 \titleformat{\section}[frame]
-{\needspace{3cm}\normalfont}
+{\needspace{4cm}\normalfont}
 {\filright
 \footnotesize
 \enspace SECTION \thesection\enspace}
@@ -111,7 +117,7 @@
 
 		\newcounter{track}
 		\setcounter{track}{18}
-		\newcommand{\tracker}{\hspace{-0.5cm}\noindent\arabic{track}\addtocounter{track}{-1}\vspace{.39cm}
+		\newcommand{\tracker}{\center\noindent\arabic{track}\addtocounter{track}{-1}\vspace{.60cm}
 
 		}
 
