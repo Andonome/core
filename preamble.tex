@@ -107,6 +107,15 @@
 %{0pt}{3.25ex plus 1ex minus .2ex}{1em}
 %\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
 
+%%%%% Character Sheet Tracker
+
+		\newcounter{track}
+		\setcounter{track}{18}
+		\newcommand{\tracker}{\hspace{-0.5cm}\noindent\arabic{track}\addtocounter{track}{-1}\vspace{.39cm}
+
+		}
+
+
 \newcommand{\character}[1]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
 
 \newcommand{\monster}[1]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
