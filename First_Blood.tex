@@ -1237,28 +1237,34 @@ Each weapon has a Weight Rating, just like any item. For every point a weapon's 
 
 Finally, some weapons also has an in-built `Knack' -- a special ability they allow the wielder to use.  See page \pageref{knacks} for details.
 
-\newcommand{\weaponschart}{\begin{tcolorbox}[arc=1mm,tabularx={p{.15\textwidth}rrccl}]
+\newcommand{\weaponschart}{
+	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrp{.30\textwidth}}]
 	\textbf{Light Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & \textbf{Knacks} \\\hline
 
-	Cudgel & +2 & 0 & 0 & -3 & Stunning Strike \\
+		Cudgel & +2 & \ 0 & \ 0 & -3 & Stunning Strike (page \pageref{stunningstrike}) \\
 
-	Dagger & +1 & 0 & +1 & -4 &  \\
+	Dagger & +1 & \ 0 & +1 & -4 &  \\
 
-	Firepoker & +1 & +1 & 0 & -2 & Finishing Blow \\
+	Firepoker & +1 & +1 & \ 0 & -2 & Finishing Blow \\
 
-	Knife & +1 & 0 & 0 & -4 & Precise Strike \\
+	Knife & +1 & 0 & \ 0 & -4 & Precise Strike \\
 
-	Log & +1 & -1 & 0 & -2 & \\
+	Log & +1 & -1 & \ 0 & -2 & \\
 
 	Rapier & +1 & +2 & +1 & -2 & \\
 
-	Rock & +1 & 0 & 0 & -5 & \\
+	Rock & +1 & \ 0 & \ 0 & -5 & \\
 
-	Javelin & +1 & +2 & 0 & -2 & \\\hline
+	Javelin & +1 & +2 & \ 0 & -2 & \\\hline
+
+
+	\end{tcolorbox}
+
+	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}p{.07\textwidth}p{.07\textwidth}p{.07\textwidth}p{.30\textwidth}}]
 
 	\textbf{Medium Weapons} &  &  &  &  &  \\\hline
 
-	Boulder & +3 & -1 & 0 & 4/6 & Finishing Blow \\
+	Boulder & +3 & -1 & \ 0 & 4/6 & Finishing Blow \\
 
 	Chair & +1 & +1 & +1 & 1/ 3 & \\
 
@@ -1268,7 +1274,7 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	Great Sword & +2 & +1 & +2 & 3/5 & \\
 
-	Large Rock & +2 & 0 & 0 & 4/6 & \\
+	Large Rock & +2 & \ 0 & \ 0 & 4/6 & \\
 
 	Longsword & +1 & +1 & +3 & 1/3 & \\
 
@@ -1276,11 +1282,15 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	Spear & +1 & +1 & +2 & 0/2 & First Strike \\
 
-	Quarterstaff & 0 & +1 & +2 & 0/2 & First Strike \\
+	Quarterstaff & \ 0 & +1 & +2 & 0/2 & First Strike \\
 
-	Whip & 0 & +2 & 0 & -1/ 1 & \\
+	Whip & \ 0 & +2 & \ 0 & -1/ 1 & \\
 
-	Wood Axe & +2 & 0 & +1 & -1/1 & \\\hline
+	Wood Axe & +2 & \ 0 & +1 & -1/1 & \\\hline
+
+	\end{tcolorbox}
+
+	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}p{.07\textwidth}p{.07\textwidth}p{.07\textwidth}p{.30\textwidth}}]
 
 	\textbf{Heavy Weapons} &  &  &  &  &  \\\hline
 
@@ -1290,13 +1300,17 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	Poleax & +3 & +1 & +1 & 5 & First Strike \\\hline
 
+	\end{tcolorbox}
+
+	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}p{.07\textwidth}p{.07\textwidth}p{.07\textwidth}p{.30\textwidth}}]
+
 	\textbf{Shields} &  &  &  &  &  \\\hline
 
-	Bucklar Shield & +2 & 0 & +1 & -2 & Solid Defence \\
+	Bucklar Shield & +2 & \ 0 & +1 & -2 & Solid Defence \\
 
-	Kite Shield & +1 & 0 & +3 & 2/4 & Solid Defence, Dodge \\
+	Kite Shield & +1 & \ 0 & +3 & 2/4 & Solid Defence, Dodge \\
 
-	Round Shield & +1 & 0 & +2 & 0/2 & Solid Defence, Dodge \\
+	Round Shield & +1 & \ 0 & +2 & 0/2 & Solid Defence, Dodge \\
 \end{tcolorbox}}
 
 \weaponschart
@@ -3197,7 +3211,7 @@ You pay 0 Initiative to reload an arrow onto your bow, as opposed to the regular
 \subsubsection{Solid Defence}
 The character can hold their actions, persistently defending themself rather than attacking. They gain +2 to their Evasion Factor during this time. At any time they can give up the protection just as if they had held their action normally; this allows their to act at 1 higher Initiative than the current Initiative Count.
 
-\subsubsection{Stunning Strike}
+\subsubsection{Stunning Strike}\label{stunningstrike}
 You can declare that you are attempting to stun opponents. You then take a -1 penalty to Strike but if you successfully hit an opponent, all Damage dealt reduces their current Initiative. Multiple uses of this Knack add 1 each to the Initiative loss.
 
 For example, if someone were using a cudgel (which comes with the in-built Knack: Stunning Strike), and also had the Knack, then they smacked someone for 4 Damage, the opponent would immediately lose 5 from their current Initiative Score, even if all of the Damage was mitigated by \gls{dr} and FP.
