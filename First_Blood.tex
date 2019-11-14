@@ -2782,7 +2782,9 @@ The mage's mana stones now contain 3 \gls{mp} per point sacrificed from the mage
 
 Necromancers summon souls from distant, black realms and place them in appropriate bodies -- those of the once living and now dead. The corpses are sometimes filled with their old hosts, locking people into a state of permanent semi-death, or more often with ravenous and malicious spirits from foreign realms. Mages of this sphere begin by imitating the dead, becoming half dead themselves, which allows them to dissuade malicious spirits from attacking.
 
-\spell{Properties of the Dead}{undead creatures have certain properties in common. Firstly}{imperceptibly feed from the souls of the living. This is not performed with the mouth by merely by being close to dying things and absorbing them before they can wander to the next realm. Undead eyes generally do not work, instead they `see' the souls of people shining outward. Inanimate objects such as books, or even fellow undead, are not so clearly seen; the undead can avoid bumping into these objects but have great trouble reading anything or working fine machinery. However, they can operate in complete darkness and even fight without penalty, using the light of living people's souls to see them. They can also see living beings from a great distance due to the soul-light they emit.}
+\subsection{Properties of the Dead}
+
+Undead creatures have certain properties in common. Firstly they imperceptibly feed from the souls of the living. This is not performed with the mouth by merely by being close to dying things and absorbing them before they can wander to the next realm. Undead eyes generally do not work, instead they `see' the souls of people shining outward. Inanimate objects such as books, or even fellow undead, are not so clearly seen; the undead can avoid bumping into these objects but have great trouble reading anything or working fine machinery. However, they can operate in complete darkness and even fight without penalty, using the light of living people's souls to see them. They can also see living beings from a great distance due to the soul-light they emit.
 
 Undead also feel no pain and suffer little from scrapes and bruises. As a result, they automatically have a \gls{dr} of 2 which is cumulative with armour. This counts as Complete armour, but not Perfect -- shots through their eyes or attacks which sever muscles still debilitate them.
 
@@ -2790,7 +2792,7 @@ The undead do not tire -- they take no Fatigue Points. They can walk or dig or f
 
 \spelllevel
 
-\spell{Deathly}{Continuous}{Medicine}
+\spell{Morbid}{Continuous}{Medicine}
 
 The targed enters an eltered state of semi-death. They ignor all Fatigue Point penalties (but can still become suddenly unconscious due to too many Fatigue Points). They gain a natural \gls{dr} of 1 which is cumulative with armour -- their corpse-like body bleeds less and feels little pain, only bare sensations written in the mind as cold information. While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them. While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \gls{fp}.
 
@@ -2798,11 +2800,11 @@ This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell. 
 
 \enhancement{2}{Gaze}
 
-By adding an additional level to the process, the target can gain the special sight of the undead (in addition to their normal vision).  They can now see all living things, even in the darkness.  Addtionally, the Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
+By adding an additional 2 levels to the process, the target can gain the special sight of the undead (in addition to their normal vision).  They can now see all living things, even in the darkness.  Addtionally, the Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
 
-\enhancement{3}{Lichdom}
+Additionally, the target's \gls{dr} raises to 2 as the target stops feeling pain altogether.  They can even hold their breath for one minute per spell level.
 
-The total \gls{dr} available to the target raises to 2, as it enters into a temporary state of undeath.  If the target dies while the spell is in effect the state of undeath becomes permanent, even once the spell has gone.
+Targets who die while this spell is in effect raise from the dead as an undead creature.\footnote{This spell cannot raise someone as undead if the necromancer's spell level would not normally allow them to raise a creature of that spell level.}
 
 \spell{Death Touch}{Instant}{Medicine}
 
@@ -2925,9 +2927,7 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 \spell{Polymorph}{Continuous}{Medicine}
 
 \iftoggle{verbose}{
-	\begin{wrapfigure}{R}{.43\textwidth}
-		\includegraphics[width=.43\textwidth]{images/Roch_Hercka/polymorph.jpg}
-\end{wrapfigure}
+	\sidepic{3}{Roch_Hercka/polymorph.jpg}
 }{}
 
 The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
@@ -3107,7 +3107,7 @@ In order to learn the Path of Song, the mage must have the second level of the P
 
 \subsection{Special Considerations}
 
-Just as with rune magic, song magic can never be cast in an instant.  Quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
+Just as with rune magic, song magic can never be cast in an instant.  Their highest level of a sphere can only be cast as a ritual spell, and quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
 
 \subsection{Mana Stones}
 
@@ -3140,15 +3140,18 @@ You are particularly difficult to flank. So long as you are not surrounded on al
 The character receives +2 to Strike when making unarmed attacks or grappling.
 
 \subsubsection{Charge}
+
 If you spend a \gls{round} moving at your maximum speed in order to engage with the enemy, you can replace your Strength bonus with your Speed Bonus for the purposes of calculating Damage, or add +1 Damage per knack you have, as you prefer, for the first attack of the \gls{round}.
 
 For example, a character with Speed +3 and Strength -1 could charge into the enemy and the first attack would count as having a Strength Bonus of +3 due to the character's momentum being pushed behind that initial sword swing. This Strength Bonus only counts for the purposes of Damage and cannot increase the character's Initiative once combat has begun.
 
 \subsubsection{Cutting Swing}
+
 The character can cut through more than one opponent with a heavy weapon, or slice open multiple skulls with a single arc of metal.  Any time the character reduces an opponent below 1 HP, they can immediately make another attack at no Initiative cost against anyone in range of the weapon; if that attack reduces the opponent below 1 HP then further attacks can be made until no further enemies are within range or the character fails to fell an enemy.
 
 \subsubsection{Disarm}
-With a flick of your sword into an opponent's wrist or by trapping the hilt you can throw an opponent's sword away. This manoeuvre takes the normal amount of Initiative for using your weapon. You and your opponent make a Resisted Dexterity + Combat Action, \gls{tn} 7. If the disarm attempt is successful, the weapon is thrown 1D3 squares in a random direction.
+
+With a flick of your sword into an opponent's wrist or by trapping the hilt you can throw an opponent's sword away. This manoeuvre takes the normal amount of Initiative for using your weapon. You and your opponent make a \textit{resisted} Dexterity + Combat Action, \gls{tn} 7. If the disarm attempt is successful, the weapon is thrown 1D3 squares in a random direction.
 
 \subsubsection{Dodger}
 The character is an expert at dodging long-ranged attacks. They need to spend only 1 Initiative point in order to Keep Edgy (see page \pageref{edgy}) and can thereafter dodge all incoming missile attacks with their Speed +2. If this knack is taken multiple times, it adds +1 to the roll each time.
@@ -3285,7 +3288,7 @@ Players `write' most of their backstory during play rather than before it.  \Gls
 
 Soon after, the characters need to sell the diamond they've stolen.  Eric's player knows there are dwarves all around town so he tells the group \textit{``I'll see about help from the local dwarves.  I learnt their language five years ago when I had to hide from the law for a while underground, and met a few of them that sell goods without much question.''}
 
-\paragraph{Session 2} finds the characters lost in deep, long caverns in the bearded mountains, wounded and low on supplies.  Jane's player spends 2 Story Points to declare she knows of a gnomish illusionist who frequents these deep caverns, looking for magical ingredients.
+\paragraph{Session 2} finds the characters lost in deep, long caverns in the bearded mountains, wounded and low on supplies.  Jane's player spends 4 Story Points to declare she knows of a gnomish illusionist who frequents these deep caverns, looking for magical ingredients.
 
 \textit{``How?''}, asks a rather suspicious \gls{gm}.
 
@@ -3407,7 +3410,7 @@ The majority of the Night Guard have boring, thankless jobs such as guarding cat
 
 Some rare few have been known to strike deals with dragons to leave an area, or assassinate rogue alchemists who are powerful enough to keep themselves free from the reaches of any magical guild.
 
-In general, the more dangerous the job, the higher the pay, so most of the Night Guard try not to do too well at their job.  They train in archery well, take a paycut in return for having more members in their group, and make sure nobody volunteers them for anything interesting.  Of course, a lot of the jobs one takes depends more upon a captain of the Guard than the grunts.
+In general, the more dangerous and skillfull the job, the higher the pay, so most of the Night Guard try not to do too well at their job.  They train in archery well, take a paycut in return for having more members in their group, and make sure nobody volunteers them for anything interesting.  Of course, a lot of the jobs one takes depends more upon a captain of the Guard than the grunts.
 
 \subsection{Defending the Fatherland}
 Your homeland is in grave danger as nura surround it and grow more numerous every day.  The local lord has given you strict instructions that you cannot leave, but you feel sure that the only path is to get help from another group.
@@ -3418,7 +3421,7 @@ The characters may all be gnomes, defending against encroaching nura who have co
 
 Alternatively, the party may be elves, constantly assaulted by increasing undead assaults, spurned on by an increasingly powerful and paranoid necromancer.  Nobody wants to contact the local dwarves to ask a favour, but once the greatest of the local bards die, everyone knows that the party is over, and they must begin preparing for war.
 
-\subsection{The Magical Guild}
+\subsection{The College of Alchemy}
 
 The characters are all alchemists in the service of the Alchemist's Guild in Eastlake.  The first part of the campaign involves high-school rivalries against other Clans in the guild such as stealing their homework, or vying for romantic attention.  Soon after, the characters begin proper guild missions, venturing out into the strange areas of the world where normal people will not tread.
 
