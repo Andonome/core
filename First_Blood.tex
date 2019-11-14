@@ -1367,9 +1367,7 @@ Armour can cover more or less of a character, and therefore comes with three rat
 \subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
 
 \iftoggle{verbose}{
-	\begin{wrapfigure}{R}{.43\textwidth}
-		\includegraphics[width=.43\textwidth]{images/Roch_Hercka/vitals_shot.jpg}
-	\end{wrapfigure}
+	\sidepic{3}{Roch_Hercka/vitals_shot.jpg}
 }{}
 
 When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
@@ -1470,17 +1468,11 @@ Characters who spend the entire turn running can move 10 squares plus their Spee
 
 }{}
 
-\section{Complications, Options \& Manoeuvres}
+\section{Complications \& Manoeuvres}
 
-\subsection{Brawling}
+\subsection{Complications}
 
-\index{Combat!Brawling}\index{Brawling}Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
-
-\subsection{Blind Rage}\label{blind}
-
-\index{Blind Rage}Weapons can grant a bonus to the wielder's Evasion Factor because the wielder is keeping people at bay with it -- a spear might be waved in an opponent's face in a threatening manner or a sword might be on the ready to attack if someone gets within its range. However, this marvellous defence only works against people who care about being hit. Anyone can choose to attack someone while ignoring their opponent's weapon's bonus to Evasion; the penalty is simply that the opponent can choose to make a single Sneak Attack immediately. This counts as a Sneak Attack, gaining +4 to hit and +2 Damage.\footnote{See page \pageref{sneakattack}.}
-
-\subsection{Blindness}
+\subsubsection{Blindness}
 
 \index{Blindness}\index{Combat!Blindness}Fighting while blind is no fun -- your opponent can see you coming, and you can't see them. Blinded opponents suffer a penalty equal to -8 plus their Wits and Vigilance Bonuses with a maximum penalty of -6. For example, a character with With -1 would receive a -9 penalty to attack, except that the maximum penalty is -6. Someone with Wits +1 and Vigilance +3 \ would suffer a -4 penalty to attack because both reduce the basic penalty of -8.
 
@@ -1488,7 +1480,7 @@ This penalty only counts when one side of a fight is blind. When both sides are 
 
 While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on their side (including themself) then they hit a companion. If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2. If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion. Companions who are are accidentally hit can attempt an Evasion roll by rolling with their current Evasion Factor against \gls{tn} 10; failure implies normal Damage from that attack. It is quite possible to kill a companion while fighting blind.
 
-\subsection{Darkness}
+\subsubsection{Darkness}
 
 \label{darkness}\index{Darkness}Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses. Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent. However, when both sides suffer from the darkness, the battle changes very little. Neither side can hit very accurately, but then neither side can dodge or parry very well either.
 
@@ -1498,51 +1490,62 @@ For example, a human guard has caught a room full of elves with stolen goods. Th
 
 Deep darkness can provide a maximum penalty of -6, while twilight is limited to a penalty of -3.
 
-\subsection{Drawing Weapons}
+\subsubsection{Passing Attacks}\index{Combat!Passing Attacks}
+
+When someone is attempting to run past others, they have some opportunity to hit when the character is passing. This can be any normal attack, but counts as a Quick Action, jumping ahead in the Initiative Score. The attack costs the normal amount of Initiative.
+
+
+\subsection{Manoeuvres}
+
+\subsubsection{Brawling}
+
+\index{Combat!Brawling}\index{Brawling}Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
+
+\subsubsection{Blind Rage}\label{blind}
+
+\index{Blind Rage}Weapons can grant a bonus to the wielder's Evasion Factor because the wielder is keeping people at bay with it -- a spear might be waved in an opponent's face in a threatening manner or a sword might be on the ready to attack if someone gets within its range. However, this marvellous defence only works against people who care about being hit. Anyone can choose to attack someone while ignoring their opponent's weapon's bonus to Evasion; the penalty is simply that the opponent can choose to make a single Sneak Attack immediately. This counts as a Sneak Attack, gaining +4 to hit and +2 Damage.\footnote{See page \pageref{sneakattack}.}
+
+\subsubsection{Drawing Weapons}
 
 \index{Combat!Drawing Weapons}Drawing a weapon costs 2 Initiative if it is placed in an easy place to draw, like a scabbard on the side of a belt. If a character holds weapons on the back or in a bag, it costs 8 Initiative to remove them. If a knife's stuffed inside a pack, the \gls{gm} may stipulate a number of \glspl{round} required to draw the weapon.
 
-\subsection{Flanking}
+\subsubsection{Flanking}
 
 Attacks from someone's anterior side gain a +2 Bonus.  Anyone caught alone is in more danger than they would be, due to opponents attacking from all side.
 
-\subsection{Grabbing \& Grappling}\index{Combat!Grappling}
+\subsubsection{Grabbing \& Grappling}\index{Combat!Grappling}
 
-\subsection{Grabs}
+\paragraph{Grabs:}
 
 A grapple always starts with a grab.  A grab is a normal roll, made without any benefits from weapons.  If successful, the character has grabbed an opponent.
 
 Once two people are grappling, neither can move and so both can be struck as per a Sneak Attack by anyone nearby.
 
-\subsection{Grappling}
+\paragraph{Grappling:}
 
 Once two people are caught in the grapple, either can make a grappling roll at the cost of 4 Initiative.  They can then roll with double their Strength, plus their Strike factor, against 7 plus the enemy's Evasion score.
 
 A successful roll implies the character can break the grapple and move freely, or can inflict $1D6$ plus their Strength Bonus in Damage.
 
-\subsection{Guarding}\index{Guarding}
+\subsubsection{Guarding}\index{Guarding}
 
 If you guard someone by standing in front of them then all attacks have to go through you first.\footnote{This includes missile attacks only if you could otherwise evade them.}  Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no Initiative) at their real target.
 
-\subsection{Half Swording}\index{Combat!Half Swording}
+\subsubsection{Half Swording}\index{Combat!Half Swording}
 
 It is possible to hold a sword by the blade and use the guard to bludgeon one's opponent. This manoeuvre allows the weapon's Speed Bonus to be added to its Damage instead. It takes 2 Initiative points to change how one holds the sword.
 
-\subsection{Holding Off}\index{Combat!Holding Off}
+\subsubsection{Holding Off}\index{Combat!Holding Off}
 
 Anyone can wait to see what the battle brings -- the character simply lowers their Initiative and can jump in at any point, acting at one Initiative higher than a declared action.
 
 For example, someone might hold off their action at Initiative 5. They wait for the enemy to attack at Initiative 3 and notices that one of them is attempting to use a magical item. Immediately they retroactively performs an action at Initiative 4.
 
-\subsection{Keeping Edgy}\label{edgy}\index{Keeping Edgy}
+\subsubsection{Keeping Edgy}\label{edgy}\index{Keeping Edgy}
 
 The character can take a moment to note their \index{Dodge!Long-range}long-range surroundings, including archers and potential spell casters. This takes only 2 Initiative points and for the rest of the \gls{round}, any time the character is being fired upon in combat they can use their basic Speed Bonus in a resisted action to leap out of the way of an incoming missile or targeted spell, such as a fireball. Spells which simply target people by gaze or magical effects such as polymorphing are unaffected.
 
-\subsection{Passing Attacks}\index{Combat!Passing Attacks}
-
-When someone is attempting to run past others, they have some opportunity to hit when the character is passing. This can be any normal attack, but counts as a Quick Action, jumping ahead in the Initiative Score. The attack costs the normal amount of Initiative.
-
-\subsection{Ram}\index{Combat!Ram}
+\subsubsection{Ram}\index{Combat!Ram}
 
 In combat, it is possible to scare, push and stab at someone to force them to move backwards. The attacker spends 3 Initiative points. The defender can either attempt to resist, or can simply acquiesce and move back. When moving back, targets are pushed back 2 square; the attacker's Strength adds to this and the opponent's Strength decreases it. Characters can sacrifice the use of 1 point of Strength to push back an additional person.
 
@@ -1568,7 +1571,7 @@ Spell casters who wish to both attack and cast spells within the same \gls{round
 
 Switching away from one's focus on spells or martial combat must be decided at the start of the \gls{round} -- mages who are not mentally prepared to cast spells or use a sword cannot do so at a second's notice.
 
-\subsection{Two Weapon Combat}\index{Combat!Two Weapons}
+\subsubsection{Two Weapon Combat}\index{Combat!Two Weapons}
 
 A character using two weapons -- perhaps a shield in one hand and a sword in the other -- can use the best Speed, Strength and Dexterity bonus from all weapons. Each weapon will have to be held in one hand, increasing its Weight Rating by 2.
 

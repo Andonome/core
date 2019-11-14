@@ -77,7 +77,7 @@
 	\end{tabular}}
 %----
 
-	\posterbox{name=gumption,column=5,row=2,span=3,rowspan=1.7}{
+	\posterbox{name=gumption,column=5,row=2,span=3,rowspan=2}{
 
 	\vspace{.2cm} {\small HP}
 
@@ -87,7 +87,7 @@
 		\tenboxes
 	\end{tabular}
 
-	\vspace{.2cm} {\tiny Fatigue}
+	\vspace{.6cm} {\tiny Fatigue}
 
 	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
 
@@ -98,12 +98,14 @@
 
 	}
 %----
-	\posterbox{name=mp,column=8,row=2,span=3,rowspan=1.7}{
+	\posterbox{name=mp,column=8,row=2,span=3,rowspan=2}{
 
 		\vspace{.2cm} {\small FP} \shortline {\tiny $+ Cha$}
 
 	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
 
+		\tencircles
+		\tenboxes
 		\tencircles
 		\tenboxes
 	\end{tabular}
@@ -121,7 +123,7 @@
 		}
 
 %----
-		\posterbox{name=track,column=11,row=2,span=1.2,rowspan=11}{ 
+		\posterbox{name=track,column=11,row=1,span=1,rowspan=12}{ 
 			{\large
 
 			\tracker
@@ -149,7 +151,8 @@
 			}
 
 %----
-	\posterbox[blankest]{name=factors,column=1,row=5,span=0,rowspan=0}{\begin{tikzpicture}
+
+	\posterbox[blankest]{name=factors,column=1,row=4,span=0,rowspan=0}{\begin{tikzpicture}
   \begin{scope}[blend group = soft light]
     \fill[lightgray!11!white]   ( 90:1.5) circle (2);
     \fill[lightgray!12!white] (210:1.5) circle (2);
@@ -163,7 +166,7 @@
 
 %----
 
-	\posterbox{name=initbox,column=5,row=7,span=3.7,rowspan=1.1}{\begin{multicols}{2}{\tiny \begin{tabular}{lc}
+	\posterbox{name=initbox,column=1,row=7,span=3.7,rowspan=1.1}{\begin{multicols}{2}{\tiny \begin{tabular}{lc}
 		{\bf Action} & {\bf Cost} \\\hline
 		Med. Weapon & 6 \\
 		Light Weapon & 4 \\
@@ -185,13 +188,17 @@
 	\end{multicols}
 }
 %----
-	%\posterbox[adjusted title=Specializations]{name=specializations,column=9,row=7,rowspan=1,span=2}{llksjf}
+
+	\posterbox[adjusted title=Abilities \& Specializations]{name=racial_abilities,column=5,row=7,rowspan=1,span=6}{}
+
 %----
-	\posterbox[adjusted title=Armoury]{name=armoury,column=5,row=4,span=6,rowspan=2.4}{
+	\posterbox[adjusted title=Armoury]{name=armoury,column=5,row=4,span=6,rowspan=3}{
 		\begin{tabular}{p{.2\textwidth}lllll}
 			Weapon & Dam. & Init. & Ev. & Wt. & Knack \\
 			\\
 			
+			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
+			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
 			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
 			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
 			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
