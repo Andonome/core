@@ -287,3 +287,37 @@
 	}
 \end{tcbposter}
 
+\pagebreak
+
+\begin{tcbposter}[
+  coverage = {
+      spread,
+      %interior style={bottom color=white},
+      watermark text={First \\ Blood},
+      watermark color=black!25!white,
+      watermark opacity=0.4
+  },
+  poster   = {showframe=false,columns=11,rows=12},
+  boxes    = {
+      enhanced standard jigsaw,sharp corners=downhill,arc=7mm,boxrule=.6mm,
+      colback=white,opacityback=0.7,colframe=black,
+      title style={left color=black,right color=white},
+      fonttitle=\bfseries
+   }
+]
+
+	\posterbox[adjusted title=Stories]{name=stories,column=1,row=1,rowspan=11,span=11}{
+
+		{\Huge Story Points}
+
+		\vspace{0.5cm}
+
+	\begin{tabular}{p{1em}p{1em}p{1em}p{1em}p{1em}p{1em}p{1em}}
+
+		\Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \huge\ding{111} & \Large\ding{111} \\
+
+	\end{tabular}
+
+		}
+\end{tcbposter}
+
