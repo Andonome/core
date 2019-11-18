@@ -33,7 +33,7 @@
 
 \section*{Special Thanks ...}
 
-\paragraph*{to the Artists }
+\paragraph*{to the Artists}
 
 Neil McDonnell for the basic photograph which became the Polymorph image, Boris Pecikozi\'c for Thenton's Story images, Brian Garabrant for the cover images and Roch Hercka for the myriad wonderful pencil sketches of Vitals Shots, illusions, encumbrance and many more.
 
@@ -42,6 +42,7 @@ Neil McDonnell for the basic photograph which became the Polymorph image, Boris 
 \paragraph{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
 
 \section*{The Right to Improve}
+
 This book has some serious problems, and that's fine.  I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and change things.  This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
 
 No longer do imaginative \acrshortpl{gm} have to scribble their inspired house rules onto the back of an old banking statement and cellotape it to the last page of the core book.  Instead, you have the complete source code, and can modify it as you please, creating a cohesive book.  If you spot an error, you can correct it.  If you want to add a couple of spells, it's no problem.  Just download the source code from gitlab.com/FirstBloodRPG/, download a Latex editor, and make the changes you want.  Once you're happy with your changes, you might even send it off to a printing shop for a cheaply bound book all of your own.
@@ -414,9 +415,9 @@ When taking a Resting Action, one die is presumed to have rolled a 6 and the pla
 After speaking with several villagers he found a single boy who remembered. \emph{These men came for him. They came and surrounded him and said they wanted his book, but then he just started singing, and they all went to sleep. After that he headed over to Caserenna. He must be trying to go over the mountain where the dwarves live. He had a funny accent and I think he came from the South, over those mountains}. Thenton suspected that the spell in the bard's book was some kind of sleeping spell. If he wasn't simply a very boring singer then the trio would have to strike fast if they found him, before he could send them all to sleep.
 \end{exampletext}
 
-\subsection{Teamwork}
+\subsection{Teamwork}\label{teamwork}\index{Teamwork}\index{Group actions}
 
-\index{Teamwork}\index{Group actions}Some tasks lend themselves to working with others. Others can be difficult or impossible to do with companions. Some tasks, such as fleeing or sneaking, do not benefit at all from having a load of friends right behind you.
+Some tasks lend themselves to working with others. Others can be difficult or impossible to do with companions. Some tasks, such as fleeing or sneaking, do not benefit at all from having a load of friends right behind you.
 
 When acting as a group provides no benefit, one player rolls the dice and the same result counts for everyone.  If that player rolls a 9, then everyone's score is 9 and they add their own bonuses and penalties.
 
@@ -2025,6 +2026,20 @@ If the target is an \gls{npc}, they lose \arabic{spelllevel} \gls{fp} + the cast
 
 The curse only lasts while it's maintained, and only takes effect in a natural environment where creatures roam -- not in towns or otherworldly environments.
 
+\spell{Nature's Reclaim}{Instant}{Survival}
+
+The caster reaches out to any dead matter within range and forces it to be reclaimed by the earth. An early Autumn comes and wooden weapons degrade to nothing, the wheels of carts come undone and entire houses can be brought to the ground.
+
+The basic \gls{tn} is 10 which increases for young, fresh wood and decreases for older, already-degraded wood. Other natural substances, such as leather or cloth can also be made to degrade, but only once substance per casting can be affected.
+
+Caster's can almost never cast this spell upon swords used in combat, as the area made of wood is small, moving fast, and generally covered.
+
+Undead targeted by this spell lose a number of \gls{hp} equal to the spell's level, plus the caster's Intelligence Bonus.
+
+\enhancement{1}{Large}
+
+The caster can affect a total area equal to \arabic{spelllevel} squares plus their Wits Bonus. 
+
 \spelllevel
 
 \spell{Plantform}{Continuous}{Survival}
@@ -2074,14 +2089,6 @@ The item grows 1 square at the end of each \gls{round}, so it will take a while 
 For example, a caster with Intelligence +2 and Wits +1 could create 5 squares' worth of hedge-wall to block their escape. It would have 6 HP and a \gls{dr} of 6, so destroying it with a single spell or axe swing would be very difficult. It can, of course, be sawn and cut through like any normal plant, given enough time.
 
 The \gls{gm} may adjust the \gls{tn} of the spell, depending upon the quality of the basic plant matter which the caster is working with and encouraging growth from. Working with a wild swamp, teeming with tree-roots and floating lillies might lower the \gls{tn}, while casting a spell upon a sparse rock garden should increase the \gls{tn}.
-
-\spell{Nature's Reclaim}{Instant}{Survival}
-
-The caster reaches out to any wooden matter within range and forces it to be reclaimed by the earth. An early Autumn comes and wooden weapons degrade to nothing, the wheels of carts come undone and entire houses can be brought to the ground.
-
-The caster can affect a total area equal to \arabic{spelllevel} squares plus their Wits Bonus. The basic \gls{tn} is 7 which increases for young, living wood and decreases for older, already-degraded wood. Other natural substances, such as leather or cloth can also be made to degrade, but only once substance per casting can be affected. The caster uses their Intelligence + Survival to roll, and any success instantly destroys all targeted matter.
-
-Once the spell is over, all degraded wood remains destroyed -- there is no coming back for any of these items. They become dust or wet mulch to be reclaimed by the natural cycle of life and death.
 
 \spelllevel
 
@@ -2460,7 +2467,7 @@ Hugi intends to give his troops a blessing. No roll is involved, so he does not 
 
 \sphere{Force}\index{Force}
 
-The mage can shape pure energy, pushing and pulling at the world with the power of their will alone. They can form shields, pick up weapons and grind targets into the ground as if with an invisible, giant, floating hand.
+The mage can shape pure energy, pushing and pulling at the world with the power of their will alone. They can create magical shields, pick up weapons and grind targets into the ground as if with an invisible, giant, floating hand.
 
 The force sphere does not come with discrete spells at each level. Instead, the mage gains access to all spells immediately. Each spell can be cast at any level the caster possesses, so a mage with the 3rd level of the force sphere could cast `Mage Armour' at level 1, 2 or 3 -- each with increasingly more expensive cost and a better shielding.
 
@@ -2494,19 +2501,15 @@ The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level. 
 
 	3 & The entire \emph{area}. \\
 
-	4 & 1 full area, up to 1 area away. \\
+	4 & A number of areas equal to the caster's Wits. \\
 
 	5 & Five full sequential areas plus the caster's Wits. \\
 
 \end{tcolorbox}
 
-\noindent Mages able to perceive events multiple areas away make for legendary spies.
+\noindent Mages able to perceive events multiple areas away make for legendary spies, although the power is limited by the fact that while the make can feel events at a distance, they cannot hear voices or read anything.
 
-The mage's sight works a little like a floating, insubstantial eye which is unaffected by darkness or mist. It cannot go through walls and cannot see colour but can move at the speed of thought through a massive space and allows the mage a clear idea of the entire area. Smaller spells work as well as eyesight, while larger spells can be more difficult to use to track a full area -- most mages simply are not equipped to receive sense data from a full mile all at once.
-
-Mages using Metamagic to increase the range of their spell can use this to sense things from afar. Someone using Metamagic to cast a level 5 Mage Sight spell would be able to see perhaps 7 areas at the same time, and cast spells with any one of them.
-
-This spell allows people to perceive movement only, and not to hear what is happening in that location.
+Any two mages `looking' at the same area can feel each other's presence and instantly understand that someone else is using Mage Sight.
 
 \spell{Dancing Swords}{Continuous}{Combat}
 
@@ -2518,13 +2521,15 @@ While the weapon is next to the caster it can defend them just as any weapon. An
 
 To attack with the weapon, the mage spends the normal amount of Initiative for that weapon; e.g. 4 for a dagger and 6 for a shortsword. They roll with Intelligence + Combat and deals the normal amount of Damage given the effective Strength Bonus, so a fourth level force sphere spell could wield a dagger to deal $2D6$ Damage, or could wield an axe to deal $2D6+2$ Damage.
 
-If the mage levitates multiple weapons (through multiple castings), each additional one adds +1 to their Strike score, adds +1 Damage and +1 to the Evasion Bonus. In this way the mage can add up to a maximum of +3 to each stat, meaning only the first four weapons can have an effect. Additional weapons can add Evasion Bonuses behind or to the side of the mage to ensure they do not lose any Evasion Bonus when attacked from behind but a fifth weapon cannot add additional Damage.
+If the mage levitates multiple weapons (through multiple castings), each additional weapon adds +1 to their Strike score, adds +1 Damage and +1 to the Evasion Bonus. In this way the mage can add up to a maximum of +3 to each stat, meaning only the first four weapons can have an effect. Additional weapons can add Evasion Bonuses behind or to the side of the mage to ensure they do not lose any Evasion Bonus when attacked from behind but a fifth weapon cannot add additional Damage.
 
 If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character. The mage defends with their normal Evasion Factor and a successful grab means that the weapon has been arrested. The weapon gains a Weight Rating equal to the Weight of the character grabbing the weapon (which is equal to their maximum HP). At this point the weapon is too heavy to lift and the spell ends.
 
 The levitated weapons do not add a Speed Bonus to the caster's Initiative -- they must use their Wits Bonus as usual.
 
-The caster may not employ any special combat manoeuvres such as pushing people back or fighting in the Aggressive Stance. No Knacks concerned with Combat apply to the mage wielding this weapon.
+The caster may not employ any special combat manoeuvres such as pushing people back or fighting in the Aggressive Stance. No Knacks concerned with Combat apply to the mage wielding such weapons.
+
+Mages who must slowly cast a spell can still weild weapons instantly.  Runecasters might require a full scene to make a dagger float, but the floating dagger can thereafter be used to attack or even defend at the normal Initiative rate.
 
 \spell{Levitation}{Continuous}{Combat/ Craft}
 
@@ -2534,7 +2539,7 @@ If creatures are targeted for levitation, they have a Weight Rating equal to the
 
 Mages attempting to lift people into the air can move the target only at the rate of a standard action -- i.e. 3 squares per turn plus their effective Speed rating. The effective Speed rating is equal to the spell's level, but the spell can be encumbered just like lifting a normal person. So casting a spell at level 3 means an effective Strength and Speed rating of 3; if the target had Strength +1 they would have 7 HP and therefore a Weight Rating of 7. That's 4 points above the spell's rating so the Speed suffers a -4 encumbrance penalty, making the total movement 1 square every two \glspl{round}. The target could roll to be free every 4 Initiative steps, rolling against the spell's effective Strength Bonus.
 
-While a target is being levitated, they are especially vulnerable to attack, and all attacks against them count as Unseen Attacks, gaining +4 to Strike and +2 to Damage.
+While a target is being levitated, they are especially vulnerable to attack, and all attacks against them count as Sneak Attacks, gaining +4 to Strike and +2 to Damage.
 
 \spell{Lock}{Continuous}{Craft}
 
@@ -2572,7 +2577,7 @@ Seeing through an illusion is always an opposed roll -- the illusionist adds the
 
 Illusionists add different Skills to the roll, depending upon what they are making an illusion of. An illusion of a cart or sword might require the Craft Skill. An illusion of a monster might use the Academics Skill. Specialisations in the correct area are, as usual, a requirement if the caster wants to avoid the usual -1 penalty for lacking the appropriate specialisation.
 
-For example, a gnome creates an illusion of a fleeing gnoll with a great bundle of treasure in his hand, hoping the PCs will chase after him immediately. His Intelligence is +2 and his Academics is at +1 though he has no appropriate specialisations, so the players are rolling at \gls{tn} 9. The \gls{gm} takes the party member with the highest Wits + Vigilance who has a score of +3 in total. The next highest score in the party is +1 but nobody else has anything. The total is +4 so the \gls{gm} rolls for them and obtains a total of 8 -- that's not enough. As they begin to run, one of the PCs remembers they heard about a gnomish illusionist and asks `Are we chasing an illusion?' - that puts that final score up to 10; the \gls{tn} is reached and the \gls{gm} informs the player that she sees that the gnoll's feet are not always touching the ground properly, so it must be an illusion.
+For example, a gnome creates an illusion of a fleeing gnoll with a great bundle of treasure in his hand, hoping the PCs will chase after him immediately. His Intelligence is +2 and his Academics is at +1 though he has no appropriate specialisations, so the players are rolling at \gls{tn} 9. The \gls{gm} takes the party member with the highest Wits + Vigilance who has a score of +3 in total. The next highest score in the party is +2 but nobody else has anything to contribute. The total is +4\footnote{See the rules on teamwork, page \pageref{teamwork}.} so the \gls{gm} rolls for them and obtains a total of 8 -- that's not enough. As they begin to run, one of the PCs remembers they heard about a gnomish illusionist and asks `Are we chasing an illusion?' - that puts that final score up to 10; the \gls{tn} is reached and the \gls{gm} informs the player that she sees that the gnoll's feet are not always touching the ground properly, so it must be an illusion.
 
 The \gls{gm} should grant bonuses and penalties to illusions depending upon lighting conditions -- illusions inside a shadowy cottage seen from far away should receive an immense bonus, while far-fetched illusions on a sunny day seen up close might receive a penalty.
 
@@ -2618,7 +2623,7 @@ Audio spells become deafening, and cover an entire area.
 
 \enhancement{1}{Solid}
 
-Solid illusions are not all that solid, but they can be touched without disipating.  They are also far more realistic, and increase the \gls{tn} to see through the illusion by 2.
+Solid illusions are not all that solid, but they can be touched without disipating and hold all manner of nice details, such as \emph{smelling} right, or stopping smoke from blowing through them.  They are also far more realistic, and increase the \gls{tn} to see through the illusion by 2.
 
 These illusions have a Strength score equal to -5, plus the spell's level, plus the caster's Intelligence and skill.
 
@@ -2629,6 +2634,12 @@ Once even a single point of Damage has been dealt to the illusion, it vanishes.
 \enhancement{2}{Massive}
 
 Massive Illusions cover an entire area.  Powerful illusionists can make everyone in a castle's wing look like goblins, or make a filthy kitchen appear clean.
+
+While a castle's various rooms have such detail that they each count as a separate room, a small keep or house will count as a \emph{single} area from outside, so such illusions can target a full house from the outside.
+
+\enhancement{3}{Enormous}
+
+The illusion can cover one full area, plus the caster's Wits Bonus.
 
 \enhancement{2}{Negative}
 
@@ -2857,6 +2868,9 @@ The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can de
 
 \end{exampletext}
 
+\spell{Preservation}{Instant}{Survival}
+
+Trainee artists and necromancers have one thing in common -- fruit.  Students of necromancy often begin their journey by stopping food from degrading.  This spell gives a sort of `half-life' to rot, such that any foods affected slow their own aging process incrementally.  They're not sustained in perfect condition forever, but never quite reach an entirely spoiled stage.
 
 \sphere{Polymorph}\index{Polymorph}
 
@@ -3153,7 +3167,7 @@ With a flick of your sword into an opponent's wrist or by trapping the hilt you 
 \subsubsection{Dodger}
 The character is an expert at dodging long-ranged attacks. They need to spend only 1 Initiative point in order to Keep Edgy (see page \pageref{edgy}) and can thereafter dodge all incoming missile attacks with their Speed +2. If this knack is taken multiple times, it adds +1 to the roll each time.
 
-This Knack grants immunity to all Unseen Attacks from Ranged weapons, such as bows or throwing knives, just as long as the user is Keeping Edgy.
+This Knack grants immunity to all Sneak Attacks from Ranged weapons, such as bows or throwing knives, just as long as the user is Keeping Edgy.
 
 This knack is automatically granted by using a medium sized shield, so anyone who both has the Knack and a shield could spend 1 Initiative point at the start of the \gls{round} to be able to dodge all incoming missile attacks. If their Speed were +1, they would gain a +4 bonus to dodging, or anyone attacking them would raise the \gls{tn} to hit this character by 4.
 
@@ -3209,7 +3223,7 @@ Multiple purchases of this Knack allow you to bypass armour at an increasingly l
 You can pull back and shoot a short bow by paying only 3 Initiative. If you have the Knack: Snap Shot, you can pay only 3 additional Initiative to aim.
 
 \subsubsection{Snap Shot}
-You pay 0 Initiative to reload an arrow onto your bow, as opposed to the regular Initiative cost of 2. Additionally you can make an Unseen Attack with a bow by paying an additional 4 Initiative instead of spending a \gls{round} aiming.
+You pay 0 Initiative to reload an arrow onto your bow, as opposed to the regular Initiative cost of 2. Additionally you can make an Sneak Attack with a bow by paying an additional 4 Initiative instead of spending a \gls{round} aiming.
 
 \subsubsection{Solid Defence}
 The character can hold their actions, persistently defending themself rather than attacking. They gain +2 to their Evasion Factor during this time. At any time they can give up the protection just as if they had held their action normally; this allows their to act at 1 higher Initiative than the current Initiative Count.
