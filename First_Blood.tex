@@ -500,9 +500,12 @@ Characters attempting to change a Standard Action into a Resting action do not r
 As the characters practice what they do, they gain \gls{xp}. Each part of the character can be improved by spending \gls{xp}. Buying basic stats is cheap while higher level stats quickly become extremely expensive.
 
 \subsection{Gaining \gls{xp}}\index{\gls{xp}}
-Players receive \gls{xp} from the \gls{gm} for killing monsters, pious endeavours or fulfilling one's personal goals. Larger and more dangerous monsters garner more \gls{xp}, as do grander missions. Each character also has a belief structure -- either a god's creed or a personal code of ethics which can grant additional \gls{xp}.\footnote{See page \pageref{gods_codes} for details.} Characters generally accept missions depending upon how well they can fulfil these personal goals.
 
-The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may restrict when it can be spent. Each Trait should increase by no more than a single level during the course of an adventure -- you might be lucky enough to get enough \gls{xp} to raise your Strength from -2 to +1 in a single session, but nobody can accrue that kind of muscle mass in such a short period of time. It is also recommended that magic spheres and Specialisation Skills only be bought during \gls{downtime}.
+Players receive \gls{xp} from the \gls{gm} for killing monsters, pious endeavours or fulfilling one's personal goals. Larger and more dangerous monsters garner more \gls{xp}, as do grander missions.
+\iftoggle{verbose}{Each character also has a belief structure -- either a god's creed or a personal code of ethics which can grant additional \gls{xp}.\footnote{See page \pageref{gods_codes} for details.} Characters generally accept missions depending upon how well they can fulfil these personal goals.
+
+The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may restrict when it can be spent. Each Trait should increase by no more than a single level during the course of an adventure -- you might be lucky enough to get enough \gls{xp} to raise your Strength from -2 to +1 in a single session, but nobody can accrue that kind of muscle mass in such a short period of time. It is also recommended that Specialisation Skills only be bought during \gls{downtime}.
+}
 
 
 \subsection{Spending \gls{xp}}
@@ -561,6 +564,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 \begin{multicols}{2}
 
 \begin{xpbox}{B}
+
 		Mana Base & Cost \\\hline
 
 		2 & 5 \\
@@ -572,6 +576,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 		8 & 40 \\
 
 		10 & 80
+
 \end{xpbox}
 
 \begin{xpbox}{B}
@@ -1506,13 +1511,19 @@ Spell casters who wish to both attack and cast spells within the same \gls{round
 
 Switching away from one's focus on spells or martial combat must be decided at the start of the \gls{round} -- mages who are not mentally prepared to cast spells or use a sword cannot do so at a second's notice.
 
+\subsection{Trapped or Entangled}
 
+Characters caught in mud, who slip over, or get shackled to a spot cannot move or dodge nearly as well as they could.  They receive no benefits from their Dexterity Bonus or the Knack: Fox Hop.
+
+\subsection{Falling Prone}\index{Prone}\label{prone}
+
+Characters who fall over lose their ability to defend themselves, as above.  However, they can get up at the cost of 2 Initiative by using up their movement action.  If they've already moved this \gls{round}, they have to wait until the next \gls{round}.
 
 \subsection{Manoeuvres}
 
-\subsubsection{Brawling}
+\subsubsection{Brawling}\index{Combat!Brawling}\index{Brawling}
 
-\index{Combat!Brawling}\index{Brawling}Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
+Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
 
 \subsubsection{Blind Rage}\label{blind}
 
@@ -1801,15 +1812,9 @@ The hobgoblins were fast on their trail as they clambered over the rocky mountai
 
 The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
 
-\subsection[Marching]{Marching}
-\index{Marching}Every two miles walked inflicts a Fatigue Point at the end of the day. Additional Fatigue Points for carrying heavy items and wearing armour are added as usual. Humans have an uncanny ability to walk all day without tiring, and only endure 1 Fatigue Point every 4 miles.
+\subsection{Marching}\index{Marching}
 
-\subsection{Trapped or Entangled}
-Characters caught in mud, who lip over, or get shackled to a spot cannot move or dodge nearly as well as they could.  They receive no benefits from their Dexterity Bonus or the Knack: Fox Hop.
-
-\subsection{Falling Prone}\index{Prone}\label{prone}
-
-Characters who fall over lose their ability to defend themselves, as above.  However, they can get up at the cost of 2 Initiative by using up their movement action.  If they've already moved this \gls{round}, they have to wait until the next \gls{round}.
+Every two miles walked inflicts a Fatigue Point at the end of the day. Additional Fatigue Points for carrying heavy items and wearing armour are added as usual. Humans have an uncanny ability to walk all day without tiring, and only endure 1 Fatigue Point every 4 miles.
 
 \iftoggle{verbose}{
 
@@ -2834,7 +2839,9 @@ This spell replicates all five levels of the enchantment sphere with the mage se
 
 \spell{Calling the Dead}{Instant}{Medicine}
 
-The mage can create their own ghouls from easily accessible realms of malicious spirits. The spell is cast on a small corpse and the corpse is imbued with one such malicious spirit. It retains the Strength score (and therefore HP) it had in life. The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly. The creature has neither intelligence nor Charisma scores. Most will attack all living things on sight.
+The mage can create their own ghouls from easily accessible realms of malicious spirits. The spell is cast on a small corpse and the corpse is imbued with one such malicious spirit. It retains the Strength score (and therefore HP) it had in life.
+The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
+The creature has neither Intelligence nor Charisma scores. Most will attack all living things on sight.
 
 The mage rolls their Intelligence + Medicine at \gls{tn} 7 to cast the spell. Any Medicine specialisations dealing with the affected species (e.g. `gnolls', or `humans'), or specialisations concerning death rituals can be used.
 
@@ -2844,7 +2851,8 @@ Once the spell has been cast, it need not be maintained -- once a soul has inhab
 
 \enhancement{1}{Greater}
 
-With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4.  A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
+With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4 plus the caster's Intelligence Bonus.
+A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
 
 \enhancement{1}{Clever}
 
@@ -3194,6 +3202,7 @@ The character is well practised at getting the first hit in. They receive +2 Ini
 This Knack can be taken any number of times, with all secondary uses granting an additional +1 Initiative. For example, while using a spear (which has the Knack: First Strike, in-built), and the Knack, a character would gain +3 Initiative on the first \gls{round} if attacking with the spear.
 
 \subsubsection{Flashing Blades}
+
 The character is an expert with light weapons, i.e. any weapon with a Weight of -2 or less costs 1 less Initiative to wield. Attacking with a dagger would cost 3 Initiative rather than the usual 4.  This Knack cannot be purchased twice.
 
 \subsubsection{Fox Hop}
@@ -3202,54 +3211,66 @@ The character is particularly good at defending themself by jumping about. They 
 When using the Aggressive Stance, this bonus goes into the Strike Factor instead of the Evasion Factor, as per usual.
 
 \subsubsection{Furious Blows}
+
 You can wield large weapons exceptionally fast. Medium weapons (those with a Weight Rating of -1 to 4) cost 1 less Initiative to make an attack with just so long as you have no Encumbrance penalty to wielding it. Using this Knack, an attack with a longsword would cost only 5 Initiative. Buying this Knack multiple times has no effect.
 
 \subsubsection{Furious Rage}
+
 You gain +1 to Strike when using the Aggressive Stance.
 
 \subsubsection{Guardian}
+
 The character receives a +2 bonus to their Evasion score for the purposes of defending people and can defend multiple people at once they pay only 1 Initiative for each person they wish to defend. Those people must be close behind them, as usual. When the character is defending themself they use their normal Evasion Bonus.
 
 \subsubsection{Last Stand}
+
 Any time the character loses their last FP they immediately gain +5 Initiative points plus one per Knack the character has. The Initiative Count goes back up to the highest Initiative to let you act (presumably) alone.
 
-Characters also gain a number of \gls{mp} equal to the number of Knacks they have.
+The character also gains a number of \gls{mp} equal to the number of Knacks they have.
 
 \subsubsection{Mighty Draw}
+
 You can draw back a hunting bow in a single \gls{round}, paying only 8 Initiative for the action, minus one per Knack you have. For example, someone with 4 Knacks would pay only 4 Initiative for the attack.
 
 \subsubsection{Perfect Sneak Attack}
+
 Any Sneak Attacks you complete inflict an additional +1 Damage for each Knack you have. Normally, Sneak Attacks inflict +2 Damage, so someone with 3 Knacks would inflict +5 Damage.
 
 \subsubsection{Precise Strike}
+
 You require 1 less to achieve a Vitals Shot. For example, when targeting an opponent with a Evasion score of +2 and Partial armour, they would normally require a score of 9 to hit and a score of 12 to make a Vitals Shot which ignores all armour. With this Knack they still require a score of 9 to hit but only a score of 11 to make a Vitals Shot. People with this Knack can also bypass Perfect armour by rolling 6 points above the target's \gls{tn}.
 
 Multiple purchases of this Knack allow you to bypass armour at an increasingly low \gls{tn}.
 
 \subsubsection{Quick Draw}
+
 You can pull back and shoot a short bow by paying only 3 Initiative. If you have the Knack: Snap Shot, you can pay only 3 additional Initiative to aim.
 
 \subsubsection{Snap Shot}
+
 You pay 0 Initiative to reload an arrow onto your bow, as opposed to the regular Initiative cost of 2. Additionally you can make an Sneak Attack with a bow by paying an additional 4 Initiative instead of spending a \gls{round} aiming.
 
 \subsubsection{Solid Defence}
+
 The character can hold their actions, persistently defending themself rather than attacking. They gain +2 to their Evasion Factor during this time. At any time they can give up the protection just as if they had held their action normally; this allows their to act at 1 higher Initiative than the current Initiative Count.
 
 \subsubsection{Stunning Strike}\label{stunningstrike}
+
 You can declare that you are attempting to stun opponents. You then take a -1 penalty to Strike but if you successfully hit an opponent, all Damage dealt reduces their current Initiative. Multiple uses of this Knack add 1 each to the Initiative loss.
 
 For example, if someone were using a cudgel (which comes with the in-built Knack: Stunning Strike), and also had the Knack, then they smacked someone for 4 Damage, the opponent would immediately lose 5 from their current Initiative Score, even if all of the Damage was mitigated by \gls{dr} and FP.
 
-
 \subsubsection{Ultimate Coward}
+
 You receive a +2 bonus to fleeing from opponents.
 
 \subsubsection{Unstoppable}
+
 The character does not fall incapacitated when falling below 1 HP they makes the usual Vitality Check and if they survive they continue to act until the end of combat, though they also has to take the usual penalty: -1 per Damage beyond 0 HP, in addition to any Fatigue Point penalties. Once combat ends, they fall unconscious. Each time they suffer further Damage a new Vitality Check is made.
 
 Additionally, the character receives a bonus to all Vitality Checks equal to half the number of Knacks they have, rounded up.
 
-Finally, the character gain +1 HP.
+Finally, the character gain +2 HP.
 
 \subsubsection{Voice of Wrath}
 
@@ -3286,6 +3307,7 @@ The character is particularly adept at casting spells quickly, and therefore in 
 \section{Other Knacks}
 
 \subsubsection{Chosen Enemy}
+
 The character has a burning hatred for a particular race of creature. The character gains a -2 penalty when interacting socially with such creatures and a +1 when performing actions such as tracking them, attacking them or intimidating them.
 
 For each Knack the player has, they may select a new chosen enemy, so those with a total of 3 Knacks may select 3 chosen enemies. Those enemies may be chosen at any time, including long after a new Knack as been bought.
@@ -3293,12 +3315,15 @@ For each Knack the player has, they may select a new chosen enemy, so those with
 Possible enemies include: Forest Creatures, Behemoths, any humanoid race (e.g. Dwarves, Humans, et c.), Nura Beats, Nura Humanoids, Underground Creatures and Undead.
 
 \subsubsection{Fast Healer}
+
 You regenerate unusually fast. Any scene which you end with a rest allows you to heal 2 additional Fatigue Points and 2MP.
 
 \subsubsection{Hardened}
+
 The character is particularly tough and gains +2 HP and immunity to the Knack: Stunning Strike.
 
 \subsubsection{Specialist}
+
 The character specialises in some non-combat Skill, becoming exceptionally good at one particular action. They select a paring of some Attribute + Skill to gain a +2 bonus whenever the two are used. For instance, when using Charisma + Performance to sing a song they could gain the bonus, though when writing one with Intelligence + Performance the Knack would have no effect.
 
 This Knack can be bought any number of times but only once for a particular Attribute + Skill pairing. It can add to rolls to cast spells, but not combat rolls, including ranged combat.
@@ -3440,7 +3465,7 @@ Your homeland is in grave danger as nura surround it and grow more numerous ever
 
 Once each member of the group has expended three Story Points, an oppening comes to travel to a nearby ally, and beg for an army to save your homeland.
 
-The characters may all be gnomes, defending against encroaching nura who have come through a portal, while the elders constantly argue that if only \emph{somehow} someone could get down there and destroy the portal, everyone would be safe.  But that ``somehow'' never comes, and the monsters are coming up faster and faster.  Rumours abound of distant elves who might help, but those elves have their own problems.
+The characters may all be gnomes, defending against encroaching nura who have come through a portal, while the elders constantly argue that if only \emph{somehow} someone could get down there and destroy the portal, everyone would be safe.  But that ``somehow'' never comes, and the monsters are coming up faster and faster.  Rumours abound of distant elves who might help, but those elves have their own problems.  Meanwhile, the daily lives of the soldiers consists in setting and resetting various traps made of pitfalls, illusions and rope.  Each day the gnomes have to retreat farther from the deeps and closer to the Sun.
 
 Alternatively, the party may be elves, constantly assaulted by increasing undead assaults, spurned on by an increasingly powerful and paranoid necromancer.  Nobody wants to contact the local dwarves to ask a favour, but once the greatest of the local bards die, everyone knows that the party is over, and they must begin preparing for war.
 
@@ -3705,14 +3730,14 @@ Clerics of Qualm\"{e} have access to the necromancy and invocation spheres. Many
 
 Spells implanted in those mana stones are always activated by a command word.
 
-\subsection[V\'{e}re -- God of Justice]{V\'{e}re -- God of Justice}
+\subsection[V\'{e}r\"{e} -- God of Justice]{V\'{e}re -- God of Justice}
 \index{Gods!V\'{e}re}(`vEH-reh')
 
-Warden to all oaths, lord of a hundred holy warriors, leader of armies, the giver of vengeance and punishments -- Vére is a popular god. He is invoked during wedding vows and business deals. His followers are found among the politically influential and can be some of the most zealous of religious followers. He values obeying the law, making fair deals, being a good host and supporting the poor.
+Warden to all oaths, lord of ten thousand holy warriors, leader of armies, the giver of vengeance and punishments -- V\'{e}r\"{e} is a popular god. He is invoked during wedding vows and business deals. His followers are found among the politically influential and can be some of the most zealous of religious followers. He values obeying the law, making fair deals, being a good host and supporting the poor.
 
 His holy day is during the second season of the second cycle. It is considered extremely good faith to make an oath on this day, and mortally bad luck to break such an oath.
 
-Followers of Vére who break any deal cannot gain \gls{xp} until they atone for the crime.
+Followers of V\'{e}r\"{e} who break any deal cannot gain \gls{xp} until they atone for the crime.
 
 \begin{xpchart}{V\'{e}re}
 
@@ -3746,12 +3771,14 @@ Followers of Vére who break any deal cannot gain \gls{xp} until they atone for t
 
 \end{xpchart}
 
-Vére's clerics can access the enchantment and force spheres. They use enchantment to gain followers, dazzling them with the glory of the purity and strength of their god while force is used to protect the innocent and faithful. Their spells appear in a shimmer of gold. Vére's mana stones are always people who are followers of Vére. Those believers alone can activate any spells which are stored inside them. Priests of Vére often gift their followers with single-use magical powers, such as the ability to call upon a blessing or the ability to protect themselves with armour. If the people who are being used as mana stones are given spells then they can activate those spells at will with a short prayer at an Initiative cost of 8.
+V\'{e}r\"{e}'s clerics can access the enchantment and force spheres. They use enchantment to gain followers, dazzling them with the glory of the purity and strength of their god while force is used to protect the innocent and faithful. Their spells appear in a shimmer of gold. V\'{e}r\"{e}'s mana stones are always people who are followers of V\'{e}r\"{e}. Those believers alone can activate any spells which are stored inside them. Priests of V\'{e}r\"{e} often gift their followers with single-use magical powers, such as the ability to call upon a blessing or the ability to protect themselves with armour. If the people who are being used as mana stones are given spells then they can activate those spells at will with a short prayer at an Initiative cost of 8.
 
-\section{Codes}
-\index{Codes}Those without a dedicated deity often dedicate themselves to some informal code instead. The codes might be thought of as attitudes or philosophies for life. Followers of similar codes may well get along together but they will not recognise each other as members of a similar organisation. Those with a code as their primary motivator may also sacrifice to gods or even occasionally worship and donate to temples, but their ultimate aims lie with themselves. It is said those who do not fully dedicate themselves to any god must wander the afterlife without aid or guidance -- such spirits always provide the most bizarre and contradictory accounts of death and can prove difficult to summon.
+\section{Codes}\index{Codes}
+
+Those without a dedicated deity often dedicate themselves to some informal code instead. The codes might be thought of as attitudes or philosophies for life. Followers of similar codes may well get along together but they will not recognise each other as members of a similar organisation. Those with a code as their primary motivator may also sacrifice to gods or even occasionally worship and donate to temples, but their ultimate aims lie with themselves. It is said those who do not fully dedicate themselves to any god must wander the afterlife without aid or guidance -- such spirits always provide the most bizarre and contradictory accounts of death and can prove difficult to summon.
 
 \subsection{The Code of Acquisition}\index{Acquisition, Code}
+
 The goal of life is acquisition. We all want things, therefore people who get more things are doing better. Those on the code of acquisition are often those who can acquire more money -- townmaster, dwarves in love with gold or gnomes who have dedicated their lives to finding the best rubies.
 
 Those following the Code of Acquisition who lose their gold cannot earn \gls{xp} for gaining wealth until a similar amount has been regained.
@@ -3823,6 +3850,7 @@ Travelling companions do not automatically count as members of your tribe, but t
 \end{xpchart}
 
 \subsection{The Code of Experience}\index{Experience, Code}
+
 The world is here to be lived, to be known, to be connected with. You want all the experiences -- unique experiences, sacred experiences, horrible experiences; it's all good. You want to stare at the full moon while drinking with friends, to create some new piece of art and to feel enough heart-ache to make you physically sick. Elation and deep-rooted fear are equally valuable -- they are both life. You also value giving life and meaning to the old and abandoned, to experiencing what few others have experienced, whether it's finding a lost and neglected poem from an old language or visiting an area never before seen by people.
 
 \begin{xpchart}{the Code of Experience}
