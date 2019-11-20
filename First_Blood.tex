@@ -143,7 +143,7 @@ Character creation is random by default -- it helps new players get started quic
 
 \end{wrapfigure}
 
-I've just rolled a '7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
+I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
 
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
 
@@ -230,11 +230,11 @@ A basic Skill grants a +1 bonus to actions where it is used. This is the level o
 
 \subsection{Specialised Skills*}
 
-Some Skills are `Specialised Skills', meaning that they are a broad category for a number of sub-skills. The Craft Skill covers metallurgy, woodcraft, armour making and many more Skills. Anyone taking such Skills gain two Specialisations per level. Using a Skill without the appropriate Specialisation is often impossible (for instance, one cannot use the Performance Skill to play a harp if one has never learnt to play a harp) but at other times can be attempted with a -1 penalty. For example, someone attempting to remember a fact about history who has no Academics Skill is at a -1 penalty to the roll. Someone with Academics who specialises in alchemy and politics but not history could attempt the roll without penalty because they gain +1 for having the Academics Skill and -1 for not having the correct specialisation. Finally, an academic with a specialisation in history could attempt the task with a +1 bonus to the roll for having the Skill with the correct specialisation.
+Some Skills are `Specialised Skills', meaning that they are a broad category for a number of sub-skills. The Craft Skill covers metallurgy, woodcraft, armour making and many more. Anyone taking such Skills gain two Specialisations per level. Using a Skill without the appropriate Specialisation is often impossible (for instance, one cannot use the Performance Skill to play a harp if one has never learned to play a harp) but at other times can be attempted with a -1 penalty. For example, someone attempting to remember a fact about history who has no Academics Skill is at a -1 penalty to the roll. Someone with Academics who specialises in alchemy and politics but not history could attempt the roll without penalty because they gain +1 for having the Academics Skill and -1 for not having the correct specialisation. Finally, an academic with a specialisation in history could attempt the task with a +1 bonus to the roll for having the Skill with the correct specialisation.
 
-Each level of a Skill one has allows the character to have up to 1 Specialisations. For example, someone with Survival 2 might know how to track and build temporary shelters but would count as having Survival 0 when marching. A craftsman with Crafts at level 2 would have 4 specialisations.
+Each level of a Skill one has allows the character to have up to 1 Specialisations. For example, someone with Survival 2 might know how to track and build temporary shelters but would count as having Survival 1 when marching.
 
-Each specialization can be applied to any specialized skill.  Characters with a Combat specialization in swords can apply that specialization to swords, Academics, and Survival (if it comes up somehow).
+Each specialization can be used with any other specialized Skill.  If you have a Specialization in swords, bought with the Combat Skill, you can apply that to Crafts.  If your Beast Ken Specialization is in griffins, you can also use this to use when tracking them with the Survival Skill.
 
 All specialist Skills are marked with an asterisk.
 
@@ -316,11 +316,12 @@ Commonly, Empathy is used to spot lies when paired with Wits. Humans are famousl
 Medicine is a primitive but effective art, regrettably full of nonsense and superstition, but mandatory when it comes to keeping someone with a serious wound alive. The Wits Attribute will allow someone to quickly patch up a bleeding wound, cutting or reducing the number of Fatigue points the bleeding character would otherwise have received.\footnote{Fatigue is covered later, on page \pageref{fatigue}.}
 
 \iftoggle{verbose}{
-	Medicine can also be used with the Intelligence Attribute to concoct poisons or antidotes. A standard poison might be rolled at \gls{tn} 7 to create; people can then attempt to detect it in their food with a Wits + Vigilance roll at \gls{tn} 7. The poisoner can add to the \gls{tn} to detect the poison only by adding to the \gls{tn} of creating the poison. For example, one could add +3 to the \gls{tn} to detect and create a poison. It would be \gls{tn} 10 to create and \gls{tn} 10 to detect the presence of the poison in the food. For every Marginal point on the poison roll, the target gains 2 Fatigue points. Each scene \footnote{See page \pageref{time} for how scenes work.}thereafter the afflicted person gains the same number of Fatigue points minus 1, but can rest as normal in order to regain lost Fatigue point. Anyone who passes their last Fatigue box due to poison dies.}{}
+	Medicine can also be used with the Intelligence Attribute to concoct poisons or antidotes. A standard poison might be rolled at \gls{tn} 7 to create; people can then attempt to detect it in their food with a Wits + Vigilance roll at \gls{tn} 7. The poisoner can add to the \gls{tn} to detect the poison only by adding to the \gls{tn} of creating the poison. For example, one could add +3 to the \gls{tn} to detect and create a poison. It would be \gls{tn} 10 to create and \gls{tn} 10 to detect the presence of the poison in the food. For every Marginal point on the poison roll, the target gains 2 Fatigue points. Each scene\footnote{See page \pageref{time} for how scenes work.} thereafter the afflicted person gains the same number of Fatigue Points minus 1, but can rest as normal in order to regain lost Fatigue point. Anyone who passes their last Fatigue box due to poison dies.}{}
 
 Specialisations include bleeding, poisons, narcotics, fractured bones, dwarves, humans, fatigue and burns.
 
 \subsection{Performance*}
+
 This skill covers every type of instrument, poetry and evocative storytelling. While academics might tell detailed stories which serve to persuade people of things, they are not nearly so entertaining as the dramatic stories told by a true performer. Performance covers dramatic acting, though Deceit still covers any real-world performances.
 
 This will often be paired with Charisma when a performer wants to give off an entertaining performance. More technical pieces might require Dexterity instead. Performers wanting to create new poems, songs or the like add their Intelligence Attribute instead.
@@ -2800,7 +2801,9 @@ The mage's mana stones now contain 3 \gls{mp} per point sacrificed from the mage
 
 Necromancers summon souls from distant, black realms and place them in appropriate bodies -- those of the once living and now dead. The corpses are sometimes filled with their old hosts, locking people into a state of permanent semi-death, or more often with ravenous and malicious spirits from foreign realms. Mages of this sphere begin by imitating the dead, becoming half dead themselves, which allows them to dissuade malicious spirits from attacking.
 
-\spell{Properties of the Dead}{undead creatures have certain properties in common. Firstly}{imperceptibly feed from the souls of the living. This is not performed with the mouth by merely by being close to dying things and absorbing them before they can wander to the next realm. Undead eyes generally do not work, instead they `see' the souls of people shining outward. Inanimate objects such as books, or even fellow undead, are not so clearly seen; the undead can avoid bumping into these objects but have great trouble reading anything or working fine machinery. However, they can operate in complete darkness and even fight without penalty, using the light of living people's souls to see them. They can also see living beings from a great distance due to the soul-light they emit.}
+\subsection{Properties of the Dead}
+
+Undead creatures have certain properties in common. Firstly they imperceptibly feed from the souls of the living. This is not performed with the mouth by merely by being close to dying things and absorbing them before they can wander to the next realm. Undead eyes generally do not work, instead they `see' the souls of people shining outward. Inanimate objects such as books, or even fellow undead, are not so clearly seen; the undead can avoid bumping into these objects but have great trouble reading anything or working fine machinery. However, they can operate in complete darkness and even fight without penalty, using the light of living people's souls to see them. They can also see living beings from a great distance due to the soul-light they emit.
 
 Undead also feel no pain and suffer little from scrapes and bruises. As a result, they automatically have a \gls{dr} of 2 which is cumulative with armour. This counts as Complete armour, but not Perfect -- shots through their eyes or attacks which sever muscles still debilitate them.
 
@@ -2808,7 +2811,7 @@ The undead do not tire -- they take no Fatigue Points. They can walk or dig or f
 
 \spelllevel
 
-\spell{Deathly}{Continuous}{Medicine}
+\spell{Morbid}{Continuous}{Medicine}
 
 The targed enters an eltered state of semi-death. They ignor all Fatigue Point penalties (but can still become suddenly unconscious due to too many Fatigue Points). They gain a natural \gls{dr} of 1 which is cumulative with armour -- their corpse-like body bleeds less and feels little pain, only bare sensations written in the mind as cold information. While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them. While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \gls{fp}.
 
@@ -2816,11 +2819,11 @@ This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell. 
 
 \enhancement{2}{Gaze}
 
-By adding an additional level to the process, the target can gain the special sight of the undead (in addition to their normal vision).  They can now see all living things, even in the darkness.  Addtionally, the Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
+By adding an additional 2 levels to the process, the target can gain the special sight of the undead (in addition to their normal vision).  They can now see all living things, even in the darkness.  Addtionally, the Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
 
-\enhancement{3}{Lichdom}
+Additionally, the target's \gls{dr} raises to 2 as the target stops feeling pain altogether.  They can even hold their breath for one minute per spell level.
 
-The total \gls{dr} available to the target raises to 2, as it enters into a temporary state of undeath.  If the target dies while the spell is in effect the state of undeath becomes permanent, even once the spell has gone.
+Targets who die while this spell is in effect raise from the dead as an undead creature.\footnote{This spell cannot raise someone as undead if the necromancer's spell level would not normally allow them to raise a creature of that spell level.}
 
 \spell{Death Touch}{Instant}{Medicine}
 
@@ -2959,9 +2962,10 @@ This spell allows the mage to transform one animal into another.  An animal is d
 	Rat & -5 & -5 \\
 
 	Wolf & -2 & +1 \\
-\end{tcolorbox}
-\end{wrapfigure}
 
+\end{tcolorbox}
+
+\end{wrapfigure}
 
 The \gls{tn} for such a transformation is always 12, as understanding how animals function is a serious challenge to those used to walking on two legs.
 
@@ -2994,6 +2998,7 @@ The Form Points can each be spent on one of the following:
 	\item{Flight: The creature has wings, and can use them properly.}
 	\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
 	\item{Underwater Breath}
+
 \end{itemize}
 
 When the target is to transform into an animal, all unused points are applied to the target's Speed Bonus.  Someone transforming into a bird with 3 Form Points could use one to gain realistic flight, and then +2 Speed.
@@ -3128,7 +3133,7 @@ In order to learn the Path of Song, the mage must have the second level of the P
 
 \subsection{Special Considerations}
 
-Just as with rune magic, song magic can never be cast in an instant.  Quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
+Just as with rune magic, song magic can never be cast in an instant.  Their highest level of a sphere can only be cast as a ritual spell, and quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
 
 \subsection{Mana Stones}
 
@@ -3161,6 +3166,7 @@ You are particularly difficult to flank. So long as you are not surrounded on al
 The character receives +2 to Strike when making unarmed attacks or grappling.
 
 \subsubsection{Charge}
+
 If you spend a \gls{round} moving at your maximum speed in order to engage with the enemy, you can replace your Strength bonus with your Speed Bonus for the purposes of calculating Damage, or add +1 Damage per knack you have, as you prefer, for the first attack of the \gls{round}.
 
 For example, a character with Speed +3 and Strength -1 could charge into the enemy and the first attack would count as having a Strength Bonus of +3 due to the character's momentum being pushed behind that initial sword swing. This Strength Bonus only counts for the purposes of Damage and cannot increase the character's Initiative once combat has begun.
@@ -3171,7 +3177,7 @@ The character can cut through more than one opponent at a time, or slice open mu
 
 \subsubsection{Disarm}
 
-With a flick of your sword into an opponent's wrist or by trapping the hilt you can throw an opponent's sword away. This manoeuvre takes the normal amount of Initiative for using your weapon. You and your opponent make a Resisted Dexterity + Combat Action, \gls{tn} 7. If the disarm attempt is successful, the weapon is thrown 1D3 squares in a random direction.
+With a flick of your sword into an opponent's wrist or by trapping the hilt you can throw an opponent's sword away. This manoeuvre takes the normal amount of Initiative for using your weapon. You and your opponent make a \textit{resisted} Dexterity + Combat Action, \gls{tn} 7. If the disarm attempt is successful, the weapon is thrown 1D3 squares in a random direction.
 
 \subsubsection{Defender}
 
@@ -3336,7 +3342,7 @@ Players `write' most of their backstory during play rather than before it.  \Gls
 
 Soon after, the characters need to sell the diamond they've stolen.  Eric's player knows there are dwarves all around town so he tells the group \textit{``I'll see about help from the local dwarves.  I learnt their language five years ago when I had to hide from the law for a while underground, and met a few of them that sell goods without much question.''}
 
-\paragraph{Session 2} finds the characters lost in deep, long caverns in the bearded mountains, wounded and low on supplies.  Jane's player spends 2 Story Points to declare she knows of a gnomish illusionist who frequents these deep caverns, looking for magical ingredients.
+\paragraph{Session 2} finds the characters lost in deep, long caverns in the bearded mountains, wounded and low on supplies.  Jane's player spends 4 Story Points to declare she knows of a gnomish illusionist who frequents these deep caverns, looking for magical ingredients.
 
 \textit{``How?''}, asks a rather suspicious \gls{gm}.
 
@@ -3458,7 +3464,7 @@ The majority of the Night Guard have boring, thankless jobs such as guarding cat
 
 Some rare few have been known to strike deals with dragons to leave an area, or assassinate rogue alchemists who are powerful enough to keep themselves free from the reaches of any magical guild.
 
-In general, the more dangerous the job, the higher the pay, so most of the Night Guard try not to do too well at their job.  They train in archery well, take a paycut in return for having more members in their group, and make sure nobody volunteers them for anything interesting.  Of course, a lot of the jobs one takes depends more upon a captain of the Guard than the grunts.
+In general, the more dangerous and skillfull the job, the higher the pay, so most of the Night Guard try not to do too well at their job.  They train in archery well, take a paycut in return for having more members in their group, and make sure nobody volunteers them for anything interesting.  Of course, a lot of the jobs one takes depends more upon a captain of the Guard than the grunts.
 
 \subsection{Defending the Fatherland}
 Your homeland is in grave danger as nura surround it and grow more numerous every day.  The local lord has given you strict instructions that you cannot leave, but you feel sure that the only path is to get help from another group.
@@ -3469,7 +3475,7 @@ The characters may all be gnomes, defending against encroaching nura who have co
 
 Alternatively, the party may be elves, constantly assaulted by increasing undead assaults, spurned on by an increasingly powerful and paranoid necromancer.  Nobody wants to contact the local dwarves to ask a favour, but once the greatest of the local bards die, everyone knows that the party is over, and they must begin preparing for war.
 
-\subsection{The Magical Guild}
+\subsection{The College of Alchemy}
 
 The characters are all alchemists in the service of the Alchemist's Guild in Eastlake.  The first part of the campaign involves high-school rivalries against other Clans in the guild such as stealing their homework, or vying for romantic attention.  Soon after, the characters begin proper guild missions, venturing out into the strange areas of the world where normal people will not tread.
 
