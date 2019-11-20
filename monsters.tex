@@ -1,0 +1,685 @@
+% !TeX root = main.tex
+%%%%%%%%%%%%%%%%%%%% Introduction
+% This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
+% If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
+
+\newcounter{bestiarychapter}
+\newcounter{age}
+\setcounter{age}{1}
+\setcounter{bestiarychapter}{0}
+\setcounter{gold}{0}
+\setcounter{enc}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                           _
+% _ __ ___   ___  _ __  ___| |_ ___ _ __
+%| '_ ` _ \ / _ \| '_ \/ __| __/ _ \ '__|
+%| | | | | | (_) | | | \__ \ ||  __/ |
+%|_| |_| |_|\___/|_| |_|___/\__\___|_|
+%
+%     _        _
+% ___| |_ __ _| |_ ___
+%/ __| __/ _` | __/ __|
+%\__ \ || (_| | |_\__ \
+%|___/\__\__,_|\__|___/
+%
+
+\newtoggle{mind}
+\newtoggle{debug}\settoggle{debug}{false}
+\newcommand{\ent}[1]{\textbf{#1}}
+\newcommand{\test}{}
+\newcommand{\skills}{}
+\newcommand{\equipment}{}
+\newcommand{\mods}{}
+\newcommand{\printknacks}{}
+\newcommand{\weaponknackone}{}
+\newcommand{\weaponknacktwo}{}
+
+\newcommand{\calculatedamage}[1]{%
+	\setcounter{damagebonus}{#1}%
+	\setcounter{numberofdice}{1}%
+\whileboolexpr{
+		test {\ifnumcomp{\value{damagebonus}}{>}{3}}
+	}%
+	{\addtocounter{damagebonus}{-4}\addtocounter{numberofdice}{1}}%
+	{$\arabic{numberofdice}D6\ifnumcomp{\value{damagebonus}}{>}{0}{+\arabic{damagebonus}$}{\ifnumcomp{\value{damagebonus}}{<}{0}{\arabic{damagebonus}$}{$}}}%
+	}
+
+
+%%%%%%%%%%%%%%%%%%%% Character Generation %%%%%%%%%%%%%%%%%%%%
+%
+%                       _                
+%  ___ ___  _   _ _ __ | |_ ___ _ __ ___ 
+% / __/ _ \| | | | '_ \| __/ _ \ '__/ __|
+%| (_| (_) | |_| | | | | ||  __/ |  \__ \
+% \___\___/ \__,_|_| |_|\__\___|_|  |___/
+%                                        
+%
+% Attributes: str, dex, spd, int, wts, cha
+% secondary str, dex and spd
+\newcounter{str}
+\newcounter{dex}
+\newcounter{spd}
+\newcounter{int}
+\newcounter{wts}
+\newcounter{cha}
+\newcounter{att}
+\newcounter{dam}
+\newcounter{dr}
+\newcounter{knacks}
+
+\newcounter{strb}
+\newcounter{dexb}
+\newcounter{spdb}
+\newcounter{attb}
+\newcounter{damb}
+% 
+% Extras: MP hp fp
+% Derived: dicenumber, dicebonus,
+\newcounter{mp}
+\newcounter{mpb}
+\newcounter{sp}
+\newcounter{hp}
+\newcounter{fp}
+\newcounter{numberofdice}
+\newcounter{damagebonus}
+\newcounter{xp}
+\newcounter{xpbonus}
+\newcounter{attackXPtotal}
+\newcounter{defenceXPtotal}
+
+%                                                _
+%   ___ ___  _ __ ___  _ __ ___   __ _ _ __   __| |___
+%  / __/ _ \| '_ ` _ \| '_ ` _ \ / _` | '_ \ / _` / __|
+% | (_| (_) | | | | | | | | | | | (_| | | | | (_| \__ \
+%  \___\___/|_| |_| |_|_| |_| |_|\__,_|_| |_|\__,_|___/
+% 
+
+
+
+% Commands: weapons
+% dice
+\newcommand{\mana}[1]{\setcounter{mp}{#1}}
+\newcommand{\lockedmana}[1]{\setcounter{mpb}{-#1}}
+\newcommand{\armourtype}{N}
+
+\newcommand{\knacks}[1]{ \\
+	\ent{Knacks:} & #1 
+}
+
+\newcommand{\adrenalinesurge}{Adrenaline Surge \addtocounter{strb}{1}\addtocounter{knacks}{1}}
+\newcommand{\furiousblows}{Furious Blows\addtocounter{knacks}{1}}
+\newcommand{\firststrike}{First Strike \addtocounter{spdb}{2}\addtocounter{knacks}{1}}
+\newcommand{\combatcaster}{Combat Caster \addtocounter{knacks}{1}}
+\newcommand{\backtothewall}{Back to the Wall \addtocounter{knacks}{1}}
+\newcommand{\laststand}{Last Stand \addtocounter{knacks}{1}}
+\newcommand{\perfectsneakattack}{Perfect Sneak Attack \addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}}
+\newcommand{\unstoppable}{Unstoppable \addtocounter{hp}{1}\addtocounter{knacks}{1}}
+
+\newcommand{\javelin}{Javelin\addtocounter{str}{1}\addtocounter{spd}{2}}
+\newcommand{\Dagger}{Dagger\addtocounter{str}{1}}
+\newcommand{\shortsword}{Shortsword\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}}
+\newcommand{\club}{Club\addtocounter{str}{2}\addtocounter{spd}{1}\addtocounter{dex}{1}}
+\newcommand{\rapier}{Rapier\addtocounter{str}{1}\addtocounter{spd}{2}\addtocounter{dex}{1}}
+\newcommand{\longsword}{Longsword\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{3}}
+\newcommand{\greatsword}{Greatsword\addtocounter{str}{2}\addtocounter{spd}{1}\addtocounter{dex}{2}}
+\newcommand{\spear}{Spear\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}\renewcommand{\weaponknackone}{\addtocounter{spd}{2}}}
+\newcommand{\quarterstaff}{Quarterstaff\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}\renewcommand{\weaponknackone}{\addtocounter{spd}{2}}}
+\newcommand{\greataxe}{Greataxe\addtocounter{str}{3}\addtocounter{spd}{1}\addtocounter{dex}{1}}
+\newcommand{\greatclub}{Greatclub\addtocounter{str}{4}\addtocounter{spd}{1}\addtocounter{dex}{1}}
+\newcommand{\longbow}{Longbow\addtocounter{str}{1}}
+
+\newcommand{\partialleather}{partial leather armour \addtocounter{dr}{3}}
+\newcommand{\partialchain}{partial chain armour \addtocounter{dr}{4}}
+\newcommand{\partialplate}{partial plate armour \addtocounter{dr}{5}}
+\newcommand{\completeplate}{complete plate armour \addtocounter{dr}{5}\gdef\armourtype{C}}
+
+% 
+% _ __   ___ _ __ ___  ___  _ __  
+%| '_ \ / _ \ '__/ __|/ _ \| '_ \ 
+%| |_) |  __/ |  \__ \ (_) | | | |
+%| .__/ \___|_|  |___/\___/|_| |_|
+%|_|                              
+% 
+%
+%       _                          _            
+%%  ___| |__   __ _ _ __ __ _  ___| |_ ___ _ __ 
+%% / __| '_ \ / _` | '__/ _` |/ __| __/ _ \ '__|
+%%| (__| | | | (_| | | | (_| | (__| ||  __/ |   
+%% \___|_| |_|\__,_|_|  \__,_|\___|\__\___|_|   
+%%                                              
+%%  optional counters, such as mana, are cleaned
+%%  clear: weaponsknack1 and 2, 
+%% 
+%
+\newcommand{\mind}[3]{
+\setcounter{int}{#1}\setcounter{wts}{#2}\setcounter{cha}{#3}
+}
+%
+%
+%%%%%%%%%%% Person
+%
+\newcommand{\person}[9]{\settoggle{mind}{true}
+\setcounter{str}{#1}
+\setcounter{dex}{#2}
+\setcounter{spd}{#3}
+\mind#4
+\setcounter{dr}{#5}
+\setcounter{att}{#6}
+\renewcommand{\skills}{#7}
+\renewcommand{\equipment}{#8}
+\renewcommand{\mods}{#9}
+
+\clean
+
+\renewcommand{\armourtype}{P}
+\gdef\armourtype{P}
+
+\begin{tcolorbox}
+\creaturestats
+
+\derivedstats
+\end{tcolorbox}
+	\settoggle{debug}{false}
+}
+
+\newcommand{\animal}[9]{\settoggle{mind}{false}
+\setcounter{str}{#1}
+\setcounter{dex}{#2}
+\setcounter{spd}{#3}
+\setcounter{wts}{#4}
+\setcounter{dr}{#5}
+\setcounter{att}{#6}
+\renewcommand{\skills}{#7}
+\renewcommand{\abilities}{#8}
+\renewcommand{\mods}{#9}
+
+\clean
+
+\renewcommand{\armourtype}{C}
+
+\begin{tcolorbox}
+\creaturestats
+
+\derivedstats
+
+\end{tcolorbox}
+}
+
+\newcommand{\clean}{
+	\setcounter{fp}{5}
+	\setcounter{sp}{0}
+	\setcounter{knacks}{0}
+	\renewcommand{\armourtype}{N}
+	\renewcommand{\weaponknackone}{}
+	\renewcommand{\weaponknacktwo}{}
+	\setcounter{mp}{0}
+	\setcounter{mpb}{0}
+	\setcounter{xpbonus}{0}
+
+	}
+
+%%       _   _        _ _           _            
+%%  __ _| |_| |_ _ __(_) |__  _   _| |_ ___  ___ 
+%% / _` | __| __| '__| | '_ \| | | | __/ _ \/ __|
+%%| (_| | |_| |_| |  | | |_) | |_| | ||  __/\__ \
+%% \__,_|\__|\__|_|  |_|_.__/ \__,_|\__\___||___/
+%% 
+%% Print the line,
+%% print the attributes.
+%% print the skills
+%% print the knacks
+%% print the equipment
+%
+\newcommand{\creaturestats}{
+	\vspace{.1cm}
+
+\iftoggle{mind}{
+\begin{tabularx}{\textwidth}{lrlrlr}
+	Strength & \arabic{str} & Dexterity & \arabic{dex} & Speed & \arabic{spd} \\
+	Intelligence & \arabic{int}  & Wits & \arabic{wts} & Charisma & \arabic{cha}  \\}{%
+\begin{tabularx}{\textwidth}{lrlrlrlr}
+	Strength & \arabic{str} & Dexterity & \arabic{dex} & Speed & \arabic{spd} & Wits & \arabic{wts} \\
+	}
+	\setcounter{hp}{\value{str}}
+\end{tabularx}
+\hrule
+	\addtocounter{hp}{6}
+	\addtocounter{dex}{7}
+\vspace{.1cm}
+\noindent\begin{tabular}{p{.3\textwidth}p{.6\textwidth}}
+
+	\ent{Skills:} & \ifnumcomp{\value{att}}{=}{0}{\setcounter{att}{-1}}{\iftoggle{mind}{Combat \arabic{att}, }{Aggression \arabic{att}, }} \skills \\
+	\iftoggle{mind}{\ent{Equipment:} & \equipment \\}{\ent{Abilities:} \abilities \\}
+
+	\setcounter{strb}{\value{str}}
+	\setcounter{dexb}{\value{dex}}
+	\setcounter{spdb}{\value{spd}}
+	\setcounter{damb}{\value{dam}}
+	\setcounter{attb}{\value{att}}
+
+	\mods
+
+\end{tabular}
+
+	\weaponknackone
+	\weaponknacktwo
+
+	\addtocounter{att}{8}
+	\addtocounter{attb}{8}
+
+\vspace{.1cm}
+
+}
+
+%%     _               _        _
+%%  __| | ___ _ __ ___| |_ __ _| |_ ___ 
+%% / _` |/ _ \ '__/ __| __/ _` | __/ __|
+%%| (_| |  __/ |  \__ \ || (_| | |_\__ \
+%% \__,_|\___|_|  |___/\__\__,_|\__|___/
+%% 
+%% 
+%% dice instead of Damage
+%% print out att, spd, DAM, dex, dr (type), str
+%%
+%
+\newcommand{\derivedstats}{
+	\iftoggle{debug}{str is \arabic{str}, strb is \arabic{strb}.}{}
+
+	\hrule
+
+	\vspace{.1cm}
+
+\noindent Attack \arabic{att}\ifnumcomp{\value{att}}{=}{\value{attb}}{}{ (\arabic{attb})},
+	Initiative \arabic{spd}\ifnumcomp{\value{spd}}{=}{\value{spdb}}{}{ (\arabic{spdb})},
+	Damage \calculatedamage{\value{str}}\ifnumcomp{\value{str}}{=}{\value{strb}}{}{ (\calculatedamage{\value{strb}})}, 
+	TN \arabic{dex}\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
+	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP, }{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP, }}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP}{}
+
+
+	\calculateXP
+
+	}
+%
+%
+%% __  ______  
+%% \ \/ /  _ \ 
+%%  \  /| |_) |
+%%  /  \|  __/ 
+%% /_/\_\_|    
+%%  
+	\newcommand{\calculateXP}{
+%% Sanitize: init+5, dam+5, 
+	\addtocounter{spdb}{5}
+	\addtocounter{strb}{5}
+	\addtocounter{dex}{5}
+	\addtocounter{dr}{2}
+
+
+% Sanitize: dex+5, dr+1,  
+% attackXPtotal= strb x spdb x damb
+\vspace{.1cm}
+
+\hrule
+\vspace{.1cm}
+	\setcounter{attackXPtotal}{\value{attb}}
+
+	\multiply\value{attackXPtotal} by \value{spdb}
+
+	
+	\multiply\value{attackXPtotal} by \value{strb}
+
+	\iftoggle{debug}{Attack total: \arabic{attackXPtotal}}{}
+ 
+% defenceXPtotal= dex x dr x hp
+	\setcounter{defenceXPtotal}{\value{dex}}
+	\multiply\value{defenceXPtotal} by \value{dr}
+	\multiply\value{defenceXPtotal} by \value{hp}
+
+\iftoggle{debug}{Defence total: \arabic{defenceXPtotal}}{}
+
+% XP = attackXPtotal + defenceXPtotal
+	\setcounter{xp}{\value{attackXPtotal}}
+	\addtocounter{xp}{\value{defenceXPtotal}}
+	\addtocounter{xp}{-350}
+	\divide\value{xp} by 80
+	\addtocounter{xp}{\value{xpbonus}}
+	\addtocounter{xp}{\value{mp}}
+	\ifnumcomp{\value{xp}}{<}{0}{\setcounter{xp}{0}}{}
+% if {mind} print fate points.
+
+	\arabic{xp} XP \iftoggle{mind}{\addtocounter{fp}{\value{cha}}\ldots \arabic{fp} FP}{}
+
+	\vspace{.1cm}
+	\hrule
+	\vspace{.1cm}
+
+	}
+%%%%%%%%%%%%%%%%%%%%% Knacks
+%
+\newcommand{\charge}{Charge, \addtocounter{damb}{1}}
+%
+%%%%%%%%%%%%%%%%%%%% Creature Abilities
+
+\newcommand{\abilities}[1]{ \\
+	\ent{Abilities} & #1 
+	}
+
+	\newcommand{\teeth}{Teeth (+1 Damage) \addtocounter{str}{1}
+		}
+
+	\newcommand{\claws}{
+		Claws (+1 Damage) \addtocounter{str}{1}
+		}
+
+	\newcommand{\web}{
+		Web (Strength plus Athletics, TN 9 to break free as a movement action), 
+		}
+
+
+%%%%%%%%%%%%%%%%%%%%% Magic Path
+\newcommand{\Path}[2]{ \\
+	\ent{Path of #1:} & #2
+	}
+
+%
+%% 
+%% 
+%%                      _                       
+%%   ___ _ __ ___  __ _| |_ _   _ _ __ ___  ___ 
+%%  / __| '__/ _ \/ _` | __| | | | '__/ _ \/ __|
+%% | (__| | |  __/ (_| | |_| |_| | | |  __/\__ \
+%%  \___|_|  \___|\__,_|\__|\__,_|_|  \___||___/
+%%                                        
+%
+%
+\newcommand{\auroch}{
+	\animal{2}{-2}{3}{1}{2}{1}{Athletics 1}{Stampede}{\addtocounter{xpbonus}{-4}}
+}
+
+\newcommand{\bear}{
+	\animal{5}{-1}{4}{0}{2}{2}{Athletics 2, Stealth 2, Survival 2, Vigilance 2}{None}
+}
+%
+\newcommand{\boar}{
+	\animal{4}{-2}{3}{1}{2}{2}{Survival 1, Vigilance 1}{}
+	}
+%
+\newcommand{\chitincrawler}{
+	\randomtwo
+	\animal{\ifodd\value{chapter} 4\else 3\fi}{\ifodd\value{page} 1\else 0\fi}{\arabic{random}}{\arabic{random}}{3}{4}{Athletics 2, Survival 1}{}
+}
+%
+\newcommand{\griffin}{
+	\animal{\ifodd\value{page} 2\else 1\fi}{-2}{\ifodd\value{page} 2\else 1\fi}{2}{0}{2}{Athletics 2, Survival 1\knacks{\charge}}{Flight}
+}
+%
+\newcommand{\mouthdigger}{
+	\animal{2}{-1}{3}{0}{2}{2}{Stealth 2, Tactics 2, }{}{\knacks{\firststrike , \adrenalinesurge , \perfectsneakattack}}
+}
+%
+\newcommand{\wolf}{
+	\animal{-1}{-1}{3}{1}{2}{1}{Athletics 2, Survival 1, Tactics 1}{}
+}
+
+\newcommand{\woodspy}{
+	\randomthree\randomtwo\addtocounter{enc}{2}
+	\person{\arabic{random}}{\arabic{enc}}{2}{{-4}{2}{-5}}{2}{0}{Athletics 2, Stealth 4, Survival 2, Tactics 2}{None}{}
+}
+
+\newcommand{\basilisk}{
+	\randomthree\addtocounter{age}{5}\randomtwo\addtocounter{random}{1}
+	\animal{\arabic{age}}{-2}{\arabic{random}}{0}{4}{2}{Projectiles 1, Athletics 2, \abilities{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}}{}{\knacks{\unstoppable}}
+}
+
+%
+\newcommand{\dragon}{
+	\ifnumcomp{\thechapter}{<}{6}{\setcounter{age}{6}}{\ifnumcomp{\thechapter}{>}{9}{\setcounter{age}{7}}{\setcounter{age}{\thechapter}}}
+	\person{\arabic{age}}{3}{4}{{3}{4}{2}}{4\addtocounter{age}{-5}}{\arabic{age}}{Aggression 2, Projectiles \addtocounter{age}{1}\arabic{age}, Academics \arabic{age}, Athletics 1, Deceit \arabic{age}, Tactics 2, Vigilance 3}{%
+		\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$gp, sitting in a lair.}{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{ \arabic{gold}gp in lair in assorted change}{None}}}%
+		{\knacks{\combatcaster\backtothewall\ifnumcomp{\value{age}}{>}{3}{\laststand}{}}\abilities{Flight}\Path{Blood}{Enchantment \addtocounter{age}{-1}\arabic{age}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
+	}
+
+\newcommand{\dwarventrader}{
+	\randomthree\randomtwo
+	\person{\arabic{random}}{1}{-1}{{\ifnumcomp{\value{random}}{=}{2}{1}{0}}{0}{0}}{0}{1}{Crafts \ifodd\value{page} 1 \else 2\fi, Deceit \ifodd\value{page} 2 \else 1\fi}{\shortsword\ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}, \arabic{gold}sp}}{}
+	}
+%
+\newcommand{\dwarvensoldier}{
+	\randomtwo
+	\person{\arabic{random}}{\arabic{enc}}{0}{{0}{0}{-1}}{0}{2}{Crafts 1, Tactics 1}{\greataxe, \completeplate}{\knacks{Chosen Enemy: Goblins}}
+	}
+
+\newcommand{\dwarvenrunemaster}{
+	\person{0}{1}{0}{{2}{0}{0}}{0}{1}{Academics 2, Crafts 1, Tactics 2\Path{Runes}{Metamagic 4, Fate 3, Force 2, Conjuration 1}}{\shortsword\partialchain\ifnumcomp{\thechapter}{=}{6}{4D6sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
+	}
+
+\newcommand{\dryad}{
+	\person{4}{2}{2}{{4}{2}{1}}{6}{2}{Academics 3, Athletics 1, Crafts 2, Performance 3, Empathy 2, Survival 3\Path{Blood \& Song}{Polymorph 5, Aldaron 4, Fate 3, Metamagic 2}}{\Dagger}{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
+	}
+
+\newcommand{\elf}{
+	\randomthree
+	\setcounter{enc}{1}\addtocounter{enc}{-\value{age}}
+	\person{\value{enc}}%STRENGTH
+	{\value{age}}%DEXTERITY
+	{1}%SPEED
+	{{\arabic{age}}{2}{1}}%MENTAL ATTRIBUTES
+	{0}{\ifodd\value{list}1\else2\fi}%
+	{\ifodd\thepage\else Projectiles \arabic{age}\fi, Academics \arabic{age}, Athletics 1, \ifodd \thechapter Crafts \arabic{age}\else Performance \arabic{age}\fi, Stealth 1, Survival 2, Vigilance \arabic{age}\Path{Blood \ifodd\thechapter\else \& Song\fi}{\setcounter{enc}{\value{age}}\addtocounter{enc}{2}Aldaron \arabic{enc}, \addtocounter{age}{1}Enchantment \arabic{age}}\addtocounter{age}{-1} \ifodd\thechapter\else Fate \arabic{enc}\fi, \ifodd\thepage Polymorph \arabic{age}\else Invocation \arabic{age}\fi}{\ifnumcomp{\value{enc}}{>}{-1}{\rapier dagger, shortbow,}{} %
+	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{3D6sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{100}{\divide\value{gold} by 100 \ifnumcomp{\value{enc}}{>}{4}{\arabic{gold} sp worth of earrings and bracelets}{random magical item}}{Ornamental dagger, worth \thepage sp}}{one necklace worth \thechapter sp}}}%
+	{\multiply\value{age} by 2 \mana{\value{age}}}
+	}
+
+\newcommand{\elvenenchanter}{
+	\randomtwo\randomthree\setcounter{random}{-3}\addtocounter{random}{-\value{age}}
+	\person{\arabic{random}}% STRENGTH
+	{\arabic{enc}}% DEXTERITY
+	{\ifodd\value{chapter} 1\else 2\fi\addtocounter{age}{1}}% SPEED
+	{{\arabic{age}\randomtwo\addtocounter{enc}{1}\arabic{enc}}% INTELLIGENCE
+	{\arabic{enc}\randomtwo}%
+	{\arabic{enc}}}%
+	{0}{\ifodd\value{chapter} \arabic{enc}\else 0\fi}%
+	{Projectiles 1, Academics 3, Empathy 3, Deceit 3, Performance 3, Stealth 1, Vigilance 2\Path{Blood}{Enchantment 5, Aldaron 4, Metamagic 4, Fate 3, Forces 2, Polymorph 2, Invocation 1}}{%
+		\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$5D6$sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{4}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp worth of earrings}{random magical item}}{ornamental dagger, worth \thepage sp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} one necklace worth \arabic{gold} sp}}}%
+		{\mana{6}\addtocounter{xpbonus}{5}}
+	}
+
+\newcommand{\gnome}{
+	\person{-2}{-1}{1}{{1}{0}{0}}{0}{0}{Academics 1, Crafts 1, Empathy 1, Pickpocketing 1, Stealth 1\Path{Alchemy}{Illusion \ifodd\value{chapter} 1\else 2\ifodd\value{page} Invocation 1\fi\fi}}{%
+		\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{Promisary note}{\ifnumcomp{\thechapter}{>}{2}{\multiply\value{enc} by \thechapter \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 500 \ifnumcomp{\value{enc}}{>}{0}{Big ruby worth \arabic{enc}gp}{Green emerald worth \thepage sp}}{Glimmering diamond worth \thepage gp}}{interesting piece of lizardite.}}}%
+	}
+
+\newcommand{\gnomishillusionist}{
+	\person{-3}{-2}{1}{{3}{2}{0}}{0}{0}{Projectiles 1, Academics 3, Crafts 2, Deceit 1,  Stealth 2\Path{Alchemy}{Conjuration 3, Force 2, Illusion 4, Metamagic 2}}{%
+		\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{Promisary note}{\ifnumcomp{\thechapter}{>}{2}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \thepage gp}}{Glimmering diamond worth \thepage gp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
+		{\mana{6}}
+	}
+
+\newcommand{\humanfarmer}{
+	\person{1}{0}{0}{{0}{-1}{\ifodd \value{chapter} -1\else1\fi}}{0}{\ifodd\thepage 0\else 1\fi}{Beast Ken 2, Crafts 2, \ifodd\thechapter Empathy 1\fi}{\Dagger , \thechapter cp in a purse.}
+	}
+
+\newcommand{\humanmaid}{
+	\random
+	\person{1}{\ifodd \value{age} -1\else1\fi}{0}{{\ifodd\value{age} 0\else 1\fi}{-1}{0}}{0}{\ifodd\thepage 0\else 1\fi}{Empathy 1, \ifodd\thechapter Deceit 1\fi}{\Dagger \thechapter cp in a purse.}
+	}
+
+\newcommand{\humantrader}{
+	\person{1}{0}{0}{{0}{-1}{\ifodd\thepage 0\else 1\fi}}{0}{0}{Academics 1, Crafts 1}{\Dagger \thepage cp in a purse, and \thechapter sp hidden nearby.}
+	}
+
+\newcommand{\humandiplomat}{
+	\person{\ifodd\value{page} 0\else 1\fi}{1}{0}{{1}{0}{1}}{0}{1}{Academics 2, Deceit 2, Empathy 1, Vigilance 2}{\Dagger, \setcounter{gold}{\thepage}\addtocounter{gold}{\thechapter}\arabic{gold}cp, \divide\value{gold} by 3 \arabic{gold}sp stored secretly nearby.}
+	}
+
+\newcommand{\humanpriest}{
+	\randomthree
+	\person{\ifnum\value{enc}>5 3\else 0\fi}{0}{0}{{\arabic{age}}{0}{\ifodd\thepage 0\else 1}}{0}{\ifnum\value{enc}>3 0 \else 1 \fi}{Academics \arabic{age}, Empathy \ifnum\value{enc}<2 2\else 1\fi\Path{Devotion}{Fate \arabic{age}\ifodd\thepage \else \randomtwo Aldaron \arabic{enc}\fi}}{\ifodd\thechapter\quarterstaff\else\Dagger\fi}{\multiply\value{age} by 2\mana{\arabic{age}}}
+	}
+
+\newcommand{\humansoldier}{
+	\random
+	\person{2}{\ifodd\thepage 0 \else 1\fi}{1}{{0}{-1}{0}}{0}{\ifodd\thechapter 2 \else 1\fi}{Beast Ken 1, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}{\ifnum\value{age}>8{\greatsword}\else\ifnum\value{age}>4{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}{}
+	}
+
+\newcommand{\humanarcher}{
+	\random
+	\person{2}{1}{0}{{0}{-1}{0}}{0}{1}{Projectiles 2, Crafts \ifodd\thechapter 1 \else 2\fi, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}{\longbow, dagger, \partialleather}{}
+	}
+
+\newcommand{\humanthief}{
+	\random
+	\person{1}{\ifodd\thepage 2 \else 1\fi}{1}{{0}{0}{0}}{0}{\ifodd\thechapter 2 \else 1\fi}{Athletics 2, Deceit \ifodd\thepage 2 \else 1\fi, Tactics 1}{\ifnum\value{enc}>5{\shortsword, dagger}\else\ifnum\value{age}>2{\rapier, dagger}\else{\longsword}\fi\fi \ifnum\value{age}=3\partialleather \fi \setcounter{gold}{\thepage}\divide\value{gold} by 4\addtocounter{gold}{3}, \arabic{gold}cp}{}
+	}
+
+\newcommand{\humanalchemist}{
+	\randomthree
+	\person{\ifodd\thepage 0 \else 1\fi}{0}{0}{{\ifodd\value{page} 3 \else 1\fi}{\ifodd\value{page} -1 \else 1 \fi}{0}}{0}{\ifodd\value{chapter} 0 \else 1\fi}{Academics \arabic{age}, Deceit \ifodd\thepage 2 \else 1, Tactics 1\fi\Path{Alchemy}{\ifodd\value{chapter} Conjuration \arabic{age}, Invocation 3, \ifnum\value{enc}<5 Metamagic \arabic{enc}\fi\else \randomtwo Conjuration \arabic{enc}, Forces \arabic{age}, Metamagic 2\fi}}{\setcounter{age}{\value{random}}\addtocounter{age}{\value{age}}Mana stone jewel with \arabic{age} mana, \thechapter gp, \thepage sp}{\mana{4}\lockedmana{\arabic{random}}}
+	}
+
+\newcommand{\gnollhunter}{
+	\randomtwo\addtocounter{enc}{1}
+	\person{\arabic{enc}}{\ifodd\thepage 2 \else 1\fi}{1}{{-1}{1}{-1}}{0}{1}{Aggression 2, Projectiles 1, Survival 3\knacks{\adrenalinesurge}}{\spear}{}
+	}
+
+\newcommand{\gnollshaman}{
+	\randomthree
+	\ifnum\value{enc}>4{\setcounter{enc}{4}}\else{\ifnum\value{enc}<0{\setcounter{enc}{1}}\else{}\fi}\fi
+	\setcounter{enc}{\value{age}}\setcounter{enc}{\value{enc}}\ifodd\thechapter\addtocounter{enc}{-1}\else\addtocounter{enc}{-1}\fi \ifnum\value{enc}<1{\setcounter{enc}{1}}\fi
+
+	\addtocounter{age}{-1}
+	\person{1}{0}{0}{{\arabic{age}\addtocounter{age}{1}}{1}{-2}}{0}{1}{Aggression 2, Projectiles \arabic{age}, Academics \arabic{age}, Beast Ken \arabic{age}, Stealth \arabic{enc}, \ifnum\value{enc}>1{Survival \arabic{enc}, Vigilance \arabic{enc}}\fi\Path{Divinity (Qualme)}{Fate \arabic{enc} Invocation \addtocounter{enc}{1}\arabic{enc}, Necromancy \arabic{age}}}{Dagger}{\mana{4}}
+		}
+
+		\newcommand{\nuracat}{
+			\animal{2}{2}{4}{2}{0}{4}{Stealth 2, Survival 1, Vigilance 2\abilities{\claws}}{}{}
+	}
+
+		\newcommand{\nuracrab}{
+			\randomthree\addtocounter{random}{1}
+\animal{\arabic{random}}{-2}{1}{0}{6}{2}{Survival 1}{}{}
+	}
+
+		\newcommand{\nurahorse}{
+\animal{2}{1}{2}{0}{2}{2}{Athletics 3, Survival 1}{}{}
+	}
+
+		\newcommand{\nuraslug}{
+			\animal{0}{-1}{-4}{0}{1}{0}{Projectiles 2, Survival 1\abilities{Spitting acid for 1D6 Damage}}{}{}
+	}
+
+		\newcommand{\nuraspider}{
+			\animal{4}{2}{3}{2}{3}{4}{Athletics 3, Vigilance 2\abilities{\web}}{}{}
+	}
+
+		\newcommand{\nurawolf}{
+\animal{1}{1}{3}{1}{2}{3}{Athletics 3, Survival 1}{}{}
+	}
+
+%%%%%%%%%% NURA %%%%%%%%%%
+
+\newcommand{\goblin}{
+	\person{-1}{2}{0}{{-1}{0}{-4}}{0}{1}{Projectiles \ifodd\thechapter 1\else 2\fi, Athletics 1, Deceit 1, Stealth \ifodd\thechapter 2\else 1\fi, Tactics 1}{\javelin dagger}{}
+	}
+
+\newcommand{\undeadgoblin}{
+	\randomtwo\addtocounter{random}{-2}
+	\animal{\arabic{random}}{-2}{0}{-4}{2}{2}{}{}{}
+	}
+
+\newcommand{\deepgoblin}{
+	\randomtwo\addtocounter{random}{-2}
+	\person{\arabic{random}}{2}{0}{{-1}{1}{-4}}{0}{1}{Projectiles 2, Athletics 1, Deceit 1, Stealth 2, Tactics 2}{\javelin bag of rocks}{}
+	}
+
+\newcommand{\goblinnuramancer}{
+	\randomtwo
+	\person{-2}{2}{0}{{\arabic{random}}{3}{-4}}{0}{0}{Projectiles 2, Deceit 2, Medicine 2, Stealth 1, Tactics 2\Path{Nura}{Invocation 3, Necromancy 3, Saurecanta 4}}{\Dagger}{\mana{4}}
+	}
+
+\newcommand{\hobgoblin}{
+	\person{1}{2}{0}{{-3}{0}{-4}}{0}{2}{Crafts 1, Tactics 1}{\shortsword\partialchain}{}
+	}
+
+\newcommand{\deephobgoblin}{
+	\person{1}{2}{0}{{-3}{0}{-4}}{0}{2}{Tactics 2}{\club}{}
+	}
+
+\newcommand{\undeadhobgoblin}{
+	\animal{1}{0}{-1}{-3}{2}{2}{}{}{}
+	}
+
+\newcommand{\sentientundeadhobgoblin}{
+	\randomtwo
+	\person{\arabic{random}}{-1}{-2}{{1}{0}{-5}}{2}{1}{Aggression 2, Crafts 2, Tactics 1}{None}{}
+}
+
+\newcommand{\ogre}{
+	\randomthree\addtocounter{random}{3}
+	\person{\arabic{random}}{0}{1}{{-3}{-2}{-4}}{0}{2}{Beast Ken 2, Crafts 1, Tactics 1}{\greatclub \ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}{}
+	}
+
+\newcommand{\ghoul}{
+	\randomtwo
+	\animal{\arabic{random}}{-2}{-2}{-2}{2}{2}{}{}{}
+	}
+
+\newcommand{\ghoulhobgoblin}{
+	\animal{1}{-2}{-2}{-2}{2}{2}{}{}{}
+	}
+
+\newcommand{\ghast}{
+	\randomtwo\addtocounter{enc}{1}
+	\person{\arabic{enc}}{2}{0}{{\arabic{random}}{0}{-5}}{2}{2}{Aggression 2, Beast Ken 1, Survival 1, Tactics \arabic{age}, Vigilance 1}{\greatsword, dagger, %
+	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{0}{\divide\value{gold} by 1000 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp}{\thepage cp in a small pouch}}{ornamental dagger, worth \thepage sp}}{\thepage gp worth of rubies, sewn across the flesh of the entire body.}}}%
+	{}
+	}
+
+\newcommand{\demilich}{
+	\randomtwo
+	\person{\arabic{enc}}{-1}{-2}{{2}{1}{-5}}{2}{1}{Aggression 2, Projectiles 1, Academics 3, Deceit 1, Medicine 2, Vigilance 1\Path{Devotion (Qualme)}{Fate \arabic{enc}, \ifodd\thechapter Invocation 3\else Aldaron \arabic{enc}\fi, Metamagic 3, Necromancy 5}}{\Dagger, mana stone holding 6 MP}{\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
+	}
+
+\newcommand{\lich}{
+	\person{1}{-2}{-2}{{3}{1}{-5}}{2}{1}{Aggression 2, Projectiles 2, Academics 3, Deceit 2, Medicine 3, Vigilance 2\Path{Devotion (Qualme)}{Aldaron 3, Invocation 3, Metamagic 4, Necromancy 5}}{\Dagger, embalmed hand of a king; capable of dealing $1D6+3$ direct HP Damage to anyone who strike the lich.}{\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
+	}
+
+\newcommand{\jelly}{
+	\animal{-1}{2}{-2}{-3}{3}{2}{Stealth 2, \unstoppable}{Acidic damage, gelanonous}{\addtocounter{xpbonus}{2}}
+	}
+
+\newcommand{\umberhulk}{
+	\randomtwo\addtocounter{enc}{4}
+	\animal{\arabic{enc}}{\ifodd\thechapter -1\else 0\fi\randomtwo }{1}{1}{5}{2}{Stealth 1, Survival \arabic{enc}, Vigilance 1}{}{}
+	}
+
+\newcommand{\horse}{
+	\animal{2}{0}{4}{1}{1}{0}{Athletics 2, Survival 1}{}{}
+	}
+
+\newcommand{\warhorse}{
+	\animal{3}{0}{4}{1}{1}{1}{Athletics 2, Survival 2, Vigilance 1}{}{}
+	}
+
+\newcommand{\huntingdog}{
+	\animal{-2}{0}{4}{1}{1}{0}{Survival 2\abilities{\teeth}}{}{}
+	}
+
+\newcommand{\rockman}{
+	\person{6}{0}{-4}{{2}{-4}{1}}{7}{1}{Academics 1, Ether Lore 2, Stealth 3, Vigilance 2}{}{}
+	}
+
+\newcommand{\lavaman}{
+	\person{7}{0}{0}{{-3}{-5}{-3}}{7}{2}{Crafts 1, Deceit 1, Ether Lore 1, }{}{}
+	}
+
+\newcommand{\archmage}{
+	\randomtwo\addtocounter{enc}{3}\randomthree
+	\person{-5}{-2}{-3}{{\arabic{enc}}{4}{-5}}{0}{0}{Projectiles \arabic{age}, Academics 3, Deceit \arabic{age}, Ether Lore \addtocounter{enc}{-1}\arabic{enc}, Tactics \arabic{age}\Path{Divinity}{Force \arabic{age}, Illusion 3, Invocation 5, Conjuration 4, Metamagic \addtocounter{enc}{1}\arabic{enc}}}{None}{\addtocounter{sp}{20}\mana{8}\addtocounter{xpbonus}{4}}
+	}
+
+\newcommand{\watcher}{
+	\animal{-3}{-2}{-2}{2}{0}{0}{Stealth 3, Vigilance 2\abilities{Gas}}{}{}
+	}
+
