@@ -1,4 +1,15 @@
 # First Blood
+<!--
+
+QUICKSTART
+
+pdflatex First_Blood.tex
+pdflatex First_Blood.tex
+makeglossaries First_blood
+makeindex First_Blood.idx
+pdflatex First_Blood.tex
+
+-->
 
 First Blood is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
@@ -59,7 +70,6 @@ Healing Fate points after an encounter means players don't constantly fear death
 + Spying the bandit's lair, you find they're heavily armed and dangerous.  You spend 2 Story Points and declare that one of the guards in another town is a war buddy, willing to join you in battle.
 + Two stories later, the party is destitute, and in dire need of food and weapons.  Spending 3 Story Points, you declare that your old war buddies and you found some loot, burried it nearby, and promised each other nobody would touch it until the heat was off, and it could be evenly distributed.
 
-
 Story Points allow players to craft a story in-play, once they know the world they're in.  It also means that nobody has a boring backstory, because everything in your past is *directly* relevant to what you're doing in the current adventure.  You can throw all your Story Points out there at the start, declaring you have friends in high places and fabulous wealth, or play the mysterious loner until the party really needs a *deus ex machina* to avoid certain death.
 
 ... and most importantly, crafting a detailed backstory no longer requires any time spent.
@@ -97,11 +107,11 @@ This thing's written in LaTeX, a magical document format where you describe the 
 
 ## Related Works
 
-Adventures in Fenestra contains a GM's guide, Bestiary, adventures, and a complete world.  It's about 90% of the way to a useable state.
+Adventures in Fenestra contains a GM's guide, Bestiary, mini-adventures, and a complete world.
 
 ## Art
 
-Did you know that git can diff svg images?  Not only that, with a little feneggling, git can merge two different changes to art.  I can't envision artists getting terribly excited about this, but it's not going to stop me getting excited about it.
+Did you know that git can diff svg images?  Not only that, with a little feneggling, git can merge two different changes to art.  I can't envision artists getting terribly excited about this, but that's not going to stop me getting excited about it.
 
 ## Joining
 
