@@ -1,13 +1,7 @@
 # First Blood
 <!--
 
-QUICKSTART
-
-pdflatex First_Blood.tex
-pdflatex First_Blood.tex
-makeglossaries First_blood
-makeindex First_Blood.idx
-pdflatex First_Blood.tex
+The config directory is a subtree, so all commits to it must involve only files in that directory.
 
 -->
 
