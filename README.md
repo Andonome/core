@@ -16,3 +16,8 @@ Personally, I keep it in a directory by the others.  This allows you to do:
 
 > git subtree -P config pull ../config master
 
+The configs also have one branch per repo, so when writing Adventures in Fenestra ('aif'), you can do a push to just that branch:
+
+> git subtree -P config push ../config aif
+
+
