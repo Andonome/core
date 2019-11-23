@@ -2178,6 +2178,8 @@ Anyone can attempt to break free instead of their usual movement action.
 
 Webbing cannot be used instead of rope -- it's too elastic, and tends to snap when stretched.
 
+\enhancement{1}{Basic Metals} The caster can now target and create basic metals such as copper, bronze, or iron.  Gold and silver cannot be targeted or created, nor can alloys, or weapons adorned with precious metals.
+
 \enhancement{1}{Enlarged} The mage takes any previous level, and casts it wide.  The spell can then target one square per spell level plus the caster's Wits Bonus.  A caster with Wits +1 could cast Web at second level to cover three squares, or cast Slime at third level to cover four squares.
 
 \enhancement{1}{Form Breach} The conjuration spells can now move from any type of matter to any other.  Webbing, slime, or acid can be created from any substance except metals.
@@ -2185,8 +2187,6 @@ Webbing cannot be used instead of rope -- it's too elastic, and tends to snap wh
 Casters turning air into rocks can rain a heavy load down on an enemy, inflicting $1D6$ Damage, plus their Intelligence, plus the spell level.
 
 Living creatures turned using Stone Spell into a solid substance, and then turned into air or water using Form Breach, are dead.
-
-\enhancement{1}{Basic Metals} The caster can now target and create basic metals such as copper, bronze, or iron.  Gold and silver cannot be targeted or created, nor can alloys, or weapons adorned with precious metals.
 
 \spelllevel
 
@@ -2418,6 +2418,7 @@ The priest blesses the target with the favour of the gods. The target `heals' or
 The priest heals the target for an additional 2 \gls{fp}.  These \gls{fp} stack just like Damage, so $1D6+4$ \gls{fp} becomes $2D6$ \gls{fp}.
 
 \spelllevel
+
 \spell{Blessings}{Continuous}{Empathy}
 
 The priest blesses a target, who then receives a +1 to any Skill.
@@ -2623,12 +2624,6 @@ Illusions can only adjust something's size so much.  Something's weight rating c
 
 Illusions can now be cast without any `base' -- they simply appear on their own.  Coins, dogs, dragons, or more, can be fashioned from nothing.  Independent illusions can continue acting in an intelligent manner without any intervention from the caster.   People's speech can be adjusted to another language long after the illusionist has left, or a rock made to look like a human soldier could continue moving and speaking 
 
-\enhancement{1}{Large}
-
-The illusion can now cover a large area; specifically it can cover a number of squares equal to the spell's level plus the caster's Wits Bonus.
-
-Audio spells become deafening, and cover an entire area.
-
 \enhancement{1}{Solid}
 
 Solid illusions are not all that solid, but they can be touched without disipating and hold all manner of nice details, such as \emph{smelling} right, or stopping smoke from blowing through them.  They are also far more realistic, and increase the \gls{tn} to see through the illusion by 2.
@@ -2639,21 +2634,27 @@ Solid illusions become an extension of the caster, and any caster can cast a spe
 
 Once even a single point of Damage has been dealt to the illusion, it vanishes.
 
+\enhancement{1}{Large}
+
+The illusion can now cover a large area; specifically it can cover a number of squares equal to the spell's level plus the caster's Wits Bonus.
+
+Audio spells become deafening, and cover an entire area.
+
 \enhancement{2}{Massive}
 
 Massive Illusions cover an entire area.  Powerful illusionists can make everyone in a castle's wing look like goblins, or make a filthy kitchen appear clean.
 
 While a castle's various rooms have such detail that they each count as a separate room, a small keep or house will count as a \emph{single} area from outside, so such illusions can target a full house from the outside.
 
-\enhancement{3}{Enormous}
-
-The illusion can cover one full area, plus the caster's Wits Bonus.
-
 \enhancement{2}{Negative}
 
 The illusionist finally learns to make less of something, rather than more.  A single person can be silenced, or made invisible (or both).
 
 As usual, the illusion is still delicate, and if the person is struck or disturbed in any way, the illusion dissipates.  Combat rolls, for defence or attack, always break such spells unless they are also make \textit{Solid}.
+
+\enhancement{3}{Enormous}
+
+The illusion can cover a number of areas equal to the spell's level, plus the caster's Wits Bonus.
 
 \sphere{Invocation}\index{Invocation}
 
@@ -2681,13 +2682,13 @@ The mage throws out a ball of flaming, crackling light which strikes and burns t
 
 Anyone within 1 square's distance of the fireball takes 1 Damage plus the caster's Intelligence Bonus.
 
-\enhancement{2}{Inner Furnace} The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
-
 \enhancement{2}{Eternal Flame} The fire cast does not go out unless plunged under water.  Each round it continues to burn, inflicting $1D6$ Damage plus the caster's Intelligence Bonus.
 
 If the spell targeted an area with the Fireball enhancement, the area burns, rather than specific people or items inside.
 
 If the spell does not have the Inner Furnce enhancement, it always targets people's outer layers; their swords, armour, clothing, but not the person themselves, unless that person was mostly naked.
+
+\enhancement{2}{Inner Furnace} The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
 
 \sphere{Metamagic}
 
@@ -2852,11 +2853,6 @@ At this first level, the mage is limited to fairly small creatures.  The maximum
 
 Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
 
-\enhancement{1}{Greater}
-
-With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4 plus the caster's Intelligence Bonus.
-A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
-
 \enhancement{1}{Clever}
 
 While the easiest spirits to summon are mindless creatures, more advanced mages can summon smarter creatures.  The creature's basic stats are now Intelligence -2, Wits -2 and Charisma -5.  The mage's Intelligence Bonus, plus each use of this enhancement adds 1 Attribute to the creature's Intelligence and Wits, and 2 levels of any Skill.  Such creatures have a basic mana pool equal to double their Intelligence Bonus.  
@@ -2880,6 +2876,11 @@ The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can de
 	Hugi decided never to entertain learning necromantic rune magic after that day.
 
 \end{exampletext}
+
+\enhancement{1}{Greater}
+
+With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4 plus the caster's Intelligence Bonus.
+A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
 
 \spell{Preservation}{Instant}{Survival}
 
