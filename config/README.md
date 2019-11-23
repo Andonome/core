@@ -20,4 +20,3 @@ The configs also have one branch per repo, so when writing Adventures in Fenestr
 
 > git subtree -P config push ../config aif
 
-
