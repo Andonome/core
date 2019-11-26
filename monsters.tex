@@ -452,8 +452,10 @@
 
 \newcommand{\dwarvenrunemaster}{
 	\person{0}{1}{0}% PHYSICAL ATTRIBUTES
-	{{\ifodd\value{chapter} 2\else 1\fi}{\ifodd\value{enc}{2}\else{0}\fi}{0}}
-	{0}{1}{Academics 2, Crafts 1, Tactics 2\Path{Runes}{Metamagic 4, Fate 3, Force 2, Conjuration 1}}{\shortsword\partialchain\ifnumcomp{\thechapter}{=}{6}{4D6sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
+	{{\ifodd\value{page}2\else\1\fi}% INTELLIGENCE
+	{\ifodd\value{chapter}1\else0\fi}{0}}%  WITS
+	{\ifodd\value{enc}-1\else0\fi}% CHARISMA
+	{1}{Academics 2, Crafts 1, Tactics 2\Path{Runes}{Metamagic 4, Fate 3, Force 2, Conjuration 1}}{\shortsword\partialchain\ifnumcomp{\thechapter}{=}{6}{4D6sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
 	}
 
 \newcommand{\dryad}{
