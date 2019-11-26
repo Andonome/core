@@ -362,7 +362,7 @@
 %%%%%%%%%%%%%%%%%%%% Creature Abilities
 
 \newcommand{\abilities}[1]{ \\
-	\ent{Abilities} & #1 
+	\ent{Abilities:} & #1 
 	}
 
 	\newcommand{\teeth}{Teeth (+1 Damage) \addtocounter{str}{1}
@@ -407,7 +407,7 @@
 }
 %
 \newcommand{\griffin}{
-	\animal{\ifodd\value{page} 2\else \ifodd\value{chapter} 3\else 1\fi\fi}{-2}{\ifodd\value{page} 2\else 1\fi}{2}{0}{2}{Athletics 2, Survival 1\knacks{\charge}}{Flight}
+	\animal{\ifodd\value{page} 2\else \ifodd\value{chapter} 3\else 1\fi\fi}{-2}{\ifodd\value{page} 2\else 1\fi}{2}{0}{2}{Athletics 2, Survival 1\knacks{\charge}}{Flight}{}
 }
 %
 \newcommand{\mouthdigger}{
