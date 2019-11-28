@@ -673,11 +673,19 @@
 	}
 
 \newcommand{\huntingdog}{
-	\animal{-2}{0}{4}{1}{1}{0}{Survival 2\abilities{\teeth}}{}{}
+	\randomtwo\addtocounter{random}{-2}
+	\animal{-2}{\arabic{random}}{4}{1}{1}{0}{Survival 2\abilities{\teeth}}{}{}
 	}
 
 \newcommand{\rockman}{
-	\person{6}{0}{-4}{{2}{-4}{1}}{7}{1}{Academics 1, Ether Lore 2, Stealth 3, Vigilance 2}{}{}
+	\randomthree\ifodd\value{page}\addtocounter{age}{3}\else\addtocounter{age}{4}\setcounter{enc}{-1}\addtocounter{enc}{-\value{random}}
+	\person{\arabic{age}}% STRENGTH
+	{0}% DEXTERITY
+	{\arabic{enc}}% SPEED
+	{{\arabic{age}}% INTELLIGENCE
+	{-4}% WITS
+	{1}}% CHARISMA
+	{7}{1}{Academics 1, Ether Lore 2, Stealth 3, Vigilance 2}{}{}
 	}
 
 \newcommand{\lavaman}{
