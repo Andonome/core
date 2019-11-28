@@ -362,7 +362,7 @@
 %%%%%%%%%%%%%%%%%%%% Creature Abilities
 
 \newcommand{\abilities}[1]{ \\
-	\ent{Abilities} & #1 
+	\ent{Abilities:} & #1 
 	}
 
 	\newcommand{\teeth}{Teeth (+1 Damage) \addtocounter{str}{1}
@@ -407,7 +407,7 @@
 }
 %
 \newcommand{\griffin}{
-	\animal{\ifodd\value{page} 2\else \ifodd\value{chapter} 3\else 1\fi\fi}{-2}{\ifodd\value{page} 2\else 1\fi}{2}{0}{2}{Athletics 2, Survival 1\knacks{\charge}}{Flight}
+	\animal{\ifodd\value{page} 2\else \ifodd\value{chapter} 3\else 1\fi\fi}{-2}{\ifodd\value{page} 2\else 1\fi}{2}{0}{2}{Athletics 2, Survival 1\knacks{\charge}}{Flight}{}
 }
 %
 \newcommand{\mouthdigger}{
@@ -430,10 +430,16 @@
 
 %
 \newcommand{\dragon}{
-	\ifnumcomp{\thechapter}{<}{6}{\setcounter{age}{6}}{\ifnumcomp{\thechapter}{>}{9}{\setcounter{age}{7}}{\setcounter{age}{\thechapter}}}
-	\person{\arabic{age}}{3}{4}{{3}{4}{2}}{4\addtocounter{age}{-5}}{\arabic{age}}{Aggression 2, Projectiles \addtocounter{age}{1}\arabic{age}, Academics \arabic{age}, Athletics 1, Deceit \arabic{age}, Tactics 2, Vigilance 3}{%
-		\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$gp, sitting in a lair.}{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{ \arabic{gold}gp in lair in assorted change}{None}}}%
-		{\knacks{\combatcaster, \backtothewall\ifnumcomp{\value{age}}{>}{3}{\laststand}{}},\abilities{Flight}\Path{Blood}{Enchantment \addtocounter{age}{-1}\arabic{age}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
+	\ifnumcomp{\thechapter}{<}{6}{\setcounter{age}{6}}{\ifnumcomp{\thechapter}{>}{9}{\setcounter{age}{7}}{\setcounter{age}{\thechapter}}}\randomtwo\addtocounter{random}{2}
+	\person{\arabic{age}}% STRENGTH
+	{3}% DEXTERITY
+	{4}% SPEED
+	{{3}% INTELLIGENCE
+	{\arabic{random}}% WITS
+	{\ifodd\value{page}-2\else1\fi}}% CHARISMA
+	{4\addtocounter{age}{-5}}{\arabic{age}}{Aggression 2, Projectiles \addtocounter{age}{1}\arabic{age}, Academics \arabic{age}, Athletics 1, Deceit \arabic{age}, Tactics 2, Vigilance 3}{%
+	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$gp, sitting in a lair.}{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{ \arabic{gold}gp in lair in assorted change}{None}}}%
+	{\knacks{\ifodd\value{chapter}\combatcaster\else\backtothewall\fi,\ifnumcomp{\value{age}}{>}{3}{\laststand}{\backtothewall, \adrenalinesurge}}, \abilities{Flight}\Path{Blood}{Enchantment \addtocounter{random}{-1}\arabic{random}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
 	}
 
 \newcommand{\dwarventrader}{
@@ -574,11 +580,11 @@
 	}
 
 		\newcommand{\nuraspider}{
-			\animal{4}{2}{3}{2}{3}{4}{Athletics 3, Vigilance 2\abilities{\web}}{}{}
+			\animal{4}{2}{3}{2}{3}{4}{Athletics 3, Vigilance 2}{\web, poison}{}
 	}
 
 		\newcommand{\nurawolf}{
-\animal{1}{1}{3}{1}{2}{3}{Athletics 3, Survival 1}{}{}
+\animal{1}{1}{3}{1}{2}{3}{Athletics 3, Survival 1}{\teeth}{}
 	}
 
 %%%%%%%%%% NURA %%%%%%%%%%
