@@ -6,13 +6,12 @@
 *.ilg
 *.ind
 *.log
-*.synctex.gz
+*.gz
 *.toc
-* Blood.odt
+*.odt
 *.log
 *.tmp
 *pdf
-Finished_PDFs
 .First_Blood.tex.swp
 *swp
 .no.md
@@ -24,6 +23,5 @@ Finished_PDFs
 *.gls
 *.glsdefs
 *.ist
-*ist
-First_Blood.mtc*
-*.maf
+*.ist
+First_Blood.m*
