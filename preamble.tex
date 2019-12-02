@@ -213,7 +213,8 @@ Roll & Result \\
 \newcounter{random}
 
 \newcommand{\random}{
-		\addtocounter{random}{\thepage}
+	\addtocounter{random}{\value{page}}\addtocounter{random}{1}
+	\multiply\value{random} by \value{chapter}
 	\whileboolexpr{
 		test {\ifnumcomp{\value{random}}{>}{10}}
 	}
