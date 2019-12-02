@@ -217,7 +217,7 @@
 	\setcounter{mpb}{0}
 	\setcounter{xpbonus}{0}
 
-	}
+}
 
 %%       _   _        _ _           _            
 %%  __ _| |_| |_ _ __(_) |__  _   _| |_ ___  ___ 
@@ -562,12 +562,13 @@
 	}
 
 \newcommand{\gnome}{
-	\person{-2}% STRENGTH
+	\randomtwo
+\person{-2}% STRENGTH
 {-1}% DEXTERITY 
 {1}% SPEED
-{{1}% INTELLIGENCE
+{{\arabic{random}}% INTELLIGENCE
 {0}% WITS
-{0}}% CHARISMA
+{\arabic{random}}}% CHARISMA
 {0}% DR
 {0}% AGGRESSION
 {Academics 1, Crafts 1, Empathy 1, Pickpocketing 1, Stealth 1\Path{Alchemy}{Illusion \ifodd\value{chapter} 1\else 2\ifodd\value{page} Invocation 1\fi\fi}}% SKILLS
@@ -576,24 +577,26 @@
 }
 
 \newcommand{\gnomishillusionist}{
+	\randomtwo\randomthree\addtocounter{random}{1}
 \person{-3}% STRENGTH
 {-2}% DEXTERITY 
 {1}% SPEED
-{{3}% INTELLIGENCE
+{{\arabic{random}}% INTELLIGENCE
 {2}% WITS
-{0}}% CHARISMA
+{\arabic{enc}}}% CHARISMA
 {0}% DR
-{0}% AGGRESSION
-{Projectiles 1, Academics 3, Crafts 2, Deceit 1,  Stealth 2\Path{Alchemy}{Conjuration 3, Force 2, Illusion 4, Metamagic 2}}% SKILLS
+{0}% COMBAT
+{Projectiles \arabic{enc}, Academics 3, \ifodd\value{chapter} Crafts \arabic{enc},\fi Deceit \arabic{age},  Stealth \arabic{enc}\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{page} Force \arabic{enc},\fi Illusion \arabic{random}, Metamagic \arabic{age}}}% SKILLS
 {\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{Promisary note}{\ifnumcomp{\thechapter}{>}{2}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \thepage gp}}{Glimmering diamond worth \thepage gp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
 {\mana{6}}
 }
 
 \newcommand{\humanfarmer}{
-\person{1}% STRENGTH
+	\randomthree\addtocounter{random}{-2}
+\person{\arabic{age}}% STRENGTH
 {0}% DEXTERITY 
 {0}% SPEED
-{{0}% INTELLIGENCE
+{{\arabic{random}}% INTELLIGENCE
 {-1}% WITS
 {\ifodd \value{chapter} -1\else1\fi}}% CHARISMA
 {0}% DR
@@ -604,7 +607,7 @@
 }
 
 \newcommand{\humanmaid}{
-	\random
+	\randomthree
 \person{1}% STRENGTH
 {\ifodd \value{age} -1\else1\fi}% DEXTERITY 
 {0}% SPEED
@@ -619,29 +622,31 @@
 }
 
 \newcommand{\humantrader}{
-\person{1}% STRENGTH
+	\randomtwo\addtocounter{enc}{-1}
+\person{\arabic{random}}% STRENGTH
 {0}% DEXTERITY 
 {0}% SPEED
-{{0}% INTELLIGENCE
+{{\arabic{enc}}% INTELLIGENCE
 {-1}% WITS
 {\ifodd\thepage 0\else 1\fi}}% CHARISMA
 {0}% DR
-{0}% AGGRESSION
+{\arabic{enc}}% AGGRESSION
 {Academics 1, Crafts 1}% SKILLS
 {\Dagger \thepage cp in a purse, and \thechapter sp hidden nearby.}% EQUIPMENT
 {}
 }
 
 \newcommand{\humandiplomat}{
+	\randomtwo\randomthree\addtocounter{random}{\value{enc}}\addtocounter{random}{-3}
 \person{\ifodd\value{page} 0\else 1\fi}% STRENGTH
 {1}% DEXTERITY 
 {0}% SPEED
-{{1}% INTELLIGENCE
+{{\arabic{random}}% INTELLIGENCE
 {0}% WITS
-{1}}% CHARISMA
+{\arabic{enc}}}% CHARISMA
 {0}% DR
 {1}% AGGRESSION
-{Academics 2, Deceit 2, Empathy 1, Vigilance 2}% SKILLS
+{Academics 2, Deceit \arabic{age}, \ifodd\value{gold} Empathy \arabic{enc},\fi Vigilance \arabic{enc}}% SKILLS
 {\Dagger, \setcounter{gold}{\thepage}\addtocounter{gold}{\thechapter}\arabic{gold}cp, \divide\value{gold} by 3 \arabic{gold}sp stored secretly nearby.}% EQUIPMENT
 {}
 }
@@ -662,10 +667,10 @@
 }
 
 \newcommand{\humansoldier}{
-	\random
+	\randomtwo
 \person{2}% STRENGTH
 {\ifodd\thepage 0 \else 1\fi}% DEXTERITY 
-{1}% SPEED
+{\arabic{random}}% SPEED
 {{0}% INTELLIGENCE
 {-1}% WITS
 {0}}% CHARISMA
@@ -677,7 +682,7 @@
 }
 
 \newcommand{\humanarcher}{
-	\random
+	\randomtwo
 \person{2}% STRENGTH
 {1}% DEXTERITY 
 {0}% SPEED
@@ -692,7 +697,7 @@
 }
 
 \newcommand{\humanthief}{
-	\random
+	\randomtwo
 \person{1}% STRENGTH
 {\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
 {1}% SPEED
