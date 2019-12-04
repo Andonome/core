@@ -4,9 +4,9 @@
 % If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
 
 \newcounter{bestiarychapter}
+\setcounter{bestiarychapter}{0}
 \newcounter{age}
 \setcounter{age}{1}
-\setcounter{bestiarychapter}{0}
 \setcounter{gold}{0}
 \setcounter{enc}{0}
 
@@ -390,7 +390,7 @@
 
 
 \newcommand{\auroch}{
-	\animal{2}% STRENGTH
+\animal{2}% STRENGTH
 {-2}% DEXTERITY 
 {3}% SPEED
 {1}% WITS
@@ -402,7 +402,7 @@
 }
 
 \newcommand{\bear}{
-	\animal{5}% STRENGTH
+\animal{5}% STRENGTH
 {-1}% DEXTERITY 
 {4}% SPEED
 {0}% WITS
@@ -509,8 +509,18 @@
 	}
 
 \newcommand{\dwarventrader}{
-	\randomthree\randomtwo
-	\person{\arabic{random}}{1}{-1}{{\ifnumcomp{\value{random}}{=}{2}{1}{0}}{0}{0}}{0}{1}{Crafts \ifodd\value{page} 1 \else 2\fi, Deceit \ifodd\value{chapter} 2 \else 1\fi}{\shortsword\ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}, \arabic{gold}sp}}{}
+	\randomthree\randomtwo\addtocounter{random}{-1}
+	\person{\arabic{random}}% STRENGTH
+	{1}% DEXTERITY
+	{-1}% SPEED
+	{{\ifnumcomp{\value{random}}{=}{2}{1}{0}}% INTELLIGENCE
+	{0}% WITS
+	{0}}% CHARISMA
+	{0}% DR
+	{1}% COMBAT
+	{Crafts \ifodd\value{page} 1 \else 2\fi, Deceit \ifodd\value{chapter} 2 \else 1\fi}% SKILLS
+	{\shortsword\ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}, \arabic{gold}sp}}% EQUIPMENT
+	{}
 	}
 %
 \newcommand{\dwarvensoldier}{
@@ -531,12 +541,22 @@
 	}
 
 \newcommand{\dryad}{
-	\person{4}{2}{2}{{4}{2}{1}}{6}{2}{Academics 3, Athletics 1, Crafts 2, Performance 3, Empathy 2, Survival 3\Path{Blood \& Song}{Polymorph 5, Aldaron 4, Fate 3, Metamagic 2}}{\Dagger}{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
+\randomtwo\addtocounter{enc}{2}\randomthree\addtocounter{age}{1}
+	\person{4}% STRENGTH
+	{\arabic{random}}% DEXTERITY
+	{1}% SPEED
+	{{\arabic{age}}% INTELLIGENCE
+	{2}% WITS
+	{1}}% CHARISMA
+	{6}% DR
+	{\arabic{random}}% COMBAT
+	{Academics 3, Athletics 1, Crafts 2, Performance 3, Empathy 2, Survival 3\Path{Blood \& Song}{Polymorph 5, Aldaron 4, Fate 3, Metamagic 2}}% SKILLS
+	{\Dagger}% EQUIPMENT
+	{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
 	}
 
 \newcommand{\elf}{
-	\randomthree
-	\setcounter{enc}{1}\addtocounter{enc}{-\value{age}}
+	\randomthree\setcounter{enc}{1}\addtocounter{enc}{-\value{age}}
 	\person{\value{enc}}%STRENGTH
 	{\value{age}}%DEXTERITY
 	{1}%SPEED
