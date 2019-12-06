@@ -1,4 +1,6 @@
 #!/bin/bash
+# Don't run this script unless you know what you're doing.
+
 git checkout master
 for i in gr aie aif fb
 do
