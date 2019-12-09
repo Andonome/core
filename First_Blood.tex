@@ -1,6 +1,8 @@
 \documentclass[titlepage,a4paper,openany]{report}
 \usepackage[indexonlyfirst]{glossaries}
+
 \input{config/preamble.tex}
+\input{config/monsters.tex}
 \input{config/glossary.tex}
 
 \settoggle{verbose}{true}
@@ -233,7 +235,7 @@ A basic Skill grants a +1 bonus to actions where it is used. This is the level o
 
 Some Skills are `Specialised Skills', meaning that they are a broad category for a number of sub-skills. The Craft Skill covers metallurgy, woodcraft, armour making and many more. Anyone taking such Skills gain two Specialisations per level. Using a Skill without the appropriate Specialisation is often impossible (for instance, one cannot use the Performance Skill to play a harp if one has never learned to play a harp) but at other times can be attempted with a -1 penalty. For example, someone attempting to remember a fact about history who has no Academics Skill is at a -1 penalty to the roll. Someone with Academics who specialises in alchemy and politics but not history could attempt the roll without penalty because they gain +1 for having the Academics Skill and -1 for not having the correct specialisation. Finally, an academic with a specialisation in history could attempt the task with a +1 bonus to the roll for having the Skill with the correct specialisation.
 
-Each level of a Skill one has allows the character to have up to 1 Specialisations. For example, someone with Survival 2 might know how to track and build temporary shelters but would count as having Survival 1 when marching.
+Each level of a Skill one has grants 1 Specialisation. For example, someone with Survival 2 might know how to track and build temporary shelters but would count as having Survival 1 when marching.
 
 Each specialization can be used with any other specialized Skill.  If you have a Specialization in swords, bought with the Combat Skill, you can apply that to Crafts.  If your Beast Ken Specialization is in griffins, you can also use this to use when tracking them with the Survival Skill.
 
@@ -526,7 +528,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \pagebreak
 
-		\newcounter{xp}\setcounter{xp}{10}
+		\setcounter{xp}{10}
 		\newcounter{bon}\setcounter{bon}{1}
 
 \begin{multicols}{2}
@@ -870,6 +872,11 @@ Thenton now only needs his starting equipment. We covered already that he starts
 
 Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4.  The Academics Skill multiplies that by itself, and Thenton has two specialist Skills -- Combat and Performance.  All in all that's $4^2\times2\times 2 = 64$cp.
 	\end{exampletext}
+
+\character{Thenton}
+
+\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, dagger, flute, camping equipment, 64cp}{}
+
 	}{}
 
 \section{Time \& Space}\label{space}\label{time}
@@ -3406,7 +3413,7 @@ Some characters may save up their Story Points at this juncture just to buy some
 The following is a suggested list of Stories the players can tell and their costs. The players are strongly encouraged to suggest more to the \gls{gm} who will either veto them or give them an appropriate cost.
 
 \story{1}{I know a guy who'd be perfect}
-You know someone in town who has just the skills you are all looking for. They might be a farmer, willing to put you and the group up for the night, or someone who knows all the local rumours. If they have some special Skill, such as a weapon smith with a workshop, then they will have a total bonus of +5 to such tasks derived from some combination of Attribute and Skill bonus.
+You know someone in town who has just the skills you are all looking for. They might be a farmer, willing to put you and the group up for the night, or someone who knows all the local rumours. If they have some special Skill, such as a weaponsmith with a workshop, then they will have a total bonus of +5 to such tasks derived from some combination of Attribute and Skill bonus.
 
 The character in question cannot have any martial or magical Skills.
 
@@ -3487,15 +3494,24 @@ Some rare few have been known to strike deals with dragons to leave an area, or 
 In general, the more dangerous and skillfull the job, the higher the pay, so most of the Night Guard try not to do too well at their job.  They train in archery well, take a paycut in return for having more members in their group, and make sure nobody volunteers them for anything interesting.  Of course, a lot of the jobs one takes depends more upon a captain of the Guard than the grunts.
 
 \subsection{Defending the Fatherland}
+
 Your homeland is in grave danger as nura surround it and grow more numerous every day.  The local lord has given you strict instructions that you cannot leave, but you feel sure that the only path is to get help from another group.
 
 Once each member of the group has expended three Story Points, an oppening comes to travel to a nearby ally, and beg for an army to save your homeland.
 
-The characters may all be gnomes, defending against encroaching nura who have come through a portal, while the elders constantly argue that if only \emph{somehow} someone could get down there and destroy the portal, everyone would be safe.  But that ``somehow'' never comes, and the monsters are coming up faster and faster.  Rumours abound of distant elves who might help, but those elves have their own problems.  Meanwhile, the daily lives of the soldiers consists in setting and resetting various traps made of pitfalls, illusions and rope.  Each day the gnomes have to retreat farther from the deeps and closer to the Sun.
+\subsubsection{The Illusionists of the Bearded Mountains}
 
-Alternatively, the party may be elves, constantly assaulted by increasing undead assaults, spurned on by an increasingly powerful and paranoid necromancer.  Nobody wants to contact the local dwarves to ask a favour, but once the greatest of the local bards die, everyone knows that the party is over, and they must begin preparing for war.
+The characters may all be gnomes, defending against encroaching nura who have come through a portal, while the elders constantly argue that if only \emph{somehow} someone could get down there and destroy the portal, everyone would be safe.
+But that ``somehow'' never comes, and the monsters are coming up faster and faster.
+Rumours abound of distant elves who might help, but those elves have their own problems.
+Meanwhile, the daily lives of the war-alchemists consists in setting and resetting various traps made of pitfalls, illusions and rope.  Each day the gnomes have to retreat farther from the deeps and closer to the Sun.
 
-\subsection{The College of Alchemy}
+\subsubsection{Elves}
+
+Alternatively, the party may be elves, constantly assaulted by increasing undead assaults, spurned on by an increasingly powerful and paranoid necromancer.
+Nobody wants to contact the local dwarves to ask a favour, but once the greatest of the local bards die, everyone knows that the party is over, and they must begin preparing for war, one way or another.
+
+\subsubsection{The College of Alchemy}
 
 The characters are all alchemists in the service of the Alchemist's Guild in Eastlake.  The first part of the campaign involves high-school rivalries against other Clans in the guild such as stealing their homework, or vying for romantic attention.  Soon after, the characters begin proper guild missions, venturing out into the strange areas of the world where normal people will not tread.
 
@@ -3756,8 +3772,8 @@ Clerics of Qualm\"{e} have access to the necromancy and invocation spheres. Many
 
 Spells implanted in those mana stones are always activated by a command word.
 
-\subsection[V\'{e}r\"{e} -- God of Justice]{V\'{e}re -- God of Justice}
-\index{Gods!V\'{e}re}(`vEH-reh')
+\subsection[V\'{e}r\"{e} -- God of Justice]{V\'{e}r\"{e} -- God of Justice}
+\index{Gods!V\'{e}r\"{e}}(`vEH-reh')
 
 Warden to all oaths, lord of ten thousand holy warriors, leader of armies, the giver of vengeance and punishments -- V\'{e}r\"{e} is a popular god. He is invoked during wedding vows and business deals. His followers are found among the politically influential and can be some of the most zealous of religious followers. He values obeying the law, making fair deals, being a good host and supporting the poor.
 
@@ -3765,7 +3781,7 @@ His holy day is during the second season of the second cycle. It is considered e
 
 Followers of V\'{e}r\"{e} who break any deal cannot gain \gls{xp} until they atone for the crime.
 
-\begin{xpchart}{V\'{e}re}
+\begin{xpchart}{V\'{e}r\"{e}}
 
 	1 & Donating at least 1 gp to the temple. \\
 
