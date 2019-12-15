@@ -774,13 +774,14 @@ An average villager will make little spare money -- perhaps 10 \gls{sp} in a yea
 \subsection{Weight \& Encumbrance}\index{Weight}\index{Encumbrance}
 
 \iftoggle{verbose}{
-\vspace{-0.2cm}
-	\sidepic{3}{Roch_Hercka/dwarf_encumbrance.jpg}
+	\sidepic{4}{Roch_Hercka/dwarf_encumbrance.jpg}
 }{} 
 
-We measure weight in broad terms.  Characters have a weight rating equal to their Hitpoints, so elves tend to have 5, while humans tend to have a Weight of 7.  Items work similarly, with weight ratings between -3 (for very light items) and +11 (for wardrobes, carts, and boulders).
+We measure weight in broad terms.  Characters have a \textit{weight rating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a weight rating of 7.  Items work similarly, with weight ratings between -4 (for very light items) and +11 (for wardrobes, carts, and boulders).
 
 If an item's weight rating is equal or below your character's Strength, you can lift it easily.  However, if the items has a greater weight rating than your Strength Bonus, you gain a point of Encumbrance for every increment that item is above your Strength Bonus.  Encumbrance slows you down and makes you tired, detracting from your Speed Bonus, and adding to your Fatigue each Scene.
+
+Characters can carry items with a maximum weight rating of their Strength Bonus plus 6, so a man with 7 \gls{hp} could only be carried with a Strength Bonus of +1 or greater.  Depending upon the circumstances, the \gls{gm} may allow heavier objects to be dragged or rolled.
 
 \subsection{Services}
 
@@ -833,7 +834,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 \subsection{Cultures \& Exchange Rates}
 
-\begin{wrapfigure}{L}{.3\textwidth}
+\begin{wrapfigure}{L}{.28\textwidth}
 
 	\begin{rollchart}
 
@@ -883,7 +884,7 @@ Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4.  T
 This game uses the entirely abstract measurements of the `scene' and `square' for time and space. They are more compliant to narrative than physics, and form the basis of all movement and actions whenever people start tracking how long something takes and where everyone is.
 
 \subsection{Time as Scenes}
-The basic unit of time within the game is the \gls{round}. This period of time is used almost exclusively to tracking combat. The \gls{round} itself can then be further divided into Initiative Scores if you want real detail, but that's covered later. All that matters is that a \gls{round} is a period of time in which people attempt to hit each other, then another \gls{round} occurs.
+The basic unit of time within the game is the \gls{round}. This period of time is used almost exclusively while tracking combat. The \gls{round} itself can then be further divided into Initiative Scores if you want real detail, but that's covered later. All that matters is that a \gls{round} is a period of time in which people attempt to hit each other, then another \gls{round} occurs.
 
 Most of the time, actions will not occur through \glspl{round} but rather scenes. A scene is just any unit of time in which the \glspl{pc} take on a task or two, usually within a single area. We track scenes only because a few game effects occur at the end of each scene -- mostly these are narrative effects such as regaining \glspl{fp}\footnote{See page \pageref{fate_points}.} in order to regain plot-immunity from Damage. The scene lasts until the \gls{gm} says that it's over.
 
@@ -2164,9 +2165,9 @@ Food substances, gold coins with complex ingravings, bows, and other crafted ite
 
 \spell{Choking Fog}{Continuous}{Survival}
 
-The caster changes the nearby air into a caustic mess.  When cast outdoors the mist disipates at the end of the round.  When cast in a windy area, the fog disappears instantly.
+The caster changes the nearby air into a caustic mess.  When cast outdoors the mist disipates at the end of the \gls{round}.  When cast in a windy area, the fog disappears instantly.
 
-Anyone Keeping Edgy can hold their breath.  Others gain \arabic{spelllevel} + the cater's Intelligence in Fatigue points each round.
+Anyone Keeping Edgy can hold their breath.  Others gain \arabic{spelllevel} + the cater's Intelligence in Fatigue points each \gls{round}.
 
 The spell affects a number of areas equal to \arabic{spelllevel} + the caster's Wits.
 
@@ -2705,7 +2706,7 @@ The mage throws out a ball of flaming, crackling light which strikes and burns t
 
 Anyone within 1 square's distance of the fireball takes 1 Damage plus the caster's Intelligence Bonus.
 
-\enhancement{2}{Eternal Flame} The fire cast does not go out unless plunged under water.  Each round it continues to burn, inflicting $1D6$ Damage plus the caster's Intelligence Bonus.
+\enhancement{2}{Eternal Flame} The fire cast does not go out unless plunged under water.  Each \gls{round} it continues to burn, inflicting $1D6$ Damage plus the caster's Intelligence Bonus.
 
 If the spell targeted an area with the Fireball enhancement, the area burns, rather than specific people or items inside.
 
@@ -3389,7 +3390,7 @@ In the distance, six elves come out of hiding and walk towards the characters.  
 
 \section{Story Points Rules}
 
-Players begin each with 5 Story points and spend them at any point during the game. The encounters must take place in a rational manner -- players might find the perfect sellsword in a town, but if they're in a dungeon, fighting a hall of ghouls, there's little reason for a random sellsword to be present and looking for a job -- this is not an ability to magically summon useful tradesmen with a flash of smoke and plot. As a result almost all stories will have to be told in populated areas such as towns and villages.
+Players begin each with 5 Story Points and spend them at any point during the game. The encounters must take place in a rational manner -- players might find the perfect sellsword in a town, but if they're in a dungeon, fighting a hall of ghouls, there's little reason for a random sellsword to be present and looking for a job -- this is not an ability to magically summon useful tradesmen with a flash of smoke and plot. As a result almost all stories will have to be told in populated areas such as towns and villages.
 
 The \gls{gm} is, of course, free to veto any Story suggestions without explanation in order to maintain the integrity of the plot or stop cumbersome play issues.
 
@@ -3404,7 +3405,7 @@ Alternatively, if you are taking out all your stories at once, you might want to
 
 \subsection{Downtime}
 
-Story points can be awarded by the \gls{gm} during \gls{downtime} -- generally a short downtime will grant 1 or 2 Story Points while a longer downtime will grant 2 to 3 Story Points.
+Story Points can be awarded by the \gls{gm} during \gls{downtime} -- generally a short downtime will grant 1 or 2 Story Points while a longer downtime will grant 2 to 3 Story Points.
 
 Some characters may save up their Story Points at this juncture just to buy something expensive later.  Alternatively, characters can use those points to explain what they were doing during the \gls{downtime}.  Perhaps the group earn fabulous wealth and split up for some years, then upon returning one of them has learned dwarvish, while another joined the military and gained friends willing to help out on some new quest.
 
