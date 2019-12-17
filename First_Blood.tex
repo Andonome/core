@@ -1695,7 +1695,7 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 		``The last hobgoblin backs up. \textit{Eleven!} It flees down the mountain towards its allies, many of whom are still rolling down the hill.''
 
-		``Ten!'', the \gls{gm} continues, and immediately rolls for the ogre as it tries to eat Hugi's face off. This will count as a grappling roll, so he and Hugi will use double their Strength Bonus added to their Combat Skill. Unfortunately Hugi has neither Strength Bonus nor Combat Skill, so the ogre gets a straight +12 bonus; the roll succeeds before it is even made, and succeeds by a margin of 3: that means Damage is inflicted. The ogre only adds Strength - of course his massive club is useless for the attack. His Strength of +5 means he will roll $2D6+1$ Damage for a total of 4. Hugi is safe for now as the ogre luckily bites down on dwarvish helmet as Hugi's player marks off 4 FP.
+		``Ten!'', the \gls{gm} continues, and immediately rolls for the ogre as it tries to eat Hugi's face off. This will count as a grappling roll, so he and Hugi will use double their Strength Bonus added to their Combat Skill. Unfortunately Hugi has neither Strength Bonus nor Combat Skill, so the ogre gets a straight +12 bonus; the roll succeeds before it is even made, and succeeds by a margin of 3: that means Damage is inflicted, rather than just Fatigue Points. The ogre only adds Strength - of course his massive club is useless for the attack. His Strength of +5 means he will roll $2D6+1$ Damage for a total of 4. Hugi is safe for now as the ogre luckily bites down on dwarvish helmet as Hugi's player marks off 4 FP.
 
 		``Nine! The ogre pulls Hugi down. Eight! He bites down on Hugi's face but gets a mouthful of helmet instead. Seven!''
 		Thenton's player is acting now and takes two Initiative to run over to aid Hugi. He asks the \gls{gm} if he can sneak up on the ogre.
@@ -1712,7 +1712,7 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 		``Six! The ogre gnaws into Hugi's face, this time without failure. 5 Damage!''
 
-		Hugi's player marks off his last 3 FP then 2 HP, noting that he could have just died if the dice had rolled higher.
+		Hugi's player marks off his last 3 FP then 2 HP, noting that he could have just died.
 
 		Arneson runs over to aid the fight.
 
@@ -1732,6 +1732,9 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 	\end{exampletext}}{}
 
 \section{Morale}
+
+Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at TN 6.
+
 \newcommand{\moralechart}{
 	\begin{tcolorbox}[title={Morale Chart},arc=1mm,tabularx={cp{.75\textwidth}}]
 		\gls{tn} & Situation \\\hline
@@ -1744,25 +1747,28 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 
 		+2 & Monster is wounded. \\
 
-		-2 & Characters' top Strength Bonus is 2 lower than the monster's highest Strength Bonus. \\
+		-2 & Character's top Strength Bonus is lower than the monster's.  \\
 
-		+2 & Character's top Strength Bonus is 2 higher than the monster's highest Strength Bonus. \\
+		+2 & Character's top Strength Bonus is higher than the monster's.  \\
+
 	\end{tcolorbox}
 }
 
-\moralechart
+\moralechart\index{Morale}
 
-\index{Morale}Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
+Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
 
-The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.
+The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any NPCs with \glsentrytext{fp}.}
 
-Morale checks are rolled at \gls{tn} 6 with a character's Combat Skill (or Aggression Skill if the character is an animal). As usual, the \gls{gm} rolls for an entire group with one roll. If the characters have just attacked a group of 10 hobgoblins and injured 3 then the troop will roll at \gls{tn} 6 to see if they should flee, but the injured 3 hobgoblins roll at \gls{tn} 8. If the final result is a 7 then all of the hobgoblins will remain except for the three injured ones.
+Morale checks are rolled at \gls{tn} 6 with a character's Combat Skill (or Aggression Skill if the character is an animal). As usual, the \gls{gm} rolls for an entire group with one roll. If the characters have just attacked a group of 10 hobgoblins and injured 3 then the troop will roll at \gls{tn} 6 to see if they should flee, but the injured 3 hobgoblins roll at \gls{tn} 8.
+If the final result is a 7 then the three injured hobgoblins flee, but the rest remain.
 
-When an enemy flees the scene, characters gain half \gls{xp} if they had engaged them in combat.
+When an enemy flees the scene, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
 
 \iftoggle{verbose}{
 
 	\begin{exampletext}
+
 		Thenton's mind was racing - searching for anything to help he remembered his acting classes, the roar they taught to open a grand scene and how actors said their roar was such that it would terrify local ruffians around the town.
 
 		Thenton's player asks the \gls{gm} about making a moral check for the hobgoblins.
@@ -1770,11 +1776,12 @@ When an enemy flees the scene, characters gain half \gls{xp} if they had engaged
 		``Well'', she ponders, ``you certainly don't outnumber them. They are not half dead. They might make a moral check at \gls{tn} 4 but they would get a +1 bonus for their Combat Skill. So no, not really. They are not terrified of Thenton waving his sword about, even if he took acting classes''.
 
 So much for that plan.
+
 	\end{exampletext}
 }{}
 
 \section{Chases}
-\index{Chases}Chases form some of the most dramatic scenes in an adventure. When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent. In all other situation, where there are some obstacles, alleys and such, characters can pursue, gain and lose ground and try dirty tricks.
+\index{Chases}Chases form some of the most dramatic scenes in an adventure. When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent.  But when running through marshes, down alleys, climbing up cliffs, or otherwise finding a reason to change direction, \glspl{pc} must roll.
 
 The system is simple -- one player rolls $2D6$ for the group. Each person then modifies this group score. Since the party will probably run at different paces, they have the option of abandoning slower members or slowing down to the pace of the slowest member.
 
@@ -1802,7 +1809,8 @@ The table is a guide to an unaltered roll. In most situations enemy Traits will 
 
 \end{tcolorbox}
 
-The \gls{gm} is encouraged to give a fast-paced description of fast-moving scenery, hurriedly telling the players about a new area before moving instantly on. Each area covered holds new opportunities for getting away, or trapping the quarry -- whether that is the players or their prey.
+The \gls{gm} is encouraged to give a fast-paced description of fast-moving scenery, hurriedly telling the players about a new area before moving instantly on.
+Each area covered holds new opportunities for getting away, or trapping the quarry -- whether that is the players or their prey.
 
 Characters running through forests might encounter a marshy area, a stream, dense thickets, an open plain and then a sudden, steep hill. Those crossing plains might find a random encounter in their path, then a copse of trees. Those running up a mountain could find an area of loose rocks where the ground slides away from under their feet, a narrowing path upwards as rocky walls envelop them and then a misty lake covered in low-lying cloud.
 
@@ -1813,13 +1821,13 @@ Players are encouraged to suggest Skills which might help. While running away fr
 \iftoggle{verbose}{
 
 \begin{exampletext}
-	Thenton's next plan was to run away as fast as possible. This was much more popular than his last plan, though Hugi was still not happy as he had an arrow that he had not yet removed from his shoulder. The hobgoblins of course realised that they had no time to reload so they just gave chase. They dropped their projectiles, pulled out their shortswords and started to clamber along the rocky face of the mountain. The trio could not move clearly up the mountain until they had gained some ground between themselves and the hobgoblins, and feared that there would be more openings to once-dwarven tunnels, now infested with nura, if they went further up from their present location.
+	Thenton's next plan was to run away as fast as possible. This was much more popular than his last plan of yelling at the enemy, though Hugi found it hard to be move enthusiastically with an arrow in his shoulder. The hobgoblins of course realised that they had no time to reload so they just gave chase. They dropped their projectiles, pulled out their shortswords and started to clamber along the rocky face of the mountain. The trio could not move clearly up the mountain until they had gained some ground between themselves and the hobgoblins, and feared that there would be more openings to once-dwarven tunnels, now infested with nura, if they went further up from their present location.
 
 	The basic \gls{tn} for such actions is 6 and the \gls{gm} lowers it by 2 because the trio have a good headstart. The hobgoblins add their Speed Bonus of +1 for a final \gls{tn} of 5. The party roll an 8 but unfortunately Hugi isn't the fastest of people - he's only four feet tall after all - so his score is 7. They needed that 8 to completely get away. Arneson and Thenton decide they're going to keep pace with him rather than running ahead. They're not caught yet, but run through three different distinct areas before making another roll.
 
 The hobgoblins were fast on their trail as they clambered over the rocky mountain side. They soon headed up steeper, overhanging rocks and at one point had to help each other upwards across large rocks jutting out of the side as the nura horde came ever closer. Finally, they reached the peaks and gazed down the other side. Seeing only mist in the other side they decided to lose themselves in the crevices there before the enemy could catch up enough to see their direction.
 
-	Arneson's player wants to roll again while adding his +2 Stealth Skill. He is the only one with this Skill but the \gls{gm} says he can use it to help everyone hide. The group don't get the previous +2 bonus for their head start because they are already running so the final \gls{tn} is the same. Arneson's player takes the dice and rolls; he scores 11.
+	Arneson's player wants to roll again while adding his +2 Stealth Skill. He is the only one with this Skill but the \gls{gm} says he can use it to help everyone hide.  Arneson's player takes the dice and rolls; he scores 11.
 
 	They didn't go far, but only hopped down a few stony crevices before Arneson beckoned them to the side and requested they creep into a nook he had found. Hugi and Thenton could only just fit, with no spare room, so Arneson then bounded off to see what else he could find. He was still out looking for a spot when the great axes scraping down the cliff could be heard, and guttural voices complained about dangerously empty stomachs. Deep in the misty cloud, Arneson said a silent prayer to Laiqu\"{e} that it would not be too long before the nura starved to the point of eating each other.
 \end{exampletext}
@@ -1838,11 +1846,11 @@ Every two miles walked inflicts a Fatigue Point at the end of the day. Additiona
 \iftoggle{verbose}{
 
 	\begin{exampletext}
-		``That's the end of the scene'', the \gls{gm} says. ``You can each regain 2 Fate Points''
+		``That's the end of the scene'', the \gls{gm} says. ``You can each regain 2 Fate Points.''
 
 ``I've got 10 Fate Points in total'', mentions Arneson's player, ``So I'm getting 4. But doesn't this rest period count as a new scene too?''.
 
-		``Sure, says the \gls{gm}. ``Mark down another load for hiding in the tops of the mountains''
+		``Sure, says the \gls{gm}. ``Mark down another load for hiding in the tops of the mountains.''
 
 With their FP now replenishing quickly, the group can rest and worry less about being hit again.
 
@@ -1850,11 +1858,39 @@ With their FP now replenishing quickly, the group can rest and worry less about 
 
 		``Everyone got two Fatigue from being in two \glspl{round} of combat and another for doing that in armour, so mark down three Fatigue points in your Combat boxes. Then four more for running through three areas in armour. That's seven in total''.
 
-Thenton's player has the Combat Skill at +2, so he marks those Fatigue points in the first and second boxes, leaving him absolutely fine. Then he adds another for wearing armour during that fight; since there are not more Combat Skill Fatigue Boxes, that point goes into his normal Fatigue boxes. Then he receives three more for running across the mountain and another for doing that all in armour. Five Fatigue Boxes are marked down in total. If the characters had continued being active that would be the end, but since they have finished the scene while resting, Thenton heals 4 Fatigue points leaving him with only 7 in total.
 
-		Hugi isn't doing so well. He only had 2 HP left by the time he was running. He has no Combat Skill so he gains the full 7 Fatigue Points. Finally, the \gls{gm} reminds him that he is bleeding from his wounds. He is in no condition to patch them up while hiding, especially since nobody in the party knows anything about Medicine. She decides to only award one more Fatigue point since the arrow is also stopping the wound from bleeding too much - that makes the total 8. Hugi's rest allows him to regenerate 3 Fatigue Points (he's not as strong as Thenton) so he receives 5 Fatigue Points in total. Dwarves, luckily, can withstand 2 additional Fatigue Points so 2 of those points give him no penalty. That's 6 more than his HP. He gains a -4 penalty to all actions.
+\begin{wrapfigure}{I}{.4\textwidth}
 
-The danger now passed, the warriors lie in their hiding nooks, watching the cold clouds whirl around them, hoping to never see nura again. They breathe in and out gently, waiting for the heaviness in the chest to subside. Despite the winds, Thenton can hear a gentle drip, drip, drip from the slowly bleeding wound on Hugi's shoulder where an arrow still lies.
+Hit Points and Fatigue
+
+	\begin{tabularx}{.4\textwidth}{cccccccc}
+
+		$\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ \\ 
+
+		$\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxempty$ & $\boxempty$ \\ 
+
+	\end{tabularx}
+
+	Combat 
+
+	\begin{tabularx}{.4\textwidth}{cccccccc}
+
+
+		$\CIRCLE$ & $\CIRCLE$ \\ 
+
+		$\boxslash$ & $\boxslash$ \\ 
+
+	\end{tabularx}
+
+\end{wrapfigure}
+
+
+	Thenton's player has the Combat Skill at +2, so he marks those Fatigue points in the first and second boxes, leaving him absolutely fine. Then he adds another for wearing armour during that fight; since there are not more Combat Skill Fatigue Boxes, that point goes into his normal Fatigue boxes. Then he receives three more for running across the mountain and another for doing that all in armour. Five Fatigue Boxes are marked down in total. If the characters had continued being active that would be the end, but since they have finished the scene while resting, Thenton heals 4 Fatigue points leaving him with only 7 in total.
+
+	Hugi isn't doing so well. He only had 2 HP left by the time he was running. He has no Combat Skill so he gains the full 7 Fatigue Points. Finally, the \gls{gm} reminds him that he is bleeding from his wounds. He is in no condition to patch them up while hiding, especially since nobody in the party knows anything about Medicine. She decides to only award one more Fatigue point since the arrow is also stopping the wound from bleeding too much - that makes the total 8. Hugi's rest allows him to regenerate 3 Fatigue Points (he's not as strong as Thenton) so he receives 5 Fatigue Points in total. Dwarves, luckily, can withstand 2 additional Fatigue Points so 2 of those points give him no penalty. That's 6 more than his HP. He gains a -4 penalty to all actions.
+
+	The danger now passed, the warriors lie in their hiding nooks, watching the cold clouds whirl around them, hoping to never see nura again.
+	They breathe in and out gently, waiting for the heaviness in the chest to subside. Despite the winds, Thenton can hear a gentle drip, drip, drip from the slowly bleeding wound on Hugi's shoulder where an arrow still lies.
 	\end{exampletext}
 }{}
 
