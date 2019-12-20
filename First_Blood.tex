@@ -59,11 +59,11 @@ This particular version was last revised on \today.
 \iftoggle{verbose}{
 \chapter*{Introduction}
 
-First Blood is made as a zero to hero RPG, with an emphasis on getting an output quickly, and keeping player decision in the loop.
+First Blood a zero to hero RPG, with an emphasis on getting an output quickly, and keeping players' decisions in the loop.
 
 Character backstories can be skipped at the start, and thrown in during play, when players know more about the world.
 
-Character creation is random by default, so players have no expectation to understand the entire world before starting play (though they can decide how to build a character).
+Character creation is random by default, so players have no expectation to understand the entire world before starting play (though you have the option to build a character).
 
 Combat is focussed on giving players real choices, and typically ends quickly as enemies have few hitpoints.
 
@@ -785,7 +785,7 @@ Characters can carry items with a maximum weight rating of their Strength Bonus 
 
 \subsection{Services}
 
-Money can buy you more than things.  In fact, for the right money a large city can buy characters a full entourage.  Villages, however, will not admit of the same opportunities.
+Money can buy you more than things.  In fact, for the right money in a large city, characters can buy a full entourage.  Villages, however, will not admit of the same opportunities.
 
 The costs below show the starting price for a few services, plus additional fees for the details.  For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 950sp.
 
@@ -795,7 +795,7 @@ The costs below show the starting price for a few services, plus additional fees
 
 	Dangerous opponent & 1gp per level of the opponent's Combat Skill. \\
 
-	Dangerous monster & Monster's XP$^3$sp\\
+	Dangerous monster & Monster's XP$^3$ sp\\
 
 	Illegal Murder & 10sp \\\hline
 
@@ -1858,16 +1858,17 @@ With their FP now replenishing quickly, the group can rest and worry less about 
 
 		``Everyone got two Fatigue from being in two \glspl{round} of combat and another for doing that in armour, so mark down three Fatigue points in your Combat boxes. Then four more for running through three areas in armour. That's seven in total''.
 
-
-\begin{wrapfigure}{I}{.4\textwidth}
+\begin{wrapfigure}{I}{.5\textwidth}
 
 Hit Points and Fatigue
 
-	\begin{tabularx}{.4\textwidth}{cccccccc}
+	\begin{tabularx}{.95\textwidth}{ccccccccccc}
 
-		$\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ \\ 
+		$\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & \Circle & \Circle & \Circle \\ 
 
-		$\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxempty$ & $\boxempty$ \\ 
+		$\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxslash$ & $\boxempty$ & $\boxempty$ & $\boxempty$ & $\boxempty$ & $\boxempty$ \\ 
+
+		&&&&&&& -1 & -2 & -3 \\
 
 	\end{tabularx}
 
@@ -1884,8 +1885,7 @@ Hit Points and Fatigue
 
 \end{wrapfigure}
 
-
-	Thenton's player has the Combat Skill at +2, so he marks those Fatigue points in the first and second boxes, leaving him absolutely fine. Then he adds another for wearing armour during that fight; since there are not more Combat Skill Fatigue Boxes, that point goes into his normal Fatigue boxes. Then he receives three more for running across the mountain and another for doing that all in armour. Five Fatigue Boxes are marked down in total. If the characters had continued being active that would be the end, but since they have finished the scene while resting, Thenton heals 4 Fatigue points leaving him with only 7 in total.
+	Thenton's player has the Combat Skill at +2, so he marks those Fatigue points in the first and second boxes, leaving him absolutely fine. Then he adds another for wearing armour during that fight; since there are no more Combat Skill Fatigue Boxes, that point goes into his normal Fatigue boxes. Then he receives three more for running across the mountain and another for doing that all in armour. Five Fatigue Boxes are marked down in total. If the characters had continued being active that would be the end, but since they have finished the scene while resting, Thenton heals 4 Fatigue points leaving him with only 7 in total.
 
 	Hugi isn't doing so well. He only had 2 HP left by the time he was running. He has no Combat Skill so he gains the full 7 Fatigue Points. Finally, the \gls{gm} reminds him that he is bleeding from his wounds. He is in no condition to patch them up while hiding, especially since nobody in the party knows anything about Medicine. She decides to only award one more Fatigue point since the arrow is also stopping the wound from bleeding too much - that makes the total 8. Hugi's rest allows him to regenerate 3 Fatigue Points (he's not as strong as Thenton) so he receives 5 Fatigue Points in total. Dwarves, luckily, can withstand 2 additional Fatigue Points so 2 of those points give him no penalty. That's 6 more than his HP. He gains a -4 penalty to all actions.
 
@@ -1896,13 +1896,10 @@ Hit Points and Fatigue
 
 \chapter{Magic}
 
-There are many ways to cast spells. Each magic user walks a different \glspl{path} of magic, and some walk two at the same time. Each one uses a central pool of mystical energy called mana. Characters have a certain number of \gls{mp} which they use to cast spells. Alchemists use an inner store of energy which drains them. Bards who learn to cast spells through their songs often think of themselves as having some inner store of creative energy. Priests often think of their connection to the divine as a limited pool of favour-asking which can deplete over time.
+There are five path of magic -- five ways to learn how to cast spells.  Each path gives access to different kinds of magic (``Spheres''), but mechanically they mostly work the same way.
+We'll cover the paths in the next chapter.  Here we're just going to cover raw magic.
 
-Spells are divided into different `spheres'. There is the sphere of illusion, which deals with making things appear to come into existence, then the sphere of conjuration which summons things from far away or teleports mages across great distances. Each sphere has five levels of understanding; casters must understand the first level before continuing to the second, and so on.
-
-Each \gls{path} of magic grants access to different spheres. Illusions, for example, might be cast just as easily by an alchemist as by someone using song magic. They could not, however, be cast by someone using the \gls{path} of runes.
-
-Each level of a sphere typically grants access to a few spells. Those learning to cast magic don't think of spheres as having discrete levels'; they think in terms of a dozen different spells for each level, but for simplicity's sake we record groups of spells together. While an alchemist will first learn to enflame a candle, to snuff out a lantern, then learn another spell to zap enemies from afar, and a different one for nearby enemies, we will call the entire thing `Invocation 1'.
+Each level of a sphere typically grants access to a few different spells.  For example, the first level of the Aldaron sphere allows the caster to affect local weather conditions, enchant animals, and summon light.  Divine casters willl think of this as a gift from their deity, while blood casters think of these effects as a natural extension of their own will.  However, the basic effects are the same.
 
 \subsubsection{The Spheres of Magic}
 
