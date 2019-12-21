@@ -1,4 +1,6 @@
 \usepackage[latin1]{inputenc}
+\usepackage{stmaryrd} % For boxy Maths symbols
+\usepackage{wasysym} % for circly Maths symbols
 \usepackage{appendix}
 \usepackage{geometry}
 \usepackage{array}
@@ -121,7 +123,15 @@
 		}
 
 
-\newcommand{\character}[1]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
+\newcommand{\character}[1]{\needspace{12em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
+
+\newcommand{\Character}[3]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}
+
+\hspace{.5cm}\textbf{Personality:} #2
+
+\hspace{.5cm}\textbf{Mannerism:} #3
+
+}
 
 \newcommand{\monster}[1]{\needspace{4em}\vspace{.38cm} \normalsize\bfseries\ding{70} #1 \ding{70}\vspace{.18cm}}
 
@@ -205,7 +215,8 @@ Roll & Result \\
 \newcounter{random}
 
 \newcommand{\random}{
-		\addtocounter{random}{\thepage}
+	\addtocounter{random}{\value{page}}\addtocounter{random}{1}
+	\multiply\value{random} by \value{chapter}
 	\whileboolexpr{
 		test {\ifnumcomp{\value{random}}{>}{10}}
 	}
