@@ -319,7 +319,14 @@ Commonly, Empathy is used to spot lies when paired with Wits. Humans are famousl
 Medicine is a primitive but effective art, regrettably full of nonsense and superstition, but mandatory when it comes to keeping someone with a serious wound alive. The Wits Attribute will allow someone to quickly patch up a bleeding wound, cutting or reducing the number of Fatigue points the bleeding character would otherwise have received.\footnote{Fatigue is covered later, on page \pageref{fatigue}.}
 
 \iftoggle{verbose}{
-	Medicine can also be used with the Intelligence Attribute to concoct poisons or antidotes. A standard poison might be rolled at \gls{tn} 7 to create; people can then attempt to detect it in their food with a Wits + Vigilance roll at \gls{tn} 7. The poisoner can add to the \gls{tn} to detect the poison only by adding to the \gls{tn} of creating the poison. For example, one could add +3 to the \gls{tn} to detect and create a poison. It would be \gls{tn} 10 to create and \gls{tn} 10 to detect the presence of the poison in the food. For every Marginal point on the poison roll, the target gains 2 Fatigue points. Each scene\footnote{See page \pageref{time} for how scenes work.} thereafter the afflicted person gains the same number of Fatigue Points minus 1, but can rest as normal in order to regain lost Fatigue point. Anyone who passes their last Fatigue box due to poison dies.}{}
+
+Medicine can also be used with the Intelligence Attribute to concoct poisons or antidotes. A standard poison might be rolled at \gls{tn} 7 to create; people can then attempt to detect it in their food with a Wits + Vigilance roll at \gls{tn} 7.
+The poisoner can add to the \gls{tn} to detect the poison only by adding to the \gls{tn} of creating the poison. For example, one could add +3 to the \gls{tn} to detect and create a poison.
+It would be \gls{tn} 10 to create and \gls{tn} 10 to detect the presence of the poison in the food.
+For every Marginal point on the poison roll, the target gains 2 Fatigue points. Each scene\footnote{See page \pageref{time} for how scenes work.} thereafter the afflicted person gains the same number of Fatigue Points minus 1, but can rest as normal in order to regain lost Fatigue point.
+Anyone who passes their last Fatigue box due to poison dies.
+
+}{}
 
 Specialisations include bleeding, poisons, narcotics, fractured bones, dwarves, humans, fatigue and burns.
 
@@ -2308,6 +2315,10 @@ If the spell completes, the \gls{tn} to break free increases by 2.
 The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
 
 \enhancement{1}{Portal} The mage can not simply teleport something but open a doorway from one place to another, within the normal range.
+The magical portal can change direction, pour water from the sea to a rock, or form falling loops as one portal falls into another.
+
+The portals are always seamless -- the edges contain no flickering or wobbles.
+Portals must always rest upon unchangeing surfaces; any movement destroys the circle instantly.
 
 \enhancement{1}{Unrestrained} The mage can ignore all spacial barriors to the teleportation spell, allowing it to go anywhere the caster is familiar with, up to a number of areas away equal to \arabic{spelllevel} plus the caster's Wits Bonus.
 
@@ -2329,7 +2340,6 @@ The mage teleports the target a short distance -- up to \arabic{spelllevel} squa
 
 Particularly crazy casters have used such spells to open portals to strange etherial lands, filling the area with all manner of dangerous and bizarre creatures.
 
-
 \sphere{Enchantment}
 
 \iftoggle{verbose}{
@@ -2346,15 +2356,16 @@ Enchanters can calm down scared people including those who have failed a morale 
 
 \spell{Golden Aura}{Continuous}{Empathy}
 
-The enchanter learns to charm people with a smile or a wink -- they can add 1 plus their Intelligence Bonus to any Social Skill. This spell can also be cast on others.
+The enchanter learns to charm people with a smile or a wink, or lend the ability to others.
+The target adds 1 plus the caster's Intelligence Bonus to any Social Skill. This spell can also be cast on others.
 
 \spell{Imbue Soul}{Continuous}{Empathy}
 
 The caster pours a little life-essence into an object, animal, or anything else.
-
 When used on animals, the creature slowly becomes smarter, though this can take some days to have any real effect.
 
-The spell attracts undead to the target, who feed on the destruction of life.  Any undead in the area will follow the target, just as if it were a person.  With mindless undead, this works without failure, though intelligent undead can plainly understand that the item is not a person.
+The spell attracts undead to the target, who feed on the destruction of life.  Any undead in the area will follow the target, just as if it were a person.
+With mindless undead, this works without failure, though intelligent undead can plainly understand that the item is not a person if they can see it properly.
 
 \spell{Mind's Healing}{Continuous}{Empathy}
 
@@ -2385,7 +2396,9 @@ If the enchanter does not have any languages in common with the target then the 
 
 }{}
 
-The enchanter gives someone a particularly off-putting look and they immediately stops what is was doing, losing their train of thought. The target has trouble articulating what's wrong, but will remain confused for as long as the spell continues. The spell is sometimes initiated by eye contact, sometimes by song -- any number of social interactions can suffice for transferring the spell effects.
+The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
+They have trouble articulating exactly what's wrong, but will remain confused for as long as the spell continues.
+The spell is sometimes initiated by eye contact, sometimes by song -- any number of social interactions can suffice for transferring the spell's effects.
 
 A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Vigilance. If the target loses the roll they immediately loses all remaining actions for the turn but can still defend them; the target's Initiative score instantly reduces to 0.
 
@@ -2407,11 +2420,14 @@ Enchanters of this level can also cast a greater version of Mind's Healing. The 
 The enchanter locks eyes or otherwise engages with the target and lulls them gently to sleep, forces them to repeat particular actions, or fills them with a dreadful fear. The target can reroll a failed resistance roll at the end of each scene.
 
 \spell{Focus}{Continuous}{Empathy}
-The target holds the last action performed and repeats it, again and again. If they were attacking, they will continue attacking until there are no targets left, and then go and look for some. If the target was attempting to mount a horse, they will chase it until they can no longer move.
+The target holds the last action performed and repeats it, again and again.
+If they were attacking, they will continue attacking until there are no targets left, and then go and look for more.
+If the target was attempting to mount a horse but the horse flees, they will chase it until they can no longer move.
 
 The enchanter engages in a resisted roll of their Intelligence + Empathy versus the target's Wits + Vigilance. Targets can stop once their original action has become obviously impossible or is unmistakably complete.
 
 \spell{Panic}{Continuous}{Deceit}
+
 The enchanter and the target make a resisted roll; the caster adds their Intelligence Bonus and Deceit Skill while the target adds their Wits Bonus and Combat Skill. If the target fails, they automatically run away in fear, as the enchanter dictates.
 
 If the target would normally take a Morale check, the caster's Intelligence + Deceit are added to the \gls{tn} for as long as the spell is in effect. Targets completely unable to flee will continue to fight.
