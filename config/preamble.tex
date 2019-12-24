@@ -3,26 +3,23 @@
 \usepackage{wasysym} % for circly Maths symbols
 \usepackage{epsdice} % for dice symbols
 \usepackage{appendix}
-\usepackage{geometry}
-\usepackage{array}
+\usepackage{geometry} % changes page borders
 \usepackage{svg}
 \usepackage{alltt}
-\svgsetup{width=\textwidth}
+	\svgsetup{width=\textwidth}
 \usepackage{tabularx}
 \usepackage{wrapfig}
 \usepackage{float}
-\usepackage{epigraph}
+\usepackage{epigraph} % part quotes
 \usepackage{makeidx}
 \usepackage[english]{babel}
 \usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{incgraph}
 \usepackage{etoolbox}
-\usepackage{float}
 \usepackage{titlesec}
 \usepackage{needspace}
 \usepackage{tikz}
-\usetikzlibrary{mindmap,trees}
+	\usetikzlibrary{mindmap,trees}
 \usepackage{pifont}
 \usepackage{colortbl}
 \usepackage[poster]{tcolorbox}
@@ -240,5 +237,13 @@ Roll & Result \\
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
 \newcounter{gold}
 
+%%%%% Side Quests
+
 \newcommand{\sidequest}[1]{\subsection[#1]{#1 -- \encnum}}
+\newcommand{\town}[1]{\subsubsection{$\boxbox$ (Town) #1}}
+\newcommand{\forest}[1]{\subsubsection{$\merge$ (Forest) #1}}
+\newcommand{\villages}[1]{\subsubsection{$\logof$ (Villages) #1}}
+\newcommand{\lowercollege}[1]{\subsubsection{$\curlywedgedownarrow$ (Lower College) #1}}
+\newcommand{\uppercollege}[1]{\subsubsection{$\curlywedgeuparrow$ (Upper College) #1}}
+
 
