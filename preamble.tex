@@ -2,6 +2,7 @@
 \usepackage{stmaryrd} % For boxy Maths symbols
 \usepackage{wasysym} % for circly Maths symbols
 \usepackage{epsdice} % for dice symbols
+\usepackage{dingbat} % for curly section symbols
 \usepackage{appendix}
 \usepackage{geometry} % changes page borders
 \usepackage{svg}
@@ -83,11 +84,11 @@
 {8pt}
 {\Large\bfseries\filcenter}
 
-\titleformat{\subsection}{\needspace{4cm}\large\bfseries}{}{1em}{}[\rule{.5\textwidth}{.2pt}]
+\titleformat{\subsection}{\needspace{4cm}\large\bfseries}{}{1em}{\Pisymbol{dingbat}{69}\hspace{-3em}}[\rule{.5\textwidth}{.2pt}]
 %
-%\titleformat{\subsubsection}
-%{\normalfont\normalsize\bfseries}{}{1em}{\ding{227} }
-%
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
 %\titleformat{\paragraph}[runin]
 %{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 %
@@ -113,6 +114,19 @@
 
 		}
 
+\newcommand{\npc}[2]{\needspace{12em}\vspace{.38cm}  #1 #2 \vspace{.18cm}}
+\newcommand{\NPC}[4]{\needspace{4em}\vspace{.38cm} #1 #2
+
+\hspace{.5cm}\textbf{Personality:} #3
+
+\hspace{.5cm}\textbf{Mannerism:} #4
+
+}
+\newcommand{\M}{\mars} % male
+\newcommand{\F}{\venus} % female
+\newcommand{\C}{\taurus} % creature
+\newcommand{\N}{\leftmoon} % nura
+\newcommand{\U}{\fullmoon} % undead
 
 \newcommand{\character}[1]{\needspace{12em}\vspace{.38cm} \ding{70} #1 \ding{70}\vspace{.18cm}}
 
