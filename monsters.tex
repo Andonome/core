@@ -1111,7 +1111,7 @@
 }
 
 \newcommand{\rockman}{
-\randomthree\ifodd\value{page}\addtocounter{age}{3}\else\addtocounter{age}{4}\setcounter{enc}{-1}\addtocounter{enc}{-\value{random}}
+\randomthree\ifodd\value{page}\addtocounter{age}{3}\else\addtocounter{age}{4}\fi\setcounter{enc}{-1}\addtocounter{enc}{-\value{random}}
 \person{\arabic{age}}% STRENGTH
 {0}% DEXTERITY
 {\arabic{enc}}% SPEED
