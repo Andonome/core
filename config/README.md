@@ -8,17 +8,25 @@ Edit 'main.tex', and input your tex files by writing `\include{my_file.tex}.
 
 ## Creatures
 
-You can include pseudo-randomo creatures in your adventure by summoning the names from monsters.tex.  For example, to place a random elf in your game, just write `\elf`, and an elf will be magically summoned unto your adventure.   You can give the character a title and name by writing '\character', or simply '\monster' for an animal, creature, or other non-intelligence character.  For example:
+You can include pseudo-randomo creatures in your adventure by summoning the names from monsters.tex.  For example, to place a random elf in your game, just write `\elf`, and an elf will be magically summoned unto your adventure.   You can give the character a title and name by writing '\npc{symbol}{name}'.  For example:
 
 ```
 
-\character{Rincewind}
+\npc{\M}{Rincewind}
 
 \humanalchemist
 
 ```
 
-This would make a heading called **Rincewind** in bold, and provide pseudo-random alchemist-appropriate stats underneath.
+This would make a heading called **Rincewind** in bold with a male symbol, and provide pseudo-random alchemist-appropriate stats underneath.
+
+| Syntax | Symbol |
+|:---:|:----:|
+| \\M | Male |
+| \\F | Female |
+| \\G | Group |
+| \\U | Undead |
+| \\N | Nura |
 
 For a complete list of all the creatures and characters which can be used, see the 'monsters.tex' file.  For more details on the syntax, have a look at examples in *Adventures in Fenestra*.
 
