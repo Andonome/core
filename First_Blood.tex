@@ -3024,6 +3024,16 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 
 \spell{Polymorph}{Continuous}{Medicine}
 
+The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
+
+Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
+
+Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
+
+Polymorphing into another race does not grant any of its racial abilities.  Changing one's shape to look like an elf will not grant cold-immunity, and polymorphing into a human will not allow one walk long distances without fatigue.
+
+\spell{Animal Transformation}{Continuous}{Beast Ken}
+
 \begin{wrapfigure}{R}{.4\linewidth}
 
 	\begin{tcolorbox}[arc=1mm,tabularx={lcc}]
@@ -3067,15 +3077,6 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 \end{tcolorbox}
 
 \end{wrapfigure}
-The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
-
-Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
-
-Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
-
-Polymorphing into another race does not grant any of its racial abilities.  Changing one's shape to look like an elf will not grant cold-immunity, and polymorphing into a human will not allow one walk long distances without fatigue.
-
-\spell{Animal Transformation}{Continuous}{Beast Ken}
 
 
 This spell allows the mage to transform one animal into another.  An animal is defined as any creature without an Intelligence Bonus.  As before, the mage can increase or decrease the target's Strength Bonus by the spell level.
@@ -3209,13 +3210,6 @@ The path of devotion requires casters to both use their voice and to move their 
 
 \section{The Path of Runes}
 
-\iftoggle{verbose}{
-	\begin{wrapfigure}{R}{.4\textwidth}
-		\includegraphics[width=.4\textwidth]{images/Roch_Hercka/dwarvish_runes.jpg}
-	\end{wrapfigure}
-
-}{}
-
 \index{Runes}\textbf{Spheres}: Conjuration, Fate, Force, Metamagic, Necromancy
 
 \noindent Dwarves are skilled in the art of summoning magics through carving elaborate runes. Typically they are chiselled, but it is possible to simply `paint a spell' onto a surface.
@@ -3225,6 +3219,10 @@ When spells are summoned, the runes glow -- whether carved or painted -- then gi
 Runecasters must devote a single Academics slot to learning how to properly inscribe runes. Their mana stones are always precious metals inscribed with runes such as armour with platinum runes or swords with golden runic inlays. Those mana stones which have an imprinted spell can be activated by either a command word or a condition.
 
 \subsection{Special Considerations}
+
+\iftoggle{verbose}{
+		\sidepic{5}{Roch_Hercka/dwarvish_runes.jpg}
+}{}
 
 Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for Quick Spells. They always use Ritual Spells for the highest level of any Sphere, and can use normal casting after that.
 
@@ -3266,7 +3264,7 @@ Characters can individuate themselves by learning various Knacks -- special tale
 
 \section{Combat Knacks}
 
-\subsection{Adrenaline Surge}
+\subsubsection{Adrenaline Surge}
 
 The player can declare that super-human effort is being thrown into an action, and gain +1 Strength for that one task.  This can increase damage, but cannot increase Initiative after a \gls{round} has begun.
 
