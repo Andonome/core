@@ -1,16 +1,16 @@
 # First Blood
 <!--
 
-The config directory is a subtree, so all commits to it must involve only files in that directory.
+The config directory is a subtree, so all commits to it should only involve files in that directory.
 
 -->
 
 First Blood is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
-# Mechanics
+# Parsimony
 The most important part of the game is mechanics, and everything revolves around speed.
 
-### Abilities and Parsimony
+## Abilities
 The abilities are parsimonious, providing the standard inputs and outputs, but with fewer variables.  For example, 'Deceit' is used for both intimidation and lies, depending upon what it's paired with.  This gives Player Characters different scores for intimidating and lying, but with fewer skills to keep track of:
 
 | | **Strength** (2) | **Dexterity** (-1) | **Speed** (0) | **Intelligence** (1) | **Wits** (-1) | **Charisma** (1) |
@@ -19,39 +19,8 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 | **Deceit** +3 | intimidating an opponent: 5 | sliding a knife up to someone's neck unnoticed: 2 | charging at someone to intimidate them: 3 | crafting a clever ruse: 4 | coming up with a quick lie: 2 | making a false friend: 4 |
 | **Vigilance** +3 | keeping watch all night: 5 | finding a hidden door in the darkness: 2 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
 
-### No Class
+## No Class
 Players put their XP wherever they like, so there are no charts for what has to be bought next, and no levelling system.  A fighter is just someone with a good Combat score, and a Paladin is just a fighter with a little devine magic.
-
-## Combat
-Combat moves quickly as nobody has many hitpoints.
-
-### Tactics
-
-Combat starts! You can put your combat-points into *Strike* to hit opponents better, or *Evasion* to stay safe.  You decide to go for *Strike* as bandits spring from the bushes, then roll for Initiative.
-
-| The Count | Health | Actions |
-|:--:|:---:|:----------------|
-| Initiative 9 | `8 HP`, `10 FP` | You spend 2 Initiative to protect the priest from harm |
-| Initiative 8 | `8 HP`, `10 FP` | The bandits spend 2 Initiative to move towards you. The priest spends 6 Initiative to attack with a staff. |
-| Initiative 7 | `8 HP`, `10 FP` | You spend 6 Initiative to attack,  and slash a bandit's arm open. |
-| Initiative 6 | `8 HP`, `2 FP` | 2 bandits attack with knives, costing 4 Initiative.  Another two attack with swords, costing 6 Initiative.  You roll to defend against each one, but they hit, and you lose 8 Fate Points. |
-| Initiative 5 | `8 HP`, `2 FP` | Your companion spends 6 Initiative to attack with an axe, and  finishes off the bandit you wounded. |
-| Initiative 4 | `8 HP`, `2 FP` | |
-| Initiative 3 | `8 HP`, `2 FP` | |
-| Initiative 2 | `6 HP`, `0 FP` | The two bandits with knives attack again. The priest spends 6 Initiative and knocks one over the head, but not before you get 4 Damage and a nasty wound on the arm. |
-| Initiative 1 | `6 HP`, `0 FP` | You throw down a final attack for 6 Initiative and kill another of the bandits. |
-
-The round ends, a new one starts, and this time you decide to go defensive.  Once the battle's over you get back 4 Fate Points, putting you on `6 HP`, and `4 FP`.
-
-### Multiprocessing
-
-As you can see, players roll to defend attacks rather than a GM rolling to attack.  This keep things moving fast, even when there are 6 attackers for every player.
-
-### Fatepoints
-
-Nobody magically heals, so wounds stick around for the duration of the game.  To level the dangers, players get a number of Fate points, which they can lose instead of hitpoints.  Fate points heal quickly, while Hitpoints do not.
-
-Healing Fate points after an encounter means players don't constantly fear death after a single wound, but still have to carry that wound.  It also provides a plausible fear-mechanic, as players with few Fate points have a good reason to fear for their characters.
 
 ## Background as Stories
 
@@ -73,6 +42,34 @@ Players make randomly generated characters.  This stops the indecision and long 
 
 The book contains decision-based character creation as a set of alternative rules, rather than a default.
 
+# Tactics
+
+Combat starts! You can put your combat-points into *Strike* to hit opponents better, or *Evasion* to stay safe.  You decide to go for *Strike* as bandits spring from the bushes, then roll for Initiative.
+
+| The Count | Health | Actions |
+|:--:|:---:|:----------------|
+| Initiative 9 | `8 HP`, `10 FP` | You spend 2 Initiative to protect the priest from harm |
+| Initiative 8 | `8 HP`, `10 FP` | The bandits spend 2 Initiative to move towards you. The priest spends 6 Initiative to attack with a staff. |
+| Initiative 7 | `8 HP`, `10 FP` | You spend 6 Initiative to attack,  and slash a bandit's arm open. |
+| Initiative 6 | `8 HP`, `2 FP` | 2 bandits attack with knives, costing 4 Initiative.  Another two attack with swords, costing 6 Initiative.  You roll to defend against each one, but they hit, and you lose 8 Fate Points. |
+| Initiative 5 | `8 HP`, `2 FP` | Your companion spends 6 Initiative to attack with an axe, and  finishes off the bandit you wounded. |
+| Initiative 4 | `8 HP`, `2 FP` | |
+| Initiative 3 | `8 HP`, `2 FP` | |
+| Initiative 2 | `6 HP`, `0 FP` | The two bandits with knives attack again. The priest spends 6 Initiative and knocks one over the head, but not before you get 4 Damage and a nasty wound on the arm. |
+| Initiative 1 | `6 HP`, `0 FP` | You throw down a final attack for 6 Initiative and kill another of the bandits. |
+
+The round ends, a new one starts, and this time you decide to go defensive.  Once the battle's over you get back 4 Fate Points, putting you on `6 HP`, and `4 FP`.
+
+## Multiprocessing
+
+As you can see, players roll to defend attacks rather than a GM rolling to attack.  This keep things moving fast, even when there are 6 attackers for every player.
+
+## Fatepoints
+
+Nobody magically heals, so wounds stick around for the duration of the game.  To level the dangers, players get a number of Fate points, which they can lose instead of hitpoints.  Fate points heal quickly, while Hitpoints do not.
+
+Healing Fate points after an encounter means players don't constantly fear death after a single wound, but still have to carry that wound.  It also provides a plausible fear-mechanic, as players with few Fate points have a good reason to fear for their characters.
+
 # Setting
 
 Bog standard fantasy world.  Sue me.
@@ -88,19 +85,15 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 | 2    | Heal a companion's Fate Points. | Summon mist.  Create blinding light.  Freeze water. |
 | 3    | Request minor devine intervention. Boost someone's luck. |  |
 
-## World History
+## Larger World
 
-... a little, but I've tried to keep it to a minimum.
+Adventures in Fenestra contains a GM's guide, Bestiary, a setting, and mini-adventures.
 
 # Project Notes
 
 ## LaTeX
 
 This thing's written in LaTeX, a magical document format where you describe the layout to the computer, then the computer does the layout for you.  Last time this was written the persistent revisions added up to months of formating and reformating.  If you ever need to write a long work involving anything more than a series of words: do yourself a favour and learn LaTeX.  The basics just take an afternoon.
-
-## Related Works
-
-Adventures in Fenestra contains a GM's guide, Bestiary, mini-adventures, and a complete world.
 
 ## Art
 
