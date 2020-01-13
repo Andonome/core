@@ -533,6 +533,21 @@
 	{0}{2}{Crafts 1, Tactics 1}{\greataxe, \completeplate}{\knacks{Chosen Enemy: Goblins}}
 	}
 
+\newcommand{\dwarventrader}{
+	\randomthree\randomtwo\addtocounter{random}{-1}
+	\person{\arabic{random}}% STRENGTH
+	{1}% DEXTERITY
+	{-1}% SPEED
+	{{\ifnumcomp{\value{random}}{=}{2}{1}{0}}% INTELLIGENCE
+	{0}% WITS
+	{0}}% CHARISMA
+	{0}% DR
+	{1}% COMBAT
+	{Crafts \ifodd\value{page} 1 \else 2\fi, Deceit \ifodd\value{chapter} 2 \else 1\fi}% SKILLS
+	{\shortsword\ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}, \arabic{gold}sp}}% EQUIPMENT
+	{}
+	}
+
 \newcommand{\dwarvenrunemaster}{
 	\person{0}{1}{0}% PHYSICAL ATTRIBUTES
 	{{\ifodd\value{page}2\else1\fi}% INTELLIGENCE
@@ -540,6 +555,7 @@
 	{\ifodd\value{enc}-1\else0\fi}% CHARISMA
 	{1}{Academics 2, Crafts 1, Tactics 2\Path{Runes}{Metamagic 4, Fate 3, Force 2, Conjuration 1}}{\shortsword\partialchain\ifnumcomp{\thechapter}{=}{6}{4D6sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
 	}
+
 
 \newcommand{\dryad}{
 \randomtwo\addtocounter{enc}{2}\randomthree\addtocounter{age}{1}
