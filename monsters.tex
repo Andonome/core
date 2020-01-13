@@ -533,21 +533,6 @@
 	{0}{2}{Crafts 1, Tactics 1}{\greataxe, \completeplate}{\knacks{Chosen Enemy: Goblins}}
 	}
 
-\newcommand{\dwarventrader}{
-	\randomthree\randomtwo\addtocounter{random}{-1}
-	\person{\arabic{random}}% STRENGTH
-	{1}% DEXTERITY
-	{-1}% SPEED
-	{{\ifnumcomp{\value{random}}{=}{2}{1}{0}}% INTELLIGENCE
-	{0}% WITS
-	{0}}% CHARISMA
-	{0}% DR
-	{1}% COMBAT
-	{Crafts \ifodd\value{page} 1 \else 2\fi, Deceit \ifodd\value{chapter} 2 \else 1\fi}% SKILLS
-	{\shortsword\ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}, \arabic{gold}sp}}% EQUIPMENT
-	{}
-	}
-
 \newcommand{\dwarvenrunemaster}{
 	\person{0}{1}{0}% PHYSICAL ATTRIBUTES
 	{{\ifodd\value{page}2\else1\fi}% INTELLIGENCE
