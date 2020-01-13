@@ -28,9 +28,10 @@ This would make a heading called **Rincewind** in bold with a male symbol, and p
 | \\U | Undead |
 | \\N | Nura |
 
-For a complete list of all the creatures and characters which can be used, see the 'monsters.tex' file.  For more details on the syntax, have a look at examples in *Adventures in Fenestra*.
+For a complete list of all the creatures and characters which can be used, see the 'monsters.tex' file.
+For more details on the syntax, have a look at examples in *Adventures in Fenestra*, or read the git's wiki.
 
-# Texnical Details
+# TeXnical Details
 
 This thing's handled as a subtree in the other documments, so changing it will change all First Blood books.
 
