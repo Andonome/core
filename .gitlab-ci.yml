@@ -1,12 +1,12 @@
 compile_pdf:
   image: aergus/latex
   script:
-    - pdflatex First_Blood.tex
-    - makeglossaries First_Blood
-    - makeindex First_Blood.idx
-    - pdflatex First_Blood.tex
+    - pdflatex main.tex
+    - makeglossaries main
+    - makeindex main.idx
+    - pdflatex main.tex
   except:
     - dev
   artifacts:
     paths:
-      - First_Blood.pdf
+      - main.pdf
