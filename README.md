@@ -1,4 +1,4 @@
-These config files make the First Blood RPG books look and act the way they do.
+These config files make the BIND RPG books look and act the way they do.
 
 # Usage
 
@@ -33,7 +33,7 @@ For more details on the syntax, have a look at examples in *Adventures in Fenest
 
 # TeXnical Details
 
-This thing's handled as a subtree in the other documments, so changing it will change all First Blood books.
+This thing's handled as a subtree in the other documments, so changing it will change all BIND books.
 
 Personally, I keep it in a directory by the others.  This allows you to do:
 
