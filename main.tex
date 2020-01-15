@@ -1,4 +1,4 @@
-\documentclass[titlepage,a4paper,openany]{report}
+\documentclass[titlepage,a4paper,openany]{book}
 \usepackage[indexonlyfirst]{glossaries}
 \setacronymstyle{long-short-desc}
 
@@ -35,30 +35,11 @@
 
 \pagebreak[4]
 
-\section*{Special Thanks ...}
-
-\paragraph*{to the Artists}
-
-Neil McDonnell for the basic photograph which became the Polymorph image, Boris Pecikozi\'c for Thenton's Story images, Brian Garabrant for the cover images and Roch Hercka for the myriad wonderful pencil sketches of Vitals Shots, illusions, encumbrance and many more.
-
-\paragraph*{to the playtesters} Marri Russell, Ross Oliver, Reiss McGee, David Smith, Michael Dyson, Ryan Trotter and Maggie Anderson; also thanks to Ari-Matti Piippo for his insightful comments,
-
-\paragraph{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
-
-\section*{The Right to Improve}
-
-This book has some serious problems, and that's fine.  I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and change things.  This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
-
-No longer do imaginative \acrshortpl{gm} have to scribble their inspired house rules onto the back of an old banking statement and cellotape it to the last page of the core book.  Instead, you have the complete source code, and can modify it as you please, creating a cohesive book.  If you spot an error, you can correct it.  If you want to add a couple of spells, it's no problem.  Just download the source code from gitlab.com/FirstBloodRPG/, download a Latex editor, and make the changes you want.  Once you're happy with your changes, you might even send it off to a printing shop for a cheaply bound book all of your own.
-
-And if you happen to make some useful additions, or even deletions, be sure to add them to another git project, where others can benefit from your genius.
-
-With a little work, we could get real community-based RPG.  Something that's always free, something that gets a new edition as and when people want, with just the changes that people want -- a continuously evolving work.
-
-This particular version was last revised on \today.
-
 \iftoggle{verbose}{
+
 \chapter*{Introduction}
+
+\begin{multicols}{2}
 
 BIND\footnote{'BIND' stands for 'BIND is not D\&D'.} is a zero to hero RPG, with an emphasis on getting an output quickly, and keeping players' decisions in the loop.
 
@@ -70,19 +51,45 @@ Combat is focussed on giving players real choices, and typically ends quickly as
 
 For a starting pack of ideas, the \glsentrylong{gm} has \textit{Adventures in Fenestra} -- a guide to the world, some side quests, and a small bestiary.
 
-}{}
+
+\subsection*{Special Thanks ...}
+
+\paragraph*{to the Artists}
+
+Neil McDonnell for the basic photograph which became the Polymorph image, Boris Pecikozi\'c for Thenton's Story images, Brian Garabrant for the cover images and Roch Hercka for the myriad wonderful pencil sketches of Vitals Shots, illusions, encumbrance and many more.
+
+\paragraph*{to the playtesters} Marri Russell, Ross Oliver, Reiss McGee, David Smith, Michael Dyson, Ryan Trotter and Maggie Anderson; also thanks to Ari-Matti Piippo for his insightful comments,
+
+\paragraph{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
+
+\vfill\null
+\columnbreak
+
+\subsection*{The Right to Improve}
+
+This book has some serious problems, and that's fine.  I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and change things.  This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
+
+No longer do imaginative \acrshortpl{gm} have to scribble their inspired house rules onto the back of an old banking statement and cellotape it to the last page of the core book.  Instead, you have the complete source code, and can modify it as you please, creating a cohesive book.  If you spot an error, you can correct it.  If you want to add a couple of spells, it's no problem.  Just download the source code from gitlab.com/FirstBloodRPG/, download a Latex editor, and make the changes you want.  Once you're happy with your changes, you might even send it off to a printing shop for a cheaply bound book all of your own.
+
+And if you happen to make some useful additions, or even deletions, be sure to add them to another git project, where others can benefit from your genius.
+
+With a little work, we could get real community-based RPG.  Something that's always free, something that gets a new edition as and when people want, with just the changes that people want -- a continuously evolving work.
+
+This particular version was last revised on \today.
+
+\end{multicols}
 
 \pagebreak
 
-\iftoggle{verbose}{
-
 \section*{Nura Arrivals}
+
+\begin{multicols}{2}
 
 \begin{exampletext}
 
 When the dwarves poured down the hill like an avalanche, nobody thought to worry. They had lived in peace with the humans there for years and traded goods regularly. It was normal for dwarves to travel in full chainmail - many treated it like a woollen jumper. As they got a little closer, the dusk-light showed unusually tall silhouettes for dwarves, about the size of a stocky man. It was only when they were five feet from the villagers who had come out to greet them that they noticed the greyish-green skin and jutting bottom teeth. Worse than the strange hue, teeth and even than the coal-black eyes, was the sight of some dwarves so misshapen and driven to insanity that some had cut their own beards off.
 
-	\sidepic{5}{Boris_Pecikozic/the_storyteller.jpg}
+	\includegraphics[width=\linewidth]{images/Boris_Pecikozic/the_storyteller.jpg}
 
 These were dwarves no longer, but hobgoblins - the kind of nura which is made when dwarves are polluted with the strange magic which lives below the earth. They are always hungry. They were so full of hunger in fact that they slaughtered a dozen villagers and began to eat them raw, some still living, without a care for the others. The other humans moved quickly after that, taking up torches and farming tools as make-do weapons. Those the nura do not eat often become nura themselves, so the farmers fought fiercely. It is said that those who die as nura often blaspheme against the gods before they die, and so do not reach the afterlife they were meant for.
 
@@ -90,13 +97,22 @@ The villagers gathered. They fought, and drove off the invaders while pieces of 
 
 \end{exampletext}
 
+\end{multicols}
+
 }{}
 
 \chapter{Traits}\index{Traits}\pagenumbering{arabic}
 
-Characters are defined by Traits, and the two main types are Attributes and Skills.  Attributes are innate Traits, deeply tied to who the character is, such as Strength, Speed, Intelligence and Wits.  Skills, meanwhile, are things the character learns.
+\begin{multicols}{2}
+
+Characters are defined by Traits, and the two main types are Attributes and Skills.
+Attributes are innate Traits, deeply tied to who the character is, such as Strength, Speed, and Wits.
+Skills, meanwhile, are things the character learns.
 
 Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and adding a Trait and Skill to the result.  If you roll high enough, you succeed.
+
+\end{multicols}
+
 
 \section{Character Creation}\index{Character Creation}\label{character_rolls} \iftoggle{verbose}{
 \includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
@@ -119,10 +135,15 @@ Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and
 
 \end{tcolorbox}
 
+\begin{multicols}{2}
+
 Character creation is random by default -- it helps new players get started quickly.  Either print out a character sheet or make some paper notes as we go. We begin by randomly assigning your race.  Much of character creation is concerned with interpreting your character as it forms -- what kind of person is this you are making? What do the Attribute Bonuses say about them? You will later be deciding on what kind of Skills and training will compliment the character, but the basics will all be random. Grab a pair of D6's and compare the result to the following chart.
 
+I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
 
-\begin{wrapfigure}{R}{.36\textwidth}
+It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
+
+Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
 
 	\begin{tcolorbox}[tabularx={cc},arc=1mm]
 
@@ -143,14 +164,6 @@ Character creation is random by default -- it helps new players get started quic
 	12 & +3 \\
 
 	\end{tcolorbox}
-
-\end{wrapfigure}
-
-I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
-
-It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
-
-Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
 
 \subsection{Player Chosen Characters}
 
@@ -188,7 +201,11 @@ The wizard smiled again.
 \end{exampletext}
 }{}
 
+\end{multicols}
+
 \section{Attributes}
+
+\begin{multicols}{2}
 
 These are the basics Traits which characters must use over and over again for every roll.
 
@@ -223,6 +240,8 @@ Where intelligence represents how well a character thinks, Wits just tells you h
 \subsubsection{Charisma}
 
 Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
+
+\end{multicols}
 
 \section{Skills}
 
@@ -441,7 +460,7 @@ If, on the other hand, working together can benefit a situation, one character t
 
 \iftoggle{verbose}{
 
-\sidepic{21}{Boris_Pecikozic/village_above.jpg}
+\includegraphics{images/Boris_Pecikozic/village_above.jpg}
 
 \begin{exampletext}
 
