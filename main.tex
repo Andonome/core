@@ -524,9 +524,10 @@ The \gls{gm} might use a Margin for some variable, for example a bard attempting
 
 	The thatched roof on the nearby cottage rustled and Arneson instinctively drew his companions back. They turned and ran before their adversary could make his leap down to meet them with his axe. They ran as swiftly as they could into the safety of the darkness surrounding Casarenna but the hobgoblins stampeded fast behind them, running as swiftly as they could with guttural cries and war songs which Thenton could only guess translated to something about dinner.
 
-	\begin{wrapfigure}{r}{.5\textwidth}
+	\begin{wrapfigure}{r}{.3\textwidth}
 
 		\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_jump.jpg}
+
 	\end{wrapfigure}
 
 	A scurrying of agile, hungry feet filled the little muddy rows between houses. The trio looked about for an escape route. Unknown to them, one of the hobgoblins was meant to be keeping a lookout from the roof of the cottage on the edge of town. He observed them for a brief moment and then jumped off, axe in hand, ready to make up for all the meals he had missed while pretending to keep guard.
@@ -568,8 +569,14 @@ The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may re
 
 \iftoggle{verbose}{
 
-\sidepic{4}{Roch_Hercka/xp-1.jpg}
+	\begin{wrapfigure}{l}{.6\linewidth}
+
+		\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-1.jpg}
+
+	\end{wrapfigure}
+
 }{}
+
 
 
 Each additional level of a Trait has a steeply progressive cost. The costs represent buying the next level; the first level of a school of magic costs 15 and the second costs 20 -- buying up to the second level costs 35 \gls{xp} in total. Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp}.
@@ -578,7 +585,7 @@ Attributes have a standard maximum of +3 and minimum of -3. This is adjusted by 
 
 Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so taking a character from -4 Strength to 0 would cost 20 \gls{xp}.
 
-\pagebreak
+\columnbreak
 
 		\setcounter{xp}{10}
 		\newcounter{bon}\setcounter{bon}{1}
@@ -670,7 +677,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \begin{xpbox}{C}
 
-		Combat/Projectiles & Cost \\\hline
+		Combat/Proj. & Cost \\\hline
 
 		+1 & 10 \\
 
@@ -685,7 +692,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 \subsection{Concept}
 
 \iftoggle{verbose}{
-\sidepic{4}{Roch_Hercka/xp-2.jpg}
+\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-2.jpg}
 }{}
 
 Now is the time to look at your character's base Attributes and think about what they might be good at. The best place to start is your highest Attribute. If you have a positive (or simply not negative) Intelligence score, making a spell caster is a good option. Buy off any Wits penalties and put a magic sphere down on the character sheet and a couple of \glsentrylongpl{mp}. Alternatively, if your highest Trait so far is a Body Attribute perhaps this character is more suited to being a fighter. Don't worry if you have negative Body Attributes -- your starting \gls{xp} can buy all of that up to 0 quite easily.
@@ -774,7 +781,7 @@ For a start, he'll need the Performance Skill, and he gets two specialisations w
 
 	\textbf{Professional Tools} & & \\\hline
 
-	Cart & & \\
+	Cart & & 1 gp \\
 
 	Grappling hook &  -2 &  1 sp \\
 
@@ -826,12 +833,10 @@ An open ended list of equipment is provided to give a basic idea of costs. The b
 
 An average villager will make little spare money -- perhaps 10 \gls{sp} in a year if they bother to save. Sellswords can expect to make upwards to 10 gold per year if they are hired by a villagemaster. The average free trader -- a blacksmith or cloth dyer -- can expect to make 5 \gls{sp} in a month.
 
-\pagebreak
-
 \subsection{Weight \& Encumbrance}\index{Weight}\index{Encumbrance}
 
 \iftoggle{verbose}{
-	\sidepic{4}{Roch_Hercka/dwarf_encumbrance.jpg}
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarf_encumbrance.jpg}
 }{} 
 
 We measure weight in broad terms.  Characters have a \textit{weight rating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a weight rating of 7.  Items work similarly, with weight ratings between -4 (for very light items) and +11 (for wardrobes, carts, and boulders).
@@ -845,6 +850,8 @@ Characters can carry items with a maximum weight rating of their Strength Bonus 
 Money can buy you more than things.  In fact, for the right money in a large city, characters can buy a full entourage.  Villages, however, will not admit of the same opportunities.
 
 The costs below show the starting price for a few services, plus additional fees for the details.  For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 950sp.
+
+\end{multicols}
 
 \begin{tcolorbox}[arc=1mm,tabularx={lr},title=Services]
 
@@ -880,7 +887,10 @@ The costs below show the starting price for a few services, plus additional fees
 
 \end{tcolorbox}
 
+\begin{multicols}{2}
+
 \iftoggle{verbose}{
+
 	For example, Thenton, with a Strength Bonus of +1, picks up a weighty battle axe. The Weight Rating is 3, so this inflicts an Encumbrance Penalty of 2. Thenton's effective Speed Bonus drops to -2, reducing his Initiative (covered below) and ability to run.  He will also gain 2 Fatigue points at the end of each scene\footnote{See page \pageref{time} for notes on scenes.} where he carries it.
 
 	}{}
@@ -891,7 +901,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 \subsection{Cultures \& Exchange Rates}
 
-\begin{wrapfigure}{L}{.28\textwidth}
+\begin{wrapfigure}{L}{.22\textwidth}
 
 	\begin{rollchart}
 
@@ -1194,20 +1204,11 @@ Each \gls{round} you select your tactics anew and have a range of options for ma
 
 \begin{multicols}{2}
 
-
 In combat, \glspl{pc} divide their Combat Skill between three `Combat Factors' -- \gls{strike}, \gls{init} and \gls{evasion}.
 We represent the Skill with a number of coins, then place the coins directly onto the three Combat Factors in any combination. Someone with a Combat Skill of +2 might place two coins on the Strike score to hit more accurately, or could place 1 coin on Initiative to hit faster and another on Evasion to better avoid attacks.
 In all cases there is an optimal configuration which will itself depend upon the enemy's placement of resources.\footnote{Players and \glsentrylongpl{gm} are free to cover their coins with their hand until everyone has placed their resources for the round.}
 
 \subsection{Initiative}
-
-\begin{wraptable}[20]{r}{.4\textwidth}
-
-\vspace{-3cm}
-
-\initiativechart
-
-\end{wraptable}
 
 At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative. Each character can adjust that number for their personal Initiative score. The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers. Everyone in the fight acts in descending order of Initiative -- highest to lowest.
 
@@ -1217,9 +1218,15 @@ Everyone on an Initiative score of at least 1 will have enough time for a full a
 
 Heavy weapons are those with a Weight Rating of -1 or greater. Smaller weapons, those with a Weight Rating of -2 or less, and brawling attacks with fists, all count as light weapons.
 
+\vfill\null
+
+\initiativechart
+
 \subsubsection{Quick Actions}
 
-\gls{quickaction} can interrupt the usual Initiative priorities. Any time someone attempts a Quick Action, they take their action immediately, even if they have a negative Initiative score. If two characters interrupt the Initiative flow with Quick Actions then whoever currently has the highest Initiative Score goes first.
+\Gls{quickaction} can interrupt the usual Initiative priorities.
+Any time someone attempts a Quick Action, they take their action immediately, even if they have a negative Initiative score.
+If two characters interrupt the Initiative flow with Quick Actions then whoever currently has the highest Initiative Score goes first.
 
 Quick Actions allow characters to guard someone as soon as they see an attack impending upon a friend, to defend against missile attacks, or to shout a few words.
 
@@ -1250,7 +1257,7 @@ Animals use a Skill called `\index{Aggression}Aggression' to Strike -- Aggressio
 \subsection{Stances}\index{Combat!Stances}
 
 \iftoggle{verbose}{
-	\sidepic{60}{Roch_Hercka/stances.jpg}
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/stances.jpg}
 }{}
 
 Characters can attack in an \textit{Aggressive} or \textit{Defensive} stance. This system takes the Defensive stance as default -- the Dexterity Bonus is added to the Evasion score to keep the character safe. However, a character can forego safety for additional combat ability and add the Dexterity Bonus to Strike should they wish. Any Bonuses to Evasion from weapons also add to the Strike Factor. The score cannot be divided between the two -- the Stances are an `all or nothing' affair. Delicate decisions concerning priorities require the Combat Skill, which can be added one piece at a time to any of the Combat Factors.
@@ -1309,7 +1316,7 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 \begin{multicols}{2}
 
 
-\begin{wraptable}{O}{.24\textheight}
+\begin{wraptable}{O}{.17\textheight}
 
 	\begin{xpbox}{C}
 		Base FP & Regeneration \\\hline
@@ -1523,7 +1530,7 @@ Shields are a special type of weapon used almost exclusively to defend. They hav
 
 \section{Armour}\index{Armour}
 
-\begin{wraptable}{r}{.35\textwidth}
+\begin{wraptable}{r}{.24\textwidth}
 
 \armourchart
 
@@ -1537,15 +1544,15 @@ Armour can cover more or less of a character, and therefore comes with three rat
 
 \subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
 
-\iftoggle{verbose}{
-	\sidepic{5}{Roch_Hercka/vitals_shot.jpg}
-}{}
-
 When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
 
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
+
+\iftoggle{verbose}{
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/vitals_shot.jpg}
+}{}
 
 \iftoggle{verbose}{Vitals Shots not only provide incentive for people to push their Strike Factor as high as possible, even at the expense of their own defence.  It also provides an equalizer for weaker forces as even the most heavily armoured creature can be struck by a lucky blow.}{}
 
@@ -1587,9 +1594,7 @@ Characters who spend the entire turn running can move 10 squares plus their Spee
 
 	The next morning the troop gave a wide berth to the area between the fallen village and the mountain, in the hopes of avoiding attack from the rear. Unfortunately there was little they could do to hide themselves, and a band of nura from the village were following them. The trio had reached halfway up the mountain by this point but the nura were faster than them, and stronger. Thenton thought for a moment about abandoning Hugi if there was a problem - his little dwarvish legs were no good for sprinting. Of course Hugi's death would not buy them much time, and Arneson would never stand for it. No, they would have to stick together to survive.
 
-	\begin{wrapfigure}{O}{.6\textwidth}
-		\includegraphics[width=.6\textwidth]{images/Boris_Pecikozic/nura_brawl.jpg}
-	\end{wrapfigure}
+	\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
 
 	The trio climbed for a while longer, looking back every few moments to note how close the nura were behind them. An ogre was among their ranks - a human transformed into a nura. That made no sense. Thenton recalled what he had read about nura - they came out from under the ground and ate entire villages. If their hunger was sated and there were still more people they would take any prisoners underground, transform them into more nura and then go back up for another raid. While captured dwarves turned into hobgoblins, ogres were made from mutated humans. But they'd had no time to return deep underground.  How did they managed to trap and transform this man while in the village?
 
@@ -1843,9 +1848,15 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 		``Remember your attack stances this time everyone'', says the \gls{gm}.
 
-		\begin{wrapfigure}{r}{.3\textwidth}
+				The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
 
-			\begin{tabularx}{.3\textwidth}{c|X}
+		Next up, players assign their Combat Skill. On the last \gls{round}, they left it as the default - it added to the Strike Factor. Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2. He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
+
+		The characters roll to get their bearings but achieve only a `4', so Thenton will act at Initiative 7. The \gls{gm} rolls for the nura and achieves `9' - with Speed +1 they will act on Initiative 10.
+
+		\vspace{1em}
+
+	\begin{tabularx}{.3\textwidth}{c|X}
 				\setcounter{enc}{12}
 
 				10 & Ogre grapples Hugi. \\
@@ -1859,13 +1870,7 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 			\end{tabularx}
 
-		\end{wrapfigure}
-
-		The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
-
-		Next up, players assign their Combat Skill. On the last \gls{round}, they left it as the default - it added to the Strike Factor. Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2. He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
-
-		The characters roll to get their bearings but achieve only a `4', so Thenton will act at Initiative 7. The \gls{gm} rolls for the nura and achieves `9' - with Speed +1 they will act on Initiative 10.
+		\vspace{1em}
 
 		``Twelve!'', the \gls{gm} rolls a Morale Check for that last hobgoblin. It is wounded and outnumbered. The \gls{tn} is 12 and it can add its Combat bonus, but the roll still fails.
 
@@ -2054,11 +2059,11 @@ With their FP now replenishing quickly, the group can rest and worry less about 
 
 		``Everyone got two Fatigue from being in two \glspl{round} of combat and another for doing that in armour, so mark down three Fatigue points in your Combat boxes. Then four more for running through three areas in armour. That's seven in total''.
 
-\begin{wrapfigure}{I}{.5\textwidth}
+\vspace{1em}
 
-Hit Points and Fatigue
+\textbf{Hit Points and Fatigue}
 
-	\begin{tabularx}{.95\textwidth}{ccccccccccc}
+	\begin{tabularx}{\linewidth}{ccccccccccc}
 
 		$\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & \Circle & \Circle & \Circle \\ 
 
@@ -2079,7 +2084,7 @@ Hit Points and Fatigue
 
 	\end{tabularx}
 
-\end{wrapfigure}
+\vspace{1em}
 
 	Thenton's player has the Combat Skill at +2, so he marks those Fatigue points in the first and second boxes, leaving him absolutely fine. Then he adds another for wearing armour during that fight; since there are no more Combat Skill Fatigue Boxes, that point goes into his normal Fatigue boxes. Then he receives three more for running across the mountain and another for doing that all in armour. Five Fatigue Boxes are marked down in total. If the characters had continued being active that would be the end, but since they have finished the scene while resting, Thenton heals 4 Fatigue points leaving him with only 7 in total.
 
@@ -2569,9 +2574,7 @@ If the enchanter does not have any languages in common with the target then the 
 
 \spell{Confusion}{Continuous}{Deceit}
 
-	\begin{wrapfigure}{O}{.43\textwidth}
 		\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
-	\end{wrapfigure}
 
 }{}
 
@@ -2620,6 +2623,8 @@ The target is given a simple command by the enchanter, consisting of no more wor
 
 If the enchanter maintains the spell then the target can reroll at the beginning of each scene to break the spell again, otherwise it ends when the enchanter drops the spell.
 
+\end{multicols}
+
 	\begin{tcolorbox}[arc=1mm,tabularx={llp{.5\textwidth}}]
 		Task Bonus & \gls{tn} & \\\hline
 
@@ -2630,6 +2635,8 @@ If the enchanter maintains the spell then the target can reroll at the beginning
 		Code Violation & Variable & Targets forced to act against their own code or god gain an additional bonus to act equal to the amount of \gls{xp} they would receive for completing the action. For example, those following the code of passion would gain 1\gls{xp} for trying a new type of food or drink, so they gain a +1 bonus to resist commands which inhibit their ability to act in this way. Those following Ohta, Goddess of War, gain 10\gls{xp} for bringing down a sufficiently large monster, so they would gain a +10 bonus to resist any enchantment which prohibits them from slaying such quarry. This can also be used against the target, with the enchanter gaining a bonus to affect someone with an order if it adheres to the target's code.\\
 
 	\end{tcolorbox}
+
+\begin{multicols}{2}
 
 Giving a command can take some time, so in combat, Enchanters have to spend the usual 2 Initiative to speak in order to actually make a target do something, once the spell has been cast.
 
@@ -2804,13 +2811,15 @@ The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level. 
 
 	1 & 5 squares plus the caster's Wits. \\
 
-	2 & 10 squares plus the caster's Force sphere rating plus Wits. \\
+	2 & 10 squares plus the caster's Force sphere \\
+	&  rating plus Wits. \\
 
 	3 & The entire \emph{area}. \\
 
 	4 & A number of areas equal to the caster's Wits. \\
 
-	5 & Five full sequential areas plus the caster's Wits. \\
+	5 & Five full sequential areas plus the caster's \\
+	&  Wits. \\
 
 \end{tcolorbox}
 
@@ -3247,7 +3256,6 @@ Trainee artists and necromancers have one thing in common -- fruit.  Students of
 
 \end{tcolorbox}
 
-
 The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move themselves or others along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as griffins, while smaller, lighter people find it easier to take on the form of birds.  Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
 
 Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of. Many conjecture that the face is a facet of one's soul showing in the world. A ginger person transformed into a cat would become a ginger cat. A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep. Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
@@ -3270,9 +3278,9 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 
 \spell{Polymorph}{Continuous}{Medicine}
 
-\sidepic{4}{Roch_Hercka/polymorph.jpg}
-
 The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
+
+\includegraphics[width=.8\linewidth]{images/Roch_Hercka/polymorph.jpg}
 
 Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
 
@@ -3441,15 +3449,15 @@ Runecasters must devote a single Academics slot to learning how to properly insc
 
 \subsection{Special Considerations}
 
-\iftoggle{verbose}{
-		\sidepic{5}{Roch_Hercka/dwarvish_runes.jpg}
-}{}
-
 Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for Quick Spells. They always use Ritual Spells for the highest level of any Sphere, and can use normal casting after that.
 
 However, in return for this deficite, runecasters can learn their craft far more easily. Each level of a sphere they purchase costs 5 \gls{xp} less than it normally would. While buying Fate 2 would normally cost 10 for the first level and 15 for the second, runecasters merely need to spend 5 \gls{xp} for the first level and 10 for the second. If they ever want to use those same sphere through a different path of magic, they must spend 5 \gls{xp} to `repurchase' each level. For example, someone who could cast both alchemical and runic magic might purchase Conjuration at the second level for a total of 15 \gls{xp}. They could only use it for runic magics, but later they could spend 5 \gls{xp} to be able to cast the first level with either the alchemy path or the runecasting path.
 
 Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
+
+\iftoggle{verbose}{
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarvish_runes.jpg}
+}{}
 
 \subsection{Mana Stones}
 
@@ -3859,15 +3867,19 @@ Nobody wants to contact the local dwarves to ask a favour, but once the greatest
 
 The characters are all alchemists in the service of the Alchemist's Guild in Eastlake.  The first part of the campaign involves high-school rivalries against other Clans in the guild such as stealing their homework, or vying for romantic attention.  Soon after, the characters begin proper guild missions, venturing out into the strange areas of the world where normal people will not tread.
 
+\end{multicols}
+
 \vspace{.2cm}
 
-\begin{tcolorbox}[arc=1mm,tabularx={llp{.5\textwidth}}]
+\begin{tcolorbox}[arc=1mm,tabularx={llX}]
 	Clan Alisa & Force & Stonemasons who eventually rose to magic workers. \\
 	Clan Kisha & Conjuration & The priesthood of Laiqu\"{e} who abandoned their god to study alchemy. \\
 	Clan Stein & Invocation & A military clan who maintain ties with the College Outpost at the Coast. \\
 	Clan Ventress & Metamagic & An old family who lived in Eastlake since before the College. \\
 
 \end{tcolorbox}
+
+\begin{multicols}{2}
 }{}
 
 \vspace{.2cm}
@@ -4292,9 +4304,7 @@ The world is here to be lived, to be known, to be connected with. You want all t
 
 \iftoggle{verbose}{
 \hrulefill
-\begin{wrapfigure}{O}{.4\textwidth}
-\includegraphics[width=.4\textwidth]{images/Boris_Pecikozic/dwarves_meet.jpg}
-\end{wrapfigure}
+\includegraphics[width=\linewidth]{images/Boris_Pecikozic/dwarves_meet.jpg}
 
 {\itshape While all the players are thinking about the next move, the \gls{gm} adds up their \gls{xp}. They defeated 6 hobgoblins and 1 ogre. Hobgoblins and ogres are worth 7 each. There were seven in total, so that means 49 \gls{xp} in total, minus one \gls{xp} per member of the group. The final result is that each character receives 15 \gls{xp} and one more \gls{xp} is left in the pot for later (because 46 cannot evenly be divided by 3). After that, each player wants a little additional \gls{xp} for following their own God or codes.
 
