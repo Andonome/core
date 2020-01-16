@@ -78,7 +78,7 @@
 {\Huge}
 
 \titleformat{\section}[frame]
-{\needspace{5em}\normalfont}
+{\needspace{18em}\normalfont}
 {\filright
 \footnotesize
 \enspace SECTION \thesection\enspace}
@@ -203,7 +203,7 @@ Roll & Result \\
 
 \it}{\normalfont}
 
-\newtcolorbox{xpchart}[1]{tabularx={l|p{.9\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
+\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
 
 \newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{adjusted title=Encounters in #1,arc=1mm,tabularx={XXp{.7\textwidth}},code={\setcounter{enc}{19}\setcounter{list}{18}}}
 
@@ -214,7 +214,7 @@ Roll & Result \\
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\story}[2]{\needspace{4cm}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
+\newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
 \newcommand{\best}[1]{\subsubsection{#1}\index{#1}}
 
