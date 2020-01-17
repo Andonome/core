@@ -119,9 +119,10 @@ Character creation is random by default -- it helps new players get started quic
 
 I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
 
+
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
 
-Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
+\begin{wrapfigure}{R}{.6\linewidth} 
 
 	\begin{tcolorbox}[tabularx={cc},arc=1mm]
 
@@ -142,6 +143,10 @@ Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or neg
 	12 & +3 \\
 
 	\end{tcolorbox}
+
+\end{wrapfigure}
+
+Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
 
 \subsection{Player Chosen Characters}
 
@@ -484,11 +489,17 @@ For example, if a player attempts to compete pick someone's pocket, the \gls{npc
 Hobgoblins tend to act quickly.
 The smell of roasted meat is coming from human flesh roasting over each fire in the village, while little troves of hobgoblins each sit around one hearth, hungrily gnawing on undercooked dinners.
 
-		The \gls{gm} wants to know if the characters will notice the village is full of hobgoblins before hollering a greeting.
-They might manage to luck into stealthing through the environment, or might be caught unawares.
+	The \gls{gm} wants to know if the characters will notice the village is full of hobgoblins before hollering a greeting.
+	They might manage to luck into stealthing through the environment, or might be caught unawares.
 She decides the appropriate roll is Wits + Stealth, and that the character with the lowest score should complete the task, since if any one of them give away their position it will spell bad news for each of them.
 
-		The \gls{gm} thinks about the difficulty. On the one hand, it is dark (which makes hiding easier) and there are some signs of battle in the village, such as blood on the grass. On the other hand, the darkness stops the characters seeing the signs of battle. She decides that the various factors cancel each other out and keeps the base \gls{tn} of 7. She adds the hobgoblins' score to this - the highest score counts since any of of the hobgoblins might spot the characters, but all the hobgoblins have the same score. They have Wits -1 and no Vigilance Skill; the hobgoblins' score is added to the \gls{tn} for a final \gls{tn} of 6. Meanwhile, Thenton still has a Wits + Vigilance total of -1.
+	The \gls{gm} thinks about the difficulty.
+	On the one hand, it is dark (which makes hiding easier) and there are some signs of battle in the village, such as blood on the grass.
+	On the other hand, the darkness stops the characters seeing the signs of battle.
+	She decides that the various factors cancel each other out and keeps the base \gls{tn} of 7.
+	She adds the hobgoblins' score to this - the highest score counts since any of of the hobgoblins might spot the characters, but all the hobgoblins have the same score.
+	They have Wits -1 and no Vigilance Skill; the hobgoblins' score is added to the \gls{tn} for a final \gls{tn} of 6.
+	Meanwhile, Thenton still has a Wits + Vigilance total of -1.
 
 	Thenton's player rolls a total of 4.
 
@@ -510,7 +521,6 @@ The \gls{gm} might use a Margin for some variable, for example a bard attempting
 \iftoggle{verbose}{
 
 \begin{exampletext}
-
 
 	While previously the players rolled to hide against their opponent's ability to spot them, this time they roll to see if they spot a hidden opponent. The character with the highest score is Arneson, with Wits 0 and Vigilance +1. The \gls{gm} decides that the hobgoblin should use his Speed Bonus of +1, and his Stealth Skill adds +1 again. The hobgoblins' score of +2 adds to the basic \gls{tn} of 7, producing a final \gls{tn} of 9. Arneson's player rolls $2D6$ to produce a final score of `12' - the roll is a success and the margin is 3. Since the margin is quite good, the \gls{gm} decides that the troop leave the area before they are engaged and gain a +3 bonus to running away.
 
@@ -534,7 +544,6 @@ The \gls{gm} might use a Margin for some variable, for example a bard attempting
 
 \begin{multicols}{2}
 
-
 You might think of the dice as representing random chance in the environment. Just how irritated is that person you're trying to question, and how creative is that craftsman feeling today? Dice are never re-rolled for different results on the same action because once the dice have told you what the situation is, the situation stays put.
 
 Characters attempting to change a Standard Action into a Resting action do not reroll but rather keep the same roll and turn one die up to show a 6, because while spending more time on a task can be very useful, sometimes the environment simply tells you `no'. Such a do-over still suggests initial failure; it just means that the character is trying over and over again until a better result is obtained.
@@ -544,7 +553,6 @@ Characters attempting to change a Standard Action into a Resting action do not r
 \label{xp}\index{Experience}\section{Experience}
 
 \begin{multicols}{2}
-
 
 As the characters practice what they do, they gain \gls{xp}. Each part of the character can be improved by spending \gls{xp}. Buying basic stats is cheap while higher level stats quickly become extremely expensive.
 
@@ -666,7 +674,6 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \end{xpbox}
 
-
 \begin{xpbox}{C}
 
 		Combat/Proj. & Cost \\\hline
@@ -684,7 +691,13 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 \subsection{Concept}
 
 \iftoggle{verbose}{
-\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-2.jpg}
+
+\begin{wrapfigure}{r}{.6\linewidth}
+
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-2.jpg}
+
+\end{wrapfigure}
+
 }{}
 
 Now is the time to look at your character's base Attributes and think about what they might be good at. The best place to start is your highest Attribute. If you have a positive (or simply not negative) Intelligence score, making a spell caster is a good option. Buy off any Wits penalties and put a magic sphere down on the character sheet and a couple of \glsentrylongpl{mp}. Alternatively, if your highest Trait so far is a Body Attribute perhaps this character is more suited to being a fighter. Don't worry if you have negative Body Attributes -- your starting \gls{xp} can buy all of that up to 0 quite easily.
@@ -740,7 +753,6 @@ For a start, he'll need the Performance Skill, and he gets two specialisations w
 
 \end{tcolorbox}
 
-
 \begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
 
 	\textbf{Buildings} & & \textbf{Cost} \\\hline
@@ -761,11 +773,11 @@ For a start, he'll need the Performance Skill, and he gets two specialisations w
 
 	Peasant clothes &  -3 &  50 cp \\
 
-	Noble clothes &  -4 &  1 gp \\\hline
+	Noble clothes &  -4 &  1 gp \\
 
-	Lavish clothes &  -5 &  3 gp \\\hline
+	Lavish clothes &  -5 &  3 gp \\
 
-	Travelling clothes &  -3 &  5 sp \\\hline
+	Travelling clothes &  -3 &  5 sp \\
 
 \end{tcolorbox}
 
@@ -845,7 +857,7 @@ The costs below show the starting price for a few services, plus additional fees
 
 \end{multicols}
 
-\begin{tcolorbox}[arc=1mm,tabularx={lr},title=Services]
+\begin{tcolorbox}[arc=1mm,tabularx={XX},title=Services]
 
 	\textbf{Sellsword} & 10sp/ day \\\hline
 
@@ -893,7 +905,10 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 \subsection{Cultures \& Exchange Rates}
 
-\begin{wrapfigure}{L}{.22\textwidth}
+\index{Exchange Rates}Different cultures have different exchange rates -- the elven versions of standard equipment are always artistically engraved and in high demand; the elves also value the coinage and materials of outsiders very little, so they will not part with their items for human or dwarvish gold easily. As a result, their -- and other -- culture's items are more expensive than human items. The costs of the items here are based on the most common race -- humans. Other races have a multiplier effect based on how expensive their equipment is.
+
+
+\begin{wrapfigure}{r}{.48\linewidth}
 
 	\begin{rollchart}
 
@@ -912,8 +927,6 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 	\end{rollchart}
 
 \end{wrapfigure}
-
-\index{Exchange Rates}Different cultures have different exchange rates -- the elven versions of standard equipment are always artistically engraved and in high demand; the elves also value the coinage and materials of outsiders very little, so they will not part with their items for human or dwarvish gold easily. As a result, their -- and other -- culture's items are more expensive than human items. The costs of the items here are based on the most common race -- humans. Other races have a multiplier effect based on how expensive their equipment is.
 
 Different races will also have different items available. In general, anything of a basic (non adjusted) value of over 2 \gls{sp} will not be available in a village, while towns will not have anything of over 1 gp in value.  Characters can only buy expensive, artesan, items in cities.
 
@@ -934,13 +947,13 @@ Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4.  T
 
 	\end{exampletext}
 
+\end{multicols}
+
 \character{Thenton}
 
 \person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, dagger, flute, camping equipment, 64cp}{}
 
 	}{}
-
-\end{multicols}
 
 \section{Time \& Space}\label{space}\label{time}
 
@@ -1210,10 +1223,6 @@ Everyone on an Initiative score of at least 1 will have enough time for a full a
 
 Heavy weapons are those with a Weight Rating of -1 or greater. Smaller weapons, those with a Weight Rating of -2 or less, and brawling attacks with fists, all count as light weapons.
 
-\vfill\null
-
-\initiativechart
-
 \subsubsection{Quick Actions}
 
 \Gls{quickaction} can interrupt the usual Initiative priorities.
@@ -1227,6 +1236,10 @@ Quick Actions allow characters to guard someone as soon as they see an attack im
 Defence takes time and attention, but nobody needs to worry about running out of attention for a defence.  Since Defence is a \textit{Quick Action}, even characters reduced to negative Initiative can defend.
 
 Anyone can forgoe their defence, but any attacks against them will count as a \textit{Sneak Attack}.\footnote{See page \pageref{sneakattack} for details.}
+
+\vfill\null
+
+\initiativechart
 
 \subsection{Evasion}\index{Combat!Evasion}
 
@@ -3240,7 +3253,7 @@ Trainee artists and necromancers have one thing in common -- fruit.  Students of
 
 \begin{multicols}{2}
 
-	\begin{tcolorbox}[arc=1mm,tabularx={lcc}]
+	\begin{tcolorbox}[arc=1mm,tabularx={XXX}]
 
 	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} \\\hline
 
