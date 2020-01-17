@@ -1,4 +1,4 @@
-\documentclass[titlepage,a4paper,openany]{report}
+\documentclass[titlepage,a4paper,openany]{book}
 \usepackage[indexonlyfirst]{glossaries}
 \setacronymstyle{long-short-desc}
 
@@ -35,7 +35,24 @@
 
 \pagebreak[4]
 
-\section*{Special Thanks ...}
+\iftoggle{verbose}{
+
+\chapter{Introduction}
+
+\begin{multicols}{2}
+
+BIND\footnote{`BIND' stands for `BIND is not D\&D'.} is a zero to hero RPG, with an emphasis on getting an output quickly, and keeping players' decisions in the loop.
+
+Character backstories can be skipped at the start, and thrown in during play, when players know more about the world.
+
+Character creation is random by default, so players have no expectation to understand the entire world before starting play (though you have the option to build a character).
+
+Combat is focussed on giving players real choices, and typically ends quickly as enemies have few hitpoints.
+
+For a starting pack of ideas, the \glsentrylong{gm} has \textit{Adventures in Fenestra} -- a guide to the world, some side quests, and a small bestiary.
+
+
+\subsection*{Special Thanks ...}
 
 \paragraph*{to the Artists}
 
@@ -45,7 +62,10 @@ Neil McDonnell for the basic photograph which became the Polymorph image, Boris 
 
 \paragraph{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
 
-\section*{The Right to Improve}
+\vfill\null
+\columnbreak
+
+\subsection*{The Right to Improve}
 
 This book has some serious problems, and that's fine.  I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and change things.  This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
 
@@ -57,34 +77,25 @@ With a little work, we could get real community-based RPG.  Something that's alw
 
 This particular version was last revised on \today.
 
-\iftoggle{verbose}{
-\chapter*{Introduction}
-
-BIND\footnote{'BIND' stands for 'BIND is not D\&D'.} is a generic zero to hero RPG ruleset, with an emphasis on getting an output quickly, and keeping players' decisions in the loop.
-
-Character backstories can be skipped at the start, and thrown in during play, when players know more about the world.
-
-Character creation is random by default, so players have no expectation to understand the entire world before starting play (though you have the option to build a character).
-
-Combat is focussed on giving players real choices, and typically ends quickly as enemies have few hitpoints.
-
-BIND is a generic fantasy RPG.
-For a starting pack of ideas, the \glsentrylong{gm} has \textit{Adventures in Fenestra} -- a guide to the world, some side quests, and a small bestiary.
+\end{multicols}
 
 }{}
 
-\pagebreak
-
 \chapter{Traits}\index{Traits}\pagenumbering{arabic}
 
-Characters are defined by Traits, and the two main types are Attributes and Skills.  Attributes are innate Traits, deeply tied to who the character is, such as Strength, Speed, Intelligence and Wits.  Skills, meanwhile, are things the character learns.
+\begin{multicols}{2}
+
+Characters are defined by Traits, and the two main types are Attributes and Skills.
+Attributes are innate Traits, deeply tied to who the character is, such as Strength, Speed, and Wits.
+Skills, meanwhile, are things the character learns.
 
 Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and adding a Trait and Skill to the result.  If you roll high enough, you succeed.
+
+\end{multicols}
 
 \section{Character Creation}\index{Character Creation}\label{character_rolls} \iftoggle{verbose}{
 \includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
 }{}
-
 
 \begin{tcolorbox}[tabularx={cll},arc=1mm,adjusted title=Race]
 
@@ -102,9 +113,15 @@ Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and
 
 \end{tcolorbox}
 
+\begin{multicols}{2}
+
 Character creation is random by default -- it helps new players get started quickly.  Either print out a character sheet or make some paper notes as we go. We begin by randomly assigning your race.  Much of character creation is concerned with interpreting your character as it forms -- what kind of person is this you are making? What do the Attribute Bonuses say about them? You will later be deciding on what kind of Skills and training will compliment the character, but the basics will all be random. Grab a pair of D6's and compare the result to the following chart.
 
-\begin{wrapfigure}{R}{.36\textwidth}
+I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
+
+It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
+
+Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
 
 	\begin{tcolorbox}[tabularx={cc},arc=1mm]
 
@@ -125,14 +142,6 @@ Character creation is random by default -- it helps new players get started quic
 	12 & +3 \\
 
 	\end{tcolorbox}
-
-\end{wrapfigure}
-
-I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
-
-It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
-
-Next up, time to roll the Attributes. Roll $2D6$ for each of the Bonuses (or negatives).  Continue rolling until all 6 Attributes have a value.  Your race will give you modifiers to these results.
 
 \subsection{Player Chosen Characters}
 
@@ -170,7 +179,11 @@ The wizard smiled again.
 \end{exampletext}
 }{}
 
+\end{multicols}
+
 \section{Attributes}
+
+\begin{multicols}{2}
 
 These are the basics Traits which characters must use over and over again for every roll.
 
@@ -206,7 +219,12 @@ Where intelligence represents how well a character thinks, Wits just tells you h
 
 Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
 
+\end{multicols}
+
 \section{Skills}
+
+\begin{multicols}{2}
+
 
 \iftoggle{verbose}{
 	\index{Skills}Skills define what a character does with most of their time -- what they are practiced in. They are always paired with an Attribute to give a bonus to rolls. We'll go over how to give your new character Skills under the Experience section\footnote{page \pageref{xp}.}. For now, just jot down a few of the Skills you think your character should have so you can see how they work with the basic actions in the next chapter.}{}
@@ -231,7 +249,7 @@ The Skills here are examples, so this is not a complete list. If you want Skills
 
 \subsection{Academics*}
 
-\begin{wrapfigure}{R}{.25\textwidth} 
+\begin{wrapfigure}{R}{.2\textwidth} 
 
 	\begin{tcolorbox}[tabularx={cc},arc=1mm]
 
@@ -348,9 +366,13 @@ This is the flip side of a number of Skill related to hiding one's doings or pre
 
 \chapter{The Rules}
 
+\end{multicols}
+
 \section{Basic Actions}
 
-\begin{wrapfigure}{R}{.3\textwidth}
+\begin{multicols}{2}
+
+\begin{wrapfigure}{R}{.2\textwidth}
 
 	\begin{rollchart}
 
@@ -417,9 +439,12 @@ The basic system assumes that actions are taken while the player is being hurrie
 
 When taking a Resting Action, one die is presumed to have rolled a 6 and the player simply rolls the other die to obtain a result.
 
-\begin{exampletext}Thenton's player decides to retry his questions as a Resting Action. He already rolled the dice, so he cannot change the result by rerolling; the dice have decided that the village is far too frantic to help with random questions about long-forgotten strangers. Thenton's player instead takes the die that landed on a 1 and changes it to a 6. His total is now 8 and he has passed the test. This means the trio will have to spend longer than anticipated in the village and will not reach the other village until nightfall.
+\begin{exampletext}
 
-After speaking with several villagers he found a single boy who remembered. \emph{These men came for him. They came and surrounded him and said they wanted his book, but then he just started singing, and they all went to sleep. After that he headed over to Caserenna. He must be trying to go over the mountain where the dwarves live. He had a funny accent and I think he came from the South, over those mountains}. Thenton suspected that the spell in the bard's book was some kind of sleeping spell. If he wasn't simply a very boring singer then the trio would have to strike fast if they found him, before he could send them all to sleep.
+	Thenton's player decides to retry his questions as a Resting Action. He already rolled the dice, so he cannot change the result by rerolling; the dice have decided that the village is far too frantic to help with random questions about long-forgotten strangers. Thenton's player instead takes the die that landed on a 1 and changes it to a 6. His total is now 8 and he has passed the test. This means the trio will have to spend longer than anticipated in the village and will not reach the other village until nightfall.
+
+	After speaking with several villagers he found a single boy who remembered. \emph{These men came for him. They came and surrounded him and said they wanted his book, but then he just started singing, and they all went to sleep. After that he headed over to Caserenna. He must be trying to go over the mountain where the dwarves live. He had a funny accent and I think he came from the South, over those mountains}. Thenton suspected that the spell in the bard's book was some kind of sleeping spell. If he wasn't simply a very boring singer then the trio would have to strike fast if they found him, before he could send them all to sleep.
+
 \end{exampletext}
 
 \subsection{Teamwork}\label{teamwork}\index{Teamwork}\index{Group actions}
@@ -432,8 +457,6 @@ If, on the other hand, working together can benefit a situation, one character t
 
 \iftoggle{verbose}{
 
-\sidepic{21}{Boris_Pecikozic/village_above.jpg}
-
 \begin{exampletext}
 
 	Thenton wants to know what exactly that spell-song the boy was talking about means. He has the Academics Skill and never wrote down any specialisations so he asks the \gls{gm} if he can take a specialisation in whatever it is he needs in order to know about that bard and what he was up to. The \gls{gm} tells him to write down `Music' -- it's a fitting specialisation since he already plays the flute.
@@ -445,17 +468,15 @@ Thenton recalled what the old alchemist had said about the book -- surely the ba
 \end{exampletext}
 }{}
 
-\subsection{Resisted Actions}
+\subsection{Resisted Actions}\index{Resisted Actions}
 
-\index{Resisted Actions}  When \glspl{pc} come into disagreements with \glspl{npc}, the \glspl{pc} pick up the dice, and roll.  The \gls{npc}'s Traits add to the \gls{tn}.
+When \glspl{pc} come into disagreements with \glspl{npc}, the \glspl{pc} pick up the dice, and roll.  The \gls{npc}'s Traits add to the \gls{tn}.
 
 For example, if a player attempts to compete pick someone's pocket, the \gls{npc} never rolls Wits + Vigilance.  Instead, if an \gls{npc} has a Wits + Vigilance total of +4, the \gls{tn} for the roll is $7 + 4 = 11$.  The player then rolls against that \gls{tn}.
 
 \iftoggle{verbose}{
 
-	\begin{exampletext}
-
-	\sidepic{3}{Boris_Pecikozic/village_approach.jpg}
+\begin{exampletext}
 
 	Arneson, Thenton and Hugi left that day, and as the sun was setting they saw Casarenna's smoking chimneys ahead, reaching up to the imposing, grey mountains behind. The smell of roasted meat was coming from every house.
 
@@ -480,9 +501,9 @@ She decides the appropriate roll is Wits + Stealth, and that the character with 
 \end{exampletext}
 }{}
 
-\subsection{Margins}
+\subsection{Margins}\index{Margins}
 
-\index{Margins}Most actions are either a success or a failure, but sometimes the \gls{gm} will request to know a roll's Margin -- i.e. just how well the character has succeeded at the task. The Margin is the number of points over the \gls{tn} a roll has gathered. If the \gls{tn} is 9 and a player scores 11 then the Margin is 2.
+Most actions are either a success or a failure, but sometimes the \gls{gm} will request to know a roll's Margin -- i.e. just how well the character has succeeded at the task. The Margin is the number of points over the \gls{tn} a roll has gathered. If the \gls{tn} is 9 and a player scores 11 then the Margin is 2.
 
 The \gls{gm} might use a Margin for some variable, for example a bard attempting to woo a crowd into giving him money might gain $2D6$ copper pieces plus the Margin, so if the Margin is 3 then he would get $2D6+3$ copper pieces. Margins might also be used to gain bonuses on later rolls. Someone attempting to impress a noble court might roll Charisma with the Tactics Skill; the bigger the Margin the more troops they will be trusted with.
 
@@ -490,26 +511,40 @@ The \gls{gm} might use a Margin for some variable, for example a bard attempting
 
 \begin{exampletext}
 
-	\sidepic{4}{Boris_Pecikozic/nura_jump.jpg}
-
-	A scurrying of agile, hungry feet filled the little muddy rows between houses. The trio looked about for an escape route. Unknown to them, one of the hobgoblins was meant to be keeping a lookout from the roof of the cottage on the edge of town. He observed them for a brief moment and then jumped off, axe in hand, ready to make up for all the meals he had missed while pretending to keep guard.
 
 	While previously the players rolled to hide against their opponent's ability to spot them, this time they roll to see if they spot a hidden opponent. The character with the highest score is Arneson, with Wits 0 and Vigilance +1. The \gls{gm} decides that the hobgoblin should use his Speed Bonus of +1, and his Stealth Skill adds +1 again. The hobgoblins' score of +2 adds to the basic \gls{tn} of 7, producing a final \gls{tn} of 9. Arneson's player rolls $2D6$ to produce a final score of `12' - the roll is a success and the margin is 3. Since the margin is quite good, the \gls{gm} decides that the troop leave the area before they are engaged and gain a +3 bonus to running away.
 
 	The thatched roof on the nearby cottage rustled and Arneson instinctively drew his companions back. They turned and ran before their adversary could make his leap down to meet them with his axe. They ran as swiftly as they could into the safety of the darkness surrounding Casarenna but the hobgoblins stampeded fast behind them, running as swiftly as they could with guttural cries and war songs which Thenton could only guess translated to something about dinner.
 
+	\begin{wrapfigure}{r}{.3\textwidth}
+
+		\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_jump.jpg}
+
+	\end{wrapfigure}
+
+	A scurrying of agile, hungry feet filled the little muddy rows between houses. The trio looked about for an escape route. Unknown to them, one of the hobgoblins was meant to be keeping a lookout from the roof of the cottage on the edge of town. He observed them for a brief moment and then jumped off, axe in hand, ready to make up for all the meals he had missed while pretending to keep guard.
 	It was twenty long minutes of running before they were confident they were safe. Hugi and Thenton tenderly tried to regain their own breath while Arneson went to gather wood for a temporary shelter. Despite their distance from the village, they were kept awake by the wind bringing faint yet deep and reverberating songs from the village over to them all through the night.
 
 	\end{exampletext}
 }{}
 
+\end{multicols}
+
 \section{What the Dice Mean}
+
+\begin{multicols}{2}
+
 
 You might think of the dice as representing random chance in the environment. Just how irritated is that person you're trying to question, and how creative is that craftsman feeling today? Dice are never re-rolled for different results on the same action because once the dice have told you what the situation is, the situation stays put.
 
 Characters attempting to change a Standard Action into a Resting action do not reroll but rather keep the same roll and turn one die up to show a 6, because while spending more time on a task can be very useful, sometimes the environment simply tells you `no'. Such a do-over still suggests initial failure; it just means that the character is trying over and over again until a better result is obtained.
 
+\end{multicols}
+
 \label{xp}\index{Experience}\section{Experience}
+
+\begin{multicols}{2}
+
 
 As the characters practice what they do, they gain \gls{xp}. Each part of the character can be improved by spending \gls{xp}. Buying basic stats is cheap while higher level stats quickly become extremely expensive.
 
@@ -526,8 +561,14 @@ The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may re
 
 \iftoggle{verbose}{
 
-\sidepic{4}{Roch_Hercka/xp-1.jpg}
+	\begin{wrapfigure}{l}{.6\linewidth}
+
+		\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-1.jpg}
+
+	\end{wrapfigure}
+
 }{}
+
 
 
 Each additional level of a Trait has a steeply progressive cost. The costs represent buying the next level; the first level of a school of magic costs 15 and the second costs 20 -- buying up to the second level costs 35 \gls{xp} in total. Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp}.
@@ -536,7 +577,7 @@ Attributes have a standard maximum of +3 and minimum of -3. This is adjusted by 
 
 Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so taking a character from -4 Strength to 0 would cost 20 \gls{xp}.
 
-\pagebreak
+\columnbreak
 
 		\setcounter{xp}{10}
 		\newcounter{bon}\setcounter{bon}{1}
@@ -628,7 +669,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \begin{xpbox}{C}
 
-		Combat/Projectiles & Cost \\\hline
+		Combat/Proj. & Cost \\\hline
 
 		+1 & 10 \\
 
@@ -643,7 +684,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 \subsection{Concept}
 
 \iftoggle{verbose}{
-\sidepic{4}{Roch_Hercka/xp-2.jpg}
+\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-2.jpg}
 }{}
 
 Now is the time to look at your character's base Attributes and think about what they might be good at. The best place to start is your highest Attribute. If you have a positive (or simply not negative) Intelligence score, making a spell caster is a good option. Buy off any Wits penalties and put a magic sphere down on the character sheet and a couple of \glsentrylongpl{mp}. Alternatively, if your highest Trait so far is a Body Attribute perhaps this character is more suited to being a fighter. Don't worry if you have negative Body Attributes -- your starting \gls{xp} can buy all of that up to 0 quite easily.
@@ -658,7 +699,12 @@ Characters begin play with an amount of \gls{xp} stipulated by the \gls{gm} depe
 
 For a start, he'll need the Performance Skill, and he gets two specialisations with it because it's a specialised Skill. `Poetry' is a good start, and perhaps the flute after that, because why not? That costs 5 \gls{xp} so I have 45 left. He should have some basic Combat ability, so I'm going to give him +1 in the Combat Skill -- that'll cost 10, and why not put him at +2 for another 20 \gls{xp}? That leaves only 15 \gls{xp} to go. Since he's a fighter he needs the Dexterity penalty removed. Removing the penalty costs only 5 \gls{xp}, so with 10 left I'm going to buy a level of Empathy to make him a socialite. Deceit would also be good, but I think a knightly poet would be too naive for that. Finally, a member of the nobility, even a minor noble, should have some basic Academics knowledge, so his last Trait will be the first level of the Academics Skill.}{}
 
+\end{multicols}
+
 \section{Gold \& Goods}\label{goods}\index{Equipment}
+
+\begin{multicols}{2}
+
 
 \begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
 
@@ -727,7 +773,7 @@ For a start, he'll need the Performance Skill, and he gets two specialisations w
 
 	\textbf{Professional Tools} & & \\\hline
 
-	Cart & & \\
+	Cart & & 1 gp \\
 
 	Grappling hook &  -2 &  1 sp \\
 
@@ -779,12 +825,10 @@ An open ended list of equipment is provided to give a basic idea of costs. The b
 
 An average villager will make little spare money -- perhaps 10 \gls{sp} in a year if they bother to save. Sellswords can expect to make upwards to 10 gold per year if they are hired by a villagemaster. The average free trader -- a blacksmith or cloth dyer -- can expect to make 5 \gls{sp} in a month.
 
-\pagebreak
-
 \subsection{Weight \& Encumbrance}\index{Weight}\index{Encumbrance}
 
 \iftoggle{verbose}{
-	\sidepic{4}{Roch_Hercka/dwarf_encumbrance.jpg}
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarf_encumbrance.jpg}
 }{} 
 
 We measure weight in broad terms.  Characters have a \textit{weight rating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a weight rating of 7.  Items work similarly, with weight ratings between -4 (for very light items) and +11 (for wardrobes, carts, and boulders).
@@ -798,6 +842,8 @@ Characters can carry items with a maximum weight rating of their Strength Bonus 
 Money can buy you more than things.  In fact, for the right money in a large city, characters can buy a full entourage.  Villages, however, will not admit of the same opportunities.
 
 The costs below show the starting price for a few services, plus additional fees for the details.  For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 950sp.
+
+\end{multicols}
 
 \begin{tcolorbox}[arc=1mm,tabularx={lr},title=Services]
 
@@ -833,7 +879,10 @@ The costs below show the starting price for a few services, plus additional fees
 
 \end{tcolorbox}
 
+\begin{multicols}{2}
+
 \iftoggle{verbose}{
+
 	For example, Thenton, with a Strength Bonus of +1, picks up a weighty battle axe. The Weight Rating is 3, so this inflicts an Encumbrance Penalty of 2. Thenton's effective Speed Bonus drops to -2, reducing his Initiative (covered below) and ability to run.  He will also gain 2 Fatigue points at the end of each scene\footnote{See page \pageref{time} for notes on scenes.} where he carries it.
 
 	}{}
@@ -844,7 +893,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 \subsection{Cultures \& Exchange Rates}
 
-\begin{wrapfigure}{L}{.28\textwidth}
+\begin{wrapfigure}{L}{.22\textwidth}
 
 	\begin{rollchart}
 
@@ -891,7 +940,11 @@ Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4.  T
 
 	}{}
 
+\end{multicols}
+
 \section{Time \& Space}\label{space}\label{time}
+
+\begin{multicols}{2}
 
 This game uses the entirely abstract measurements of the `scene' and `square' for time and space. They are more compliant to narrative than physics, and form the basis of all movement and actions whenever people start tracking how long something takes and where everyone is.
 
@@ -909,9 +962,13 @@ Space is tracked through \glspl{square}. A \gls{square} is just any unit of spac
 
 The next unit of space is the `\gls{area}'. An \gls{area} is just any \gls{area} which looks different from another. While traipsing through a small dungeon, each room and cavern entered might be thought of as an \gls{area}. When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area a village. \footnote{If all this looks like a repugnant abstraction, just set a square to two yards, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
 
+\end{multicols}
+
 \chapter{Races \& Cultures}\index{Cultures}
 
 \section[Dwarves]{Dwarven Citadels}\index{Dwarves}
+
+\begin{multicols}{2}
 
 Far underground, below the soil or coiled up within mountains, the underwyrms roam. Some are as long as a castle, while others stretch only the length of a few horses. Their head is that of a streamlined lizard, and they snake, limbless through the bowls of the world, jutting aside or just eating earth and stone. They feed on a combination of minerals, rocks and the underground fungi. And in their path they leave wide, wide tunnels.
 
@@ -949,7 +1006,11 @@ Dwarves who leave the mountain are generally traders, but since all male dwarves
 
 Other dwarves will leave specifically in search of glory and wealth. They will introduce themselves in a formal manner as adventurers and inquire about local military tasks. Their wealth will be focussed on buying good quality weapons and armour and any spare will be donated to their local temple.
 
+\end{multicols}
+
 \section[Elves]{Elven Glades}\index{Elves}
+
+\begin{multicols}{2}
 
 Elves array themselves in a circular fashion around a sacred spot where mana springs up from the ground like a wellspring.
 Typically, elves base their society around `underglass' houses. They first excavate the entire house with two openings to the top -- one as an exit and the other as an above-ground window. The window is composed of thick glass -- thick enough for a herd of deer to gallop across. It lets in sunlight during the day, and at night, when elvish hearths bloom, little lights can be seen across the forest bed as the fire-light shines out of the underglass houses.
@@ -982,7 +1043,11 @@ Player characters will start as younger elves, without the experience, keen inte
 
 Elves tend to view their own young as expendable. They do not reproduce rapidly, but over long centuries a single elf can easily have many children. Since the youth tend to be stronger than their elders, these young things are encouraged to perform the most dangerous of tasks such as hunting large animals or defending a village through melee rather than with a bow. As a result of this attitude, elves encourage many of their young to go out into the world and seek knowledge before they become old, frail and strange.
 
+\end{multicols}
+
 \section[Gnolls]{Gnoll Hunting Grounds}
+
+\begin{multicols}{2}
 
 Small groups of \index{Gnolls}gnolls mark out miles upon miles of ground as their own hunting grounds. They do not farm or make stone houses or metal instruments -- they make only basic hunting weapons and temporary shelters. Generally, they are organised into families and a group of families will organise into a clan. People change from one clan to another depending upon romantic partners or where they find themselves. The most important thing to a gnoll is their hunting party -- gnoll hunting parties generally travel everywhere together.
 
@@ -1004,7 +1069,11 @@ Gnolls are naturally aggressive creatures. They start with an Aggression score o
 
 Gnolls are highly tribal creatures, but can be excluded from their own societies for a variety of offences, such as failing a martial challenge and then fleeing rather than accepting death. These rogue gnolls who do not manage to join another tribe can end up wandering the lonely path of the adventurer. Others are `corrupted' (as their fellow gnolls see it) by the worldly goods of the other humanoids -- they gain a taste for wine, clothes, horses, jewellery and such then end up trying to grab money in order to get more.
 
+\end{multicols}
+
 \section[Gnomes]{Gnomish Warrens}
+
+\begin{multicols}{2}
 
 \index{Gnomes}Gnomes live in little warrens, under the ground, but enjoy lots of sunlit openings near the edge of their villages. Their network of tunnels and homes extend often up to fifty feet below the ground. These little communities often keep two-level farms -- they tunnel beneath what others consider to be good farmland and then pull cabbages, potatoes, carrots and other rooting vegetables down from the ceiling rather than up from the earth. They consider humans to be quite backwards, since the vegetables clearly emerge at the bottom when they are grown.
 
@@ -1026,9 +1095,13 @@ Gnomes often have a hard time focussing on things, but once they successfully do
 \subsection{Starting Characters}
 Gnomes are fairly adventure-averse as a rule, but have a knack of ending up on them by accident. Many adventure in order to pick up rare jewels for alchemical mana stones. Some few gnomes take to thievery and don't so much adventure as accompany adventurers in order to wait for lucrative opportunities.
 
-\section[Humans]{Human Towns}
+\end{multicols}
 
-\index{Humans}Humans arrange themselves into towns at the centre of a sprawling mass of villages, reaching out across the land like tendrils. The houses in the village will each pay some portion of their goods to the \index{Villagemaster}Villagemaster who will live separately from the other humans in a larger house, often with human servants. The villagemasters will then give a portion of their earnings to a \index{Townmaster}Townmaster. The villages produce foods while the towns produce specialist products from guilds. The guilds might be in charge of breads, horses, weapons, ale, clothing or anything else which humans can produce. Almost every human \ family in a town is part of a guild which then trades their produce for the villages' food. The townmasters then bring in more food by paying the guilds for produce with coin, which the guilds then use to buy more food. Humans love hierarchies and are often confused about what they are doing if they cannot identify a nearby leader.
+\section[Humans]{Human Towns}\index{Humans}
+
+\begin{multicols}{2}
+
+Humans arrange themselves into towns at the centre of a sprawling mass of villages, reaching out across the land like tendrils. The houses in the village will each pay some portion of their goods to the \index{Villagemaster}Villagemaster who will live separately from the other humans in a larger house, often with human servants. The villagemasters will then give a portion of their earnings to a \index{Townmaster}Townmaster. The villages produce foods while the towns produce specialist products from guilds. The guilds might be in charge of breads, horses, weapons, ale, clothing or anything else which humans can produce. Almost every human \ family in a town is part of a guild which then trades their produce for the villages' food. The townmasters then bring in more food by paying the guilds for produce with coin, which the guilds then use to buy more food. Humans love hierarchies and are often confused about what they are doing if they cannot identify a nearby leader.
 
 In the villages, houses are build half above ground and half below, with thatch or slate roofs. In towns, all houses are build well above the ground, sometimes with one house on top of another so that people must climb ladders to get to the top. Humans' incredible strength gives them the ability to break stone and port it from far away quarries to build immense houses above the ground, sometimes up to four houses high.
 
@@ -1051,6 +1124,9 @@ Humans have great stamina when it comes to walking. They take only 1 Fatigue poi
 \subsection{Starting Characters}
 
 Humans reproduce at an alarming rate -- instead of simply replacing themselves with two or three more humans, a couple might make as many as fourteen and then send the extra ones out to cause a mess -- perhaps trying to steal other people's farmland, or raise them to be monster hunters who die in an effort to protect other farms or sellswords up for use to the highest bidder. Of these, the less well connected ones often wander the earth aimlessly searching for the offer of money for murder. Others join organisations which teach them paths of magic. Both alchemists and priests are respected among humans, though priests are the authorities to whom people turn when they need guidance.
+
+
+\end{multicols}
 
 \chapter{Combat}\index{Combat}
 
@@ -1118,19 +1194,13 @@ Each \gls{round} you select your tactics anew and have a range of options for ma
 
 \section{The Attack}
 
+\begin{multicols}{2}
+
 In combat, \glspl{pc} divide their Combat Skill between three `Combat Factors' -- \gls{strike}, \gls{init} and \gls{evasion}.
 We represent the Skill with a number of coins, then place the coins directly onto the three Combat Factors in any combination. Someone with a Combat Skill of +2 might place two coins on the Strike score to hit more accurately, or could place 1 coin on Initiative to hit faster and another on Evasion to better avoid attacks.
 In all cases there is an optimal configuration which will itself depend upon the enemy's placement of resources.\footnote{Players and \glsentrylongpl{gm} are free to cover their coins with their hand until everyone has placed their resources for the round.}
 
 \subsection{Initiative}
-
-\begin{wraptable}[20]{r}{.4\textwidth}
-
-\vspace{-3cm}
-
-\initiativechart
-
-\end{wraptable}
 
 At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative. Each character can adjust that number for their personal Initiative score. The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers. Everyone in the fight acts in descending order of Initiative -- highest to lowest.
 
@@ -1140,9 +1210,15 @@ Everyone on an Initiative score of at least 1 will have enough time for a full a
 
 Heavy weapons are those with a Weight Rating of -1 or greater. Smaller weapons, those with a Weight Rating of -2 or less, and brawling attacks with fists, all count as light weapons.
 
+\vfill\null
+
+\initiativechart
+
 \subsubsection{Quick Actions}
 
-\gls{quickaction} can interrupt the usual Initiative priorities. Any time someone attempts a Quick Action, they take their action immediately, even if they have a negative Initiative score. If two characters interrupt the Initiative flow with Quick Actions then whoever currently has the highest Initiative Score goes first.
+\Gls{quickaction} can interrupt the usual Initiative priorities.
+Any time someone attempts a Quick Action, they take their action immediately, even if they have a negative Initiative score.
+If two characters interrupt the Initiative flow with Quick Actions then whoever currently has the highest Initiative Score goes first.
 
 Quick Actions allow characters to guard someone as soon as they see an attack impending upon a friend, to defend against missile attacks, or to shout a few words.
 
@@ -1173,14 +1249,19 @@ Animals use a Skill called `\index{Aggression}Aggression' to Strike -- Aggressio
 \subsection{Stances}\index{Combat!Stances}
 
 \iftoggle{verbose}{
-	\sidepic{60}{Roch_Hercka/stances.jpg}
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/stances.jpg}
 }{}
 
 Characters can attack in an \textit{Aggressive} or \textit{Defensive} stance. This system takes the Defensive stance as default -- the Dexterity Bonus is added to the Evasion score to keep the character safe. However, a character can forego safety for additional combat ability and add the Dexterity Bonus to Strike should they wish. Any Bonuses to Evasion from weapons also add to the Strike Factor. The score cannot be divided between the two -- the Stances are an `all or nothing' affair. Delicate decisions concerning priorities require the Combat Skill, which can be added one piece at a time to any of the Combat Factors.
 
 If a character's Evasion score ever becomes negative, it applies to the Strike score when using the Defensive Stance. It is possible to swap it back by taking the Aggressive stance but this almost guarantees that opponents will hit the character every time they strike.
 
+\end{multicols}
+
 \section{Damage}\index{Damage}
+
+\begin{multicols}{2}
+
 
 Once you hit, roll $1D6$ plus your Strength Bonus to determine Damage. The Damage is then taken off the enemy's \gls{hp} Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
 
@@ -1220,9 +1301,14 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 
 	\end{tcolorbox}}{}
 
+\end{multicols}
+
 \section{Fate Points}\label{fate_points}\index{Fate Points}
 
-\begin{wraptable}{O}{.24\textheight}
+\begin{multicols}{2}
+
+
+\begin{wraptable}{O}{.17\textheight}
 
 	\begin{xpbox}{C}
 		Base FP & Regeneration \\\hline
@@ -1251,7 +1337,12 @@ While \glspl{npc} begin with 0 \gls{fp}, they too regenerate the normal amount e
 
 One exception here is creatures without a Charisma Attribute. Animals, undead and other creatures without any Charisma Bonus can never store \gls{fp} except through the use of Magic.
 
+\end{multicols}
+
 \section{Fatigue}
+
+\begin{multicols}{2}
+
 
 \label{fatigue}\index{Fatigue}Fighting, running and swimming can really take it out of you, especially when wearing heavy armour. Characters gain Fatigue points for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
@@ -1289,14 +1380,22 @@ Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} 
 
 \paragraph{Long Rest} Any full night of rest allows characters to heal 5 Fatigue Points plus their Strength Bonus.
 
+\end{multicols}
+
 \section{Weapons}
+
+\begin{multicols}{2}
+
 Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself. Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about. Longer weapons also grant a bonus to Initiative, representing the fighter's ability to hit opponents before they hit them due to the weapon's length.
 
-Each weapons is rated for `Dam' (the Damage bonus), `Init' (the bonus to Initiative, generally through reach) and `Ev' (the weapon's Evasion bonus). The Evasion bonus actually adds directly to Dexterity, so if the wielder is using the Aggressive \index{Stance}stance, it is added to the Strike score, leaving Evasion at 0.
+Each weapons is rated for `Dam' (the Damage bonus), `Init' (the bonus to Initiative, generally through reach) and `Ev' (the weapon's Evasion bonus).
+The Evasion bonus actually adds directly to Dexterity, so if the wielder is using the Aggressive stance, it is added to the Strike score, leaving Evasion at 0.\index{Stance}
 
 Each weapon has a Weight Rating, just like any item. For every point a weapon's Weight Rating exceeds its wielder's Strength Bonus, the wielder gains 1 Encumbrance, which subtracts from the character's Effective Speed as they move slower and swings the weapon slower. Weapons held in only one hand add +2 to their Weight Rating.
 
 Finally, some weapons also has an in-built `Knack' -- a special ability they allow the wielder to use.  See page \pageref{knacks} for details.
+
+\end{multicols}
 
 \newcommand{\weaponschart}{
 	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrp{.30\textwidth}}]
@@ -1376,23 +1475,31 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 \weaponschart
 
-\subsubsection{Light Weapons}
-\index{Light Weapons}Light Weapons are those with a Weight Rating of -2 or less. People wield them in one hand only, without problem, and can slash or stab with them in flurries of blows, quickly. They require only 4 Initiative points to attack with, so while an axe is far more damaging than a dagger, a dagger can unleash a flurry of blows before a single axe swing has taken place.
+\begin{multicols}{2}
 
-\subsubsection{Medium Weapons}
-\index{Combat!Medium Weapons}Swords, axes and all the regular weapons of warfare require a full 6 Initiative points to be swung. They grant excellent Combat Bonuses, often increasing the effects of all three Attributes. These weapons are the standard weapons which most people will be using throughout the campaign -- they cover the Weight Ratings from -1 to 4.
+\subsubsection{Light Weapons}\index{Light Weapons}
+
+Light Weapons are those with a Weight Rating of -2 or less. People wield them in one hand only, without problem, and can slash or stab with them in flurries of blows, quickly. They require only 4 Initiative points to attack with, so while an axe is far more damaging than a dagger, a dagger can unleash a flurry of blows before a single axe swing has taken place.
+
+\subsubsection{Medium Weapons}\index{Combat!Medium Weapons}
+
+Swords, axes and all the regular weapons of warfare require a full 6 Initiative points to be swung. They grant excellent Combat Bonuses, often increasing the effects of all three Attributes. These weapons are the standard weapons which most people will be using throughout the campaign -- they cover the Weight Ratings from -1 to 4.
 
 Medium weapons can be wielded in one hand, but with some difficulty, as this adds +2 to their Weight Rating. A great sword can certainly be held up by one hand alone, but it will move from a Weight Rating of 4 to 6, meaning that a normal human, with Strength +1, would suffer a -5 penalty to their Speed Bonus, and therefore Initiative. While this is a steep penalty to Initiative, the price can be worth the wielding of a shield with a weapon.
 
 Anyone wielding a medium (or indeed heavy) weapon with a weight rating equal or greater than their racial maximum has an unwieldy weapon indeed, and suffers a -3 penalty to their Initiative.
 
-\subsubsection{Heavy Weapons}
-\index{Combat!Heavy Weapons}Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a Weight Rating of 4 or more. They grant excellent Bonuses to the Combat Factors, but require 8 Initiative points to attack.
+\subsubsection{Heavy Weapons}\index{Combat!Heavy Weapons}
+
+Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a Weight Rating of 4 or more. They grant excellent Bonuses to the Combat Factors, but require 8 Initiative points to attack.
 
 Anyone insane enough to attempt to use a large weapon one handed must suffer through a +4 increase in the weapon's Weight Rating, which would make such weapons prohibitively heavy for most people.
 
-\subsection{Shields}
-\index{Shields}Shields are a special type of weapon used almost exclusively to defend. They have stats like any other weapon but with one important difference -- their Evasion bonus always adds to the Evasion Factor. This is true even if the character is using the Aggressive Stance. Characters using a sword and a shield can add the shield's bonus to Evasion to their Evasion Factor while using the sword's Evasion Bonus and their Dexterity Bonus to Strike the enemy.
+\subsection{Shields}\index{Shields}
+
+Shields are a special type of weapon used almost exclusively to defend. They have stats like any other weapon but with one important difference -- their Evasion bonus always adds to the Evasion Factor. This is true even if the character is using the Aggressive Stance. Characters using a sword and a shield can add the shield's bonus to Evasion to their Evasion Factor while using the sword's Evasion Bonus and their Dexterity Bonus to Strike the enemy.
+
+\end{multicols}
 
 \newcommand{\armourchart}{
 
@@ -1415,11 +1522,13 @@ Anyone insane enough to attempt to use a large weapon one handed must suffer thr
 
 \section{Armour}\index{Armour}
 
-\begin{wraptable}{r}{.35\textwidth}
+\begin{wraptable}{r}{.24\textwidth}
 
 \armourchart
 
 \end{wraptable}
+
+\begin{multicols}{2}
 
 Armour defends characters by lowering incoming Damage. In game terms, armours have a \gls{dr} rating which subtracts from Damage.
 
@@ -1427,15 +1536,15 @@ Armour can cover more or less of a character, and therefore comes with three rat
 
 \subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
 
-\iftoggle{verbose}{
-	\sidepic{5}{Roch_Hercka/vitals_shot.jpg}
-}{}
-
 When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
 
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
+
+\iftoggle{verbose}{
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/vitals_shot.jpg}
+}{}
 
 \iftoggle{verbose}{Vitals Shots not only provide incentive for people to push their Strike Factor as high as possible, even at the expense of their own defence.  It also provides an equalizer for weaker forces as even the most heavily armoured creature can be struck by a lucky blow.}{}
 
@@ -1445,7 +1554,13 @@ All armour has a Weight Rating, just like any other item. The Weight Ratings abo
 
 Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
 
+\end{multicols}
+
 \section{Monsters Never Attack}
+
+\begin{multicols}{2}
+
+
 Well, obviously they attack, but the \gls{gm} does not have to roll for their attack.  Instead, players roll to \textit{avoid} incoming attacks at \gls{tn} 8 plus the monster's Strike Factor.
 
 If a player faces down a hobgoblin with a Strike Factor of +2, then the player must roll with their Evasion Factor at a \gls{tn} of 10.  If the player fails the roll, the monster hits.
@@ -1455,7 +1570,12 @@ Players wearing Complete Armour receive a Vitals Shot when failing an Evasion ro
 
 \gls{gm} may roll the attack for \glspl{npc} in order to emphasize their agency -- the Mathematics doesn't change either way.  This rule is simply in place to make sure that players do most of the rolling, though \gls{gm} are still encouraged to roll for Damage.
 
+\end{multicols}
+
 \section{Movement}\index{Movement}
+
+\begin{multicols}{2}
+
 
 By spending two Initiative, characters can run as a Quick Action, acting before all other actions. Characters can run 3 squares plus their Speed Bonus during this time. This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
 
@@ -1469,9 +1589,7 @@ Unfortunately there was little they could do to hide themselves, and a band of h
 The trio had reached halfway up the mountain by this point but the hobgoblins were faster than them, and stronger.
 Thenton thought for a moment about abandoning Hugi if there was a problem - his little dwarvish legs were no good for sprinting. Of course Hugi's death would not buy them much time, and Arneson would never stand for it. No, they would have to stick together to survive.
 
-	\begin{wrapfigure}{O}{.6\textwidth}
-		\includegraphics[width=.6\textwidth]{images/Boris_Pecikozic/nura_brawl.jpg}
-	\end{wrapfigure}
+	\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
 
 	The trio climbed for a while longer, looking back every few moments to note how close the hobgoblins were behind them. An ogre was among their ranks, so they must have come from a very deep cavern.
 
@@ -1538,7 +1656,11 @@ The hoboblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 
 }{}
 
+\end{multicols}
+
 \section{Complications \& Manoeuvres}
+
+\begin{multicols}{2}
 
 \subsection{Complications}
 
@@ -1655,7 +1777,12 @@ Each weapon will have to be held in one hand, increasing its Weight Rating by 2.
 
 Shields, uniquely, can add their Evasion Bonus to the character's Evasion Factor even while the wielder is in the Aggressive Stance. As a result, someone could use a shield's bonus to Evasion while using a sword's Evasion Bonus to add to their Strike Strike score. In this case, Dexterity would always be added to Strike, along with the sword's Bonus.
 
+\end{multicols}
+
 \section{Combat Summary}\index{Combat Summary}
+
+\begin{multicols}{2}
+
 
 \begin{enumerate}
 	\item Characters publicly declare stances. If no stance is declared, assume a Defensive stance. The \gls{gm} rolls for enemy Morale if appropriate.
@@ -1692,8 +1819,13 @@ As Thenton's sword swooped down it opened up his target's arm. The last one stan
 \end{exampletext}
 }{}
 
-\section{Ranged Combat}
-\index{Ranged Combat}Projectiles have their own Skill which is bought just like the Combat Skill and always add the Dexterity Bonus to make an attack. Archers roll to hit and then Damage, just as with Combat. The \gls{tn} is always 6 plus one for every five full squares away the target is. Targets 14 squares away would have a \gls{tn} of 8 to hit. Most targets cannot use any weapons to add to their Evasion Factor (except shields) but can use the Speed Bonus to evade missile attacks if they are on the run or Keeping Edgy.
+\end{multicols}
+
+\section{Ranged Combat}\index{Ranged Combat}
+
+\begin{multicols}{2}
+
+Projectiles have their own Skill which is bought just like the Combat Skill and always add the Dexterity Bonus to make an attack. Archers roll to hit and then Damage, just as with Combat. The \gls{tn} is always 6 plus one for every five full squares away the target is. Targets 14 squares away would have a \gls{tn} of 8 to hit. Most targets cannot use any weapons to add to their Evasion Factor (except shields) but can use the Speed Bonus to evade missile attacks if they are on the run or Keeping Edgy.
 
 Just as with weapon combat, a high enough roll can be a Vitals Shot, ignoring all \gls{dr}.
 
@@ -1729,9 +1861,15 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 		``Remember your attack stances this time everyone'', says the \gls{gm}.
 
-		\begin{wrapfigure}{r}{.3\textwidth}
+				The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
 
-			\begin{tabularx}{.3\textwidth}{c|X}
+		Next up, players assign their Combat Skill. On the last \gls{round}, they left it as the default - it added to the Strike Factor. Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2. He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
+
+		The characters roll to get their bearings but achieve only a `4', so Thenton will act at Initiative 7. The \gls{gm} rolls for the nura and achieves `9' - with Speed +1 they will act on Initiative 10.
+
+		\vspace{1em}
+
+		\begin{tabularx}{.3\textwidth}{c|X}
 				\setcounter{enc}{12}
 
 				10 & Ogre grapples Hugi. \\
@@ -1743,16 +1881,9 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 				5 & Thenton kills the ogre. \\
 
 
-			\end{tabularx}
+		\end{tabularx}
 
-		\end{wrapfigure}
-
-		The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
-
-		Next up, players assign their Combat Skill. On the last \gls{round}, they left it as the default - it added to the Strike Factor. Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2. He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
-
-		The characters roll to get their bearings but achieve only a `4', so Thenton will act at Initiative 7.
-The \gls{gm} rolls for the hoboblins and achieves `9' - with Speed +1 they will act on Initiative 10.
+		\vspace{1em}
 
 		``Twelve!'', the \gls{gm} rolls a Morale Check for that last hobgoblin. It is wounded and outnumbered. The \gls{tn} is 12 and it can add its Combat bonus, but the roll still fails.
 
@@ -1794,9 +1925,11 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 ``Three! \ They pull out crossbows and start cranking them {\dots}''
 	\end{exampletext}}{}
 
+\end{multicols}
+
 \section{Morale}
 
-Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at TN 6.
+Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 6.
 
 \newcommand{\moralechart}{
 	\begin{tcolorbox}[title={Morale Chart},arc=1mm,tabularx={cp{.75\textwidth}}]
@@ -1818,6 +1951,8 @@ Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at TN 
 }
 
 \moralechart\index{Morale}
+
+\begin{multicols}{2}
 
 Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
 
@@ -1843,14 +1978,22 @@ So much for that plan.
 	\end{exampletext}
 }{}
 
-\section{Chases}
-\index{Chases}Chases form some of the most dramatic scenes in an adventure. When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent.  But when running through marshes, down alleys, climbing up cliffs, or otherwise finding a reason to change direction, \glspl{pc} must roll.
+
+\end{multicols}
+
+\section{Chases}\index{Chases}
+
+\begin{multicols}{2}
+
+Chases form some of the most dramatic scenes in an adventure. When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent.  But when running through marshes, down alleys, climbing up cliffs, or otherwise finding a reason to change direction, \glspl{pc} must roll.
 
 The system is simple -- one player rolls $2D6$ for the group. Each person then modifies this group score. Since the party will probably run at different paces, they have the option of abandoning slower members or slowing down to the pace of the slowest member.
 
 The \gls{tn} is 6 plus the enemy's Speed + Athletics Bonuses. Failure means the characters are instantly caught, before they are able to run anywhere. If the players hit the \gls{tn} they manage to run through 1 area while being chased. For every Marginal point, they run through an additional area. If the Margin is ever 3 or more then they completely evade the enemy. If the party obtain less than total success, they and their pursuers both move and must roll again.
 
 The table is a guide to an unaltered roll. In most situations enemy Traits will affect the actual results of such a total by increasing or decreasing the \gls{tn}.
+
+\end{multicols}
 
 	\begin{tcolorbox}[arc=1mm,tabularx={lp{.85\textwidth}}]
 
@@ -1871,6 +2014,8 @@ The table is a guide to an unaltered roll. In most situations enemy Traits will 
 	{\textless}5 & The characters are immediately caught. \\
 
 \end{tcolorbox}
+
+\begin{multicols}{2}
 
 The \gls{gm} is encouraged to give a fast-paced description of fast-moving scenery, hurriedly telling the players about a new area before moving instantly on.
 Each area covered holds new opportunities for getting away, or trapping the quarry -- whether that is the players or their prey.
@@ -1905,8 +2050,14 @@ He was still out looking for a spot when the great axes scraping down the cliff 
 \end{exampletext}
 }{}
 
+\end{multicols}
+
 \section{Further Dangers}
+
+\begin{multicols}{2}
+
 \subsection[Falling Damage]{Falling Damage}
+
 \index{Falling}Characters who fall from a height suffer 2 Damage per square the character fell. 2 Damage alone converts to $1D6-2$ Damage, while 4 Damage would simply be $1D6$ and so on. Characters falling straight downward can attempt to mitigate 4 Damage by rolling Dexterity + Athletics at \gls{tn} 9. Those falling forward and down in an arc can try to roll along the ground to mitigate the Damage; they roll Dexterity + Athletics at \gls{tn} 7 and a successful roll indicates that they reduce incoming Damage by 4.
 
 The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
@@ -1930,11 +2081,11 @@ With their FP now replenishing quickly, the group can rest and worry less about 
 
 		``Everyone got two Fatigue from being in two \glspl{round} of combat and another for doing that in armour, so mark down three Fatigue points in your Combat boxes. Then four more for running through three areas in armour. That's seven in total''.
 
-\begin{wrapfigure}{I}{.5\textwidth}
+\vspace{1em}
 
-Hit Points and Fatigue
+\textbf{Hit Points and Fatigue}
 
-	\begin{tabularx}{.95\textwidth}{ccccccccccc}
+	\begin{tabularx}{\linewidth}{ccccccccccc}
 
 		$\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & $\CIRCLE$ & \Circle & \Circle & \Circle \\ 
 
@@ -1955,7 +2106,7 @@ Hit Points and Fatigue
 
 	\end{tabularx}
 
-\end{wrapfigure}
+\vspace{1em}
 
 	Thenton's player has the Combat Skill at +2, so he marks those Fatigue points in the first and second boxes, leaving him absolutely fine. Then he adds another for wearing armour during that fight; since there are no more Combat Skill Fatigue Boxes, that point goes into his normal Fatigue boxes. Then he receives three more for running across the mountain and another for doing that all in armour. Five Fatigue Boxes are marked down in total. If the characters had continued being active that would be the end, but since they have finished the scene while resting, Thenton heals 4 Fatigue points leaving him with only 7 in total.
 
@@ -1966,7 +2117,11 @@ Hit Points and Fatigue
 	\end{exampletext}
 }{}
 
+\end{multicols}
+
 \chapter{Magic}
+
+\begin{multicols}{2}
 
 There are five path of magic -- five ways to learn how to cast spells.  Each path gives access to different kinds of magic (``Spheres''), but mechanically they mostly work the same way.
 We'll cover the paths in the next chapter.  Here we're just going to cover raw magic.
@@ -1995,7 +2150,11 @@ Each level of a sphere typically grants access to a few different spells.  For e
 
 \paragraph{Polymorph} allows the caster to transform into other races, and then into entirely different species. Exactly which type of animal a caster can transform into depends upon hir body type. Lithe characters will find it easier to turn into a bird, while stronger people will find stronger animals, such as bears or warthogs, easier.
 
+\end{multicols}
+
 \section{Casting Your First Spell}
+
+\begin{multicols}{2}
 
 \subsection{Casting}
 
@@ -2053,7 +2212,11 @@ This is a spell enhancement.  It's telling you that if you add two levels to the
 
 \noindent Now that the basics are covered, let's have a look at the \glspl{sphere}. There are ten in total, each of which covers a very different range of spells. Most \glspl{sphere} allow the mage to cast a different spell at each level, though some grant multiple spells at each level.
 
+\end{multicols}
+
 \sphere{Aldaron}\index{Magic!Aldaron}
+
+\begin{multicols}{2}
 
 The elves are intimately familiar with this sphere, and usually refer to it as a simple skill, like painting or any other trade. They call it simply `the knowledge of trees', though it deals with much more than wood -- animals can be turned into friends and companions, the weather can be controlled and at the ultimate level the forest itself can be called to uproot and give aid to the mage.
 
@@ -2254,7 +2417,11 @@ The final level of aldaron allows a mage to summon a mighty storm, possibly incl
 
 The storm always presents in a manner appropriate to the local environment. A desert might see a sandstorm rise while a caster out at sea might summon tidal waves.
 
+\end{multicols}
+
 \sphere{Conjuration}
+
+\begin{multicols}{2}
 
 Conjuration deals with changing matter.
 It starts by shifting water into mud, or stone into ice.  Later the caster can change types of matter -- liquids into solid, solid metal into air, anything simple.
@@ -2375,7 +2542,11 @@ Portals must always rest upon unchangeing surfaces; any movement destroys the ci
 
 Particularly crazy casters have used such spells to open portals to strange etherial lands, filling the area with all manner of dangerous and bizarre creatures.
 
+\end{multicols}
+
 \sphere{Enchantment}
+
+\begin{multicols}{2}
 
 \iftoggle{verbose}{
 
@@ -2425,9 +2596,7 @@ If the enchanter does not have any languages in common with the target then the 
 
 \spell{Confusion}{Continuous}{Deceit}
 
-	\begin{wrapfigure}{O}{.43\textwidth}
 		\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
-	\end{wrapfigure}
 
 }{}
 
@@ -2476,6 +2645,8 @@ The target is given a simple command by the enchanter, consisting of no more wor
 
 If the enchanter maintains the spell then the target can reroll at the beginning of each scene to break the spell again, otherwise it ends when the enchanter drops the spell.
 
+\end{multicols}
+
 	\begin{tcolorbox}[arc=1mm,tabularx={llp{.5\textwidth}}]
 		Task Bonus & \gls{tn} & \\\hline
 
@@ -2486,6 +2657,8 @@ If the enchanter maintains the spell then the target can reroll at the beginning
 		Code Violation & Variable & Targets forced to act against their own code or god gain an additional bonus to act equal to the amount of \gls{xp} they would receive for completing the action. For example, those following the code of passion would gain 1\gls{xp} for trying a new type of food or drink, so they gain a +1 bonus to resist commands which inhibit their ability to act in this way. Those following Ohta, Goddess of War, gain 10\gls{xp} for bringing down a sufficiently large monster, so they would gain a +10 bonus to resist any enchantment which prohibits them from slaying such quarry. This can also be used against the target, with the enchanter gaining a bonus to affect someone with an order if it adheres to the target's code.\\
 
 	\end{tcolorbox}
+
+\begin{multicols}{2}
 
 Giving a command can take some time, so in combat, Enchanters have to spend the usual 2 Initiative to speak in order to actually make a target do something, once the spell has been cast.
 
@@ -2520,8 +2693,12 @@ The target's memories can be filched -- either selectively or not. The caster sp
 
 The caster uses their Intelligence + Deceit while the target resists with their Wits + Vigilance. Success means that the caster has free reign, not to rifle through the target's exact memories, but to specify that anything they wish is lost, up to and including all memories. The target always retains their first language.
 
+\end{multicols}
+
 \sphere{Fate}
 \index{Magic!Fate}Fate deals with divine blessings and luck. At first the caster learns to ask questions of the gods, or to perhaps reach into an inner intuition about the world. Next up the mage learns to heal people's \gls{fp} and increase targets' average luck. Finally, priests can help bring people back from the edges of death.
+\begin{multicols}{2}
+
 
 \spelllevel
 
@@ -2619,7 +2796,11 @@ Hugi intends to give his troops a blessing. No roll is involved, so he does not 
 \end{exampletext}
 	}{}
 
+\end{multicols}
+
 \sphere{Force}\index{Force}
+
+\begin{multicols}{2}
 
 The mage can shape pure energy, pushing and pulling at the world with the power of their will alone. They can create magical shields, pick up weapons and grind targets into the ground as if with an invisible, giant, floating hand.
 
@@ -2654,13 +2835,15 @@ The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level. 
 
 	1 & 5 squares plus the caster's Wits. \\
 
-	2 & 10 squares plus the caster's Force sphere rating plus Wits. \\
+	2 & 10 squares plus the caster's Force sphere \\
+	&  rating plus Wits. \\
 
 	3 & The entire \emph{area}. \\
 
 	4 & A number of areas equal to the caster's Wits. \\
 
-	5 & Five full sequential areas plus the caster's Wits. \\
+	5 & Five full sequential areas plus the caster's \\
+	&  Wits. \\
 
 \end{tcolorbox}
 
@@ -2727,7 +2910,11 @@ For example, a mage using force level 2, with Intelligence +1 and a Combat Skill
 
 Mages can add their mental ability to move things to aid their movement. Any attempts to move, whether fleeing or just flitting around a room, gain a bonus equal to the level of the force sphere being employed plus their Intelligence Bonus. The mage can cast the spell on others and it will automatically push them onwards in whichever direction they are running.
 
+\end{multicols}
+
 \sphere{Illusion}\index{Illusion}
+
+\begin{multicols}{2}
 
 Illusions create a facsimile of sounds and sights out of pure magic. The thing created might look like a hat, a coin, a rat or even a dragon at higher levels. Illusions also create convincing sound -- loud echoes, the sound of nearby battle, perhaps even imitating an enemy commander's orders in battle. However, illusions are little more than coloured air and noise -- once touched they fade away. They are frightening and if properly used can defeat armies, but are not perfect weapons by any means.
 
@@ -2805,7 +2992,11 @@ As usual, the illusion is still delicate, and if the person is struck or disturb
 
 The illusion can cover a number of areas equal to the spell's level, plus the caster's Wits Bonus.
 
+\end{multicols}
+
 \sphere{Invocation}\index{Invocation}
+
+\begin{multicols}{2}
 
 This is the first choice of spheres for a battle-mage. It is designed specifically to destroy targets with balls of lightning and fire. It also has more subtle uses as casters can extinguish flames, plunging people into darkness.
 
@@ -2839,7 +3030,11 @@ If the spell does not have the Inner Furnce enhancement, it always targets peopl
 
 \enhancement{2}{Inner Furnace} The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
 
+\end{multicols}
+
 \sphere{Metamagic}
+
+\begin{multicols}{2}
 
 \index{Metamagic}
 
@@ -2947,7 +3142,11 @@ Those on the Path of Song can infuse spell-songs which activate on their own onc
 
 The mage's mana stones now contain 3 \gls{mp} per point sacrificed from the mage's permanent maximum, so sacrificing 3 \gls{mp} would yield an item which can store 9 \gls{mp}. These stones regenerate 3 \gls{mp} per \gls{round}.
 
+\end{multicols}
+
 \sphere{Necromancy}\index{Necromancy}
+
+\begin{multicols}{2}
 
 Necromancers summon souls from distant, black realms and place them in appropriate bodies -- those of the once living and now dead. The corpses are sometimes filled with their old hosts, locking people into a state of permanent semi-death, or more often with ravenous and malicious spirits from foreign realms. Mages of this sphere begin by imitating the dead, becoming half dead themselves, which allows them to dissuade malicious spirits from attacking.
 
@@ -3035,9 +3234,11 @@ A mage with Intelligence +2 could cast Calling the Dead at second level to raise
 
 Trainee artists and necromancers have one thing in common -- fruit.  Students of necromancy often begin their journey by stopping food from degrading.  This spell gives a sort of `half-life' to rot, such that any foods affected slow their own aging process incrementally.  They're not sustained in perfect condition forever, but never quite reach an entirely spoiled stage.
 
+\end{multicols}
+
 \sphere{Polymorph}\index{Polymorph}
 
-\begin{wrapfigure}{R}{.4\linewidth}
+\begin{multicols}{2}
 
 	\begin{tcolorbox}[arc=1mm,tabularx={lcc}]
 
@@ -3079,9 +3280,6 @@ Trainee artists and necromancers have one thing in common -- fruit.  Students of
 
 \end{tcolorbox}
 
-\end{wrapfigure}
-
-
 The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move themselves or others along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as griffins, while smaller, lighter people find it easier to take on the form of birds.  Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
 
 Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of. Many conjecture that the face is a facet of one's soul showing in the world. A ginger person transformed into a cat would become a ginger cat. A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep. Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
@@ -3104,9 +3302,9 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 
 \spell{Polymorph}{Continuous}{Medicine}
 
-\sidepic{4}{Roch_Hercka/polymorph.jpg}
-
 The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
+
+\includegraphics[width=.8\linewidth]{images/Roch_Hercka/polymorph.jpg}
 
 Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
 
@@ -3186,23 +3384,26 @@ As with the \textit{Realistic} enhancement, the caster gains a number of Form Po
 
 \end{itemize}
 
-\chapter{The Paths of Magic}
+\end{multicols}
 
-\label{magic_paths}\index{Magic!Paths of Magic}There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic. Any character with the appropriate requirements can learn to cast magic. Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically. A priest of war may shout a torrent of aurochs into existence where an alchemist uses precise gestures to summon the essential form of an auroch but both are just using the second level of the conjuration sphere.
+\chapter{The Paths of Magic}
+\label{magic_paths}\index{Magic!Paths of Magic}
+
+\begin{multicols}{2}
+
+There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic. Any character with the appropriate requirements can learn to cast magic. Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically. A priest of war may shout a torrent of aurochs into existence where an alchemist uses precise gestures to summon the essential form of an auroch but both are just using the second level of the conjuration sphere.
 
 People can pick up different Paths of Magic by simply fulfilling different requirements. If someone has access to one sphere of magic through multiple Paths and has bought access to the sphere, then learning the same sphere through the different Path simply requires some \gls{downtime} and study but carries no \gls{xp} cost. If a blood sorcerer were to learn the aldaron sphere as a natural knack and later decided to become an adherent of the goddess Laiqu\"{e}, she could channel the magic through divine means or through her innate abilities. All that is needed is a little time to pick up an understanding of how this same magic works through a different lens.
 
 Three of the schools of magic require an Academics Skill slot -- i.e. the character must have a specialisation in just that type of magical background in order to cast such spells. Characters taking on multiple paths of magic cannot use one level's slots to gain two paths. For example, an alchemist would normally learn the Academics Skill at level 1 and take a specialisation in Alchemy. They would then have one slot left for an Academic specialisation but they could not use it to learn Rune magic or Theology because these fields are too different. The mage could only pick up rune magic with a new level of the Academics Skill, and thereafter could only add Divine magic by taking the Academics Skill at level 3 in order to acquire a Theology specialisation.
 
+\end{multicols}
+
 \section{The Path of Alchemy}\index{Alchemy}
 
 \textbf{Spheres}: Conjuration, Invocation, Force, Illusion, Metamagic
 
-%\iftoggle{verbose}{ 
-%\begin{wrapfigure}[10]{R}{.2\textwidth}
-%\includegraphics[width=.3\textwidth]{images/Roch_Hercka/conjuration_left.jpg}
-%\end{wrapfigure}
-%}{}
+\begin{multicols}{2}
 
 \noindent The alchemist learns magic through rote repetition and formulae which are usually be invoked through precise hand-gestures and mystical words which are attuned to the background harmonics of the universe.  Alchemy was invented by the gnomes but has since become popular with various upper-class humans. This is the typical magic of a standard town wizard. Alchemy requires one slot of Academics in order to be learnt.
 
@@ -3218,7 +3419,11 @@ Alchemists cannot naturally intuit how the next level of any sphere works. Inste
 
 Alchemical mana stones are always precious items, such as gold, rubies, or diamonds.  A mana stone costs 10 gp per \gls{mp} which can be stored inside it, so a mana stone storing 3 \gls{mp} would cost 30 gp. The exact item might be a simply ruby which stores mana, a diamond-headed wand of ivory which blasts out fireballs or a sword with jewels on the handle which surrounds the warrior with moving illusions of their. Alchemical mana stones with a spell always activate those spells with a command word.
 
+\end{multicols}
+
 \section{The Path of Blood}
+
+\begin{multicols}{2}
 
 \textbf{Spheres}: Aldaron, Enchantment, Force, Invocation, Polymorph
 
@@ -3236,7 +3441,11 @@ Blood sorcerers are barred from ritual castings -- spending all day trying to ca
 
 Blood magic casters who learn metamagic through another path of magic cannot use metamagic spells to modify spheres they only have through blood magic. For example if an elf learnt how to cast metamagic through the path of song, they couldn't use that metamagic sphere to modify their invocation spells if they only learnt invocation through the path of blood.
 
+\end{multicols}
+
 \section{The Path of Devotion}
+
+\begin{multicols}{2}
 
 \textbf{Spheres}: Aldaron, Fate, Metamagic and two from the deity's schools of choice.
 
@@ -3248,9 +3457,13 @@ This path is most commonly taken by humans and the occasional gnoll. Gnomes don'
 
 The path of devotion requires casters to both use their voice and to move their hands, as per Alchemy. Failure to do either one results in a -2 penalty. So using one's hands to wield a weapon while being underwater would give a -4 penalty to any spells cast.
 
+\end{multicols}
+
 \section{The Path of Runes}
 
 \index{Runes}\textbf{Spheres}: Conjuration, Fate, Force, Metamagic, Necromancy
+
+\begin{multicols}{2}
 
 \noindent Dwarves are skilled in the art of summoning magics through carving elaborate runes. Typically they are chiselled, but it is possible to simply `paint a spell' onto a surface.
 
@@ -3260,25 +3473,29 @@ Runecasters must devote a single Academics slot to learning how to properly insc
 
 \subsection{Special Considerations}
 
-\iftoggle{verbose}{
-		\sidepic{5}{Roch_Hercka/dwarvish_runes.jpg}
-}{}
-
 Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for Quick Spells. They always use Ritual Spells for the highest level of any Sphere, and can use normal casting after that.
 
 However, in return for this deficite, runecasters can learn their craft far more easily. Each level of a sphere they purchase costs 5 \gls{xp} less than it normally would. While buying Fate 2 would normally cost 10 for the first level and 15 for the second, runecasters merely need to spend 5 \gls{xp} for the first level and 10 for the second. If they ever want to use those same sphere through a different path of magic, they must spend 5 \gls{xp} to `repurchase' each level. For example, someone who could cast both alchemical and runic magic might purchase Conjuration at the second level for a total of 15 \gls{xp}. They could only use it for runic magics, but later they could spend 5 \gls{xp} to be able to cast the first level with either the alchemy path or the runecasting path.
 
 Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
 
+\iftoggle{verbose}{
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarvish_runes.jpg}
+}{}
+
 \subsection{Mana Stones}
 
 Rune casters mana stones are, of course, runic carvings, and can never be painted onto anything.
+
+\end{multicols}
 
 \section{The Path of Song}
 
 \label{song}\textbf{Spheres}: Aldaron, Enchantment, Fate, Illusion, Metamagic
 
-\noindent The character has learnt the magic of song. They can sing illusions into existence, inspire people with great tales and enchant people with a lute. Any instrument, song or performance suffices for casting a spell so long as it is appropriate -- a flute is not usually a good way to magically make people scared.
+\begin{multicols}{2}
+
+The character has learnt the magic of song. They can sing illusions into existence, inspire people with great tales and enchant people with a lute. Any instrument, song or performance suffices for casting a spell so long as it is appropriate -- a flute is not usually a good way to magically make people scared.
 
 Song spells appear with a flash of colour -- generally on a cinematically appropriate note. They require some noise to activate so they are difficult to hide, but people will not always make the connection between the start of a spell and the strumming of a lyre.
 
@@ -3298,11 +3515,15 @@ Legends speak of an ancient and secretive group of song-mages composed of bards,
 
 Rare and powerful spell-songs are swapped as currency among bards -- spells which can protect the singer or enchant a crowd.
 
+\end{multicols}
+
 \chapter{Knacks}\label{knacks}
 
 Characters can individuate themselves by learning various Knacks -- special talents for combat manoeuvres, magic, skills or other abilities. Most people can pick up a couple of knacks but further Knacks become progressively more unintuitive.
 
 \section{Combat Knacks}
+
+\begin{multicols}{2}
 
 \subsubsection{Adrenaline Surge}
 
@@ -3435,7 +3656,11 @@ Finally, the character gain +2 HP.
 
 Your battle cries and demeanour are particularly fearsome. Enemies receive a -2 penalty when taking Morale Checks where you are their enemy.
 
+\end{multicols}
+
 \section{Spellcasting Knacks}
+
+\begin{multicols}{2}
 
 \subsubsection{Blood Caster}
 
@@ -3464,7 +3689,11 @@ The spell caster can focus on a spell to the exclusion of all else. During this 
 
 The character is particularly adept at casting spells quickly, and therefore in Combat. Spells cost 2 + their level in Initiative, so a 4th level spell would cost 6 rather than the usual 7 Initiative.
 
+\end{multicols}
+
 \section{Other Knacks}
+
+\begin{multicols}{2}
 
 \subsubsection{Chosen Enemy}
 
@@ -3488,7 +3717,11 @@ The character specialises in some non-combat Skill, becoming exceptionally good 
 
 This Knack can be bought any number of times but only once for a particular Attribute + Skill pairing. It can add to rolls to cast spells, but not combat rolls, including ranged combat.
 
+\end{multicols}
+
 \chapter{Stories}\label{stories}\index{Stories}
+
+\begin{multicols}{2}
 
 Players `write' most of their backstory during play rather than before it.  \Glspl{pc} can start off as blank slates with no history, but the history comes out of the woodwork soon after as players can spend 5 Story Points to bring their history into the current adventure.  Let's look at an example:
 
@@ -3518,7 +3751,11 @@ Sindon's player decides to spend his 7 saved up Story Points.
 
 In the distance, six elves come out of hiding and walk towards the characters.  Sindon's father turns out to be a local warlord.  The party receives whatever supplies they wish, a scout has recently found the necromancer's lair, and four elven warriors agree to accompany them to fight with the necromancer.
 
+\end{multicols}
+
 \section{Story Points Rules}
+
+\begin{multicols}{2}
 
 Players begin each with 5 Story Points and spend them at any point during the game. The encounters must take place in a rational manner -- players might find the perfect sellsword in a town, but if they're in a dungeon, fighting a hall of ghouls, there's little reason for a random sellsword to be present and looking for a job -- this is not an ability to magically summon useful tradesmen with a flash of smoke and plot. As a result almost all stories will have to be told in populated areas such as towns and villages.
 
@@ -3539,7 +3776,11 @@ Story Points can be awarded by the \gls{gm} during \gls{downtime} -- generally a
 
 Some characters may save up their Story Points at this juncture just to buy something expensive later.  Alternatively, characters can use those points to explain what they were doing during the \gls{downtime}.  Perhaps the group earn fabulous wealth and split up for some years, then upon returning one of them has learned dwarvish, while another joined the military and gained friends willing to help out on some new quest.
 
+\end{multicols}
+
 \section{Sample Stories}
+
+\begin{multicols}{2}
 
 The following is a suggested list of Stories the players can tell and their costs. The players are strongly encouraged to suggest more to the \gls{gm} who will either veto them or give them an appropriate cost.
 
@@ -3608,7 +3849,11 @@ You are revealed to be the child of royalty or some other type of nobility, and 
 Since this Story costs 7 Story points, no player should expect to use it until there has been some downtime -- if the character starts out claiming to be a prince then it will be a long time before the story recognises this claim.
 
 \iftoggle{verbose}{
+\end{multicols}
+
 \section{The Call to Adventure}
+
+\begin{multicols}{2}
 
 Just because characters can begin as blank slates doesn't mean the story can.  A basic premise can help tie those backstories together.
 
@@ -3648,15 +3893,19 @@ Nobody wants to contact the local dwarves to ask a favour, but once the greatest
 
 The characters are all alchemists in the service of the Alchemist's Guild in Eastlake.  The first part of the campaign involves high-school rivalries against other Clans in the guild such as stealing their homework, or vying for romantic attention.  Soon after, the characters begin proper guild missions, venturing out into the strange areas of the world where normal people will not tread.
 
+\end{multicols}
+
 \vspace{.2cm}
 
-\begin{tcolorbox}[arc=1mm,tabularx={llp{.5\textwidth}}]
+\begin{tcolorbox}[arc=1mm,tabularx={llX}]
 	Clan Alisa & Force & Stonemasons who eventually rose to magic workers. \\
 	Clan Kisha & Conjuration & The priesthood of Laiqu\"{e} who abandoned their god to study alchemy. \\
 	Clan Stein & Invocation & A military clan who maintain ties with the College Outpost at the Coast. \\
 	Clan Ventress & Metamagic & An old family who lived in Eastlake since before the College. \\
 
 \end{tcolorbox}
+
+\begin{multicols}{2}
 }{}
 
 \vspace{.2cm}
@@ -3692,18 +3941,32 @@ As luck would have it, she was a proficient medic, and helped patch Hugi back up
 
 }}{}
 
-\clearpage\chapter[Gods \& Codes]{Gods \& Codes}
+\end{multicols}
 
-\label{gods_codes}\index{Gods}\index{Codes}Players can receive additional \gls{xp} for following their beliefs.
-Some generic gods and codes follow, to be modified and slotted into other campaigns.
-While anyone is free to give offerings to any of the gods, most people have a primary god they worship, suggested by their birth but decided in adulthood based on shared values.
-Others follow no god but have a code of some type, guiding their actions. These codes are not formal beliefs, written as law and discussed at meetings but rather a set of aspirations which some have.
+\chapter[Gods \& Codes]{Gods \& Codes}
+\label{gods_codes}\index{Gods}\index{Codes}
+
+\begin{multicols}{2}
+
+Players can receive small amounts of additional \gls{xp} for following their beliefs. While anyone is free to give offerings to any of the gods, most people have a primary god they worship, suggested by their birth but decided in adulthood based on shared values. Others follow no god but have a code of some type, guiding their actions. These codes are not formal beliefs, written as law and discussed at meetings but rather a set of aspirations which some have.
 
 The \gls{gm} decides how much \gls{xp} to give out for any given task -- each path has a number of suggestions but the list should be understood as open-ended and entirely at the whim of the \gls{gm}.
 
 Some codes give a reward for donating or gaining gold.  Only the highest reward counts, so someone cannot gain 1\gls{xp} for donating a gold piece to a temple, and then gain 10 more for donating 100GP -- the highest sum takes precedence.
 
+\end{multicols}
+
 \section{Gods}
+
+\begin{multicols}{2}
+
+Some generic gods and codes follow, to be modified and slotted into other campaigns.
+
+Each god has a holy day marking its favourite time of year. During the holy day, anyone can earn \gls{xp} by following the edicts of the god, even those who follow others. The day of Ohta is a day to remember war and settle disputes by fist or steel, the day of Alass\"{e} is one of joy, to be celebrated with pranks and presents.
+
+The gods are most popular with humans and gnolls. Most dwarven settlements have a temple of some kind but it is not something all dwarves take much interest in except during odd times when they want to pay for a blessing. Gnomes' interactions with the gods mainly consists in chronicling legends about them and debating the nature of divinity, but not actively worshipping them. Elves, it is said, do not have the humility to worship anything.
+
+The gods presented here are the most important -- they are the ones featured in the larger tales and who have the most prominent holy days. There are, however, many more. Each region or individual tribe has its own little god. Players are encouraged to create their own.
 
 Each god has a holy day marking its favourite time of year. During the holy day, anyone can earn \gls{xp} by following the edicts of the god, even those who follow others. The day of Ohta is a day to remember war and settle disputes by fist or steel, the day of Alass\"{e} is one of joy, to be celebrated with pranks and presents.
 
@@ -3948,7 +4211,11 @@ Followers of V\'{e}r\"{e} who break any deal cannot gain \gls{xp} until they ato
 
 \noindent V\'{e}r\"{e}'s clerics can access the enchantment and force spheres. They use enchantment to gain followers, dazzling them with the glory of the purity and strength of their god while force is used to protect the innocent and faithful. Their spells appear in a shimmer of gold. V\'{e}r\"{e}'s mana stones are always people who are followers of V\'{e}r\"{e}. Those believers alone can activate any spells which are stored inside them. Priests of V\'{e}r\"{e} often gift their followers with single-use magical powers, such as the ability to call upon a blessing or the ability to protect themselves with armour. If the people who are being used as mana stones are given spells then they can activate those spells at will with a short prayer at an Initiative cost of 8.
 
+\end{multicols}
+
 \section{Codes}\index{Codes}
+
+\begin{multicols}{2}
 
 Those without a dedicated deity often dedicate themselves to some informal code instead. The codes might be thought of as attitudes or philosophies for life. Followers of similar codes may well get along together but they will not recognise each other as members of a similar organisation. Those with a code as their primary motivator may also sacrifice to gods or even occasionally worship and donate to temples, but their ultimate aims lie with themselves. It is said those who do not fully dedicate themselves to any god must wander the afterlife without aid or guidance -- such spirits always provide the most bizarre and contradictory accounts of death and can prove difficult to summon.
 
@@ -4064,9 +4331,7 @@ The world is here to be lived, to be known, to be connected with. You want all t
 
 \iftoggle{verbose}{
 \hrulefill
-\begin{wrapfigure}{O}{.4\textwidth}
-\includegraphics[width=.4\textwidth]{images/Boris_Pecikozic/dwarves_meet.jpg}
-\end{wrapfigure}
+\includegraphics[width=\linewidth]{images/Boris_Pecikozic/dwarves_meet.jpg}
 
 {\itshape While all the players are thinking about the next move, the \gls{gm} adds up their \gls{xp}. They defeated 6 hobgoblins and 1 ogre. Hobgoblins and ogres are worth 7 each. There were seven in total, so that means 49 \gls{xp} in total, minus one \gls{xp} per member of the group. The final result is that each character receives 15 \gls{xp} and one more \gls{xp} is left in the pot for later (because 46 cannot evenly be divided by 3). After that, each player wants a little additional \gls{xp} for following their own God or codes.
 
@@ -4091,6 +4356,9 @@ The band took only a couple of hours before they set off again, hoping to find t
 
 }
 }{}
+
+
+\end{multicols}
 
 \appendix
 
