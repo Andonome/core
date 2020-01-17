@@ -1,5 +1,8 @@
 #!/bin/bash
-[ -d ../config ] && git subtree -P config pull ../config master && git subtree -P config push ../config core
+if [ -z $1 ]; then
+	git subtree -P config pull ../config master && \
+	git subtree -P config push ../config core
+fi
 pdflatex main.tex
 pdflatex main.tex
 makeindex main.idx
