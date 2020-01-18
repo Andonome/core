@@ -105,7 +105,7 @@ Join me!
 
 You can join by: 
 
-- Emailing complaints to incoming+bind1-core-16324687-issue-@incoming.gitlab.com.
+- Emailing complaints to incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com.
 
 - Playtesting.
 
