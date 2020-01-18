@@ -51,17 +51,53 @@ Combat is focussed on giving players real choices, and typically ends quickly as
 
 For a starting pack of ideas, the \glsentrylong{gm} has \textit{Adventures in Fenestra} -- a guide to the world, some side quests, and a small bestiary.
 
-\subsection*{Special Thanks ...}
+\section{What's an RPG?}
 
-\paragraph*{to the Artists}
+It's a little like a soap-opera meets board games.
+One person tells a strange kind of story, without any main characters.
+Everyone at the table then makes a main character, decides what kind of person they are, and how they might react.
+When the person telling the story and the main characters can't say what happens next, they turn to the dice.
 
-Neil McDonnell for the basic photograph which became the Polymorph image, Boris Pecikozi\'c for Thenton's Story images, Brian Garabrant for the cover images and Roch Hercka for the myriad wonderful pencil sketches of Vitals Shots, illusions, encumbrance and many more.
+Roll high and you win.
+Roll low and you lose.
+Each characters gets some bonus or penalties to the dice rolls for jumping, thinking, or casting spells, depending on what the character has trained in.
 
-\paragraph*{to the playtesters} Marri Russell, Ross Oliver, Reiss McGee, David Smith, Michael Dyson, Ryan Trotter and Maggie Anderson; also thanks to Ari-Matti Piippo for his insightful comments.
+The stories told each night are \emph{emergent}.
+Nobody knows exactly what will happen ahead of time.
+A lot of the fun for the storyteller is seeing how people change the plot, while the players get to see a world unfold without in front of them, often while struggling to survive.
 
-\paragraph{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
 
-\subsection*{The Right to Improve}
+\section*{Special Thanks ...}
+
+\subsection*{to the Artists}
+
+Neil McDonnell for the basic photograph which became the Polymorph image,
+
+\paragraph{Boris Pecikozi\'c} for Thenton's Story images, (pages 
+\pageref{boris:jump}, 
+\pageref{boris:brawl}, 
+\pageref{boris:meet}
+), 
+
+\paragraph{Brian Garabrant} for the cover images and Roch Hercka for the myriad wonderful pencil sketches (pages 
+\pageref{roch:races}, 
+\pageref{roch:dwarf}, 
+\pageref{roch:stances}, 
+\pageref{roch:vitals}, 
+\pageref{roch:xp1}, 
+\pageref{roch:xp2}, 
+\pageref{roch:enchanter}, 
+\pageref{roch:polymorph}, 
+\pageref{roch:runes}, 
+\pageref{roch:light}
+).
+
+
+\subsection*{to the playtesters} Marri Russell, Ross Oliver, Reiss McGee, David Smith, Michael Dyson, Ryan Trotter and Maggie Anderson; also thanks to Ari-Matti Piippo for his insightful comments.
+
+\subsection{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
+
+\section*{The Right to Improve}
 
 This book has some serious problems, and that's fine.  I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and change things.  This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
 
@@ -91,6 +127,7 @@ Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and
 
 \section{Character Creation}\index{Character Creation}\label{character_rolls} \iftoggle{verbose}{
 \includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
+\label{roch:races}
 }{}
 
 \begin{tcolorbox}[tabularx={cll},arc=1mm,adjusted title=Race]
@@ -525,6 +562,7 @@ The \gls{gm} might use a Margin for some variable, for example a bard attempting
 	\begin{wrapfigure}{r}{.3\textwidth}
 
 		\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_jump.jpg}
+		\label{boris:jump}
 
 	\end{wrapfigure}
 
@@ -568,6 +606,7 @@ The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may re
 	\begin{wrapfigure}{l}{.6\linewidth}
 
 		\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-1.jpg}
+		\label{roch:xp1}	
 
 	\end{wrapfigure}
 
@@ -691,6 +730,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 \begin{wrapfigure}{r}{.6\linewidth}
 
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/xp-2.jpg}
+	\label{roch:xp2}
 
 \end{wrapfigure}
 
@@ -837,6 +877,7 @@ An average villager will make little spare money -- perhaps 10 \gls{sp} in a yea
 
 \iftoggle{verbose}{
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarf_encumbrance.jpg}
+	\label{roch:dwarf}
 }{} 
 
 We measure weight in broad terms.  Characters have a \textit{weight rating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a weight rating of 7.  Items work similarly, with weight ratings between -4 (for very light items) and +11 (for wardrobes, carts, and boulders).
@@ -1259,6 +1300,7 @@ Animals use a Skill called `\index{Aggression}Aggression' to Strike -- Aggressio
 
 \iftoggle{verbose}{
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/stances.jpg}
+	\label{roch:stances}
 }{}
 
 Characters can attack in an \textit{Aggressive} or \textit{Defensive} stance. This system takes the Defensive stance as default -- the Dexterity Bonus is added to the Evasion score to keep the character safe. However, a character can forego safety for additional combat ability and add the Dexterity Bonus to Strike should they wish. Any Bonuses to Evasion from weapons also add to the Strike Factor. The score cannot be divided between the two -- the Stances are an `all or nothing' affair. Delicate decisions concerning priorities require the Combat Skill, which can be added one piece at a time to any of the Combat Factors.
@@ -1553,6 +1595,7 @@ Many creatures have a \gls{dr} from natural armour, representing especially thic
 
 \iftoggle{verbose}{
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/vitals_shot.jpg}
+	\label{roch:vitals}
 }{}
 
 \iftoggle{verbose}{Vitals Shots not only provide incentive for people to push their Strike Factor as high as possible, even at the expense of their own defence.  It also provides an equalizer for weaker forces as even the most heavily armoured creature can be struck by a lucky blow.}{}
@@ -1599,6 +1642,7 @@ The trio had reached halfway up the mountain by this point but the hobgoblins we
 Thenton thought for a moment about abandoning Hugi if there was a problem - his little dwarvish legs were no good for sprinting. Of course Hugi's death would not buy them much time, and Arneson would never stand for it. No, they would have to stick together to survive.
 
 	\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
+	\label{boris:brawl}
 
 	The trio climbed for a while longer, looking back every few moments to note how close the hobgoblins were behind them. An ogre was among their ranks, so they must have come from a very deep cavern.
 
@@ -2251,10 +2295,11 @@ The mage casts a dim light, about the strength of a torch, which floats around a
 
 \enhancement{1}{Piercing}
 
-\iftoggle{verbose}{\begin{figure}[t!]
-\centering
-\includegraphics[width=\textwidth]{images/Roch_Hercka/flashing_light.jpg}
-\end{figure}}{}
+\iftoggle{verbose}{
+
+	\includegraphics[width=\textwidth]{images/Roch_Hercka/flashing_light.jpg}
+	\label{roch:light}
+}{}
 
 The \gls{miracleworker} casts a ray of light from any point within range -- the effect might be a floating orb or a shining staff, or even an enemy who lights up with unnatural light and cannot put it out. The light affects 1 area though it can be seen from farther away.
 
@@ -2605,8 +2650,8 @@ If the enchanter does not have any languages in common with the target then the 
 
 \spell{Confusion}{Continuous}{Deceit}
 
-		\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
-
+	\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
+	\label{roch:enchanter}
 }{}
 
 The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
@@ -3314,6 +3359,7 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
 
 \includegraphics[width=.8\linewidth]{images/Roch_Hercka/polymorph.jpg}
+\label{roch:polymorph}
 
 Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
 
@@ -3490,6 +3536,7 @@ Runes can never be cast in a subtle way. All castings will be entirely obvious. 
 
 \iftoggle{verbose}{
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarvish_runes.jpg}
+	\label{roch:runes}
 }{}
 
 \subsection{Mana Stones}
@@ -4341,6 +4388,7 @@ The world is here to be lived, to be known, to be connected with. You want all t
 \iftoggle{verbose}{
 \hrulefill
 \includegraphics[width=\linewidth]{images/Boris_Pecikozic/dwarves_meet.jpg}
+\label{boris:meet}
 
 {\itshape While all the players are thinking about the next move, the \gls{gm} adds up their \gls{xp}. They defeated 6 hobgoblins and 1 ogre. Hobgoblins and ogres are worth 7 each. There were seven in total, so that means 49 \gls{xp} in total, minus one \gls{xp} per member of the group. The final result is that each character receives 15 \gls{xp} and one more \gls{xp} is left in the pot for later (because 46 cannot evenly be divided by 3). After that, each player wants a little additional \gls{xp} for following their own God or codes.
 
