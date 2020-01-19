@@ -114,7 +114,9 @@ This particular version was last revised on \today.
 
 }{}
 
-\chapter{Traits}\index{Traits}\pagenumbering{arabic}
+\pagenumbering{arabic}
+
+\chapter{Traits}\index{Traits}
 
 \begin{multicols}{2}
 
@@ -131,6 +133,8 @@ Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and
 \label{roch:races}
 }{}
 
+\newcommand{\racechart}{
+
 \begin{tcolorbox}[tabularx={cll},arc=1mm,adjusted title=Race]
 
 	Roll & Race & Adjustments \\\hline
@@ -146,6 +150,9 @@ Typically, \glspl{pc} take actions by rolling two six-sided dice (``$2D6$'') and
 	11-12 & Gnome & +1 Intelligence, +1 Dexterity, Strength -2, Speed -1 \\
 
 \end{tcolorbox}
+}
+
+\racechart
 
 \begin{multicols}{2}
 
@@ -876,16 +883,16 @@ An average villager will make little spare money -- perhaps 10 \gls{sp} in a yea
 
 \subsection{Weight \& Encumbrance}\index{Weight}\index{Encumbrance}
 
-\iftoggle{verbose}{
-	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarf_encumbrance.jpg}
-	\label{roch:dwarf}
-}{} 
-
 We measure weight in broad terms.  Characters have a \textit{weight rating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a weight rating of 7.  Items work similarly, with weight ratings between -4 (for very light items) and +11 (for wardrobes, carts, and boulders).
 
 If an item's weight rating is equal or below your character's Strength, you can lift it easily.  However, if the items has a greater weight rating than your Strength Bonus, you gain a point of Encumbrance for every increment that item is above your Strength Bonus.  Encumbrance slows you down and makes you tired, detracting from your Speed Bonus, and adding to your Fatigue each Scene.
 
 Characters can carry items with a maximum weight rating of their Strength Bonus plus 6, so a man with 7 \gls{hp} could only be carried with a Strength Bonus of +1 or greater.  Depending upon the circumstances, the \gls{gm} may allow heavier objects to be dragged or rolled.
+
+\iftoggle{verbose}{
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarf_encumbrance.jpg}
+	\label{roch:dwarf}
+}{} 
 
 \subsection{Services}
 
@@ -3341,17 +3348,17 @@ Throughout all these forms people maintain a universal `face' -- a kind of liken
 
 Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.  The undead are completely immunte to the Polymorph sphere.
 
-As polymorph changes people's form it also changes Strength and therefore HP maximums. All HP lost to Damage remain as lost HP after transformation but might not have any effect. If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed. If someone's maximum HP increases, once again they count as having lost the same number of HP, with no HP being gained or lost through the transformation process. All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
-
-The new form granted by a polymorph spell always feels a little strange, so anyone who transforms suffers a -1 penalty to Dexterity until they get used to the new form.\footnote{Any amount of downtime is a reasonable amount of time.}
-
-Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
-
 \begin{exampletext}
 
 	Meldon the elf has 5 HP. He takes 3 HP Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions. He then transforms himself into a bird, lowering to 2 HP. He now has zero Damage but retains his -1 penalty due to Fatigue. After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his HP increases to the point where they can affect him.
 
 \end{exampletext}
+
+As polymorph changes people's form it also changes Strength and therefore HP maximums. All HP lost to Damage remain as lost HP after transformation but might not have any effect. If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed. If someone's maximum HP increases, once again they count as having lost the same number of HP, with no HP being gained or lost through the transformation process. All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
+
+The new form granted by a polymorph spell always feels a little strange, so anyone who transforms suffers a -1 penalty to Dexterity until they get used to the new form.\footnote{Any amount of downtime is a reasonable amount of time.}
+
+Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
 
 \spelllevel
 
@@ -3359,14 +3366,14 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 
 The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
 
-\includegraphics[width=.8\linewidth]{images/Roch_Hercka/polymorph.jpg}
-\label{roch:polymorph}
-
 Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
 
 Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
 
 Polymorphing into another race does not grant any of its racial abilities.  Changing one's shape to look like an elf will not grant cold-immunity, and polymorphing into a human will not allow one walk long distances without fatigue.
+
+\includegraphics[width=.8\linewidth]{images/Roch_Hercka/polymorph.jpg}
+\label{roch:polymorph}
 
 \spell{Animal Transformation}{Continuous}{Beast Ken}
 
@@ -3535,14 +3542,16 @@ However, in return for this deficite, runecasters can learn their craft far more
 
 Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
 
+\subsection{Mana Stones}
+
+Rune casters mana stones are, of course, runic carvings, and can never be painted onto anything.
+
+\vfill\null
+
 \iftoggle{verbose}{
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarvish_runes.jpg}
 	\label{roch:runes}
 }{}
-
-\subsection{Mana Stones}
-
-Rune casters mana stones are, of course, runic carvings, and can never be painted onto anything.
 
 \end{multicols}
 
@@ -4434,6 +4443,8 @@ The band took only a couple of hours before they set off again, hoping to find t
 
 \chapter{Character Creation}\label{charactercreation}\index{Character Creation}
 
+\begin{multicols}{2}
+
 Okay, so you know how to make a character by now.  But just for reference, let's get some procedure down:
 
 \begin{enumerate}
@@ -4446,8 +4457,8 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 %	\item{Spend Story Points any time you can.}
 \end{enumerate}
 
-\begin{multicols}{2}
 \begin{xpbox}{B}
+
 	Result & Attribute Bonus \\\hline
 
 	2 & -3 \\
@@ -4467,6 +4478,7 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 	\end{xpbox}
 
 \begin{xpbox}{B}
+
 	Trait & Cost \\\hline
 	Attributes & $5 \times 2^n + 10$ \\
 	Skills & $5 \times (n + 1)$ \\
@@ -4479,21 +4491,7 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \end{multicols}
 
-	\begin{tcolorbox}[arc=1mm,tabularx={lll}]
-
-	Roll & Race & Adjustments \\\hline
-
-	2-3 & Gnoll & +1 Strength, +1 Speed, -1 Intelligence, -1 Charisma -2 \\
-
-	4-5 & Dwarf & +1 Dexterity, -1 Speed \\
-
-	6-8 & Human & +1 Strength, -1 Wits \\
-
-	9-10 & Elf & +1 Wits, -1 Strength \\
-
-	11-12 & Gnome & +1 Intelligence, +1 Dexterity, Strength -2, Speed -1 \\
-
-\end{tcolorbox}
+\racechart
 
 \chapter{Combat}
 
