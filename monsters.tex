@@ -252,7 +252,7 @@
 \noindent\begin{tabular}{p{.3\textwidth}p{.6\textwidth}}
 
 	\ent{Skills:} & \ifnumcomp{\value{att}}{=}{0}{\setcounter{att}{-1}}{\iftoggle{mind}{Combat \arabic{att}, }{Aggression \arabic{att}, }} \skills \\
-	\iftoggle{mind}{\ent{Equipment:} & \equipment \\}{\ent{Abilities:} \abilities \\}
+	\iftoggle{mind}{\ent{Equipment:} & \equipment \\}{\ent{Abilities:} & \abilities \\}
 
 	\setcounter{strb}{\value{str}}
 	\setcounter{dexb}{\value{dex}}
@@ -493,7 +493,7 @@
 
 \newcommand{\basilisk}{
 \randomthree\addtocounter{age}{5}\randomtwo\addtocounter{random}{1}
-\animal{\arabic{age}}{-2}{\arabic{random}}{0}{4}{2}{Projectiles 1, Athletics 2, \abilities{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}}{}{\knacks{\unstoppable}}
+\animal{\arabic{age}}{-2}{\arabic{random}}{0}{4}{2}{Projectiles 1, Athletics 2}{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}{\knacks{\unstoppable}}
 }
 
 %
@@ -786,7 +786,7 @@
 	{2}% WITS
 	{0}% DR
 	{4}% AGGRESSION
-	{Stealth 2, Survival 1, Vigilance 2\abilities{\claws}}% SKILLS
+	{Athletics 2, Stealth 2, Survival 1, Vigilance 2\abilities{\claws}}% SKILLS
 	{}{}
 	}
 
