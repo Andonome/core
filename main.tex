@@ -1225,21 +1225,9 @@ Of these, the less well connected ones often wander the earth aimlessly searchin
 
 \chapter{Combat}\index{Combat}
 
-These life and death rolls are handled somewhat differently from other tasks. Let's start with an overview of the basic features then go over them again in more detail. 
-
-You enter a dungeon, goblins are launching an attack from ahead. First you must decide which is more important -- hitting the enemy, or not being hit. Given the huge number of goblins attacking, you decide defence is far more important than anything else right now and add your Dexterity Bonus to evade the enemy rather than attacking. Next you assign your Combat Skill to defence as well. You will have no bonus to attack but the sacrifice should be worth it.
-
-Next up it's time to roll Initiative. Your Speed Attribute is +1 and you have a spear, which grants a further +3 to Initiative, for a total of +4. The party leader rolls Initiative dice for all the players and the result is 5. That gives you a total Initiative Score of 9. You spend 2 points to protect the party mage, who is already unjured -- any goblins attacking him will have to go through you first. The \gls{gm} counts down from 9 to 8 where the goblins rush forward and then to 7 where you stab one goblin in the chest and watch his corpse trampled by his comrades.
-At Initiative 6 the goblins retaliate with their knives.  They lose 4 Initiative points, going down to 2, and you have to defend against two of them, putting you on Initiative 3.
-When Initiative 3 comes, you kill one of the goblins, then all of them rush at you again.  The goblin attack is serious and you have to remove several Fate Points to remain undamaged. Then they attack again and in the bustle, one sticks a knife into your thigh; you lose the last of your Fatepoints and one hitpoint.
-
-The teams draw back a moment to collect themselves, the \gls{round} has ended and the two groups surge forward for another attack.
-
-Each \gls{round} you select your tactics anew and have a range of options for manoeuvres you can pull off.
-
 \newcommand{\initiativechart}{
 
-	\begin{tcolorbox}[title={Initiative Costs},arc=1mm,tabularx={|p{.5\textwidth}c}]
+	\begin{tcolorbox}[title={Initiative Costs},arc=1mm,tabularx={lc}]
 
 	\textbf{Action} & \textbf{Init. Cost} \\\hline
 
@@ -1287,97 +1275,108 @@ Each \gls{round} you select your tactics anew and have a range of options for ma
 
 }
 
-\section{The Attack}
+\begin{multicols}{2}
+
+These life and death rolls are handled somewhat differently from other tasks. Let's start with an overview of the basic features then go over them again in more detail. 
+
+You enter a dungeon, goblins are launching an attack from ahead.
+You grab the dice and roll Initiative for the entire party.
+The goblins have 9.
+You (and therefore the party) have rolled 5.
+
+Everyone adds their own bonuses to their Initiative score.
+You get +2 for using a rapier, for a total of 7.
+The party's dwarf has just +1 and acts on Initiative 6.
+The goblins' spears give them a total of 12.
+
+\paragraph{12:} The goblins spend 2 Initiative to run forward to attack.
+
+\paragraph{10:} The goblins spend 4 Initiative to attack, and everyone defends against the onslaught of spears.
+To simply defend, you spend 2 Initiative, putting you on 5.
+\paragraph{6:} The goblins stab at the party again, going down to Initiative 1.
+You decide to take your bruises and start swinging, without any proper defence.
+\paragraph{5:} You hit back, killing your first opponent.
+However, your heavy weapon costs 6 Initiative to take a swing, so you go down to Initiative -1.
+\paragraph{2:} The rest of the party attack back.
+Any goblin hit has to defend itself, putting it on Initiative -1.
+\paragraph{1:} Any goblins who were not attacked begin another assault.
+\paragraph{0:} The round ends.
+
+A successful fight depends as much on proper pacing and timing as anything else.
+
+Each \gls{round} you select your tactics anew and have a range of options for manoeuvres you can pull off.
+
+\end{multicols}
+
+\section{Basic Combat}
 
 \begin{multicols}{2}
 
-In combat, \glspl{pc} divide their Combat Skill between three `Combat Factors' -- \gls{strike}, \gls{init} and \gls{evasion}.
-We represent the Skill with a number of coins, then place the coins directly onto the three Combat Factors in any combination. Someone with a Combat Skill of +2 might place two coins on the Strike score to hit more accurately, or could place 1 coin on Initiative to hit faster and another on Evasion to better avoid attacks.
-In all cases there is an optimal configuration which will itself depend upon the enemy's placement of resources.\footnote{Players and \glsentrylongpl{gm} are free to cover their coins with their hand until everyone has placed their resources for the round.}
-
 \subsection{Initiative}
 
-At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative. Each character can adjust that number for their personal Initiative score. The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers. Everyone in the fight acts in descending order of Initiative -- highest to lowest.
+At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative.\footnote{The ``party leader'', here means `whoever rolls the Initiative dice first'.}
+Each character then adds their \textit{Initiative Factor} to get their Initiative Score.
+The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers.
+If you roll 5 and have a Speed Bonus of 1, your Initiative Score is 6.
 
+The \gls{gm} then counts downwards from the highest Initiative score.
+When your number comes up, you can act.
 Each time the character takes an action they pay a cost in Initiative -- once it reaches below 1 that character can no longer act.
+Moving costs only 2 Initiative, while swinging an axe costs 6.
+You can spend as much as you like, and even go down to an Initiative score of -5, but once the Initiative count reaches 0, the round ends.
 
-Everyone on an Initiative score of at least 1 will have enough time for a full action. Even a spell which takes 8 Initiative can be cast on Initiative 1. Actions which occur at the same Initiative resolve simultaneously.
+Heavy weapons are generally more effective than Light weapons, but they cost 6 Initiative points to take a swing, while Light weapons cost only 4.
 
 Heavy weapons are those with a Weight Rating of -1 or greater. Smaller weapons, those with a Weight Rating of -2 or less, and brawling attacks with fists, all count as light weapons.
 
 \subsubsection{Quick Actions}
 
-\Gls{quickaction} can interrupt the usual Initiative priorities.
+\Glspl{quickaction} can interrupt the usual Initiative priorities.
 Any time someone attempts a Quick Action, they take their action immediately, even if they have a negative Initiative score.
 If two characters interrupt the Initiative flow with Quick Actions then whoever currently has the highest Initiative Score goes first.
 
 Quick Actions allow characters to guard someone as soon as they see an attack impending upon a friend, to defend against missile attacks, or to shout a few words.
 
-\subsubsection{Defence as Action}
 
-Defence takes time and attention, but nobody needs to worry about running out of attention for a defence.  Since Defence is a \textit{Quick Action}, even characters reduced to negative Initiative can defend.
+\subsection{Attack}
 
-Anyone can forgoe their defence, but any attacks against them will count as a \textit{Sneak Attack}.\footnote{See page \pageref{sneakattack} for details.}
+To attack an opponent, you roll $2D6$ as usual, but only add your Combat Skill.
+The \gls{tn} is 7 plus your opponent's Dexterity.
 
-\vfill\null
+\subsection{Damage}\index{Damage}
 
-\initiativechart
+If you hit, roll $1D6$ plus your Strength Bonus to determine Damage.
+The Damage is then taken off the enemy's \gls{hp}.
+Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
 
-\subsection{Evasion}\index{Combat!Evasion}
-
-The basic \gls{tn} to hit a character is 7; characters' Evasion score adds to this. The basic Evasion score is given by a character's Dexterity Bonus. For example, a character with a Dexterity Bonus of +2 would have a \gls{tn} of 9 to hit.
-
-It is possible to abandon Defence and add all Evasion modifiers directly to Strike, leaving the character's Evasion Factor at 0 plus whatever they add from the Combat Skill. We will cover this later under `Stances', below.
-
-\subsection{Strike}\index{Combat!Strike}
-
-The Strike Factor is a measure of how well the character can hit things. It adds to the attack roll. Generally, no Attribute or weapon bonuses are added, only the Combat Skill, and then only if the player elects to add this to Strike and not any of the other factors.
-
-\subsection{The Combat Skill}
-
-The Combat Skill is kept separate from the other Skills as a reminder of the increased cost and its special status in a game based around combat. However, it functions mechanically like any other Skill. It is a specialised Skill, so anyone without the Combat Skill suffers a -1 penalty to their Strike Factor. In addition, characters can specialise in various weapons. Using the Combat Skill with a weapon one hasn't trained in inflicts a -1 penalty on all tasks with the unfamiliar weapon.
-
-\subsubsection{Aggression}
-
-Animals use a Skill called `\index{Aggression}Aggression' to Strike -- Aggression works exactly like the Combat Skill but only adds to the Strike Factor, and never to Initiative or Evasion.
-
-\subsection{Stances}\index{Combat!Stances}
-
-\iftoggle{verbose}{
-	\includegraphics[width=\linewidth]{images/Roch_Hercka/stances.jpg}
-	\label{roch:stances}
-}{}
-
-Characters can attack in an \textit{Aggressive} or \textit{Defensive} stance. This system takes the Defensive stance as default -- the Dexterity Bonus is added to the Evasion score to keep the character safe. However, a character can forego safety for additional combat ability and add the Dexterity Bonus to Strike should they wish. Any Bonuses to Evasion from weapons also add to the Strike Factor. The score cannot be divided between the two -- the Stances are an `all or nothing' affair. Delicate decisions concerning priorities require the Combat Skill, which can be added one piece at a time to any of the Combat Factors.
-
-If a character's Evasion score ever becomes negative, it applies to the Strike score when using the Defensive Stance. It is possible to swap it back by taking the Aggressive stance but this almost guarantees that opponents will hit the character every time they strike.
-
-\end{multicols}
-
-\section{Damage}\index{Damage}
-
-\begin{multicols}{2}
-
-
-Once you hit, roll $1D6$ plus your Strength Bonus to determine Damage. The Damage is then taken off the enemy's \gls{hp} Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
-
-\subsection{Stacking Damage}\index{Combat!Stacking Damage}
+\subsubsection{Stacking Damage}\index{Combat!Stacking Damage}
 
 Damage Bonuses cannot extend forever. If the Damage bonus ever exceeds +3 then 4 points of the bonus are replaced with a die. Therefore, what might usually be $1D6+4$ Damage becomes $2D6$ Damage.
 
 This applies to all Damage, including magical Damage. It continues through all Damage Bonuses, so $1D6+9$ Damage would be simply $3D6+1$ Damage after conversion.
 
-\subsection{Perfect Strikes}
+\subsection{Defence}
 
-\index{Combat!Perfect Strikes}Rolling a \gls{natural} `12' in combat, i.e. rolling two 6's, means the roll was a Perfect Strike. A Perfect Strike is guaranteed to hit even if it doesn't reach the opponent's \gls{tn}, it ignores both Partial and Complete armour (covered below) and it grants +2 Damage.
+When the enemy attempts to hit you, roll for defence with your Dexterity at \gls{tn} 8 plus your opponent's Combat Skill.
+Defending costs 2 Initiative and counts as a \gls{quickaction}, so it can be done immediately.
+
+\subsection{Movement}\index{Movement}
+
+By spending two Initiative, characters can run as a Quick Action, acting before all other actions. Characters can run 3 squares plus their Speed Bonus during this time. This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
+
+Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics Skill Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
+
+\vfill\null
+\initiativechart
 
 \subsection{Hit Points}
+
 \index{Hit Points}Each character has a number of HP equal to 6 plus their Strength Bonus. Small gnomes typically have 4 HP while big, strong humans typically have 7. Losing even a single HP means the character has suffered serious Damage. A long fall might have broken the character's bone. A dagger could have slashed open several veins. Characters do not have many HP so losing even one is a serious matter.
 
-\subsection{Healing}\index{Healing}
+\subsubsection{Healing}\index{Healing}
 Characters heal a quarter their Hitpoints each week, rounded up.
 
-\subsection{Death}
+\subsubsection{Death}
 \index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive. This is rolled at \gls{tn} 4 plus one for every negative HP level. For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP. That makes the \gls{tn} 7 for the Vitality Check.
 
 A failed Vitality check means that the character is dead. A successful one means that the character is unconscious for the remainder of the scene but alive. At the end of the scene they can make further Vitality Checks to see if they wake up. When waking up, all actions relying on movement take a penalty equal to the number of HP beyond 0 the character has lost.
@@ -1397,84 +1396,7 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 
 	\end{tcolorbox}}{}
 
-\end{multicols}
 
-\section{Fate Points}\label{fate_points}\index{Fate Points}
-
-\begin{multicols}{2}
-
-
-\begin{wraptable}{O}{.17\textheight}
-
-	\begin{xpbox}{C}
-		Base FP & Regeneration \\\hline
-
-		5 & 2 per scene \\
-
-		10 & 4 per scene \\
-
-		15 & 6 per scene \\
-
-		20 & 8 per scene \\
-	\end{xpbox}
-
-\end{wraptable}
-
-
-At this point you might be wondering how anyone is going to survive past their first battle. 6 or 7 HP is not a lot when the Damage is often $2D6$ or higher. The mechanism which saves the plot-important character is \gls{fp}. Every time someone would lose HP, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
-
-Everyone in the world begins with 5 base \gls{fp}. This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}. The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full alotment of \gls{fp} at the beginning of each adventure. \glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual. As a result, most \glspl{npc} effectively have 0 \gls{fp}. The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} HP.
-
-\subsection{Regaining Fate Points}
-
-At the end of each Scene, players regenerate 2/5ths of their Fatepoints.  Those with 5 Fatepoints total regenerate 2 temporary Fatepoints, and those with 10 Fatepoints regenerate 4 temporary Fatepoints, and so on.
-
-While \glspl{npc} begin with 0 \gls{fp}, they too regenerate the normal amount each scene. In this way, an \gls{npc} might accumulate quite a number of \gls{fp}, and when some climactic end scene arises where the \glspl{pc} finally confront them, they will have a harder time of it, because the \gls{npc} has now become plot-important enough to merit some plot immunity, just like them.
-
-One exception here is creatures without a Charisma Attribute. Animals, undead and other creatures without any Charisma Bonus can never store \gls{fp} except through the use of Magic.
-
-\end{multicols}
-
-\section{Fatigue}
-
-\begin{multicols}{2}
-
-
-\label{fatigue}\index{Fatigue}Fighting, running and swimming can really take it out of you, especially when wearing heavy armour. Characters gain Fatigue points for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
-
-Below the character's HP bar are spaces for Fatigue Points to be gained. Once the character has more Fatigue Points than their current HP, they take a -1 penalty for every Fatigue Point in excess of their HP.  This might happen because the character has, say, 6 HP but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions. But it might also occur because the character has 4 Fatigue Points and then Damage reduces their to only 2 HP, leaving them with a -2 penalty to all actions yet again.
-
-Characters may reach a maximum penalty of -5 due to Fatigue Points, after which they die. If the character is accruing Fatigue Points from running or wrestling, they would normally simply pass out at this point, but if they are gaining Fatigue from swimming or bleeding, the character will almost certainly just die.
-
-Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
-
-\subsection{Gaining Fatigue}
-
-\paragraph{Bleeding} If the character has lost HP to piercing or slashing weapons they should gain Fatigue Points equal to the number of HP lost. These Fatigue Points are marked with a `B' instead of the usual dash across a box and are healed at a rate of one per day rather than the usual, faster rate. If the bleeding is not stopped, the character should bleed for the same number of points \ minus one on the next scene until they are dead or the bleeding has stopped on its own. The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
-
-\paragraph{Climbing} Every 2 squares climbed upward inflicts 1 Fatigue Point.
-
-\paragraph{Encumbrance} Each point of Encumbrance inflicts 1 Fatigue Point at the end of the scene.
-
-\paragraph{Fighting} Each \gls{round} of Combat inflicts 1 Fatigue Point.
-
-\paragraph{Holding Breath} Each \gls{round} a character holds their breath inflicts 1 Fatigue Point. This Fatigue is applied each \gls{round} rather than at the end of the scene.
-
-\paragraph{Marching} Every mile of marching inflicts a Fatigue point.
-
-\paragraph{Starving} Each meal skipped inflicts 1 Fatigue point plus the character's Strength Bonus (minimum of 1) for the first day and 1 Fatigue Point per day thereafter. Each day without water inflicts 3 Fatigue Points. These Fatigue Points are marked with an `S' and do not heal until the character gains some appropriate sustenance.
-
-\paragraph{Swimming} Each \gls{round} spent swimming inflicts 1 Fatigue Point. This is in addition to holding one's breath, if the character is swimming underwater and unable to breathe while there.
-
-\paragraph{Wearing armour} All armour adds a number of Fatigue points equal to the armour's Weight Rating. As usual, the Weight Rating is 1 higher for Complete Armour.
-
-Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} they will be healed faster than they are accumulated. Since they are both gained and healed at the end of the scene, \gls{gm} should look at the number of Fatigue Points that will be gained and healed and if there are none on balance then Fatigue can be ignored for yet another scene. Fatigue comes into play during connected scenes of continued endurance and action, or when PCs are attempting to see how long they can swim against an underwater current while wearing full plate armour. Or possibly, and quite rarely, Fatigue comes into play when a tiny, weak character attempts to do everything while wearing full plate armour.
-
-\subsection{Healing Fatigue}\index{Resting}
-
-\paragraph{Short Rest} Any scene which ends with characters resting allows them to heal 3 Fatigue Points plus their Strength Bonus, so a character with a Strength Bonus of +2 would heal 5 Fatigue Points.
-
-\paragraph{Long Rest} Any full night of rest allows characters to heal 5 Fatigue Points plus their Strength Bonus.
 
 \end{multicols}
 
@@ -1485,11 +1407,11 @@ Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} 
 Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself. Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about. Longer weapons also grant a bonus to Initiative, representing the fighter's ability to hit opponents before they hit them due to the weapon's length.
 
 Each weapons is rated for `Dam' (the Damage bonus), `Init' (the bonus to Initiative, generally through reach) and `Ev' (the weapon's Evasion bonus).
-The Evasion bonus actually adds directly to Dexterity, so if the wielder is using the Aggressive stance, it is added to the Strike score, leaving Evasion at 0.\index{Stance}
 
 Each weapon has a Weight Rating, just like any item. For every point a weapon's Weight Rating exceeds its wielder's Strength Bonus, the wielder gains 1 Encumbrance, which subtracts from the character's Effective Speed as they move slower and swings the weapon slower. Weapons held in only one hand add +2 to their Weight Rating.
 
-Finally, some weapons also has an in-built `Knack' -- a special ability they allow the wielder to use.  See page \pageref{knacks} for details.
+Finally, some weapons also have an in-built `Knack' -- a special ability they allow the wielder to use.
+See page \pageref{knacks} for details.
 
 \end{multicols}
 
@@ -1501,9 +1423,9 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	Dagger & +1 & \ 0 & +1 & -4 &  \\
 
-	Firepoker & +1 & +1 & \ 0 & -2 & Finishing Blow \\
+	Firepoker & +1 & +1 & \ 0 & -2 & Finishing Blow (page \pageref{finishingblow}) \\
 
-	Knife & +1 & 0 & \ 0 & -4 & Precise Strike \\
+	Knife & +1 & 0 & \ 0 & -4 & Precise Strike (page \pageref{precisestrike}) \\
 
 	Log & +1 & -1 & \ 0 & -2 & \\
 
@@ -1520,7 +1442,7 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	\textbf{Medium Weapons} &  &  &  &  &  \\\hline
 
-	Boulder & +3 & -1 & \ 0 & 4/6 & Finishing Blow \\
+	Boulder & +3 & -1 & \ 0 & 4/6 & Finishing Blow Finishing Blow (page \pageref{finishingblow}) \\
 
 	Chair & +1 & +1 & +1 & 1/ 3 & \\
 
@@ -1534,11 +1456,11 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	Longsword & +1 & +1 & +3 & 1/3 & \\
 
-	Shortsword & +1 & +1 & +2 & -1/1 & Furious Blows \\
+	Shortsword & +1 & +1 & +2 & -1/1 & Furious Blows (page \pageref{furiousblow}) \\
 
-	Spear & +1 & +1 & +2 & 0/2 & First Strike \\
+	Spear & +1 & +1 & +2 & 0/2 & First Strike (page \pageref{firststrike}) \\
 
-	Quarterstaff & \ 0 & +1 & +2 & 0/2 & First Strike \\
+	Quarterstaff & \ 0 & +1 & +2 & 0/2 & First Strike (page \pageref{firststrike}) \\
 
 	Whip & \ 0 & +2 & \ 0 & -1/ 1 & \\
 
@@ -1554,7 +1476,7 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	Giant Sword & +3 & +1 & +2 & 5 &  \\
 
-	Poleax & +3 & +1 & +1 & 5 & First Strike \\\hline
+	Poleax & +3 & +1 & +1 & 5 & First Strike (page \pageref{firststrike}) \\\hline
 
 	\end{tcolorbox}
 
@@ -1562,11 +1484,11 @@ Finally, some weapons also has an in-built `Knack' -- a special ability they all
 
 	\textbf{Shields} &  &  &  &  &  \\\hline
 
-	Bucklar Shield & +2 & \ 0 & +1 & -2 & Solid Defence \\
+	Bucklar Shield & +2 & \ 0 & +1 & -2 & Solid Defence (page \pageref{soliddefence})\\
 
-	Kite Shield & +1 & \ 0 & +3 & 2/4 & Solid Defence, Dodge \\
+	Kite Shield & +1 & \ 0 & +3 & 2/4 & Solid Defence, Dodge (page \pageref{soliddefence}) \\
 
-	Round Shield & +1 & \ 0 & +2 & 0/2 & Solid Defence, Dodge \\
+	Round Shield & +1 & \ 0 & +2 & 0/2 & Solid Defence, Dodge (page \pageref{soliddefence}) \\
 \end{tcolorbox}}
 
 \weaponschart
@@ -1587,13 +1509,17 @@ Anyone wielding a medium (or indeed heavy) weapon with a weight rating equal or 
 
 \subsubsection{Heavy Weapons}\index{Combat!Heavy Weapons}
 
-Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a Weight Rating of 4 or more. They grant excellent Bonuses to the Combat Factors, but require 8 Initiative points to attack.
+Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a Weight Rating of 4 or more.
+They grant excellent Bonuses, but require 8 Initiative points to attack.
 
 Anyone insane enough to attempt to use a large weapon one handed must suffer through a +4 increase in the weapon's Weight Rating, which would make such weapons prohibitively heavy for most people.
 
 \subsection{Shields}\index{Shields}
 
-Shields are a special type of weapon used almost exclusively to defend. They have stats like any other weapon but with one important difference -- their Evasion bonus always adds to the Evasion Factor. This is true even if the character is using the Aggressive Stance. Characters using a sword and a shield can add the shield's bonus to Evasion to their Evasion Factor while using the sword's Evasion Bonus and their Dexterity Bonus to Strike the enemy.
+Shields are a special type of weapon used almost exclusively to defend.
+They have stats like any other weapon but with one important difference -- their Evasion bonus always adds to the Evasion Factor.\footnote{See below, page \pageref{stances}.}
+This is true even if the character is using the Aggressive Stance.
+Characters using a sword and a shield can add the shield's bonus to Evasion to their Evasion Factor while using the sword's Evasion Bonus and their Dexterity Bonus to Strike the enemy.
 
 \end{multicols}
 
@@ -1651,32 +1577,138 @@ All armour has a Weight Rating, just like any other item. The Weight Ratings abo
 
 Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
 
-\end{multicols}
+\subsection{Perfect Strikes}
 
-\section{Monsters Never Attack}
-
-\begin{multicols}{2}
-
-
-Well, obviously they attack, but the \gls{gm} does not have to roll for their attack.  Instead, players roll to \textit{avoid} incoming attacks at \gls{tn} 8 plus the monster's Strike Factor.
-
-If a player faces down a hobgoblin with a Strike Factor of +2, then the player must roll with their Evasion Factor at a \gls{tn} of 10.  If the player fails the roll, the monster hits.
-
-Instead of \glspl{npc} making a Vitals Shot when they roll 3 above the \gls{tn} to hit a PC, the PCs receive a Vitals shot when they fail an Evasion roll by 4 or more.  If the \gls{tn} to Evade an enemy is 10 then rolling a 9 means the player has been hit, but rolling a 6 means the PC has been hit by a Vitals Shot.\footnote{If this looks at all odd, remember that when players attack at a \gls{tn} of 7, they make a regular hit on 7, 8 or 9 and a Vitals Shot on 10 or more.  When they Evade at \gls{tn} 8, they get hit on 7, 6 or 5, but receive a Vitals Shot when they roll a 4.}
-Players wearing Complete Armour receive a Vitals Shot when failing an Evasion roll by 6 points or more.
-
-\gls{gm} may roll the attack for \glspl{npc} in order to emphasize their agency -- the Mathematics doesn't change either way.  This rule is simply in place to make sure that players do most of the rolling, though \gls{gm} are still encouraged to roll for Damage.
+\index{Combat!Perfect Strikes}Rolling a \gls{natural} `12' in combat, i.e. rolling two 6's, means the roll was a Perfect Strike. A Perfect Strike is guaranteed to hit even if it doesn't reach the opponent's \gls{tn}, it ignores both Partial and Complete armour (covered below) and it grants +2 Damage.
 
 \end{multicols}
 
-\section{Movement}\index{Movement}
+\section{Advanced Combat}
 
 \begin{multicols}{2}
 
+With the advanced combat rules, \glspl{pc} have the option to change how they attack each round.
+Those who are certain they can strike the shambling undead might focus more on defence than attack.
+Others, hoping to bring down a massive basilisk in one hit might put all their resources into an accurate attack with a high Initiative score.
 
-By spending two Initiative, characters can run as a Quick Action, acting before all other actions. Characters can run 3 squares plus their Speed Bonus during this time. This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
+To keep track of all this, we track three `Factors'.  The \textit{Strike Factor} is to attack, the \textit{Evasion Factor} to avoid being attacked, and the \textit{Initiative Factor} to add to Initiative.
 
-Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics Skill Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
+\subsection{Stances}\label{stances}
+\index{Stance}
+
+The Dexterity Bonus can be assigned to either the Strike Factor or the Evasion Factor.
+This includes the weapon bonus.
+Someone with a Dexterity Bonus of +1 and a longsword would have a total Dexterity Bonus of +4, and can assign that to either Strike or Evasion.
+
+This bonus cannot be picked apart - the entire thing must go towards only one of these two Factors.
+
+\subsection{The Combat Bonus}
+
+The Combat Skill can be added piece by piece to any of the Combat Factors.
+Those with Combat +1 can put it on Strike, Evasion or Initiative.
+Those with Combat +2 allows you to place +1 on Strike and +1 on Evasion, or +2 on Initiative, or any other combination.
+
+The character sheet has a space for coins on top of the Combat Factors so you can place your Dexterity Bonus and the Combat Skill on top to remember what you have.
+
+At the end of the round, the Combat Factors reset, and everyone chooses what they want to do again.
+
+\iftoggle{verbose}{
+
+In all cases there is an optimal configuration which will itself depend upon the enemy's placement of resources.\footnote{Players and \glsentrylongpl{gm} are free to cover their coins with their hand until everyone has placed their resources for the round.}
+
+}{}
+
+\subsubsection{Aggression}
+
+Animals use a Skill called `\index{Aggression}Aggression' to Strike -- Aggression works exactly like the Combat Skill but only adds to the Strike Factor, and never to Initiative or Evasion.
+
+\iftoggle{verbose}{
+	\includegraphics[width=.8\linewidth]{images/Roch_Hercka/stances.jpg}
+	\label{roch:stances}
+}{}
+
+Characters can attack in an \textit{Aggressive} or \textit{Defensive} stance. This system takes the Defensive stance as default -- the Dexterity Bonus is added to the Evasion score to keep the character safe. However, a character can forego safety for additional combat ability and add the Dexterity Bonus to Strike should they wish. Any Bonuses to Evasion from weapons also add to the Strike Factor. The score cannot be divided between the two -- the Stances are an `all or nothing' affair. Delicate decisions concerning priorities require the Combat Skill, which can be added one piece at a time to any of the Combat Factors.
+
+If a character's Evasion score ever becomes negative, it applies to the Strike score when using the Defensive Stance. It is possible to swap it back by taking the Aggressive stance but this almost guarantees that opponents will hit the character every time they strike.
+
+\end{multicols}
+
+\section{Fate Points}\label{fate_points}\index{Fate Points}
+
+\begin{multicols}{2}
+
+\begin{wraptable}{O}{.17\textheight}
+
+	\begin{xpbox}{C}
+		Base FP & Regeneration \\\hline
+
+		5 & 2 per scene \\
+
+		10 & 4 per scene \\
+
+		15 & 6 per scene \\
+
+		20 & 8 per scene \\
+	\end{xpbox}
+
+\end{wraptable}
+
+
+At this point you might be wondering how anyone is going to survive past their first battle. 6 or 7 HP is not a lot when the Damage is often $2D6$ or higher. The mechanism which saves the plot-important character is \gls{fp}. Every time someone would lose HP, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
+
+Everyone in the world begins with 5 base \gls{fp}. This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}. The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full alotment of \gls{fp} at the beginning of each adventure. \glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual. As a result, most \glspl{npc} effectively have 0 \gls{fp}. The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} HP.
+
+\subsection{Regaining Fate Points}
+
+At the end of each Scene, players regenerate 2/5ths of their Fatepoints.  Those with 5 Fatepoints total regenerate 2 temporary Fatepoints, and those with 10 Fatepoints regenerate 4 temporary Fatepoints, and so on.
+
+While \glspl{npc} begin with 0 \gls{fp}, they too regenerate the normal amount each scene. In this way, an \gls{npc} might accumulate quite a number of \gls{fp}, and when some climactic end scene arises where the \glspl{pc} finally confront them, they will have a harder time of it, because the \gls{npc} has now become plot-important enough to merit some plot immunity, just like them.
+
+One exception here is creatures without a Charisma Attribute. Animals, undead and other creatures without any Charisma Bonus can never store \gls{fp} except through the use of Magic.
+
+\end{multicols}
+
+\section{Fatigue}
+
+\begin{multicols}{2}
+
+\label{fatigue}\index{Fatigue}Fighting, running and swimming can really take it out of you, especially when wearing heavy armour. Characters gain Fatigue points for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
+
+Below the character's HP bar are spaces for Fatigue Points to be gained. Once the character has more Fatigue Points than their current HP, they take a -1 penalty for every Fatigue Point in excess of their HP.  This might happen because the character has, say, 6 HP but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions. But it might also occur because the character has 4 Fatigue Points and then Damage reduces their to only 2 HP, leaving them with a -2 penalty to all actions yet again.
+
+Characters may reach a maximum penalty of -5 due to Fatigue Points, after which they die. If the character is accruing Fatigue Points from running or wrestling, they would normally simply pass out at this point, but if they are gaining Fatigue from swimming or bleeding, the character will almost certainly just die.
+
+Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
+
+\subsection{Gaining Fatigue}
+
+\paragraph{Bleeding} If the character has lost HP to piercing or slashing weapons they should gain Fatigue Points equal to the number of HP lost. These Fatigue Points are marked with a `B' instead of the usual dash across a box and are healed at a rate of one per day rather than the usual, faster rate. If the bleeding is not stopped, the character should bleed for the same number of points \ minus one on the next scene until they are dead or the bleeding has stopped on its own. The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
+
+\paragraph{Climbing} Every 2 squares climbed upward inflicts 1 Fatigue Point.
+
+\paragraph{Encumbrance} Each point of Encumbrance inflicts 1 Fatigue Point at the end of the scene.
+
+\paragraph{Fighting} Each \gls{round} of Combat inflicts 1 Fatigue Point.
+
+\paragraph{Holding Breath} Each \gls{round} a character holds their breath inflicts 1 Fatigue Point. This Fatigue is applied each \gls{round} rather than at the end of the scene.
+
+\paragraph{Marching} Every mile of marching inflicts a Fatigue point.
+
+\paragraph{Starving} Each meal skipped inflicts 1 Fatigue point plus the character's Strength Bonus (minimum of 1) for the first day and 1 Fatigue Point per day thereafter. Each day without water inflicts 3 Fatigue Points. These Fatigue Points are marked with an `S' and do not heal until the character gains some appropriate sustenance.
+
+\paragraph{Swimming} Each \gls{round} spent swimming inflicts 1 Fatigue Point. This is in addition to holding one's breath, if the character is swimming underwater and unable to breathe while there.
+
+\paragraph{Wearing armour} All armour adds a number of Fatigue points equal to the armour's Weight Rating. As usual, the Weight Rating is 1 higher for Complete Armour.
+
+Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} they will be healed faster than they are accumulated. Since they are both gained and healed at the end of the scene, \gls{gm} should look at the number of Fatigue Points that will be gained and healed and if there are none on balance then Fatigue can be ignored for yet another scene. Fatigue comes into play during connected scenes of continued endurance and action, or when PCs are attempting to see how long they can swim against an underwater current while wearing full plate armour. Or possibly, and quite rarely, Fatigue comes into play when a tiny, weak character attempts to do everything while wearing full plate armour.
+
+\subsection{Healing Fatigue}\index{Resting}
+
+\paragraph{Short Rest} Any scene which ends with characters resting allows them to heal 3 Fatigue Points plus their Strength Bonus, so a character with a Strength Bonus of +2 would heal 5 Fatigue Points.
+
+\paragraph{Long Rest} Any full night of rest allows characters to heal 5 Fatigue Points plus their Strength Bonus.
+
+\end{multicols}
 
 \iftoggle{verbose}{
 	\begin{exampletext}
@@ -1753,8 +1785,6 @@ The hoboblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 	\end{exampletext}
 
 }{}
-
-\end{multicols}
 
 \section{Complications \& Manoeuvres}
 
@@ -3672,13 +3702,13 @@ This knack is automatically granted by using a medium sized shield, so anyone wh
 
 The character can irritate and distract multiple people at the same time. Each Knack they have allows them to flank an additional opponent and each of those opponents has their Evasion factor lowered by 1 for each Knack the character has. This Knack cancels all effects of the Knack: Back to the Wall for anyone near the character.
 
-\subsubsection{Finishing Blow}
+\subsubsection{Finishing Blow}\label{finishingblow}
 
 Any attack the character makes of 12 Damage or more gains a number of additional Damage equal to the number of Knacks you have, including Magical attacks.
 
 Purchasing this Knack multiple times only adds +1 to the additional Damage dealt. Many weapons, such as warhammers, come with this Knack in-built, so anyone with the Knack: Finishing Blow, who also wields a warhammer, would trigger +2 Damage any time sie dealt 12 or more Damage, or more if sie had further Knacks. Other Knacks from weapons do not count towards the total.
 
-\subsubsection{First Strike}
+\subsubsection{First Strike}\label{firststrike}
 
 The character is well practised at getting the first hit in. They receive +2 Initiative on the first \gls{round} of combat.
 
@@ -3693,7 +3723,7 @@ The character is particularly good at defending themself by jumping about. They 
 
 When using the Aggressive Stance, this bonus goes into the Strike Factor instead of the Evasion Factor, as per usual.
 
-\subsubsection{Furious Blows}
+\subsubsection{Furious Blows}\label{furiousblows}
 
 You can wield large weapons exceptionally fast. Medium weapons (those with a Weight Rating of -1 to 4) cost 1 less Initiative to make an attack with just so long as you have no Encumbrance penalty to wielding it. Using this Knack, an attack with a longsword would cost only 5 Initiative. Buying this Knack multiple times has no effect.
 
@@ -3719,7 +3749,7 @@ You can draw back a hunting bow in a single \gls{round}, paying only 8 Initiativ
 
 Any Sneak Attacks you complete inflict an additional +1 Damage for each Knack you have. Normally, Sneak Attacks inflict +2 Damage, so someone with 3 Knacks would inflict +5 Damage.
 
-\subsubsection{Precise Strike}
+\subsubsection{Precise Strike}\label{precisestrike}
 
 You require 1 less to achieve a Vitals Shot. For example, when targeting an opponent with a Evasion score of +2 and Partial armour, they would normally require a score of 9 to hit and a score of 12 to make a Vitals Shot which ignores all armour. With this Knack they still require a score of 9 to hit but only a score of 11 to make a Vitals Shot. People with this Knack can also bypass Perfect armour by rolling 6 points above the target's \gls{tn}.
 
@@ -3733,7 +3763,7 @@ You can pull back and shoot a short bow by paying only 3 Initiative. If you have
 
 You pay 0 Initiative to reload an arrow onto your bow, as opposed to the regular Initiative cost of 2. Additionally you can make an Sneak Attack with a bow by paying an additional 4 Initiative instead of spending a \gls{round} aiming.
 
-\subsubsection{Solid Defence}
+\subsubsection{Solid Defence}\label{soliddefence}
 
 The character can hold their actions, persistently defending themself rather than attacking. They gain +2 to their Evasion Factor during this time. At any time they can give up the protection just as if they had held their action normally; this allows their to act at 1 higher Initiative than the current Initiative Count.
 
