@@ -410,9 +410,73 @@ Specialisations include massive creatures (5+ Strength), leading many troops (mo
 
 This is the flip side of a number of Skill related to hiding one's doings or presence. It is practiced by guards or the eternally paranoid. It is most often rolled with Wits in order to spot people sneaking about, perhaps fingering a purse or sneaking up behind a potential victim to stab them in the back. One might also add this Skill to Intelligence to spot important facts written on dungeon walls, or use Strength with Vigilance in order to stay up late, despite being laden with Fatigue, in order to remain alert.
 
-\chapter{The Rules}
+\end{multicols}
+
+\section{Classes}
+
+\begin{multicols}{2}
+
+If you're used to a more class-based system, or just want some suggestions getting started, you can use the following starting defaults.
+An alchemist is just someone with spells, and a rogue is just someone with skills.
+Once the game starts, you can continue with the same concept, or morph the character into something else.
+
+\subsection{Alchemist}\index{Alchemist}
+
+Alchemists start with Academics 1, Invocation 2, Illusion 1 and MP 2.
+If their Intelligence or Wits is below 0 then raise it by one level.
+If not, buy a single 1st level Skill.
+
+Their equipment is a notebook and writing equipment, camping equipment and a quarterstaff.
+They worship C\'{a}l\"{e}.\footnote{See page \pageref{gods_codes} for more on character belief systems.}
+
+\subsection{Bard}\index{Bard}
+
+Bards begin with Performance 2, Academics 1, Empathy 1, Deceit 1, Larceny 1, Vigilance 1 and the first level of the Fate sphere.
+
+Their starting equipment includes partial leather armour, a dagger, an instrument, a longsword, lantern, camping equipment, notebook and writing equipment, and 50' of silk rope.
+They worship Alass\"{e}.
+
+After time spent adventuring, many bards learn Song Magic in order to aid their party.
+
+\subsection{Priest of V\'{e}r\"{e}}
+
+Priests of the god of honour begin with Fate 2, Academics 1, Medicine 1 and MP 4.
+
+Their equipment is a quarterstaff, medical equipment, partial chainmail shirt and camping equipment.
+
+After gaining XP, some adventuring clerics focus upon martial abilities, while others focus on prayer in order to work miracles.
+
+\subsection{Rogue}\index{Rogue}
+
+Rogues begin with Combat 1, 10 \gls{fp}, Stealth 2, Larceny 1 and the Knack: Perfect Sneak Attack.
+If they have a Body Attribute at -1, raise it by one level.
+If not, purchase one level of the Deceit Skill.
+
+Their starting equipment is a dagger, Complete leather armour, a longsword, 50' of rope and lockpicking tools.
+If they have the Deceit Skill, they begin play with a throwing dagger.
+They follow the Code of Acquisition.
+
+\subsection{Warrior}\index{Warrior}
+
+Warriors begin play with Combat 2, \gls{fp} 10 and the Knack: Adrenaline Surge.
+If the character has a single Body Attribute below 0 then buy it up a level; otherwise purchase the Tactics Skill at 1st level.
+
+Their starting equipment is partial chainmail, a longsword and a bucklar shield.
+If they start play with the Tactics Skill they also get camping equipment.
+They follow the goddess Ohta.
+
+\subsubsection{Paladin}\index{Paladin}
+
+After progressing, particularly pious fighters can gain a level or two in Fate, allowing them to ask for Divine Guidance, curse enemies, or even gain additional Fate Points before going into battle.
+
+\subsubsection{Ranger}\index{Ranger}
+
+Fighters with an affinity for the wilderness may pick up nature-related abilities, such as talking with animals, or even summoning mists.
+Whether this comes through prayer or inborn abilities which develop over time, a little magic on the side of a character can make for a formidable fighter.
 
 \end{multicols}
+
+\chapter{The Rules}
 
 \section{Basic Actions}
 
@@ -606,6 +670,32 @@ Players receive \gls{xp} from the \gls{gm} for killing monsters, pious endeavour
 The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may restrict when it can be spent. Each Trait should increase by no more than a single level during the course of an adventure -- you might be lucky enough to get enough \gls{xp} to raise your Strength from -2 to +1 in a single session, but nobody can accrue that kind of muscle mass in such a short period of time. It is also recommended that Specialisation Skills only be bought during \gls{downtime}.
 }
 
+\subsection{Experience Points \& the Discount}
+
+\iftoggle{verbose}{
+
+Standing alone against a towering ogre is a nightmare, but three warriors standing against three ogres can be much easier.
+A battle against thirty goblins can really take its toll, but three different battles against ten goblins can be child's play.
+To represent this, we have \textit{the XP Discount} -- a price you pay for every member of the party.
+
+}{}
+
+For every member of the party, that many points are deducted from one monster's XP value (to a minimum of 0).
+If the party has two members, the first two monsters have 2 XP deducted from their total value.
+If the party has five members, the first five monsters have 5 XP deducted from their total.
+
+\iftoggle{verbose}{
+
+If a single warrior defeats a dragon worth 22 XP, then the warrior receives 21 XP, because 1 XP is removed from the total.
+If he fights 10 ghouls worth 2 XP each, then he receives 1 for the first, and 2 for the rest, for a total of 19 XP.
+
+However, if five characters are fighting the 10 ghouls together, they each deduct 5 XP from a single monster.
+The first five ghouls are worth nothing, because each net ($2 - 5 = $) 0 XP.
+Only the last 5 ghouls count, bringing 10 XP in total.  Dividing this among 5 players, each receives 2 XP at the end.
+
+}{}
+
+If players need to discount multiple adversaries, they are counted from highest to lowest XP value.
 
 \subsection{Spending \gls{xp}}
 
@@ -619,8 +709,6 @@ The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may re
 	\end{wrapfigure}
 
 }{}
-
-
 
 Each additional level of a Trait has a steeply progressive cost. The costs represent buying the next level; the first level of a school of magic costs 15 and the second costs 20 -- buying up to the second level costs 35 \gls{xp} in total. Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp}.
 
@@ -752,6 +840,7 @@ Mixed characters are easy to make -- a spell-casting, sword-swinging elf or a dw
 My own character, Thenton, has a good Charisma score and some basic ability to fight with his enhanced human Strength Attribute. I think I'm going to make him a `knightly poet'.}{}
 
 \subsubsection{Starting \gls{xp}}
+
 Characters begin play with an amount of \gls{xp} stipulated by the \gls{gm} depending upon the level of their campaign. The suggested starting \gls{xp} is 50, with up to 150 \gls{xp} for more advanced campaigns.\iftoggle{verbose}{ With that in mind, it's time for me to spend some of that 50 \gls{xp} on Thenton, the knightly poet.
 
 For a start, he'll need the Performance Skill, and he gets two specialisations with it because it's a specialised Skill. `Poetry' is a good start, and perhaps the flute after that, because why not? That costs 5 \gls{xp} so I have 45 left. He should have some basic Combat ability, so I'm going to give him +1 in the Combat Skill -- that'll cost 10, and why not put him at +2 for another 20 \gls{xp}? That leaves only 15 \gls{xp} to go. Since he's a fighter he needs the Dexterity penalty removed. Removing the penalty costs only 5 \gls{xp}, so with 10 left I'm going to buy a level of Empathy to make him a socialite. Deceit would also be good, but I think a knightly poet would be too naive for that. Finally, a member of the nobility, even a minor noble, should have some basic Academics knowledge, so his last Trait will be the first level of the Academics Skill.}{}
@@ -761,7 +850,6 @@ For a start, he'll need the Performance Skill, and he gets two specialisations w
 \section{Gold \& Goods}\label{goods}\index{Equipment}
 
 \begin{multicols}{2}
-
 
 \begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
 
@@ -1018,7 +1106,14 @@ Lastly, there is an adventure. The adventure lasts until the current plot-thread
 
 Space is tracked through \glspl{square}. A \gls{square} is just any unit of space within the battlefield. If you are using a battlemap which has squares marked out on it, then those squares the the size of a square, even if those squares happen to look very hexagonal. A square might be ten metres wide as each one covers an entire house when the battlefield is a large town, or it might be just two yards wide when moving through a detailed map of a dungeon. The precise distances represented do not matter, just so long as they consistently balance one character's ability to run away with another's ability to hit someone with a projectile.
 
-The next unit of space is the `\gls{area}'. An \gls{area} is just any \gls{area} which looks different from another. While traipsing through a small dungeon, each room and cavern entered might be thought of as an \gls{area}. When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area a village. \footnote{If all this looks like a repugnant abstraction, just set a square to two yards, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
+The next unit of space is the `\gls{area}'.
+An \gls{area} is just any \gls{area} which looks different from another.
+While traipsing through a small dungeon, each room and cavern entered might be thought of as an \gls{area}.
+When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area a village.
+
+The final unit is a `region'.
+Regions encombass a full forest, a town, or a collection of villages.
+Each region has its own set of likely encounters, such as tradesmen in the villages, cutthroats in town, and elves in the forest.\footnote{If all this looks like a repugnant abstraction, just set a square to two yards, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
 
 \end{multicols}
 
@@ -4426,6 +4521,8 @@ The band took only a couple of hours before they set off again, hoping to find t
 
 
 \end{multicols}
+
+\input{gm.tex}
 
 \appendix
 
