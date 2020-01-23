@@ -51,22 +51,6 @@ Combat is focussed on giving players real choices, and typically ends quickly as
 
 For a starting pack of ideas, the \glsentrylong{gm} has \textit{Adventures in Fenestra} -- a guide to the world, some side quests, and a small bestiary.
 
-\section{What's an RPG?}
-
-It's a little like a soap-opera meets board games.
-One person tells a strange kind of story, without any main characters.
-Everyone at the table then makes a main character, decides what kind of person they are, and how they might react.
-When the person telling the story and the main characters can't say what happens next, they turn to the dice.
-
-Roll high and you win.
-Roll low and you lose.
-Each characters gets some bonus or penalties to the dice rolls for jumping, thinking, or casting spells, depending on what the character has trained in.
-
-The stories told each night are \emph{emergent}.
-Nobody knows exactly what will happen ahead of time.
-A lot of the fun for the storyteller is seeing how people change the plot, while the players get to see a world unfold without in front of them, often while struggling to survive.
-
-
 \section*{Special Thanks ...}
 
 \subsection*{to the Artists}
@@ -97,6 +81,21 @@ Neil McDonnell for the basic photograph which became the Polymorph image,
 \subsection*{to the playtesters} Marri Russell, Ross Oliver, Reiss McGee, David Smith, Michael Dyson, Ryan Trotter and Maggie Anderson; also thanks to Ari-Matti Piippo for his insightful comments.
 
 \subsection{and the Youtubers} for keeping me company during lengthy typography sessions -- in particular Lindybeige for his suggestions on RPGs, especially his insistence on running away from things. Also a big thanks to Skallagrim, Xidnaf and Artifexian for keeping me entertained and informed.
+
+\section{What's an RPG?}
+
+It's a little like a soap-opera meets board games.
+One person tells a strange kind of story, without any main characters.
+Everyone at the table then makes a main character, decides what kind of person they are, and how they might react.
+When the person telling the story and the main characters can't say what happens next, they turn to the dice.
+
+Roll high and you win.
+Roll low and you lose.
+Each characters gets some bonus or penalties to the dice rolls for jumping, thinking, or casting spells, depending on what the character has trained in.
+
+The stories told each night are \emph{emergent}.
+Nobody knows exactly what will happen ahead of time.
+A lot of the fun for the storyteller is seeing how people change the plot, while the players get to see a world unfold without in front of them, often while struggling to survive.
 
 \section*{The Right to Improve}
 
@@ -1350,7 +1349,7 @@ Of these, the less well connected ones often wander the earth aimlessly searchin
 
 	-- \textbf{Quick Actions} & \\\hline
 
-	Defence & 2 \\
+	Defence & 4 \\
 
 	Guard someone & 2 \\
 
@@ -1660,6 +1659,7 @@ For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{t
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
 \iftoggle{verbose}{
+\vfill\null
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/vitals_shot.jpg}
 	\label{roch:vitals}
 }{}
@@ -1803,12 +1803,10 @@ Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} 
 
 \paragraph{Long Rest} Any full night of rest allows characters to heal 5 Fatigue Points plus their Strength Bonus.
 
-\end{multicols}
-
 \iftoggle{verbose}{
 	\begin{exampletext}
 
-	The next morning the troop gave a wide berth to the area between the fallen village and the mountain, in the hopes of avoiding attack from the rear.
+	The next morning the trio gave a wide berth to the area between the fallen village and the mountain, in the hopes of avoiding attack from the rear.
 Unfortunately there was little they could do to hide themselves, and a band of hobgoblins from the village were following them.
 The trio had reached halfway up the mountain by this point but the hobgoblins were faster than them, and stronger.
 Thenton thought for a moment about abandoning Hugi if there was a problem - his little dwarvish legs were no good for sprinting. Of course Hugi's death would not buy them much time, and Arneson would never stand for it. No, they would have to stick together to survive.
@@ -1844,7 +1842,12 @@ The hoboblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 
 	``Six!'', beckons the \gls{gm}, and starts to describe leering hobgoblins stabbing at everyone's feet from the base of the great stone step the trio are sitting on. She gives them each a -1 to attack due to occupying the lower ground.
 
-	A hobgoblin hits Arneson, so he spends 2 Initiative to attempt to Dodge. Arneson rolls a 7 -- not enough! The hobgoblin's Strength is +2 and the battle axe adds +3 Damage for a total of +5. 4 of the Damage is replaced with a die, so the hobgoblin is rolling $2D6+1$ Damage. The total is 6. Arneson's player first reduces that by his chainmail's \gls{dr} of 4, leaving 2 Damage. Instead of taking that Damage he marks off 2 \glsentrylongpl{fp} and declares that the attack in fact misses.
+	A hobgoblin hits Arneson, so he spends 2 Initiative to attempt to Dodge. Arneson rolls a 7 but the \gls{tn} is 10.
+The hobgoblin's Strength is +2 and the battle axe adds +3 Damage for a total of +5.
+4 of the Damage is replaced with a die, so the hobgoblin is rolling $2D6+1$ Damage.
+The total is 6.
+Arneson's player first reduces that by his chainmail's \gls{dr} of 4, leaving 2 Damage.
+Instead of taking that Damage he marks off 2 \glsentrylongpl{fp} and declares that the attack in fact misses.
 
 		Hugi finally releases his crossbow, but in all the confusion misfires. He's down to Initiative 1.
 
@@ -1881,6 +1884,8 @@ The hoboblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 
 }{}
 
+\end{multicols}
+
 \section{Complications \& Manoeuvres}
 
 \begin{multicols}{2}
@@ -1895,9 +1900,12 @@ This penalty only counts when one side of a fight is blind. When both sides are 
 
 While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on their side (including themself) then they hit a companion. If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2. If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion. Companions who are are accidentally hit can attempt an Evasion roll by rolling with their current Evasion Factor against \gls{tn} 10; failure implies normal Damage from that attack. It is quite possible to kill a companion while fighting blind.
 
-\subsubsection{Darkness}
+\subsubsection{Darkness}\label{darkness}\index{Darkness}
 
-\label{darkness}\index{Darkness}Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses. Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent. However, when both sides suffer from the darkness, the battle changes very little. Neither side can hit very accurately, but then neither side can dodge or parry very well either.
+Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
+Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent.
+However, when both sides suffer from the darkness, the battle changes very little.
+Neither side can hit very accurately, but then neither side can dodge or parry very well either.
 
 When fighting in the dark, each side receives a penalty to attacking the other equal to the difference between their respective Wits + Vigilance totals, up to a maximum of -6.
 
@@ -1921,7 +1929,8 @@ Switching away from one's focus on spells or martial combat must be decided at t
 
 \subsubsection{Trapped or Entangled}
 
-Characters caught in mud, who slip over, or get shackled to a spot cannot move or dodge nearly as well as they could.  They receive no benefits from their Dexterity Bonus or the Knack: Fox Hop.
+Characters caught in mud, who slip over, or get shackled to a spot cannot move or dodge nearly as well as they could.
+They cannot take any Quick Actions except speaking, and receive no benefits from their Dexterity Bonus or the Knack: Fox Hop.
 
 \subsubsection{Falling Prone}\index{Prone}\label{prone}
 
@@ -1963,6 +1972,8 @@ A successful roll implies the character can break the grapple and move freely, o
 
 If you guard someone by standing in front of them then all attacks have to go through you first.\footnote{This includes missile attacks only if you could otherwise evade them.}  Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no Initiative) at their real target.
 
+Guarding costs 4 Initiative, as the character must both focus on helping a companion and focus on their own defence.
+
 \subsubsection{Half Swording}\index{Combat!Half Swording}
 
 It is possible to hold a sword by the blade and use the guard to bludgeon one's opponent. This manoeuvre allows the weapon's Speed Bonus to be added to its Damage instead. It takes 2 Initiative points to change how one holds the sword.
@@ -1991,28 +2002,12 @@ When taking someone by surprise, the attacker gains a +4 bonus to the attack and
 
 Sneak Attacks also gain a penalty equal to the weapon's Weight Rating (if positive).  Warhammers are not the best choice for assassination weapons, while daggers and handaxes do much better.
 
-Sneak Attacks can happen mid-combat when someone is ignoring a flanker's attacks, when creeping up on someone from behind, or simply when planning a daring attack.  The attacker might use Dexterity + Stealth to sneak unseen, or Intelligence + Stealth to pick the perfect ambush spot.  Defenders usually use the same Attribute + Vigilance.
-
 \subsubsection{Two Weapon Combat}\index{Combat!Two Weapons}
 
 A character using two weapons -- perhaps a shield in one hand and a sword in the other -- can use the best Speed, Strength and Dexterity Bonus from all weapons.
 Each weapon will have to be held in one hand, increasing its Weight Rating by 2.
 
 Shields, uniquely, can add their Evasion Bonus to the character's Evasion Factor even while the wielder is in the Aggressive Stance. As a result, someone could use a shield's bonus to Evasion while using a sword's Evasion Bonus to add to their Strike Strike score. In this case, Dexterity would always be added to Strike, along with the sword's Bonus.
-
-\end{multicols}
-
-\section{Combat Summary}\index{Combat Summary}
-
-\begin{multicols}{2}
-
-
-\begin{enumerate}
-	\item Characters publicly declare stances. If no stance is declared, assume a Defensive stance. The \gls{gm} rolls for enemy Morale if appropriate.
-	\item Each character divides the Combat score (if any) between Initiative, Strike and Evasion.
-	\item The leader of each group rolls Initiative and each character adds their own Initiative Factor.
-	\item Actions are resolved in order of Initiative, each reducing the Initiative score.
-\end{enumerate}
 
 \iftoggle{verbose}{
 
@@ -2179,7 +2174,7 @@ Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at \gl
 
 Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
 
-The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any NPCs with \glsentrytext{fp}.}
+The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any NPCs with remaining \glsentrytext{fp}.}
 
 Morale checks are rolled at \gls{tn} 6 with a character's Combat Skill (or Aggression Skill if the character is an animal). As usual, the \gls{gm} rolls for an entire group with one roll. If the characters have just attacked a group of 10 hobgoblins and injured 3 then the troop will roll at \gls{tn} 6 to see if they should flee, but the injured 3 hobgoblins roll at \gls{tn} 8.
 If the final result is a 7 then the three injured hobgoblins flee, but the rest remain.
@@ -2287,7 +2282,9 @@ The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
 
 \subsection{Marching}\index{Marching}
 
-Every two miles walked inflicts a Fatigue Point at the end of the day. Additional Fatigue Points for carrying heavy items and wearing armour are added as usual. Humans have an uncanny ability to walk all day without tiring, and only endure 1 Fatigue Point every 2 miles.
+Every two miles walked inflicts a Fatigue Point at the end of the day.
+Additional Fatigue Points for carrying heavy items and wearing armour are added as usual.
+Humans have an uncanny ability to walk all day without tiring, and only endure 1 Fatigue Point every 2 miles.
 
 \iftoggle{verbose}{
 
@@ -2339,6 +2336,20 @@ With their FP now replenishing quickly, the group can rest and worry less about 
 	They breathe in and out gently, waiting for the heaviness in the chest to subside. Despite the winds, Thenton can hear a gentle drip, drip, drip from the slowly bleeding wound on Hugi's shoulder where an arrow still lies.
 	\end{exampletext}
 }{}
+
+\end{multicols}
+
+\section{Combat Summary}\index{Combat Summary}
+
+\begin{multicols}{2}
+
+\begin{enumerate}
+	\item Characters publicly declare stances. If no stance is declared, assume a Defensive stance. The \gls{gm} rolls for enemy Morale if appropriate.
+	\item Each character divides the Combat score (if any) between Initiative, Strike and Evasion.
+	\item The leader of each group rolls Initiative and each character adds their own Initiative Factor.
+	\item Actions are resolved in order of Initiative, each reducing the Initiative score.
+\end{enumerate}
+
 
 \end{multicols}
 
@@ -2419,7 +2430,9 @@ People around the mage can still sometimes spot a spell being cast. They use the
 
 \subsubsection{Quick Spells}
 
-Quick spells can be completed in a \gls{round} or faster, costing 3 Initiative points plus the level of the spell. Such spells always force a little `flash and bang' out as the raw magic hits the air. Some mages create sparks as they cast spells, others summon dark mists -- it all depends upon the Path of Magic the mage is walking.
+Quick spells can be completed fast enough to cast in combat, costing 3 Initiative points plus the level of the spell.
+Such spells always force a little `flash and bang' out as the raw magic hits the air.
+Some mages create sparks as they cast spells, others summon dark mists -- it all depends upon the Path of Magic the mage is walking.
 
 Quick Spells are challenging, and require the mage know a spell intimately.  They cannot be cast with the mage's highest spell level.  A mage with Polymorph at level 3 cannot cast level 3 as a Quick Spell.
 
@@ -2445,8 +2458,7 @@ The elves are intimately familiar with this sphere, and usually refer to it as a
 
 \spelllevel
 
-\spell{Forest's Friendship}{Continuous}{Beast Ken}
-
+\spell{Forest's Friendship}{Continuous}{Beast Ken}\\
 Novices of aldaron can befriend any beast, make them confused, send them to sleep or send them into a blind panic. Passive mammals such as sheep are easy to target while aggressive or strange creatures can be very difficult to get to grips with.
 
 The \gls{tn} for this spell is 7 plus the target beast's Wits + Aggression Skill (the Skill which replaces Combat for beasts). The caster rolls their Intelligence + Beast Ken. For example, a creature with Wits +1 and Aggression +2 would be at \gls{tn} 10 to affect.
@@ -2459,8 +2471,7 @@ Forest's Friendship replicates the first three levels of the Enchantment Sphere 
 
 \enhancement{1}{Enduring} The mage can use any level of the Enchantment sphere on animals.
 
-\spell{Light}{Continuous}{Survival}
-
+\spell{Light}{Continuous}{Survival}\\
 The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
 
 \iftoggle{verbose}{
@@ -2477,47 +2488,44 @@ If an area was previously dark then affected creatures not prepared for the ligh
 
 Anyone trying to cover their eyes must be Keeping Edgy\footnote{See page \pageref{edgy} for details on Keeping Edgy in combat.} and must be holding their action at the point the spell is cast. A character cannot decide to Keep Edgy after the spell has been declared.
 
+\spell{Whispering Wind}{Continuous}{Survival}\\
+The mage can also send out whispering messages on the wind, making their words carry across mountains and past houses.
+The winds can carry up to ten words, and the message can wander for miles around -- up to 1 area plus 1 per Intelligence Bonus the mage has.
+This requires an Intelligence roll at \gls{tn} 7 with a -1 penalty for every area miles away the target is.
+The target must be easily identifiable, as the wind acts as a semi-sentient extension of the mage's mind, watching out for the target with its own narrow version of vision.
+
+If the caster has access to Metamagic's first level then extending the range means the spell can travel any distance, although longer distances can substantially raise the \gls{tn} and make it difficult for the spell to identify its recipient. Extremely long-range spells can also take a long time to reach the intended recipient, forcing the mage to cast Whispering Wind as a standing spell and leave it active until they guess the correct amount of time until the spell will find its target.
+
 \spelllevel
 
 The mage begins to commune with the weather systems and influence how they go. They can even summon localised weather systems from the palm of a hand; mist, sunlight, wind and more are all possible.
 
-\spell{Air Bubble}{Continuous}{Survival}
-
+\spell{Air Bubble}{Continuous}{Survival}\\
 Weather-workers can summon an air bubble anywhere within range, with a diameter equal to \arabic{spelllevel} squares plus the caster's Wits Bonus. The air bubble can be used to walk underwater without getting wet (though drips through the bubble are common). It will remain despite any damage to its outer `wall' -- penetrating objects simply slip in and out seamlessly. All air bubbles must be summoned while on the land, taking it down below -- any bubbles which begin underwater will simply summon a bubble of stagnant water and will collapse under their own weight once brought onto the land. Air bubbles can also help stop invading winds, mists and such, but with such a limited range their usefulness is also limited.
 
 Any projectiles targeted at the airbubble lose a lot of their power -- arrows, and fireballs both become a little impotent when faced with it.  It provides a total of \arabic{spelllevel} + Intelligence \gls{dr} against all attacks.
 
-\spell{Edible Plants}{Continuous}{Survival}
-
+\spell{Edible Plants}{Continuous}{Survival}\\
 Plants can be made edible -- up to 2 meals plus the caster's Intelligence Bonus can be made to instantly grow with each casting. The spell must be maintained for at least a day if it is to be effective -- if dispelled before this time, the food provides no nourishment as it retroactively fades away and Fatigue Points are retroactively applied for starvation. After this time the effects of the spell are so ingrained to the being of the recipients that dispelling the magic has no effects on their internal energy stores.
 
-\spell{Freezing Touch}{Continuous}{Survival}
-
+\spell{Freezing Touch}{Continuous}{Survival}\\
 The mage can freeze solid any body of water, or even damage people by cooling their body.
 
-If cast on a person, they take \arabic{spelllevel} Fatigue points plus the caster's Intelligence Bonus.\iftoggle{verbose}{\footnote{The elvish natural immunity to cold does nothing to prevent this damage.}}
+If cast on a person, they take \arabic{spelllevel} Fatigue Points plus the caster's Intelligence Bonus.\footnote{The elvish natural immunity to cold does nothing to prevent this damage.}
 Exactly how effective this is depends a lot on how tired the target already is.
 
 Bodies of water freeze over the moment the spell is finished.  Such ice has an effective Strength Bonus of \arabic{spelllevel} plus the caster's Intelligence Bonus, and covers up to \arabic{spelllevel} squares plus the caster's Wits Bonus.  The spell's Strength Bonus can test if the ice can trap people who are in the water, or if it can support people's weight (it holds a maximum weight rating of its own Strength +4).
 
 Creatures only frozen up to their waist or ankles can gain a bonus to break out of the ice, and a further bonus if the spell is cast slowly.
 
-\spell{Mist}{Continuous}{Survival}
-
+\spell{Mist}{Continuous}{Survival}\\
 The caster summons mist to cover \arabic{spelllevel} areas plus their Wits Bonus, so a caster with Wits +2 could cover a full 4 areas with mist. The mist impedes vision, making it easier to sneak and harder to shoot arrows.
 
 The mist blinds people, and any combat within the uses the rules for Darkness on page \pageref{darkness} with a maximum penalty of \arabic{spelllevel} plus the caster's Intelligence Bonus. Firing projectiles takes a penalty equal to the number of squares from the target up to a maximum of \arabic{spelllevel} plus the caster's Intelligence Bonus; i.e. if the caster had Intelligence +1 then the penalty for firing projectiles would be -1 per square's distance up to a maximum penalty of \setcounter{list}{0}\addtocounter{list}{-1}\addtocounter{list}{-\value{spelllevel}}\arabic{list}.
 
 Finally, sneaking actions gain a bonus equal to \arabic{spelllevel} plus the caster's Intelligence Bonus.
 
-\spell{Whispering Wind}{Continuous}{Survival}
-
-The mage can also send out whispering messages on the wind, making their words carry across mountains and past houses. The winds can carry up to ten words, and the message can wander for miles around -- up to 2 areas plus 1 per Intelligence Bonus the mage has. This requires an Intelligence roll at \gls{tn} 7 with a -1 penalty for every area miles away the target is. The target must be easily identifiable, as the wind acts as a semi-sentient extension of the mage's mind, watching out for the target with its own narrow version of vision.
-
-If the caster has access to Metamagic's first level then extending the range means the spell can travel any distance, although longer distances can substantially raise the \gls{tn} and make it difficult for the spell to identify its recipient. Extremely long-range spells can also take a long time to reach the intended recipient, forcing the mage to cast Whispering Wind as a standing spell and leave it active until they guess the correct amount of time until the spell will find its target.
-
-\spell{Wind Blast}{Instant}{Survival}
-
+\spell{Wind Blast}{Instant}{Survival}\\
 Wind can also be made to blow forward in a blast in front of the mage. The blast spans out, affecting 2 squares plus the mage's Wits Bonus. Each person affected instantly loses 2 Initiative points plus the caster's Intelligence Bonus, minus the targets' Strength Bonus (minimum 1). The wind can emanate from any location in range and stop at any location in range but any wind coming from behind people will not be effective in slowing them down. Those affected by such a wind cannot move until their Initiative comes up again, i.e. movement is no longer a Quick Action. Finally, the wind moves the target back 2 squares plus the caster's Intelligence Bonus minus their Strength Bonus, since larger, heavier creatures are more difficult to move, while smaller creatures (with a negative Strength) move farther.
 
 For example, Darren the druid blasts out a scathing wind against a row of goblins -- his Wits of +2 means he affects \setcounter{list}{2}\addtocounter{list}{\value{spelllevel}}\arabic{list} squares; since his Intelligence is +1, each target would lose each \setcounter{enc}{1}\addtocounter{enc}{\value{spelllevel}}\arabic{enc} points of Initiative, however the goblins' Strength Bonus is -1, so they finally lose \addtocounter{enc}{1}\arabic{enc} points and cannot move until their next Initiative action.
@@ -2525,8 +2533,7 @@ Each moves back (in the direction of the wind) \arabic{enc} squares minus their 
 
 \spelllevel
 
-\spell{Animal Possession}{Continuous}{Beast Ken}
-
+\spell{Animal Possession}{Continuous}{Beast Ken}\\
 The priest can now possess animals, taking their body. The priest retains their own Mind Attributes but takes on those of the animal, instinctively knowing how to move, fly, et c. They retain all their original Skills but few will be of any use. While their Athletics Skill will be required to fly and run, they will not be able to grasp tools or speak, and indeed hearing and understanding humanoid speech can be very different -- animal hearing is not designed to pick up on the same things as humanoid hearing.
 
 While the spellcaster's mind occupies an animal body, their own body lays listless, as if in a deep coma. They cannot speak and can only eat with help.
@@ -2541,16 +2548,14 @@ After a successful spell ends, another roll is made at an identical \gls{tn}. Su
 
 Chief priests of Laiqu\"{e} often prove themselves by going on a mission to tame a sufficiently grand beast -- an umber hulk, a griffon or even the grander creatures of the underworld all make excellent mounts and warriors. More subtle mages love to use rats as assassins as they can carry little containers of poison into enemy bowls, or use crows to report on the movements of armies.
 
-\spell{Forest's Call}{Continuous}{Beast Ken}
-
+\spell{Forest's Call}{Continuous}{Beast Ken}\\
 The caster makes a call to the forest to come and attack the nearby target.  If the target is a player, the \gls{gm} rolls \arabic{spelllevel} times plus the caster's Intelligence on the local encounter table, and the \gls{pc} faces all encounters within the next day, and typically within the next scene.  The \gls{gm} is encouraged to combine all encounters into one.
 
 If the target is an \gls{npc}, they lose \arabic{spelllevel} \gls{fp} + the caster's Intelligence.  If this leaves the target on 0 \gls{fp}, the target meets with an unfortunate accident next time they enter a natural environment, and dies.
 
 The curse only lasts while it's maintained, and only takes effect in a natural environment where creatures roam -- not in towns or otherworldly environments.
 
-\spell{Nature's Reclaim}{Instant}{Survival}
-
+\spell{Nature's Reclaim}{Instant}{Survival}\\
 The caster reaches out to any dead matter within range and forces it to be reclaimed by the earth. An early Autumn comes and wooden weapons degrade to nothing, the wheels of carts come undone and entire houses can be brought to the ground.
 
 The basic \gls{tn} is 10 which increases for young, fresh wood and decreases for older, already-degraded wood. Other natural substances, such as leather or cloth can also be made to degrade, but only once substance per casting can be affected.
@@ -2569,16 +2574,14 @@ The caster can effect a number of areas up to the spell's level, plus their Wits
 
 \spelllevel
 
-\spell{Plantform}{Continuous}{Survival}
-
+\spell{Plantform}{Continuous}{Survival}\\
 The caster can radically alter how plants grow in real time. Plants can be made venomous, or can grow vast amounts of nourishing food. They can create structures such as temporary shelters or walls for protection. Of course such spells require a good body of plant matter to initially cast -- a verdant field with some root-plants or a forest are fine setting. The inside of a cavern or castle are not.
 
 This spell has a basic \gls{tn} of 7, adjusted for more sparse fauna. Once the spell ends, the plant returns to its original form, slowly retreating, shrinking or just dissolving like fading autumnal leaves.
 
 This spell is special insofar as it can create permanent plant structures. Any such spell left active for over a year becomes permanent. Fields of venomous plants, liveable houses in the treetops and verdant gardens can all be made into permanent features with a sufficiently dedicated and patient caster.
 
-\spell{Creeping Disarm}{Continuous}{Skills: Survival}
-
+\spell{Creeping Disarm}{Continuous}{Skills: Survival}\\
 Usually, Plantform spells require a good deal of plant-matter to encourage growth, and such matter should be as verdant and alive as possible. However, making a small chunk of dead wood grow leaves and branches can be done with some difficulty. Commonly, aldaron casters use this level to encourage growth from the wooden handle of various weapons; the apparently dead wood burst into life, producing branches, shoots, leaves and sometimes blooming flowers. The weapon becomes steadily more unwieldy until it is completely useless, having become not so much a weapon as the decorative heart of a very strange plant. Small handles with little visible wood such as a short-sword handle bound in leather might increase the \gls{tn} by +4, for a total of 11 while the longer handles of an axe might only increase the \gls{tn} by +2, and a polearm, made almost entirely of wood, could have no effect on the \gls{tn}.
 
 Once the spell takes effect, the apparently dead wood of the handle bursts into life and begins to grow new branches, increasing its Weight Rating by 1 every \gls{round} until it gains a total equal to 4 plus the caster's Intelligence Bonus. For example, a caster with Intelligence +3 might cast the spell on someone's longsword. The longsword begins with a Weight Rating of 1 but grows heavier each \gls{round} until on the 7th \gls{round} it has a total Weight Rating of +8.
@@ -2587,8 +2590,7 @@ Initially, this additional Weight Rating will be no more than an inconvenience a
 
 Targets can attempt to pull the growths off but they grow as fast as they can be pulled off and such growths are as hardy as any other level of this spell. Once the spell ends, the additional growth falls to nothing.
 
-\spell{Venomous Growth}{Continuous}{Survival}
-
+\spell{Venomous Growth}{Continuous}{Survival}\\
 The caster focusses on an area of land and venomous thorns, complete with fruit-like poison sacks, begin to grow. Anyone stepping into the area risks being stung simply by moving through the plants.
 
 The Venomous Growth spell affects a number of squares equal to 4 plus the caster's Wits Bonus. Such patches of land make for excellent traps as most people don't even notice that the thorns are likely to be a serious problem if they are hidden in an appropriately foliage-dense area. When using a suitable area to hide such plants, noticing them requires a Wits + Vigilance roll, resisted by the caster's Intelligence + Deceit. Moving through such an area without mishap is difficult even after one has noticed the plants are there, requiring a Dexterity + Survival task, resisted by the caster's Intelligence + Survival.
@@ -2603,12 +2605,10 @@ The poison inflicted by this spell heals at a rate of 1 per scene, though a succ
 
 Those caught in the area of effect when the spell takes place can resist it with their Evasion Factor while the caster uses their Intelligence + Survival. For example, if the caster had a +4 Bonus from Intelligence + Survival and targeted someone with a current Evasion Factor of +2, they would have to roll against a \gls{tn} of 7 to activate the spell, but would have to reach a \gls{tn} of 9 to affect the target before they jumped away from the venomous plants. Alternatively, PCs attempting to evade the growth would have to roll against \gls{tn} 11 to jump out of the way, because the basic \gls{tn} of 7 would add the caster's Bonus of +4.
 
-\spell{Verdant Banquet}{Continuous}{Survival}
-
+\spell{Verdant Banquet}{Continuous}{Survival}\\
 The caster can force plants -- any plants -- to bring forth massive amounts of nourishing fruit and vegetables. The plants grow a total of 4 days' worth of food plus the caster's Intelligence Bonus. Each day's worth of food is three full meals, so a caster intending to provide a banquet could (with Intelligence +2) provide 18 full meals. As with the second-level version, the spell must be kept active for a full day if the plants are to continue to nourish those who fed.
 
-\spell{Wild Growth}{Continuous}{Survival}
-
+\spell{Wild Growth}{Continuous}{Survival}\\
 Plants can be made into various structures, from walls to huts, bridges or even strange works of art. The total area of plant matter which can be created by such a spell is equal to 4 squares plus the caster's Wits Bonus. For example, someone with a Wits Bonus of +3 could create a good-sized tent, a wall, or an impressive statue.
 
 The item grows 1 square at the end of each \gls{round}, so it will take a while before completing, but such structures are at least very hardy. Each square counts as having a number of HP equal to 4 plus the caster's Intelligence Bonus and the same \gls{dr} (which counts as Perfect \gls{dr}).
@@ -2619,8 +2619,7 @@ The \gls{gm} may adjust the \gls{tn} of the spell, depending upon the quality of
 
 \spelllevel
 
-\spell{Call of the Verdant Goddess}{Continuous}{Survival}
-
+\spell{Call of the Verdant Goddess}{Continuous}{Survival}\\
 This final level of the aldaron sphere allows true mastery of nature. Not only can the caster call up sentient plants to aid them in any quest, they can summon storms and destroy wood and therefore anything made from wood.
 
 The mage can finally summon up the wrath of forests to attack their enemies. They must be in the presence of a sufficiently large amount of foliage -- perhaps a single tree or a series of bushes, but a few potted plants nearby will not be sufficient for an effective spell. A mage might animate one massive tree to come and fight for them, its roots crawling across the ground like an octopus on land, or they might pull up half a dozen smaller, more delicate plants.
@@ -2635,8 +2634,7 @@ Such plants can sense their environment through movement -- people walking next 
 
 The right kind of foliage for this spell isn't always available. If the mage is situated in a desert or a castle's roof, the spell is completely unsuitable.
 
-\spell{Storm}{Continuous}{Survival}
-
+\spell{Storm}{Continuous}{Survival}\\
 The final level of aldaron allows a mage to summon a mighty storm, possibly including rain, lightning, thunder and hail, as the caster desires. The exact effects of the storm are in the hands of the \gls{gm} but potential effects include knocking down small buildings, inflicting Fatigue Points on anyone in the storm and random blasts of lightning. A higher Margin suggests more powerful effects. The spell extends from the caster in all directions by a number of areas equal to five plus their Wits.
 
 The storm always presents in a manner appropriate to the local environment. A desert might see a sandstorm rise while a caster out at sea might summon tidal waves.
@@ -2666,20 +2664,17 @@ Ice can turn into rock, and water can turn into sludge.
 
 Food substances, gold coins with complex ingravings, bows, and other crafted items are too complicated for this spell -- it only transforms matter into something simple of the same type.
 
-\spell{Choking Fog}{Continuous}{Survival}
-
+\spell{Choking Fog}{Continuous}{Survival}\\
 The caster changes the nearby air into a caustic mess.  When cast outdoors the mist disipates at the end of the \gls{round}.  When cast in a windy area, the fog disappears instantly.
 
 Anyone Keeping Edgy can hold their breath.  Others gain \arabic{spelllevel} + the cater's Intelligence in Fatigue points each \gls{round}.
 
 The spell affects a number of areas equal to \arabic{spelllevel} + the caster's Wits.
 
-\spell{Purify Air}{Continuous}{Survival}
-
+\spell{Purify Air}{Continuous}{Survival}\\
 Smoke, fog, or any other substance can be purified.  The spell affects a number of areas equal to \arabic{spelllevel} + the caster's Wits.
 
-\spell{Stonespell}{Continuous}{Crafts}
-
+\spell{Stonespell}{Continuous}{Crafts}\\
 The caster changes any solid target to stone, ice, or any other simple, solid, substance.  The \gls{tn} is 7 plus the target's Weight Rating.\footnote{A living target's Weight Rating is equal to their \glsentrytext{hp}.}  Once the spell is over, the target turns back to normal.
 
 Anyone may spend 5 \gls{fp} in order to stipulate that the spell fails.
@@ -2688,15 +2683,14 @@ Fast moving items, such as a spear used in combat, are additionally difficult to
 
 Metal cannot be targeted by this spell.
 
-\spell{Slime}{Continuous}{Survival}
-
+\spell{Slime}{Continuous}{Survival}\\
 The caster turns any nearby liquid into a slippery slime.  Anyone running across the area makes a Dexterity + Athletics roll, \gls{tn} 7 + the caster's Intelligence.  Some kind of liquid must be in the right place for the spell to work.
 
 Casters acting quickly often carry their own water.  Throwing water requires 8 initiative for using an item, as usual.
 
-\spell{Web}{Continuous}{Survival}
-
-The caster turns any liquid inta a viscious, sticky substance.  Anyone coming into the liquid gets stuck, and much take a full movement action trying to get free.
+\spell{Web}{Continuous}{Survival}\\
+The caster turns any liquid inta a viscious, sticky substance.
+Anyone coming into the liquid gets stuck, and needs to take a full movement action to try to get free.
 
 Casters roll their Intelligence + Survival at a \gls{tn} of 7 + the target's Strength + Athletics. Alternatively, players can avoid being stuck in the web by rolling Strength + Athletics, at \gls{tn} 7 + the caster's Intelligence + Survival.
 
@@ -2718,26 +2712,24 @@ Living creatures turned using Stone Spell into a solid substance, and then turne
 
 Level 2 conjuration can use all the enhancements of the previous level.
 
-\spell{Acid}{Continuous}{Survival}
-
+\spell{Acid}{Continuous}{Survival}\\
 The caster can turn any liquid into a potent acid.  Acidic substances deal $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus.
 
-\spell{Artefact}{Continuous}{Varies}
-
+\spell{Artefact}{Continuous}{Varies}\\
 The caster can now transform targets into detailed forms.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
 
 The first leve's enhancements can be added to this level, so a mage could create an \textit{Enlarged Artefact} at third level, and summon an entire wagon, or break the necessity to use the right kind of matter and summon a minor seige weapon from thin air.\footnote{Summoned seige weapons do not come locked and loaded.}
 
-\spell{Prison}{Continuous}{Crafts}
-
-This spell is simply an example of stacking spell enhancements together.  The caster freezes the water around the target, or turns surrounding air to stone, imprisoning them.  While the spell is being cast, the target can attempt to break free as a Quick Action, costing 2 Initiative, by rolling Strength + Athletics.  The \gls{tn} is 7 plus caster's Intelligence Bonus plus Crafts.
+\spell{Prison}{Continuous}{Crafts}\\
+This spell is simply an example of stacking spell enhancements together.  The caster freezes water around a target, or turns surrounding air to stone, imprisoning them.
+While the spell is being cast, the target can attempt to break free as a Quick Action, costing 2 Initiative, by rolling Strength + Athletics.
+The \gls{tn} is 7 plus caster's Intelligence Bonus plus Crafts.
 
 If the spell completes, the \gls{tn} to break free increases by 2.
 
 \spelllevel
 
-\spell{Teleport}{Instant}{Academics}
-
+\spell{Teleport}{Instant}{Academics}\\
 The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
 
 \enhancement{1}{Portal} The mage can not simply teleport something but open a doorway from one place to another, within the normal range.
@@ -2780,38 +2772,34 @@ This sphere of magic only works on people with an Intelligence Attribute and wor
 
 \spelllevel
 
-\spell{Calm}{Continuous}{Empathy}
+\spell{Calm}{Continuous}{Empathy}\\
+Enchanters can calm down scared people including those who have failed a Morale check.
+While under the care of an enchanter, all Morale Checks gain a bonus equal to 1 plus the Enchanter's Intelligence Bonus.
 
-Enchanters can calm down scared people including those who have failed a morale check. While under the care of an enchanter, all Morale Checks gain a bonus equal to 1 plus the Enchanter's Intelligence Bonus.
-
-\spell{Golden Aura}{Continuous}{Empathy}
-
+\spell{Golden Aura}{Continuous}{Empathy}\\
 The enchanter learns to charm people with a smile or a wink, or lend the ability to others.
 The target adds 1 plus the caster's Intelligence Bonus to any Social Skill. This spell can also be cast on others.
 
-\spell{Imbue Soul}{Continuous}{Empathy}
-
+\spell{Imbue Soul}{Continuous}{Empathy}\\
 The caster pours a little life-essence into an object, animal, or anything else.
 When used on animals, the creature slowly becomes smarter, though this can take some days to have any real effect.
 
 The spell attracts undead to the target, who feed on the destruction of life.  Any undead in the area will follow the target, just as if it were a person.
 With mindless undead, this works without failure, though intelligent undead can plainly understand that the item is not a person if they can see it properly.
 
-\spell{Mind's Healing}{Continuous}{Empathy}
-
+\spell{Mind's Healing}{Continuous}{Empathy}\\
 The enchanter can cut any ill effects caused by level 1, 2 or 3 Enchantment spells. If used as a standing spell, the target becomes immune to such spells unless they want to be affected by them.
 
-\spell{Fear}{Continuous}{Deceit}
-
+\spell{Fear}{Continuous}{Deceit}\\
 \Glspl{npc} hit by this spell suffer a -2 Morale penalty.  \Glspl{pc} hit by this spell are not allowed to know their current \gls{fp} total -- the \gls{gm} tracks it instead.
 
-\spell{Reading the Ripples}{Instant}{Vigilance}
-
-The enchanter can read any target's Mind Attributes, see which Code or God they follow (if any) and sees all of their Knacks. This will not grant any information about what the target is thinking, merely how capable that mind is and its priorities. The caster should also be informed which God or Code the target follows (if any).
+\spell{Reading the Ripples}{Instant}{Vigilance}\\
+The enchanter can read any target's Mind Attributes, see which Code or God they follow (if any) and sees all of their Knacks.\footnote{See page \pageref{gods_codes}.}
+This will not grant any information about what the target is thinking, merely how capable that mind is and its priorities.
 
 Unwilling targets resist this spell with their Wits + Deceit.
 
-\spell{Sending}{Continuous}{Performance}
+\spell{Sending}{Continuous}{Performance}\\
 The enchanter telepathically sends a short message to the target within normal range. If cast as a standing spell, the caster can telepathically send messages for as long as they are within range of the target.
 
 If the enchanter does not have any languages in common with the target then the \gls{tn} is 9 rather than 7. The target cannot send messages back.
@@ -2820,17 +2808,18 @@ If the enchanter does not have any languages in common with the target then the 
 
 \spell{Confusion}{Continuous}{Deceit}
 
-	\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
-	\label{roch:enchanter}
-}{}
-
 The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
 They have trouble articulating exactly what's wrong, but will remain confused for as long as the spell continues.
 The spell is sometimes initiated by eye contact, sometimes by song -- any number of social interactions can suffice for transferring the spell's effects.
 
-A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Vigilance. If the target loses the roll they immediately loses all remaining actions for the turn but can still defend them; the target's Initiative score instantly reduces to 0.
+A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Vigilance.
+If the target loses the roll they immediately loses all remaining actions for the turn but can still defend themself; the target's Initiative score instantly reduces to 0.
 
 Each subsequent turn the target makes a resisted roll of\ Wits + Vigilance against the mage's Intelligence + Deceit. Failure indicates that they suffer an Initiative penalty equal to 2 plus the mage's Intelligence Bonus.
+
+	\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
+	\label{roch:enchanter}
+}{}
 
 While the spell is in effect, the target suffers a penalty to all Mental Attributes equal to \arabic{spelllevel} plus the enchanter's Intelligence Bonus; so a mage with Intelligence +3 would inflict a -5 penalty. If the target attempted to cast spells, any rolls would suffer a -5 penalty and any spell-effects which relied on the Intelligence Attribute would suffer as well.
 
@@ -2840,31 +2829,42 @@ If an \gls{npc} enchanter intends to cast this on a PC during a scene, the \gls{
 
 When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought. The use of magic will is not obvious to those unfamiliar with such abilities.
 
-\spell{Mind of Stone}{Continuous}{Empathy}
-Enchanters of this level can also cast a greater version of Mind's Healing. The spell can cut the ill effects of any Enchantment spell and if cast as a casting spell the target becomes completely immune to unwanted Enchantment spells.
+\spell{Mind of Stone}{Continuous}{Empathy}\\
+Enchanters of this level can also cast a greater version of Mind's Healing. The spell can cut the ill effects of any Enchantment spell and if cast as a standing spell the target becomes completely immune to unwanted Enchantment spells.
 
 \spelllevel
 
 The enchanter locks eyes or otherwise engages with the target and lulls them gently to sleep, forces them to repeat particular actions, or fills them with a dreadful fear. The target can reroll a failed resistance roll at the end of each scene.
 
-\spell{Focus}{Continuous}{Empathy}
+\spell{Focus}{Continuous}{Empathy}\\
 The target holds the last action performed and repeats it, again and again.
 If they were attacking, they will continue attacking until there are no targets left, and then go and look for more.
 If the target was attempting to mount a horse but the horse flees, they will chase it until they can no longer move.
 
 The enchanter engages in a resisted roll of their Intelligence + Empathy versus the target's Wits + Vigilance. Targets can stop once their original action has become obviously impossible or is unmistakably complete.
 
-\spell{Panic}{Continuous}{Deceit}
+\spell{Panic}{Continuous}{Deceit}\\
 The enchanter and the target make a resisted roll; the caster adds their Intelligence Bonus and Deceit Skill while the target adds their Wits Bonus and Combat Skill. If the target fails, they automatically run away in fear, as the enchanter dictates.
 
 If the target would normally take a Morale check, the caster's Intelligence + Deceit are added to the \gls{tn} for as long as the spell is in effect. Targets completely unable to flee will continue to fight.
 
-\spell{Rest}{Continuous}{Empathy}
+\spell{Rest}{Continuous}{Empathy}\\
 Enchanters who want their target to fall asleep can make a resisted Intelligence + Empathy roll against the target's Wits + Vigilance. The target can spend 5 \gls{fp} to ignore the results of the spell. A successful spell means that the target has fallen asleep.
+
+\spell{Mental Illusion}{Continuous}{Varies}\\
+The caster at this level can also create a mental illusion in the target's mind. The caster might look deeply into the target's eyes and force them to hear music which is not in fact there but persists despite all attempt to stop it. They might sing to all present about a dragon, and one particular listener will actually see, feel and smell that dragon.
+
+In all cases a successful illusion will be complete, and the target will make every provision to interact realistically with the imaginary thing, be it a creature, an object or weather condition. It could even be something stranger, such as a box containing a spider's voice, or a statue of a sunrise which glows in unknown colours.
+
+The caster and target make a resisted roll: the caster uses their Intelligence + some Skill relevant to the illusion being created. A caster making a dragon might use Ether Lore, while making an illusory cow would require Beast Ken. The target resists with their Wits and the same Skill as the caster.
+
+The \gls{gm} should make this roll for players, in secret. The target gains a bonus to resist (or the caster takes a penalty) if the illusion is particularly unbelievable (such as a bizarre object or an unexplained dragon). Targets also gain a penalty to resist if they suspect that magic is being used to trick them, which often becomes obvious if lots of people around are insisting that rats are not in fact biting off their toes.
+
+Such mental illusions can inflict up to 4 Fatigue Points plus the caster's Intelligence Bonus and multiple castings allow the Fatigue Points to stack up. These Fatigue Points are healed as normal. The player may be told that this is Damage, but the \gls{gm} should keep track of it separately to ensure that all the Damage is properly converted once the spell fails. Such Fatigue Points can kill a character in the usual manner, i.e. by giving the target a Fatigue Penalty beyond -5.
 
 \spelllevel
 
-\spell{Domination}{Continuous}{Deceit}
+\spell{Domination}{Continuous}{Deceit}\\
 The target is given a simple command by the enchanter, consisting of no more words than \arabic{spelllevel} plus the enchanter's Intelligence + Deceit. If the target fails the resisted task of their Wits + Vigilance against the enchanter's Intelligence + Deceit then they must immediately obey any commands the enchanter gives them.
 
 If the enchanter maintains the spell then the target can reroll at the beginning of each scene to break the spell again, otherwise it ends when the enchanter drops the spell.
@@ -2888,21 +2888,9 @@ Giving a command can take some time, so in combat, Enchanters have to spend the 
 
 Some commands are easier to resist than others. Particularly repugnant commands allow the target to reroll to break the spell with a bonus.
 
-\spell{Mental Illusion}{Continuous}{Varies}
-
-The caster at this level can also create a mental illusion in the target's mind. The caster might look deeply into the target's eyes and force them to hear music which is not in fact there but persists despite all attempt to stop it. They might sing to all present about a dragon, and one particular listener will actually see, feel and smell that dragon.
-
-In all cases a successful illusion will be complete, and the target will make every provision to interact realistically with the imaginary thing, be it a creature, an object or weather condition. It could even be something stranger, such as a box containing a spider's voice, or a statue of a sunrise which glows in unknown colours.
-
-The caster and target make a resisted roll: the caster uses their Intelligence + some Skill relevant to the illusion being created. A caster making a dragon might use Ether Lore, while making an illusory cow would require Beast Ken. The target resists with their Wits and the same Skill as the caster.
-
-The \gls{gm} should make this roll for players, in secret. The target gains a bonus to resist (or the caster takes a penalty) if the illusion is particularly unbelievable (such as a bizarre object or an unexplained dragon). Targets also gain a penalty to resist if they suspect that magic is being used to trick them, which often becomes obvious if lots of people around are insisting that rats are not in fact biting off their toes.
-
-Such mental illusions can inflict up to 4 Fatigue Points plus the caster's Intelligence Bonus and multiple castings allow the Fatigue Points to stack up. These Fatigue Points are healed as normal. The player may be told that this is Damage, but the \gls{gm} should keep track of it separately to ensure that all the Damage is properly converted once the spell fails. Such Fatigue Points can kill a character in the usual manner, i.e. by giving the target a Fatigue Penalty beyond -5.
-
 \spelllevel
 
-\spell{Mental Bondage}{Continuous}{Deceit}
+\spell{Mental Bondage}{Continuous}{Deceit}\\
 The enchanter locks down the target's every thought and turns everything they know to a desire to serve only the enchanter. They will follow any command to the best of their abilities, and if asked why will proclaim an unconditional love for or obedience to the caster.
 
 The target makes a resisted task of their Wits + Vigilance against the enchanter's Intelligence + Deceit. Success (from the target's point of view) means that the target breaks the spell but failure (a successful roll on the part of the enchanter) means that the spell is fixed -- for as long as the caster wishes the target will serve them loyally. Immediate threats to the target's life, such as being told to jump off a cliff or being told to drink something by an enchanter who was previously trying to kill the target call for a reroll, but there is no automatic reroll at the beginning of each scene. This spell is subject to the same modifiers as the previous level.
@@ -2911,8 +2899,7 @@ Enchanters might use this to turn attacking ogres into a loyal group of warriors
 
 If the enchanter ever dies, the target can reroll each scene to break the spell.
 
-\spell{Tabula Rasa}{Continuous}{Deceit}
-
+\spell{Tabula Rasa}{Continuous}{Deceit}\\
 The target's memories can be filched -- either selectively or not. The caster specifies (through song, words, or a simple glance) which memories are to be removed. If a target loses access to a Skill due to this spell, they can no longer use it until the spell ends.
 
 The caster uses their Intelligence + Deceit while the target resists with their Wits + Vigilance. Success means that the caster has free reign, not to rifle through the target's exact memories, but to specify that anything they wish is lost, up to and including all memories. The target always retains their first language.
@@ -2923,29 +2910,27 @@ The caster uses their Intelligence + Deceit while the target resists with their 
 \index{Magic!Fate}Fate deals with divine blessings and luck. At first the caster learns to ask questions of the gods, or to perhaps reach into an inner intuition about the world. Next up the mage learns to heal people's \gls{fp} and increase targets' average luck. Finally, priests can help bring people back from the edges of death.
 \begin{multicols}{2}
 
-
 \spelllevel
 
-\spell{Curse}{Continuous \& Instant}{Deceit}
+\spell{Curse}{Continuous \& Instant}{Deceit}\\
 Additionally, casters can curse a target. The target loses $1D6$ \gls{fp} plus the caster's Intelligence Bonus. If the target has no \gls{fp} then this spell has no effect. The mage is allowed to know how many \gls{fp} the target has lost. The target cannot dodge in any way -- the caster simply rolls their Intelligence + Deceit against \gls{tn} 7.
 
 If cast as a standing spell, the target's \gls{fp} are reduced by 1 plus the mage's Intelligence Bonus for as long as the spell endures.
 
-\spell{Eyes of Fate}{Continuous}{Empathy}
+\spell{Eyes of Fate}{Continuous}{Empathy}\\
 The priest prays for guidance, gains a keen insight into the fate of others.
 
 Once the spell is cast, the priest knows the current \gls{fp} of everyone within the normal spell range.
 
-\spell{Intuition}{Instant}{Varies}
+\spell{Intuition}{Instant}{Varies}\\
 When players search for an item, or ask around town for someone's whereabouts, the \gls{gm} often won't tell them the \gls{tn}.  With this spell, the priest may demand to know the \gls{tn}.  The Skill used is the same as that being used in the task, so asking about a roll for Crafts means using the Crafts Skill for the spell.
 
-\spell{Lending Hand}{Continuous}{Empathy}
+\spell{Lending Hand}{Continuous}{Empathy}\\
 The priest blesses a target with +1 to any Skill, so long as the priest has a higher level than the target in that Skill.
 
 \spelllevel
 
-\spell{Auguary}{Instant}{Academics}
-
+\spell{Auguary}{Instant}{Academics}\\
 The character requests guidance about the future and receives a cryptic message from their deity, from dreams, or simply the shape of nearby clouds.
 
 Once cast, the \gls{gm} looks through the upcoming encounters and picks a description.  It could be random boxtext, a note about an upcoming character, or a metaphor involving upcoming events.  A good rule of thumb would be to give the caster information about closer encounters with a better Margin on the roll.  A roll reaching the basic \gls{tn} of 7 might give the priest information about something three encounters away, while a roll of 11 could tell the caster about the very next encounter.
@@ -2954,7 +2939,7 @@ Characters who continue to cast Auguary receive the same answer each time until 
 
 Nobody with this power ever says ``you cannot change your fate''.  Changing your fate is the entire point of this spell.  Besides, if the spell ever appears to go wrong, the local priests will explain that it actually predicted events correctly.  It was simply your knowledge of the spell that -- somehow or other -- altered what would otherwise have been a fine prediction.
 
-\spell{Blessing}{Instant}{Academics}
+\spell{Blessing}{Instant}{Academics}\\
 The priest blesses the target with the favour of the gods. The target `heals' or regenerates $1D6$ \gls{fp} plus the priest's Intelligence Bonus. This cannot take the target above their maximum \gls{fp} score.
 
 \enhancement{1}{Generous}
@@ -2963,7 +2948,7 @@ The priest heals the target for an additional 2 \gls{fp}.  These \gls{fp} stack 
 
 \spelllevel
 
-\spell{Fortune}{Continuous}{Empathy}
+\spell{Fortune}{Continuous}{Empathy}\\
 The priest blesses a target, who then receives a +1 to any Skill.
 
 \spell{Prayer of Gratitude}{Instant}{Academics}
@@ -2971,18 +2956,15 @@ The caster rolls during any scene in which someone spends at least 2 Story Point
 
 \spelllevel
 
-\spell{God's Chosen}{Continuous}{Academics}
-
+\spell{God's Chosen}{Continuous}{Academics}\\
 The target increases their maximum Fate Points by 10 and instantly heals a number of Fate Points equal to $2D6$ plus the caster's Intelligence Bonus. When the spell ends, the maximum FP return to normal. The spell does not increase the rate at which FP are regenerated.
 
 \spelllevel
 
-\spell{Divine Favour}{Instant}{Academics}
-
+\spell{Divine Favour}{Instant}{Academics}\\
 The priest spends 1 Story Point and gains an addtional 5 Story Points plus their Intelligence Bonus, which must be spent immediately.  This can be used on a summoning miraculous help, such as a crew of soldiers who have a debt to the priest, or a magical ally.\footnote{As usual \gls{gm} is free to veto any ideas, but the player is also allowed to continue pulling new ideas out.}
 
-\spell{Resurrection}{Instant}{Medicine}
-
+\spell{Resurrection}{Instant}{Medicine}\\
 The priest summons the soul of a recently deceased person back to their body. If they are beyond -3 Hit Points, they must roll a Vitality Check again to stay alive, but this time with a +5 bonus. There is no roll for the caster -- the spell is automatic and the spell is instant, so the effects need not be maintained. If the spell is made into a standing spell then the effects count as being continuously cast.
 
 The spell also heals the target of a number of HP equal to half the Margin. This cannot bring the target above 0 HP. For example, if a PC were at -7 HP they would normally make a Vitality Check at \gls{tn} 11. Adding in the Bonus would make the adjusted \gls{tn} 6. If the Vitality Check were a roll of 11 then the Margin would be 5 and the character would heal 3 HP, going up to -4 HP. This healing should be understood as a retroactive blessing from the gods, indicating that the Damage sustained was not nearly so bad as was once thought.
@@ -2992,8 +2974,7 @@ The spell must be cast within the same scene as the target lost their last HP.
 If cast on a member of the undead, the target loses $2D6$ \gls{hp} plus the caster's Intelligence Bonus.
 No roll is made, and no protection can be given from \gls{fp} or \gls{SP}.
 
-\spell{Mana Lake}{Continuous}{Empathy}
-
+\spell{Mana Lake}{Continuous}{Empathy}\\
 The priest sanctifies and area, creating a mana lake.  The level of the mana lake is equal to the number of Story Points the priest spends.
 
 
@@ -3030,8 +3011,7 @@ The mage can shape pure energy, pushing and pulling at the world with the power 
 
 The force sphere does not come with discrete spells at each level. Instead, the mage gains access to all spells immediately. Each spell can be cast at any level the caster possesses, so a mage with the 3rd level of the force sphere could cast `Mage Armour' at level 1, 2 or 3 -- each with increasingly more expensive cost and a better shielding.
 
-\spell{Mage Armour}{Continuous}{Academics}
-
+\spell{Mage Armour}{Continuous}{Academics}\\
 The mage casts a shield of crackling energy around the target to protect from all harm, and most often mages target themselves.  The barrier can shatter if attacked but can take a serious beating before breaking. Each barrier counts as a having a number of \index{Shield Points}\gls{SP}, which are destroyed by Damage like \gls{fp}, but always before \gls{fp} are targeted.
 The target gains a number of \gls{SP} equal to the level of spell used times 3 plus their Intelligence Bonus.
 
@@ -3045,8 +3025,7 @@ The spell must be maintained as a standing spell to function. Multiple castings 
 
 Armour does not block Damage going onto \gls{SP} -- the character simply subtracts \gls{SP} without any \gls{dr}. The Mage Armour is not affected by a Vitals Shot -- it protects all around, counting as Perfect armour, although not quite continuously enough to keep out water or gasses. Multiples of such spells do not stack -- only the highest is used.
 
-\spell{Mage Sight}{Continuous}{Vigilance}
-
+\spell{Mage Sight}{Continuous}{Vigilance}\\
 The mage can `feel' by delicately touching things with mental movement rather than actually seeing them. They can see in complete darkness whether underwater or on land.
 
 The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level. The spell covers a progressively larger area depending upon the level used. No roll is required -- the spell is automatic and lasts until dispelled.
@@ -3076,8 +3055,7 @@ The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level. 
 Any two mages `looking' at the same area can feel each other's presence and instantly understand that someone else is using Mage Sight.
 They can even identify the other mage with a Wits + Empathy roll.
 
-\spell{Dancing Swords}{Continuous}{Combat}
-
+\spell{Dancing Swords}{Continuous}{Combat}\\
 The force mage can make a weapon levitate with the power of their mind. It can float nearby to defend them and even float off to stab at enemies who will be hard pushed to counterattack the wielder when they're standing some distance away.
 
 The caster rolls Intelligence + Combat to levitate the weapon. They gain an effective Strength Bonus for the purposes of wielding the weapon equal to the level of the force sphere being used minus one. This must be sufficient to lift the weapon without encumbrance, so a mage casting the first level of the force sphere would have an effective Strength Bonus of 0 and could wield a dagger. To wield an axe a mage would have to use the fourth level of the force sphere, gaining an effective Strength Bonus of +3.
@@ -3096,8 +3074,7 @@ The caster may not employ any special combat manoeuvres such as pushing people b
 
 Mages who must slowly cast a spell can still weild weapons instantly.  Runecasters might require a full scene to make a dagger float, but the floating dagger can thereafter be used to attack or even defend at the normal Initiative rate.
 
-\spell{Levitation}{Continuous}{Combat/ Craft}
-
+\spell{Levitation}{Continuous}{Combat/ Craft}\\
 This is a more generic version of `Dancing Swords' (above) where the mage can lift but not necessarily weaponize anything close by. The caster rolls their Intelligence and Craft Skill against a \gls{tn} of 7 plus the target's Weight Rating. The spell grants an effective Strength Bonus equal to the level in the force sphere being used. Any object with a Weight Rating of up to 4 points higher than this Strength score can be lifted into the air but the heavier something is the slower it will move.
 
 If creatures are targeted for levitation, they have a Weight Rating equal to their HP and the mage rolls Intelligence + Combat to lift them. They can add their Evasion Factor to the spell's \gls{tn} in order to attempt to wriggle free of the telekinetic hold. Trying to wriggle free takes 4 Initiative points. Targets can be moved at a Speed rating equal to the level in Force.
@@ -3106,32 +3083,27 @@ Mages attempting to lift people into the air can move the target only at the rat
 
 While a target is being levitated, they are especially vulnerable to attack, and all attacks against them count as Sneak Attacks, gaining +4 to Strike and +2 to Damage.
 
-\spell{Lock}{Continuous}{Craft}
-
+\spell{Lock}{Continuous}{Craft}\\
 The mage can erect a magical force field, similar to mage armour, over a doorway to make it more difficult to break through. The \gls{tn} to break through the door increases by an amount equal to double the level of the force sphere being employed plus the mage's Intelligence Bonus. For example, if a door were at \gls{tn} 8 to burst through, a mage with Intelligence +2 could cast the second level of the force sphere, raising the \gls{tn} to 14.
 
 Mages can also create barriers of pure force to block passageways without a door, just as with mage armour. The blockade has a number of \gls{SP} equal to triple the level of force sphere being employed plus the mage's Intelligence Bonus and must be battered through with repeated blows to get through the portal.
 
-\spell{Slow Fall}{Continuous \& Instant}{Athletics}
-
+\spell{Slow Fall}{Continuous \& Instant}{Athletics}\\
 When people (or even items) are falling to their doom, force mages can slow the decent, limiting the Damage from such a fall. The total spell grants a resistance to any Damage incurred through falling equal to 4 points per level of the force sphere used plus the mage's Intelligence score. Therefore, a mage with Intelligence +2 using the third level of the force sphere would subtract 14 from any Damage incurred through falling.
 
 If cast as a Quick Spell, it can be cast as a Quick Action, outside the usual Initiative order.
 
-\spell{Telekinetic Fist}{Continuous}{Combat}
-
+\spell{Telekinetic Fist}{Continuous}{Combat}\\
 The mage uses powerful telekinetic blasts to hold and crumple targets in close combat. Unarmed attacks using Telekinetic fist count as normal Damage instead of inflicting Fatigue Points. For the purposes of these attacks, the caster counts as having a Strength Bonus equal to the level of the force sphere being used. For example, someone employing the third level of the force sphere would count as having +3 Strength, and would inflict $1D6+3$ Damage with unarmed attacks.
 
-\spell{Telekinetic Grasp}{Continuous}{Combat}
-
+\spell{Telekinetic Grasp}{Continuous}{Combat}\\
 Force mages can wrestle with people from afar using telekinesis. One major advantage with this sort of wrestling is that the mage does not risk being hit back as they can cast the spell from afar. As per the Grappling rules, the mage first makes a roll to capture the target; they roll Intelligence and Combat while the target resists with their current Evasion Factor. Targets can literally feel the force of the mage's mind around them, often described as a hundred tiny, invisible hands or the feeling of an invisible wave. This force can be parried and pushed back like any normal weapon, so targets can use their full Evasion Factor, including bonuses from using a weapon.
 
 If the spell is successful, it inflicts no Damage nor Fatigue Points, but the target counts as carrying an item with a Weight Rating equal to the level of the force sphere being used.
 
 For example, a mage using force level 2, with Intelligence +1 and a Combat Skill of +1, could cast Telekinetic Grasp on a gnome. The gnome adds their Evasion Factor to the basic \gls{tn} of 7 and then the mage resists this with their Intelligence Bonus plus Combat Skill. If successful, the gnome would count as carrying an item with a Weight Rating of 2. Assuming this gnome has the usual Strength Bonus of -2, they would then receive a -4 penalty to their effective Speed Bonus. Their Initiative Score would suffer and they would accrue additional Fatigue Points each time they attempted to run or fight due to the added Weight Rating.
 
-\spell{Telekinetic Retreat}{Continuous}{Athletics}
-
+\spell{Telekinetic Retreat}{Continuous}{Athletics}\\
 Mages can add their mental ability to move things to aid their movement. Any attempts to move, whether fleeing or just flitting around a room, gain a bonus equal to the level of the force sphere being employed plus their Intelligence Bonus. The mage can cast the spell on others and it will automatically push them onwards in whichever direction they are running.
 
 \end{multicols}
@@ -3156,12 +3128,11 @@ While most people are aware that illusion magic exists and so are suspicious of 
 
 If someone sees an illusion for what it is then the illusion remains, but of course will have less effect. However, while someone fully believes an illusion to be real, they can be psychosomatically damaged by it simply by believing that it's real. All illusions can inflict a total of 1 Fatigue Point per level of the illusion spell plus one per Intelligence Bonus of the caster. For example, a song mage might sing a griffin illusion into existence; all who are fooled by the illusion can be `attacked' by it, receiving up to 4 Fatigue Points. On later \glspl{round} the song causes no more Fatigue Points, even if it keeps playing, but the bard could then create the illusion of a sword using the first level of the illusion sphere. They could use the sword to attack as usual, but not parry blows. While attacking, they could inflict up to 2 Fatigue Points as people believe they have been wounded by the sword, but subsequent attacks would not increase the amount of Damage.
 
-Illusions must be summoned within the normal range of spells, but once summoned they can travel away from the caster without worry -- so long as they are maintained as static spells, they endure, no matter how far away the caster might be.
+Illusions must be summoned within the normal range of spells, but once summoned they can travel away from the caster without worry -- so long as they are maintained as standing spells, they endure, no matter how far away the caster might be.
 
 \spelllevel
 
-\spell{Illusion}{Continuous}{Varies}
-
+\spell{Illusion}{Continuous}{Varies}\\
 The illusionist can make anything look like another of roughly the same size.  A fox can look like a dog, a copper coin can look golden, or a gnome can appear like a gnoll.
 
 Illusionists can use this to hide by making themselves look like a bush, or slip unseen into a party by making themselves look like one of the other guests.
@@ -3234,8 +3205,7 @@ If you are using miniatures, it will be easy to see how many people are caught i
 
 \spelllevel
 
-\spell{Lightning Bolt}{Instant}{Projectiles}
-
+\spell{Lightning Bolt}{Instant}{Projectiles}\\
 The mage throws out a ball of flaming, crackling light which strikes and burns the target. The Damage is $1D6$ plus the caster's Intelligence.
 
 \subsubsection{Spell Enhancements}
@@ -3266,32 +3236,28 @@ Metamagic allows the \gls{miracleworker} to enhance their other magic spheres --
 
 Casting a metamagic spell \emph{adds} to an existing spell's level.  A Fireball spell is 2nd level, so it would usually cost 2 \gls{mp} and an additional 2 Initiative, but if the first level of Metamagic enhances the spell, the cost would be 3 \gls{mp} and 3 Initiative.
 
-Metamagic never increases the static cost of a spell.  If the caster makes an illusion, and casts it over many targets by using Metamagic, the spell can be maintained with the original cost of the illusion -- the additional Metamagic points do not have to be maintained.
+Metamagic never increases the cost of maintaining a standing spell.
+If the caster makes an illusion, and casts it over many targets by using Metamagic, the spell can be maintained with the original cost of the illusion -- the additional Metamagic points do not have to be maintained.
 
 \spelllevel
 
-\spell{Counterspell}{Continuous}{Sphere Rating}
-
+\spell{Counterspell}{Continuous}{Sphere Rating}\\
 The caster binds another caster's magic, disrupting the flow of mana.  Any time the opposing caster attempts a spell, the \gls{tn} is increased by the caster's Intelligence plus the caster's rating in the appropriate sphere.  For example, if the target attempts to use Necromancy, but the caster has level 1 Necromancy and Intelligence +2, the target would suffer a -3 penalty.
 
 Counterspell magic works even when the caster has a rating of 0 in the appropriate sphere, although only the caster's Intelligence Bonus has any effect.
 
-\spell{Detect Mana}{Instant}{Empathy}
-
+\spell{Detect Mana}{Instant}{Empathy}\\
 The mage casts the spell on any person or item and finds out how many \glsentrylongpl{mp} the target has, including any mana stones the target has.
 
-\spell{Spell Breaking}{Instant}{Sphere Rating}
-
+\spell{Spell Breaking}{Instant}{Sphere Rating}\\
 The caster can destroy an existing spell, whether that spell is a persistent effect, such as a polymorph, or a magical item.  The \gls{tn} is the highest Sphere level used plus the Intelligence Bonus of the \gls{miracleworker} who cast the original spell.
 
 For instance, if a priest with Intelligence +1 and Aldaron +3 were to cast a spell enchanting an animal, the \gls{tn} would be ($7+3+1=1$) 10.  The caster would roll using Intelligence plus their rating in the Aldaron sphere.
 
-\spell{Spell Throwing}{Instant}{None}
-
+\spell{Spell Throwing}{Instant}{None}\\
 Throwing a spell means that the normal range boundaries can be ignored -- spells can be thrown anywhere. Of course, the target must usually be seen -- there's no use casting a flame bolt into the darkness of a forest and specifying the target as `any nearby enemies'.  However, the caster is always free to guess.
 
-\spell{Mana Stones}{Continuous}{Academics}
-
+\spell{Mana Stones}{Continuous}{Academics}\\
 Each Path of Magic has its own version of mana stones. Once an item (or creature) is designated as a mana stone, the spell is cast and the mage forfeits any number of \gls{mp} from their maximum. For each \gls{mp} forfeited, the mage can store 2 \gls{mp} in the stone. These stones always start life empty, but regenerate 2 \gls{mp} per scene until they reach their maximum. Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it. The spell is always permanent -- no additional mana must be kept aside so that the spell remains active. Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points
 
 The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
@@ -3300,8 +3266,7 @@ Mana stones form the basis of all magical items, and \glspl{miracleworker} can o
 
 \spelllevel
 
-\spell{Pocket Spell}{Continuous}{Crafts}
-
+\spell{Pocket Spell}{Continuous}{Crafts}\\
 The caster changes the basic nature of a mana stone so that it can contain one spell.  A single \gls{mp} is stripped from the mana stone, after which it can cast a single spell, just once, before becoming useless.
 
 Some mages create scrolls which are destroyed once read.  Some priests of Laique enchant animals with a single spell, just to see how the animal will use it.  The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
@@ -3318,8 +3283,7 @@ In each case the spell must have different targets, because two copies targeting
 
 \spelllevel
 
-\spell{Magical Item}{Continuous}{Academics}
-
+\spell{Magical Item}{Continuous}{Academics}\\
 The mage takes a mana stone and allows it to cast a spell, forging a new magical item. A sword could be made which can summon blinding light, or a ruby could be infused with the power to teleport the caster to a nearby location.
 
 To implant a basic spell the mage casts the Magical Item spell, expending \arabic{spelllevel} \gls{mp} as usual, which then lowers the maximum \gls{mp} of the item by 1. After this the item can cast just that spell with its own \gls{mp}. For example, imagine a painting which casts an illusion of the person in the painting walking out and speaking with people any time the command word is uttered. If the item had 6 \gls{mp} then it would reduce to 5 \gls{mp} and would spend 3 of that 5 \gls{mp} in order to cast the spell. These magical items regenerate \gls{mp} in the same way as above (usually, 2 \gls{mp} per scene). Magical items are still mana stones and continue to store \gls{mp} for use by people on that Path of Magic.
@@ -3330,14 +3294,12 @@ Magical items which do not have enough mana simply fail to cast. The one excepti
 
 \spelllevel
 
-\spell{Greater Item}{Instant}{Academics}
-
+\spell{Greater Item}{Instant}{Academics}\\
 The mage can now input any number of spells into an item, and each additional spell again only requires that 1 \gls{mp} be stripped from a mana stone.  Spells so imbued can be cast any way the caster wishes -- an illusion spell in an item can be used to cast any illusion, or a polymorph spell can be used to turn into any creature.
 
 The spell lasts until a second command word is given to release the spell.
 
-\spell{Spell Triggering}{Instant}{Academics}
-
+\spell{Spell Triggering}{Instant}{Academics}\\
 The mage takes a magical item with spells implanted and changes the spells there so that it activates upon a condition, and does not require concentration or focus.
 
 A sword might throw out a flamebolt spell when it strikes a target.  A ring could cast an illusion of anything the mage says.  A priest who worships V\'{e}r\"{e} could imbue a holy warrior with a spell which adds to the warrior's \gls{fp} any time they receive damage.-- any trigger is possible so long as the trigger is clearly visible to the item.
@@ -3350,8 +3312,7 @@ Additional spells may be placed on items which are there simply to act as a trig
 
 As with the Mirror enhancement, above, each spell must select a different target.
 
-\spell{Artefact}{Instant}{Academics}
-
+\spell{Artefact}{Instant}{Academics}\\
 This spell functions as per level 3's Magical Item spell except the magical items are not activated by focus and concentration. Instead, each implanted spell can activate once per scene when a condition is present. The artefact might activate to shoot a flame-bolt any time a human is within range, or a magical ring could transform the wearer into a bat (if possible). The item requires no Initiative expenditure to use and cannot be switched on and off at will.
 
 Such items also come with their own cancellation conditions. Permanent spells such as raising the living dead cannot be cancelled, but a levitation spell from the Force Sphere might activate and deactivate with the speaking of a particular word, or a spell to turn the wearer of a cape invisible might cancel once they have killed someone.
@@ -3362,8 +3323,7 @@ Those on the Path of Song can infuse spell-songs which activate on their own onc
 
 \spelllevel
 
-\spell{Improved Mana Stones}{Instant}{Academics}
-
+\spell{Improved Mana Stones}{Instant}{Academics}\\
 The mage's mana stones now contain 3 \gls{mp} per point sacrificed from the mage's permanent maximum, so sacrificing 3 \gls{mp} would yield an item which can store 9 \gls{mp}. These stones regenerate 3 \gls{mp} per \gls{round}.
 
 \end{multicols}
@@ -3384,8 +3344,7 @@ The undead do not tire -- they take no Fatigue Points. They can walk or dig or f
 
 \spelllevel
 
-\spell{Morbid}{Continuous}{Medicine}
-
+\spell{Morbid}{Continuous}{Medicine}\\
 The targed enters an eltered state of semi-death. They ignor all Fatigue Point penalties (but can still become suddenly unconscious due to too many Fatigue Points). They gain a natural \gls{dr} of 1 which is cumulative with armour -- their corpse-like body bleeds less and feels little pain, only bare sensations written in the mind as cold information. While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them. While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \gls{fp}.
 
 This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell. It can never be cast on others. While the spell is in effect they suffer no ill effects from Fatigue Points but cannot heal them. Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to Fatigue. The caster faces a real danger of death if ever they gain enough Fatigue Points to push them over a -5 penalty; they may not gain the penalty but must make a Vitals Check to avoid death and then make another roll each time they gain Fatigue.
@@ -3407,14 +3366,12 @@ Even low level necromancers have the terrifying ability to pull someone's soul o
 By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
 
 
-\spell{Command the Dead}{Continuous}{Academics}
-
+\spell{Command the Dead}{Continuous}{Academics}\\
 The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb. `Dig',\footnote{The undead are the worst workers due to their stupidity, cannot use weapons, and typically destroy their own hands before they dig very far.  They can be used for anything, but are not necessarily good for much.} `kill them all' or `wait here' are all appropriate commands. To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits score, though most have a negative Wits score, which makes resistance difficult.
 
 This spell replicates all five levels of the enchantment sphere with the mage selecting any effect they wish; however, the mage uses Academics instead of any other Skill because the undead may only be `understood' in some technical sense, and not truly empathised with.
 
-\spell{Calling the Dead}{Instant}{Medicine}
-
+\spell{Calling the Dead}{Instant}{Medicine}\\
 The mage can create their own ghouls from easily accessible realms of malicious spirits. The spell is cast on a small corpse and the corpse is imbued with one such malicious spirit. It retains the Strength score (and therefore HP) it had in life.
 The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
 The creature has neither Intelligence nor Charisma scores. Most will attack all living things on sight.
@@ -3454,8 +3411,7 @@ The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can de
 With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4 plus the caster's Intelligence Bonus.
 A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
 
-\spell{Preservation}{Instant}{Survival}
-
+\spell{Preservation}{Instant}{Survival}\\
 Trainee artists and necromancers have one thing in common -- fruit.  Students of necromancy often begin their journey by stopping food from degrading.  This spell gives a sort of `half-life' to rot, such that any foods affected slow their own aging process incrementally.  They're not sustained in perfect condition forever, but never quite reach an entirely spoiled stage.
 
 \end{multicols}
@@ -3524,9 +3480,11 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 
 \spelllevel
 
-\spell{Polymorph}{Continuous}{Medicine}
-
-The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.  When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.  Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.  Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
+\spell{Polymorph}{Continuous}{Medicine}\\
+The basic polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
+When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
+Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.
+Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
 
 Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
 
@@ -3537,8 +3495,7 @@ Polymorphing into another race does not grant any of its racial abilities.  Chan
 \includegraphics[width=.8\linewidth]{images/Roch_Hercka/polymorph.jpg}
 \label{roch:polymorph}
 
-\spell{Animal Transformation}{Continuous}{Beast Ken}
-
+\spell{Animal Transformation}{Continuous}{Beast Ken}\\
 This spell allows the mage to transform one animal into another.
 An animal is defined as any living creature without an Intelligence Bonus.
 As before, the mage can increase or decrease the target's Strength Bonus by the spell level,
@@ -3594,8 +3551,7 @@ This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a pe
 
 \spelllevel
 
-\spell{Freeform}{Continuous}{Ether Lore}
-
+\spell{Freeform}{Continuous}{Ether Lore}\\
 The shapeshifter can throw off the limits of existing and known creatures, and turn into flamming bulls, acidic clouds, or anything else they might imagine.  The basic \gls{tn} for the spell is 14 as the alternative forms are alien even to those who are capable of adoptin them, but as usual the \gls{tn} can be reduced by other enhancements.
 
 As with the \textit{Realistic} enhancement, the caster gains a number of Form Points equal to the spell's level.  The caster can spend \textit{2} form points to purchase any of the following:
