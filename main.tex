@@ -1,6 +1,7 @@
 \documentclass[titlepage,a4paper,openany]{book}
 \usepackage[indexonlyfirst]{glossaries}
 \setacronymstyle{long-short-desc}
+\title{BIND}
 
 \input{config/preamble.tex}
 \input{config/monsters.tex}
@@ -10,25 +11,10 @@
 
 \begin{document}
 
-%\maketitle
 \iftoggle{verbose}{\pagenumbering{roman}
 
-\begin{titlepage}
-	\vspace{1cm}
-	\begin{tcolorbox}[height fill,title={\Huge \bf \center BIND}]
-	\vspace{1cm}
+\maketitle
 
-	\par\vfill
-\center \Large The open-source tabletop roleplaying game.
-\par\vfill
-
-		\vspace{2cm}
-
-\small Last modified \today .
-	\vspace{1cm}
-	\end{tcolorbox}
-
-\end{titlepage}
 }{}
 
 \tableofcontents
@@ -38,6 +24,7 @@
 \iftoggle{verbose}{
 
 \chapter{Introduction}
+\pagenumbering{arabic}
 
 \begin{multicols}{2}
 
@@ -112,8 +99,6 @@ This particular version was last revised on \today.
 \end{multicols}
 
 }{}
-
-\pagenumbering{arabic}
 
 \chapter{Character Creation}\index{Traits}\index{Character Creation}\label{character_rolls}
 
@@ -453,7 +438,7 @@ Priests of the god of honour begin with Fate 2, Academics 1, Medicine 1 and MP 4
 
 Their equipment is a quarterstaff, medical equipment, partial chainmail shirt and camping equipment.
 
-After gaining XP, some adventuring clerics focus upon martial abilities, while others focus on prayer in order to work miracles.
+After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, while others focus on prayer in order to work miracles.
 
 \subsection{Rogue}\index{Rogue}
 
@@ -695,28 +680,30 @@ The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may re
 
 Standing alone against a towering ogre is a nightmare, but three warriors standing against three ogres can be much easier.
 A battle against thirty goblins can really take its toll, but three different battles against ten goblins can be child's play.
-To represent this, we have \textit{the XP Discount} -- a price you pay for every member of the party.
+To represent this, we have \textit{the \gls{xp} Discount} -- a price you pay for every member of the party.
 
 }{}
 
-For every member of the party, that many points are deducted from one monster's XP value (to a minimum of 0).
-If the party has two members, the first two monsters have 2 XP deducted from their total value.
-If the party has five members, the first five monsters have 5 XP deducted from their total.
+For every member of the party, that many points are deducted from one monster's \gls{xp} value (to a minimum of 0).
+If the party has two members, the first two monsters have 2 \gls{xp} deducted from their total value.
+If the party has five members, the first five monsters have 5 \gls{xp} deducted from their total.
 
 \iftoggle{verbose}{
 
-If a single warrior defeats a dragon worth 22 XP, then the warrior receives 21 XP, because 1 XP is removed from the total.
-If he fights 10 ghouls worth 2 XP each, then he receives 1 for the first, and 2 for the rest, for a total of 19 XP.
+If a single warrior defeats a dragon worth 22 \gls{xp}, then the warrior receives 21 \gls{xp}, because 1 \gls{xp} is removed from the total.
+If he fights 10 ghouls worth 2 \gls{xp} each, then he receives 1 for the first, and 2 for the rest, for a total of 19 \gls{xp}.
 
-However, if five characters are fighting the 10 ghouls together, they each deduct 5 XP from a single monster.
-The first five ghouls are worth nothing, because each net ($2 - 5 = $) 0 XP.
-Only the last 5 ghouls count, bringing 10 XP in total.  Dividing this among 5 players, each receives 2 XP at the end.
+However, if five characters are fighting the 10 ghouls together, they each deduct 5 \gls{xp} from a single monster.
+The first five ghouls are worth nothing, because each net ($2 - 5 = $) 0 \gls{xp}.
+Only the last 5 ghouls count, bringing 10 \gls{xp} in total.  Dividing this among 5 players, each receives 2 \gls{xp} at the end.
 
 }{}
 
-If players need to discount multiple adversaries, they are counted from highest to lowest XP value.
+If players need to discount multiple adversaries, they are counted from highest to lowest \gls{xp} value.
 
 \subsection{Spending \gls{xp}}
+
+Each additional level of a Trait has a steeply progressive cost. The costs represent buying the next level; the first level of a school of magic costs 15 and the second costs 20 -- buying up to the second level costs 35 \gls{xp} in total. Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp}.
 
 \iftoggle{verbose}{
 
@@ -729,13 +716,9 @@ If players need to discount multiple adversaries, they are counted from highest 
 
 }{}
 
-Each additional level of a Trait has a steeply progressive cost. The costs represent buying the next level; the first level of a school of magic costs 15 and the second costs 20 -- buying up to the second level costs 35 \gls{xp} in total. Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp}.
-
 Attributes have a standard maximum of +3 and minimum of -3. This is adjusted by race, so for instance elves have a +1 bonus to Wits but -1 to Strength, so their maximum Strength score would be 2 and the minimum -4, while the maximum Wits is +4 and the minimum -2.
 
 Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so taking a character from -4 Strength to 0 would cost 20 \gls{xp}.
-
-\columnbreak
 
 		\setcounter{xp}{10}
 		\newcounter{bon}\setcounter{bon}{1}
@@ -1013,7 +996,7 @@ The costs below show the starting price for a few services, plus additional fees
 
 	\textbf{Sellsword} & 10sp/ day \\\hline
 
-	Opponent & XP$^3$ sp \\
+	Opponent & \gls{xp}$^3$ sp \\
 
 	Illegal Murder & 10sp \\\hline
 
@@ -4120,7 +4103,10 @@ If your safe space is ever invaded due to events outside your control, you recei
 You can add two to the cost of any other Story and tell it at an inappropriate juncture. Your characters might be locked in a dungeon and happen upon a weapon smith in the next cell, with his confiscated weapons lying in a nearby pile outside his cell. They might find a place they can rest in secret inside the terrifying dwarvish city turned into an undead haunting ground. Or perhaps while on the run from bandits they find a helpful soldier hoping to be hired.
 
 \story{3}{Ah! This is near the spot we buried the treasure}
-You have access to large funds now that you have returned to this area. Perhaps you and companions, once buried treasure close by. Perhaps a local bank simply has your money, or a rich man owes it to you. The total amount obtained is $2D6 \times 10$ gold pieces.\footnote{Those following the Code of Acquisition gain no XP for gaining gold through Story Points.}
+You have access to large funds now that you have returned to this area.
+Perhaps you and companions, once buried treasure close by.
+Perhaps a local bank simply has your money, or a rich man owes it to you.
+The total amount obtained is $2D6 \times 10$ gold pieces.\footnote{Those following the Code of Acquisition gain no \gls{xp} for gaining gold through Story Points.}
 
 \story{4}{There is a man whom they call}
 Your miraculous ally is a mage, or priest or some other \gls{miracleworker}. They will not enter combat with you but will agree to employ whatever magics you wish. Their Attributes will be each 0 plus the racial modifiers, except for Intelligence, which will always be +2 precisely. They will have 1 Skill at level 2 and another at level 1. Their Mana points will be 6 in total, after the Intelligence modifier. One magical sphere will be at level 4, another at 2 and another at 1. This mage walks only a single Path of magic.
