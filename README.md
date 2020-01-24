@@ -8,9 +8,11 @@ The config directory is a subtree, so all commits to it should only involve file
 Bind is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
 # Parsimony
+
 The most important part of the game is mechanics, and everything revolves around speed.
 
 ## Abilities
+
 The abilities are parsimonious, providing the standard inputs and outputs, but with fewer variables.  For example, 'Deceit' is used for both intimidation and lies, depending upon what it's paired with.  This gives Player Characters different scores for intimidating and lying, but with fewer skills to keep track of:
 
 |                  | **Strength** (2)                    | **Dexterity** (-1)                                | **Speed** (0)                                 | **Intelligence** (1)            | **Wits** (-1) | **Charisma** (1) |
@@ -20,6 +22,7 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 | **Vigilance** +3 | keeping watch all night: 5          | finding a door in the darkness: 2                 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
 
 ## No Class
+
 Players put their XP wherever they like, so there are no charts for what has to be bought next, and no levelling system.  A fighter is just someone with a good Combat score, and a Paladin is just a fighter with a little devine magic.
 
 ## Background as Stories
@@ -75,6 +78,7 @@ Healing Fate points after an encounter means players don't constantly fear death
 Bog standard fantasy world.  Sue me.
 
 ## Magic
+
 Spellcasters spend Mana to cast spells.  They generally have 2-6 points of Mana and a few types of spells, so you can avoid extended book-keeping.
 
 A caster with Aldaron 2 and Fate 3 would have the following spells to choose from.  Level 1 spells cost 1 Mana Point, and level 2 spells cost 2 Mana Points.
@@ -105,7 +109,7 @@ Join me!
 
 You can join by: 
 
-- Emailing complaints to incoming+bind1-core-16324687-issue-@incoming.gitlab.com.
+- Emailing complaints to incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com.
 
 - Playtesting.
 
