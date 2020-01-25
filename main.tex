@@ -987,6 +987,16 @@ Money can buy you more than things.  In fact, for the right money in a large cit
 
 The costs below show the starting price for a few services, plus additional fees for the details.  For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 950sp.
 
+\iftoggle{verbose}{
+
+	For example, Thenton, with a Strength Bonus of +1, picks up a weighty battle axe. The Weight Rating is 3, so this inflicts an Encumbrance Penalty of 2. Thenton's effective Speed Bonus drops to -2, reducing his Initiative (covered below) and ability to run.  He will also gain 2 Fatigue points at the end of each scene\footnote{See page \pageref{time} for notes on scenes.} where he carries it.
+
+	}{}
+
+Items carried in only one hand count as having +2 to the Weight Rating, so hefting a battle axe in only one hand would mean it has an effective Weight Rating of 5.
+
+Characters cannot carry any item which gives them a -5 Encumbrance rating or higher.
+
 \end{multicols}
 
 \begin{tcolorbox}[arc=1mm,tabularx={XX},title=Services]
@@ -1022,16 +1032,6 @@ The costs below show the starting price for a few services, plus additional fees
 \end{tcolorbox}
 
 \begin{multicols}{2}
-
-\iftoggle{verbose}{
-
-	For example, Thenton, with a Strength Bonus of +1, picks up a weighty battle axe. The Weight Rating is 3, so this inflicts an Encumbrance Penalty of 2. Thenton's effective Speed Bonus drops to -2, reducing his Initiative (covered below) and ability to run.  He will also gain 2 Fatigue points at the end of each scene\footnote{See page \pageref{time} for notes on scenes.} where he carries it.
-
-	}{}
-
-Items carried in only one hand count as having +2 to the Weight Rating, so hefting a battle axe in only one hand would mean it has an effective Weight Rating of 5.
-
-Characters cannot carry any item which gives them a -5 Encumbrance rating or higher.
 
 \subsection{Cultures \& Exchange Rates}
 
@@ -1434,28 +1434,13 @@ This applies to all Damage, including magical Damage. It continues through all D
 When the enemy attempts to hit you, roll for defence with your Dexterity at \gls{tn} 8 plus your opponent's Combat Skill.
 Defending costs 2 Initiative and counts as a \gls{quickaction}, so it can be done immediately.
 
+\initiativechart
+
 \subsection{Movement}\index{Movement}
 
 By spending two Initiative, characters can run as a Quick Action, acting before all other actions. Characters can run 3 squares plus their Speed Bonus during this time. This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
 
 Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics Skill Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
-
-\vfill\null
-\initiativechart
-
-\subsection{Hit Points}
-
-\index{Hit Points}Each character has a number of HP equal to 6 plus their Strength Bonus. Small gnomes typically have 4 HP while big, strong humans typically have 7. Losing even a single HP means the character has suffered serious Damage. A long fall might have broken the character's bone. A dagger could have slashed open several veins. Characters do not have many HP so losing even one is a serious matter.
-
-\subsubsection{Healing}\index{Healing}
-Characters heal a quarter their Hitpoints each week, rounded up.
-
-\subsubsection{Death}
-\index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive. This is rolled at \gls{tn} 4 plus one for every negative HP level. For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP. That makes the \gls{tn} 7 for the Vitality Check.
-
-A failed Vitality check means that the character is dead. A successful one means that the character is unconscious for the remainder of the scene but alive. At the end of the scene they can make further Vitality Checks to see if they wake up. When waking up, all actions relying on movement take a penalty equal to the number of HP beyond 0 the character has lost.
-
-\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.  Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
 
 \iftoggle{verbose}{
 	\begin{tcolorbox}[title=Dicey Damage]
@@ -1470,6 +1455,19 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 
 	\end{tcolorbox}}{}
 
+\subsection{Hit Points}
+
+\index{Hit Points}Each character has a number of HP equal to 6 plus their Strength Bonus. Small gnomes typically have 4 HP while big, strong humans typically have 7. Losing even a single HP means the character has suffered serious Damage. A long fall might have broken the character's bone. A dagger could have slashed open several veins. Characters do not have many HP so losing even one is a serious matter.
+
+\subsubsection{Healing}\index{Healing}
+Characters heal a quarter their Hitpoints each week, rounded up.
+
+\subsubsection{Death}
+\index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive. This is rolled at \gls{tn} 4 plus one for every negative HP level. For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP. That makes the \gls{tn} 7 for the Vitality Check.
+
+A failed Vitality check means that the character is dead. A successful one means that the character is unconscious for the remainder of the scene but alive. At the end of the scene they can make further Vitality Checks to see if they wake up. When waking up, all actions relying on movement take a penalty equal to the number of HP beyond 0 the character has lost.
+
+\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.  Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
 
 
 \end{multicols}
@@ -1636,13 +1634,13 @@ When attacking an opponent in armour, it is possible to make a shot so precise a
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
 
-Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
-
 \iftoggle{verbose}{
 \vfill\null
-	\includegraphics[width=\linewidth]{images/Roch_Hercka/vitals_shot.jpg}
+	\includegraphics[width=.9\linewidth]{images/Roch_Hercka/vitals_shot.jpg}
 	\label{roch:vitals}
 }{}
+
+Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
 \iftoggle{verbose}{Vitals Shots not only provide incentive for people to push their Strike Factor as high as possible, even at the expense of their own defence.  It also provides an equalizer for weaker forces as even the most heavily armoured creature can be struck by a lucky blow.}{}
 
@@ -1791,12 +1789,12 @@ Unfortunately there was little they could do to hide themselves, and a band of h
 The trio had reached halfway up the mountain by this point but the hobgoblins were faster than them, and stronger.
 Thenton thought for a moment about abandoning Hugi if there was a problem - his little dwarvish legs were no good for sprinting. Of course Hugi's death would not buy them much time, and Arneson would never stand for it. No, they would have to stick together to survive.
 
-	\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
-	\label{boris:brawl}
-
 	The trio climbed for a while longer, looking back every few moments to note how close the hobgoblins were behind them. An ogre was among their ranks, so they must have come from a very deep cavern.
 
 	Looking back, the enemy was nearing and everyone was out of breath. Arneson suggested a rest to make sure they would be ready for the fight - they could fight downhill against an enemy fatigued from walking upwards. He calmly got out the rations - some cheese, smoked pork, oatcakes and a flaggon of wine.
+
+	\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
+	\label{boris:brawl}
 
 	``May as well have the best of the rations now, eh, friends?'', Arneson said while smiling, and they slowly masticated their age-hardened meal and tried to smile back as the nine foot monstrocity which was so recently a man made its way up to them, pounding its great feet up the mountainous slopes, surrounded by half a dozen hobgoblins, each the size of a broad-shouldered man.
 
@@ -2461,12 +2459,6 @@ Forest's Friendship replicates the first three levels of the Enchantment Sphere 
 \spell{Light}{Continuous}{Survival}\\
 The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
 
-\iftoggle{verbose}{
-
-	\includegraphics[width=\linewidth]{images/Roch_Hercka/flashing_light.jpg}
-	\label{roch:light}
-}{}
-
 \enhancement{1}{Piercing}
 
 The \gls{miracleworker} casts a ray of light from any point within range -- the effect might be a floating orb or a shining staff, or even an enemy who lights up with unnatural light and cannot put it out. The light affects 1 area though it can be seen from farther away.
@@ -2474,6 +2466,12 @@ The \gls{miracleworker} casts a ray of light from any point within range -- the 
 If an area was previously dark then affected creatures not prepared for the light are blinded for \arabic{spelllevel} \glspl{round} minus their Wits Bonus, so an average human with Wits -1 would be blinded for 3 \glspl{round}. Undead creatures coming into contact with the light must make a moral check with a -1 penalty or flee.
 
 Anyone trying to cover their eyes must be Keeping Edgy\footnote{See page \pageref{edgy} for details on Keeping Edgy in combat.} and must be holding their action at the point the spell is cast. A character cannot decide to Keep Edgy after the spell has been declared.
+
+\iftoggle{verbose}{
+
+	\includegraphics[width=\linewidth]{images/Roch_Hercka/flashing_light.jpg}
+	\label{roch:light}
+}{}
 
 \spell{Whispering Wind}{Continuous}{Survival}\\
 The mage can also send out whispering messages on the wind, making their words carry across mountains and past houses.
@@ -2725,8 +2723,6 @@ The magical portal can change direction, pour water from the sea to a rock, or f
 The portals are always seamless -- the edges contain no flickering or wobbles.
 Portals must always rest upon unchangeing surfaces; any movement destroys the circle instantly.
 
-\enhancement{1}{Unrestrained} The mage can ignore all spacial barriors to the teleportation spell, allowing it to go anywhere the caster is familiar with, up to a number of areas away equal to \arabic{spelllevel} plus the caster's Wits Bonus.
-
 	\begin{rollchart}
 
 		{\bf \glsentrytext{tn}} & {\bf Range} \\\hline
@@ -2742,6 +2738,8 @@ Portals must always rest upon unchangeing surfaces; any movement destroys the ci
 		6 & The caster's home. \\
 
 	\end{rollchart}
+
+\enhancement{1}{Unrestrained} The mage can ignore all spacial barriors to the teleportation spell, allowing it to go anywhere the caster is familiar with, up to a number of areas away equal to \arabic{spelllevel} plus the caster's Wits Bonus.
 
 Particularly crazy casters have used such spells to open portals to strange etherial lands, filling the area with all manner of dangerous and bizarre creatures.
 
@@ -3755,8 +3753,6 @@ Runes can never be cast in a subtle way. All castings will be entirely obvious. 
 
 Rune casters mana stones are, of course, runic carvings, and can never be painted onto anything.
 
-\vfill\null
-
 \iftoggle{verbose}{
 	\includegraphics[width=\linewidth]{images/Roch_Hercka/dwarvish_runes.jpg}
 	\label{roch:runes}
@@ -4330,9 +4326,18 @@ The mana stones of C\'{a}l\"{e} are always activated by a command word.
 
 \end{xpchart}
 
-
 \subsection[Laiqu\"{e} -- Goddess of the Forest]{Laiqu\"{e} -- Goddess of the Forest}\index{Gods!Laiqu\"{e}}
 \noindent (`Lie-queh')
+
+Laiqu\"{e} is the mother of all the growing green plants and all the animals. Farmers worship her as they know their products ultimately stem from the forest and her holy day is a feast-day during the warm first season of the third cycle. She has few temples but many followers. Those temples are usually arranged around some particularly striking tree, often magically altered to appear fantastically beautiful or just warped. Farmers are fond of putting up a little shrine to her with no more than a few rocks and a unique tree, and sometimes with a bird feeder. Her followers are numerous -- they meet during feast days, especially Laiqu\"{e}'s own day of feasting. On other days, they simply travel, and expect Laiqu\"{e}'s blessings and the good will of the people around them to provide food for them, occasionally giving out her blessings if they have been initiated into the secrets of her divine powers.
+
+Those casting spells on her Path of Divinity find things appearing in a wave of mist while flowers bloom nearby.
+They are granted access to the Polymorph and conjuration spheres.
+The mana stones of her followers are always animals or plants.
+If the animal in question has access to a spell, the animal as well as the priest always has the ability to cast spells.
+Her followers commonly have large dog companions which are able to give blessings or summon other dogs for help with the conjuration sphere.
+Plants with a spell are always activated by a command word.
+Animals with a spell implanted always activate the spell at their own behest and rarely at the right time; cats have been known to use implanted spells to hunt prey while a dog which feels threatened might reflexively summon aid with a conjuration spell.
 
 	\begin{xpchart}{Laiqu\"{e}}
 
@@ -4363,16 +4368,6 @@ The mana stones of C\'{a}l\"{e} are always activated by a command word.
 	15 & Saving some miles of land from being despoiled. \\
 
 \end{xpchart}
-
-\noindent Laiqu\"{e} is the mother of all the growing green plants and all the animals. Farmers worship her as they know their products ultimately stem from the forest and her holy day is a feast-day during the warm first season of the third cycle. She has few temples but many followers. Those temples are usually arranged around some particularly striking tree, often magically altered to appear fantastically beautiful or just warped. Farmers are fond of putting up a little shrine to her with no more than a few rocks and a unique tree, and sometimes with a bird feeder. Her followers are numerous -- they meet during feast days, especially Laiqu\"{e}'s own day of feasting. On other days, they simply travel, and expect Laiqu\"{e}'s blessings and the good will of the people around them to provide food for them, occasionally giving out her blessings if they have been initiated into the secrets of her divine powers.
-
-Those casting spells on her Path of Divinity find things appearing in a wave of mist while flowers bloom nearby.
-They are granted access to the Polymorph and conjuration spheres.
-The mana stones of her followers are always animals or plants.
-If the animal in question has access to a spell, the animal as well as the priest always has the ability to cast spells.
-Her followers commonly have large dog companions which are able to give blessings or summon other dogs for help with the conjuration sphere.
-Plants with a spell are always activated by a command word.
-Animals with a spell implanted always activate the spell at their own behest and rarely at the right time; cats have been known to use implanted spells to hunt prey while a dog which feels threatened might reflexively summon aid with a conjuration spell.
 
 \subsection{Ohta -- Goddess of Battle}
 \index{Gods!Ohta}(`och-tah', with a `ch' as in `loch')
