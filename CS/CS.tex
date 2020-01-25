@@ -1,35 +1,6 @@
 % !TeX root = main.tex
 
-\newcommand{\trait}[1]{
-\vspace{.2cm} #1 \line(1,0){30}
 
-	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-
-		\ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\
-		\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111}  \\
-	\end{tabular}
-
-}
-
-		\newcommand{\shortline}{\line(1,0){22}}	
-		\newcommand{\weeline}{\line(1,0){30} \hspace{.6cm}}
-		\newcommand{\vlongline}{\line(1,0){100}\hspace{0.8cm}}
-		\newcommand{\writeline}{\line(1,0){59}}
-\newcommand{\fiveboxes}{\ding{111}\ding{111}\ding{111}\ding{111}\ding{111}}
-\newcommand{\threeboxes}{\ding{111}\ding{111}\ding{111}}
-\newcommand{\threecircles}{\ding{109}\ding{109}\ding{109}}
-\newcommand{\tenboxes}{	\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111}  \\}
-\newcommand{\tencircles}{\ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\}
-\newcommand{\attributecircles}{\ding{175}\ding{174}\ding{173}\ding{172}{\Large\ding{109}}\ding{172}\ding{173}\ding{174}\ding{175}}
-\newcommand{\Split}{
-	\line(1,0){120}
-
-	}
-\newcommand{\skill}[1]{#1 & \ding{109} & \ding{109} & \ding{109} \\
-}
-\newcommand{\sskill}[1]{#1 & \ding{109} & \ding{109} & \ding{109}\\
-& \ding{111} & \ding{111} & \ding{111} \\
-}
 
 \pagestyle{empty}
 
@@ -122,6 +93,8 @@
 		}
 
 %----
+
+		\setcounter{track}{18}
 		\posterbox{name=track,column=11,row=1,span=1,rowspan=12}{ 
 			{\large
 
@@ -260,8 +233,7 @@
 
 	\posterbox[adjusted title=Equipment]{name=equipment,column=1,row=10,span=7,rowspan=2.8}{
 
-		\newcommand{\longline}{\line(1,0){340}\par\vspace{.2cm}}
-		\vspace{.4cm}
+	\vspace{.4cm}
 
 	\longline	
 
