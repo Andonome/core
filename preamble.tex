@@ -85,7 +85,7 @@
 {8pt}
 {\Large\bfseries\filcenter}
 
-\titleformat{\subsection}{\needspace{2em}\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
+\titleformat{\subsection}{\needspace{5em}\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
 %
 \titleformat{\subsubsection}
 {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
@@ -262,3 +262,40 @@ Roll & Result \\
 \newcommand{\villages}[1]{\subsubsection{(\ding{170} Villages) #1}}
 \newcommand{\lowercollege}[1]{\subsubsection{(\ding{170} Lower College) #1}}
 \newcommand{\uppercollege}[1]{\subsubsection{(\ding{171} Upper College) #1}}
+
+%%%%% Character Sheet Commands
+
+\newcommand{\trait}[1]{
+\vspace{.2cm} #1 \line(1,0){30}
+
+	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
+
+		\ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\
+		\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111}  \\
+	\end{tabular}
+
+}
+
+		\newcommand{\shortline}{\line(1,0){22}}	
+		\newcommand{\weeline}{\line(1,0){30} \hspace{.6cm}}
+		\newcommand{\vlongline}{\line(1,0){100}\hspace{0.8cm}}
+		\newcommand{\writeline}{\line(1,0){59}}
+\newcommand{\fiveboxes}{\ding{111}\ding{111}\ding{111}\ding{111}\ding{111}}
+\newcommand{\threeboxes}{\ding{111}\ding{111}\ding{111}}
+\newcommand{\threecircles}{\ding{109}\ding{109}\ding{109}}
+\newcommand{\tenboxes}{	\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111}  \\}
+\newcommand{\tencircles}{\ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\}
+\newcommand{\attributecircles}{\ding{175}\ding{174}\ding{173}\ding{172}{\Large\ding{109}}\ding{172}\ding{173}\ding{174}\ding{175}}
+\newcommand{\Split}{
+	\line(1,0){120}
+
+	}
+\newcommand{\skill}[1]{#1 & \ding{109} & \ding{109} & \ding{109} \\
+}
+\newcommand{\sskill}[1]{#1 & \ding{109} & \ding{109} & \ding{109}\\
+& \ding{111} & \ding{111} & \ding{111} \\
+}
+
+
+\newcommand{\longline}{\line(1,0){340}\par\vspace{.2cm}}
+
