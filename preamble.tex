@@ -53,6 +53,7 @@
 
 %%%%%%%%%% Encounter Numbers
 \newcounter{encnum}
+\newcommand{\lescounter}{\addtocounter{enc}{-1}}
 \setcounter{encnum}{1}
 \newcommand{\encsymbol}{\ding{168}}
 \newcommand{\encnum}{\ifnumcomp{\value{encnum}}{=}{1}{$A$}{\arabic{encnum}}\encsymbol\addtocounter{encnum}{1}}
