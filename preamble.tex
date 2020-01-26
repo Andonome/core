@@ -116,7 +116,7 @@
 
 		}
 
-\newcommand{\npc}[2]{\needspace{12em}\begin{center}\vspace{.38cm}  #1 #2 \vspace{.18cm}}
+\newcommand{\npc}[2]{\needspace{12em}\vspace{.38cm}  #1 #2 \vspace{.18cm}}
 \newcommand{\NPC}[4]{\needspace{4em}\vspace{.38cm} #1 #2
 
 \hspace{.5cm}\textbf{Personality:} #3
@@ -168,6 +168,12 @@
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
 \newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
+\newcommand{\magicitem}[7]{\textbf{#1}
+
+	\textit{Spells: #2, }\textit{Casting: #3, }\textit{Type: #4, }\textit{Intelligence #5, }\textit{Wits #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
+	\vspace{.3em}
+
+}
 
 \newcommand{\spell}[3]{\subsubsection{#1}
 
@@ -178,6 +184,7 @@
 % Toggles for knacks
 
 %%%%%%%%%%%%%%%%%%%% Environments %%%%%%%%%%%%%%%%%%%%
+
 \newenvironment{boxtext}{\noindent}{}
 
 \newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
