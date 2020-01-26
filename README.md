@@ -117,7 +117,7 @@ You can join by:
 
 - Feedback on the Latex code.
 
-- Contributing art (svg is preferred).
+- Contributing svg art.
 
 - Writing to me, and if you like how the book's going, join as a dev.
 
