@@ -93,7 +93,7 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 
 ## Larger World
 
-Adventures in Fenestra contains a GM's guide, Bestiary, a setting, and mini-adventures.
+[Adventures in Fenestra](https://gitlab.com/bindrpg/aif) contains a GM's guide, Bestiary, a setting, and mini-adventures.
 
 # Project Notes
 
