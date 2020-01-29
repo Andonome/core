@@ -17,7 +17,11 @@
 
 \pagebreak[4]
 
+\iftoggle{verbose}{
+
 \input{intro.tex}
+
+}{}
 
 \input{cc.tex}
 
@@ -37,7 +41,11 @@
 
 \input{gods.tex}
 
+\iftoggle{verbose}{
+
 \input{gm.tex}
+
+}{}
 
 \pagebreak
 
@@ -47,7 +55,11 @@
 
 \printindex
 
+\iftoggle{verbose}{
+
 \input{CS/GS.tex}
+
+}{}
 
 \input{CS/CS.tex}
 
