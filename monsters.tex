@@ -127,7 +127,7 @@
 \newcommand{\quarterstaff}{Quarterstaff\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}\renewcommand{\weaponknackone}{\addtocounter{spd}{2}}}
 \newcommand{\greataxe}{Greataxe\addtocounter{str}{3}\addtocounter{spd}{1}\addtocounter{dex}{1}}
 \newcommand{\greatclub}{Greatclub\addtocounter{str}{4}\addtocounter{spd}{1}\addtocounter{dex}{1}}
-\newcommand{\longbow}{Longbow\addtocounter{str}{1}}
+\newcommand{\longbow}{Longbow}
 
 % ARMOUR
 \newcommand{\partialleather}{partial leather armour \addtocounter{dr}{3}}
@@ -375,7 +375,8 @@
 		}
 
 	\newcommand{\web}{
-		Web (Strength plus Athletics, TN 9 to break free as a movement action), 
+		\setcounter{random}{7}\addtocounter{random}{\value{str}}
+		Web (Strength + Athletics, TN \arabic{random} to break free as a movement action), 
 		}
 
 
