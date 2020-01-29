@@ -107,14 +107,14 @@
 	\ent{Knacks:} & #1 
 }
 
-\newcommand{\adrenalinesurge}{Adrenaline Surge \addtocounter{strb}{1}\addtocounter{knacks}{1}}
+\newcommand{\adrenalinesurge}{Adrenaline Surge\addtocounter{strb}{1}\addtocounter{knacks}{1}}
 \newcommand{\furiousblows}{Furious Blows\addtocounter{knacks}{1}}
-\newcommand{\firststrike}{First Strike \addtocounter{spdb}{2}\addtocounter{knacks}{1}}
-\newcommand{\combatcaster}{Combat Caster \addtocounter{knacks}{1}}
-\newcommand{\backtothewall}{Back to the Wall \addtocounter{knacks}{1}}
-\newcommand{\laststand}{Last Stand \addtocounter{knacks}{1}}
-\newcommand{\perfectsneakattack}{Perfect Sneak Attack \addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}}
-\newcommand{\unstoppable}{Unstoppable \addtocounter{hp}{1}\addtocounter{knacks}{1}}
+\newcommand{\firststrike}{First Strike\addtocounter{spdb}{2}\addtocounter{knacks}{1}}
+\newcommand{\combatcaster}{Combat Caster\addtocounter{knacks}{1}}
+\newcommand{\backtothewall}{Back to the Wall\addtocounter{knacks}{1}}
+\newcommand{\laststand}{Last Stand\addtocounter{knacks}{1}}
+\newcommand{\perfectsneakattack}{Perfect Sneak Attack\addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}}
+\newcommand{\unstoppable}{Unstoppable\addtocounter{hp}{1}\addtocounter{knacks}{1}}
 
 \newcommand{\javelin}{Javelin\addtocounter{str}{1}\addtocounter{spd}{2}}
 \newcommand{\Dagger}{Dagger\addtocounter{str}{1}}
@@ -367,11 +367,12 @@
 	\ent{Abilities:} & #1 
 	}
 
-	\newcommand{\teeth}{Teeth (+1 Damage) \addtocounter{str}{1}
-		}
-
 	\newcommand{\claws}{
 		Claws (+1 Damage) \addtocounter{str}{1}
+		}
+
+	\newcommand{\teeth}{
+		Teeth (+1 Damage after grapple) \addtocounter{str}{1}
 		}
 
 	\newcommand{\web}{
@@ -424,7 +425,7 @@
 {2}% DEXTERITY 
 {2}% AGGRESSION
 {Survival 1, Vigilance 1}% STRENGTH
-{}% ABILITIES
+{None}% ABILITIES
 {}
 }
 
@@ -437,7 +438,7 @@
 }{3}% DR
 {4}% AGGRESSION
 {Athletics 2, Survival 1}% SKILLS
-{}% ABILITIES
+{Web}% ABILITIES
 {}
 }
 %
@@ -461,7 +462,7 @@
 {2}% DR
 {2}% AGGRESSION
 {Stealth 2, Tactics 2, \knacks{\firststrike , \adrenalinesurge , \perfectsneakattack}}% SKILLS
-{}% ABILITIES
+{None}% ABILITIES
 {}
 }
 %
@@ -473,7 +474,7 @@
 {2}% DR
 {1}% AGGRESSION
 {Athletics 2, Survival 1, Tactics 1}% SKILLS
-{}% ABILITIES
+{\teeth}% ABILITIES
 {}
 }
 
@@ -494,7 +495,15 @@
 
 \newcommand{\basilisk}{
 \randomthree\addtocounter{age}{5}\randomtwo\addtocounter{random}{1}
-\animal{\arabic{age}}{-2}{\arabic{random}}{0}{4}{2}{Projectiles 1, Athletics 2}{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}{\knacks{\unstoppable}}
+\animal{\arabic{age}}% STRENGTH
+{-2}% DEXTERITY
+{\arabic{random}}% SPEED
+{0}% WITS
+{4}% DR
+{2}% AGGRESSION
+{Projectiles 1, Athletics 2}% SKILLS
+{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}% ABILITIES
+{\knacks{\unstoppable}}
 }
 
 %
@@ -508,7 +517,7 @@
 	{\ifodd\value{page}-2\else1\fi}}% CHARISMA
 	{4\addtocounter{age}{-5}}{\arabic{age}}{Aggression 2, Projectiles \addtocounter{age}{1}\arabic{age}, Academics \arabic{age}, Athletics 1, Deceit \arabic{age}, Tactics 2, Vigilance 3}{%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$gp, sitting in a lair.}{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{ \arabic{gold}gp in lair in assorted change}{None}}}%
-	{\knacks{\ifodd\value{chapter}\combatcaster\else\backtothewall\fi,\ifnumcomp{\value{age}}{>}{3}{\laststand}{\backtothewall, \adrenalinesurge}}, \abilities{Flight}\Path{Blood}{Enchantment \addtocounter{random}{-1}\arabic{random}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
+	{\knacks{\ifodd\value{chapter}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{age}}{>}{3}{\laststand}{\backtothewall, \adrenalinesurge}}, \abilities{Flight}\Path{Blood}{Enchantment \addtocounter{random}{-1}\arabic{random}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
 	}
 
 \newcommand{\dwarventrader}{
@@ -1109,8 +1118,8 @@
 {1}% WITS
 {1}% DR
 {0}% AGGRESSION
-{Survival 2\abilities{\teeth}}{}% SKILLS
-{}% ABILITIES
+{Survival 2}{}% SKILLS
+{\teeth}% ABILITIES
 }
 
 \newcommand{\rockman}{
