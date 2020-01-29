@@ -1076,14 +1076,14 @@
 \newcommand{\umberhulk}{
 	\randomtwo\addtocounter{enc}{4}
 \animal{\arabic{enc}}% STRENGTH
-{\ifodd\thechapter -1\else 0\fi\randomtwo }% DEXTERITY 
-{1}% SPEED
-{1}% WITS
-{5}% DR
+{\ifodd\thechapter -1\else 0\fi\randomthree }% DEXTERITY 
+{\arabic{random}}% SPEED
+{1\addtocounter{enc}{-2}}% WITS
+{\arabic{enc}}% DR
 {2}% AGGRESSION
-{Stealth 1, Survival \arabic{enc}, Vigilance 1}% SKILLS
+{Stealth \arabic{random}, \randomtwo Survival \arabic{enc}, Vigilance \randomthree \arabic{random}}% SKILLS
 {}% ABILITIES
-{}
+{\addtocounter{xpbonus}{\value{random}}}
 }
 
 \newcommand{\horse}{
