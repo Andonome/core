@@ -75,6 +75,16 @@ Nobody magically heals, so wounds stick around for the duration of the game.  To
 
 Healing Fate points after an encounter means players don't constantly fear death after a single wound, but still have to carry that wound.  It also provides a plausible fear-mechanic, as players with few Fate points have a good reason to fear for their characters.
 
+## Side Quests
+
+Foreshadowing, multiple plot-arcs, and keeping track of the lot over the long term can be difficult.
+Who has time for that with study and a job?
+Side Quests are here to help the GM and make sure that no GM comes unprepared, even if they haven't actually prepared anything.
+
+An individual Side Quest is a simple story in a few parts - the players hear of a mad mage, players encounter a monster made by the mad mage, and finally the players find a village destroyed by the mad mage.
+That last part can be repeated until the characters confront the mage.
+Details of the mad mage's lair will be given, so the players can track her down when ready.
+
 # Setting
 
 Bog standard fantasy world.  Sue me.
