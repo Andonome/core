@@ -85,6 +85,8 @@ An individual Side Quest is a simple story in a few parts - the players hear of 
 That last part can be repeated until the characters confront the mage.
 Details of the mad mage's lair will be given, so the players can track her down when ready.
 
+For example Side Quests, see [Adventures in Fenestra](https://gitlab.com/bindrpg/aif).
+
 ## Magic
 
 Spellcasters spend Mana to cast spells.  They generally have 2-6 points of Mana and a few types of spells, so you can avoid extended book-keeping.
