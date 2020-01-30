@@ -790,14 +790,15 @@
 }
 
 \newcommand{\nuracat}{
-	\animal{2}% STRENGTH
-	{2}% DEXTERITY
-	{4}% SPEED
-	{2}% WITS
+	\randomtwo
+	\animal{\arabic{random}}% STRENGTH
+	{2\addtocounter{random}{3}}% DEXTERITY
+	{\arabic{random}}% SPEED
+	{\arabic{random}}% WITS
 	{0}% DR
 	{4}% AGGRESSION
-	{Athletics 2, Stealth 2, Survival 1, Vigilance 2\abilities{\claws}}% SKILLS
-	{}{}
+	{Athletics 3, Stealth \arabic{enc}, Survival 1, Vigilance 3}% SKILLS
+	{\claws}{}
 	}
 
 \newcommand{\nuracrab}{
