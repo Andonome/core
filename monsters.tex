@@ -581,16 +581,17 @@
 	}
 
 \newcommand{\elvenenchanter}{
-	\randomtwo\randomthree\setcounter{random}{-3}\addtocounter{random}{-\value{age}}
+	\randomtwo\randomthree\addtocounter{random}{1}\multiply\value{random} by -1
 	\person{\arabic{random}}% STRENGTH
-	{\arabic{enc}}% DEXTERITY
-	{\ifodd\value{chapter} 1\else 2\fi\addtocounter{age}{1}}% SPEED
-	{{\arabic{age}\randomtwo\addtocounter{enc}{1}\arabic{enc}}% INTELLIGENCE
-	{\arabic{enc}\randomtwo}%
-	{\arabic{enc}}}%
-	{0}{\ifodd\value{chapter} \arabic{enc}\else 0\fi}%
-	{Projectiles 1, Academics 3, Empathy 3, Deceit 3, Performance 3, Stealth 1, Vigilance 2\Path{Blood}{Enchantment 5, Aldaron 4, Metamagic 4, Fate 3, Forces 2, Polymorph 2, Invocation 1}}{%
-		\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$5D6$sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{4}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp worth of earrings}{random magical item}}{ornamental dagger, worth \thepage sp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} one necklace worth \arabic{gold} sp}}}%
+	{\arabic{enc}}% DEXTERITY 
+	{1}% SPEED
+	{{\arabic{age}}% INTELLIGENCE
+	{\arabic{enc}\addtocounter{random}{1}}% WITS
+	{\arabic{random}}}% CHARISMA
+	{0}% DR
+	{\ifodd\thechapter 0\else 1\fi}% COMBAT
+	{Projectiles 1, Academics 3, Empathy 3, Deceit 3, Performance 3, Stealth 1, Vigilance 2\Path{Blood}{Enchantment 5, Aldaron 4, Metamagic 4, Fate 3, Forces 2, Polymorph 2, Invocation 1}}% SKILLS
+	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$5D6$sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{4}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp worth of earrings}{random magical item}}{ornamental dagger, worth \thepage sp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} one necklace worth \arabic{gold} sp}}}% EQUIPMENT
 		{\mana{6}\addtocounter{xpbonus}{5}}
 	}
 
