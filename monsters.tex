@@ -531,7 +531,7 @@
 	{0}% DR
 	{1}% COMBAT
 	{Crafts \ifodd\value{page} 1 \else 2\fi, Deceit \ifodd\value{chapter} 2 \else 1\fi}% SKILLS
-	{\shortsword\ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}, \arabic{gold}sp}}% EQUIPMENT
+	{\shortsword, \ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}\arabic{gold}sp}}% EQUIPMENT
 	{}
 	}
 %
@@ -549,7 +549,7 @@
 	{{\ifodd\value{page}2\else1\fi}% INTELLIGENCE
 	{\ifodd\value{chapter}1\else0\fi}{0}}%  WITS
 	{\ifodd\value{enc}-1\else0\fi}% CHARISMA
-	{1}{Academics 2, Crafts 1, Tactics 2\Path{Runes}{Metamagic 4, Fate 3, Force 2, Conjuration 1}}{\shortsword\partialchain\ifnumcomp{\thechapter}{=}{6}{4D6sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
+	{1}{Academics 2, Crafts 1, Tactics 2\Path{Runes}{Metamagic 4, Fate 3, Force 2, Conjuration 1}}{\shortsword, \partialchain\ifnumcomp{\thechapter}{=}{6}{4D6sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
 	}
 
 
@@ -666,7 +666,8 @@
 {0}% DR
 {\arabic{enc}}% AGGRESSION
 {Academics 1, Crafts 1}% SKILLS
-{\Dagger \thepage cp in a purse, and \thechapter sp hidden nearby.}% EQUIPMENT
+{\Dagger, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$cp, sitting in a lair.}{\setcounter{gold}{\thepage}\multiply\value{gold} by \value{list}\ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}
+}% EQUIPMENT
 {}
 }
 
@@ -711,8 +712,9 @@
 {0}% DR
 {\ifodd\thechapter 2 \else 1\fi}% AGGRESSION
 {Beast Ken 1, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}% SKILLS
-{\ifnum\value{age}>8{\greatsword}\else\ifnum\value{age}>4{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}% ABILITIES
+{\ifnum\value{age}>8{\greatsword}\else\ifnum\value{age}>4{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$5D6$cp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% ABILITIES
 {}
+\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$cp, sitting in a lair.}
 }
 
 \newcommand{\humanarcher}{
@@ -933,7 +935,7 @@
 {0}% DR
 {2}% AGGRESSION
 {Crafts 1, Tactics 1}% SKILLS
-{\shortsword\partialchain}% EQUIPMENT
+{\shortsword, \partialchain}% EQUIPMENT
 {}
 }
 
