@@ -830,15 +830,16 @@
 	}
 
 \newcommand{\nuraslug}{
-\animal{0}% STRENGTH
+	\randomtwo\addtocounter{enc}{-2}
+\animal{\arabic{enc}}% STRENGTH
 {-1}% DEXTERITY 
 {-4}% SPEED
-{0}% WITS
-{1}% DR
+{-3}% WITS
+{\arabic{random}}% DR
 {0}% AGGRESSION
-{Projectiles 2, Survival 1\abilities{Spitting acid for 1D6 Damage}}% SKILLS
-{}% ABILITIES
-{}
+{Projectiles 2, Survival 1}% SKILLS
+{Acid Spray}% ABILITIES
+{\addtocounter{str}{1}}
 }
 
 \newcommand{\nuraspider}{
