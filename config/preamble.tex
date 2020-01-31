@@ -26,7 +26,7 @@
 \usepackage{colortbl}
 \usepackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
-\tcbset{before upper=\setlength{\parskip}{1em},enhanced,drop shadow east,colback=white,breakable,arc=6mm,outer arc=1mm}
+\tcbset{enhanced,drop shadow east,colback=white,breakable,arc=6mm,outer arc=1mm}
 
 %%%%%%%%%% Section Headers %%%%%%%%%%
 
@@ -236,7 +236,6 @@ Roll & Result \\
 		test {\ifnumcomp{\value{random}}{>}{10}}
 	}
 	{\addtocounter{random}{-10}}
-	{\setcounter{age}{\value{random}}}
 }
 
 \newcommand{\randomthree}{
