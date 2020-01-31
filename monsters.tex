@@ -870,9 +870,9 @@
 
 \newcommand{\goblin}{
 \person{-1}% STRENGTH
-{2}% DEXTERITY 
+{\ifodd\thepage{2}\else 1\fi}% DEXTERITY 
 {0}% SPEED
-{{-1}% INTELLIGENCE
+{{0}% INTELLIGENCE
 {0}% WITS
 {-4}}% CHARISMA
 {0}% DR
