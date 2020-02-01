@@ -228,14 +228,22 @@ Roll & Result \\
 
 %%% Random Number by grabbing last page digit
 \newcounter{random}
+\setcounter{random}{1}
+\newcounter{increment}
+\setcounter{increment}{1}
 
 \newcommand{\random}{
-	\addtocounter{random}{\value{page}}\addtocounter{random}{1}
-	\multiply\value{random} by \value{chapter}
+	\addtocounter{random}{\value{page}}
+	\multiply\value{random} by \value{chapter}\addtocounter{random}{\value{increment}}
+	\whileboolexpr{
+		test {\ifnumcomp{\value{random}}{>}{100}}
+	}
+	{\addtocounter{random}{-100}}
 	\whileboolexpr{
 		test {\ifnumcomp{\value{random}}{>}{10}}
 	}
 	{\addtocounter{random}{-10}}
+	\addtocounter{increment}{1}
 }
 
 \newcommand{\randomthree}{
