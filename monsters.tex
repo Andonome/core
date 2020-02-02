@@ -975,7 +975,7 @@
 {2}% DR
 {2}% AGGRESSION
 {}% SKILLS
-{}% ABILITIES
+{Undead}% ABILITIES
 {}
 }
 
@@ -1034,18 +1034,6 @@
 {}
 }
 
-\newcommand{\ghoulhobgoblin}{
-\animal{1}% STRENGTH
-{-2}% DEXTERITY 
-{-2}% SPEED
-{-2}% WITS
-{2}% DR
-{2}% AGGRESSION
-{None}% SKILLS
-{Undead}% ABILITIES
-{}
-}
-
 \newcommand{\ghast}{
 \randomtwo\addtocounter{enc}{1}
 \person{\arabic{enc}}% STRENGTH
@@ -1073,7 +1061,7 @@
 {2}% DR
 {1}% AGGRESSION
 {Aggression 2, Projectiles 1, Academics 3, Deceit 1, Medicine 2, Vigilance 1\Path{Devotion (Qualme)}{Fate \arabic{enc}, \ifodd\thechapter Invocation 3\else Aldaron \arabic{enc}\fi, Metamagic 3, Necromancy 5}}% SKILLS
-{\Dagger, mana stone holding 6 MP}% EQUIPMENT
+{\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
