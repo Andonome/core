@@ -3,6 +3,10 @@
 
 The config directory is a subtree, so all commits to it should only involve files in that directory.
 
+Binary files placed here were a mistake. No further binaries accepted.
+
+Gits available on github, gitlab and git.hklbgd.org
+
 -->
 
 | [Download](https://gitlab.com/bindrpg/core/pipelines) | [Wiki](https://gitlab.com/bindrpg/core/-/wikis/home) |
@@ -119,7 +123,7 @@ Join me!
 
 You can join by: 
 
-- Emailing complaints to incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com.
+- Emailing complaints to [email][1].
 
 - Playtesting.
 
@@ -131,3 +135,11 @@ You can join by:
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
+### Development Levels
+
+1. Easy but slow: [Email][1] suggestions in.
+2. Basic effort but slow: Make a Gitlab account and stick issues on the [board](https://gitlab.com/bindrpg/core/issues).  Others can upvote /downvote your issues.
+3. Medium effort, medium speed: use your Gitlab account and enter the IDE. Edit the tex in a branch and make a commit message, explaining why you made those changes. Your name will then be attached to the history forever.
+4. Big effort, extreme speed: Learn git. Make any changes in any editor, push the lot instantly, and pull down a log of anyone's branches or changes instantly.
+
+[1]: incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com.
