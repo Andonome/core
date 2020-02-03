@@ -575,8 +575,8 @@
 	{1}%SPEED
 	{{\arabic{age}}{2}{1}}%MENTAL ATTRIBUTES
 	{0}{\ifodd\value{list}1\else2\fi}%
-	{\ifodd\thepage\else Projectiles \arabic{age}\fi, Academics \arabic{age}, Athletics 1, \ifodd \thechapter Crafts \arabic{age}\else Performance \arabic{age}\fi, Stealth 1, Survival 2, Vigilance \arabic{age}\Path{Blood \ifodd\thechapter\else \& Song\fi}{\setcounter{enc}{\value{age}}\addtocounter{enc}{2}Aldaron \arabic{enc}, \addtocounter{age}{1}Enchantment \arabic{age}}\addtocounter{age}{-1} \ifodd\thechapter\else Fate \arabic{enc}\fi, \ifodd\thepage Polymorph \arabic{age}\else Invocation \arabic{age}\fi}{\ifnumcomp{\value{enc}}{>}{-1}{\rapier dagger, shortbow,}{} %
-	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{3D6sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{100}{\divide\value{gold} by 100 \ifnumcomp{\value{enc}}{>}{4}{\arabic{gold} sp worth of earrings and bracelets}{random magical item}}{Ornamental dagger, worth \thepage sp}}{one necklace worth \thechapter sp}}}%
+	{\ifodd\value{gold}\else Projectiles, \arabic{age}\fi Academics \arabic{age}, Athletics 1, \ifodd \thechapter Crafts \arabic{age}\else Performance \arabic{age}\fi, Stealth 1, Survival 2, Vigilance \arabic{age}\Path{Blood \ifodd\thechapter\else \& Song\fi}{\addtocounter{enc}{1} Aldaron \arabic{enc}, \addtocounter{age}{1}Enchantment \arabic{age}}\addtocounter{age}{-1} \ifodd\value{gold}\else Fate \arabic{random}\fi\addtocounter{gold}{1}, \ifodd\value{gold} Polymorph \arabic{age}\else Invocation \arabic{age}\fi}{\ifnumcomp{\value{list}}{>}{2}{\rapier, dagger, shortbow, }{} %
+	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$3D6$sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{100}{\divide\value{gold} by 100 \ifnumcomp{\value{enc}}{>}{4}{\arabic{gold} sp worth of earrings and bracelets}{random magical item}}{Ornamental dagger, worth \thepage sp}}{one necklace worth \thechapter sp}}}%
 	{\multiply\value{age} by 2 \mana{\value{age}}}
 	}
 
@@ -651,7 +651,7 @@
 {0}% DR
 {\ifodd\thepage 0\else 1\fi}% AGGRESSION
 {Empathy 1, \ifodd\thechapter Deceit 1\fi}% SKILLS
-{\Dagger \thechapter cp in a purse.}% EQUIPMENT
+{\Dagger, \thechapter cp}% EQUIPMENT
 {}
 }
 
@@ -830,15 +830,16 @@
 	}
 
 \newcommand{\nuraslug}{
-\animal{0}% STRENGTH
+	\randomtwo\addtocounter{enc}{-2}
+\animal{\arabic{enc}}% STRENGTH
 {-1}% DEXTERITY 
 {-4}% SPEED
-{0}% WITS
-{1}% DR
+{-3}% WITS
+{\arabic{random}}% DR
 {0}% AGGRESSION
-{Projectiles 2, Survival 1\abilities{Spitting acid for 1D6 Damage}}% SKILLS
-{}% ABILITIES
-{}
+{Projectiles 2, Survival 1}% SKILLS
+{Acid Spray}% ABILITIES
+{\addtocounter{str}{1}}
 }
 
 \newcommand{\nuraspider}{
@@ -850,6 +851,19 @@
 {4}% AGGRESSION
 {Athletics 3, Vigilance 2}% SKILLS
 {\web, poison}% ABILITIES
+{}
+}
+
+\newcommand{\nurawoodspy}{
+	\randomtwo\addtocounter{enc}{4}\addtocounter{random}{1}
+\animal{\arabic{random}}% STRENGTH
+{\arabic{enc}}% DEXTERITY 
+{3}% SPEED
+{2}% WITS
+{3}% DR
+{\arabic{random}}% AGGRESSION
+{Athletics 2, Stealth 4, Survival 2, Tactics 2}% SKILLS
+{None}% ABILITIES
 {}
 }
 
@@ -961,7 +975,7 @@
 {2}% DR
 {2}% AGGRESSION
 {}% SKILLS
-{}% ABILITIES
+{Undead}% ABILITIES
 {}
 }
 
@@ -995,6 +1009,18 @@
 {}
 }
 
+\newcommand{\undeadogre}{
+	\animal{6}% STRENGTH
+	{-2}% DEXTERITY
+	{0}% SPEED
+	{-4}% WITS
+	{2}% DR
+	{2}% AGGRESSION
+	{Deceit 1}% SKILLS
+	{None}% ABILITIES
+	{}%
+}
+
 \newcommand{\ghoul}{
 \randomtwo
 \animal{\arabic{random}}% STRENGTH
@@ -1004,19 +1030,7 @@
 {2}% DR
 {2}% AGGRESSION
 {}% STRENGTH
-{}% EQUIPMENT
-{}
-}
-
-\newcommand{\ghoulhobgoblin}{
-\animal{1}% STRENGTH
-{-2}% DEXTERITY 
-{-2}% SPEED
-{-2}% WITS
-{2}% DR
-{2}% AGGRESSION
-{None}% SKILLS
-{Undead Sight}% ABILITIES
+{Undead}% ABILITIES
 {}
 }
 
@@ -1047,7 +1061,7 @@
 {2}% DR
 {1}% AGGRESSION
 {Aggression 2, Projectiles 1, Academics 3, Deceit 1, Medicine 2, Vigilance 1\Path{Devotion (Qualme)}{Fate \arabic{enc}, \ifodd\thechapter Invocation 3\else Aldaron \arabic{enc}\fi, Metamagic 3, Necromancy 5}}% SKILLS
-{\Dagger, mana stone holding 6 MP}% EQUIPMENT
+{\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
@@ -1177,8 +1191,8 @@
 {2}% WITS
 {0}% DR
 {0}% AGGRESSION
-{Stealth 3, Vigilance 2\abilities{Gas}}% SKILLS
-{}% ABILITIES
+{Stealth 3, Vigilance 2}% SKILLS
+{Gas}% ABILITIES
 {}
 }
 
