@@ -29,7 +29,8 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 
 ## No Class
 
-Players put their XP wherever they like, so there are no charts for what has to be bought next, and no levelling system.  A fighter is just someone with a good Combat score, and a Paladin is just a fighter with a little devine magic.
+Players put their XP wherever they like, so there are no charts for what has to be bought next, and no levelling system.
+A fighter is just someone with a good Combat score, and a Paladin is just a fighter with a little divine magic.
 
 ## Background as Stories
 
@@ -101,7 +102,7 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 | :----:|:---- |:--------|
 | 1   |  Curse an enemy or ask for divine guidance. | Calm an animal. |
 | 2    | Heal a companion's Fate Points. | Summon mist.  Create blinding light.  Freeze water. |
-| 3    | Request minor devine intervention. Boost someone's luck. |  |
+| 3    | Request minor divine intervention. Boost someone's luck. |  |
 
 ## Larger World
 
