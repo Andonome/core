@@ -8,12 +8,9 @@
 *.log
 *.synctex.gz
 *.toc
-* Blood.odt
 *.log
 *.tmp
 *pdf
-Finished_PDFs
-.First_Blood.tex.swp
 *swp
 .no.md
 *.acn
@@ -25,5 +22,5 @@ Finished_PDFs
 *.glsdefs
 *.ist
 *ist
-First_Blood.mtc*
 *.maf
+svg-inkscape
