@@ -33,7 +33,7 @@
 \usepackage{colortbl}
 \usepackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
-\tcbset{enhanced,drop shadow east,colback=white,breakable,arc=6mm,outer arc=1mm}
+\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,breakable,arc=6mm,outer arc=1mm}
 
 %%%%%%%%%% Section Headers %%%%%%%%%%
 
@@ -123,13 +123,16 @@
 
 		}
 
-\newcommand{\npc}[2]{\needspace{12em}\vspace{.38cm}  #1 #2 \vspace{.18cm}}
-\newcommand{\NPC}[4]{\needspace{4em}\vspace{.38cm} #1 #2
+%%%%% NPC Names
 
-\hspace{.5cm}\textbf{Personality:} #3
-
-\hspace{.5cm}\textbf{Mannerism:} #4
-
+\newcommand{\name}{}
+\newcommand{\personality}{}
+\newcommand{\mannerism}{}
+\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}}
+\newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
+\settoggle{personality}{true}
+\renewcommand{\personality}{#3}
+\renewcommand{\mannerism}{#4}
 }
 \newcommand{\G}{\opposition} % groups
 \newcommand{\M}{\mars} % male
@@ -155,6 +158,8 @@
 
 \newtoggle{verbose}
 \settoggle{verbose}{true}
+\newtoggle{personality}
+\settoggle{personality}{false}
 
 \iftoggle{verbose}{
 	\setcounter{tocdepth}{1}
@@ -231,9 +236,8 @@ Roll & Result \\
 
 \newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
-\newcommand{\best}[1]{\subsubsection{#1}\index{#1}}
+\newcommand{\best}[1]{\subsubsection{#1}\renewcommand{\name}{#1}\index{#1}}
 
-%%% Random Number by grabbing last page digit
 \newcounter{random}
 \setcounter{random}{1}
 \newcounter{increment}
