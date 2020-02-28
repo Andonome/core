@@ -33,7 +33,7 @@
 \usepackage{colortbl}
 \usepackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
-\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,breakable,arc=6mm,outer arc=1mm}
+\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,arc=6mm,outer arc=1mm}
 
 %%%%%%%%%% Section Headers %%%%%%%%%%
 
@@ -201,8 +201,8 @@
 
 \newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
 
-\tcolorboxenvironment{boxtext}{}
-\tcolorboxenvironment{speechtext}{}
+\tcolorboxenvironment{boxtext}{breakable}
+\tcolorboxenvironment{speechtext}{breakable}
 
 \newenvironment{rolltable}%
 {\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}
