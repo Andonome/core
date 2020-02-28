@@ -182,6 +182,17 @@
 \derivedstats
 \end{tcolorbox}
 	\settoggle{debug}{false}
+
+\iftoggle{personality}{
+
+\textbf{Personality:} \personality
+
+\textbf{Mannerism:} \mannerism
+
+\vspace{1em}
+
+\settoggle{personality}{false}}%
+{}
 }
 
 \newcommand{\animal}[9]{\settoggle{mind}{false}
@@ -207,9 +218,12 @@
 \end{tcolorbox}
 
 \iftoggle{personality}{
-Personality: \personality
 
-Mannerism: \mannerism
+\textbf{Personality:} \personality
+
+\textbf{Mannerism:} \mannerism
+
+\vspace{1em}
 
 \settoggle{personality}{false}}%
 {}
