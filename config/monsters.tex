@@ -176,12 +176,23 @@
 \renewcommand{\armourtype}{P}
 \gdef\armourtype{P}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title={\name}]
 \creaturestats
 
 \derivedstats
 \end{tcolorbox}
 	\settoggle{debug}{false}
+
+\iftoggle{personality}{
+
+\textbf{Personality:} \personality
+
+\textbf{Mannerism:} \mannerism
+
+\vspace{1em}
+
+\settoggle{personality}{false}}%
+{}
 }
 
 \newcommand{\animal}[9]{\settoggle{mind}{false}
@@ -199,12 +210,23 @@
 
 \renewcommand{\armourtype}{C}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title={\name}]
 \creaturestats
 
 \derivedstats
 
 \end{tcolorbox}
+
+\iftoggle{personality}{
+
+\textbf{Personality:} \personality
+
+\textbf{Mannerism:} \mannerism
+
+\vspace{1em}
+
+\settoggle{personality}{false}}%
+{}
 }
 
 \newcommand{\clean}{

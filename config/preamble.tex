@@ -33,7 +33,7 @@
 \usepackage{colortbl}
 \usepackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
-\tcbset{enhanced,drop shadow east,colback=white,breakable,arc=6mm,outer arc=1mm}
+\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,arc=6mm,outer arc=1mm}
 
 %%%%%%%%%% Section Headers %%%%%%%%%%
 
@@ -123,13 +123,16 @@
 
 		}
 
-\newcommand{\npc}[2]{\needspace{12em}\vspace{.38cm}  #1 #2 \vspace{.18cm}}
-\newcommand{\NPC}[4]{\needspace{4em}\vspace{.38cm} #1 #2
+%%%%% NPC Names
 
-\hspace{.5cm}\textbf{Personality:} #3
-
-\hspace{.5cm}\textbf{Mannerism:} #4
-
+\newcommand{\name}{}
+\newcommand{\personality}{}
+\newcommand{\mannerism}{}
+\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}}
+\newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
+\settoggle{personality}{true}
+\renewcommand{\personality}{#3}
+\renewcommand{\mannerism}{#4}
 }
 \newcommand{\G}{\opposition} % groups
 \newcommand{\M}{\mars} % male
@@ -155,6 +158,8 @@
 
 \newtoggle{verbose}
 \settoggle{verbose}{true}
+\newtoggle{personality}
+\settoggle{personality}{false}
 
 \iftoggle{verbose}{
 	\setcounter{tocdepth}{1}
@@ -177,7 +182,7 @@
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
 \newcommand{\magicitem}[7]{\textbf{#1}
 
-	\textit{Spells: #2, }\textit{Casting: #3, }\textit{Type: #4, }\textit{Intelligence #5, }\textit{Wits #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
+	\textit{Spells: #2, }\textit{Path: #3, }\textit{Duration: #4, }\textit{Type: #5, }\textit{Potence: #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
 	\vspace{.3em}
 
 }
@@ -196,8 +201,8 @@
 
 \newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
 
-\tcolorboxenvironment{boxtext}{}
-\tcolorboxenvironment{speechtext}{}
+\tcolorboxenvironment{boxtext}{breakable}
+\tcolorboxenvironment{speechtext}{breakable}
 
 \newenvironment{rolltable}%
 {\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}
@@ -231,9 +236,8 @@ Roll & Result \\
 
 \newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
-\newcommand{\best}[1]{\subsubsection{#1}\index{#1}}
+\newcommand{\best}[1]{\subsubsection{#1}\renewcommand{\name}{#1}\index{#1}}
 
-%%% Random Number by grabbing last page digit
 \newcounter{random}
 \setcounter{random}{1}
 \newcounter{increment}
