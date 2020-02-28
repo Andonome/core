@@ -176,7 +176,7 @@
 \renewcommand{\armourtype}{P}
 \gdef\armourtype{P}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title={\name}]
 \creaturestats
 
 \derivedstats
@@ -199,12 +199,20 @@
 
 \renewcommand{\armourtype}{C}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[title={\name}]
 \creaturestats
 
 \derivedstats
 
 \end{tcolorbox}
+
+\iftoggle{personality}{
+Personality: \personality
+
+Mannerism: \mannerism
+
+\settoggle{personality}{false}}%
+{}
 }
 
 \newcommand{\clean}{
