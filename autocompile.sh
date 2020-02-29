@@ -4,7 +4,7 @@ if [ $1 = clean ]; then
 	exit 0
 fi
 
-if [ $1 = conf ]; then
+if [ $1 = tree ]; then
 	git subtree -P config pull ../config master && \
 	git subtree -P config push ../config core
 fi
