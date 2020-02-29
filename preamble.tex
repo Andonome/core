@@ -67,9 +67,9 @@
 
 \newcommand{\headingtype}{CHAPTER}
 
-\newcommand{\sidepic}[2]{
-	\needspace{3cm}\begin{wrapfigure}{O}{.#1\textwidth}
-\includegraphics[width=.#1\textwidth]{images/#2}
+\newcommand{\sidepic}[2][5]{
+	\needspace{2cm}\begin{wrapfigure}{O}{.#1\linewidth}
+\noindent\includesvg[width=\linewidth]{images/#2}
 \end{wrapfigure}
 }
 
