@@ -736,7 +736,6 @@
 {Beast Ken 1, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}% SKILLS
 {\ifnum\value{age}>8{\greatsword}\else\ifnum\value{age}>4{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$5D6$cp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% ABILITIES
 {}
-\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$cp, sitting in a lair.}
 }
 
 \newcommand{\humanarcher}{
