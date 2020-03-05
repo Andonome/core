@@ -25,7 +25,7 @@
     pdfpagemode=FullScreen,
     pdfstartpage=1,
 }
-\usepackage{titlesec}
+\usepackage{titlesec,titletoc}
 \usepackage{needspace}
 \usepackage{tikz}
 	\usetikzlibrary{mindmap,trees}
@@ -274,7 +274,7 @@ Roll & Result \\
 
 \newcommand{\sidequest}[1]{\subsection[#1]{#1 -- \encnum}}
 \newcommand{\forest}[1]{\subsubsection{(\ding{168} Forest) #1}}
-\newcommand{\town}[1]{\subsubsection{(\ding{169} Town) #1}}
+\newcommand{\town}[2][Town Encounter]{\subsubsection[#1]{(\ding{169} Town) #1}}
 \newcommand{\villages}[1]{\subsubsection{(\ding{170} Villages) #1}}
 \newcommand{\lowercollege}[1]{\subsubsection{(\ding{170} Lower College) #1}}
 \newcommand{\uppercollege}[1]{\subsubsection{(\ding{171} Upper College) #1}}
