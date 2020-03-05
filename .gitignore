@@ -24,5 +24,6 @@
 *ist
 *.maf
 svg-inkscape
-*out
+*.out
+*.ptc
 old
