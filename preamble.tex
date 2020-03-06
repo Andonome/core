@@ -271,6 +271,8 @@ Roll & Result \\
 
 \newcommand{\sqtoc}{\printcontents[\sqarea]{l}{2}{\section*{Summaries}\setcounter{tocdepth}{3}}}
 
+\newcommand{\sqminitoc}{\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}}
+
 \newcommand{\sidequest}[1]{\resumecontents[\sqarea]\subsection[#1]{#1}\stopcontents[\sqarea]\settoggle{firstsq}{true}}
 
 \newcommand{\forest}[2]{\resumecontents[forest]\subsubsection[\iftoggle{firstsq}{\CheckedBox}{\ding{111}} #1 -- #2]{(Forest) #1}\stopcontents[forest]\settoggle{firstsq}{false}}
