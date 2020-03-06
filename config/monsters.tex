@@ -393,8 +393,7 @@
 		Claws (+1 Damage) \addtocounter{str}{1}
 		}
 
-	\newcommand{\teeth}{
-		Teeth (+1 Damage after grapple) \addtocounter{str}{1}
+	\newcommand{\teeth}{Teeth (+1 Damage after grapple) \addtocounter{str}{1}
 		}
 
 	\newcommand{\web}{
@@ -688,7 +687,7 @@
 {0}% DR
 {\arabic{enc}}% AGGRESSION
 {Academics 1, Crafts 1}% SKILLS
-{\Dagger, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$cp, sitting in a lair.}{\setcounter{gold}{\thepage}\multiply\value{gold} by \value{list}\ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}
+{\Dagger, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$cp.}{\setcounter{gold}{\thepage}\multiply\value{gold} by \value{list}\ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}sp hidden in the cart.}{None}}
 }% EQUIPMENT
 {}
 }
@@ -736,7 +735,6 @@
 {Beast Ken 1, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}% SKILLS
 {\ifnum\value{age}>8{\greatsword}\else\ifnum\value{age}>4{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$5D6$cp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% ABILITIES
 {}
-\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$cp, sitting in a lair.}
 }
 
 \newcommand{\humanarcher}{
@@ -1158,8 +1156,9 @@
 {1}% WITS
 {1}% DR
 {0}% AGGRESSION
-{Survival 2}{}% SKILLS
+{Survival 2}% SKILLS
 {\teeth}% ABILITIES
+{}%
 }
 
 \newcommand{\rockman}{
