@@ -18,14 +18,7 @@
 \usepackage{multicol}
 \usepackage{graphicx}
 \usepackage{etoolbox}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=false,
-    bookmarks=true,
-    pdfpagemode=FullScreen,
-    pdfstartpage=1,
-}
-\usepackage{titlesec}
+\usepackage{titlesec,titletoc}
 \usepackage{needspace}
 \usepackage{tikz}
 	\usetikzlibrary{mindmap,trees}
@@ -64,6 +57,7 @@
 \setcounter{encnum}{1}
 \newcommand{\encsymbol}{\ding{168}}
 \newcommand{\encnum}{\ifnumcomp{\value{encnum}}{=}{1}{$A$}{\arabic{encnum}}\encsymbol\addtocounter{encnum}{1}}
+\newcommand{\sqarea}{town}
 
 \newcommand{\headingtype}{CHAPTER}
 
@@ -211,7 +205,7 @@ Roll & Result \\
 
 \vspace{.3cm}
 
-\it}{\normalfont}
+\it}{\normalfont\vspace{2em}}
 
 \newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
 
@@ -272,10 +266,10 @@ Roll & Result \\
 
 %%%%% Side Quests
 
-\newcommand{\sidequest}[1]{\subsection[#1]{#1 -- \encnum}}
-\newcommand{\forest}[1]{\subsubsection{(\ding{168} Forest) #1}}
-\newcommand{\town}[1]{\subsubsection{(\ding{169} Town) #1}}
-\newcommand{\villages}[1]{\subsubsection{(\ding{170} Villages) #1}}
+\newcommand{\sidequest}[1]{\resumecontents[\sqarea]\subsection[#1]{#1}\stopcontents[\sqarea]}
+\newcommand{\forest}[2]{\resumecontents[forest]\subsubsection[\ding{111} #1 -- #2]{(Forest) #1}\stopcontents[forest]}
+\newcommand{\town}[2]{\resumecontents[town]\subsubsection[\ding{111} #1 -- #2]{(Town) #1}\stopcontents[town]}
+\newcommand{\villages}[2]{\resumecontents[villages]\subsubsection[\ding{111} #1 -- #2]{(Villages) #1}\stopcontents[villages]}
 \newcommand{\lowercollege}[1]{\subsubsection{(\ding{170} Lower College) #1}}
 \newcommand{\uppercollege}[1]{\subsubsection{(\ding{171} Upper College) #1}}
 
