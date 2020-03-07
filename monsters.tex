@@ -596,7 +596,7 @@
 	{1}%SPEED
 	{{\arabic{age}}{2}{1}}%MENTAL ATTRIBUTES
 	{0}{\ifodd\value{list}1\else2\fi}%
-	{\ifodd\value{gold}\else Projectiles, \arabic{age}\fi Academics \arabic{age}, Athletics 1, \ifodd \thechapter Crafts \arabic{age}\else Performance \arabic{age}\fi, Stealth 1, Survival 2, Vigilance \arabic{age}\Path{Blood \ifodd\thechapter\else \& Song\fi}{\addtocounter{enc}{1} Aldaron \arabic{enc}, \addtocounter{age}{1}Enchantment \arabic{age}}\addtocounter{age}{-1} \ifodd\value{gold}\else Fate \arabic{random}\fi\addtocounter{gold}{1}, \ifodd\value{gold} Polymorph \arabic{age}\else Invocation \arabic{age}\fi}{\ifnumcomp{\value{list}}{>}{2}{\rapier, dagger, shortbow, }{} %
+	{\ifodd\value{gold}\else Projectiles \arabic{age}, \fi Academics \arabic{age}, Athletics 1, \ifodd \thechapter Crafts \arabic{age}\else Performance \arabic{age}\fi, Stealth 1, Survival 2, Vigilance \arabic{age}\Path{Blood \ifodd\thechapter\else \& Song\fi}{\addtocounter{enc}{1} Aldaron \arabic{random}, \addtocounter{age}{1}Enchantment \arabic{age}}\addtocounter{age}{-1} \ifodd\value{gold}\else Fate \arabic{random}\fi\addtocounter{gold}{1}, \ifodd\value{gold} Polymorph \arabic{age}\else Invocation \arabic{age}\fi}{\ifnumcomp{\value{list}}{>}{10}{\rapier, dagger\ifodd\value{gold}\else, shortbow\fi}{\Dagger} %
 	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$3D6$sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{100}{\divide\value{gold} by 100 \ifnumcomp{\value{enc}}{>}{4}{\arabic{gold} sp worth of earrings and bracelets}{random magical item}}{Ornamental dagger, worth \thepage sp}}{one necklace worth \thechapter sp}}}%
 	{\multiply\value{age} by 2 \mana{\value{age}}}
 	}
