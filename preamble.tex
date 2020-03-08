@@ -38,6 +38,18 @@
 \old@endpart}
 \makeatother
 
+%%%%% Make table of contents two column
+
+\makeatletter
+\renewcommand\tableofcontents{%
+\begin{multicols}{2}
+
+    \@starttoc{toc}%
+\end{multicols}
+}
+\makeatother
+
+
 \titleformat{\chapter}[frame]
 {\normalfont}
 {\filright
