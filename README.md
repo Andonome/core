@@ -2,7 +2,15 @@ These config files make the BIND RPG books look and act the way they do.
 
 # Usage
 
-To make a book, put this config folder into the same directory, and copy `main.tex` into the directory.
+To make a book, put this config folder into the same directory.
+
+> git subtree add -P config git@gitlab.com:bindrpg/config.git master
+
+Then copy main.tex into your main folder and make a symbolic link to the `.gitignore` file.
+
+> cp config/main.tex .
+
+> ln -s config/.gitignore .
 
 Edit 'main.tex', and input your tex files by writing `\include{my_file.tex}.
 
