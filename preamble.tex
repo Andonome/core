@@ -278,12 +278,16 @@ Roll & Result \\
 
 %%%%% Side Quests
 
+% the first side quest gets a ticked box in the toc.
+% the rest get an empty box, so the GM can tick it once it's ready.
+
 \newtoggle{firstsq}
 \settoggle{firstsq}{true}
 
 \newcommand{\sqtoc}{\printcontents[\sqarea]{l}{2}{\section*{Summaries}\setcounter{tocdepth}{3}}}
 
-\newcommand{\sqminitoc}{\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}}
+% Change the tocdepth from 2 to 3 in order to output a miniature table of contents on all side quests
+\newcommand{\sqminitoc}{\printcontents[sq]{l}{2}{\setcounter{tocdepth}{2}}}
 
 \newcommand{\sidequest}[1]{\resumecontents[\sqarea]\subsection[#1]{#1}\stopcontents[\sqarea]\settoggle{firstsq}{true}}
 
