@@ -134,8 +134,10 @@
 \newcommand{\name}{}
 \newcommand{\personality}{}
 \newcommand{\mannerism}{}
-\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}}
+\newcommand{\npcsymbol}{}
+\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
 \newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
+\renewcommand{\npcsymbol}{#1}
 \settoggle{personality}{true}
 \renewcommand{\personality}{#3}
 \renewcommand{\mannerism}{#4}
