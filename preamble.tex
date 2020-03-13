@@ -26,7 +26,22 @@
 \usepackage{colortbl}
 \usepackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
-\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,arc=6mm,outer arc=1mm}
+%\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,arc=6mm,outer arc=1mm}
+
+\tcbset{enhanced, drop shadow east,
+colframe=black,colbacktitle=black!5!white,
+fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
+{yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
+boxed title style={boxrule=0.5mm,
+frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+-- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+-- (frame.south east) -- (frame.south west) -- cycle; },
+interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+-- (interior.north west) -- (interior.north east)
+-- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+-- cycle;}
+}
+}
 
 %%%%%%%%%% Section Headers %%%%%%%%%%
 
@@ -134,8 +149,10 @@
 \newcommand{\name}{}
 \newcommand{\personality}{}
 \newcommand{\mannerism}{}
-\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}}
+\newcommand{\npcsymbol}{}
+\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
 \newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
+\renewcommand{\npcsymbol}{#1}
 \settoggle{personality}{true}
 \renewcommand{\personality}{#3}
 \renewcommand{\mannerism}{#4}
@@ -232,7 +249,7 @@ Roll & Result \\
 
 \newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
-\newcommand{\best}[1]{\subsubsection{#1}\renewcommand{\name}{#1}\index{#1}}
+\newcommand{\best}[2][\C]{\npc{#1}{#2}\index{#2}}
 
 \newcounter{random}
 \setcounter{random}{1}
@@ -278,14 +295,20 @@ Roll & Result \\
 
 %%%%% Side Quests
 
+% the first side quest gets a ticked box in the toc.
+% the rest get an empty box, so the GM can tick it once it's ready.
+
 \newtoggle{firstsq}
 \settoggle{firstsq}{true}
 
 \newcommand{\sqtoc}{\printcontents[\sqarea]{l}{2}{\section*{Summaries}\setcounter{tocdepth}{3}}}
 
-\newcommand{\sqminitoc}{\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}}
+% Change the tocdepth from 2 to 3 in order to output a miniature table of contents on all side quests
+\newcommand{\sqminitoc}{\printcontents[sq]{l}{2}{\setcounter{tocdepth}{2}}}
 
 \newcommand{\sidequest}[1]{\resumecontents[\sqarea]\subsection[#1]{#1}\stopcontents[\sqarea]\settoggle{firstsq}{true}}
+
+\newcommand{\sqpart}[3]{\resumecontents[#1]\subsubsection[\iftoggle{firstsq}{\CheckedBox}{\Square} #2 -- #3]{(#1) #2}\stopcontents[#1]\settoggle{firstsq}{false}}
 
 \newcommand{\forest}[2]{\resumecontents[forest]\subsubsection[\iftoggle{firstsq}{\CheckedBox}{\ding{111}} #1 -- #2]{(Forest) #1}\stopcontents[forest]\settoggle{firstsq}{false}}
 \newcommand{\town}[2]{\resumecontents[town]\subsubsection[\iftoggle{firstsq}{\CheckedBox}{\ding{111}} #1 -- #2]{(Town) #1}\stopcontents[town]\settoggle{firstsq}{false}}
