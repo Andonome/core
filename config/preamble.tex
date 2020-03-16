@@ -16,6 +16,7 @@
 \usepackage{makeidx}
 \usepackage[english]{babel}
 \usepackage{multicol}
+	\raggedcolumns
 \usepackage{graphicx}
 \usepackage{etoolbox}
 \usepackage{titlesec,titletoc}
@@ -117,7 +118,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \titleformat{\subsection}{\needspace{8em}\center\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
 %
 \titleformat{\subsubsection}
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+{\needspace{3em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 %\titleformat{\paragraph}[runin]
 %{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
@@ -210,7 +211,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 %%%%%%%%%%%%%%%%%%%% Environments %%%%%%%%%%%%%%%%%%%%
 
-\newenvironment{boxtext}{\noindent}{}
+\newenvironment{boxtext}{}{}
 
 \newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
 
@@ -228,7 +229,7 @@ Roll & Result \\
 {\end{tabular}}
 
 
-\newenvironment{exampletext}{\needspace{4cm}\vspace{.3cm}
+\newenvironment{exampletext}{\needspace{2em}\vspace{.3cm}
 
 \rule{.9\linewidth}{0.2pt}
 
@@ -249,7 +250,7 @@ Roll & Result \\
 
 \newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
-\newcommand{\best}[2][\C]{\npc{#1}{#2}\index{#2}}
+\newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{#2}}
 
 \newcounter{random}
 \setcounter{random}{1}
