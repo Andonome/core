@@ -177,11 +177,6 @@
 \gdef\armourtype{P}
 
 \begin{tcolorbox}[title={\name},watermark text=\npcsymbol]
-\creaturestats
-
-\derivedstats
-\end{tcolorbox}
-	\settoggle{debug}{false}
 
 \iftoggle{personality}{
 
@@ -193,6 +188,12 @@
 
 \settoggle{personality}{false}}%
 {}
+\creaturestats
+
+\derivedstats
+\end{tcolorbox}
+	\settoggle{debug}{false}
+
 }
 
 \newcommand{\animal}[9]{\settoggle{mind}{false}
@@ -404,7 +405,7 @@
 
 %%%%%%%%%%%%%%%%%%%%% Magic Path
 \newcommand{\Path}[2]{ \\
-	\ent{Path of #1:} & #2
+	\raggedright \ent{Path of #1:} & #2
 	}
 %%                      _                       
 %%   ___ _ __ ___  __ _| |_ _   _ _ __ ___  ___ 
