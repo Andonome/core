@@ -151,7 +151,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \newcommand{\personality}{}
 \newcommand{\mannerism}{}
 \newcommand{\npcsymbol}{}
-\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
+\newcommand{\npc}[2]{\settoggle{personality}{false}\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
 \newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
 \renewcommand{\npcsymbol}{#1}
 \settoggle{personality}{true}
