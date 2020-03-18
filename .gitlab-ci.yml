@@ -7,6 +7,7 @@ compile_pdf:
     - pdflatex main.tex
   except:
     - dev
+    - master
   artifacts:
     paths:
       - main.pdf
