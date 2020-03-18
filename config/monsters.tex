@@ -212,11 +212,6 @@
 \renewcommand{\armourtype}{C}
 
 \begin{tcolorbox}[title={\name},watermark text=\npcsymbol]
-\creaturestats
-
-\derivedstats
-
-\end{tcolorbox}
 
 \iftoggle{personality}{
 
@@ -228,6 +223,12 @@
 
 \settoggle{personality}{false}}%
 {}
+\creaturestats
+
+\derivedstats
+
+\end{tcolorbox}
+
 }
 
 \newcommand{\clean}{
