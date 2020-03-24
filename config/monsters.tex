@@ -643,7 +643,8 @@
 {\arabic{enc}}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Projectiles \arabic{enc}, Academics 3, \ifodd\value{chapter} Crafts \arabic{enc},\fi Deceit \arabic{age},  Stealth \arabic{enc}\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{page} Force \arabic{enc},\fi Illusion \arabic{random}, Metamagic \arabic{age}}}% SKILLS
+{\ifodd\value{page}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc},\fi Deceit \arabic{age},  Stealth \arabic{enc}
+\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{page} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{random}, Metamagic \arabic{age}}}% SKILLS
 {\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{Promisary note}{\ifnumcomp{\thechapter}{>}{2}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \thepage gp}}{Glimmering diamond worth \thepage gp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
 {\mana{6}}
 }
