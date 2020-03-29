@@ -151,7 +151,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \newcommand{\personality}{}
 \newcommand{\mannerism}{}
 \newcommand{\npcsymbol}{}
-\newcommand{\npc}[2]{\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
+\newcommand{\npc}[2]{\settoggle{personality}{false}\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
 \newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
 \renewcommand{\npcsymbol}{#1}
 \settoggle{personality}{true}
@@ -192,7 +192,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
-\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\needspace{13em}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
 \newcommand{\magicitem}[7]{\textbf{#1}
 
@@ -215,8 +215,8 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 \newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
 
-\tcolorboxenvironment{boxtext}{breakable}
-\tcolorboxenvironment{speechtext}{breakable}
+\tcolorboxenvironment{boxtext}{}
+\tcolorboxenvironment{speechtext}{}
 
 \newenvironment{rolltable}%
 {\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}

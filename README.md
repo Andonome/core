@@ -1,4 +1,4 @@
-# Bind
+# BIND
 <!--
 
 The config directory is a subtree, so all commits to it should only involve files in that directory.
@@ -11,7 +11,7 @@ Gits available on github, gitlab and git.hklbgd.org
 
 | [Download](https://gitlab.com/bindrpg/core/uploads/421be85d2d6a8d7d3fe6865ca423b5a4/core.pdf) | [Wiki](https://gitlab.com/bindrpg/core/-/wikis/home) |
 
-Bind is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
+BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
 # Parsimony
 

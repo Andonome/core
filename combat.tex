@@ -102,7 +102,8 @@ You can spend as much as you like, and even go down to an Initiative score of -5
 
 Heavy weapons are generally more effective than Light weapons, but they cost 6 Initiative points to take a swing, while Light weapons cost only 4.
 
-Heavy weapons are those with a Weight Rating of -1 or greater. Smaller weapons, those with a Weight Rating of -2 or less, and brawling attacks with fists, all count as light weapons.
+Heavy weapons are those with a \gls{weightrating} of -1 or greater.
+Smaller weapons, those with a \gls{weightrating} of -2 or less, and brawling attacks with fists, all count as light weapons.
 
 \subsubsection{Quick Actions}
 
@@ -164,11 +165,15 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 Characters heal a quarter their Hitpoints each week, rounded up.
 
 \subsubsection{Death}
-\index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive. This is rolled at \gls{tn} 4 plus one for every negative HP level. For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP. That makes the \gls{tn} 7 for the Vitality Check.
+\index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive.
+This is rolled at \gls{tn} 4 plus one for every negative HP level.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
+Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
+For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP.
+That makes the \gls{tn} 7 for the Vitality Check.
 
 A failed Vitality check means that the character is dead. A successful one means that the character is unconscious for the remainder of the scene but alive. At the end of the scene they can make further Vitality Checks to see if they wake up. When waking up, all actions relying on movement take a penalty equal to the number of HP beyond 0 the character has lost.
 
-\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.  Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
+\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
 
 
 \end{multicols}
@@ -181,10 +186,12 @@ Weapons are a great way of inflicting additional Damage, but they are an equally
 
 Each weapons is rated for `Dam' (the Damage bonus), `Init' (the bonus to Initiative, generally through reach) and `Ev' (the weapon's Evasion bonus).
 
-Each weapon has a Weight Rating, just like any item. For every point a weapon's Weight Rating exceeds its wielder's Strength Bonus, the wielder gains 1 Encumbrance, which subtracts from the character's Effective Speed as they move slower and swings the weapon slower. Weapons held in only one hand add +2 to their Weight Rating.
+Each weapon has a \gls{weightrating}, just like any item.
+For every point a weapon's \gls{weightrating} exceeds its wielder's Strength Bonus, the wielder gains 1 Encumbrance, which subtracts from the character's Effective Speed as they move slower and swings the weapon slower.
+Weapons held in only one hand add +2 to their \gls{weightrating}.
 
 Finally, some weapons also have an in-built `Knack' -- a special ability they allow the wielder to use.
-See page \pageref{knacks} for details.
+See Chapter \ref{knacks} for a full list of Knacks.
 
 \end{multicols}
 
@@ -271,22 +278,27 @@ See page \pageref{knacks} for details.
 
 \subsubsection{Light Weapons}\index{Light Weapons}
 
-Light Weapons are those with a Weight Rating of -2 or less. People wield them in one hand only, without problem, and can slash or stab with them in flurries of blows, quickly. They require only 4 Initiative points to attack with, so while an axe is far more damaging than a dagger, a dagger can unleash a flurry of blows before a single axe swing has taken place.
+Light Weapons are those with a \gls{weightrating} of -2 or less. People wield them in one hand only, without problem, and can slash or stab with them in flurries of blows, quickly. They require only 4 Initiative points to attack with, so while an axe is far more damaging than a dagger, a dagger can unleash a flurry of blows before a single axe swing has taken place.
 
 \subsubsection{Medium Weapons}\index{Combat!Medium Weapons}
 
-Swords, axes and all the regular weapons of warfare require a full 6 Initiative points to be swung. They grant excellent Combat Bonuses, often increasing the effects of all three Attributes. These weapons are the standard weapons which most people will be using throughout the campaign -- they cover the Weight Ratings from -1 to 4.
+Swords, axes and all the regular weapons of warfare require a full 6 Initiative points to be swung.
+They grant excellent Combat Bonuses, often increasing the effects of all three Attributes.
+These weapons are the standard weapons which most people will be using throughout the campaign -- they cover the \gls{weightrating} from -1 to 4.
 
-Medium weapons can be wielded in one hand, but with some difficulty, as this adds +2 to their Weight Rating. A great sword can certainly be held up by one hand alone, but it will move from a Weight Rating of 4 to 6, meaning that a normal human, with Strength +1, would suffer a -5 penalty to their Speed Bonus, and therefore Initiative. While this is a steep penalty to Initiative, the price can be worth the wielding of a shield with a weapon.
+Medium weapons are usually wielded in both hands.
+However, characters can try to hold one with only one hand, but the weapon's \gls{weightrating} increases by 2.
+For example, a great sword can certainly be held up by one hand alone, but it will move from a \gls{weightrating} of 4 to 6, meaning that a normal human, with Strength +1, would suffer a -5 penalty to their Speed Bonus, and therefore Initiative.
+While this is a steep penalty to Initiative, the price can be worth the wielding of a shield with a weapon.
 
-Anyone wielding a medium (or indeed heavy) weapon with a weight rating equal or greater than their racial maximum has an unwieldy weapon indeed, and suffers a -3 penalty to their Initiative.
+Anyone wielding a medium (or indeed heavy) weapon with a \gls{weightrating} equal or greater than their racial maximum has an unwieldy weapon indeed, and suffers a -3 penalty to their Initiative.
 
 \subsubsection{Heavy Weapons}\index{Combat!Heavy Weapons}
 
-Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a Weight Rating of 4 or more.
+Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a \gls{weightrating} of 4 or more.
 They grant excellent Bonuses, but require 8 Initiative points to attack.
 
-Anyone insane enough to attempt to use a large weapon one handed must suffer through a +4 increase in the weapon's Weight Rating, which would make such weapons prohibitively heavy for most people.
+Anyone insane enough to attempt to use a large weapon one handed must suffer through a +4 increase in the weapon's \gls{weightrating}, which would make such weapons prohibitively heavy for most people.
 
 \subsection{Shields}\index{Shields}
 
@@ -348,7 +360,9 @@ Many creatures have a \gls{dr} from natural armour, representing especially thic
 
 \subsection{Weight}
 
-All armour has a Weight Rating, just like any other item. The Weight Ratings above are for Partial Armour. If anyone wears Complete armour the Weight is increased by 1, so Complete chain armour which comes past the knees, has a helmet and uses arm-guards, would have a Weight Rating of 2.
+All armour has a \gls{weightrating}, just like any other item.
+The \gls{weightrating} above are for Partial Armour.
+If anyone wears Complete armour the Weight is increased by 1, so Complete chain armour which comes past the knees, has a helmet and uses arm-guards, would have a \gls{weightrating} of 2.
 
 Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
 
@@ -429,7 +443,10 @@ If a character's Evasion score ever becomes negative, it applies to the Strike s
 \end{wraptable}
 
 
-At this point you might be wondering how anyone is going to survive past their first battle. 6 or 7 HP is not a lot when the Damage is often $2D6$ or higher. The mechanism which saves the plot-important character is \gls{fp}. Every time someone would lose HP, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
+At this point you might be wondering how anyone is going to survive past their first battle.
+6 or 7 HP is not a lot when the Damage is often $2D6$ or higher.
+The mechanism which saves the plot-important character is \glsentrylongpl{fp}.
+Every time someone would lose HP, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
 
 Everyone in the world begins with 5 base \gls{fp}. This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}. The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full alotment of \gls{fp} at the beginning of each adventure. \glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual. As a result, most \glspl{npc} effectively have 0 \gls{fp}. The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} HP.
 
@@ -473,7 +490,8 @@ Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their 
 
 \paragraph{Swimming} Each \gls{round} spent swimming inflicts 1 Fatigue Point. This is in addition to holding one's breath, if the character is swimming underwater and unable to breathe while there.
 
-\paragraph{Wearing armour} All armour adds a number of Fatigue points equal to the armour's Weight Rating. As usual, the Weight Rating is 1 higher for Complete Armour.
+\paragraph{Wearing armour} All armour adds a number of Fatigue points equal to the armour's \gls{weightrating}.
+As usual, the \gls{weightrating} is 1 higher for Complete Armour.
 
 Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} they will be healed faster than they are accumulated. Since they are both gained and healed at the end of the scene, \gls{gm} should look at the number of Fatigue Points that will be gained and healed and if there are none on balance then Fatigue can be ignored for yet another scene. Fatigue comes into play during connected scenes of continued endurance and action, or when PCs are attempting to see how long they can swim against an underwater current while wearing full plate armour. Or possibly, and quite rarely, Fatigue comes into play when a tiny, weak character attempts to do everything while wearing full plate armour.
 
@@ -686,12 +704,13 @@ A \textit{Ram} action must employ normal movement, and cannot move any character
 
 When taking someone by surprise, the attacker gains a +4 bonus to the attack and a +2 bonus to Damage. Opponents cannot use any Evasion bonuses from Dexterity, weapon Bonuses or the Combat Skill.
 
-Sneak Attacks also gain a penalty equal to the weapon's Weight Rating (if positive).  Warhammers are not the best choice for assassination weapons, while daggers and handaxes do much better.
+Sneak Attacks also gain a penalty equal to the weapon's \gls{weightrating} (if positive).
+Warhammers are not the best choice for assassination weapons, while daggers and handaxes do much better.
 
 \subsubsection{Two Weapon Combat}\index{Combat!Two Weapons}
 
 A character using two weapons -- perhaps a shield in one hand and a sword in the other -- can use the best Speed, Strength and Dexterity Bonus from all weapons.
-Each weapon will have to be held in one hand, increasing its Weight Rating by 2.
+Each weapon will have to be held in one hand, increasing its \gls{weightrating} by 2.
 
 Shields, uniquely, can add their Evasion Bonus to the character's Evasion Factor even while the wielder is in the Aggressive Stance. As a result, someone could use a shield's bonus to Evasion while using a sword's Evasion Bonus to add to their Strike Strike score. In this case, Dexterity would always be added to Strike, along with the sword's Bonus.
 
