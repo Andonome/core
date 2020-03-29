@@ -164,11 +164,15 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 Characters heal a quarter their Hitpoints each week, rounded up.
 
 \subsubsection{Death}
-\index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive. This is rolled at \gls{tn} 4 plus one for every negative HP level. For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP. That makes the \gls{tn} 7 for the Vitality Check.
+\index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive.
+This is rolled at \gls{tn} 4 plus one for every negative HP level.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
+Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
+For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP.
+That makes the \gls{tn} 7 for the Vitality Check.
 
 A failed Vitality check means that the character is dead. A successful one means that the character is unconscious for the remainder of the scene but alive. At the end of the scene they can make further Vitality Checks to see if they wake up. When waking up, all actions relying on movement take a penalty equal to the number of HP beyond 0 the character has lost.
 
-\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.  Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
+\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
 
 
 \end{multicols}
