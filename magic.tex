@@ -65,7 +65,11 @@ Your standard spell takes a while to cast -- normally 1 \gls{round} per level, s
 
 \subsubsection{Ritual Spells}
 
-Mages who take their time over spells can attempt a Ritual Spell -- they cast it as a Resting Action.\footnote{See page \pageref{restingactions}.} The mage can gain mana slowly, spending some, drawing more from a mana stone or item, then spending more before finally casting the spell. The mage can gather a number of \gls{mp} equal to double their normal maximum \gls{mp}, ignoring \glspl{standingspell}. Ritual spells can also be cast as a team effort -- any number of spell casters who are on the same \gls{path} of magic can cast any spell they all know together. They can each invest \gls{mp} to create \gls{standingspell}, and thereafter any one of them can cancel the spell.
+Mages who take their time over spells can attempt a Ritual Spell -- they cast it as a \gls{restingaction}.\footnote{See page \pageref{restingactions}}.
+The mage can gain mana slowly, spending some, drawing more from a mana stone or item, then spending more before finally casting the spell.
+The mage can gather a number of \gls{mp} equal to double their normal maximum \gls{mp}, ignoring \glspl{standingspell}.
+Ritual spells can also be cast as a team effort -- any number of spell casters who are on the same \gls{path} of magic can cast any spell they all know together.
+They can each invest \gls{mp} to create \gls{standingspell}, and thereafter any one of them can cancel the spell.
 
 \subsubsection{Subtle Spells}
 
@@ -165,7 +169,9 @@ The mage can freeze solid any body of water, or even damage people by cooling th
 If cast on a person, they take \arabic{spelllevel} Fatigue Points plus the caster's Intelligence Bonus.\footnote{The elvish natural immunity to cold does nothing to prevent this damage.}
 Exactly how effective this is depends a lot on how tired the target already is.
 
-Bodies of water freeze over the moment the spell is finished.  Such ice has an effective Strength Bonus of \arabic{spelllevel} plus the caster's Intelligence Bonus, and covers up to \arabic{spelllevel} squares plus the caster's Wits Bonus.  The spell's Strength Bonus can test if the ice can trap people who are in the water, or if it can support people's weight (it holds a maximum weight rating of its own Strength +4).
+Bodies of water freeze over the moment the spell is finished.
+Such ice has an effective Strength Bonus of \arabic{spelllevel} plus the caster's Intelligence Bonus, and covers up to \arabic{spelllevel} squares plus the caster's Wits Bonus.
+The spell's Strength Bonus can test if the ice can trap people who are in the water, or if it can support people's weight (it holds a maximum \gls{weightrating} of its own Strength +4).
 
 Creatures only frozen up to their waist or ankles can gain a bonus to break out of the ice, and a further bonus if the spell is cast slowly.
 
@@ -237,9 +243,10 @@ This spell is special insofar as it can create permanent plant structures. Any s
 \spell{Creeping Disarm}{Continuous}{Skills: Survival}\\
 Usually, Plantform spells require a good deal of plant-matter to encourage growth, and such matter should be as verdant and alive as possible. However, making a small chunk of dead wood grow leaves and branches can be done with some difficulty. Commonly, Aldaron casters use this level to encourage growth from the wooden handle of various weapons; the apparently dead wood burst into life, producing branches, shoots, leaves and sometimes blooming flowers. The weapon becomes steadily more unwieldy until it is completely useless, having become not so much a weapon as the decorative heart of a very strange plant. Small handles with little visible wood such as a short-sword handle bound in leather might increase the \gls{tn} by +4, for a total of 11 while the longer handles of an axe might only increase the \gls{tn} by +2, and a polearm, made almost entirely of wood, could have no effect on the \gls{tn}.
 
-Once the spell takes effect, the apparently dead wood of the handle bursts into life and begins to grow new branches, increasing its Weight Rating by 1 every \gls{round} until it gains a total equal to 4 plus the caster's Intelligence Bonus. For example, a caster with Intelligence +3 might cast the spell on someone's longsword. The longsword begins with a Weight Rating of 1 but grows heavier each \gls{round} until on the 7th \gls{round} it has a total Weight Rating of +8.
+Once the spell takes effect, the apparently dead wood of the handle bursts into life and begins to grow new branches, increasing its \gls{weightrating} by 1 every \gls{round} until it gains a total equal to 4 plus the caster's Intelligence Bonus.
+For example, a caster with Intelligence +3 might cast the spell on someone's longsword. The longsword begins with a \gls{weightrating} of 1 but grows heavier each \gls{round} until on the 7th \gls{round} it has a total \gls{weightrating} of +8.
 
-Initially, this additional Weight Rating will be no more than an inconvenience as targets become Encumbered, but very quickly it will make any weapon completely useless, effectively disarming the target.
+Initially, this additional \gls{weightrating} will be no more than an inconvenience as targets become Encumbered, but very quickly it will make any weapon completely useless, effectively disarming the target.
 
 Targets can attempt to pull the growths off but they grow as fast as they can be pulled off and such growths are as hardy as any other level of this spell. Once the spell ends, the additional growth falls to nothing.
 
@@ -306,7 +313,8 @@ Conjuration uses various skills to cast, but most commonly Crafts for summoning 
 
 Conjuration divides the world into three essential forms -- solid, liquid and gas.  Gases are easiest to work with, liquids come shortly after, and solid objects are usually the most difficult to work with.
 
-Conjuration spells targeting larger items are always more difficult.  The \gls{tn} for anything besides a gas, such as air, is always increased by the Weight Rating.  In the case of living targets, the Weight Rating is always equal to their \gls{hp}, so targeting someone with 6 \gls{hp} would increase the \gls{tn} by 6.
+Conjuration spells targeting larger items are always more difficult.  The \gls{tn} for anything besides a gas, such as air, is always increased by the \gls{weightrating}.
+In the case of living targets, the \gls{weightrating} is always equal to their \gls{hp}, so targeting someone with 6 \gls{hp} would increase the \gls{tn} by 6.
 
 Any character can decide that a conjuration spell targeting them fails by spending 5 FP.
 
@@ -328,7 +336,8 @@ The spell affects a number of areas equal to \arabic{spelllevel} + the caster's 
 Smoke, fog, or any other substance can be purified.  The spell affects a number of areas equal to \arabic{spelllevel} + the caster's Wits.
 
 \spell{Stonespell}{Continuous}{Crafts}\\
-The caster changes any solid target to stone, ice, or any other simple, solid, substance.  The \gls{tn} is 7 plus the target's Weight Rating.\footnote{A living target's Weight Rating is equal to their \glsentrytext{hp}.}  Once the spell is over, the target turns back to normal.
+The caster changes any solid target to stone, ice, or any other simple, solid, substance.  The \gls{tn} is 7 plus the target's \gls{weightrating}.\footnote{A living target's \gls{weightrating} is equal to their \glsentrytext{hp}.}
+Once the spell is over, the target turns back to normal.
 
 Anyone may spend 5 \gls{fp} in order to stipulate that the spell fails.
 
@@ -740,7 +749,10 @@ They roll with Intelligence + Combat and deals the normal amount of Damage given
 
 If the mage levitates multiple weapons (through multiple castings), each additional weapon adds +1 to their Strike score, adds +1 Damage and +1 to the Evasion Bonus. In this way the mage can add up to a maximum of +3 to each stat, meaning only the first four weapons can have an effect. Additional weapons can add Evasion Bonuses behind or to the side of the mage to ensure they do not lose any Evasion Bonus when attacked from behind but a fifth weapon cannot add additional Damage.
 
-If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character. The mage defends with their normal Evasion Factor and a successful grab means that the weapon has been arrested. The weapon gains a Weight Rating equal to the Weight of the character grabbing the weapon (which is equal to their maximum HP). At this point the weapon is too heavy to lift and the spell ends.
+If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character.
+The mage defends with their normal Evasion Factor and a successful grab means that the weapon has been arrested.
+The weapon gains a \gls{weightrating} equal to the Weight of the character grabbing the weapon (which is equal to their maximum HP).
+At this point the weapon is too heavy to lift and the spell ends.
 
 The levitated weapons do not add a Speed Bonus to the caster's Initiative -- they must use their Wits Bonus as usual.
 
@@ -750,16 +762,21 @@ Mages who must slowly cast a spell can still weild weapons instantly.  Runecaste
 
 \spell{Levitation}{Continuous}{Combat/ Craft}\\
 This is a more generic version of `Dancing Swords' (above) where the mage can lift but not necessarily weaponize anything close by.
-The caster rolls their Intelligence and Craft Skill against a \gls{tn} of 7 plus the target's Weight Rating.
+The caster rolls their Intelligence and Craft Skill against a \gls{tn} of 7 plus the target's \gls{weightrating}.
 The spell grants an effective Strength Bonus equal to the level in the Force sphere being used.
-Any object with a Weight Rating of up to 4 points higher than this Strength score can be lifted into the air but the heavier something is the slower it will move.
+Any object with a \gls{weightrating} of up to 4 points higher than this Strength score can be lifted into the air but the heavier something is the slower it will move.
 
-If creatures are targeted for levitation, they have a Weight Rating equal to their HP and the mage rolls Intelligence + Combat to lift them.
+If creatures are targeted for levitation, they have a \gls{weightrating} equal to their HP and the mage rolls Intelligence + Combat to lift them.
 They can add their Evasion Factor to the spell's \gls{tn} in order to attempt to wriggle free of the telekinetic hold.
 Trying to wriggle free takes 4 Initiative points.
 Targets can be moved at a Speed rating equal to the level in Force.
 
-Mages attempting to lift people into the air can move the target only at the rate of a standard action -- i.e. 3 squares per turn plus their effective Speed rating. The effective Speed rating is equal to the spell's level, but the spell can be encumbered just like lifting a normal person. So casting a spell at level 3 means an effective Strength and Speed rating of 3; if the target had Strength +1 they would have 7 HP and therefore a Weight Rating of 7. That's 4 points above the spell's rating so the Speed suffers a -4 encumbrance penalty, making the total movement 1 square every two \glspl{round}. The target could roll to be free every 4 Initiative steps, rolling against the spell's effective Strength Bonus.
+Mages attempting to lift people into the air can move the target only at the rate of a standard action -- i.
+. 3 squares per turn plus their effective Speed rating.
+The effective Speed rating is equal to the spell's level, but the spell can be encumbered just like lifting a normal person.
+So casting a spell at level 3 means an effective Strength and Speed rating of 3; if the target had Strength +1 they would have 7 HP and therefore a \gls{weightrating} of 7.
+That's 4 points above the spell's rating so the Speed suffers a -4 encumbrance penalty, making the total movement 1 square every two \glspl{round}.
+The target could roll to be free every 4 Initiative steps, rolling against the spell's effective Strength Bonus.
 
 While a target is being levitated, they are especially vulnerable to attack, and all attacks against them count as Sneak Attacks, gaining +4 to Strike and +2 to Damage.
 
@@ -787,13 +804,13 @@ For example, someone employing the third level of the Force sphere would count a
 \spell{Telekinetic Grasp}{Continuous}{Combat}\\
 Force mages can wrestle with people from afar using telekinesis. One major advantage with this sort of wrestling is that the mage does not risk being hit back as they can cast the spell from afar. As per the Grappling rules, the mage first makes a roll to capture the target; they roll Intelligence and Combat while the target resists with their current Evasion Factor. Targets can literally feel the force of the mage's mind around them, often described as a hundred tiny, invisible hands or the feeling of an invisible wave. This force can be parried and pushed back like any normal weapon, so targets can use their full Evasion Factor, including bonuses from using a weapon.
 
-If the spell is successful, it inflicts no Damage nor Fatigue Points, but the target counts as carrying an item with a Weight Rating equal to the level of the Force sphere being used.
+If the spell is successful, it inflicts no Damage nor Fatigue Points, but the target counts as carrying an item with a \gls{weightrating} equal to the level of the Force sphere being used.
 
 For example, a mage using Force level 2, with Intelligence +1 and a Combat Skill of +1, could cast Telekinetic Grasp on a gnome.
 The gnome adds their Evasion Factor to the basic \gls{tn} of 7 and then the mage resists this with their Intelligence Bonus plus Combat Skill.
-If successful, the gnome would count as carrying an item with a Weight Rating of 2.
+If successful, the gnome would count as carrying an item with a \gls{weightrating} of 2.
 Assuming this gnome has the usual Strength Bonus of -2, they would then receive a -4 penalty to their effective Speed Bonus.
-Their Initiative Score would suffer and they would accrue additional Fatigue Points each time they attempted to run or fight due to the added Weight Rating.
+Their Initiative Score would suffer and they would accrue additional Fatigue Points each time they attempted to run or fight due to the added \gls{weightrating}.
 
 \spell{Telekinetic Retreat}{Continuous}{Athletics}\\
 Mages can add their mental ability to move things to aid their movement.
@@ -846,7 +863,10 @@ Seeing through an illusion requires a Wits + Vigilance roll, with a \gls{tn} equ
 
 Illusions require a caste's full focus in order to remain realistic.  A caster who make his friend look like an elf would have to pay attention to his friend to make sure the facial movements followed along.  Casters cannot engage in anything more than simple conversation or walking while maintaining illusions.
 
-Illusions can only adjust something's size so much.  Something's weight rating can increase or decrease by a number equal to the spell level plus the caster's Intelligence.  A first level Illusion spell cast with Intelligence +1 could make an elf look like a gnoll, but could not make a gnome look like an ogre.  Similarly, a shortsword could be made to look like a simple dagger, but turning a chainmail suit into a small bird would extremely difficult.
+Illusions can only adjust something's size so much.
+Something's \gls{weightrating} can increase or decrease by a number equal to the spell level plus the caster's Intelligence.
+A first level Illusion spell cast with Intelligence +1 could make an elf look like a gnoll, but could not make a gnome look like an ogre.
+Similarly, a shortsword could be made to look like a simple dagger, but turning a chainmail suit into a small bird would extremely difficult.
 
 \enhancement{1}{Independent}
 \index{Spell Enhancements!Independent}
