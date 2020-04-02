@@ -649,7 +649,9 @@ Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage.
 
 \subsubsection{Blind Rage}\label{blind}
 
-\index{Blind Rage}Weapons can grant a bonus to the wielder's Evasion Factor because the wielder is keeping people at bay with it -- a spear might be waved in an opponent's face in a threatening manner or a sword might be on the ready to attack if someone gets within its range. However, this marvellous defence only works against people who care about being hit. Anyone can choose to attack someone while ignoring their opponent's weapon's bonus to Evasion; the penalty is simply that the opponent can choose to make a single Sneak Attack immediately. This counts as a Sneak Attack, gaining +4 to hit and +2 Damage.\footnote{See page \pageref{sneakattack}.}
+\index{Blind Rage}Weapons can grant a bonus to the wielder's Evasion Factor because the wielder is keeping people at bay with it -- a spear might be waved in an opponent's face in a threatening manner or a sword might be on the ready to attack if someone gets within its range.
+However, this marvellous defence only works against people who care about being hit.
+Anyone can choose to attack someone while ignoring their opponent's weapon's bonus to Evasion; the penalty is simply that the opponent can choose to make a single Sneak Attack immediately.
 
 \subsubsection{Drawing Weapons}
 
@@ -657,7 +659,8 @@ Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage.
 
 \subsubsection{Flanking}\label{flank}
 
-Attacks from someone's anterior side gain a +2 Bonus.  Anyone caught alone is in more danger than they would be, due to opponents attacking from all side.
+Attacks from someone's anterior side gain a +2 Bonus.
+Up to 4 opponents can attack a lone character, and any available walls can reduce this number.
 
 \subsubsection{Grabbing \& Grappling}\index{Combat!Grappling}
 
@@ -667,6 +670,8 @@ A grapple always starts with a grab.  A grab is a normal roll, made without any 
 
 Once two people are grappling, neither can move and so both can be struck as per a Sneak Attack by anyone nearby.
 
+No weapons can be used while grappling if they have a \gls{weightrating} above -2.
+
 \paragraph{Grapples:}
 
 Once two people are caught in the grapple, either can make a grappling roll at the cost of 4 Initiative.  They can then roll with double their Strength, plus their Strike factor, against 7 plus the enemy's Evasion score.
@@ -675,7 +680,8 @@ A successful roll implies the character can break the grapple and move freely, o
 
 \subsubsection{Guarding}\index{Guarding}
 
-If you guard someone by standing in front of them then all attacks have to go through you first.\footnote{This includes missile attacks only if you could otherwise evade them.}  Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no Initiative) at their real target.
+If you guard someone by standing in front of them then all attacks have to go through you first.\footnote{This includes missile attacks only if you could otherwise evade them.}
+Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no Initiative) at their real target.
 
 Guarding costs 4 Initiative, as the character must both focus on helping a companion and focus on their own defence.
 To put it another way, guarding someone costs 2 Initiative, and defence costs 2 Initiative as normal.
@@ -697,6 +703,7 @@ This takes only 2 Initiative points and for the rest of the \gls{round}, any tim
 Spells which simply target people by gaze or magical effects such as Polymorphing are unaffected.
 
 \subsubsection{Ram}\index{Combat!Ram}
+\label{ram}
 
 In combat, it is possible to scare, push and stab at someone to force them to move backwards. The attacker spends 3 Initiative points. The defender can either attempt to resist, or can simply acquiesce and move back. When moving back, targets are pushed back 2 square; the attacker's Strength adds to this and the opponent's Strength decreases it. Characters can sacrifice the use of 1 point of Strength to push back an additional person.
 
@@ -721,26 +728,31 @@ Shields, uniquely, can add their Evasion Bonus to the character's Evasion Factor
 \iftoggle{verbose}{
 
 \begin{exampletext}
-	Arneson decides he is going to push through the crowd to save his friend. Pushing the half dozen hobgoblins back is going to be tricky.
-He launches himself from the stony step they are on, pushes his chest into one then grabs two more hobgoblins.
-Since he is pushing back 2 extra figures, he takes a -2 penalty to the action.
-Arneson's rolling with +2 from his Strength Bonus and +1 bonus for his Combat Skill for a grand total of +1.
-The \gls{tn} is 7 plus the hobgoblins' Strength of +2 and Combat Skill of +2 for a total of 11.
-The \gls{gm} allows him a total of a +2 bonus for jumping off the step.
-The dice come up with an 8 and his total of +3 just passes the test.
-Normally, he would only push the hobgoblins back by 1 step, but they are on the side of a cliff and being pushed onto their back feet.
+
+	Arneson decides he is going to \textit{ram} the crowd of hobgoblins to save his friend.\footnote{See page \pageref{ram} for details on the attack.}
+	Pushing the half dozen hobgoblins back is going to be tricky.
+	He launches himself from the stony step they are on, pushes his chest into one then grabs two more hobgoblins.
+	Since he is pushing back 2 extra figures, he takes a -2 penalty to the action.
+	Arneson's rolling with +2 from his Strength Bonus and +1 bonus for his Combat Skill for a grand total of +1.
+	The \gls{tn} is 7 plus the hobgoblins' Strength of +2 and Combat Skill of +2 for a total of 11.
+	The \gls{gm} allows him a total of a +2 bonus for jumping off the step.
+	The dice come up with an 8 and his total of +3 just passes the test.
+	Normally, he would only push the hobgoblins back by 1 step, but they are on the side of a cliff and being pushed onto their back feet.
 
 	The \gls{gm} decides some sort of check is in order to see how well the hobgoblins perform.
-Ordinarily, she would roll for each of them but there are six of them and that will take too long.
-Thinking quickly - because who wants to slow down combat? - she decides that all of them could potentially fall down the cliff since the first three are in front of the next three so Arneson is pushing against all of them one way or another.
-She gives them a \gls{tn} of 9 to stay up and a bonus of +6 because there are 6 of them.
-Each Margin they roll in the final score is one hobgoblin that has not fallen over.
-Dice clatter, she has rolled a `4' and that leaves a final score of 10.
-Everyone falls down the mountain's steep incline except for a single hobgoblin.
+	Ordinarily, she would roll for each of them but there are six of them and that will take too long.
+	Thinking quickly - because who wants to slow down combat? - she decides that all of them could potentially fall down the cliff since the first three are in front of the next three so Arneson is pushing against all of them one way or another.
+	She gives them a \gls{tn} of 9 to stay up and a bonus of +6 because there are 6 of them.
+	Each Margin they roll in the final score is one hobgoblin that has not fallen over.
+	Dice clatter, she has rolled a `4' and that leaves a final score of 10.
+	Everyone falls down the mountain's steep incline except for a single hobgoblin.
 
-Thenton, on Initiative 1, is the last to act. He jumps off the cliff-side to attack the last hobgoblin. He strikes with a score of 11, bypassing the ugly creature's Partial chain armour, then rolls $1D6+2$ for the Damage for a total of 4. The creature is reduced to half its hitpoints with a crimson gash across its throat.
+	Thenton, on Initiative 1, is the last to act.
+	He jumps off the cliff-side to attack the last hobgoblin.
+	He strikes with a score of 11, bypassing the ugly creature's Partial chain armour, then rolls $1D6+2$ for the Damage for a total of 4.
+	The creature is reduced to half its hitpoints with a crimson gash across its throat.
 
-As Thenton's sword swooped down it opened up his target's arm. The last one standing cries out and withdraws his arm then backs off.
+	As Thenton's sword swooped down it opened up his target's arm. The last one standing cries out and withdraws his arm then backs off.
 
 	``End of the \gls{round}!'', cries the \gls{gm}. ``Round two! Roll for Initiative''.
 \end{exampletext}
@@ -752,19 +764,23 @@ As Thenton's sword swooped down it opened up his target's arm. The last one stan
 
 \begin{multicols}{2}
 
-Projectiles have their own Skill which is bought just like the Combat Skill and always add the Dexterity Bonus to make an attack. Archers roll to hit and then Damage, just as with Combat. The \gls{tn} is always 6 plus one for every five full squares away the target is. Targets 14 squares away would have a \gls{tn} of 8 to hit. Most targets cannot use any weapons to add to their Evasion Factor (except shields) but can use the Speed Bonus to evade missile attacks if they are on the run or Keeping Edgy.
+\noindent Projectiles have their own Skill which is bought just like the Combat Skill.
+Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
+The \gls{tn} is always 6 plus one for every five full squares away the target is.
+Targets 14 squares away would have a \gls{tn} of 8 to hit.
+Most targets cannot use any weapons to add to their Evasion Factor (except shields) but can use the Speed Bonus to evade missile attacks if they are on the run or Keeping Edgy.\footnote{See page \pageref{edgy}.}
 
 Just as with weapon combat, a high enough roll can be a Vitals Shot, ignoring all \gls{dr}.
 
 When someone with a bow is attacked, they can use their Combat Skill and Dexterity to Evade as per usual.
 
-\subsection{The Long Bow}\index{Long Bow}\index{Bows}
+\subsection{The Long Bow}\index{Projectiles!Bow}\index{Bows}
 
 Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough. To pull back the heavy load on a long bow takes 2 \glspl{round}, and the arrow flies at the very end of the second turn. Each bow has its own Strength rating and anyone without at least that much Strength cannot use the bow; the bows deal $1D6$ +Strength Rating. So if a bow has a Strength rating of 2 then it deals $1D6+2$ Damage but requires a Strength of 2, at least, to operate. Having a Strength of 3 will not increase the Damage.
 
 Long bows can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim than by the range of the bow.
 
-\subsection{The Short Bow}\index{Bow!Short Bow}\index{Short Bow}
+\subsection{The Short Bow}\index{Projectiles!Short Bow}\index{Short Bow}
 
 A short bow, or `trick bow', is a smaller, lighter thing which can be used by anyone. What it lacks in punch it makes up for in quick draw time. As usual, for every five squares beyond the first two the archer suffers a -1 penalty to hit. The bow takes 4 Initiative points to fire so many shots can be fired in a \gls{round}.
 
@@ -772,15 +788,18 @@ Short bows have a maximum range of 20 squares and deal $1D6-1$ Damage. They ofte
 
 Firing a short bow requires 4 Initiative points but reloading takes another 2.
 
-\subsection{The Crossbow}\index{Crossbow}
+\subsection{The Crossbow}\index{Projectiles!Crossbow}
 
 Crossbows can be powerful, but are not easy to reload. They have a basic Damage of $1D6+2$ though different crossbows vary in quality. Crossbows take a number of \glspl{round} to reload equal to 5 minus the character's Strength score. Firing a crossbow takes only 3 Initiative points.
 
-\subsection{Thrown Weapons}\index{Thrown Weapons}
+\subsection{Thrown Weapons}\index{Projectiles!Thrown Weapons}
 
 Thrown weapons such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them. They work just as shortbows, but their Damage is the normal weapon Damage -2. Someone with Strength +1 throwing a dagger would deal $1D6$ Damage, while someone with Strength -1 would deal $1D6-2$ Damage.
 
-Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit, i.e. they are thrown at a basic \gls{tn} of 8 rather than the usual 6 for projectiles.
+\subsection{Impromptu Weapons}\index{Projectiles!Impromptu}
+
+Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -4 penalty to hit for every five squares distance from the target.
+Weapons also receive a -2 penalty to Damage.
 
 \iftoggle{verbose}{
 
@@ -788,7 +807,7 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 		``Remember your attack stances this time everyone'', says the \gls{gm}.
 
-				The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
+		The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
 
 		Next up, players assign their Combat Skill. On the last \gls{round}, they left it as the default - it added to the Strike Factor. Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2. He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
 
@@ -800,11 +819,11 @@ The \gls{gm} rolls for the hobgoblins and achieves `9' - with Speed +1 they will
 		\begin{tabularx}{.3\textwidth}{c|X}
 				\setcounter{enc}{12}
 
-				10 & Ogre grapples Hugi. \\
+				10 & The Ogre grapples Hugi. \\
 
 				7 & Thenton moves to stab the Ogre. \\
 
-				6 & Ogre deals 5 Damage. \\
+				6 & The Ogre deals 5 Damage. \\
 
 				5 & Thenton kills the ogre. \\
 
@@ -857,8 +876,6 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 
 \section{Morale}
 
-Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 6.
-
 \newcommand{\moralechart}{
 	\begin{tcolorbox}[title={Morale Chart},arc=1mm,tabularx={cp{.75\textwidth}}]
 		\gls{tn} & Situation \\\hline
@@ -878,9 +895,12 @@ Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at \gl
 	\end{tcolorbox}
 }
 
-\moralechart\index{Morale}
 
 \begin{multicols}{2}
+
+Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 6.
+
+\moralechart\index{Morale}
 
 Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
 
