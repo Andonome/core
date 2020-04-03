@@ -43,11 +43,15 @@ Spells are cast by spending a number of \gls{mp} equal to the spell's level, so 
 
 \index{Mana}\subsection{Mana}
 
-Mana is a fickle thing -- when lazing \ around a village it can take hours to regain even a little driblet of magic. When fighting in deep caves, a few minutes' focus can summon most of a mage's magical energies back. Every scene, characters regenerate 2 Mana plus their Wits Bonus. If this total would be 0 then the amount of time required to gather a single \gls{mp} increases by 1 scene. Characters with a Wits score of -2 must wait 2 scenes before regenerating 1 \gls{mp} while those with Wits -3 must wait 3 scenes.
-
 Anyone can buy some base \gls{mp} which is then modified by their Intelligence.\footnote{See the section on Experience, page \pageref{xp}, for costs of base \gls{mp}.} For example, someone with Intelligence +1 who buys Base \gls{mp} 2 would have a store of 3 \gls{mp} to cast spells. Those with a Base \gls{mp} of 0 can still have some \gls{mp} if their Intelligence Bonus is positive.
 
 If a caster has no \gls{mp} left, they can still cast spells by paying the cost with HP instead of \gls{mp}. The magical energies pull the power they need from the blood and bones of the caster, leaving them with a bleeding nose, raging headache and sometimes stranger effects such as acidic pustules or discoloured skin patches. Many a desperate caster has died through the use of their own magic rather than an enemy's sword; a wizard with their back to the wall is a dangerous opponent indeed.\iftoggle{verbose}{\footnote{\Glsentrylongpl{hp} cannot be spent instead.}}{}
+
+Mana is a fickle thing -- when lazing \ around a village it can take hours to regain even a little driblet of magic.
+When fighting in deep caves, a few minutes' focus can summon most of a mage's magical energies back.
+Every scene, characters regenerate 2 Mana plus their Wits Bonus.
+If this total would be 0 then the amount of time required to gather a single \gls{mp} increases by 1 scene.
+Characters with a Wits score of -2 must wait 2 scenes before regenerating 1 \gls{mp} while those with Wits -3 must wait 3 scenes.
 
 \subsection{Range}
 
@@ -124,46 +128,21 @@ Forest's Friendship works on all creatures without an Intelligence score. Umber 
 
 Forest's Friendship replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people.
 
-\enhancement{1}{Enduring} The mage can use any level of the Enchantment sphere on animals.
-
 \spell{Light}{Continuous}{Survival}\\
 The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
+This light can blind an opponents in the darkness by casting it directly in their face.
+Anyone having the werelight flare up in their face becomes blinded for a number of rounds equal to the spell's level minus the target's Wits Bonus.
+The average human, having a Wits Bonus of -1, would be blinded for 1 round.
+The blindness can be automatically avoided by anyone who was Keeping Edgy (see page \pageref{edgy}), as quickly shielding one's eyes averts any damage.
 
-\enhancement{1}{Piercing}
-\index{Spell Enhancements!Piercing}
-
-The \gls{miracleworker} casts a ray of light from any point within range -- the effect might be a floating orb or a shining staff, or even an enemy who lights up with unnatural light and cannot put it out. The light affects 1 area though it can be seen from farther away.
-
-If an area was previously dark then affected creatures not prepared for the light are blinded for \arabic{spelllevel} \glspl{round} minus their Wits Bonus, so an average human with Wits -1 would be blinded for 3 \glspl{round}. Undead creatures coming into contact with the light must make a moral check with a -1 penalty or flee.
-
-Anyone trying to cover their eyes must be Keeping Edgy\footnote{See page \pageref{edgy} for details on Keeping Edgy in combat.} and must be holding their action at the point the spell is cast. A character cannot decide to Keep Edgy after the spell has been declared.
+Undead are terrified of this light.
+Those affected by the spell make a Wits + Aggression roll, \gls{tn} 7 plus the caster's Intelligence + Survival.
 
 \iftoggle{verbose}{
 
 	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/flashing_light.jpg}
 	\label{roch:light}
 }{}
-
-\spell{Whispering Wind}{Continuous}{Survival}\\
-The mage can also send out whispering messages on the wind, making their words carry across mountains and past houses.
-The winds can carry up to ten words, and the message can wander for miles around -- up to 1 area plus 1 per Wits Bonus the mage has.
-This requires an Intelligence roll at \gls{tn} 7 with a -1 penalty for every area miles away the target is.
-The target must be easily identifiable, as the wind acts as a semi-sentient extension of the mage's mind, watching out for the target with its own narrow version of vision.
-
-If the caster has access to Metamagic's first level then extending the range means the spell can travel any distance, although longer distances can substantially raise the \gls{tn} and make it difficult for the spell to identify its recipient. Extremely long-range spells can also take a long time to reach the intended recipient, forcing the mage to cast Whispering Wind as a standing spell and leave it active until they guess the correct amount of time until the spell will find its target.
-
-\spelllevel
-
-The mage begins to commune with the weather systems and influence how they go. They can even summon localised weather systems from the palm of a hand; mist, sunlight, wind and more are all possible.
-
-\spell{Air Bubble}{Continuous}{Survival}\\
-Weather-workers can summon an air bubble anywhere within range, with a diameter equal to \arabic{spelllevel} squares plus the caster's Wits Bonus. The air bubble can be used to walk underwater without getting wet (though drips through the bubble are common). It will remain despite any damage to its outer `wall' -- penetrating objects simply slip in and out seamlessly. All air bubbles must be summoned while on the land, taking it down below -- any bubbles which begin underwater will simply summon a bubble of stagnant water and will collapse under their own weight once brought onto the land. Air bubbles can also help stop invading winds, mists and such, but with such a limited range their usefulness is also limited.
-
-Any projectiles targeted at the airbubble lose a lot of their power -- arrows, and fireballs both become a little impotent when faced with it.
-It provides a total \gls{dr} of \arabic{spelllevel} + Intelligence against all ranged attacks.
-
-\spell{Edible Plants}{Continuous}{Survival}\\
-Plants can be made edible -- up to 2 meals plus the caster's Intelligence Bonus can be made to instantly grow with each casting. The spell must be maintained for at least a day if it is to be effective -- if dispelled before this time, the food provides no nourishment as it retroactively fades away and Fatigue Points are retroactively applied for starvation. After this time the effects of the spell are so ingrained to the being of the recipients that dispelling the magic has no effects on their internal energy stores.
 
 \spell{Freezing Touch}{Continuous}{Survival}\\
 The mage can freeze solid any body of water, or even damage people by cooling their body.
@@ -178,17 +157,51 @@ The spell's Strength Bonus can test if the ice can trap people who are in the wa
 Creatures only frozen up to their waist or ankles can gain a bonus to break out of the ice, and a further bonus if the spell is cast slowly.
 
 \spell{Mist}{Continuous}{Survival}\\
-The caster summons mist to cover \arabic{spelllevel} areas plus their Wits Bonus, so a caster with Wits +2 could cover a full 4 areas with mist. The mist impedes vision, making it easier to sneak and harder to shoot arrows.
+The caster summons mist to cover a number of squares equal to the spell's level plus the caster's Wits, so a caster with Wits +2 could cover a full 3 areas with mist.
+The mist impedes vision, making it easier to sneak and harder to shoot arrows.
 
-The mist blinds people, and any combat within the uses the rules for Darkness on page \pageref{darkness} with a maximum penalty of \arabic{spelllevel} plus the caster's Intelligence Bonus. Firing projectiles takes a penalty equal to the number of squares from the target up to a maximum of \arabic{spelllevel} plus the caster's Intelligence Bonus; i.e. if the caster had Intelligence +1 then the penalty for firing projectiles would be -1 per square's distance up to a maximum penalty of \setcounter{list}{0}\addtocounter{list}{-1}\addtocounter{list}{-\value{spelllevel}}\arabic{list}.
+The mist blinds people, and any combat within the uses the rules for Darkness on page \pageref{darkness} with a maximum penalty of \arabic{spelllevel} plus the caster's Intelligence Bonus.
+Firing projectiles takes a penalty equal to the number of squares from the target up to a maximum of \arabic{spelllevel} plus the caster's Intelligence Bonus;
+i.e. if the caster had Intelligence +1 then the penalty for firing projectiles would be -1 per square's distance up to a maximum penalty of \setcounter{list}{0}\addtocounter{list}{-1}\addtocounter{list}{-\value{spelllevel}}\arabic{list}.
 
 Finally, sneaking actions gain a bonus equal to \arabic{spelllevel} plus the caster's Intelligence Bonus.
 
+\spell{Whispering Wind}{Continuous}{Survival}\\
+The mage can also send out whispering messages on the wind, making their words carry inaudibly across a room, until the target is found.
+The winds can carry up to ten words, and the message can wander for miles around -- up to 1 area plus 1 per Wits Bonus the mage has.
+The target must be easily identifiable, as the wind acts as a semi-sentient extension of the mage's mind, watching out for the target with its own narrow version of vision.
+
+If the caster has access to Metamagic's first level then extending the range means the spell can travel any distance, although longer distances can make the spell rather a long-shot, with each area traversed raising the \gls{tn} by 3.
+
 \spell{Wind Blast}{Instant}{Survival}\\
-Wind can also be made to blow forward in a blast in front of the mage. The blast spans out, affecting 2 squares plus the mage's Wits Bonus. Each person affected instantly loses 2 Initiative points plus the caster's Intelligence Bonus, minus the targets' Strength Bonus (minimum 1). The wind can emanate from any location in range and stop at any location in range but any wind coming from behind people will not be effective in slowing them down. Those affected by such a wind cannot move until their Initiative comes up again, i.e. movement is no longer a Quick Action. Finally, the wind moves the target back 2 squares plus the caster's Intelligence Bonus minus their Strength Bonus, since larger, heavier creatures are more difficult to move, while smaller creatures (with a negative Strength) move farther.
+Wind can also be made to blow forward in a blast in front of the mage.
+The blast spans out, affecting 2 squares plus the mage's Wits Bonus.
+Each person affected instantly loses 2 Initiative points plus the caster's Intelligence Bonus, minus the targets' Strength Bonus (minimum 1).
+The wind can emanate from any location in range and stop at any location in range but any wind coming from behind people will not be effective in slowing them down.
+Those affected by such a wind cannot move until their Initiative comes up again, i.e. movement is no longer a Quick Action.
+Finally, the wind moves the target back 2 squares plus the caster's Intelligence Bonus minus their Strength Bonus, since larger, heavier creatures are more difficult to move, while smaller creatures (with a negative Strength) move farther.
 
 For example, Darren the druid blasts out a scathing wind against a row of goblins -- his Wits of +2 means he affects \setcounter{list}{2}\addtocounter{list}{\value{spelllevel}}\arabic{list} squares; since his Intelligence is +1, each target would lose each \setcounter{enc}{1}\addtocounter{enc}{\value{spelllevel}}\arabic{enc} points of Initiative, however the goblins' Strength Bonus is -1, so they finally lose \addtocounter{enc}{1}\arabic{enc} points and cannot move until their next Initiative action.
 Each moves back (in the direction of the wind) \arabic{enc} squares minus their Strength Bonus -- again, since this is -1 they move back \arabic{enc} squares.
+
+\enhancement{1}{Expansive}The caster extends the area of effect for any level \arabic{spelllevel} Aldaron spell which affects multiple squares.
+Expansive spells affect a number of \textit{areas} equal to the spell's level, plus the caster's Wits Bonus.
+Inside a building, this might mean mist fills every room, while in an open forest blinding light might shine for miles around.
+
+\spelllevel
+
+The mage begins to commune with the weather systems and influence how they go. They can even summon localised weather systems from the palm of a hand; mist, sunlight, wind and more are all possible.
+
+\spell{Air Bubble}{Continuous}{Survival}\\
+Weather-workers can summon an air bubble anywhere within range, with a diameter equal to \arabic{spelllevel} squares plus the caster's Wits Bonus. The air bubble can be used to walk underwater without getting wet (though drips through the bubble are common). It will remain despite any damage to its outer `wall' -- penetrating objects simply slip in and out seamlessly. All air bubbles must be summoned while on the land, taking it down below -- any bubbles which begin underwater will simply summon a bubble of stagnant water and will collapse under their own weight once brought onto the land. Air bubbles can also help stop invading winds, mists and such, but with such a limited range their usefulness is also limited.
+
+Any projectiles targeted at the airbubble lose a lot of their power -- arrows, and fireballs both become a little impotent when faced with it.
+It provides a total \gls{dr} of \arabic{spelllevel} + Intelligence against all ranged attacks.
+
+\spell{Edible Plants}{Continuous}{Survival}\\
+Plants can be made edible -- up to 2 meals plus the caster's Intelligence Bonus can be made to instantly grow with each casting. The spell must be maintained for at least a day if it is to be effective -- if dispelled before this time, the food provides no nourishment as it retroactively fades away and Fatigue Points are retroactively applied for starvation. After this time the effects of the spell are so ingrained to the being of the recipients that dispelling the magic has no effects on their internal energy stores.
+
+\enhancement{2}{Massive}
 
 \spelllevel
 
