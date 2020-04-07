@@ -93,14 +93,24 @@ Quick Spells are challenging, and require the mage know a spell intimately.  The
 
 \subsection{Spell Enhancements}
 
-Some spells can be enhanced by adding additional levels.
- First level Conjuration spells can be enhanced by making them `Enlarged', at +1 level, or can target `Basic Metals' at +1 level.
-This means the caster can cast a standard 1st level transformation spell at level 2 in order to make it `enlarged', and cover a wider area.
-Enhancements can even be combined, so a conjuration spell could target a large amount of metal by making it `enlarged', and adding another enhancement to affect basic metals, such as copper.
+Spells can be changed at a cost.
+Each enhancement requires the spell to be cast at a higher level, sometimes many levels higher.
+These enhancements always take the form of adjectives;
+For example, the first level \textit{Fireball} spell, has the enhancement ``(1) Raging'', meaning the mage can cast a \textit{Raging Fireball}, which would count as a second level spell.
 
-\enhancement{2}{Example Enhancement}
+Some spells have their own enhancements, and all of them have two in common.
 
-This is a spell enhancement.  It's telling you that if you add two levels to the spell, you can get the listed benefits.
+\enhancement{1}{Wide}
+\index{Spell Enhancements!Wide}
+The spell extends to cover a wide area -- a total area equal to the spell's level, plus the caster's Wits Bonus.
+The squares are always continuous, so a spell targeting four squares could form a $2\times 2$ area, or four continuous squares.
+
+If the spell targets people, one person per square is always a reasonable baseline.
+
+\enhancement{2}{Massive}
+
+The spell spreads across a massive space -- indoors this could be multiple rooms, outdoors it could be a field, or a massive segment of a forest.
+Massive spells target a number of areas equal to the spell's level plus the caster's Wits.
 
 \vspace{.3in} 
 
@@ -128,23 +138,24 @@ Forest's Friendship works on all creatures without an Intelligence score. Umber 
 However, mammals are the easiest to work with.
 The \gls{gm} should add to the \gls{tn} to affect birds, insects and other non-mammalian creatures.
 
-Forest's Friendship replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people.
+Forest's Friendship replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people, and the \gls{tn} and Skill is determined by this level, not the enchantment spell.
 
-\spell{Light}{Continuous}{Survival}\\
-The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
-This light can blind an opponents in the darkness by casting it directly in their face.
-Anyone having the werelight flare up in their face becomes blinded for a number of rounds equal to the spell's level minus the target's Wits Bonus.
-The average human, having a Wits Bonus of -1, would be blinded for 1 round.
-The blindness can be automatically avoided by anyone who was Keeping Edgy (see page \pageref{edgy}), as quickly shielding one's eyes averts any damage.
+\spell{Plantform}{Continuous}{Survival}\\
+Young plants have a natural destinty.
+With this spell, a plant's destined form can be changed.
+The caster needs to hold the spell until the plant has fully formed, which can stunt the caster's mana for a year or more.
+The affected plant cannot be larger than a man, unless enhancements increase the area of effect.
 
-Undead are terrified of this light.
-Those affected by the spell make a Wits + Aggression roll, \gls{tn} 7 plus the caster's Intelligence + Survival.
+The caster has various options for how the spell grows the plants:
 
-\iftoggle{verbose}{
+\paragraph{Edible} plants produce a number of meals equal to the spell's level plus the caster's Intelligence Bonus.
+\textit{Wide} spells produce the same amount of food times the spell's level, plus the caster's Wits Bonus.
 
-	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/flashing_light.jpg}
-	\label{roch:light}
-}{}
+\paragraph{Poisonous} plants taste the same as the edible plants, but inflict a number of Fatigue Points when ingested equal to the spell's level plus the caster's Wits times 2.\footnote{$(L + Wts)\times 2$}
+
+\paragraph{Wildform} plants are just plants with any shape the caster desires.
+They might grow into the form of a chair, or even a house if the spell is large enough.
+Anything is plausible if a plant could be carved into the right space.
 
 \spell{Freezing Touch}{Continuous}{Survival}\\
 The mage can freeze solid any body of water, or even damage people by cooling their body.
@@ -157,27 +168,11 @@ Such ice has an effective Strength Bonus of \arabic{spelllevel} plus the caster'
 The spell's Strength Bonus can test if the ice can trap people who are in the water, or if it can support people's weight (it holds a maximum \gls{weightrating} of its own Strength +4).
 
 Creatures only frozen up to their waist or ankles can gain a bonus to break out of the ice, and a further bonus if the spell is cast slowly.
-
-\spell{Mist}{Continuous}{Survival}\\
-The caster summons mist to cover a number of squares equal to the spell's level plus the caster's Wits, so a caster with Wits +2 could cover a full 3 areas with mist.
-The mist impedes vision, making it easier to sneak and harder to shoot arrows.
-
-The mist blinds people, and any combat within the uses the rules for Darkness on page \pageref{darkness} with a maximum penalty of \arabic{spelllevel} plus the caster's Intelligence Bonus.
-Firing projectiles takes a penalty equal to the number of squares from the target up to a maximum of \arabic{spelllevel} plus the caster's Intelligence Bonus;
-i.e. if the caster had Intelligence +1 then the penalty for firing projectiles would be -1 per square's distance up to a maximum penalty of \setcounter{list}{0}\addtocounter{list}{-1}\addtocounter{list}{-\value{spelllevel}}\arabic{list}.
-
-Finally, sneaking actions gain a bonus equal to \arabic{spelllevel} plus the caster's Intelligence Bonus.
-
-\spell{Whispering Wind}{Continuous}{Survival}\\
-The mage can also send out whispering messages on the wind, making their words carry inaudibly across a room, until the target is found.
-The winds can carry up to ten words, and the message can wander for miles around -- up to 1 area plus 1 per Wits Bonus the mage has.
-The target must be easily identifiable, as the wind acts as a semi-sentient extension of the mage's mind, watching out for the target with its own narrow version of vision.
-
-If the caster has access to Metamagic's first level then extending the range means the spell can travel any distance, although longer distances can make the spell rather a long-shot, with each area traversed raising the \gls{tn} by 3.
+If the caster can extend the range, then the spell can travel any distance, although longer distances can make the spell rather a long-shot, with each area traversed raising the \gls{tn} by 3.
 
 \spell{Wind Blast}{Instant}{Survival}\\
 Wind can also be made to blow forward in a blast in front of the mage.
-The blast spans out, affecting 2 squares plus the mage's Wits Bonus.
+The blast spans out, affecting \arabic{spelllevel} squares plus the mage's Wits Bonus.
 Each person affected instantly loses 2 Initiative points plus the caster's Intelligence Bonus, minus the targets' Strength Bonus (minimum 1).
 The wind can emanate from any location in range and stop at any location in range but any wind coming from behind people will not be effective in slowing them down.
 Those affected by such a wind cannot move until their Initiative comes up again, i.e. movement is no longer a Quick Action.
@@ -185,10 +180,6 @@ Finally, the wind moves the target back 2 squares plus the caster's Intelligence
 
 For example, Darren the druid blasts out a scathing wind against a row of goblins -- his Wits of +2 means he affects \setcounter{list}{2}\addtocounter{list}{\value{spelllevel}}\arabic{list} squares; since his Intelligence is +1, each target would lose each \setcounter{enc}{1}\addtocounter{enc}{\value{spelllevel}}\arabic{enc} points of Initiative, however the goblins' Strength Bonus is -1, so they finally lose \addtocounter{enc}{1}\arabic{enc} points and cannot move until their next Initiative action.
 Each moves back (in the direction of the wind) \arabic{enc} squares minus their Strength Bonus -- again, since this is -1 they move back \arabic{enc} squares.
-
-\enhancement{1}{Expansive}The caster extends the area of effect for any level \arabic{spelllevel} Aldaron spell which affects multiple squares.
-Expansive spells affect a number of \textit{areas} equal to the spell's level, plus the caster's Wits Bonus.
-Inside a building, this might mean mist fills every room, while in an open forest blinding light might shine for miles around.
 
 \spelllevel
 
@@ -200,121 +191,52 @@ Weather-workers can summon an air bubble anywhere within range, with a diameter 
 Any projectiles targeted at the airbubble lose a lot of their power -- arrows, and fireballs both become a little impotent when faced with it.
 It provides a total \gls{dr} of \arabic{spelllevel} + Intelligence against all ranged attacks.
 
-\spell{Edible Plants}{Continuous}{Survival}\\
-Plants can be made edible -- up to 2 meals plus the caster's Intelligence Bonus can be made to instantly grow with each casting. The spell must be maintained for at least a day if it is to be effective -- if dispelled before this time, the food provides no nourishment as it retroactively fades away and Fatigue Points are retroactively applied for starvation. After this time the effects of the spell are so ingrained to the being of the recipients that dispelling the magic has no effects on their internal energy stores.
-
-\enhancement{2}{Massive}
-
 \spelllevel
-
-\spell{Animal Possession}{Continuous}{Beast Ken}\\
-The priest can now possess animals, taking their body. The priest retains their own Mind Attributes but takes on those of the animal, instinctively knowing how to move, fly, et c. They retain all their original Skills but few will be of any use. While their Athletics Skill will be required to fly and run, they will not be able to grasp tools or speak, and indeed hearing and understanding humanoid speech can be very different -- animal hearing is not designed to pick up on the same things as humanoid hearing.
-
-While the spellcaster's mind occupies an animal body, their own body lays listless, as if in a deep coma. They cannot speak and can only eat with help.
-
-Each time the caster takes Damage while in an animal body, their actual body suffers that many Fatigue Points. If the caster entered the body of a bird, then they would probably only have 1 HP as bird are very small. If the bird's body were killed, they would only suffer 1 Fatigue Point at most. However, when possessing the body of a bear, it might have 10 HP, meaning they could gain up to 10 Fatigue Points if the bear were killed.
-
-Once the spell has ended, such animals often retain a deep connection with the caster and sometimes even retain part of their thinking and sentience. Such semi-sentient animals gain rudimentary intelligence -- enough to understand a wide range of simple commands.
-
-The system is the same as the first level -- the caster rolls their Intelligence + Beast Ken Skill against a \gls{tn} of 7 plus the target's Wits + Aggression. The \gls{tn} is raised for strange creatures such as insects or birds.
-
-After a successful spell ends, another roll is made at an identical \gls{tn}. Success indicates that the creature has a positive outlook towards the caster and that they have gained enough rudimentary intelligence to follow basic commands and may follow the caster for as long as they wish as a companion.
-
-Chief priests of Laiqu\"{e} often prove themselves by going on a mission to tame a sufficiently grand beast -- an umber hulk, a griffon or even the grander creatures of the underworld all make excellent mounts and warriors. More subtle mages love to use rats as assassins as they can carry little containers of poison into enemy bowls, or use crows to report on the movements of armies.
 
 \spell{Forest's Call}{Continuous}{Beast Ken}\\
 The caster makes a call to the forest to come and attack the nearby target.  If the target is a player, the \gls{gm} rolls \arabic{spelllevel} times plus the caster's Intelligence on the local encounter table, and the \gls{pc} faces all encounters within the next day, and typically within the next scene.  The \gls{gm} is encouraged to combine all encounters into one.
 
-If the target is an \gls{npc}, they lose \arabic{spelllevel} \gls{fp} + the caster's Intelligence.  If this leaves the target on 0 \gls{fp}, the target meets with an unfortunate accident next time they enter a natural environment, and dies.
+If the target is an \gls{npc}, they lose \arabic{spelllevel} \gls{fp} + the caster's Intelligence.
+If this leaves the target on 0 \gls{fp}, the target meets with an unfortunate accident next time they enter a natural environment, and dies.
 
 The curse only lasts while it's maintained, and only takes effect in a natural environment where creatures roam -- not in towns or otherworldly environments.
 
-\spell{Nature's Reclaim}{Instant}{Survival}\\
-The caster reaches out to any dead matter within range and forces it to be reclaimed by the earth. An early Autumn comes and wooden weapons degrade to nothing, the wheels of carts come undone and entire houses can be brought to the ground.
+\spell{Telos}{Instant}{Survival}\\
+The spell reaches out to any plant, dead or alive, and fast-travels it to its natural conclusion.
+Seeds grow into plants and blossom, plants grow tall, and older plants whither and die.
 
-The basic \gls{tn} is 10 which increases for young, fresh wood and decreases for older, already-degraded wood. Other natural substances, such as leather or cloth can also be made to degrade, but only once substance per casting can be affected.
+\begin{wrapfigure}{r}{.25\textwidth}
 
-Caster's can almost never cast this spell upon swords used in combat, as the area made of wood is small, moving fast, and generally covered.
+	\begin{rollchart}
 
-Undead targeted by this spell lose a number of \gls{hp} equal to the spell's level, plus the caster's Intelligence Bonus.
+		Margin & Aging \\
+	
+		0 & 1 Year \\
+	
+		1 & 5 Years \\
+	
+		2 & 1 Decade \\
+	
+		3 & 5 Decades \\
+	
+		4 & 1 Century \\
+	
+		5 & 2 Centuries \\
 
-\enhancement{1}{Large}
-\index{Spell Enhancements!Large}
+	\end{rollchart}
 
-The caster can affect a total area equal to \arabic{spelllevel} squares plus their Wits Bonus. 
+\end{wrapfigure}
 
-\enhancement{2}{Massive}
-\index{Spell Enhancements!Massive}
+The result depends upon the margin.
 
-The caster can effect a number of areas up to the spell's level, plus their Wits Bonus.
+Poorly made weapons with wooden parts collapse once aged a decade.
+Most will collapse after 5.
 
-\spelllevel
+Bushes targeted by the spell can grow tall instantly, while trees can take decades, or even a century to grow to full height.
 
-\spell{Plantform}{Continuous}{Survival}\\
-The caster can radically alter how plants grow in real time. Plants can be made venomous, or can grow vast amounts of nourishing food. They can create structures such as temporary shelters or walls for protection. Of course such spells require a good body of plant matter to initially cast -- a verdant field with some root-plants or a forest are fine setting. The inside of a cavern or castle are not.
-
-This spell has a basic \gls{tn} of 7, adjusted for more sparse fauna. Once the spell ends, the plant returns to its original form, slowly retreating, shrinking or just dissolving like fading autumnal leaves.
-
-This spell is special insofar as it can create permanent plant structures. Any such spell left active for over a year becomes permanent. Fields of venomous plants, liveable houses in the treetops and verdant gardens can all be made into permanent features with a sufficiently dedicated and patient caster.
-
-\spell{Creeping Disarm}{Continuous}{Skills: Survival}\\
-Usually, Plantform spells require a good deal of plant-matter to encourage growth, and such matter should be as verdant and alive as possible. However, making a small chunk of dead wood grow leaves and branches can be done with some difficulty. Commonly, Aldaron casters use this level to encourage growth from the wooden handle of various weapons; the apparently dead wood burst into life, producing branches, shoots, leaves and sometimes blooming flowers. The weapon becomes steadily more unwieldy until it is completely useless, having become not so much a weapon as the decorative heart of a very strange plant. Small handles with little visible wood such as a short-sword handle bound in leather might increase the \gls{tn} by +4, for a total of 11 while the longer handles of an axe might only increase the \gls{tn} by +2, and a polearm, made almost entirely of wood, could have no effect on the \gls{tn}.
-
-Once the spell takes effect, the apparently dead wood of the handle bursts into life and begins to grow new branches, increasing its \gls{weightrating} by 1 every \gls{round} until it gains a total equal to 4 plus the caster's Intelligence Bonus.
-For example, a caster with Intelligence +3 might cast the spell on someone's longsword. The longsword begins with a \gls{weightrating} of 1 but grows heavier each \gls{round} until on the 7th \gls{round} it has a total \gls{weightrating} of +8.
-
-Initially, this additional \gls{weightrating} will be no more than an inconvenience as targets become Encumbered, but very quickly it will make any weapon completely useless, effectively disarming the target.
-
-Targets can attempt to pull the growths off but they grow as fast as they can be pulled off and such growths are as hardy as any other level of this spell. Once the spell ends, the additional growth falls to nothing.
-
-\spell{Venomous Growth}{Continuous}{Survival}\\
-The caster focusses on an area of land and venomous thorns, complete with fruit-like poison sacks, begin to grow. Anyone stepping into the area risks being stung simply by moving through the plants.
-
-The Venomous Growth spell affects a number of squares equal to 4 plus the caster's Wits Bonus. Such patches of land make for excellent traps as most people don't even notice that the thorns are likely to be a serious problem if they are hidden in an appropriately foliage-dense area. When using a suitable area to hide such plants, noticing them requires a Wits + Vigilance roll, resisted by the caster's Intelligence + Deceit. Moving through such an area without mishap is difficult even after one has noticed the plants are there, requiring a Dexterity + Survival task, resisted by the caster's Intelligence + Survival.
-
-If anyone is stung by such plants -- usually because they have moved through them without noticing that they are present -- suffers 4 Fatigue Points plus the caster's Intelligence Bonus. Each additional \gls{round} provides a new opportunity to be stung.
-
-Some casters create such plants directly underneath a target, making them grow around them like a threatening prison. In this case, the target must make a Dexterity + Survival check, as above, resisted by the caster's Intelligence + Survival.
-
-If the poison is removed from the plant it can be used as an ingestion poison which takes effect at the end of the scene. The imbiber might make a Wits + Survival check to notice the poison's presence, resisted by the caster's Intelligence + Deceit. Each additional dose placed into the food provides a +4 bonus to anyone attempting to discern the poison's presence before eating. However, it provides a poor poison-coating for blade weapons, inflicting only 1 Fatigue Point on a successful hit, after which it is used up as the poison is cleaned from the blade.
-
-The poison inflicted by this spell heals at a rate of 1 per scene, though a successful Intelligence + Medicine task can increase the healing rate at the discretion of the \gls{gm}. The poison is not removed from a target after the spell has ended.
-
-Those caught in the area of effect when the spell takes place can resist it with their Evasion Factor while the caster uses their Intelligence + Survival. For example, if the caster had a +4 Bonus from Intelligence + Survival and targeted someone with a current Evasion Factor of +2, they would have to roll against a \gls{tn} of 7 to activate the spell, but would have to reach a \gls{tn} of 9 to affect the target before they jumped away from the venomous plants. Alternatively, PCs attempting to evade the growth would have to roll against \gls{tn} 11 to jump out of the way, because the basic \gls{tn} of 7 would add the caster's Bonus of +4.
-
-\spell{Verdant Banquet}{Continuous}{Survival}\\
-The caster can force plants -- any plants -- to bring forth massive amounts of nourishing fruit and vegetables. The plants grow a total of 4 days' worth of food plus the caster's Intelligence Bonus. Each day's worth of food is three full meals, so a caster intending to provide a banquet could (with Intelligence +2) provide 18 full meals. As with the second-level version, the spell must be kept active for a full day if the plants are to continue to nourish those who fed.
-
-\spell{Wild Growth}{Continuous}{Survival}\\
-Plants can be made into various structures, from walls to huts, bridges or even strange works of art. The total area of plant matter which can be created by such a spell is equal to 4 squares plus the caster's Wits Bonus. For example, someone with a Wits Bonus of +3 could create a good-sized tent, a wall, or an impressive statue.
-
-The item grows 1 square at the end of each \gls{round}, so it will take a while before completing, but such structures are at least very hardy. Each square counts as having a number of HP equal to 4 plus the caster's Intelligence Bonus and the same \gls{dr} (which counts as Perfect \gls{dr}).
-
-For example, a caster with Intelligence +2 and Wits +1 could create 5 squares' worth of hedge-wall to block their escape. It would have 6 HP and a \gls{dr} of 6, so destroying it with a single spell or axe swing would be very difficult. It can, of course, be sawn and cut through like any normal plant, given enough time.
-
-The \gls{gm} may adjust the \gls{tn} of the spell, depending upon the quality of the basic plant matter which the caster is working with and encouraging growth from. Working with a wild swamp, teeming with tree-roots and floating lillies might lower the \gls{tn}, while casting a spell upon a sparse rock garden should increase the \gls{tn}.
-
-\spelllevel
-
-\spell{Call of the Verdant Goddess}{Continuous}{Survival}\\
-This final level of the Aldaron sphere allows true mastery of nature. Not only can the caster call up sentient plants to aid them in any quest, they can summon storms and destroy wood and therefore anything made from wood.
-
-The mage can finally summon up the wrath of forests to attack their enemies. They must be in the presence of a sufficiently large amount of foliage -- perhaps a single tree or a series of bushes, but a few potted plants nearby will not be sufficient for an effective spell. A mage might animate one massive tree to come and fight for them, its roots crawling across the ground like an octopus on land, or they might pull up half a dozen smaller, more delicate plants.
-
-The basic number of plants animated is one and their Strength is 0. The mage can add a total of \arabic{spelllevel} points plus the caster's Intelligence Bonus between these numbers. A mage of Intelligence +1 would have 6 points to divide for the spell -- they could summon a single plant of Strength +6, or could summon 6 more plants for a total of 7, each with Strength 0, or they could divide the score and summon 3 plants in total, each with Strength +4. Exactly what can be summoned depends upon what plants are available in the area. A single tall tree is ripe for turning into a high-Strength killing machine, while a scrub land might be better at pulling up thick, stumpy bushes to attack. The \gls{gm} will decide the maximum Strength a plant can be imbued with.
-
-The plants have Speed -2, Dexterity 0 and an Aggression score of 2 plus the mage's Wits. Their own Wits score is always equal to the mage's. Finally, and rather importantly, all plants have a \gls{dr} equal to their Strength score which counts as Perfect armour.
-
-For example, a caster of Intelligence +3 and Wits +1 might animate a giant tree with Strength +8, Speed -2, Dexterity 0, Wits +1 and an Aggression Skill of +3. The tree's \gls{dr} would be 8. Such trees inflict Fatigue Damage like any other unarmed creature but can inflict normal Damage with a Margin of 5 on an attack roll. Typically, they wrestle targets and slowly crush them to death.
-
-Such plants can sense their environment through movement -- people walking next to them is enough to let them know where everyone is.
-
-The right kind of foliage for this spell isn't always available. If the mage is situated in a desert or a castle's roof, the spell is completely unsuitable.
-
-\spell{Storm}{Continuous}{Survival}\\
-The final level of Aldaron allows a mage to summon a mighty storm, possibly including rain, lightning, thunder and hail, as the caster desires. The exact effects of the storm are in the hands of the \gls{gm} but potential effects include knocking down small buildings, inflicting Fatigue Points on anyone in the storm and random blasts of lightning. A higher Margin suggests more powerful effects. The spell extends from the caster in all directions by a number of areas equal to five plus their Wits.
-
-The storm always presents in a manner appropriate to the local environment. A desert might see a sandstorm rise while a caster out at sea might summon tidal waves.
+The spell must target a complete `thing', and never a piece of a thing.
+A basic spell can target a sword, therefore destroying its handle with age, but could not target a door in a house -- the entire house would have to be targeted, or the spell would not work.
+Spells massive enough to target a building might affect the exterior, but would to nothing to the interior unless it could target every room within as each room counts as its own area.
 
 \end{multicols}
 
@@ -333,7 +255,7 @@ Conjuration divides the world into three essential forms -- solid, liquid and ga
 Conjuration spells targeting larger items are always more difficult.  The \gls{tn} for anything besides a gas, such as air, is always increased by the \gls{weightrating}.
 In the case of living targets, the \gls{weightrating} is always equal to their \gls{hp}, so targeting someone with 6 \gls{hp} would increase the \gls{tn} by 6.
 
-Any character can decide that a conjuration spell targeting them fails by spending 5 FP.
+Any character can decide that a conjuration spell targeting them fails by spending 5 FP, if that spell would be fatal.
 
 \spelllevel
 
@@ -377,13 +299,12 @@ Anyone can attempt to break free instead of their usual movement action.
 
 Webbing cannot be used instead of rope -- it's too elastic, and tends to snap when stretched.
 
+\enhancement{1}{Artefact}
+The caster can now transform targets into detailed forms.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
+
 \enhancement{1}{Metallic}
 \index{Spell Enhancements!Metallic}
 The caster can now target and create basic metals such as copper, bronze, or iron.  Gold and silver cannot be targeted or created, nor can alloys, or weapons adorned with precious metals.
-
-\enhancement{1}{Enlarged}
-\index{Spell Enhancements!Enlarged}
-The mage takes any previous level, and casts it wide.  The spell can then target one square per spell level plus the caster's Wits Bonus.  A caster with Wits +1 could cast Web at second level to cover three squares, or cast Slime at third level to cover four squares.
 
 \enhancement{1}{Transient}
 \index{Spell Enhancements!Transient}
@@ -397,13 +318,8 @@ Living creatures turned using Stone Spell into a solid substance, and then turne
 
 Level 2 conjuration can use all the enhancements of the previous level.
 
-\spell{Acid}{Continuous}{Survival}\\
+\spell{Acid}{Continuous}{Academics}\\
 The caster can turn any liquid into a potent acid.  Acidic substances deal $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus.
-
-\spell{Artefact}{Continuous}{Varies}\\
-The caster can now transform targets into detailed forms.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
-
-The first leve's enhancements can be added to this level, so a mage could create an \textit{Enlarged Artefact} at third level, and summon an entire wagon, or break the necessity to use the right kind of matter and summon a minor seige weapon from thin air.\footnote{Summoned seige weapons do not come locked and loaded.}
 
 \spell{Prison}{Continuous}{Crafts}\\
 This spell is simply an example of stacking spell enhancements together.  The caster freezes water around a target, or turns surrounding air to stone, imprisoning them.
@@ -416,6 +332,8 @@ If the spell completes, the \gls{tn} to break free increases by 2.
 
 \spell{Teleport}{Instant}{Academics}\\
 The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
+
+If cast as a \textit{Massive} spell, the portal gains can travel across multiple areas, but always remains as around the size of a doorway.
 
 \enhancement{1}{Gated}
 \index{Spell Enhancements!Gated}
@@ -464,12 +382,8 @@ This sphere of magic only works on people with an Intelligence Attribute and wor
 \spelllevel
 
 \spell{Calm}{Continuous}{Empathy}\\
-Enchanters can calm down scared people including those who have failed a Morale check.
+Enchanters can calm down scared people including those who have failed a Morale Check.
 While under the care of an enchanter, all Morale Checks gain a bonus equal to 1 plus the Enchanter's Intelligence Bonus.
-
-\spell{Golden Aura}{Continuous}{Empathy}\\
-The enchanter learns to charm people with a smile or a wink, or lend the ability to others.
-The target adds 1 plus the caster's Intelligence Bonus to any Social Skill. This spell can also be cast on others.
 
 \spell{Imbue Soul}{Continuous}{Empathy}\\
 The caster pours a little life-essence into an object, animal, or anything else.
@@ -538,7 +452,8 @@ Targets can stop once their original action has become obviously impossible or i
 \spell{Panic}{Continuous}{Deceit}\\
 The enchanter and the target make a resisted roll; the caster adds their Intelligence Bonus and Deceit Skill while the target adds their Wits Bonus and Combat Skill. If the target fails, they automatically run away in fear, as the enchanter dictates.
 
-If the target would normally take a Morale check, the caster's Intelligence + Deceit are added to the \gls{tn} for as long as the spell is in effect. Targets completely unable to flee will continue to fight.
+If the target would normally take a Morale Check, the caster's Intelligence + Deceit are added to the \gls{tn} for as long as the spell is in effect.
+Targets completely unable to flee will continue to fight.
 
 \spell{Sleep}{Continuous}{Empathy}\\
 Enchanters who want their target to fall asleep can make a resisted Intelligence + Empathy roll against the target's Wits + Academics.
@@ -908,24 +823,12 @@ The illusion can now cover a large area; specifically it can cover a number of s
 
 Audio spells become deafening, and cover an entire area.
 
-\enhancement{2}{Massive}
-\index{Spell Enhancements!Massive}
-
-Massive Illusions cover an entire area.  Powerful illusionists can make everyone in a castle's wing look like goblins, or make a filthy kitchen appear clean.
-
-While a castle's various rooms have such detail that they each count as a separate room, a small keep or house will count as a \emph{single} area from outside, so such illusions can target a full house from the outside.
-
 \enhancement{2}{Negative}
 \index{Spell Enhancements!Negative}
 
 The illusionist finally learns to make less of something, rather than more.  A single person can be silenced, or made invisible (or both).
 
 As usual, the illusion is still delicate, and if the person is struck or disturbed in any way, the illusion dissipates.  Combat rolls, for defence or attack, always break such spells unless they are also make \textit{Solid}.
-
-\enhancement{3}{Enormous}
-\index{Spell Enhancements!Enormous}
-
-The illusion can cover a number of areas equal to the spell's level, plus the caster's Wits Bonus.
 
 \end{multicols}
 
@@ -945,20 +848,20 @@ As usual, opponents who are keeping edgy (see page \pageref{edgy}) can use their
 Alternatively, if a player is keeping edgy, it is they who can attempt to dodge the incoming attack, rolling their Speed at \gls{tn} 7 plus the pyromancer's Intelligence and Projectiles Skill.
 Shields' Evasion Bonus can add to the roll to resist such spells.
 
-Just like any other long-range spell, Lightning Bolts and other Invocation spells can succeed in Vitals Shot, bypassing armour, if they strike precisely enough (see page \pageref{vitals}). Blast-radius spells such as Fireball can inflict a Vitals Shot on up to 1 person, specified by the caster, but not more as the mage cannot make precise attacks against a group of people simultaneously.
+Just like any other long-range spell, Fireballs and other Invocation spells can succeed in Vitals Shot, bypassing armour, if they strike precisely enough (see page \pageref{vitals}). Blast-radius spells such as Fireball can inflict a Vitals Shot on up to 1 person, specified by the caster, but not more as the mage cannot make precise attacks against a group of people simultaneously.
 
 If you are using miniatures, it will be easy to see how many people are caught in the blast radius of a spell. The caster can direct which squares are affected so long as they are all joined together; they may be squares forming a larger square, or spread out in a row. However, if your group is more a fan of the mind's eye theatre the assume that for every square in a spell's range has it affects 1 target.
 
 \spelllevel
 
-\spell{Lightning Bolt}{Instant}{Projectiles}\\
+\spell{Fireball}{Instant}{Projectiles}\\
 The mage throws out a ball of flaming, crackling light which strikes and burns the target. The Damage is $1D6$ plus the caster's Intelligence.
 
 \subsubsection{Spell Enhancements}
 
 \enhancement{1}{Raging}
 \index{Spell Enhancements!Raging}
-The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Lightning Bolt at third level would deal $2D6+2$ Damage.
+The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Fireball at third level would deal $2D6+2$ Damage.
 
 \enhancement{1}{All-Consuming}
 \index{Spell Enhancements!All-Consuming}
