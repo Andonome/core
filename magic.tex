@@ -211,7 +211,7 @@ Seeds grow into plants and blossom, plants grow tall, and older plants whither a
 
 	\begin{rollchart}
 
-		Margin & Aging \\
+		Margin & Aging \\\hline
 	
 		0 & 1 Year \\
 	
@@ -455,7 +455,7 @@ Targets can stop once their original action has become obviously impossible or i
 The enchanter and the target make a resisted roll; the caster adds their Intelligence Bonus and Deceit Skill while the target adds their Wits Bonus and Combat Skill. If the target fails, they automatically run away in fear, as the enchanter dictates.
 
 If the target would normally take a Morale Check, the caster's Intelligence + Deceit are added to the \gls{tn} for as long as the spell is in effect.
-Targets completely unable to flee will continue to fight.
+Targets completely unable to flee can continue to fight.
 
 \spell{Sleep}{Continuous}{Empathy}\\
 Enchanters who want their target to fall asleep can make a resisted Intelligence + Empathy roll against the target's Wits + Academics.
@@ -630,6 +630,9 @@ Those protected by the shield cannot attack others as the shield stops all attac
 However, casters are able to focus enough to use missile weapons and spells by allowing small breaches in the shield's wall.
 \footnote{Allowing a target to use a missile weapon requies complete focus, and a Wits + Empathy roll, and can be performed as a Quick action, costing 2 Initiative Points.}
 
+The shields cannot `split' into bubbles.
+When cast wide, it can cover a group of people, but the shield will cover all of them or none.
+
 \textit{For example, Annabel the alchemist has the Force sphere at level 3 and Intelligence +2.
 She's low on \gls{mp} so she casts it at level 2, gaining 8 \gls{SP}.
 On the very next Initiative Count she's hit for 10 Damage and loses all 8 \gls{SP} then 2 FP.}
@@ -641,27 +644,8 @@ Armour does not block Damage going onto \gls{SP} -- the character simply subtrac
 \spell{Mage Sight}{Continuous}{Vigilance}\\
 The mage can `feel' by delicately touching things with mental movement rather than actually seeing them. They can see in complete darkness whether underwater or on land.
 
-The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level. The spell covers a progressively larger area depending upon the level used. No roll is required -- the spell is automatic and lasts until dispelled.
-
-\vspace{.3cm}
-
-\begin{tcolorbox}[arc=1mm,tabularx={ll}]
-
-	Level & Radius of Sight \\\hline
-
-	1 & 5 squares plus the caster's Wits. \\
-
-	2 & 10 squares plus the caster's Force sphere \\
-	&  rating plus Wits. \\
-
-	3 & The entire \emph{area}. \\
-
-	4 & A number of areas equal to the caster's Wits. \\
-
-	5 & Five full sequential areas plus the caster's \\
-	&  Wits. \\
-
-\end{tcolorbox}
+The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level.
+The spell covers a progressively larger area depending upon the level used.
 
 \noindent Mages able to perceive events multiple areas away make for legendary spies, although the power is limited by the fact that while the make can feel events at a distance, they cannot hear voices or read anything.
 
@@ -681,7 +665,9 @@ While the weapon is next to the caster it can defend them just as any weapon. An
 To attack with the weapon, the mage spends the normal amount of Initiative for that weapon; e.g. 4 for a dagger and 6 for a shortsword.
 They roll with Intelligence + Combat and deals the normal amount of Damage given the effective Strength Bonus, so a fourth level Force sphere spell could wield a dagger to deal $2D6$ Damage, or could wield an axe to deal $2D6+2$ Damage.
 
-If the mage levitates multiple weapons (through multiple castings), each additional weapon adds +1 to their Strike score, adds +1 Damage and +1 to the Evasion Bonus. In this way the mage can add up to a maximum of +3 to each stat, meaning only the first four weapons can have an effect. Additional weapons can add Evasion Bonuses behind or to the side of the mage to ensure they do not lose any Evasion Bonus when attacked from behind but a fifth weapon cannot add additional Damage.
+If the mage levitates multiple weapons (through multiple castings or casting a \textit{Wide} spell), each additional weapon adds +1 to their Strike score, adds +1 Damage and +1 to the Evasion Bonus.\footnote{Casting over a massive number of weapons works fine, but the mage cannot direct all weapons properly at the same time, so the maximum number of weapons in use is always equal to the spell's level plus the caster's Wits Bonus.}
+In this way the mage can add up to a maximum of +3 to each stat, meaning only the first four weapons can have an effect.
+Additional weapons can add Evasion Bonuses behind or to the side of the mage to ensure they do not lose any Evasion Bonus when attacked from behind but a fifth weapon cannot add additional Damage.
 
 If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character.
 The mage defends with their normal Evasion Factor and a successful grab means that the weapon has been arrested.
@@ -745,6 +731,8 @@ The gnome adds their Evasion Factor to the basic \gls{tn} of 7 and then the mage
 If successful, the gnome would count as carrying an item with a \gls{weightrating} of 2.
 Assuming this gnome has the usual Strength Bonus of -2, they would then receive a -4 penalty to their effective Speed Bonus.
 Their Initiative Score would suffer and they would accrue additional Fatigue Points each time they attempted to run or fight due to the added \gls{weightrating}.
+
+When cast over a full area, all are effected, and movement becomes extremely difficult.
 
 \spell{Telekinetic Retreat}{Continuous}{Athletics}\\
 Mages can add their mental ability to move things to aid their movement.
@@ -818,13 +806,6 @@ Solid illusions become an extension of the caster, and any caster can cast a spe
 
 Once even a single point of Damage has been dealt to the illusion, it vanishes.
 
-\enhancement{1}{Large}
-\index{Spell Enhancements!Large}
-
-The illusion can now cover a large area; specifically it can cover a number of squares equal to the spell's level plus the caster's Wits Bonus.
-
-Audio spells become deafening, and cover an entire area.
-
 \enhancement{2}{Negative}
 \index{Spell Enhancements!Negative}
 
@@ -865,17 +846,11 @@ The mage throws out a ball of flaming, crackling light which strikes and burns t
 \index{Spell Enhancements!Raging}
 The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Fireball at third level would deal $2D6+2$ Damage.
 
-\enhancement{1}{All-Consuming}
-\index{Spell Enhancements!All-Consuming}
-The caster turns the lightning bolt into a raging fireball, which covers a number of squares equal to the spell's level plus the caster's Wits.
-
-Anyone within 1 square's distance of the fireball takes 1 Damage plus the caster's Intelligence Bonus.
-
 \enhancement{2}{Internal}
 \index{Spell Enhancements!Internal}
 The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
 
-If cast with the `All-Consuming' enhancement, the spell targets everyone inside the area.
+If cast with the \textit{Wide} or \textit{Massive} enhancement, the spell targets everyone inside the area.
 
 \end{multicols}
 
