@@ -17,16 +17,6 @@ BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that
 
 The most important part of the game is mechanics, and everything revolves around speed.
 
-## Abilities
-
-The abilities are parsimonious, providing the standard inputs and outputs, but with fewer variables.  For example, 'Deceit' is used for both intimidation and lies, depending upon what it's paired with.  This gives Player Characters different scores for intimidating and lying, but with fewer skills to keep track of:
-
-|                  | **Strength** (2)                    | **Dexterity** (-1)                                | **Speed** (0)                                 | **Intelligence** (1)            | **Wits** (-1) | **Charisma** (1) |
-|:-----------------|:------------------------------------|:--------------------------------------------------|:----------------------------------------------|:--------------------------------|:-----------------------|:---|
-| **Academics** +1 | giving a speech to a large crowd: 3 | binding books: 0                                  | sorting coins: 1                              | remembering facts: 2            | outsmarting someone: 0 | storytelling: 2 |
-| **Deceit** +3    | intimidating an opponent: 5         | sliding a knife up to someone's neck unnoticed: 2 | charging at someone to intimidate them: 3     | crafting a clever ruse: 4       | coming up with a quick lie: 2         | making a false friend: 4 |
-| **Vigilance** +3 | keeping watch all night: 5          | finding a door in the darkness: 2                 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
-
 ## No Class
 
 Players put their XP wherever they like, so there are no charts for what has to be bought next, and no levelling system.
@@ -51,6 +41,16 @@ Story Points allow players to craft a story in-play, once they know the world th
 Players make randomly generated characters.  This stops the indecision and long reading which threatens to prevaricate a good games night by removing those decisions and the catalogue-perusal of classes and races.  Typically this can produce a full table of new characters in about fifteen minutes.
 
 The book contains decision-based character creation as a set of alternative rules, rather than a default.
+
+## Abilities
+
+The abilities are parsimonious, providing the standard inputs and outputs, but with fewer variables.  For example, 'Deceit' is used for both intimidation and lies, depending upon what it's paired with.  This gives Player Characters different scores for intimidating and lying, but with fewer skills to keep track of:
+
+|                  | **Strength** (2)                    | **Dexterity** (-1)                                | **Speed** (0)                                 | **Intelligence** (1)            | **Wits** (-1) | **Charisma** (1) |
+|:-----------------|:------------------------------------|:--------------------------------------------------|:----------------------------------------------|:--------------------------------|:-----------------------|:---|
+| **Academics** +1 | giving a speech to a large crowd: 3 | binding books: 0                                  | sorting coins: 1                              | remembering facts: 2            | outsmarting someone: 0 | storytelling: 2 |
+| **Deceit** +3    | intimidating an opponent: 5         | sliding a knife up to someone's neck unnoticed: 2 | charging at someone to intimidate them: 3     | crafting a clever ruse: 4       | coming up with a quick lie: 2         | making a false friend: 4 |
+| **Vigilance** +3 | keeping watch all night: 5          | finding a door in the darkness: 2                 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
 
 # Tactics
 
@@ -142,5 +142,4 @@ You can join by:
 2. Basic effort but slow: Make a Gitlab account and stick issues on the [board](https://gitlab.com/bindrpg/core/issues).  Others can upvote /downvote your issues.
 3. Medium effort, medium speed: use your Gitlab account and enter the IDE. Edit the tex in a branch and make a commit message, explaining why you made those changes. Your name will then be attached to the history forever.
 4. Big effort, extreme speed: Learn git. Make any changes in any editor, push the lot instantly, and pull down a log of anyone's branches or changes instantly.
-
 
