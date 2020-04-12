@@ -5,11 +5,11 @@ The config directory is a subtree, so all commits to it should only involve file
 
 Binary files placed here were a mistake. No further binaries accepted.
 
-Gits available on github, gitlab and git.hklbgd.org
+Gits available on github and gitlab.
 
 -->
 
-| [Download](https://gitlab.com/bindrpg/core/uploads/421be85d2d6a8d7d3fe6865ca423b5a4/core.pdf) | [Wiki](https://gitlab.com/bindrpg/core/-/wikis/home) |
+| [Download](https://gitlab.com/bindrpg/core/-/jobs/496913368/artifacts/download) | [Wiki](https://gitlab.com/bindrpg/core/-/wikis/home) |
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
