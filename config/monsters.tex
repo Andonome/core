@@ -371,10 +371,10 @@
 	\divide\value{xp} by 80
 	\addtocounter{xp}{\value{xpbonus}}
 	\addtocounter{xp}{\value{mp}}
-	\ifnumcomp{\value{xp}}{<}{0}{\setcounter{xp}{0}}{}
 % if {mind} print fate points.
 
-	\arabic{xp} XP \iftoggle{mind}{\addtocounter{fp}{\value{cha}}\ldots \arabic{fp} FP}{}
+	\ifnumcomp{\value{xp}}{>}{0}{\arabic{xp} XP}{\ifnumcomp{\value{xp}}{<}{-1}{$1/8$ XP}{$1/4$ XP}}
+	\iftoggle{mind}{\addtocounter{fp}{\value{cha}}\ldots \arabic{fp} FP}{}
 
 	\vspace{.1cm}
 	\hrule
@@ -1217,6 +1217,6 @@
 {0}% AGGRESSION
 {Stealth 3, Vigilance 2}% SKILLS
 {Gas}% ABILITIES
-{}
+{\addtocounter{xpbonus}{3}}
 }
 
