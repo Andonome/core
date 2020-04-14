@@ -1,0 +1,85 @@
+\appendix
+
+\titleformat{\chapter}[display]
+{\bfseries}
+{\begin{tikzpicture}
+\node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
+\node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\huge APPENDIX~~};
+\node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\thechapter}};
+\end{tikzpicture}}
+{0pt}
+{\Huge}
+
+\addappheadtotoc
+
+\chapter{Character Creation}\label{charactercreation}\index{Character Creation}
+
+\begin{multicols}{2}
+
+Okay, so you know how to make a character by now.  But just for reference, let's get some procedure down:
+
+\begin{enumerate}
+	\item{Roll the dice to determine your race and Attributes.  Page \pageref{character_rolls}.}
+	\item{Spend 50 \gls{xp} on Attributes, Skills, \gls{mp}, Knacks, et c., with the Trait charts below, taking $n$ as the current level of of the Trait (or the number of Knacks, or the level of \gls{fp}). Page \pageref{xp}.}
+	\item{Take 2 items worth 10sp or less, plus 1 item per Skill level your character has.  Page \pageref{goods}.}
+	\item{Select a God or Code to follow, so you can gain \gls{xp}.  Page \pageref{gods_codes}.}
+	\item{Starting money is $(3D6-5)^A \times 2^S$cp, where A = levels in Academics and S = combined levels in all specialist Skills.}
+	\item{Start the game.}
+%	\item{Spend Story Points any time you can.}
+\end{enumerate}
+
+\begin{xpbox}{B}
+
+	Result & Attribute Bonus \\\hline
+
+	2 & -3 \\
+
+	3 & -2 \\
+
+	4-5 & -1 \\
+
+	6-8 & 0 \\
+
+	9-10 & +1 \\
+
+	11 & +2 \\
+
+	12 & +3 \\
+
+	\end{xpbox}
+
+\begin{xpbox}{B}
+
+	Trait & Cost \\\hline
+	Attributes & $5 \times 2^n + 10$ \\
+	Skills & $5 \times (n + 1)$ \\
+	Combat/ Projectiles & $10 \times 2^n$ \\
+	FP Base & $5 \times 2^n + 5$ \\
+	MP Base & $5\times 2^n$ \\
+	Magic Sphere & $5 \times 2^n + 5$ \\
+	Knack & $5 \times (n + 1)$ \\
+\end{xpbox}
+
+\end{multicols}
+
+\racechart
+
+\chapter{Combat}
+
+\begin{multicols}{2}
+
+\initiativechart
+
+\columnbreak
+
+\armourchart
+
+\moralechart
+
+\end{multicols}
+
+\pagebreak
+
+\weaponschart
+
+

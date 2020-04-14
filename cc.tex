@@ -1,0 +1,398 @@
+\chapter{Character Creation}\index{Traits}\index{Character Creation}\label{character_rolls}
+
+\begin{multicols}{2}
+
+Characters are defined by Traits, and the two main types are Attributes and Skills.
+Attributes are innate Traits, deeply tied to who the character is.
+The Physical Attributes used here are \textit{Strength, Dexterity, and Speed}, and the Mental Attributes are \textit{Intelligence, Wits, and Charisma}.
+Skills, meanwhile, are things the character learns.
+
+Typically, players take actions by rolling two six-sided dice (``$2D6$'') and adding a Trait and Skill to the result.  If you roll high enough, you succeed.
+Otherwise, you fail.
+
+\end{multicols}
+
+\section{Races}\index{Race}
+\iftoggle{verbose}{
+\includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
+\label{roch:races}
+}{}
+
+\newcommand{\racechart}{
+
+\begin{tcolorbox}[tabularx={cll},arc=1mm,adjusted title=Race]
+
+	Roll & Race & Adjustments \\\hline
+
+	2-3 & Gnoll & +1 Strength, +1 Speed, -1 Intelligence, -2 Charisma \\
+
+	4-5 & Dwarf & +1 Dexterity, -1 Speed \\
+
+	6-8 & Human & +1 Strength, -1 Wits \\
+
+	9-10 & Elf & +1 Wits, -1 Strength \\
+
+	11-12 & Gnome & +1 Intelligence, +1 Dexterity, Strength -2, Speed -1 \\
+
+\end{tcolorbox}
+}
+
+\racechart
+
+\begin{multicols}{2}
+
+Character creation is random by default -- it helps new players get started quickly.
+Either print out a character sheet or make some paper notes as we go.
+We begin by randomly assigning your race.
+Much of character creation is concerned with interpreting your character as it forms -- what kind of person are you making?
+What do the Attribute Bonuses say about them?
+You will later be deciding on what kind of Skills and training will compliment the character, but the basics will all be random.
+Grab a pair of D6's and compare the result to the following chart.
+
+I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
+
+It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
+
+\begin{wrapfigure}{R}{.6\linewidth} 
+
+	\begin{tcolorbox}[tabularx={cc},arc=1mm]
+
+	Result & Attribute Bonus \\\hline
+
+	2 & -3 \\
+
+	3 & -2 \\
+
+	4-5 & -1 \\
+
+	6-8 & 0 \\
+
+	9-10 & +1 \\
+
+	11 & +2 \\
+
+	12 & +3 \\
+
+	\end{tcolorbox}
+
+\end{wrapfigure}
+
+Next up, time to roll the Attributes -- Strength, Dexterity, et c..
+Roll $2D6$ for each of the Bonuses (or negatives).
+Continue rolling until all 6 Attributes have a value.
+Your race will give you modifiers to these results.
+
+\subsection{Player Chosen Characters}
+
+If players prefer, they can design their own characters. In this case they select a race and take the racial modifiers as a starting point to spend \glspl{xp}.  They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
+
+\iftoggle{verbose}{
+\subsection{The Story of Thenton}
+
+After rolling the dice, my final results are Strength +1, Speed 0, Dexterity -1, Intelligence 0, Wits -1 and Charisma +1. That doesn't look it speaks of much, but consider what kind of human might be `Charismatic yet clumsy'. Perhaps a noble? It could be a performer, but what kind of performer doesn't have the coordination to play the difficult songs on the banjo? A poet! Imagine a minor noble, perhaps the third son of a townmaster or some such. He's always rushing about then falling over. His poems aren't terribly good (just look at that banal Intelligence score) but he can get better. Meanwhile, he earns his pay, and perhaps attempts to chat up a few ladies, based on his dashing good looks and likeable personality.
+
+He just needs a name now -- something which captures the idea of a slightly silly fop, a knightly poet. `Thenton' should do it. Have you finished yours yet? We'll need it in a bit for practice rolls.
+
+\begin{exampletext}
+
+The skinny man greets Thenton with overbearing enthusiasm as he continues to explained the mission.
+
+``\emph{The book was stolen from our library}'' emphasizing ``our'' to make it obvious that it was as much his library as any other wizard's.
+``\emph{It is very dangerous and we must have it back.
+It contains a song - a bad one}''.
+
+Thenton pulls his face to its own centre for a moment. ``\emph{You mean, you think the song in the book is awful?}''
+
+``\emph{No no no. I mean yes}'', the wizard replied, as happily as ever.
+``\emph{The book contains a song, the song contains the magic.
+When you play or sing it or whatever it is, things happen.
+Bad things}''.
+
+``\emph{Okay.
+What kinds of things?}''
+
+``\emph{That's a guild secret I'm afraid, but the important thing to know is to never let him sing.}''
+
+``\emph{Might he do that while we're charging towards him with swords and rope?}'', Thenton asks.
+
+``\emph{Oh yes}'', the wizard grinned wider.
+``\emph{After all, he is a bard.
+We allowed him into the college to show off his odd abilities - those sorcerer powers from his elven heritage.
+And he stole our book, from the secret section at the back with all the forbidden books.
+He must have stolen the key from me.
+Anyway - we can pay handsomely.
+Perhaps two hundred gold in total.
+Do you think your friends would be interested?}''
+
+``\emph{I'm going to speak with my guys, but two hundred gold for a apprehending a single criminal? Easiest job we've ever had.}''
+
+The wizard smiled again.
+
+\end{exampletext}
+}{}
+
+\end{multicols}
+
+\section{Attributes}
+
+These are the basics Traits which characters must use over and over again for every roll.
+
+\begin{multicols}{2}
+
+\subsection{Body Attributes}\index{Body Attributes}\index{Physical Attributes}
+
+These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
+
+\subsubsection{Strength}
+
+Strength represents a character's muscles -- their ability to endure, to take damage, lift heavy objects, march for long distances and to wield heavy weapons without penalty.
+
+\subsubsection{Speed}
+
+Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run. Since it allows characters to flee dangerous situations, a group can be held back by its slowest member. A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat. Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
+
+\subsubsection{Dexterity}
+
+Dexterity represents someone's hand-eye coordination and natural grace. It's used to dodge, parry, block and also to aim projectile weapons. It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
+
+\subsection{Mind Attributes}
+
+\index{Mind Attributes}Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
+
+\subsubsection{Intelligence}
+
+Intelligent characters understand ideas, remember well and always come prepared. They find their own way home and pick up new languages fluidly. Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
+
+\subsubsection{Wits}
+
+Where intelligence represents how well a character thinks, Wits just tells you how fast they think. The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits. Wits is also the primary Attribute for resisting magical enchantments. Wits is the only Mind Attribute available to animals.
+
+\subsubsection{Charisma}
+
+Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
+
+\end{multicols}
+
+\section{Skills}
+
+\begin{multicols}{2}
+
+
+\iftoggle{verbose}{
+	\index{Skills}Skills define what a character does with most of their time -- what they are practiced in. They are always paired with an Attribute to give a bonus to rolls. We'll go over how to give your new character Skills under the Experience section\footnote{page \pageref{xp}.}. For now, just jot down a few of the Skills you think your character should have so you can see how they work with the basic actions in the next chapter.}{}
+
+A basic Skill grants a +1 bonus to actions where it is used. This is the level of a very basic worker in that field -- those just finishing an apprenticeship in Crafts would have the basic Skill level. Advanced Skills are those with a +2 bonus, indicating an established member of the field. Vigilance +2 might indicate a very shifty and paranoid person, while Athletics +2 would mean the character is persistently practicing new athletic feats. Finally, experts with a score of +3 are very rare. A +3 bonus to Stealth indicates someone who has rare insights and keen instincts when it comes to going unnoticed, while someone with mastery of the Empathy Skill could talk a beggar into giving their hat away.
+
+\subsection{Specialised Skills*}
+
+Some Skills are `Specialised Skills', meaning that they are a broad category for a number of sub-skills. The Craft Skill covers metallurgy, woodcraft, armour making and many more. Anyone taking such Skills gain two Specialisations per level. Using a Skill without the appropriate Specialisation is often impossible (for instance, one cannot use the Performance Skill to play a harp if one has never learned to play a harp) but at other times can be attempted with a -1 penalty. For example, someone attempting to remember a fact about history who has no Academics Skill is at a -1 penalty to the roll. Someone with Academics who specialises in alchemy and politics but not history could attempt the roll without penalty because they gain +1 for having the Academics Skill and -1 for not having the correct specialisation. Finally, an academic with a specialisation in history could attempt the task with a +1 bonus to the roll for having the Skill with the correct specialisation.
+
+Each level of a Skill one has grants 1 Specialisation. For example, someone with Survival 2 might know how to track and build temporary shelters but would count as having Survival 1 when marching.
+
+Each specialization can be used with any other specialized Skill.  If you have a Specialization in swords, bought with the Combat Skill, you can apply that to Crafts.  If your Beast Ken Specialization is in griffins, you can also use this to use when tracking them with the Survival Skill.
+
+All specialist Skills are marked with an asterisk.
+
+\subsection{The List}
+
+Most Skills allow people to perform a range of functions depending upon which Attribute it is paired with. A few examples are given with the list below.
+
+The Skills here are examples, so this is not a complete list.
+If you want Skills not listed, just run them by the \gls{gm} and discuss what kinds of tasks they cover.
+When thinking up a new Skill, try to think about how it would work with each Attribute.
+
+\subsection{Academics*}
+
+\begin{wrapfigure}{R}{.2\textwidth} 
+
+	\begin{tcolorbox}[tabularx={cc},arc=1mm]
+
+		Question & \gls{tn} \\\hline
+
+		Simple & 7 \\
+
+		Difficult & 10 \\
+
+		Obscure & 13 \\
+
+		Secret & 15 \\
+
+		Dangerous & 17 \\
+
+	\end{tcolorbox}
+
+\end{wrapfigure}
+
+The Academics Skill covers a love of learning facts, many of which can be useful.
+Academics study history, architecture, local politics, literature, and (very commonly) how to study more.
+This `study of study', can involve reading, mnemonics, and teaching.
+
+Characters without any levels in Academics are always illiterate, but those \emph{with} some Academics Skill could also be illiterate.
+Various shamans practic memorizing long texts and generally consider books to be a dimwit's crutch.
+
+Academics might be mixed with Charisma for storytelling, Wits to pull out just the right information, Intelligence to write well, or even Strength for a loud speech.
+
+\paragraph{Specialisations} include Mathematics, History, Alchemy, Politics, Biology, Law, Literature and Runelore.
+
+\subsection{Athletics}
+
+This covers all manner of fancy movements, from somersaults and rolling to climbing and circus skills. It might be paired with Dexterity when a character is attempting to roll under then leap over tables or otherwise navigate uneven terrain. For flat-out sprinting, the Speed Attribute is always preferred, while Strength is primary when characters are climbing.
+
+\subsection{Craft*}
+
+The Craft Skill allows players to make and fix things, and occasionally break things.
+Designing new equipment requires an Intelligence roll, while making them requires Dexterity.
+Strength could even be used to govern making simple things (such as a make-shift shelter) with unyielding materials such as green wood.
+
+Using moulds or other pre-set designing materials allows the character to perform the Craft roll as a \gls{restingaction} (see page \pageref{restingactions}) and may provide a bonus to the roll depending upon the quality of tools available.
+
+\paragraph{Specialisations} include metallurgy, leather, locks, armour, weapons, fletchery, wood, traps and stonework.
+
+\subsection{Beast Ken*}
+
+Beast Ken covers training, handling, calming and generally working with animals. It might be paired with Charisma in order to calm down a frightened horse, or with Intelligence in order to guess why a bear is behaving so unusually. Training animals is usually paired with Intelligence, though once the animal is trained, Wits allows a character to effectively give commands.
+
+\paragraph{Specialisations} are the different types of animals: dogs, horses, birds, bears, cats, basilisks and snakes are all possibilities; not all animals can be trained but all of them can be understood.
+
+\subsection{Deceit}
+
+Someone proficient at deception can make others see white as black by sheer confidence. It is often paired with Charisma when creating such lies. At other times, when a quick excuse is needed after a character has been caught with their hand in someone else's pockets, the Wits Attribute can be used to get out of trouble. Complicated lies, having to do with a long series of events or where a character wants to make someone hopelessly confused about the situation, might use one's Intelligence Bonus.
+
+The Deceit Skill does not necessarily have to convey lies -- it's deals with situations that hinge on emphasis without care for truth.
+The Strength Bonus might also be used to intimidate people, whether the character's intentions are in fact vicious or not.
+
+\subsection{Empathy}
+
+The art of understanding people is practiced by kind souls as well as malicious. When paired with Charisma it forms a means of getting people to want things -- or stop wanting them; most often this takes the form of asking someone for help. It is used when characters want a price lowered, or are hoping to get someone to keep the bar open. If, however, the persuasive arguments are not concerned with making someone feel for the character but with the cold hard facts, the Intelligence Attribute is preferred. This might be used to convince someone not to go to war with a neighbouring nation or show how farming more land is not in their own best interest.
+
+Commonly, Empathy is used to spot lies when paired with Wits. Humans are famously bad at this, resulting in wildfires of bogus rumours around human communities, while it can be very difficult to lie to elves.
+
+\subsection{Medicine*}
+
+Medicine is a primitive but effective art, regrettably full of nonsense and superstition, but mandatory when it comes to keeping someone with a serious wound alive.
+The Wits Attribute will allow someone to quickly patch up a bleeding wound, cutting or reducing the number of Fatigue points the bleeding character would otherwise have received.
+\footnote{Fatigue is covered later, on page \pageref{fatigue}.}
+Intelligence is used for creating poisons, or healing the effects of a bad meal.
+
+\paragraph{Specialisations} include bleeding, poisons, narcotics, bones, fatigue and burns.
+
+\subsection{Performance*}
+
+This skill covers every type of instrument, poetry and evocative storytelling. While academics might tell detailed stories which serve to persuade people of things, they are not nearly so entertaining as the dramatic stories told by a true performer. Performance covers dramatic acting, though Deceit still covers any real-world performances.
+
+This will often be paired with Charisma when a performer wants to give off an entertaining performance. More technical pieces might require Dexterity instead. Performers wanting to create new poems, songs or the like add their Intelligence Attribute instead.
+
+\paragraph{Specialisations} include the flute, mandolin, singing, poetry and acting.
+
+\subsection{Larceny}
+
+Larceny is generally mixed with Dexterity for everything for picking pockets to juggling.
+It might also be used with Wits to spot rich pocket to pick, or with Charisma to dazzle someone with a magic trick.
+Characters attempting to spot slight of hand will use Wits + Vigilance.
+
+\subsection{Stealth}
+
+This Skill can be paired with a variety of Attributes.
+Remaining quiet while sneaking through an area could call for a Dexterity and Sneak check while figuring out where in the shadows to best hide could use Intelligence.
+Intelligence might also be used to create a convincing disguise.
+Fitting into a noble soir\'{e}e without an invite and only semi-decent attire could use Charisma.
+In almost all cases, opponents resist with Wits + Vigilance to spot the character or spot the ruse.
+
+\subsection{Survival*}
+
+This covers all manner of skills useful for surviving the outdoors, from building things to forced marching. Endurance based tasks such as long marches or surviving a night on a mountain are covered by Strength. Building a fire in the rain might use Dexterity and tracking should always use Wits. Someone attempting to cover their tracks might resist such rolls with their Dexterity or Intelligence and Stealth added to the \gls{tn} to resist the attempt at tracking.
+
+\paragraph{Specialisations} include marching, fire building, temporary shelters, traps, tracking and foraging.
+
+\subsection{Tactics*}
+
+Tactics allows people to plan concise victories.
+The utility quickly fades when battles become drawn-out and unpredictable, but the initial benefits from going into battle with a good plan are great.
+It can be used to understand why people are employing apparently odd battle-tactics, or uses Charisma to impress people concerning one's military ability.
+
+When going into combat, someone who has time to prepare for a battle by running through instructions with receptive troops gains a bonus to their Initiative equal to their Tactics Skill. This bonus only ever counts for the first \gls{round}.
+
+\paragraph{Specialisations} include massive creatures (5+ Strength), leading many troops (more than 12), leading small forces (between 6 and 12), lone fighting, forests, towns, plains, tunnels.
+
+\subsection{Vigilance}
+
+This is the flip side of a number of Skill related to hiding one's doings or presence.
+It is practiced by guards or the eternally paranoid.
+It is most often rolled with Wits in order to spot people sneaking about, perhaps fingering a purse or sneaking up behind a potential victim to stab them in the back.
+One might also add this Skill to Intelligence to spot important facts written on dungeon walls, or use Strength + Vigilance in order to stay up late, despite being laden with Fatigue, in order to remain alert.
+
+\end{multicols}
+
+\section{Classes}
+
+\begin{multicols}{2}
+
+If you're used to a more class-based system, or just want some suggestions getting started, you can use the following starting defaults.
+An alchemist is just someone with spells, and a rogue is just someone with skills.
+Once the game starts, you can continue with the same concept, or morph the character into something else.
+
+\subsection{Alchemist}\index{Alchemist}
+
+Alchemists start with Academics 1, Invocation 2, Illusion 1 and MP 2.
+If their Intelligence or Wits is below 0 then raise it by one level.
+If not, buy a single 1st level Skill.
+
+Their equipment is a notebook and writing equipment, camping equipment and a quarterstaff.
+They worship C\'{a}l\"{e}.\footnote{See page \pageref{gods_codes} for more on character belief systems.}
+
+\subsection{Bard}\index{Bard}
+
+Bards begin with Performance 2, Academics 1, Empathy 1, Deceit 1, Larceny 1, Vigilance 1 and the first level of the Fate sphere.
+
+Their starting equipment includes partial leather armour, a dagger, an instrument, a longsword, lantern, camping equipment, notebook and writing equipment, and 50' of silk rope.
+They worship Alass\"{e}.
+
+After time spent adventuring, many bards learn Song Magic in order to aid their party.
+
+\subsection{Priest of Laiqu\"{e}}
+
+Priests of Laiqu\"{e} make a good stand-in for druids or witches, given their afinity for animals and ability to shapeshift.
+They begin play with Academics 1, Beast Ken 1, Survival 1, Combat 1, Aldaron 1, Polymorph 1, and 2 \gls{mp}.
+
+Their starting equipment includes partial leather armour, camping equipment, a spear, a dagger, 50' of rope, and 
+
+
+\subsection{Priest of V\'{e}r\"{e}}
+
+Priests of the god of honour begin with Fate 2, Academics 1, Medicine 1 and MP 4.
+
+Their equipment is a quarterstaff, medical equipment, partial chainmail shirt and camping equipment.
+
+After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, while others focus on prayer in order to work miracles.
+
+\subsection{Rogue}\index{Rogue}
+
+Rogues begin with Combat 1, 10 \glspl{fp}, Stealth 2, Larceny 1 and the Knack: Perfect Sneak Attack.
+If they have a Body Attribute at -1, raise it by one level.
+If not, purchase one level of the Deceit Skill.
+
+Their starting equipment is a dagger, Complete leather armour, a longsword, 50' of rope and lockpicking tools.
+If they have the Deceit Skill, they begin play with a throwing dagger.
+They follow the Code of Acquisition.
+
+\subsection{Warrior}\index{Warrior}
+
+Warriors begin play with Combat 2, \gls{fp} 10 and the Knack: Adrenaline Surge.
+If the character has a single Body Attribute below 0 then buy it up a level; otherwise purchase the Tactics Skill at 1st level.
+
+Their starting equipment is partial chainmail, a longsword and a bucklar shield.
+If they start play with the Tactics Skill they also get camping equipment.
+They follow the goddess Ohta.
+
+\subsubsection{Paladin}\index{Paladin}
+
+After progressing, particularly pious fighters can gain a level or two in Fate, allowing them to ask for Divine Guidance, curse enemies, or even gain additional Fate Points before going into battle.
+
+\subsubsection{Ranger}\index{Ranger}
+
+Fighters with an affinity for the wilderness may pick up nature-related abilities, such as talking with animals, or even summoning mists.
+Whether this comes through prayer or inborn abilities which develop over time, a little magic on the side of a character can make for a formidable fighter.
+
+\end{multicols}
+
+
