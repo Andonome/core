@@ -1,19 +1,69 @@
-\documentclass[a4paper,openany]{book}
-\usepackage{glossaries}
+\documentclass[titlepage,a4paper,openany]{book}
+\usepackage[indexonlyfirst]{glossaries}
+\setacronymstyle{short-long-desc}
+\title{BIND}
 
 \input{config/preamble.tex}
 \input{config/monsters.tex}
+\input{glossary.tex}
 
 \settoggle{verbose}{true}
 
 \begin{document}
 
-%\pagenumbering{roman}
+\pagenumbering{roman}
 
 \tableofcontents
 
+\pagebreak[4]
+
+\pagenumbering{arabic}
+
+\iftoggle{verbose}{
+
+\input{intro.tex}
+
+}{}
+
+\input{stories.tex}
+
+\input{cc.tex}
+
+\input{rules.tex}
+
+\input{combat.tex}
+
+\input{gods.tex}
+
+\input{knacks.tex}
+
+\input{paths.tex}
+
+\input{magic.tex}
+
+\iftoggle{verbose}{
+
+\input{races.tex}
+
+\input{gm.tex}
+
+}{}
+
 \pagebreak
 
+\input{appendix.tex}
+
+\printglossary
+
+\printindex
+
+\iftoggle{verbose}{
+
+\input{CS/GS.tex}
+
+}{}
+
+\input{CS/CS.tex}
 
 \end{document}
 
