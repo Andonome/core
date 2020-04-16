@@ -162,12 +162,12 @@ If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
 \index{Hit Points}Each character has a number of HP equal to 6 plus their Strength Bonus. Small gnomes typically have 4 HP while big, strong humans typically have 7. Losing even a single HP means the character has suffered serious Damage. A long fall might have broken the character's bone. A dagger could have slashed open several veins. Characters do not have many HP so losing even one is a serious matter.
 
 \subsubsection{Healing}\index{Healing}
-Characters heal a quarter their Hitpoints each week, rounded up.
+Characters heal a quarter their \gls{hp} each week, rounded up.
 
 \subsubsection{Death}
 \index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive.
 This is rolled at \gls{tn} 4 plus one for every negative HP level.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
-Stronger characters already have more Hitpoints, which has already kept them farther from death.}}{}
+Stronger characters already have more \gls{hp}, which has already kept them farther from death.}}{}
 For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP.
 That makes the \gls{tn} 7 for the Vitality Check.
 
@@ -340,7 +340,11 @@ Characters using a sword and a shield can add the shield's bonus to Evasion to t
 
 Armour defends characters by lowering incoming Damage. In game terms, armours have a \gls{dr} rating which subtracts from Damage.
 
-Armour can cover more or less of a character, and therefore comes with three ratings -- Partial, Complete and very rare Perfect armour. Partial armour covers the basics -- the character's chest and probably head, perhaps a basic arm-guard on top of that. Complete armour covers the full character -- almost. Complete armour, whether leather or plate, will come with a helmet, a neck-guard, gauntlets, shinguards, foot coverings and will overlap to protect the joints. Perfect armour is a rating used for certain creatures which have natural armour without weakspots (such as stone giants).
+Armour can cover more or less of a character, and therefore comes with three ratings -- Partial, Complete and very rare Perfect armour.
+Partial armour covers the basics -- the character's chest and probably head, perhaps a basic arm-guard on top of that.
+Complete armour covers the full character -- almost.
+Complete armour, whether leather or plate, will come with a helmet, a neck-guard, gauntlets, shin guards, foot coverings and will overlap to protect the joints.
+Perfect armour is a rating used for certain creatures which have natural armour without weak spots (such as stone giants).
 
 \subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
 
@@ -448,11 +452,17 @@ At this point you might be wondering how anyone is going to survive past their f
 The mechanism which saves the plot-important character is \glsentrylongpl{fp}.
 Every time someone would lose HP, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
 
-Everyone in the world begins with 5 base \gls{fp}. This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}. The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full alotment of \gls{fp} at the beginning of each adventure. \glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual. As a result, most \glspl{npc} effectively have 0 \gls{fp}. The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} HP.
+Everyone in the world begins with 5 base \gls{fp}.
+This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
+The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full allotment of \gls{fp} at the beginning of each adventure.
+\glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual.
+As a result, most \glspl{npc} effectively have 0 \gls{fp}.
+The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} HP.
 
 \subsection{Regaining Fate Points}
 
-At the end of each Scene, players regenerate 2/5ths of their Fatepoints.  Those with 5 Fatepoints total regenerate 2 temporary Fatepoints, and those with 10 Fatepoints regenerate 4 temporary Fatepoints, and so on.
+At the end of each Scene, players regenerate 2/5ths of their \glspl{fp}.
+Those with 5 \glspl{fp} total regenerate 2 temporary \glspl{fp}, and those with 10 \glspl{fp} regenerate 4 temporary \glspl{fp}, and so on.
 
 While \glspl{npc} begin with 0 \gls{fp}, they too regenerate the normal amount each scene. In this way, an \gls{npc} might accumulate quite a number of \gls{fp}, and when some climactic end scene arises where the \glspl{pc} finally confront them, they will have a harder time of it, because the \gls{npc} has now become plot-important enough to merit some plot immunity, just like them.
 
@@ -511,12 +521,14 @@ Thenton thought for a moment about abandoning Hugi if there was a problem - his 
 
 	The trio climbed for a while longer, looking back every few moments to note how close the hobgoblins were behind them. An ogre was among their ranks, so they must have come from a very deep cavern.
 
-	Looking back, the enemy was nearing and everyone was out of breath. Arneson suggested a rest to make sure they would be ready for the fight - they could fight downhill against an enemy fatigued from walking upwards. He calmly got out the rations - some cheese, smoked pork, oatcakes and a flaggon of wine.
+	Looking back, the enemy was nearing and everyone was out of breath.
+	Arneson suggested a rest to make sure they would be ready for the fight - they could fight downhill against an enemy fatigued from walking upwards.
+	He calmly got out the rations - some cheese, smoked pork, oatcakes and a flagon of wine.
 
 	\noindent\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
 	\label{boris:brawl}
 
-	``May as well have the best of the rations now, eh, friends?'', Arneson said while smiling, and they slowly masticated their age-hardened meal and tried to smile back as the nine foot monstrocity which was so recently a man made its way up to them, pounding its great feet up the mountainous slopes, surrounded by half a dozen hobgoblins, each the size of a broad-shouldered man.
+	``May as well have the best of the rations now, eh, friends?'', Arneson said while smiling, and they slowly masticated their age-hardened meal and tried to smile back as the nine foot monstrosity which was so recently a man made its way up to them, pounding its great feet up the mountainous slopes, surrounded by half a dozen hobgoblins, each the size of a broad-shouldered man.
 
 	As the hobgoblins neared the plateau where the trio sat they began to make their war cries, but Arneson just sat and ate his last oatcake slowly. They began to sprint upwards across the rocky ground.
 
@@ -524,8 +536,8 @@ Thenton thought for a moment about abandoning Hugi if there was a problem - his 
 One of the players must roll Initiative, so Arneson's player take the dice and rolls, producing a `5'.
 Each character's Initiative Bonus adds to this separately, so Thenton's Initiative of +1 gives him a total of 6; Hugi's Initiative of +0 gives him a total of 5 and Arneson's Initiative Bonus of +2 makes his total 7.
 The group then gain +1 each due to the higher ground.
-Meanwhile, the hoboblins have rolled a `5' for their Initiative as well.
-The hoboblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
+Meanwhile, the hobgoblins have rolled a `5' for their Initiative as well.
+The hobgoblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 
 	The \gls{gm} knows the highest Initiative total is somewhere under 9 so she calls out,
 
@@ -716,7 +728,7 @@ A \textit{Ram} action must employ normal movement, and cannot move any character
 When taking someone by surprise, the attacker gains a +4 bonus to the attack and a +2 bonus to Damage. Opponents cannot use any Evasion bonuses from Dexterity, weapon Bonuses or the Combat Skill.
 
 Sneak Attacks also gain a penalty equal to the weapon's \gls{weightrating} (if positive).
-Warhammers are not the best choice for assassination weapons, while daggers and handaxes do much better.
+Warhammers are not the best choice for assassination weapons, while daggers and hand axes do much better.
 
 \subsubsection{Two Weapon Combat}\index{Combat!Two Weapons}
 
@@ -750,7 +762,7 @@ Shields, uniquely, can add their Evasion Bonus to the character's Evasion Factor
 	Thenton, on Initiative 1, is the last to act.
 	He jumps off the cliff-side to attack the last hobgoblin.
 	He strikes with a score of 11, bypassing the ugly creature's Partial chain armour, then rolls $1D6+2$ for the Damage for a total of 4.
-	The creature is reduced to half its hitpoints with a crimson gash across its throat.
+	The creature is reduced to half its \glspl{hp} with a crimson gash across its throat.
 
 	As Thenton's sword swooped down it opened up his target's arm. The last one standing cries out and withdraws his arm then backs off.
 
@@ -898,13 +910,13 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 
 \begin{multicols}{2}
 
-Unsure if your NPCs want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 6.
+Unsure if your \glspl{npc} want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 6.
 
 \moralechart\index{Morale}
 
 Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
 
-The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any NPCs with remaining \glsentrytext{fp}.}
+The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
 
 Morale checks are rolled at \gls{tn} 6 with a character's Combat Skill (or Aggression Skill if the character is an animal). As usual, the \gls{gm} rolls for an entire group with one roll. If the characters have just attacked a group of 10 hobgoblins and injured 3 then the troop will roll at \gls{tn} 6 to see if they should flee, but the injured 3 hobgoblins roll at \gls{tn} 8.
 If the final result is a 7 then the three injured hobgoblins flee, but the rest remain.
@@ -983,7 +995,12 @@ The hobgoblins of course realised that they had no time to reload so they just g
 They dropped their projectiles, pulled out their shortswords and started to clamber along the rocky face of the mountain.
 The trio could not move clearly up the mountain until they had gained some ground between themselves and the hobgoblins, and feared that there would be more openings to once-dwarven tunnels, now infested with hobgoblins, if they went further up from their present location.
 
-	The basic \gls{tn} for such actions is 6 and the \gls{gm} lowers it by 2 because the trio have a good headstart. The hobgoblins add their Speed Bonus of +1 for a final \gls{tn} of 5. The party roll an 8 but unfortunately Hugi isn't the fastest of people - he's only four feet tall after all - so his score is 7. They needed that 8 to completely get away. Arneson and Thenton decide they're going to keep pace with him rather than running ahead. They're not caught yet, but run through three different distinct areas before making another roll.
+	The basic \gls{tn} for such actions is 6 and the \gls{gm} lowers it by 2 because the trio have a good head start.
+	The hobgoblins add their Speed Bonus of +1 for a final \gls{tn} of 5.
+	The party roll an 8 but unfortunately Hugi isn't the fastest of people -- he's only four feet tall after all -- so his score is 7.
+	They needed that 8 to completely get away.
+	Arneson and Thenton decide they're going to keep pace with him rather than running ahead.
+	They're not caught yet, but run through three different distinct areas before making another roll.
 
 The hobgoblins were fast on their trail as they clambered over the rocky mountain side.
 They soon headed up steeper, overhanging rocks and at one point had to help each other upwards across large rocks jutting out of the side as the hobgoblin horde came ever closer.
