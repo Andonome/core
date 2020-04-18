@@ -770,6 +770,21 @@
 {}
 }
 
+\newcommand{\humanbard}{
+	\randomtwo
+\person{1}% STRENGTH
+{\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
+{\arabic{random}}% SPEED
+{{\arabic{random}}% INTELLIGENCE
+{1\addtocounter{random}{1}}% WITS
+{\arabic{random}}}% CHARISMA
+{0}% DR
+{\ifodd\thechapter 4\else 1\fi}% AGGRESSION
+{Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi\ifnum\value{list}>13\ifodd\thechapter\Path{Song}{Illusion \arabic{random}, Fate 2}\fi\fi}% SKILLS
+{\ifnum\value{enc}>5{\shortsword, dagger}\else\ifnum\value{age}>2{\rapier, dagger, }\else\fi\fi \setcounter{gold}{\thepage}\multiply\value{gold} by \value{gold}\divide\value{gold} by 300\addtocounter{gold}{4} \arabic{gold}\ifnum\value{gold}>100 sp\else cp\fi}% EQUIPMENT
+{\ifnum\value{list}>13{\mana{2}}\fi}
+}
+
 \newcommand{\humanalchemist}{
 	\randomthree
 \person{\ifodd\thepage 0 \else 1\fi}% STRENGTH
