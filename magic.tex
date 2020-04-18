@@ -161,7 +161,6 @@ Those affected by the spell make a Wits + Aggression roll, \gls{tn} 7 plus the c
 	\label{roch:light}
 }{}
 
-
 \spell{Plantform}{Continuous}{Survival}\\
 Young plants have a natural destinty.
 With this spell, a plant's destined form can be changed.
@@ -788,6 +787,11 @@ Illusions must be summoned within the normal range of spells, but once summoned 
 
 \spelllevel
 
+\iftoggle{verbose}{
+	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/illusion_trogdor.jpg}
+	\label{roch:light}
+}{}
+
 \spell{Illusion}{Continuous}{Varies}\\
 The illusionist can make anything look like another of roughly the same size.  A fox can look like a dog, a copper coin can look golden, or a gnome can appear like a gnoll.
 
@@ -799,7 +803,9 @@ Anyone touching an illusion finds that it melts in their hands -- a simple hands
 
 Illusionists cover both sound and appearance.  Illusions crafted for sound can change a nearby river to sound like howling wolves, or make someone's voice come out high-pitched.
 
-Illusionists who speak another language can make someone else's speech sound like that language.  If you speak gnomish, your colleagues can be made to sound like they speak gnomish.  Another spell could make a number of gnomes sound like they're speaking in the common tongue.  \footnote{Of course at that point, everyone would understand each other, but have a hard time understanding themselves.}
+Illusionists who speak another language can make someone else's speech sound like that language.
+If you speak gnomish, your colleagues can be made to sound like they speak gnomish.
+Another spell could make a number of gnomes sound like they're speaking in the common tongue.\footnote{Of course at that point, everyone would understand each other, but have a hard time understanding themselves.}
 
 Seeing through an illusion requires a Wits + Vigilance roll, with a \gls{tn} equal to 7 plus the caster's Intelligence and skill (whatever it happens to be).  Alternatively, when a player rolls for an illusion, the \gls{tn} is 7 plus an opponent's Wits + Vigilance.  Having multiple \glspl{tn} can mean some opponents are fooled and some are not.  Anyone specifically looking out for an illusion can gain a +2 Bonus on the roll, or a +4 if they have reason to suspect that the thing in front of them is an illusion.
 
@@ -813,7 +819,10 @@ Similarly, a shortsword could be made to look like a simple dagger, but turning 
 \enhancement{1}{Independent}
 \index{Spell Enhancements!Independent}
 
-Illusions can now be cast without any `base' -- they simply appear on their own.  Coins, dogs, dragons, or more, can be fashioned from nothing.  Independent illusions can continue acting in an intelligent manner without any intervention from the caster.   People's speech can be adjusted to another language long after the illusionist has left, or a rock made to look like a human soldier could continue moving and speaking 
+Illusions can now be cast without any `base' -- they simply appear on their own.
+Coins, dogs, dragons, or more, can be fashioned from nothing.
+Independent illusions can continue acting in an intelligent manner without any intervention from the caster.
+People's speech can be adjusted to another language long after the illusionist has left, or a rock made to look like a human soldier could continue moving and speaking.
 
 \enhancement{1}{Solid}
 \index{Spell Enhancements!Solid}
@@ -1162,14 +1171,14 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 
 \spelllevel
 
-\iftoggle{verbose}{true}{
-\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/polymorph.jpg}
-\label{roch:polymorph}
-}{}
+\spell{Polymorph}{Continuous}{Medicine}
 
-\spell{Polymorph}{Continuous}{Medicine}\\
+\sidejpg{Roch_Hercka/polymorph.jpg}{
+\label{roch:polymorph}}
+
 The basic Polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
 When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
+
 Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.
 Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
 
@@ -1237,7 +1246,7 @@ The Polymorpher can now cross the species boundary, making themself or another t
 
 Alternatively, the Polymorpher can turn an animal into a person.
 This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.
-Such creatures start with Intelligence -5 and Charisma 0.\footnote{The \glsentrytext{gm} is encouraged to change the basic Charisma for various animals, as cats obviously start with +4.}
+Such creatures start with Intelligence -5 and Charisma 0.
 
 This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one.  It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
 
