@@ -155,6 +155,10 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 	\setcounter{secnumdepth}{1}
 }
 
+\newcounter{r2}
+\setcounter{r2}{1}
+\newcounter{r3}
+\setcounter{r3}{2}
 \newcounter{enc}
 \newcounter{list}
 \newcounter{spelllevel}
@@ -263,13 +267,9 @@ Roll & Result \\
 		{\setcounter{age}{\value{random}}}
 }
 
+
 \newcommand{\randomtwo}{
-	\random
-	\whileboolexpr{
-		test {\ifnumcomp{\value{random}}{>}{2}}
-		}
-		{\addtocounter{random}{-2}}
-		{\setcounter{enc}{\value{random}}}
+	\ifnumcomp{\value{r2}}{>}{2}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
