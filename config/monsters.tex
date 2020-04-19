@@ -538,9 +538,9 @@
 	{{3}% INTELLIGENCE
 	{\arabic{random}}% WITS
 	{\ifodd\value{page}-2\else1\fi}}% CHARISMA
-	{4\addtocounter{age}{-5}}{\arabic{age}}{Aggression 2, Projectiles \addtocounter{age}{1}\arabic{age}, Academics \arabic{age}, Athletics 1, Deceit \arabic{age}, Tactics 2, Vigilance 3}{%
+	{4\addtocounter{age}{-5}}{\arabic{age}}{Aggression 2, Projectiles \addtocounter{age}{1}\arabic{age}, Academics \arabic{age}, Athletics 1, Deceit \arabic{age}, Tactics 2, Vigilance 3\knacks{\ifodd\value{chapter}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{age}}{>}{3}{\laststand}{\adrenalinesurge}}\Path{Blood}{Enchantment \addtocounter{random}{-1}\arabic{random}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }}{%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$3D6\times 100$gp, sitting in a lair.}{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{ \arabic{gold}gp in lair in assorted change}{None}}}%
-	{\knacks{\ifodd\value{chapter}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{age}}{>}{3}{\laststand}{\backtothewall, \adrenalinesurge}}\abilities{Flight}\Path{Blood}{Enchantment \addtocounter{random}{-1}\arabic{random}, Invocation \addtocounter{age}{1} \ifnumcomp{\value{age}}{<}{3}{3}{\arabic{age}} }\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
+	{\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
 	}
 
 \newcommand{\dwarventrader}{
