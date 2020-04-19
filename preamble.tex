@@ -159,10 +159,20 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \setcounter{r2}{1}
 \newcounter{r3}
 \setcounter{r3}{2}
+\newcounter{r4}
+\setcounter{r4}{3}
 \newcounter{enc}
 \newcounter{list}
 \newcounter{spelllevel}
 \setcounter{spelllevel}{0}
+
+\newcounter{bestiarychapter}
+\setcounter{bestiarychapter}{0}
+\newcounter{age}
+\setcounter{age}{1}
+\newcounter{gold}
+\setcounter{gold}{0}
+\setcounter{enc}{0}
 
 
 %%%%%%%%%%%%%%%%%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%
@@ -258,24 +268,24 @@ Roll & Result \\
 	\addtocounter{increment}{1}
 }
 
-\newcommand{\randomthree}{
-	\random
-	\whileboolexpr{
-		test {\ifnumcomp{\value{random}}{>}{3}}
-		}
-		{\addtocounter{random}{-3}}
-		{\setcounter{age}{\value{random}}}
-}
-
-
 \newcommand{\randomtwo}{
 	\ifnumcomp{\value{r2}}{>}{2}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}
+\setcounter{enc}{\value{r2}}
+}
+
+\newcommand{\randomthree}{
+	\ifnumcomp{\value{r3}}{>}{3}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}
+\setcounter{age}{\value{r3}}
+}
+
+\newcommand{\randomfour}{
+	\ifnumcomp{\value{r4}}{>}{4}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}
+\setcounter{track}{\value{r4}}
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
-\newcounter{gold}
 
 %%%%% Side Quests
 

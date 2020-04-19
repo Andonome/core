@@ -3,13 +3,6 @@
 % This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
 % If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
 
-\newcounter{bestiarychapter}
-\setcounter{bestiarychapter}{0}
-\newcounter{age}
-\setcounter{age}{1}
-\setcounter{gold}{0}
-\setcounter{enc}{0}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                           _
 % _ __ ___   ___  _ __  ___| |_ ___ _ __
@@ -110,6 +103,7 @@
 \newcommand{\adrenalinesurge}{Adrenaline Surge\addtocounter{strb}{1}\addtocounter{knacks}{1}}
 \newcommand{\furiousblows}{Furious Blows\addtocounter{knacks}{1}}
 \newcommand{\firststrike}{First Strike\addtocounter{spdb}{2}\addtocounter{knacks}{1}}
+\newcommand{\bloodcaster}{Blood Caster\addtocounter{knacks}{1}}
 \newcommand{\combatcaster}{Combat Caster\addtocounter{knacks}{1}}
 \newcommand{\backtothewall}{Back to the Wall\addtocounter{knacks}{1}}
 \newcommand{\laststand}{Last Stand\addtocounter{knacks}{1}}
@@ -454,49 +448,56 @@
 
 \newcommand{\chitincrawler}{
 	\randomtwo
+	\randomthree
 \animal{\ifodd\value{chapter} 4\else 3\fi}% STRENGTH
 {\ifodd\value{page} 1\else 0\fi}% DEXTERITY 
-{\arabic{random}}% SPEED
-{\arabic{random}% WITS
-}{3}% DR
-{4}% AGGRESSION
-{Athletics 2, Survival 1}% SKILLS
+{\arabic{r2}}% SPEED
+{\arabic{r2}}% WITS
+{\arabic{enc}}% DR
+{\ifodd\value{r3} 3\else 4\fi}% AGGRESSION
+{Athletics \arabic{enc}, Survival \arabic{r3}}% SKILLS
 {Web}% ABILITIES
 {}
 }
 %
 \newcommand{\griffin}{
+	\randomtwo
+	\addtocounter{enc}{1}
 \animal{\ifodd\value{page} 2\else \ifodd\value{chapter} 3\else 1\fi\fi}% STRENGTH
 {-2}% DEXTERITY 
 {\ifodd\value{page} 2\else 1\fi}% SPEED
 {2}% WITS
 {0}% DEXTERITY 
 {2}% AGGRESSION
-{Athletics 2, Survival 1\knacks{\charge}}% SKILLS
+{Athletics \arabic{enc}, Survival \arabic{r2}\knacks{\charge}}% SKILLS
 {Flight}% ABILITIES
 {}
 }
 
 \newcommand{\mouthdigger}{
+	\randomtwo
+	\addtocounter{enc}{1}
 \animal{2}% STRENGTH
 {-1}% DEXTERITY 
-{3}% SPEED
+{\arabic{enc}}% SPEED
 {0}% WITS
 {2}% DR
 {2}% AGGRESSION
-{Stealth 2, Tactics 2, \knacks{\firststrike , \adrenalinesurge , \perfectsneakattack}}% SKILLS
+{Stealth \arabic{enc}, Tactics \arabic{r2}, \knacks{\firststrike , \adrenalinesurge , \perfectsneakattack}}% SKILLS
 {None}% ABILITIES
 {}
 }
 %
 \newcommand{\wolf}{
+	\randomtwo
+	\addtocounter{enc}{2}
 \animal{-1}% STRENGTH
 {-1}% DEXTERITY 
-{3}% SPEED
+{\arabic{enc}}% SPEED
 {1}% WITS
 {2}% DR
-{1}% AGGRESSION
-{Athletics 2, Survival 1, Tactics 1}% SKILLS
+{\arabic{r2}}% AGGRESSION
+{Athletics 2, Survival \arabic{enc}, Tactics 1}% SKILLS
 {\teeth}% ABILITIES
 {}
 }
@@ -523,7 +524,7 @@
 	{\arabic{r2}}% SPEED
 	{0}% WITS
 	{4}% DR
-	{2}% AGGRESSION
+	{\ifnumcomp{\thechapter}{>}{7}{3}{2}}% AGGRESSION
 	{Projectiles 1, Athletics 2}% SKILLS
 	{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}% ABILITIES
 	{\knacks{\unstoppable}}
@@ -592,14 +593,40 @@
 	}
 
 \newcommand{\elf}{
-	\randomthree\setcounter{enc}{1}\addtocounter{enc}{-\value{age}}
+	\randomtwo
+	\randomthree
+	\randomfour
+	\setcounter{enc}{1}\addtocounter{enc}{-\value{age}}
 	\person{\value{enc}}%STRENGTH
-	{\value{age}}%DEXTERITY
-	{1}%SPEED
-	{{\arabic{age}}{2}{1}}%MENTAL ATTRIBUTES
-	{0}{\ifodd\value{list}1\else2\fi}%
-	{\ifodd\value{gold}\else Projectiles \arabic{age}, \fi Academics \arabic{age}, Athletics 1, \ifodd \thechapter Crafts \arabic{age}\else Performance \arabic{age}\fi, Stealth 1, Survival 2, Vigilance \arabic{age}\Path{Blood \ifodd\thechapter\else \& Song\fi}{\addtocounter{enc}{1} Aldaron \arabic{random}, \addtocounter{age}{1}Enchantment \arabic{age}}\addtocounter{age}{-1} \ifodd\value{gold}\else Fate \arabic{random}\fi\addtocounter{gold}{1}, \ifodd\value{gold} Polymorph \arabic{age}\else Invocation \arabic{age}\fi}{\ifnumcomp{\value{list}}{>}{10}{\rapier, dagger\ifodd\value{gold}\else, shortbow\fi}{\Dagger} %
-	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$3D6$sp worth of jewellery}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{100}{\divide\value{gold} by 100 \ifnumcomp{\value{enc}}{>}{4}{\arabic{gold} sp worth of earrings and bracelets}{random magical item}}{Ornamental dagger, worth \thepage sp}}{one necklace worth \thechapter sp}}}%
+	{\ifodd\value{r2}\value{age}\else 2\fi}%DEXTERITY
+	{\arabic{r2}}%SPEED
+	{{\arabic{age}}% INTELLIGENCE
+	{\arabic{r2}}% WITS
+	{\ifodd\value{r3}\arabic{r2}\else -1\fi}}% CHARISMA
+	{0}% DR
+	{\ifodd\value{list}1\else2\fi}% COMBAT
+	{\ifodd\value{r2}\else Projectiles \arabic{age}, \fi Academics \arabic{age}, Athletics 1, \ifodd\value{r4} Crafts \arabic{r3}\else Performance \arabic{r3}\fi, Stealth \arabic{r2}, Survival 2, Vigilance \arabic{age}
+	\Path{Blood \ifodd\thepage\else \& Song\fi}%
+	{\ifnumcomp{\value{r4}}{<}{3}%
+		{Aldaron \arabic{age}, }%
+		{\setcounter{track}{\value{r2}}\addtocounter{track}{\value{r3}}Invocation \arabic{track}, \ifnumcomp{\value{track}}{>}{3}{\addtocounter{xpbonus}{\value{track}}}{}}%
+	\ifodd\value{r3}\else Fate \arabic{r2}\fi%
+	\addtocounter{gold}{1}\ifodd\value{gold} Polymorph \arabic{age}\else Enchantment \arabic{age}, \fi}%
+	\ifodd\value{r4} \else\knacks{%
+		\ifodd\value{r2}%
+			\laststand%
+		\else%
+			\firststrike\ifnumcomp{\value{age}}{<}{3}{, \bloodcaster}{}%
+		\fi}\fi
+	}% SKILLS
+	{\ifnumcomp{\value{gold}}{>}{80}{\rapier, dagger, \ifodd\value{gold}\else shortbow, \fi}{\Dagger, }%
+	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
+		{$3D6$sp worth of jewellery}%
+		{\ifodd\value{r2} 
+			\setcounter{gold}{\value{age}}\multiply\value{gold} by \value{page}\addtocounter{gold}{\value{r2}}%
+			\arabic{gold} sp in earrings, bracelets and necklaces, \else%
+			\ifodd\value{r3}50' of rope\fi
+		\fi}}% EQUIPMENT
 	{\multiply\value{age} by 2 \mana{\value{age}}}
 	}
 
@@ -609,8 +636,8 @@
 	{\arabic{enc}}% DEXTERITY 
 	{1}% SPEED
 	{{\arabic{age}}% INTELLIGENCE
-	{\arabic{enc}\addtocounter{random}{1}}% WITS
-	{\arabic{random}}}% CHARISMA
+	{\arabic{enc}\addtocounter{enc}{1}}% WITS
+	{\arabic{enc}}}% CHARISMA
 	{0}% DR
 	{\ifodd\thechapter 0\else 1\fi}% COMBAT
 	{Projectiles 1, Academics 3, Empathy 3, Deceit 3, Performance 3, Stealth 1, Vigilance 2\Path{Blood}{Enchantment 5, Aldaron 4, Metamagic 4, Fate 3, Forces 2, Polymorph 2, Invocation 1}}% SKILLS
@@ -635,18 +662,22 @@
 
 \newcommand{\gnomishillusionist}{
 	\randomtwo\randomthree\addtocounter{random}{1}
-\person{-3}% STRENGTH
-{-2}% DEXTERITY 
-{1}% SPEED
-{{\arabic{random}}% INTELLIGENCE
-{2}% WITS
-{\arabic{enc}}}% CHARISMA
-{0}% DR
-{0}% COMBAT
-{\ifodd\value{page}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc},\fi Deceit \arabic{age},  Stealth \arabic{enc}
-\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{page} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{random}, Metamagic \arabic{age}}}% SKILLS
-{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{Promisary note}{\ifnumcomp{\thechapter}{>}{2}{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \thepage gp}}{Glimmering diamond worth \thepage gp}}{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
-{\mana{6}}
+	\person{-3}% STRENGTH
+	{-2}% DEXTERITY 
+	{1}% SPEED
+	{{\arabic{random}}% INTELLIGENCE
+	{2}% WITS
+	{\arabic{enc}}}% CHARISMA
+	{0}% DR
+	{0}% COMBAT
+	{\ifodd\value{r2}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc},\fi Deceit \arabic{age},  Stealth \arabic{enc}
+	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{random}, Metamagic \arabic{age}}}% SKILLS
+	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
+		{Promisary note}%
+		{\ifnumcomp{\thechapter}{>}{2}%
+			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \thepage gp}}{Glimmering diamond worth \thepage gp}}%
+			{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
+	{\mana{6}}
 }
 
 \newcommand{\humanfarmer}{
