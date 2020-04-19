@@ -42,6 +42,8 @@ Players make randomly generated characters.  This stops the indecision and long 
 
 The book contains decision-based character creation as a set of alternative rules, rather than a default.
 
+<img src="images/Roch_Hercka/five_races.jpg" width="500">
+
 ## Abilities
 
 The abilities are parsimonious, providing the standard inputs and outputs, but with fewer variables.  For example, 'Deceit' is used for both intimidation and lies, depending upon what it's paired with.  This gives Player Characters different scores for intimidating and lying, but with fewer skills to keep track of:
@@ -53,6 +55,8 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 | **Vigilance** +3 | keeping watch all night: 5          | finding a door in the darkness: 2                 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
 
 # Tactics
+
+<img src="images/Roch_Hercka/stances.jpg" width="400">
 
 Combat starts! You can put your combat-points into *Strike* to hit opponents better, or *Evasion* to stay safe.  You decide to go for *Strike* as bandits spring from the bushes, then roll for Initiative.
 
@@ -74,11 +78,15 @@ The round ends, a new one starts, and this time you decide to go defensive.  Onc
 
 As you can see, players roll to defend attacks rather than a GM rolling to attack.  This keep things moving fast, even when there are 6 attackers for every player.
 
+<img src="images/Boris_Pecikozic/nura_brawl.jpg" width="300">
+
 ## Fatepoints
 
 Nobody magically heals, so wounds stick around for the duration of the game.  To level the dangers, players get a number of Fate points, which they can lose instead of hitpoints.  Fate points heal quickly, while Hitpoints do not.
 
 Healing Fate points after an encounter means players don't constantly fear death after a single wound, but still have to carry that wound.  It also provides a plausible fear-mechanic, as players with few Fate points have a good reason to fear for their characters.
+
+<img src="images/Roch_Hercka/vitals_shot.jpg" width="400">
 
 ## Side Quests
 
@@ -104,6 +112,8 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 | 2    | Heal a companion's Fate Points. | Summon mist.  Create blinding light.  Freeze water. |
 | 3    | Request minor divine intervention. Boost someone's luck. |  |
 
+<img src="images/Roch_Hercka/flashing_light.jpg" width="400">
+
 ## Larger World
 
 [Adventures in Fenestra](https://gitlab.com/bindrpg/aif) contains a GM's guide, Bestiary, a setting, and mini-adventures.
@@ -112,11 +122,18 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 
 ## LaTeX
 
-This thing's written in LaTeX, a magical document format where you describe the layout to the computer, then the computer does the layout for you.  Last time this was written the persistent revisions added up to months of formating and reformating.  If you ever need to write a long work involving anything more than a series of words: do yourself a favour and learn LaTeX.  The basics just take an afternoon.
+This thing's written in LaTeX, a magical document format where you describe the layout to the computer, then the computer does the layout for you.
+Last time this was written the persistent revisions added up to months of formatting and reformatting.
+If you ever need to write a long work involving anything more than a series of words: do yourself a favour and learn LaTeX.
+The basics just take an afternoon.
+
+<img src="images/Roch_Hercka/dwarf_encumbrance.jpg" width="400">
 
 ## Art
 
-Did you know that git can diff svg images?  Not only that, with a little feneggling, git can merge two different changes to art.  I can't envision artists getting terribly excited about this, but that's not going to stop me getting excited about it.
+Did you know that git can diff svg images?
+Not only that, with a little finagling, git can merge two different changes to art.
+I can't envision artists getting terribly excited about this, but that's not going to stop me getting excited about it.
 
 ## Joining
 
@@ -126,20 +143,12 @@ You can join by:
 
 - Emailing ideas [here](mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com).
 
-- Playtesting.
+- Posting ideas on the [board](https://gitlab.com/bindrpg/core/issues).
 
-- Feedback on the Latex code.
+- Playtesting.
 
 - Contributing svg art.
 
 - Writing to me, and if you like how the book's going, join as a dev.
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
-
-### Development Levels
-
-1. Easy but slow: Email suggestions in.
-2. Basic effort but slow: Make a Gitlab account and stick issues on the [board](https://gitlab.com/bindrpg/core/issues).  Others can upvote /downvote your issues.
-3. Medium effort, medium speed: use your Gitlab account and enter the IDE. Edit the tex in a branch and make a commit message, explaining why you made those changes. Your name will then be attached to the history forever.
-4. Big effort, extreme speed: Learn git. Make any changes in any editor, push the lot instantly, and pull down a log of anyone's branches or changes instantly.
-
