@@ -269,17 +269,17 @@ Roll & Result \\
 }
 
 \newcommand{\randomtwo}{
-	\ifnumcomp{\value{r2}}{>}{2}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}
+	\ifnumcomp{\value{r2}}{>}{1}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}
 \setcounter{enc}{\value{r2}}
 }
 
 \newcommand{\randomthree}{
-	\ifnumcomp{\value{r3}}{>}{3}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}
+	\ifnumcomp{\value{r3}}{>}{2}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}
 \setcounter{age}{\value{r3}}
 }
 
 \newcommand{\randomfour}{
-	\ifnumcomp{\value{r4}}{>}{4}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}
+	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}
 \setcounter{track}{\value{r4}}
 }
 
