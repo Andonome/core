@@ -170,6 +170,8 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \setcounter{r3}{2}
 \newcounter{r4}
 \setcounter{r4}{3}
+\newcounter{r12}
+\setcounter{r12}{9}
 \newcounter{enc}
 \newcounter{list}
 \newcounter{spelllevel}
@@ -290,6 +292,16 @@ Roll & Result \\
 \newcommand{\randomfour}{
 	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}
 \setcounter{track}{\value{r4}}
+}
+
+\newcommand{\randomdozen}{
+	\randomtwo
+	\randomthree
+	\randomfour
+	\setcounter{r12}{5}
+	\addtocounter{r12}{\value{r2}}
+	\addtocounter{r12}{\value{r3}}
+	\addtocounter{r12}{\value{r4}}
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
