@@ -108,6 +108,8 @@
 \newcommand{\backtothewall}{Back to the Wall\addtocounter{knacks}{1}}
 \newcommand{\laststand}{Last Stand\addtocounter{knacks}{1}}
 \newcommand{\perfectsneakattack}{Perfect Sneak Attack\addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}}
+\newcommand{\snapshot}{Snap Shot\addtocounter{knacks}{1}\addtocounter{strb}{2}}
+\newcommand{\mightydraw}{Mighty Draw\addtocounter{knacks}{1}}
 \newcommand{\unstoppable}{Unstoppable\addtocounter{hp}{1}\addtocounter{knacks}{1}}
 
 \newcommand{\javelin}{Javelin\addtocounter{str}{1}\addtocounter{spd}{2}}
@@ -253,6 +255,8 @@
 \newcommand{\creaturestats}{
 	\vspace{.1cm}
 
+\setcounter{strb}{0}
+
 \iftoggle{mind}{
 \begin{tabularx}{\textwidth}{lrlrlr}
 	Strength & \arabic{str} & Dexterity & \arabic{dex} & Speed & \arabic{spd} \\
@@ -272,7 +276,7 @@
 	\ent{Skills:} & \ifnumcomp{\value{att}}{=}{0}{\setcounter{att}{-1}}{\iftoggle{mind}{Combat \arabic{att}, }{Aggression \arabic{att}, }} \skills \\
 	\iftoggle{mind}{\ent{Equipment:} & \equipment \\}{\ent{Abilities:} & \abilities \\}
 
-	\setcounter{strb}{\value{str}}
+	\addtocounter{strb}{\value{str}}
 	\setcounter{dexb}{\value{dex}}
 	\setcounter{spdb}{\value{spd}}
 	\setcounter{damb}{\value{dam}}
@@ -778,7 +782,7 @@
 {0}% DR
 {\ifodd\thechapter 2 \else 1\fi}% AGGRESSION
 {Beast Ken 1, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}% SKILLS
-{\ifnum\value{age}>8{\greatsword}\else\ifnum\value{age}>4{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$5D6$cp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% ABILITIES
+{\ifodd\value{page}{\greatsword}\else\ifodd\value{age}{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$5D6$cp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% ABILITIES
 {}
 }
 
