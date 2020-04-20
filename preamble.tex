@@ -87,6 +87,15 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \end{wrapfigure}
 }
 
+\newcommand{\sidejpg}[3][5]{
+	\iftoggle{verbose}{
+		\begin{wrapfigure}{O}{.#1\linewidth}
+			\noindent\includegraphics[width=\linewidth]{images/#2}
+		#3
+	\end{wrapfigure}
+}
+}
+
 \colorlet{chapnumcol}{black!55}
 
 \titleformat{\chapter}[display]
@@ -100,7 +109,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 {\Huge}
 
 \titleformat{\section}[frame]
-{\needspace{18em}\normalfont}
+{\needspace{20em}\normalfont}
 {\filright
 \footnotesize
 \enspace SECTION \thesection\enspace}
@@ -181,7 +190,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
-\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\needspace{13em}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
 \newcommand{\magicitem}[7]{\textbf{#1}
 
