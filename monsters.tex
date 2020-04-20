@@ -256,6 +256,7 @@
 	\vspace{.1cm}
 
 \setcounter{strb}{0}
+\setcounter{spdb}{0}
 
 \iftoggle{mind}{
 \begin{tabularx}{\textwidth}{lrlrlr}
@@ -278,7 +279,7 @@
 
 	\addtocounter{strb}{\value{str}}
 	\setcounter{dexb}{\value{dex}}
-	\setcounter{spdb}{\value{spd}}
+	\addtocounter{spdb}{\value{spd}}
 	\setcounter{damb}{\value{dam}}
 	\setcounter{attb}{\value{att}}
 
@@ -414,7 +415,8 @@
 %%                                        
 
 
-\newcommand{\auroch}{
+\newcommand{\auroch}[1][\npc{\C\G}{\arabic{page} Aurochs}]{
+	#1
 \animal{2}% STRENGTH
 {-2}% DEXTERITY 
 {3}% SPEED
@@ -426,7 +428,8 @@
 {\addtocounter{xpbonus}{-4}}
 }
 
-\newcommand{\bear}{
+\newcommand{\bear}[1][\npc{\C}{Bear}]{
+	#1
 \animal{5}% STRENGTH
 {-1}% DEXTERITY 
 {4}% SPEED
@@ -438,7 +441,8 @@
 {}
 }
 %
-\newcommand{\boar}{
+\newcommand{\boar}[1][\npc{\C}{Boar}]{
+	#1
 	\animal{4}% STRENGTH
 {-2}% DEXTERITY 
 {3}% SPEED
@@ -450,7 +454,8 @@
 {}
 }
 
-\newcommand{\chitincrawler}{
+\newcommand{\chitincrawler}[1][\npc{\C}{Chitincrawler}]{
+	#1
 	\randomtwo
 	\randomthree
 	\addtocounter{enc}{2}
@@ -465,7 +470,8 @@
 {}
 }
 %
-\newcommand{\griffin}{
+\newcommand{\griffin}[1][\npc{\C}{\arabic{r3} Griffins}]{
+	#1
 	\randomtwo
 	\addtocounter{enc}{1}
 \animal{\ifodd\value{page} 2\else \ifodd\value{chapter} 3\else 1\fi\fi}% STRENGTH
@@ -479,7 +485,8 @@
 {}
 }
 
-\newcommand{\mouthdigger}{
+\newcommand{\mouthdigger}[1][\npc{\C}{Mouthdigger}]{
+	#1
 	\randomtwo
 	\addtocounter{enc}{1}
 \animal{2}% STRENGTH
@@ -493,21 +500,23 @@
 {}
 }
 %
-\newcommand{\wolf}{
-	\randomtwo
+\newcommand{\wolf}[1][\npc{\C\G}{\randomdozen \arabic{r12} Wolves}]{
+	#1
+	\randomdozen
 	\addtocounter{enc}{2}
 \animal{-1}% STRENGTH
 {-1}% DEXTERITY 
 {\arabic{enc}}% SPEED
 {1}% WITS
-{2}% DR
+{1}% DR
 {\arabic{r2}}% AGGRESSION
 {Athletics 2, Survival \arabic{enc}, Tactics 1}% SKILLS
 {\teeth}% ABILITIES
 {}
 }
 
-\newcommand{\woodspy}{
+\newcommand{\woodspy}[1][\npc{\E}{Woodspy}]{
+	#1
 	\randomthree
 	\randomtwo
 	\addtocounter{enc}{2}
@@ -524,7 +533,8 @@
 {}
 }
 
-\newcommand{\basilisk}{
+\newcommand{\basilisk}[1][\npc{\C}{Basilisk}]{
+	#1
 	\randomthree\addtocounter{age}{5}\randomtwo\addtocounter{r2}{1}
 	\animal{\arabic{age}}% STRENGTH
 	{-2}% DEXTERITY
@@ -538,7 +548,8 @@
 }
 
 %
-\newcommand{\dragon}{
+\newcommand{\dragon}[1][\npc{\E}{Dragon}]{
+	#1
 	\ifnumcomp{\thechapter}{<}{6}{\setcounter{age}{6}}{\ifnumcomp{\thechapter}{>}{9}{\setcounter{age}{7}}{\setcounter{age}{\thechapter}}}
 	\randomtwo
 	\addtocounter{enc}{2}
@@ -553,7 +564,8 @@
 	{\addtocounter{age}{1}\multiply\value{age} by 2 \mana{\arabic{age}}\gdef\armourtype{C}}
 	}
 
-\newcommand{\dwarventrader}{
+\newcommand{\dwarventrader}[1][\npc{\M}{Dwarven Trader}]{
+	#1
 	\randomthree\randomtwo\addtocounter{enc}{-1}
 	\person{\arabic{enc}}% STRENGTH
 	{1}% DEXTERITY
@@ -568,7 +580,9 @@
 	{}
 	}
 %
-\newcommand{\dwarvensoldier}{
+\newcommand{\dwarvensoldier}[1][\npc{\M\G}{\arabic{r12} Dwarven Soldiers}]{
+	#1
+	\randomdozen
 	\randomtwo
 	\person{\arabic{r2}}% STRENGTH
 	{\arabic{enc}}% DEXTERITY
@@ -577,7 +591,8 @@
 	{0}{2}{Crafts 1, Tactics 1}{\greataxe, \completeplate}{\knacks{Chosen Enemy: Goblins}}
 	}
 
-\newcommand{\dwarvenrunemaster}{
+\newcommand{\dwarvenrunemaster}[1][\npc{\M}{Dwarven Runemaster}]{
+	#1
 	\person{0}{1}{0}% PHYSICAL ATTRIBUTES
 	{{\ifodd\value{page}2\else1\fi}% INTELLIGENCE
 	{\ifodd\value{chapter}1\else0\fi}{0}}%  WITS
@@ -586,7 +601,8 @@
 	}
 
 
-\newcommand{\dryad}{
+\newcommand{\dryad}[1][\npc{\E}{Dryad}]{
+	#1
 \randomtwo\addtocounter{enc}{2}\randomthree\addtocounter{age}{1}
 	\person{4}% STRENGTH
 	{\arabic{r2}}% DEXTERITY
@@ -601,7 +617,8 @@
 	{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
 	}
 
-\newcommand{\elf}{
+\newcommand{\elf}[1][\npc{\F}{Elf}]{
+	#1
 	\randomtwo
 	\randomthree
 	\randomfour
@@ -639,7 +656,8 @@
 	{\mana{\value{age}}}
 	}
 
-\newcommand{\elvenenchanter}{
+\newcommand{\elvenenchanter}[1][\npc{\M}{Elven Enchanter}]{
+	#1
 	\randomtwo
 	\randomthree
 	\addtocounter{r3}{1}
@@ -658,7 +676,8 @@
 		{\mana{6}\addtocounter{xpbonus}{5}}
 	}
 
-\newcommand{\gnome}{
+\newcommand{\gnome}[1][\npc{\M}{Wandering Gnome}]{
+	#1
 	\randomtwo
 	\randomthree
 \person{-2}% STRENGTH
@@ -674,7 +693,8 @@
 {}
 }
 
-\newcommand{\gnomishillusionist}{
+\newcommand{\gnomishillusionist}[1][\npc{\M}{Gnomish Illusionist}]{
+	#1
 	\randomtwo\randomthree\addtocounter{age}{1}
 	\person{-3}% STRENGTH
 	{-2}% DEXTERITY 
@@ -694,7 +714,8 @@
 	{\mana{6}}
 }
 
-\newcommand{\humanfarmer}{
+\newcommand{\humanfarmer}[1][\npc{\M}{Farmer}]{
+	#1
 	\randomthree\addtocounter{age}{-2}
 \person{\arabic{age}}% STRENGTH
 {0}% DEXTERITY 
@@ -709,7 +730,8 @@
 {}
 }
 
-\newcommand{\humanmaid}{
+\newcommand{\humanmaid}[1][\npc{\F}{Maid}]{
+	#1
 	\randomthree
 \person{1}% STRENGTH
 {\ifodd \value{age} -1\else1\fi}% DEXTERITY 
@@ -724,7 +746,8 @@
 {}
 }
 
-\newcommand{\humantrader}{
+\newcommand{\humantrader}[1][\npc{\M}{\arabic{r12} Traders}]{
+	#1
 	\randomtwo\addtocounter{enc}{-1}
 \person{\arabic{r2}}% STRENGTH
 {0}% DEXTERITY 
@@ -740,7 +763,8 @@
 {}
 }
 
-\newcommand{\humandiplomat}{
+\newcommand{\humandiplomat}[1][\npc{\M}{Human Diplomat}]{
+	#1
 	\randomtwo\randomthree\addtocounter{age}{-2}\addtocounter{age}{-3}
 \person{1}% STRENGTH
 {\arabic{age}}% DEXTERITY 
@@ -755,7 +779,8 @@
 {}
 }
 
-\newcommand{\humanpriest}{
+\newcommand{\humanpriest}[1][\npc{\F}{Human Priest}]{
+	#1
 	\randomthree
 \person{1}% STRENGTH
 {0}% DEXTERITY 
@@ -770,7 +795,8 @@
 {\mana{\arabic{age}}}
 }
 
-\newcommand{\humansoldier}{
+\newcommand{\humansoldier}[1][\npc{\M\F\G}{\arabic{r12} Soldiers}]{
+	#1
 	\randomtwo
 	\addtocounter{enc}{1}
 \person{\arabic{enc}}% STRENGTH
@@ -786,7 +812,8 @@
 {}
 }
 
-\newcommand{\humanarcher}{
+\newcommand{\humanarcher}[1][\npc{\M}{\arabic{r12} Archers}]{
+	#1
 	\randomtwo
 \person{2}% STRENGTH
 {1}% DEXTERITY 
@@ -801,7 +828,8 @@
 {}
 }
 
-\newcommand{\humanthief}{
+\newcommand{\humanthief}[1][\npc{\M}{Thief}]{
+	#1
 	\randomtwo
 \person{1}% STRENGTH
 {\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
@@ -812,11 +840,21 @@
 {0}% DR
 {\ifodd\thechapter 2 \else 1\fi}% AGGRESSION
 {Athletics 2, Deceit \ifodd\thepage 2 \else 1\fi, Tactics 1}% SKILLS
-{\ifnum\value{enc}>5{\shortsword, dagger}\else\ifnum\value{age}>2{\rapier, dagger}\else{\longsword}\fi\fi \ifnum\value{age}=3\partialleather \fi \setcounter{gold}{\thepage}\divide\value{gold} by 4\addtocounter{gold}{3}, \arabic{gold}cp}% EQUIPMENT
+{\ifnum\value{enc}>5%
+	{\shortsword, dagger, }
+	\else\ifnum\value{age}>2%
+		{\rapier, dagger, }%
+		\else{\longsword}%
+	\fi\fi%
+	\ifnum\value{age}=3%
+		\partialleather, %
+	\fi%
+\setcounter{gold}{\thepage}\divide\value{gold} by 4\addtocounter{gold}{3}\arabic{gold}cp}% EQUIPMENT
 {}
 }
 
-\newcommand{\humanbard}{
+\newcommand{\humanbard}[1][\npc{\F}{Bard}]{
+	#1
 	\randomtwo
 	\randomthree
 \person{1}% STRENGTH
@@ -828,11 +866,17 @@
 {0}% DR
 {\ifodd\thechapter 4\else 1\fi}% AGGRESSION
 {Academics \arabic{r2}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi\ifnum\value{list}>13\ifodd\thechapter\Path{Song}{Illusion \arabic{r2}, Fate 2}\fi\fi}% SKILLS
-{\ifnum\value{enc}>5{\shortsword, dagger}\else\ifnum\value{age}>2{\rapier, dagger, }\else\fi\fi \setcounter{gold}{\thepage}\multiply\value{gold} by \value{gold}\divide\value{gold} by 300\addtocounter{gold}{4} \arabic{gold}\ifnum\value{gold}>100 sp\else cp\fi}% EQUIPMENT
+{\ifnum\value{enc}>5%
+	{\shortsword, dagger, }%
+	\else\ifnum\value{age}>2%
+		{\rapier, dagger, }%
+		\else\fi\fi
+	\setcounter{gold}{\thepage}\multiply\value{gold} by \value{gold}\divide\value{gold} by 300\addtocounter{gold}{4} \arabic{gold}\ifnum\value{gold}>100 sp\else cp\fi}% EQUIPMENT
 {\ifnum\value{list}>13{\mana{2}}\fi}
 }
 
-\newcommand{\humanalchemist}{
+\newcommand{\humanalchemist}[1][\npc{\M}{The Alchemist}]{
+	#1
 	\randomthree
 \person{\ifodd\thepage 0 \else 1\fi}% STRENGTH
 {0}% DEXTERITY 
@@ -847,7 +891,8 @@
 {\mana{4}\lockedmana{\value{r2}}}
 }
 
-\newcommand{\gnollhunter}{
+\newcommand{\gnollhunter}[1][\npc{\M\G}{\arabic{r12} Gnoll Hunters}]{
+	#1
 	\randomtwo\addtocounter{enc}{1}
 \person{\arabic{enc}}% STRENGTH
 {\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
@@ -860,9 +905,10 @@
 {Aggression 2, Projectiles 1, Survival 3\knacks{\adrenalinesurge}}% SKILLS
 {\spear}% EQUIPMENT
 {}
-	}
+}
 
-\newcommand{\gnollshaman}{
+\newcommand{\gnollshaman}[1][\npc{\F}{Gnoll Shaman}]{
+	#1
 	\randomthree\addtocounter{age}{-1}
 	\randomtwo
 	\addtocounter{age}{1}
@@ -879,7 +925,8 @@
 {\mana{4}}
 }
 
-\newcommand{\nuracat}{
+\newcommand{\nuracat}[1][\npc{\C\N}{Nura Cat}]{
+	#1
 	\randomtwo
 	\animal{\arabic{r2}}% STRENGTH
 	{2\addtocounter{enc}{3}}% DEXTERITY
@@ -891,7 +938,8 @@
 	{\claws}{}
 	}
 
-\newcommand{\nuracrab}{
+\newcommand{\nuracrab}[1][\npc{\C\N}{Nura Crab}]{
+	#1
 \randomthree\addtocounter{age}{1}
 \animal{\arabic{age}}% STRENGTH
 {-2}% DEXTERITY 
@@ -904,7 +952,8 @@
 {}
 	}
 
-\newcommand{\nurahorse}{
+\newcommand{\nurahorse}[1][\npc{\C\N}{Nura Horse}]{
+	#1
 \animal{2}% STRENGTH
 {1}% DEXTERITY 
 {2}% SPEED
@@ -916,7 +965,8 @@
 {}
 }
 
-\newcommand{\nuraslug}{
+\newcommand{\nuraslug}[1][\npc{\C\N\G}{\arabic{r12} Nura Slugs}]{
+	#1
 	\randomtwo\addtocounter{enc}{-2}
 \animal{\arabic{enc}}% STRENGTH
 {-1}% DEXTERITY 
@@ -929,7 +979,8 @@
 {\addtocounter{str}{1}}
 }
 
-\newcommand{\nuraspider}{
+\newcommand{\nuraspider}[1][\npc{\C\N}{Nura Spider}]{
+	#1
 \animal{4}% STRENGTH
 {2}% DEXTERITY 
 {3}% SPEED
@@ -941,7 +992,8 @@
 {}
 }
 
-\newcommand{\nurawoodspy}{
+\newcommand{\nurawoodspy}[1][\npc{\E\N}{Nura Woodspy}]{
+	#1
 	\randomtwo
 	\randomthree
 	\addtocounter{enc}{2}
@@ -957,7 +1009,8 @@
 {}
 }
 
-\newcommand{\nurawolf}{
+\newcommand{\nurawolf}[1][\npc{\C\N}{\arabic{r12} Nura Wolves}]{
+	#1
 \animal{1}% STRENGTH
 {1}% DEXTERITY 
 {3}% SPEED
@@ -969,10 +1022,10 @@
 {}
 }
 
-
 %%%%%%%%%% NURA %%%%%%%%%%
 
-\newcommand{\goblin}{
+\newcommand{\goblin}[1][\npc{\M\N}{\arabic{r12} Goblins}]{
+	#1
 \person{-1}% STRENGTH
 {\ifodd\thepage 2\else 1\fi}% DEXTERITY 
 {0}% SPEED
@@ -986,7 +1039,8 @@
 {}
 }
 
-\newcommand{\undeadgoblin}{
+\newcommand{\undeadgoblin}[1][\npc{\U\G}{\arabic{r12} Undead Hobgoblins}]{
+	#1
 \randomtwo\addtocounter{enc}{-2}
 \animal{\arabic{enc}}% STRENGTH
 {-2}% DEXTERITY 
@@ -999,7 +1053,8 @@
 {}
 }
 
-\newcommand{\deepgoblin}{
+\newcommand{\deepgoblin}[1][\npc{\N\G}{\arabic{r12} Goblins}]{
+	#1
 	\randomtwo\addtocounter{enc}{-2}
 \person{\arabic{enc}}% STRENGTH
 {2}% DEXTERITY 
@@ -1014,7 +1069,8 @@
 {}
 }
 
-\newcommand{\goblinnuramancer}{
+\newcommand{\goblinnuramancer}[1][\npc{\F\N}{Goblin Nuramancer}]{
+	#1
 \randomtwo
 \person{-2}% STRENGTH
 {2}% DEXTERITY 
@@ -1029,7 +1085,8 @@
 {\mana{4}}
 }
 
-\newcommand{\hobgoblin}{
+\newcommand{\hobgoblin}[1][\npc{\G\M\N}{\arabic{r12} Hobgoblins}]{
+	#1
 \person{1}% STRENGTH
 {2}% DEXTERITY 
 {0}% SPEED
@@ -1043,7 +1100,8 @@
 {}
 }
 
-\newcommand{\deephobgoblin}{
+\newcommand{\deephobgoblin}[1][\npc{\G\N}{\arabic{r12} Hobgoblins}]{
+	#1
 \person{1}% STRENGTH
 {2}% DEXTERITY 
 {0}% SPEED
@@ -1057,7 +1115,8 @@
 {}
 }
 
-\newcommand{\undeadhobgoblin}{
+\newcommand{\undeadhobgoblin}[1][\npc{\U\G}{\arabic{r12} Undead Hobgoblins}]{
+	#1
 \animal{1}% STRENGTH
 {0}% DEXTERITY 
 {-1}% SPEED
@@ -1069,7 +1128,8 @@
 {}
 }
 
-\newcommand{\sentientundeadhobgoblin}{
+\newcommand{\sentientundeadhobgoblin}[1][\npc{\U\G}{\arabic{r12} Sentient Undead Hobgoblins}]{
+	#1
 \randomtwo
 \person{\arabic{r2}}% STRENGTH
 {-1}% DEXTERITY 
@@ -1078,13 +1138,14 @@
 {0}% WITS
 {-5}}% CHARISMA
 {2}% DR
-{1}% AGGRESSION
+{1}% COMBAT
 {Aggression 2, Crafts 2, Tactics 1}% SKILLS
 {None}% EQUIPMENT
 {}
 }
 
-\newcommand{\ogre}{
+\newcommand{\ogre}[1][\npc{\F\N}{Ogre}]{
+	#1
 	\randomthree\addtocounter{age}{3}
 \person{\arabic{age}}% STRENGTH
 {0}% DEXTERITY 
@@ -1099,7 +1160,8 @@
 {}
 }
 
-\newcommand{\undeadogre}{
+\newcommand{\undeadogre}[1][\npc{\U\N}{Undead Ogre}]{
+	#1
 	\animal{6}% STRENGTH
 	{-2}% DEXTERITY
 	{0}% SPEED
@@ -1111,7 +1173,8 @@
 	{}%
 }
 
-\newcommand{\ghoul}{
+\newcommand{\ghoul}[1][\npc{\U\G}{\arabic{r12} Ghouls}]{
+	#1
 \randomtwo
 \animal{\arabic{enc}}% STRENGTH
 {-2}% DEXTERITY 
@@ -1124,7 +1187,8 @@
 {}
 }
 
-\newcommand{\ghast}{
+\newcommand{\ghast}[1][\npc{\U}{Ghast}]{
+	#1
 \randomtwo\addtocounter{enc}{1}
 \person{\arabic{enc}}% STRENGTH
 {2}% DEXTERITY 
@@ -1140,7 +1204,8 @@
 {}
 }
 
-\newcommand{\demilich}{
+\newcommand{\demilich}[1][\npc{\U\E}{Demilich}]{
+	#1
 \randomtwo
 \person{\arabic{enc}}% STRENGTH
 {-1}% DEXTERITY 
@@ -1155,7 +1220,9 @@
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
-\newcommand{\lich}{
+\newcommand{\lich}[1][\npc{\U}{Lich}]{
+	#1
+	\randomtwo
 \person{1}% STRENGTH
 {-2}% DEXTERITY 
 {-2}% SPEED
@@ -1163,16 +1230,20 @@
 {1}% WITS
 {-5}}% CHARISMA
 {2}% DR
-{1}% AGGRESSION
+{\arabic{r2}}% COMBAT
 {Aggression 2, Projectiles 2, Academics 3, Deceit 2, Medicine 3, Vigilance 2\Path{Devotion (Qualme)}{Aldaron 3, Invocation 3, Metamagic 4, Necromancy 5}}% SKILLS
 {\Dagger, embalmed hand of a king; capable of dealing $1D6+3$ direct HP Damage to anyone who strike the lich.}% EQUIPMENT
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
-\newcommand{\jelly}{
-\animal{-1}% STRENGTH
+\newcommand{\jelly}[1][\npc{\C}{Acidic Ooze}]{
+	#1
+	\randomfour
+	\randomthree
+	\addtocounter{age}{-2}
+\animal{\arabic{r4}}% STRENGTH
 {2}% DEXTERITY 
-{-2}% SPEED
+{\arabic{age}}% SPEED
 {-3}% WITS
 {6}% DR
 {2}% AGGRESSION
@@ -1181,8 +1252,9 @@
 {\addtocounter{xpbonus}{2}}
 }
 
-\newcommand{\umberhulk}{
-	\randomtwo\addtocounter{enc}{4}
+\newcommand{\umberhulk}[1][\npc{\C}{Umber Hulk}]{
+	#1
+	\randomtwo\addtocounter{enc}{3}
 	\randomthree 
 \animal{\arabic{enc}}% STRENGTH
 {\ifodd\thechapter -1\else 0\fi\randomthree }% DEXTERITY 
@@ -1195,7 +1267,8 @@
 {}
 }
 
-\newcommand{\horse}{
+\newcommand{\horse}[1][\npc{\C}{Horse}]{
+	#1
 	\randomtwo
 	\addtocounter{enc}{1}
 \animal{\arabic{enc}}% STRENGTH
@@ -1209,7 +1282,8 @@
 {}
 }
 
-\newcommand{\warhorse}{
+\newcommand{\warhorse}[1][\npc{\C}{War Horse}]{
+	#1
 \animal{3}% STRENGTH
 {0}% DEXTERITY 
 {4}% SPEED
@@ -1221,7 +1295,8 @@
 {}
 }
 
-\newcommand{\huntingdog}{
+\newcommand{\huntingdog}[1][\npc{\C\G}{\randomfour\addtocounter{track}{2}\arabic{track} Hunting Dogs}]{
+	#1
 	\randomtwo
 	\addtocounter{enc}{-2}
 \animal{-2}% STRENGTH
@@ -1235,7 +1310,8 @@
 {}%
 }
 
-\newcommand{\rockman}{
+\newcommand{\rockman}[1][\npc{\E}{Rock Man}]{
+	#1
 \randomtwo
 \randomthree\ifodd\value{page}\addtocounter{age}{3}\else\addtocounter{age}{4}\fi\addtocounter{enc}{-4}
 \person{\arabic{age}}% STRENGTH
@@ -1251,7 +1327,8 @@
 {}
 }
 
-\newcommand{\lavaman}{
+\newcommand{\lavaman}[1][\npc{\E}{Lavaman}]{
+	#1
 \person{7}% STRENGTH
 {0}% DEXTERITY 
 {0}% SPEED
@@ -1265,7 +1342,8 @@
 {}
 }
 
-\newcommand{\archmage}{
+\newcommand{\archmage}[1][\npc{\E}{Archmage}]{
+	#1
 	\randomtwo\addtocounter{enc}{3}\randomthree
 \person{-5}% STRENGTH
 {-2}% DEXTERITY 
@@ -1280,7 +1358,8 @@
 {\addtocounter{sp}{20}\mana{8}\addtocounter{xpbonus}{4}}
 }
 
-\newcommand{\watcher}{
+\newcommand{\watcher}[1][\npc{\C}{Watcher}]{
+	#1
 \animal{-3}% STRENGTH
 {-2}% DEXTERITY 
 {-2}% SPEED
