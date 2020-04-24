@@ -166,8 +166,12 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 \newcounter{r2}
 \setcounter{r2}{1}
+\newcounter{r2b}
+\setcounter{r2}{2}
 \newcounter{r3}
 \setcounter{r3}{2}
+\newcounter{r3b}
+\setcounter{r3}{3}
 \newcounter{r4}
 \setcounter{r4}{3}
 \newcounter{r12}
@@ -284,9 +288,17 @@ Roll & Result \\
 \setcounter{enc}{\value{r2}}
 }
 
+\newcommand{\randomtwoB}{
+	\ifnumcomp{\value{r2b}}{>}{1}{\setcounter{r2b}{1}}{\addtocounter{r2b}{1}}
+}
+
 \newcommand{\randomthree}{
 	\ifnumcomp{\value{r3}}{>}{2}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}
-\setcounter{age}{\value{r3}}
+	\setcounter{age}{\value{r3}}
+}
+
+\newcommand{\randomthreeB}{
+	\ifnumcomp{\value{r3b}}{>}{2}{\setcounter{r3b}{1}}{\addtocounter{r3b}{1}}
 }
 
 \newcommand{\randomfour}{
