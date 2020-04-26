@@ -196,7 +196,8 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
-\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\needspace{13em}\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\needspace{11em}%
+\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
 \newcommand{\magicitem}[7]{\textbf{#1}
 
