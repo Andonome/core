@@ -582,7 +582,7 @@ The character requests guidance about the future and receives a cryptic message 
 The \gls{gm} should roll for the player so the player is unsure how accurate the information is.
 
 The \gls{gm} might create some riddle, or describe a prophetic vision.
-Alternatively, if the Encounters or Side Quests systems are being used, the \gls{gm} may choose to describe an upcoming encounter or read out upcoming boxtext.\footnote{See pages \pageref{encounters} and \pageref{sidequests} respectively.}
+Alternatively, if the Encounters or Side Quests systems are being used, the \gls{gm} may choose to describe an upcoming encounter or read out upcoming boxtext.\iftoggle{verbose}{\footnote{See pages \pageref{encounters} and \pageref{sidequests} respectively.}}{}
 If it succeeds, boxtext or encounters can be taken from a different area, or a later encounter.
 And if the roll succeeds with a Margin of 4 or more, the player can elect a specific area to receive the boxtext from.
 If the roll fails, the \gls{gm} can create misleading information.
@@ -1101,6 +1101,8 @@ The creatures begin with Intelligence -2, Wits equal to -2 plus $1D6$, and Chari
 
 The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can decide where one of the target's Skill points are placed.  The \gls{gm} decides places the rest of the creature's points.
 
+\iftoggle{verbose}{
+
 \begin{exampletext}
 
 	When he was younger, Hugi witnesses his uncle torn apart by a terrible spirit.  His uncle thought to contain it in a small creature, so he summoned the all powerful creature into the body of a little gnome.
@@ -1114,6 +1116,7 @@ The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can de
 	Hugi decided never to entertain learning necromantic rune magic after that day.
 
 \end{exampletext}
+}{}
 
 \enhancement{1}{Greater}
 \index{Spell Enhancements!Greater}
@@ -1177,11 +1180,14 @@ Spotting someone who has been transformed requires a Wits + Empathy roll, with a
 
 Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.  The undead are completely immunte to the Polymorph sphere.
 
+\iftoggle{verbose}{
+
 \begin{exampletext}
 
 	Meldon the elf has 5 HP. He takes 3 HP Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions. He then transforms himself into a bird, lowering to 2 HP. He now has zero Damage but retains his -1 penalty due to Fatigue. After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his HP increases to the point where they can affect him.
 
 \end{exampletext}
+}{}
 
 As Polymorph changes people's form it also changes Strength and therefore HP maximums.
 All HP lost to Damage remain as lost HP after transformation but might not have any effect.
