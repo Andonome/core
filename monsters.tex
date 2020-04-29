@@ -676,7 +676,7 @@
 	\Path{Blood \ifodd\thepage\else \& Song\fi}%
 	{\ifnumcomp{\value{r4}}{<}{3}%
 		{Aldaron \arabic{r3}, }%
-		{Invocation \arabic{r3b}}%
+		{Invocation \arabic{r3b}, }%
 	\ifodd\value{r3}\else Fate \arabic{r2}\fi%
 	\addtocounter{gold}{1}\ifodd\value{gold} Polymorph \arabic{r2b}\else Enchantment \arabic{age}, \fi}%
 	\ifodd\value{r4} \else\knacks{%
@@ -1280,14 +1280,16 @@
 {0}% DR
 {\arabic{r2b}}% AGGRESSION
 {Beast Ken \arabic{r2}, \ifodd\value{r2}Crafts \else Tactics \fi \arabic{r2}}% SKILLS
-{\ifodd\value{r3}
+{\ifodd\value{r2}
 	\greatclub
 \else
-	\ifodd\value{r2}
-		\greatclub
+	\ifodd\value{r3}
+		\greatsword
+	\else
+		Nothing.
 	\fi
 \fi
-\greatclub\ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}% EQUIPMENT
+\ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}% EQUIPMENT
 {}
 }
 
