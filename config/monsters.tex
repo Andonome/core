@@ -861,6 +861,7 @@
 \newcommand{\humansoldier}[1][\npc{\M\F\G}{\arabic{r12} Soldiers}]{
 	#1
 	\randomtwo
+	\randomthree
 	\addtocounter{enc}{1}
 \person{\arabic{enc}}% STRENGTH
 {\ifodd\thepage 0 \else 1\fi}% DEXTERITY 
@@ -895,26 +896,33 @@
 \newcommand{\humanthief}[1][\npc{\M}{Thief}]{
 	#1
 	\randomtwo
+	\addtocounter{enc}{-1}
 	\multiply\value{enc} by -1
+	\randomtwoB
+	\randomthree
+	\randomthreeB
+	\addtocounter{age}{-1}
+	\randomfour
+	\addtocounter{track}{-2}
 \person{1}% STRENGTH
-{\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
-{\arabic{r3}}% SPEED
+{\arabic{r2}}% DEXTERITY 
+{\arabic{age}}% SPEED
 {{0}% INTELLIGENCE
 {\arabic{r2b}}% WITS
-{\arabic{enc}}}% CHARISMA
+{\arabic{track}}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Athletics \arabic{r2}, Deceit \arabic{r2b}, Tactics 1}% SKILLS
-{\ifnum\value{enc}>5%
+{Athletics \arabic{r2}, Deceit \arabic{r2b}, \ifodd\value{r3}Tactics 1\fi}% SKILLS
+{\ifnum\value{enc}>0%
 	{\shortsword, dagger, }
-	\else\ifnum\value{age}>2%
+	\else\ifnum\value{r2b}>1%
 		{\rapier, dagger, }%
-		\else{\longsword}%
+		\else{\shortsword, }%
 	\fi\fi%
-	\ifnum\value{age}=3%
+	\ifnum\value{r4}=1%
 		\partialleather, %
 	\fi%
-\setcounter{gold}{\thepage}\divide\value{gold} by 4\addtocounter{gold}{3}\arabic{gold}cp}% EQUIPMENT
+\setcounter{gold}{\thepage}\multiply\value{gold} by \value{r3}\addtocounter{gold}{3}\arabic{gold}cp}% EQUIPMENT
 {}
 }
 
