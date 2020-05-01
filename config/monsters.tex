@@ -113,6 +113,8 @@
 \newcommand{\mightydraw}{Mighty Draw\addtocounter{knacks}{1}}
 \newcommand{\unstoppable}{Unstoppable\addtocounter{hp}{1}\addtocounter{knacks}{1}}
 
+%%%%% Weapons
+
 \newcommand{\javelin}{Javelin\addtocounter{str}{1}\addtocounter{spd}{2}}
 \newcommand{\Dagger}{Dagger\addtocounter{str}{1}}
 \newcommand{\shortsword}{Shortsword\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}}
@@ -126,6 +128,7 @@
 \newcommand{\woodaxe}{Wood axe\addtocounter{str}{2}\addtocounter{spd}{0}\addtocounter{dex}{1}}
 \newcommand{\greatclub}{Greatclub\addtocounter{str}{4}\addtocounter{spd}{1}\addtocounter{dex}{1}}
 \newcommand{\longbow}{Longbow}
+\newcommand{\shield}{\addtocounter{dex}{1}shield}
 
 % ARMOUR
 \newcommand{\partialleather}{partial leather armour \addtocounter{dr}{3}}
@@ -862,18 +865,38 @@
 \newcommand{\humansoldier}[1][\npc{\M\F\G}{\arabic{r12} Soldiers}]{
 	#1
 	\randomtwo
-	\randomthree
 	\addtocounter{enc}{1}
+	\randomthree
+	\randomfour
 \person{\arabic{enc}}% STRENGTH
-{\ifodd\thepage 0 \else 1\fi}% DEXTERITY 
+{\arabic{r2b}}% DEXTERITY 
 {\arabic{r2}}% SPEED
 {{0}% INTELLIGENCE
 {-1}% WITS
 {0}}% CHARISMA
 {0}% DR
-{\ifodd\thechapter 2 \else 1\fi}% AGGRESSION
-{Beast Ken 1, Survival \ifodd\thechapter 2 \else 1\fi, Tactics 1}% SKILLS
-{\ifodd\value{page}{\greatsword}\else\ifodd\value{age}{\longsword}\else{\greataxe}\fi\fi, \ifnum\value{age}=3\partialleather\else\partialchain\fi, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{$5D6$cp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% ABILITIES
+{\arabic{r2b}}% COMBAT
+{\ifodd\value{r3}Beast Ken\else Survival\fi \arabic{r2}, Tactics \arabic{r2b}}% SKILLS
+{\ifodd\value{enc}%
+	{\greatsword}%
+\else%
+	\ifodd\value{age}%
+		{\longsword}%
+	\else%
+		{\shortsword}%
+	\fi%
+\fi, %
+\ifodd\value{r4}
+	\shield, 
+\fi
+\ifnum\value{r3}=3%
+	\partialleather%
+\else%
+	\partialchain%
+\fi, %
+\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
+	{$5D6$cp}%
+	{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% EQUIPMENT
 {}
 }
 
