@@ -475,14 +475,42 @@ One exception here is creatures without a Charisma Attribute. Animals, undead an
 
 \section{Fatigue}
 
+\newcommand{\fatiguechart}{
+
+	\begin{tcolorbox}[title={Fatigue Chart},arc=1mm,tabularx={lX}]
+		Action & Fatigue \\\hline
+
+		Armour & Wearing armour inflicts 1 Fatigue per \gls{weightrating} of the armour. \\
+
+		Bleeding & 1 Fatigue point per slashing damage. \\
+
+		Climbing & 2 Fatigue per square. \\
+
+		Fighting & Each round inflicts 1 Fatigue Point. \\
+
+		Holding Breath & 2 Fatigue per round. \\
+
+		Marching & 1 Fatigue point per mile. \\
+
+		Starving & Each meal skipped inflicts 1 Fatigue plus half the character's Strength Bonus (rounded up). \\
+
+		Swimming & Each square swum inflicts 1 Fatigue. \\
+
+	\end{tcolorbox}
+
+}
+
 \begin{multicols}{2}
 
 \label{fatigue}\index{Fatigue}
 \noindent
 Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
-Characters gain Fatigue points for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
+Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
-Below the character's HP bar are spaces for Fatigue Points to be gained. Once the character has more Fatigue Points than their current HP, they take a -1 penalty for every Fatigue Point in excess of their HP.  This might happen because the character has, say, 6 HP but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions. But it might also occur because the character has 4 Fatigue Points and then Damage reduces their to only 2 HP, leaving them with a -2 penalty to all actions yet again.
+Below the character's \gls{hp} bar are spaces for Fatigue Points to be gained.
+Once the character has more Fatigue Points than their current \glspl{hp}, they take a -1 penalty for every Fatigue Point in excess of their \glspl{hp}.
+ This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions.
+But it might also occur because the character has 4 Fatigue Points and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
 Characters may reach a maximum penalty of -5 due to Fatigue Points, after which they die. If the character is accruing Fatigue Points from running or wrestling, they would normally simply pass out at this point, but if they are gaining Fatigue from swimming or bleeding, the character will almost certainly just die.
 
@@ -490,32 +518,33 @@ Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their 
 
 \subsection{Gaining Fatigue}
 
-\paragraph{Bleeding} If the character has lost HP to piercing or slashing weapons they should gain Fatigue Points equal to the number of HP lost. These Fatigue Points are marked with a `B' instead of the usual dash across a box and are healed at a rate of one per day rather than the usual, faster rate. If the bleeding is not stopped, the character should bleed for the same number of points \ minus one on the next scene until they are dead or the bleeding has stopped on its own. The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
+Fatigue is gained extremely quickly, for all manner of reasons.
+However, it is only applied at the end of the scene.
+Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
+The real danger in Fatigue is persistent action, when characters have no chance to recover from a previous battle.
 
-\paragraph{Climbing} Every 2 squares climbed upward inflicts 1 Fatigue Point.
+\fatiguechart
 
-\paragraph{Encumbrance} Each point of Encumbrance inflicts 1 Fatigue Point at the end of the scene.
+\paragraph{Bleeding} occurs when a character has lost \glspl{hp} to piercing or slashing weapons.
+They then gain Fatigue Points equal to the number of \glspl{hp} lost.
+These Fatigue Points are marked with a `$B$' instead of the usual dash across a box and are healed at a rate of one per day rather than the usual, faster rate.
+If the bleeding is not stopped, the character should bleed for the same number of points minus one on the next scene until they are dead or the bleeding has stopped on its own.
+The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
 
-\paragraph{Fighting} Each \gls{round} of Combat inflicts 1 Fatigue Point.
+\paragraph{Starving} is another special case.
+Fatigue inflicted from starvation is marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
-\paragraph{Holding Breath} Each \gls{round} a character holds their breath inflicts 1 Fatigue Point. This Fatigue is applied each \gls{round} rather than at the end of the scene.
+\subsubsection{Skills and Fatigue}
 
-\paragraph{Marching} Every mile of marching inflicts a Fatigue point.
-
-\paragraph{Starving} Each meal skipped inflicts 1 Fatigue point plus the character's Strength Bonus (minimum of 1) for the first day and 1 Fatigue Point per day thereafter. Each day without water inflicts 3 Fatigue Points. These Fatigue Points are marked with an `S' and do not heal until the character gains some appropriate sustenance.
-
-\paragraph{Swimming} Each \gls{round} spent swimming inflicts 1 Fatigue Point. This is in addition to holding one's breath, if the character is swimming underwater and unable to breathe while there.
-
-\paragraph{Wearing armour} All armour adds a number of Fatigue points equal to the armour's \gls{weightrating}.
-As usual, the \gls{weightrating} is 1 higher for Complete Armour.
-
-Fatigue Points are healed extremely quickly. In fact, during most \glspl{round} they will be healed faster than they are accumulated. Since they are both gained and healed at the end of the scene, \gls{gm} should look at the number of Fatigue Points that will be gained and healed and if there are none on balance then Fatigue can be ignored for yet another scene. Fatigue comes into play during connected scenes of continued endurance and action, or when PCs are attempting to see how long they can swim against an underwater current while wearing full plate armour. Or possibly, and quite rarely, Fatigue comes into play when a tiny, weak character attempts to do everything while wearing full plate armour.
+Anyone used to firing a bow or waving a sword can do so for much longer than the average person.
+Each Skill comes with one Fatigue Box per level, so characters with Athletics 2 could put Fatigue Points gained from sprinting into the two Fatigue Boxes for Athletics, and those with Survival 3 would have three additional Fatigue Boxes which can only be used when marching or other activities associated with Survival.
 
 \subsection{Healing Fatigue}\index{Resting}
 
-\paragraph{Short Rest} Any scene which ends with characters resting allows them to heal 3 Fatigue Points plus their Strength Bonus, so a character with a Strength Bonus of +2 would heal 5 Fatigue Points.
+When the party take a quiet scene to rest, they can heal a number of \glspl{hp} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{hp} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.
 
-\paragraph{Long Rest} Any full night of rest allows characters to heal 5 Fatigue Points plus their Strength Bonus.
+In most cases, Fatigue Points will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
+However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
 
 \iftoggle{verbose}{
 	\begin{exampletext}
@@ -871,7 +900,7 @@ The \gls{gm} rolls for the hobgoblins and achieves `9' - with Speed +1 they will
 
 		``Six! The ogre gnaws into Hugi's face, this time without failure. 5 Damage!''
 
-		Hugi's player marks off his last 3 FP then 2 HP, noting that he could have just died.
+		Hugi's player marks off his last 3 FP then 2 \glspl{hp}, noting that he could have just died.
 
 		Arneson runs over to aid the fight.
 
