@@ -62,7 +62,47 @@ Characters with a Wits score of -2 must wait 2 scenes before regenerating 1 \gls
 
 \subsection{Range}
 
-Unless otherwise stated, spells have a range equal to five squares plus the character's Wits score. Magic extends all around the character but mages can rarely affect targets anywhere near the range of a good archer.
+\begin{wrapfigure}{r}{.18\textwidth}
+
+\begin{rollchart}
+
+	Wits & Range \\
+
+	-4 & 1 \\
+
+	-3 & 2 \\
+
+	-2 & 3 \\
+
+	-1 & 4 \\
+
+	0 & 5 \\
+
+	1 & 10 \\
+
+	2 & 15 \\
+
+	3 & 20 \\
+
+	4 & 25 \\
+
+\end{rollchart}
+
+\end{wrapfigure}
+
+Spells have a range of 5 squares plus 5 times the caster's Wits bonus.
+A negative Wits Bonus decreases the range by one square per penalty.
+
+\iftoggle{verbose}{
+Magic extends all around the character but mages can rarely affect targets anywhere near the range of a good archer.
+Metamagic can dramatically extend the range, but the basic spell range is always rather close.
+}{}
+
+Spells which affect a large area are only restricted by where they \emph{start}.
+A \textit{Wide Fireball} covering 3 squares might be cast 5 squares away, but it could extend past that, reaching a total of 7 squares.
+
+This range limitation applies to all magic, including Song magic.
+While a tune may carry over the hilltops, the force of the magic usually remains close to the caster.
 
 \subsection{Duration}
 
