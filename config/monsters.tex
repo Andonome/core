@@ -869,6 +869,7 @@
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
+	\randomtwoB
 	\randomthree
 	\randomfour
 \person{\arabic{enc}}% STRENGTH
@@ -879,7 +880,7 @@
 {0}}% CHARISMA
 {0}% DR
 {\arabic{r2b}}% COMBAT
-{\ifodd\value{r3}Beast Ken\else Survival\fi \arabic{r2}, Tactics \arabic{r2b}}% SKILLS
+{\ifodd\value{r3}Beast Ken \else Survival \fi \arabic{r2}, Tactics \arabic{r2b}}% SKILLS
 {\ifodd\value{enc}%
 	{\greatsword}%
 \else%
@@ -1529,6 +1530,10 @@
 	#1
 	\randomtwo
 	\addtocounter{enc}{3}
+	\randomtwoB
+	\randomthree
+	\randomthreeB
+	\addtocounter{age}{1}
 	\randomfour 
 \person{-5}% STRENGTH
 {-2}% DEXTERITY 
@@ -1538,7 +1543,7 @@
 {-5}}% CHARISMA
 {0}% DR
 {0}% AGGRESSION
-{Projectiles \arabic{age}, Academics 3, Deceit \arabic{r2}, Ether Lore \arabic{r3}, Tactics \arabic{r3b}
+{Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2}, Ether Lore \arabic{r2b}, Tactics \arabic{r3b}
 \Path{Divinity}{\addtocounter{age}{2} Force \arabic{age}, Illusion \arabic{r3}, Invocation \arabic{r4}, Conjuration \arabic{enc}, \addtocounter{r3b}{2} Metamagic \arabic{r3b}}}% SKILLS
 {None}% ABILITIES
 {\addtocounter{sp}{20}\mana{8}\addtocounter{xpbonus}{4}}
