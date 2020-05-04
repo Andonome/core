@@ -584,7 +584,7 @@
 	{\arabic{age}}% COMBAT
 	{Aggression \arabic{enc}, Projectiles \arabic{r3b}, Academics \arabic{r3}, Athletics \arabic{r2b}, Deceit \arabic{enc}, Tactics 2, Vigilance 3
 	\knacks{\ifodd\value{page}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{r3}}{>}{2}{\laststand}{\adrenalinesurge}}
-	\Path{Blood}{\ifodd\value{r4}Aldaron\else Enchantment \arabic{r4}\fi, Invocation \arabic{enc}, \ifodd\value{r2}Force \else Polymorph \arabic{r3}\fi }}{%
+	\Path{Blood}{\ifodd\value{r4}Aldaron\else Enchantment \arabic{r4}\fi, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
 		{$3D6\times 100$gp, sitting in a lair.}%
 		{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}%
@@ -684,7 +684,7 @@
 	{\ifnumcomp{\value{r4}}{<}{3}%
 		{Aldaron \arabic{r3}, }%
 		{Invocation \arabic{r3b}, }%
-	\ifodd\value{r3}\else Fate \arabic{r2}\fi%
+	\ifodd\value{r3}\else Fate \arabic{r2}, \fi%
 	\addtocounter{gold}{1}\ifodd\value{gold} Polymorph \arabic{r2b}\else Enchantment \arabic{age}, \fi}%
 	\ifodd\value{r4} \else\knacks{%
 		\ifodd\value{r2}%
