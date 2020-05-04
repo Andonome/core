@@ -18,8 +18,8 @@ fi
 if [ $1 = tree ]; then
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
-	git subtree -P config pull ../config master
-	git subtree -P config push ../config master
+	git subtree -P config pull ../config master || exit 1
+	git subtree -P config push ../config master || exit 1
 fi
 pdflatex -shell-escape main.tex
 makeglossaries main
