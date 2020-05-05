@@ -60,6 +60,9 @@
 \newcounter{dam}
 \newcounter{dr}
 \newcounter{knacks}
+\newcounter{foxhop}% set to '1' if the character has fox hop
+\setcounter{foxhop}{0}
+
 
 \newcounter{strb}
 \newcounter{dexb}
@@ -100,6 +103,8 @@
 	\ent{Knacks:} & #1 
 }
 
+%%%%%%%%%%%%%%%%%%%%% Knacks
+%
 \newcommand{\adrenalinesurge}{Adrenaline Surge\addtocounter{strb}{1}\addtocounter{knacks}{1}}
 \newcommand{\furiousblows}{Furious Blows\addtocounter{knacks}{1}}
 \newcommand{\firststrike}{First Strike\addtocounter{spdb}{2}\addtocounter{knacks}{1}}
@@ -108,10 +113,14 @@
 \newcommand{\backtothewall}{Back to the Wall\addtocounter{knacks}{1}}
 \newcommand{\laststand}{Last Stand\addtocounter{knacks}{1}}
 \newcommand{\perfectsneakattack}{Perfect Sneak Attack\addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}\addtocounter{strb}{2}}
+\newcommand{\stunningstrike}{Stunning Strike\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
+\newcommand{\charge}{Charge, \addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}}
 \newcommand{\snapshot}{Snap Shot\addtocounter{knacks}{1}\addtocounter{strb}{2}}
 \newcommand{\defender}{Defender\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
+\newcommand{\dodger}{Dodger\addtocounter{knacks}{1}}
+\newcommand{\foxhop}{Fox Hop\addtocounter{knacks}{1}\setcounter{foxhop}{1}}
 \newcommand{\mightydraw}{Mighty Draw\addtocounter{knacks}{1}}
-\newcommand{\unstoppable}{Unstoppable\addtocounter{hp}{1}\addtocounter{knacks}{1}}
+\newcommand{\unstoppable}{Unstoppable\addtocounter{hp}{2}\addtocounter{knacks}{1}}
 
 %%%%% Weapons
 
@@ -122,8 +131,8 @@
 \newcommand{\rapier}{Rapier\addtocounter{str}{1}\addtocounter{spd}{2}\addtocounter{dex}{1}}
 \newcommand{\longsword}{Longsword\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{3}}
 \newcommand{\greatsword}{Greatsword\addtocounter{str}{2}\addtocounter{spd}{1}\addtocounter{dex}{2}}
-\newcommand{\spear}{Spear\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}\renewcommand{\weaponknackone}{\addtocounter{spd}{2}}}
-\newcommand{\quarterstaff}{Quarterstaff\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}\addtocounter{spdb}{2}}
+\newcommand{\spear}{Spear\addtocounter{str}{1}\addtocounter{spd}{1}\addtocounter{dex}{2}\addtocounter{spdb}{\value{knacks}\addtocounter{spdb}{1}}}
+\newcommand{\quarterstaff}{Quarterstaff\addtocounter{spd}{1}\addtocounter{dex}{2}\addtocounter{spdb}{2}}
 \newcommand{\greataxe}{Greataxe\addtocounter{str}{3}\addtocounter{spd}{1}\addtocounter{dex}{1}}
 \newcommand{\woodaxe}{Wood axe\addtocounter{str}{2}\addtocounter{spd}{0}\addtocounter{dex}{1}}
 \newcommand{\greatclub}{Greatclub\addtocounter{str}{4}\addtocounter{spd}{1}\addtocounter{dex}{1}}
@@ -265,6 +274,7 @@
 
 \setcounter{strb}{0}
 \setcounter{spdb}{0}
+\setcounter{dexb}{0}
 
 \iftoggle{mind}{
 \begin{tabularx}{\textwidth}{lrlrlr}
@@ -286,7 +296,7 @@
 	\iftoggle{mind}{\ent{Equipment:} & \equipment \\}{\ent{Abilities:} & \abilities \\}
 
 	\addtocounter{strb}{\value{str}}
-	\setcounter{dexb}{\value{dex}}
+	\addtocounter{dexb}{\value{dex}}
 	\addtocounter{spdb}{\value{spd}}
 	\setcounter{damb}{\value{dam}}
 	\setcounter{attb}{\value{att}}
@@ -388,9 +398,6 @@
 	\vspace{.1cm}
 
 	}
-%%%%%%%%%%%%%%%%%%%%% Knacks
-%
-\newcommand{\charge}{Charge, \addtocounter{damb}{1}}
 %
 %%%%%%%%%%%%%%%%%%%% Creature Abilities
 
@@ -758,7 +765,10 @@
 	\randomtwo
 	\randomthree
 	\addtocounter{age}{1}
-	\person{-3}% STRENGTH
+	\randomthreeB
+	\addtocounter{r3b}{-2}
+	\randomfour
+	\person{\arabic{r3b}}% STRENGTH
 	{-2}% DEXTERITY 
 	{1}% SPEED
 	{{\arabic{age}}% INTELLIGENCE
@@ -766,12 +776,12 @@
 	{\arabic{enc}}}% CHARISMA
 	{0}% DR
 	{0}% COMBAT
-	{\ifodd\value{r2}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc},\fi Deceit \arabic{age},  Stealth \arabic{enc}
+	{\ifodd\value{r2}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc}, \fi Deceit \arabic{age},  Stealth \arabic{enc}
 	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{age}, Metamagic \arabic{r3}}}% SKILLS
 	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
 		{Promisary note}%
-		{\ifnumcomp{\thechapter}{>}{2}%
-			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \thepage gp}}{Glimmering diamond worth \thepage gp}}%
+		{\ifnumcomp{\value{r4}}{>}{2}%
+			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \arabic{r12} gp}}{Glimmering diamond worth \thepage sp}}%
 			{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
 	{\mana{6}}
 }
@@ -832,18 +842,24 @@
 {}
 }
 
-\newcommand{\humandiplomat}[1][\npc{\M}{Human Diplomat}]{
+\newcommand{\humandiplomat}[1][\npc{\M}{The Diplomat}]{
 	#1
-	\randomtwo\randomthree\addtocounter{age}{-2}\addtocounter{age}{-3}
+	\randomtwo
+	\addtocounter{enc}{-1}
+	\randomthree
+	\addtocounter{age}{-2}
+	\multiply\value{age} by -1
+	\randomfour
+	\addtocounter{track}{-2}
 \person{1}% STRENGTH
 {\arabic{age}}% DEXTERITY 
 {0}% SPEED
 {{\arabic{r2}}% INTELLIGENCE
 {0}% WITS
-{\arabic{enc}}}% CHARISMA
+{\arabic{track}}}% CHARISMA
 {0}% DR
-{\arabic{r2}}% AGGRESSION
-{Academics \arabic{r3}, Deceit \arabic{age}, \ifodd\value{gold} Empathy \arabic{enc},\fi Vigilance \arabic{enc}}% SKILLS
+{\arabic{enc}}% COMBAT
+{Academics \arabic{r3}, Deceit \arabic{r3}, \ifodd\value{gold} Empathy \arabic{r3}, \fi Vigilance \arabic{r2}}% SKILLS
 {\Dagger, \setcounter{gold}{\thepage}\addtocounter{gold}{\thechapter}\arabic{gold}cp, \divide\value{gold} by \value{r3} \arabic{gold}sp stored secretly nearby.}% EQUIPMENT
 {}
 }
@@ -870,17 +886,30 @@
 	\randomtwo
 	\addtocounter{enc}{1}
 	\randomtwoB
+	\setcounter{gold}{\value{r2b}}
+	\addtocounter{gold}{-1}
 	\randomthree
+	\addtocounter{age}{-2}
 	\randomfour
 \person{\arabic{enc}}% STRENGTH
-{\arabic{r2b}}% DEXTERITY 
-{\arabic{r2}}% SPEED
+{\arabic{age}}% DEXTERITY 
+{\arabic{gold}}% SPEED
 {{0}% INTELLIGENCE
 {-1}% WITS
 {0}}% CHARISMA
 {0}% DR
-{\arabic{r2b}}% COMBAT
-{\ifodd\value{r3}Beast Ken \else Survival \fi \arabic{r2}, Tactics \arabic{r2b}}% SKILLS
+{\arabic{r2}}% COMBAT
+{\ifodd\value{r3}Beast Ken \else Survival \fi \arabic{r2}, Tactics \arabic{r2b}%
+	\ifodd\value{r3}%
+		\knacks{\ifodd\value{r2b}
+			\adrenalinesurge, 
+		\else
+			\stunningstrike, 
+		\fi
+		\ifodd\value{r4}
+			\charge
+		\fi}
+	\fi}% SKILLS
 {\ifodd\value{enc}%
 	{\greatsword}%
 \else%
@@ -907,16 +936,21 @@
 \newcommand{\humanarcher}[1][\npc{\M}{\arabic{r12} Archers}]{
 	#1
 	\randomtwo
+	\randomtwoB
 	\addtocounter{enc}{-1}
 \person{2}% STRENGTH
-{1}% DEXTERITY 
+{\arabic{r2b}}% DEXTERITY 
 {0}% SPEED
 {{0}% INTELLIGENCE
 {-1}% WITS
 {0}}% CHARISMA
 {0}% DR
 {\arabic{enc}}% COMBAT
-{Projectiles 2, Crafts \ifodd\thepage 1 \else 2\fi, \ifodd\thechapter Survival \else Tactics \fi \arabic{r2}}% SKILLS
+{Projectiles \arabic{r2b}, Crafts \arabic{r2b}, \ifodd\value{r4} Survival \else Tactics \fi \arabic{r2}%
+\ifodd\value{r3}%
+\else%
+	\knacks{\mightydraw}
+\fi}% SKILLS
 {\longbow, dagger, \ifodd\value{r2}\partialleather\fi}% EQUIPMENT
 {}
 }
@@ -940,7 +974,8 @@
 {\arabic{track}}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Athletics \arabic{r2}, Deceit \arabic{r2b}, \ifodd\value{r3}Tactics 1\fi}% SKILLS
+{Athletics \arabic{r2}, Deceit \arabic{r2b}, \ifodd\value{r4}Stealth \arabic{r2b}, \fi\ifodd\value{r3}Tactics 1\fi
+\knacks{\ifodd\value{r3}\dodger\else \foxhop\fi, \ifodd\value{r4} \perfectsneakattack\fi}}% SKILLS
 {\ifnum\value{enc}>0%
 	{\shortsword, dagger, }
 	\else\ifnum\value{r2b}>1%
