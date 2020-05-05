@@ -114,7 +114,7 @@
 \newcommand{\laststand}{Last Stand\addtocounter{knacks}{1}}
 \newcommand{\perfectsneakattack}{Perfect Sneak Attack\addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}\addtocounter{strb}{2}}
 \newcommand{\stunningstrike}{Stunning Strike\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
-\newcommand{\charge}{Charge, \addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}}
+\newcommand{\charge}{Charge, \addtocounter{knacks}{1}\setcounter{track}{\value{knacks}}\addtocounter{track}{1}\divide\value{track} by 2\addtocounter{strb}{\value{track}}\addtocounter{spdb}{\value{track}}}
 \newcommand{\snapshot}{Snap Shot\addtocounter{knacks}{1}\addtocounter{strb}{2}}
 \newcommand{\defender}{Defender\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
 \newcommand{\dodger}{Dodger\addtocounter{knacks}{1}}
@@ -627,7 +627,7 @@
 	{0}% DR
 	{2}% COMBAT
 	{Crafts 1, Tactics 1}% SKILLS
-	{\ifodd\value{r2}\shortsword\else\greataxe\fi, \completeplate}{\knacks{Chosen Enemy: Goblins}\ifodd\value{r2b}\defender\fi}% SKILLS
+	{\ifodd\value{r2}\shortsword\else\greataxe\fi, \completeplate}{\knacks{Chosen Enemy: Goblinoids}\ifodd\value{r2b}, \defender\fi}% SKILLS
 	}
 
 \newcommand{\dwarvenrunemaster}[1][\npc{\M}{Dwarven Runemaster}]{
