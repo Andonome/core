@@ -9,6 +9,7 @@
 	cp config/main.tex . && \
 	ln -s config/autocompile.sh .
 
+git gc --auto
 
 if [ $1 = clean ]; then
 	rm -r *aux *log main.{i,g}* *toc *.ptc *.out svg-inkscape 2>/dev/null
