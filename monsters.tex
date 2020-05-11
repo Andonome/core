@@ -477,15 +477,19 @@
 \newcommand{\chitincrawler}[1][\npc{\C}{Chitincrawler}]{
 	#1
 	\randomtwo
-	\randomthree
 	\addtocounter{enc}{2}
-\animal{\ifodd\value{chapter} 4\else 3\fi}% STRENGTH
+	\randomtwoB
+	\addtocounter{r2b}{3}
+	\randomthree
+	\randomthreeB
+	\randomfour
+\animal{\arabic{r2b}}% STRENGTH
 {\ifodd\value{page} 1\else 0\fi}% DEXTERITY 
 {\arabic{r2}}% SPEED
-{\arabic{r2}}% WITS
+{\arabic{r4}}% WITS
 {\arabic{enc}}% DR
 {\ifodd\value{r3} 3\else 4\fi}% AGGRESSION
-{Athletics \arabic{enc}, Survival \arabic{r3}}% SKILLS
+{Athletics \arabic{r3b}, Survival \arabic{r3}}% SKILLS
 {Web}% ABILITIES
 {}
 }
