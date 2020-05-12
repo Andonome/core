@@ -417,7 +417,7 @@
 		}
 
 	\newcommand{\web}{
-		\setcounter{track}{7}\addtocounter{track}{\value{str}}
+		\setcounter{track}{6}\addtocounter{track}{\value{str}}
 		Web (Strength + Athletics, TN \arabic{track} to break free as a movement action)
 		}
 
@@ -477,20 +477,20 @@
 \newcommand{\chitincrawler}[1][\npc{\C}{Chitincrawler}]{
 	#1
 	\randomtwo
-	\addtocounter{enc}{2}
+	\addtocounter{enc}{3}
 	\randomtwoB
-	\addtocounter{r2b}{3}
+	\addtocounter{r2b}{-1}
 	\randomthree
 	\randomthreeB
 	\randomfour
-\animal{\arabic{r2b}}% STRENGTH
-{\ifodd\value{page} 1\else 0\fi}% DEXTERITY 
-{\arabic{r2}}% SPEED
+\animal{\arabic{enc}}% STRENGTH
+{\arabic{r2b}}% DEXTERITY 
+{\arabic{r3b}}% SPEED
 {\arabic{r4}}% WITS
 {\arabic{enc}}% DR
 {\ifodd\value{r3} 3\else 4\fi}% AGGRESSION
-{Athletics \arabic{r3b}, Survival \arabic{r3}}% SKILLS
-{Web}% ABILITIES
+{Athletics \arabic{r3b}, Survival \arabic{r3}\ifodd\value{r4} Vigilance \arabic{r3b}\fi}% SKILLS
+{\web}% ABILITIES
 {}
 }
 %
