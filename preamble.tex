@@ -296,7 +296,8 @@ Roll & Result \\
 }
 
 \newcommand{\randomtwoB}{
-	\ifnumcomp{\value{r2b}}{=}{2}{\setcounter{r2b}{1}}{\setcounter{r2b}{2}}
+	\ifodd\value{r3b}\setcounter{r2b}{1}\else\setcounter{r2b}{2}\fi
+	\randomthreeB
 }
 
 \newcommand{\randomthree}{
