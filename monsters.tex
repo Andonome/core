@@ -1577,6 +1577,7 @@
 	\addtocounter{age}{4}
 	\randomtwoB
 	\addtocounter{r2b}{-\value{age}}
+	\addtocounter{r2b}{3}
 \person{\arabic{age}}% STRENGTH
 {-1}% DEXTERITY 
 {\arabic{r2b}}% SPEED
@@ -1586,7 +1587,7 @@
 {\arabic{age}}% DR
 {\arabic{r4}}% AGGRESSION
 {Crafts \arabic{r2}, Deceit \arabic{r3}, Ether Lore 1, }% SKILLS
-{}% ABILITIES
+{\ifodd\value{r3}None\else\greatsword\fi}% EQUIPMENT
 {}
 }
 
