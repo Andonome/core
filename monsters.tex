@@ -572,7 +572,7 @@
 	{\arabic{r2b}}% WITS
 	{4}% DR
 	{\arabic{r3b}}% AGGRESSION
-	{Projectiles \arabic{r2}, Athletics \arabic{r2b}}% SKILLS
+	{Projectiles \arabic{r2}, Athletics \arabic{r3}}% SKILLS
 	{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}% ABILITIES
 	{\knacks{\unstoppable}}
 }
@@ -587,12 +587,13 @@
 	\randomthreeB
 	\addtocounter{age}{5}
 	\randomfour
+	\ifodd\value{r4}\multiply\value{track} by -1\fi
 	\person{\arabic{age}}% STRENGTH
 	{\arabic{r4}}% DEXTERITY
 	{\arabic{enc}\addtocounter{age}{-4}}% SPEED
 	{{\arabic{age}}% INTELLIGENCE
 	{\arabic{enc}}% WITS
-	{\ifodd\value{page}-2\else2\fi}}% CHARISMA
+	{\arabic{track}}}% CHARISMA
 	{4}%DR
 	{\arabic{age}}% COMBAT
 	{Aggression \arabic{enc}, Projectiles \arabic{r3b}, Academics \arabic{r3}, Athletics \arabic{r2b}, Deceit \arabic{enc}, Tactics 2, Vigilance 3
@@ -888,7 +889,7 @@
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, Empathy \arabic{r3b}
-\ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}\ifodd\value{r4} Metamagic \else Aldaron\fi~ \arabic{enc}}\fi}% SKILLS
+\ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}, \ifodd\value{r4} Metamagic \else Aldaron\fi~ \arabic{enc}}\fi}% SKILLS
 {\ifodd\value{r2b}\quarterstaff\else\Dagger\fi}% ABILITIES
 {\mana{\arabic{age}}}
 }
@@ -1467,7 +1468,7 @@
 {\arabic{enc}}% DR
 {2}% AGGRESSION
 {Stealth \arabic{r4}, \knacks{\unstoppable}}% SKILLS
-{Acidic damage, gelanonous (DR does not apply to fire-based attacks)}% ABILITIES
+{Acidic damage, gelatinous (DR does not apply to fire-based attacks)}% ABILITIES
 {\addtocounter{xpbonus}{2}}
 }
 
