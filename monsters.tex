@@ -987,16 +987,16 @@
 {\arabic{track}}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Athletics \arabic{r2}, Deceit \arabic{r2b}, \ifodd\value{r4}Stealth \arabic{r2b}, \fi\ifodd\value{r3}Tactics 1\fi
+{\ifodd\value{r4}Projectiles \arabic{r2b}, \fi Athletics \arabic{r2}, Deceit \arabic{r2b}, \ifodd\value{r4}Stealth \arabic{r2b}, \fi\ifodd\value{r3}Tactics 1\fi
 \knacks{\ifodd\value{r3}\dodger\else \foxhop\fi, \ifodd\value{r4} \perfectsneakattack\fi}}% SKILLS
-{\ifnum\value{enc}>0%
+{\ifodd\value{gold}%
 	{\shortsword, dagger, }
-	\else\ifnum\value{r2b}>1%
+	\else\ifodd\value{r2b}%
 		{\rapier, dagger, }%
 		\else{\shortsword, }%
 	\fi\fi%
 	\ifnum\value{r4}=1%
-		\partialleather, %
+		\partialleather,%
 	\fi%
 \setcounter{gold}{\thepage}\multiply\value{gold} by \value{r3}\addtocounter{gold}{3}\arabic{gold}cp}% EQUIPMENT
 {}
