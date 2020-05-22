@@ -385,7 +385,7 @@
 	\setcounter{xp}{\value{attackXPtotal}}
 	\addtocounter{xp}{\value{defenceXPtotal}}
 	\addtocounter{xp}{-350}
-	\divide\value{xp} by 80
+	\divide\value{xp} by 120
 	\addtocounter{xp}{\value{xpbonus}}
 	\addtocounter{xp}{\value{mp}}
 % if {mind} print fate points.
@@ -902,7 +902,7 @@
 	\setcounter{gold}{\value{r2b}}
 	\addtocounter{gold}{-1}
 	\randomthree
-	\addtocounter{age}{-2}
+	\addtocounter{age}{-1}
 	\randomfour
 \person{\arabic{enc}}% STRENGTH
 {\arabic{age}}% DEXTERITY 

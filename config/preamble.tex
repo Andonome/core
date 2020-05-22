@@ -205,9 +205,16 @@ bookmarks=true]%
 \newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\needspace{11em}%
 \subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
-\newcommand{\magicitem}[7]{\textbf{#1}
+\newcommand{\magicitem}[7]{\vspace{1em}\noindent\textbf{#1}
 
-	\textit{Spells: #2, }\textit{Path: #3, }\textit{Duration: #4, }\textit{Type: #5, }\textit{Potence: #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
+	\noindent
+	\textit{Spells: #2, }%
+	\textit{Path: #3, }%
+	\textit{Duration: #4, }%
+	\textit{Type: #5, }%
+	\textit{Potence: #6, }%
+	\textit{MP: #7}%
+	% Type can be 'pocket spell', 'magical item', or 'greater item'.
 	\vspace{.3em}
 
 }
