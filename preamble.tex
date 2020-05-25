@@ -140,13 +140,15 @@ bookmarks=true]%
 \newcommand{\name}{}
 \newcommand{\personality}{}
 \newcommand{\mannerism}{}
+\newcommand{\archetype}{}
 \newcommand{\npcsymbol}{}
 \newcommand{\npc}[2]{\settoggle{personality}{false}\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
-\newcommand{\NPC}[4]{\renewcommand{\name}{#1 #2}
+\newcommand{\NPC}[5]{\renewcommand{\name}{#1 #2}
 \renewcommand{\npcsymbol}{#1}
 \settoggle{personality}{true}
 \renewcommand{\personality}{#3}
 \renewcommand{\mannerism}{#4}
+\renewcommand{\archetype}{#5}
 }
 \newcommand{\G}{\opposition} % groups
 \newcommand{\M}{\mars} % male
