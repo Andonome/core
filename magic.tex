@@ -486,12 +486,12 @@ If the target loses the roll they immediately loses all remaining actions for th
 
 Each subsequent turn the target makes a resisted roll of Wits + Academics against the mage's Intelligence + Deceit. Failure indicates that they suffer an Initiative penalty equal to 2 plus the mage's Intelligence Bonus.
 
+While the spell is in effect, the target suffers a penalty to all Mental Attributes equal to \arabic{spelllevel} plus the enchanter's Intelligence Bonus; so a mage with Intelligence +3 would inflict a -5 penalty. If the target attempted to cast spells, any rolls would suffer a -5 penalty and any spell-effects which relied on the Intelligence Attribute would suffer as well.
+
 \iftoggle{verbose}{
 	\noindent\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
 	\label{roch:enchanter}
 }{}
-
-While the spell is in effect, the target suffers a penalty to all Mental Attributes equal to \arabic{spelllevel} plus the enchanter's Intelligence Bonus; so a mage with Intelligence +3 would inflict a -5 penalty. If the target attempted to cast spells, any rolls would suffer a -5 penalty and any spell-effects which relied on the Intelligence Attribute would suffer as well.
 
 At the end of the scene, targets make one final resisted roll against the enchanter's Intelligence + Deceit (even if the enchanter is no longer present). Failure indicates that the target has forgotten the encounter entirely, including some moments before when the spell began.
 
@@ -1236,6 +1236,9 @@ Unwilling targets who are to be transformed with Polymorph can spend 5 FP in ord
 \end{exampletext}
 }{}
 
+\sidejpg{Roch_Hercka/polymorph.jpg}{
+\label{roch:polymorph}}
+
 As Polymorph changes people's form it also changes Strength and therefore HP maximums.
 All HP lost to Damage remain as lost HP after transformation but might not have any effect.
 If a player's maximum HP is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed.
@@ -1249,9 +1252,6 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 \spelllevel
 
 \spell{Polymorph}{Continuous}{Medicine}
-
-\sidejpg{Roch_Hercka/polymorph.jpg}{
-\label{roch:polymorph}}
 
 The basic Polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
 When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
