@@ -122,7 +122,7 @@ bookmarks=true]%
 {8pt}
 {\Large\bfseries\filcenter}
 
-\titleformat{\subsection}{\needspace{8em}\center\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
+\titleformat{\subsection}{\needspace{12em}\center\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
 %
 \titleformat{\subsubsection}
 {\needspace{3em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
@@ -204,8 +204,8 @@ bookmarks=true]%
 
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
-\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}\needspace{11em}%
-\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}%
+	\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[2]{\paragraph{(#1) #2:}}
 \newcommand{\magicitem}[7]{\vspace{1em}\noindent\textbf{#1}
 
