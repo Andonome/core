@@ -1506,6 +1506,23 @@
 {}
 }
 
+\newcommand{\warhorse}[1][\npc{\C}{War Horse}]{
+	#1
+	\randomtwo
+	\randomtwoB
+	\addtocounter{enc}{2}
+	\addtocounter{r2b}{2}
+\animal{\arabic{enc}}% STRENGTH
+{0}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{\arabic{r2}}% WITS
+{1}% DR
+{\ifodd\value{r2}1\else 2\fi}% AGGRESSION
+{Athletics 2, Survival 1, Vigilance 1}% SKILLS
+{\quadraped}% ABILITIES
+{}
+}
+
 \newcommand{\donkey}[1][\npc{\C}{Donkey}]{
 	#1
 	\randomtwo
@@ -1519,19 +1536,6 @@
 {1}% AGGRESSION
 {Athletics 2, Survival 1}% SKILLS
 {\quadraped}% ABILITIES
-{}
-}
-
-\newcommand{\warhorse}[1][\npc{\C}{War Horse}]{
-	#1
-\animal{3}% STRENGTH
-{0}% DEXTERITY 
-{4}% SPEED
-{1}% WITS
-{1}% DR
-{1}% AGGRESSION
-{Athletics 2, Survival 2, Vigilance 1}% SKILLS
-{}% ABILITIES
 {}
 }
 
