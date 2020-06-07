@@ -13,9 +13,33 @@ Gits available on github and gitlab.
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
+# Superfast Rules
+
+- 6 Attributes: Strength, Dexterity, Speed, Intelligence, Wits and Charisma.
+- Skills cover actions depending on what they're paired with.
+  * Intimidation = Strength + Deceit.
+  * Lies = Charisma + Deceit.
+- Roll 2D6 + Attribute + Skill to succeed at standard Target Number 7.
+- Combat is tactical.
+  * Initiative is based on action-points.
+  * Combat Skill is divided between attack, defence and initiative.
+  * Fate Points allow Damage to be avoided.
+- Magic gets you multiple spells per level in a magic sphere
+  * Spend MP to cast.
+  * No healing magic.
+  * Highest level of a sphere has to be cast slowly.
+- Background is created by spending Story Points.
+  * Spend 1 point to say you've learnt a language.
+  * Spend 2 points to add an ally with martial ability.
+  * Spend 4 points to bring in an all-powerful mage from your past.
+
 # Parsimony
 
-The most important part of the game is mechanics, and everything revolves around speed.
+Parsimony means getting the same results with fewer steps.
+As an example, you could represent a character's strength by saying 'Strength 14', then create a table where those with a Strength of 14 get a +2 bonus.
+A more parsimonious way to represent a character as having 'Strength +2' - broadly the same result, but fewer steps.
+
+Everything from backstory, through character creation and groups rolling to spot dangers has been created to get a resolution in the shorted possible real-world time.
 
 ## No Class
 
