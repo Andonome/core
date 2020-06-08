@@ -9,9 +9,15 @@ Gits available on github and gitlab.
 
 -->
 
-| [Download](https://gitlab.com/bindrpg/core/-/jobs/496913368/artifacts/download) | [Wiki](https://gitlab.com/bindrpg/core/-/wikis/home) |
+| [Download][core download] | [Wiki][wiki] |
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
+
+The following is a brief description of the projects.
+Those wanting to just have a game should use the download link above.
+GMs who want a pre-made campaign setting should also have a look at [Adventures in Fenestra][aif].
+
+For anyone wanting to make their own book, modifications, or otherwise understand how the mechanics work, have a look at the Wiki.
 
 # Superfast Rules
 
@@ -122,8 +128,6 @@ An individual Side Quest is a simple story in a few parts - the players hear of 
 That last part can be repeated until the characters confront the mage.
 Details of the mad mage's lair will be given, so the players can track her down when ready.
 
-For example Side Quests, see [Adventures in Fenestra](https://gitlab.com/bindrpg/aif).
-
 ## Magic
 
 Spellcasters spend Mana to cast spells.  They generally have 2-6 points of Mana and a few types of spells, so you can avoid extended book-keeping.
@@ -176,3 +180,7 @@ You can join by:
 - Writing to me, and if you like how the book's going, join as a dev.
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
+
+[core download]: https://gitlab.com/bindrpg/core/-/jobs/586593293/artifacts/download
+[wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
+[aif]: https://gitlab.com/bindrpg/aif
