@@ -114,6 +114,7 @@
 \newcommand{\laststand}{Last Stand\addtocounter{knacks}{1}}
 \newcommand{\perfectsneakattack}{Perfect Sneak Attack\addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}\addtocounter{strb}{2}}
 \newcommand{\stunningstrike}{Stunning Strike\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
+\newcommand{\specialist}[2]{Specialist (#1 + #2)\addtocounter{knacks}{1}}
 \newcommand{\charge}{Charge, \addtocounter{knacks}{1}\setcounter{track}{\value{knacks}}\addtocounter{track}{1}\divide\value{track} by 2\addtocounter{strb}{\value{track}}\addtocounter{spdb}{\value{track}}}
 \newcommand{\snapshot}{Snap Shot\addtocounter{knacks}{1}\addtocounter{strb}{2}}
 \newcommand{\defender}{Defender\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
@@ -1181,16 +1182,17 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\addtocounter{r2b}{2}
 	\randomthree
 	\addtocounter{enc}{2}
 	\addtocounter{age}{1}
 \animal{\arabic{enc}}% STRENGTH
 {\arabic{r3}}% DEXTERITY 
-{\arabic{r2}}% SPEED
+{\arabic{r2b}}% SPEED
 {\arabic{r2b}}% WITS
 {3}% DR
 {\arabic{enc}}% AGGRESSION
-{Athletics 2, Survival \arabic{r3}, Tactics \arabic{r2b}}% SKILLS
+{Athletics 2, Survival \arabic{r3}, Stealth \arabic{r3}, Tactics \arabic{r2}}% SKILLS
 {None}% ABILITIES
 {}
 }
