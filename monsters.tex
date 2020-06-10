@@ -18,6 +18,8 @@
 %
 
 \newtoggle{mind}
+\newtoggle{examplecharacter}
+\settoggle{examplecharacter}{false}
 \newtoggle{debug}\settoggle{debug}{false}
 \newcommand{\ent}[1]{\textbf{#1}}
 \newcommand{\test}{}
@@ -209,6 +211,7 @@
 \derivedstats
 \end{tcolorbox}
 	\settoggle{debug}{false}
+	\settoggle{examplecharacter}{false}
 
 }
 
@@ -291,7 +294,10 @@
 \end{tabularx}
 \hrule
 	\addtocounter{hp}{6}
-	\addtocounter{dex}{7}
+
+	\iftoggle{examplecharacter}{}{
+		\addtocounter{dex}{7}
+}
 \vspace{.1cm}
 \noindent\begin{tabular}{p{.3\textwidth}p{.6\textwidth}}
 
@@ -311,8 +317,10 @@
 	\weaponknackone
 	\weaponknacktwo
 
+\iftoggle{examplecharacter}{}{
 	\addtocounter{att}{8}
 	\addtocounter{attb}{8}
+}
 
 \vspace{.1cm}
 
@@ -339,8 +347,11 @@
 \noindent Attack \arabic{att}\ifnumcomp{\value{att}}{=}{\value{attb}}{}{ (\arabic{attb})},
 	Initiative \arabic{spd}\ifnumcomp{\value{spd}}{=}{\value{spdb}}{}{ (\arabic{spdb})},
 	Damage \calculatedamage{\value{str}}\ifnumcomp{\value{str}}{=}{\value{strb}}{}{ (\calculatedamage{\value{strb}})}, 
-	TN \arabic{dex}\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
-	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP, }{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP, }}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP}{}
+	\iftoggle{examplecharacter}{Defence }{
+	TN }\arabic{dex}%
+	\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
+	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP, }{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP, }}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP}{}%
+\iftoggle{examplecharacter}{\addtocounter{fp}{\value{cha}}, \arabic{fp} FP}{}
 
 
 	\calculateXP
@@ -393,11 +404,15 @@
 	\addtocounter{xp}{\value{mp}}
 % if {mind} print fate points.
 
+\iftoggle{examplecharacter}{
+
+}{
 	\ifnumcomp{\value{xp}}{>}{0}{\arabic{xp} XP}{\ifnumcomp{\value{xp}}{<}{-1}{$1/8$ XP}{$1/4$ XP}}
 	\iftoggle{mind}{\addtocounter{fp}{\value{cha}}\ldots \arabic{fp} FP}{}
-
 	\vspace{.1cm}
 	\hrule
+}
+
 	\vspace{.1cm}
 
 	}
