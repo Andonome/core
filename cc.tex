@@ -378,6 +378,7 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 
 \npc{\E}{50 \glsentrytext{xp} Alchemist}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -386,12 +387,13 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 {0}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Academics 1, Crafts 1\Path{Alchemy}{Invocation 2, Illusion 1}}% SKILLS
+{\iftoggle{examplecharacter}{WORKING}{}Academics 1, Crafts 1\Path{Alchemy}{Invocation 2, Illusion 1}}% SKILLS
 {Dagger, camping equipment, 2 x adventuring equipment}% EQUIPMENT
 {\mana{2}}
 
 \npc{\E}{150 \glsentrytext{xp} Illusionist}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -414,6 +416,7 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 
 \npc{\E}{50 \glsentrytext{xp} Druid}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -423,11 +426,12 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 {0}% DR
 {1}% COMBAT
 {Academics 1, Beast Ken 1, Survival 1\Path{Divinity}{Aldaron 1, Polymorph 1}}% SKILLS
-{\partialleather, \spear, dagger, camping equipment, 50' of rope}% EQUIPMENT
+{\spear, \partialleather, dagger, camping equipment, 50' of rope}% EQUIPMENT
 {\mana{2}}
 
 \npc{\E}{150 \glsentrytext{xp} Arch Druid}
 
+\settoggle{examplecharacter}{true}
 \person{1}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -450,6 +454,7 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 
 \npc{\E}{50 \glsentrytext{xp} Priest of \Glsentrytext{justicegod}}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -465,6 +470,7 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 
 \npc{\E}{150 \glsentrytext{xp} Cleric of \Glsentrytext{justicegod}}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -489,6 +495,7 @@ They follow the Code of Acquisition.
 
 \npc{\E}{50 \glsentrytext{xp} Rogue}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {1}% DEXTERITY
 {0}% SPEED
@@ -507,6 +514,7 @@ Alternatively, rogues may go the route of a singing socialite, and even learn to
 
 \npc{\E}{150 \glsentrytext{xp} Bard}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {1}% SPEED
@@ -531,6 +539,7 @@ They follow the goddess \gls{wargod}.
 
 \npc{\E}{50 \glsentrytext{xp} Warrior}
 
+\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -547,8 +556,9 @@ They follow the goddess \gls{wargod}.
 
 After progressing, particularly pious fighters can gain a level or two in Fate, allowing them to ask for Divine Guidance, curse enemies, or even gain additional Fate Points before going into battle.
 
-\npc{\E}{150 \glsentrytext{xp} Warrior}
+\npc{\E}{150 \glsentrytext{xp} Paladin}
 
+\settoggle{examplecharacter}{true}
 \person{2}% STRENGTH
 {1}% DEXTERITY
 {1}% SPEED
@@ -568,6 +578,7 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 
 \npc{\E}{150 \glsentrytext{xp} Ranger}
 
+\settoggle{examplecharacter}{true}
 \person{2}% STRENGTH
 {1}% DEXTERITY
 {0}% SPEED
