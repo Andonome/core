@@ -395,6 +395,12 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 {Dagger, camping equipment, 2 x adventuring equipment}% EQUIPMENT
 {\mana{2}}
 
+\subsubsection{Illusionist}
+
+More powerful alchemists often pick a specialist sphere.
+This example shows someone able to become invisible (with focus and time), and able to instantly disguise two people using illusion magic.
+The Craft and Empathy skills means the illusionist is best at making illusions of people or objects, but other skills could be added to allow better illusions of animals, or natural terrain.
+
 \npc{\E}{150 \glsentrytext{xp} Illusionist}
 
 \settoggle{examplecharacter}{true}
@@ -432,6 +438,11 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 {Academics 1, Beast Ken 1, Survival 1\Path{Divinity}{Aldaron 1, Polymorph 1}}% SKILLS
 {\spear, \partialleather, dagger, camping equipment, 50' of rope}% EQUIPMENT
 {\mana{2}}
+
+\subsubsection{Arch Druid}
+
+This follower of \gls{naturegod} has later gained both martial and magical ability.
+Water can be turned to slime or webbing, webs could be turned to water, and the druid can turn themself into different races or animals.
 
 \npc{\E}{150 \glsentrytext{xp} Arch Druid}
 
@@ -471,6 +482,11 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 {\quarterstaff, \partialchain, medical equipment, camping equipment}% EQUIPMENT
 {\mana{4}}
 
+\subsubsection{Cleric}
+
+Those with the rarest blessings from \gls{justicegod} can command enemies to `halt', dazzling them with visions of a wrathful god, or even curse those doing something wrong to continue that same action forever.
+Those trying to steal could be made to continue the behaviour without stopping, guaranteeing that they will be caught.
+Those fighting could be forced to continue until they die from a sword or drop down with sheer exhaustion.
 
 \npc{\E}{150 \glsentrytext{xp} Cleric of \Glsentrytext{justicegod}}
 
@@ -483,7 +499,7 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics 1, Empathy 1, Deceit 1, Medicine 1\Path{Divinity}{Enchantment 2, Fate 3}}% SKILLS
+{Academics 1, Empathy 1, Deceit 1, Medicine 1\Path{Divinity}{Enchantment 3, Fate 2}}% SKILLS
 {\quarterstaff, \partialchain, medical equipment, camping equipment}% EQUIPMENT
 {\mana{4}\addtocounter{fp}{5}}
 
@@ -529,8 +545,7 @@ Alternatively, rogues may go the route of a singing socialite, and even learn to
 {1}% COMBAT
 {Academics 1, Empathy 1, Deceit 2, Performance 2, Vigilance 2}% SKILLS
 {\longsword, \partialleather, dagger, lantern, camping equipment, writing equipment, 50' silk rope.\Path{Song}{Fate 1, Enchantment 2}}% EQUIPMENT
-{\mana{2}}
-
+{\mana{2}\addtocounter{fp}{10}}
 
 \subsection{Warrior}\index{Warrior}
 
@@ -541,7 +556,7 @@ Their starting equipment is partial chainmail, a longsword and a buckler shield.
 If they start play with the Tactics Skill they also get camping equipment.
 They follow the goddess \gls{wargod}.
 
-\npc{\E}{50 \glsentrytext{xp} Warrior}
+\npc{\E}{50 \glsentrytext{xp} Soldier}
 
 \settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
@@ -553,6 +568,25 @@ They follow the goddess \gls{wargod}.
 {0}% DR
 {2}% COMBAT
 {Tactics 1\knacks{\adrenalinesurge}}% SKILLS
+{\longsword, \partialchain, \bucklar}% EQUIPMENT
+{\addtocounter{fp}{5}}
+
+\subsubsection{Warrior}
+
+Those focussed narrowly on advancing in martial abilities can become deadly.
+
+\npc{\E}{150 \glsentrytext{xp} Warrior}
+
+\settoggle{examplecharacter}{true}
+\person{2}% STRENGTH
+{2}% DEXTERITY
+{1}% SPEED
+{{0}% INTELLIGENCE
+{0}% WITS
+{0}}% CHARISMA
+{0}% DR
+{2}% COMBAT
+{Deceit 1, Tactics 1\knacks{\adrenalinesurge, \charge, \firststrike}}% SKILLS
 {\longsword, \partialchain, \bucklar}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
@@ -571,7 +605,7 @@ After progressing, particularly pious fighters can gain a level or two in Fate, 
 {0}}% CHARISMA
 {0}% DR
 {2}% COMBAT
-{Academics 1, Deceit 1, Tactics 1\Path{Divinity}{Fate 2}\knacks{\adrenalinesurge, \charge}}% SKILLS
+{Academics 1, Deceit 1, Tactics 1\Path{Divinity}{Fate 2}\knacks{\adrenalinesurge, \finishingblow}}% SKILLS
 {\longsword, \partialchain, \bucklar}% EQUIPMENT
 {\mana{2}\addtocounter{fp}{10}}
 
@@ -591,7 +625,7 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 {0}}% CHARISMA
 {0}% DR
 {2}% COMBAT
-{Projectiles 1, Beast Ken 1, Survival 1, Tactics 1\Path{Blood}{Aldaron 2}\knacks{\adrenalinesurge, \charge}}% SKILLS
+{Projectiles 1, Beast Ken 1, Survival 1, Tactics 1\Path{Blood}{Aldaron 2}\knacks{\mightydraw, \charge}}% SKILLS
 {\longsword, \partialchain, \bucklar, bow}% EQUIPMENT
 {\mana{2}\addtocounter{fp}{10}}
 
