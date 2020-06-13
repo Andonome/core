@@ -117,12 +117,13 @@
 \newcommand{\perfectsneakattack}{Perfect Sneak Attack\addtocounter{knacks}{1}\addtocounter{strb}{\value{knacks}}\addtocounter{strb}{2}}
 \newcommand{\stunningstrike}{Stunning Strike\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
 \newcommand{\specialist}[2]{Specialist (#1 + #2)\addtocounter{knacks}{1}}
-\newcommand{\charge}{Charge, \addtocounter{knacks}{1}\setcounter{track}{\value{knacks}}\addtocounter{track}{1}\divide\value{track} by 2\addtocounter{strb}{\value{track}}\addtocounter{spdb}{\value{track}}}
+\newcommand{\charge}{\addtocounter{knacks}{1}\setcounter{track}{\value{knacks}}\addtocounter{track}{1}\divide\value{track} by 2\addtocounter{strb}{\value{track}}\addtocounter{spdb}{\value{track}}Charge}
 \newcommand{\snapshot}{Snap Shot\addtocounter{knacks}{1}\addtocounter{strb}{2}}
 \newcommand{\defender}{Defender\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
 \newcommand{\dodger}{Dodger\addtocounter{knacks}{1}}
 \newcommand{\foxhop}{Fox Hop\addtocounter{knacks}{1}\setcounter{foxhop}{1}}
 \newcommand{\mightydraw}{Mighty Draw\addtocounter{knacks}{1}}
+\newcommand{\finishingblow}{Finishing Blow\addtocounter{knacks}{1}}
 \newcommand{\unstoppable}{Unstoppable\addtocounter{hp}{2}\addtocounter{knacks}{1}}
 
 %%%%% Weapons
@@ -144,12 +145,12 @@
 \newcommand{\bucklar}{\addtocounter{dex}{1}bucklar shield}
 
 % ARMOUR
-\newcommand{\partialleather}{partial leather armour \ifnumcomp{\value{dr}}{>}{2}{\addtocounter{dr}{1}}{\addtocounter{dr}{3}}}
-\newcommand{\completeleather}{complete leather armour \ifnumcomp{\value{dr}}{>}{2}{\addtocounter{dr}{1}}{\addtocounter{dr}{3}}\gdef\armourtype{C}}
-\newcommand{\partialchain}{partial chain armour \ifnumcomp{\value{dr}}{>}{3}{\addtocounter{dr}{1}}{\addtocounter{dr}{4}}}
-\newcommand{\completechain}{complete chain armour \ifnumcomp{\value{dr}}{>}{3}{\addtocounter{dr}{2}}{\addtocounter{dr}{4}}\gdef\armour{C}}
-\newcommand{\partialplate}{partial plate armour \ifnumcomp{\value{dr}}{>}{4}{\addtocounter{dr}{2}}{\addtocounter{dr}{5}}}
-\newcommand{\completeplate}{complete plate armour \ifnumcomp{\value{dr}}{>}{4}{\addtocounter{dr}{2}}{\addtocounter{dr}{5}\gdef\armourtype{C}}}
+\newcommand{\partialleather}{partial leather armour\ifnumcomp{\value{dr}}{>}{2}{\addtocounter{dr}{1}}{\addtocounter{dr}{3}}}
+\newcommand{\completeleather}{complete leather armour\ifnumcomp{\value{dr}}{>}{2}{\addtocounter{dr}{1}}{\addtocounter{dr}{3}}\gdef\armourtype{C}}
+\newcommand{\partialchain}{partial chain armour\ifnumcomp{\value{dr}}{>}{3}{\addtocounter{dr}{1}}{\addtocounter{dr}{4}}}
+\newcommand{\completechain}{complete chain armour\ifnumcomp{\value{dr}}{>}{3}{\addtocounter{dr}{2}}{\addtocounter{dr}{4}}\gdef\armour{C}}
+\newcommand{\partialplate}{partial plate armour\ifnumcomp{\value{dr}}{>}{4}{\addtocounter{dr}{2}}{\addtocounter{dr}{5}}}
+\newcommand{\completeplate}{complete plate armour\ifnumcomp{\value{dr}}{>}{4}{\addtocounter{dr}{2}}{\addtocounter{dr}{5}\gdef\armourtype{C}}}
 
 % 
 % _ __   ___ _ __ ___  ___  _ __  
