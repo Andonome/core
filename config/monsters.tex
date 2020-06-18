@@ -349,7 +349,7 @@
 	Initiative \arabic{spd}\ifnumcomp{\value{spd}}{=}{\value{spdb}}{}{ (\arabic{spdb})},
 	Damage \calculatedamage{\value{str}}\ifnumcomp{\value{str}}{=}{\value{strb}}{}{ (\calculatedamage{\value{strb}})}, 
 	\iftoggle{examplecharacter}{Defence \arabic{dex}, }{
-	TN \arabic{dex}
+	TN \arabic{dex}%
 	\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
 	}%
 	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP, }{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP, }}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP}{}%
