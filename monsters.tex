@@ -581,11 +581,12 @@
 \newcommand{\basilisk}[1][\npc{\C}{Basilisk}]{
 	#1
 	\randomtwo
+	\randomtwoB
+	\addtocounter{r2b}{-1}
 	\randomthree
 	\addtocounter{age}{5}
 	\randomthreeB
 	\addtocounter{r3b}{1}
-	\addtocounter{r2b}{-1}
 	\animal{\arabic{age}}% STRENGTH
 	{-2}% DEXTERITY
 	{\arabic{r3}}% SPEED
@@ -618,7 +619,7 @@
 	{\arabic{age}}% COMBAT
 	{Aggression \arabic{enc}, Projectiles \arabic{r3b}, Academics \arabic{r3}, Athletics \arabic{r2b}, Deceit \arabic{enc}, Tactics 2, Vigilance 3
 	\knacks{\ifodd\value{page}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{r3}}{>}{2}{\laststand}{\adrenalinesurge}}
-	\Path{Blood}{\ifodd\value{r4}Aldaron\else Enchantment \arabic{r4}\fi, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
+	\Path{Blood}{\ifodd\value{r4}Aldaron \else Enchantment \fi \arabic{r4}, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
 		{$3D6\times 100$gp, sitting in a lair.}%
 		{\setcounter{gold}{\time}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}%
