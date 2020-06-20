@@ -622,7 +622,7 @@
 	\Path{Blood}{\ifodd\value{r4}Aldaron \else Enchantment \fi \arabic{r4}, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
 		{$3D6\times 100$gp, sitting in a lair.}%
-		{\setcounter{gold}{\time}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}%
+		{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}%
 	{\mana{\arabic{age}}\gdef\armourtype{C}}
 	}
 
