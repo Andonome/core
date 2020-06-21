@@ -603,7 +603,7 @@
 	#1
 	\randomtwo
 	\randomtwoB
-	\addtocounter{enc}{2}
+	\addtocounter{enc}{3}
 	\randomthree
 	\randomthreeB
 	\addtocounter{age}{5}
@@ -1238,7 +1238,7 @@
 	#1
 	\randomtwo
 	\randomtwoB
-	\addtocounter{enc}{-1}
+	\addtocounter{enc}{1}
 \person{-1}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1257,7 +1257,7 @@
 \randomtwo\addtocounter{enc}{-2}
 \animal{\arabic{enc}}% STRENGTH
 {-2}% DEXTERITY 
-{0}% SPEED
+{1}% SPEED
 {-4}% WITS
 {2}% DR
 {2}% AGGRESSION
@@ -1270,6 +1270,7 @@
 	#1
 	\randomtwo\addtocounter{enc}{-2}
 	\randomtwoB
+	\addtocounter{r2b}{2}
 \person{\arabic{enc}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{r2b}}% SPEED
@@ -1290,7 +1291,7 @@
 	\randomthreeB
 \person{-2}% STRENGTH
 {\arabic{r3}}% DEXTERITY 
-{0}% SPEED
+{1}% SPEED
 {{\arabic{r2b}}% INTELLIGENCE
 {0}% WITS
 {-4}}% CHARISMA
