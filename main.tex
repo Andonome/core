@@ -13,6 +13,8 @@
 
 \begin{document}
 
+\pagenumbering{gobble}
+
 \iftoggle{verbose}{
 
 \begin{titlepage}
@@ -29,13 +31,9 @@
 
 }{}
 
-\pagenumbering{roman}
-
 \tableofcontents
 
-\pagebreak[4]
-
-\pagenumbering{arabic}
+\mainmatter
 
 \iftoggle{verbose}{
 
