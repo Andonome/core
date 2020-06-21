@@ -27,3 +27,7 @@ svg-inkscape
 *.out
 *.ptc
 old
+*.png
+*.jpg
+*.jpeg
+*.tiff
