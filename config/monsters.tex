@@ -454,7 +454,7 @@
 %%                                        
 
 
-\newcommand{\auroch}[1][\npc{\C\G}{\arabic{page} Aurochs}]{
+\newcommand{\auroch}[1][\npc{\A\T}{\arabic{page} Aurochs}]{
 	#1
 \animal{2}% STRENGTH
 {-2}% DEXTERITY 
@@ -467,7 +467,7 @@
 {\addtocounter{xpbonus}{-4}}
 }
 
-\newcommand{\bear}[1][\npc{\C}{Bear}]{
+\newcommand{\bear}[1][\npc{\A}{Bear}]{
 	#1
 \animal{5}% STRENGTH
 {-1}% DEXTERITY 
@@ -480,7 +480,7 @@
 {}
 }
 %
-\newcommand{\boar}[1][\npc{\C}{Boar}]{
+\newcommand{\boar}[1][\npc{\A}{Boar}]{
 	#1
 	\randomtwoB
 	\animal{\arabic{r2b}}% STRENGTH
@@ -494,7 +494,7 @@
 {}
 }
 
-\newcommand{\chitincrawler}[1][\npc{\C}{Chitincrawler}]{
+\newcommand{\chitincrawler}[1][\npc{\A}{Chitincrawler}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{3}
@@ -514,7 +514,7 @@
 {}
 }
 %
-\newcommand{\griffin}[1][\npc{\C}{\arabic{r3} Griffins}]{
+\newcommand{\griffin}[1][\npc{\A}{\arabic{r3} Griffins}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
@@ -529,7 +529,7 @@
 {}
 }
 
-\newcommand{\mouthdigger}[1][\npc{\C}{Mouthdigger}]{
+\newcommand{\mouthdigger}[1][\npc{\A}{Mouthdigger}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
@@ -544,7 +544,7 @@
 {}
 }
 %
-\newcommand{\wolf}[1][\npc{\C\G}{\randomdozen \arabic{r12} Wolves}]{
+\newcommand{\wolf}[1][\npc{\A\T}{\randomdozen \arabic{r12} Wolves}]{
 	#1
 	\randomdozen
 	\addtocounter{enc}{2}
@@ -578,7 +578,7 @@
 {}
 }
 
-\newcommand{\basilisk}[1][\npc{\C}{Basilisk}]{
+\newcommand{\basilisk}[1][\npc{\A}{Basilisk}]{
 	#1
 	\randomtwo
 	\randomtwoB
@@ -603,7 +603,7 @@
 	#1
 	\randomtwo
 	\randomtwoB
-	\addtocounter{enc}{2}
+	\addtocounter{enc}{3}
 	\randomthree
 	\randomthreeB
 	\addtocounter{age}{5}
@@ -642,7 +642,7 @@
 	{}
 	}
 %
-\newcommand{\dwarvensoldier}[1][\npc{\M\G}{\arabic{r12} Dwarven Soldiers}]{
+\newcommand{\dwarvensoldier}[1][\npc{\M\T}{\arabic{r12} Dwarven Soldiers}]{
 	#1
 	\randomdozen
 	\randomtwo
@@ -915,7 +915,7 @@
 {\mana{\arabic{age}}}
 }
 
-\newcommand{\humansoldier}[1][\npc{\M\F\G}{\arabic{r12} Soldiers}]{
+\newcommand{\humansoldier}[1][\npc{\M\F\T}{\arabic{r12} Soldiers}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
@@ -1070,7 +1070,7 @@
 {\mana{6}\lockedmana{\value{r2}}}
 }
 
-\newcommand{\gnollhunter}[1][\npc{\M\G}{\arabic{r12} Gnoll Hunters}]{
+\newcommand{\gnollhunter}[1][\npc{\M\T}{\arabic{r12} Gnoll Hunters}]{
 	#1
 	\randomtwo\addtocounter{enc}{1}
 	\randomtwoB
@@ -1112,7 +1112,7 @@
 {\mana{4}}
 }
 
-\newcommand{\nuracat}[1][\npc{\C\N}{Nura Cat}]{
+\newcommand{\nuracat}[1][\npc{\A\N}{Nura Cat}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{2}
@@ -1130,7 +1130,7 @@
 	{\claws}{}
 	}
 
-\newcommand{\nuracrab}[1][\npc{\C\N}{Nura Crab}]{
+\newcommand{\nuracrab}[1][\npc{\A\N}{Nura Crab}]{
 	#1
 	\randomthree
 	\randomtwo
@@ -1147,7 +1147,7 @@
 {}
 	}
 
-\newcommand{\nurahorse}[1][\npc{\C\N}{Nura Horse}]{
+\newcommand{\nurahorse}[1][\npc{\A\N}{Nura Horse}]{
 	#1
 	\randomtwo
 	\randomtwoB
@@ -1163,7 +1163,7 @@
 {}
 }
 
-\newcommand{\nuraslug}[1][\npc{\C\N\G}{\arabic{r12} Nura Slugs}]{
+\newcommand{\nuraslug}[1][\npc{\A\N\T}{\arabic{r12} Nura Slugs}]{
 	#1
 	\randomtwo
 \animal{\arabic{enc}}% STRENGTH
@@ -1177,7 +1177,7 @@
 {\addtocounter{str}{1}}
 }
 
-\newcommand{\nuraspider}[1][\npc{\C\N}{Nura Spider}]{
+\newcommand{\nuraspider}[1][\npc{\A\N}{Nura Spider}]{
 	#1
 	\randomthree
 	\addtocounter{age}{2}
@@ -1215,7 +1215,7 @@
 {}
 }
 
-\newcommand{\nurawolf}[1][\npc{\C\N}{\arabic{r12} Nura Wolves}]{
+\newcommand{\nurawolf}[1][\npc{\A\N}{\arabic{r12} Nura Wolves}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{2}
@@ -1238,7 +1238,7 @@
 	#1
 	\randomtwo
 	\randomtwoB
-	\addtocounter{enc}{-1}
+	\addtocounter{enc}{1}
 \person{-1}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1252,12 +1252,12 @@
 {}
 }
 
-\newcommand{\undeadgoblin}[1][\npc{\U\G}{\arabic{r12} Undead Hobgoblins}]{
+\newcommand{\undeadgoblin}[1][\npc{\D\T}{\arabic{r12} Undead Hobgoblins}]{
 	#1
 \randomtwo\addtocounter{enc}{-2}
 \animal{\arabic{enc}}% STRENGTH
 {-2}% DEXTERITY 
-{0}% SPEED
+{1}% SPEED
 {-4}% WITS
 {2}% DR
 {2}% AGGRESSION
@@ -1266,10 +1266,11 @@
 {}
 }
 
-\newcommand{\deepgoblin}[1][\npc{\N\G}{\arabic{r12} Goblins}]{
+\newcommand{\deepgoblin}[1][\npc{\N\T}{\arabic{r12} Goblins}]{
 	#1
 	\randomtwo\addtocounter{enc}{-2}
 	\randomtwoB
+	\addtocounter{r2b}{2}
 \person{\arabic{enc}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{r2b}}% SPEED
@@ -1290,7 +1291,7 @@
 	\randomthreeB
 \person{-2}% STRENGTH
 {\arabic{r3}}% DEXTERITY 
-{0}% SPEED
+{1}% SPEED
 {{\arabic{r2b}}% INTELLIGENCE
 {0}% WITS
 {-4}}% CHARISMA
@@ -1302,7 +1303,7 @@
 {\mana{4}}
 }
 
-\newcommand{\hobgoblin}[1][\npc{\G\M\N}{\arabic{r12} Hobgoblins}]{
+\newcommand{\hobgoblin}[1][\npc{\T\M\N}{\arabic{r12} Hobgoblins}]{
 	#1
 	\randomtwo
 \person{\arabic{r2b}}% STRENGTH
@@ -1318,7 +1319,7 @@
 {}
 }
 
-\newcommand{\deephobgoblin}[1][\npc{\G\N}{\arabic{r12} Hobgoblins}]{
+\newcommand{\deephobgoblin}[1][\npc{\T\N}{\arabic{r12} Hobgoblins}]{
 	#1
 	\randomtwo
 	\randomthree
@@ -1335,7 +1336,7 @@
 {}
 }
 
-\newcommand{\undeadhobgoblin}[1][\npc{\U\G}{\arabic{r12} Undead Hobgoblins}]{
+\newcommand{\undeadhobgoblin}[1][\npc{\D\T}{\arabic{r12} Undead Hobgoblins}]{
 	#1
 	\randomtwo
 \animal{\arabic{r2}}% STRENGTH
@@ -1349,7 +1350,7 @@
 {}
 }
 
-\newcommand{\sentientundeadhobgoblin}[1][\npc{\U\G}{\arabic{r12} Sentient Undead Hobgoblins}]{
+\newcommand{\sentientundeadhobgoblin}[1][\npc{\D\T}{\arabic{r12} Sentient Undead Hobgoblins}]{
 	#1
 \randomtwo
 \person{\arabic{r2}}% STRENGTH
@@ -1392,7 +1393,7 @@
 {}
 }
 
-\newcommand{\undeadogre}[1][\npc{\U\N}{Undead Ogre}]{
+\newcommand{\undeadogre}[1][\npc{\D\N}{Undead Ogre}]{
 	#1
 	\animal{6}% STRENGTH
 	{-2}% DEXTERITY
@@ -1405,7 +1406,7 @@
 	{}%
 }
 
-\newcommand{\ghoul}[1][\npc{\U\G}{\arabic{r12} Ghouls}]{
+\newcommand{\ghoul}[1][\npc{\D\T}{\arabic{r12} Ghouls}]{
 	#1
 \randomtwo
 \animal{\arabic{enc}}% STRENGTH
@@ -1419,7 +1420,7 @@
 {}
 }
 
-\newcommand{\ghast}[1][\npc{\U}{Ghast}]{
+\newcommand{\ghast}[1][\npc{\D}{Ghast}]{
 	#1
 \randomtwo\addtocounter{enc}{1}
 \person{\arabic{enc}}% STRENGTH
@@ -1440,7 +1441,7 @@
 {}
 }
 
-\newcommand{\demilich}[1][\npc{\U\E}{Demilich}]{
+\newcommand{\demilich}[1][\npc{\D\E}{Demilich}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
@@ -1458,7 +1459,7 @@
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
 
-\newcommand{\lich}[1][\npc{\U}{Lich}]{
+\newcommand{\lich}[1][\npc{\D}{Lich}]{
 	#1
 	\randomtwo
 	\randomthreeB
@@ -1476,7 +1477,7 @@
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
-\newcommand{\jelly}[1][\npc{\C}{Acidic Ooze}]{
+\newcommand{\jelly}[1][\npc{\A}{Acidic Ooze}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{5}
@@ -1494,7 +1495,7 @@
 {\addtocounter{xpbonus}{2}}
 }
 
-\newcommand{\umberhulk}[1][\npc{\C}{Umber Hulk}]{
+\newcommand{\umberhulk}[1][\npc{\A}{Umber Hulk}]{
 	#1
 	\randomtwo\addtocounter{enc}{3}
 	\randomthree 
@@ -1511,7 +1512,7 @@
 {}
 }
 
-\newcommand{\horse}[1][\npc{\C}{Horse}]{
+\newcommand{\horse}[1][\npc{\A}{Horse}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
@@ -1526,7 +1527,7 @@
 {}
 }
 
-\newcommand{\warhorse}[1][\npc{\C}{War Horse}]{
+\newcommand{\warhorse}[1][\npc{\A}{War Horse}]{
 	#1
 	\randomtwo
 	\randomtwoB
@@ -1543,7 +1544,7 @@
 {}
 }
 
-\newcommand{\donkey}[1][\npc{\C}{Donkey}]{
+\newcommand{\donkey}[1][\npc{\A}{Donkey}]{
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
@@ -1559,7 +1560,7 @@
 {}
 }
 
-\newcommand{\huntingdog}[1][\npc{\C\G}{\randomfour\addtocounter{track}{2}\arabic{track} Hunting Dogs}]{
+\newcommand{\huntingdog}[1][\npc{\A\T}{\randomfour\addtocounter{track}{2}\arabic{track} Hunting Dogs}]{
 	#1
 	\randomtwo
 	\randomtwoB
@@ -1641,7 +1642,7 @@
 {\addtocounter{sp}{20}\mana{8}\addtocounter{xpbonus}{4}}
 }
 
-\newcommand{\watcher}[1][\npc{\C}{Watcher}]{
+\newcommand{\watcher}[1][\npc{\A}{Watcher}]{
 	#1
 	\randomthree
 \animal{-3}% STRENGTH
