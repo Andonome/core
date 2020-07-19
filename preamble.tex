@@ -77,7 +77,13 @@ bookmarks=true]%
   \selectfont
 }
 
+% change bullet points
+
+\renewcommand{\labelitemi}{\ding{250}}
+\renewcommand{\labelitemii}{\ding{254}}
+
 %%%%%%%%%% Encounter Numbers
+
 \newcounter{encnum}
 \newcommand{\lescounter}{\addtocounter{enc}{-1}}
 \setcounter{encnum}{1}
