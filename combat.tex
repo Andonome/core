@@ -191,7 +191,7 @@ Characters heal a quarter their \gls{hp} each week, rounded up.
 \index{Death}Once a \gls{pc} reaches 0 HP they must make a \index{Vitality Check}Vitality Check in order to stay alive.
 This is rolled at \gls{tn} 4 plus one for every negative HP level.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
 Stronger characters already have more \gls{hp}, which has already kept them farther from death.}}{}
-For example, if someone with 3 HP left were to take a further 6 Damage, this would put their at -3 HP.
+For example, if someone with 3 HP left were to take a further 6 Damage, this would put them at -3 HP.
 That makes the \gls{tn} 7 for the Vitality Check.
 
 A failed Vitality check means that the character is dead. A successful one means that the character is unconscious for the remainder of the scene but alive. At the end of the scene they can make further Vitality Checks to see if they wake up. When waking up, all actions relying on movement take a penalty equal to the number of HP beyond 0 the character has lost.
@@ -399,7 +399,7 @@ Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in
 \subsection{Stacking Armour}
 
 Characters gain \gls{dr} from armour, but animals can gain  \gls{dr} from a thick hide, while the undead gain \gls{dr} from having less need of a functioning body.
-When multiple types of Damage stack, the second counts for only half (rounded up), and any tertiary damage types count for a quarter, and so on.
+When multiple types of \gls{dr} stack, the second counts for only half (rounded up), and any tertiary damage types count for a quarter, and so on.
 
 \subsubsection{Aggression}
 
@@ -429,6 +429,12 @@ Someone with a Dexterity Bonus of +1 and a longsword would have a total Dexterit
 This bonus cannot be picked apart - the entire thing must go towards only one of these two Factors.
 
 \subsection{The Combat Bonus}
+
+\iftoggle{verbose}{
+
+	Characters can focus on different parts of combat -- perhaps attempting to strike quickly, to hit the enemy, or to keep themself safe.
+
+}{}
 
 The Combat Skill can be added piece by piece to any of the Combat Factors.
 Those with Combat +1 can put it on Strike, Evasion or Initiative.
@@ -878,7 +884,7 @@ When someone with a bow is attacked, they can use their Combat Skill and Dexteri
 \subsection{The Long Bow}\index{Projectiles!Bow}\index{Bows}
 
 Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough.
-To pull back the heavy load on a long bow takes 1 \gls{round}, and the arrow flies at the very end of round.
+To pull back the heavy load on a long bow takes 1 \gls{round}, and the arrow flies at the very end of the round.
 Each bow has its own Strength rating and anyone without at least that much Strength cannot use the bow; the bows deal $1D6$ +Strength Rating.
 So if a bow has a Strength rating of 2 then it deals $1D6+2$ Damage but requires a Strength of 2, at least, to operate.
 Having a Strength of 3 will not increase the Damage.
@@ -971,7 +977,7 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 
 ``Finally!'', shouts Thenton. We're done. It's finished. We can {\dots}
 
-``Four! Over a dozen hobgoblins can be seen marching down from the mountain.''
+``Four! Over a dozen hobgoblins can be seen marching down from the mountain.'', shouts the \gls{gm}.
 
 ``What? \ We can't handle any more. Hugi's Damaged. Arneson's in poor shape too.''
 
@@ -1120,7 +1126,7 @@ Players are encouraged to suggest Skills which might help. While running away fr
 
 \begin{exampletext}
 	Thenton's next plan was to run away as fast as possible.
-This was much more popular than his last plan of yelling at the enemy, though Hugi found it hard to be move enthusiastically with an arrow in his shoulder.
+This was much more popular than his last plan of yelling at the enemy, though Hugi found it hard to move enthusiastically with an arrow in his shoulder.
 The hobgoblins of course realised that they had no time to reload so they just gave chase.
 They dropped their projectiles, pulled out their shortswords and started to clamber along the rocky face of the mountain.
 The trio could not move clearly up the mountain until they had gained some ground between themselves and the hobgoblins, and feared that there would be more openings to once-dwarven tunnels, now infested with hobgoblins, if they went further up from their present location.
