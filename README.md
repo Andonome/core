@@ -43,7 +43,7 @@ For anyone wanting to make their own book, modifications, or otherwise understan
 
 Parsimony means getting the same results with fewer steps.
 As an example, you could represent a character's strength by saying 'Strength 14', then create a table where those with a Strength of 14 get a +2 bonus.
-A more parsimonious way to represent a character as having 'Strength +2' - broadly the same result, but fewer steps.
+A more parsimonious way to represent a character as having 'Strength +2' is to just mark it with '+2'.
 
 Everything from backstory, through character creation and groups rolling to spot dangers has been created to get a resolution in the shorted possible real-world time.
 
@@ -184,6 +184,6 @@ You can join by:
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/586593293/artifacts/download
+[core download]: https://gitlab.com/bindrpg/core/-/jobs/648535695/artifacts/download?file_type=archive
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
