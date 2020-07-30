@@ -13,7 +13,7 @@ Gits available on github and gitlab.
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
-The following is a brief description of the projects.
+The following is a brief description of the project.
 Those wanting to just have a game should use the download link above.
 GMs who want a pre-made campaign setting should also have a look at [Adventures in Fenestra][aif].
 
@@ -28,7 +28,7 @@ For anyone wanting to make their own book, modifications, or otherwise understan
 - Roll 2D6 + Attribute + Skill to succeed at standard Target Number 7.
 - Combat is tactical.
   * Initiative is based on action-points.
-  * Combat Skill is divided between attack, defence and initiative.
+  * The Combat Skill is divided between attack, defence and initiative.
   * Fate Points allow Damage to be avoided.
 - Magic gets you multiple spells per level in a magic sphere
   * Spend MP to cast.
@@ -62,9 +62,11 @@ A fighter is just someone with a good Combat score, and a Paladin is just a figh
 + Spying the bandit's lair, you find they're heavily armed and dangerous.  You spend 2 Story Points and declare that one of the guards in another town is a war buddy, willing to join you in battle.
 + Two stories later, the party is destitute, and in dire need of food and weapons.  Spending 3 Story Points, you declare that your old war buddies and you found some loot, burried it nearby, and promised each other nobody would touch it until the heat was off, and it could be evenly distributed.
 
-Story Points allow players to craft a story in-play, once they know the world they're in.  It also means that nobody has a boring backstory, because everything in your past is *directly* relevant to what you're doing in the current adventure.  You can throw all your Story Points out there at the start, declaring you have friends in high places and fabulous wealth, or play the mysterious loner until the party really needs a *deus ex machina* to avoid certain death.
+Story Points allow players to craft a story in-play, once they know the world they're in.
+It also means that nobody has a boring backstory, because everything in your past is *directly* relevant to what you're doing in the current adventure.
+You can throw all your Story Points out there at the start, declaring you have friends in high places and fabulous wealth, or lay out small pieces of your history to explain why you know certain languages, and introduce old friends.
 
-... and most importantly, crafting a detailed backstory no longer requires any time spent.
+...and most importantly, crafting a detailed backstory no longer requires any time spent - everyone creates their history on the fly.
 
 ## Character Creation
 
@@ -80,7 +82,7 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 
 |                  | **Strength** (2)                    | **Dexterity** (-1)                                | **Speed** (0)                                 | **Intelligence** (1)            | **Wits** (-1) | **Charisma** (1) |
 |:-----------------|:------------------------------------|:--------------------------------------------------|:----------------------------------------------|:--------------------------------|:-----------------------|:---|
-| **Academics** +1 | giving a speech to a large crowd: 3 | forgery: 0                                  | sorting coins: 1                              | remembering facts: 2            | outsmarting someone: 0 | storytelling: 2 |
+| **Academics** +1 | giving a speech to a large crowd: 3 | forging a signature: 0                                  | sorting coins: 1                              | remembering facts: 2            | outsmarting someone: 0 | storytelling: 2 |
 | **Deceit** +3    | intimidating an opponent: 5         | sliding a knife up to someone's neck unnoticed: 2 | charging at someone to intimidate them: 3     | crafting a clever ruse: 4       | coming up with a quick lie: 2         | making a false friend: 4 |
 | **Vigilance** +3 | keeping watch all night: 5          | finding a door in the darkness: 2                 | racing through town to find a missing mage: 3 | investigating a murder scene: 4 | noticing an assassin lying in wait: 2 | finding which gentleman at court has a problem with the Duke: 4 |
 
@@ -127,9 +129,19 @@ Foreshadowing, multiple plot-arcs, and keeping track of the lot over the long te
 Who has time for that with study and a job?
 Side Quests are here to help the GM and make sure that no GM comes unprepared, even if they haven't actually prepared anything.
 
-An individual Side Quest is a simple story in a few parts - the players hear of a mad mage, players encounter a monster made by the mad mage, and finally the players find a village destroyed by the mad mage.
+An individual Side Quest is a simple story in a few parts:
+
+- the players hear of a mad mage,
+
+- the players encounter a monster made by the mad mage,
+
+- and finally the players find a village destroyed by the mad mage.
+
 That last part can be repeated until the characters confront the mage.
 Details of the mad mage's lair will be given, so the players can track her down when ready.
+
+Multiple quest parts intermingle, and sometimes two parts occur simultaneously.
+The result is a fast-paced story, where the plot is always jumping out *at* the party.
 
 ## Magic
 
@@ -154,7 +166,7 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 ## LaTeX
 
 This thing's written in LaTeX, a magical document format where you describe the layout to the computer, then the computer does the layout for you.
-Last time this was written the persistent revisions added up to months of formatting and reformatting.
+The first time this was written in a standard editor, the persistent revisions added up to months of formatting and reformatting.
 If you ever need to write a long work involving anything more than a series of words: do yourself a favour and learn LaTeX.
 The basics just take an afternoon.
 
@@ -186,4 +198,4 @@ You can join by:
 
 [core download]: https://gitlab.com/bindrpg/core/-/jobs/648535695/artifacts/download?file_type=archive
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
-[aif]: https://gitlab.com/bindrpg/aif
+[aif]: https://gitlab.com/bindrpg/aif/-/jobs/658923970/artifacts/download?file_type=archive
