@@ -1441,6 +1441,26 @@
 {}
 }
 
+\newcommand{\necromancer}[1][\npc{\M}{The Necromancer}]{
+	#1
+	\randomtwo
+	\addtocounter{enc}{1}
+	\randomtwoB
+	\addtocounter{r2b}{-1}
+\person{\arabic{r2}}% STRENGTH
+{0}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{{\arabic{enc}}% INTELLIGENCE
+{\arabic{r2b}}% WITS
+{-5}}% CHARISMA
+{2}% DR
+{\arabic{r2}}% AGGRESSION
+{Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
+\Path{Devotion (Qualme)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Metamagic \arabic{r4}, Necromancy 4}}% SKILLS
+{\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
+{\mana{6}\setcounter{spd}{\value{wts}}}
+}
+
 \newcommand{\demilich}[1][\npc{\D\E}{Demilich}]{
 	#1
 	\randomtwo
