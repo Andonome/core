@@ -562,6 +562,7 @@
 \newcommand{\woodspy}[1][\npc{\E}{Woodspy}]{
 	#1
 	\randomtwo
+	\randomtwoB
 	\addtocounter{enc}{2}
 	\randomthree
 	\randomfour
@@ -569,7 +570,7 @@
 {\arabic{enc}}% DEXTERITY 
 {\arabic{r2}}% SPEED
 {{-4}% INTELLIGENCE
-{2}% WITS
+{\arabic{r2b}}% WITS
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r3}}% AGGRESSION
