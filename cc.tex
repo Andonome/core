@@ -16,17 +16,24 @@ The Physical \glspl{attribute} used here are \textit{Strength, Dexterity, and Sp
 Typically, players take actions by rolling two six-sided dice (``$2D6$'') and adding a Trait and Skill to the result.  If you roll high enough, you succeed.
 Otherwise, you fail.
 
+\subsection{Summary}
+
+\begin{enumerate}
+
+\item{Roll to get a random race (`Human', `Dwarf', `Elf', et c.}
+\item{Roll dice get a random Strength, Dexterity, and the other Attributes.}
+\item{Spend 50 XP on Attributes and Skills. You might also buy Knacks or Magic.}
+\item{Grab some adventuring items.}
+\item{Select a god or code to follow, which grants you XP.}
+
+\end{enumerate}
+
 \end{multicols}
 
 \section{Races}\index{Race}
-\iftoggle{verbose}{
-\includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
-\label{roch:races}
-}{}
-
 \newcommand{\racechart}{
 
-\begin{tcolorbox}[tabularx={cll},arc=1mm,adjusted title=Race]
+\begin{tcolorbox}[tabularx={clX},arc=1mm,adjusted title=Race]
 
 	Roll & Race & Adjustments \\\hline
 
@@ -43,36 +50,21 @@ Otherwise, you fail.
 \end{tcolorbox}
 }
 
-\racechart
-
 \begin{multicols}{2}
 
 \noindent
 Character creation is random by default -- it helps new players get started quickly.
 
-\begin{wrapfigure}{R}{.5\linewidth} 
+\begin{table*}[t]
 
-	\begin{tcolorbox}[tabularx={cc},arc=1mm]
+\iftoggle{verbose}{
+\includegraphics[width=\textwidth]{images/Roch_Hercka/five_races.jpg}
+\label{roch:races}
+}{}
 
-	Result & Attribute Bonus \\\hline
+\end{table*}
 
-	2 & -3 \\
-
-	3 & -2 \\
-
-	4-5 & -1 \\
-
-	6-8 & 0 \\
-
-	9-10 & +1 \\
-
-	11 & +2 \\
-
-	12 & +3 \\
-
-	\end{tcolorbox}
-
-\end{wrapfigure}
+\racechart
 
 \iftoggle{verbose}{
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans. Whichever race you've landed on, go and have a look at page \pageref{starting_characters}. You will also find suggestions on why someone of that race might be adventuring.
@@ -95,11 +87,71 @@ Roll $2D6$ for each of the Bonuses (or negatives).
 Continue rolling until all 6 Attributes have a value.
 Your race will give you modifiers to these results.
 
-\subsection{Player Chosen Characters}
+\end{multicols}
 
-If players prefer, they can design their own characters. In this case they select a race and take the racial modifiers as a starting point to spend \glspl{xp}.  They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
+\section{Attributes}
+
+\begin{multicols}{2}
+
+\noindent
+These are the basic Traits which characters must use over and over again for every roll.
+
+	\begin{tcolorbox}[tabularx={XX},arc=1mm]
+
+	Result & Attribute Bonus \\\hline
+
+	2 & -3 \\
+
+	3 & -2 \\
+
+	4-5 & -1 \\
+
+	6-8 & 0 \\
+
+	9-10 & +1 \\
+
+	11 & +2 \\
+
+	12 & +3 \\
+
+	\end{tcolorbox}
+
+
+\subsection{Body Attributes}\index{Body Attributes}\index{Physical Attributes}
+
+These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
+
+\subsubsection{Strength}
+
+Strength represents a character's muscles -- their ability to endure, to take damage, lift heavy objects, march for long distances and to wield heavy weapons without penalty.
+
+\subsubsection{Speed}
+
+Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run. Since it allows characters to flee dangerous situations, a group can be held back by its slowest member. A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat. Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
+
+\subsubsection{Dexterity}
+
+Dexterity represents someone's hand-eye coordination and natural grace. It's used to dodge, parry, block and also to aim projectile weapons. It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
+
+\subsection{Mind Attributes}
+
+\index{Mind Attributes}Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
+
+\subsubsection{Intelligence}
+
+Intelligent characters understand ideas, remember well and always come prepared. They find their own way home and pick up new languages fluidly. Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
+
+\subsubsection{Wits}
+
+Where intelligence represents how well a character thinks, Wits just tells you how fast they think. The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits. Wits is also the primary Attribute for resisting magical enchantments. Wits is the only Mind Attribute available to animals.
+
+\subsubsection{Charisma}
+
+Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
 
 \iftoggle{verbose}{
+\begin{boxtext}
+
 \subsection{The Story of Thenton}
 
 After rolling the dice, my final results are Strength +1, Speed 0, Dexterity -1, Intelligence 0, Wits -1 and Charisma +1.
@@ -113,6 +165,8 @@ Meanwhile, he earns his pay, and perhaps attempts to chat up a few ladies, based
 He just needs a name now -- something which captures the idea of a slightly silly fop, a knightly poet.
 `Thenton' should do it.
 Roll up a character of your own, and you can use it for practice rolls in a moment.
+
+\end{boxtext}
 
 \begin{exampletext}
 
@@ -152,45 +206,10 @@ The wizard smiled again.
 \end{exampletext}
 }{}
 
-\end{multicols}
+\subsection{Player Chosen Characters}
 
-\section{Attributes}
+If players prefer, they can design their own characters. In this case they select a race and take the racial modifiers as a starting point to spend \glspl{xp}.  They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
 
-These are the basic Traits which characters must use over and over again for every roll.
-
-\begin{multicols}{2}
-
-\subsection{Body Attributes}\index{Body Attributes}\index{Physical Attributes}
-
-These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
-
-\subsubsection{Strength}
-
-Strength represents a character's muscles -- their ability to endure, to take damage, lift heavy objects, march for long distances and to wield heavy weapons without penalty.
-
-\subsubsection{Speed}
-
-Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run. Since it allows characters to flee dangerous situations, a group can be held back by its slowest member. A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat. Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
-
-\subsubsection{Dexterity}
-
-Dexterity represents someone's hand-eye coordination and natural grace. It's used to dodge, parry, block and also to aim projectile weapons. It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
-
-\subsection{Mind Attributes}
-
-\index{Mind Attributes}Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
-
-\subsubsection{Intelligence}
-
-Intelligent characters understand ideas, remember well and always come prepared. They find their own way home and pick up new languages fluidly. Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
-
-\subsubsection{Wits}
-
-Where intelligence represents how well a character thinks, Wits just tells you how fast they think. The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits. Wits is also the primary Attribute for resisting magical enchantments. Wits is the only Mind Attribute available to animals.
-
-\subsubsection{Charisma}
-
-Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
 
 \end{multicols}
 
@@ -204,7 +223,7 @@ Finally, a character's ability to speak with people, make friends, lie convincin
 \noindent
 Skills define what a character does with most of their time -- what they are practised in.
 They are always paired with an Attribute to give a bonus to rolls.
-We'll go over how to give your new character Skills under the Experience section.\footnote{page \pageref{xp}.}
+We'll go over how which Skills are available below.\footnote{page \pageref{skills}.}
 For now, just jot down a few of the Skills you think your character should have so you can see how they work with the basic actions in the next chapter.
 }{}
 
@@ -233,6 +252,7 @@ Each specialization can be used with any other specialized Skill.  If you have a
 
 All specialist Skills are marked with an asterisk.
 
+\label{skills}
 \subsection{The List}
 
 Most Skills allow people to perform a range of functions depending upon which Attribute it is paired with. A few examples are given with the list below.
@@ -434,7 +454,6 @@ Priests of \Glsentrytext{naturegod} make a good stand-in for druids or witches, 
 They begin play with Academics 1, Beast Ken 1, Survival 1, Combat 1, Aldaron 1, Polymorph 1, and 2 \glspl{mp}.
 
 Their starting equipment includes partial leather armour, camping equipment, a spear, a dagger, 50' of rope, and 
-
 
 \npc{\E}{50 \glsentrytext{xp} Druid}
 
