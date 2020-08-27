@@ -401,15 +401,15 @@
 	\setcounter{xp}{\value{attackXPtotal}}
 	\addtocounter{xp}{\value{defenceXPtotal}}
 	\addtocounter{xp}{-350}
-	\divide\value{xp} by 120
-	\addtocounter{xp}{\value{xpbonus}}
-	\addtocounter{xp}{\value{mp}}
+\ifnumcomp{\value{xp}}{<}{120}{\ifnumcomp{\value{xp}}{>}{100}{$1/2$ XP}{$1/3$}}{%
+	\divide\value{xp} by 120%
+	\addtocounter{xp}{\value{xpbonus}}%
+	\addtocounter{xp}{\value{mp}}%
+\arabic{xp} XP}%
 % if {mind} print fate points.
-
-\iftoggle{examplecharacter}{
-
+%
+\iftoggle{examplecharacter}{%
 }{
-	\ifnumcomp{\value{xp}}{>}{0}{\arabic{xp} XP}{\ifnumcomp{\value{xp}}{<}{-1}{$1/8$ XP}{$1/4$ XP}}
 	\iftoggle{mind}{\addtocounter{fp}{\value{cha}}\ldots \arabic{fp} FP}{}
 	\vspace{.1cm}
 	\hrule
