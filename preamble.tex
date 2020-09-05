@@ -353,9 +353,27 @@ Roll & Result \\
 \newcommand{\sqtoc}{\printcontents[\sqarea]{l}{2}{\section*{Summaries}\setcounter{tocdepth}{3}}}
 
 % Change the tocdepth from 2 to 3 in order to output a miniature table of contents on all side quests
-\newcommand{\sqminitoc}{\printcontents[sq]{l}{2}{\setcounter{tocdepth}{2}}}
+\newcommand{\sqminitoc}{
 
-\newcommand{\sidequest}[1]{\resumecontents[\sqarea]\subsection[#1]{#1}\stopcontents[\sqarea]\settoggle{firstsq}{true}}
+	\begin{figure*}[t]
+	
+	\begin{tcolorbox}[adjusted title={Summary: \sqName}]
+	
+	\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}
+	
+	\end{tcolorbox}
+	
+	\end{figure*}
+}
+
+\newcommand{\sqName}{}
+
+\newcommand{\sidequest}[1]{\renewcommand{\sqName}{#1}
+	\resumecontents[\sqarea]
+	\subsection{\sqName}
+	\stopcontents[\sqarea]
+	\settoggle{firstsq}{true}
+}
 
 \newcommand{\sqpart}[3]{\resumecontents[#1]\subsubsection[\iftoggle{firstsq}{\CheckedBox}{\Square} #2 -- #3]{(#1) #2}\stopcontents[#1]\settoggle{firstsq}{false}}
 
