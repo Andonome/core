@@ -356,8 +356,9 @@
 \iftoggle{examplecharacter}{\addtocounter{fp}{\value{cha}}, \arabic{fp} FP}{}
 
 
-	\calculateXP
-
+	\iftoggle{examplecharacter}{}{
+		\calculateXP
+	}
 	}
 %
 %
