@@ -676,7 +676,7 @@
 	{0}}%  CHARISMA
 	{0}% DR
 	{1}% COMBAT
-	{Academics \arabic{enc}, Crafts 1, Tactics 2\Path{Runes}{Metamagic \arabic{r4}, Fate \arabic{enc}, Force \arabic{r3}, Conjuration \arabic{r3b}}}{\shortsword, \partialchain, \ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$4D6$ sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
+	{Academics \arabic{enc}, Crafts 1, Tactics 2\Path{Runes}{Fate \arabic{enc}, Force \arabic{r3}, Conjuration \arabic{r3b}}}{\shortsword, \partialchain, \ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$4D6$ sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
 	}
 
 
@@ -697,7 +697,7 @@
 	{\arabic{r4}}}% CHARISMA
 	{6}% DR
 	{\arabic{r3}}% COMBAT
-	{Academics 3, Athletics \arabic{r3}, \ifodd\value{r2}Crafts 2, Performance \arabic{r3}, \else Empathy \arabic{r2b}, Survival 3, Vigilance \arabic{r3b}\fi \Path{Blood \& Song}{Polymorph 5, Aldaron \arabic{enc}, Fate \arabic{r3b}, \ifodd\value{r3} Metamagic \arabic{age}\fi}}% SKILLS
+	{Academics 3, Athletics \arabic{r3}, \ifodd\value{r2}Crafts 2, Performance \arabic{r3}, \else Empathy \arabic{r2b}, Survival 3, Vigilance \arabic{r3b}\fi \Path{Blood \& Song}{Polymorph 5, Aldaron \arabic{enc}, Fate \arabic{r3b}, \ifodd\value{r3} Enchantment \arabic{r2b}\fi}}% SKILLS
 	{\ifodd\thepage\Dagger\else\spear\fi}% EQUIPMENT
 	{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
 	}
@@ -808,7 +808,7 @@
 	{0}% DR
 	{0}% COMBAT
 	{\ifodd\value{r2}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc}, \fi Deceit \arabic{age},  Stealth \arabic{enc}
-	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{age}, Metamagic \arabic{r3}}}% SKILLS
+	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{age}}}% SKILLS
 	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
 		{Promisary note}%
 		{\ifnumcomp{\value{r4}}{>}{2}%
@@ -913,7 +913,7 @@
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, Empathy \arabic{r3b}
-\ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}, \ifodd\value{r4} Metamagic \else Aldaron\fi~ \arabic{enc}}\fi}% SKILLS
+\ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}, \ifodd\value{r4} \else Aldaron \arabic{enc}\fi}\fi}% SKILLS
 {\ifodd\value{r2b}\quarterstaff\else\Dagger\fi}% ABILITIES
 {\mana{\arabic{age}}}
 }
@@ -1067,7 +1067,7 @@
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, \ifodd\value{r3} Deceit \arabic{r2}, Tactics \arabic{enc}\else Empathy \arabic{r2}, Vigilance \arabic{enc}\fi
-\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi, Metamagic \arabic{r3b}
+\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi
 }}% SKILLS
 {\ifnumcomp{\value{r3}}{=}{3}{Mana stone jewel with \arabic{age} mana,}{Spell book,} \arabic{gold} gp, \thepage sp}% EQUIPMENT
 {\mana{6}\lockedmana{\value{r2}}}
@@ -1110,7 +1110,7 @@
 \ifnum\value{r3}>1%
 	{Survival \arabic{enc}, Vigilance \arabic{enc}}%
 	\fi%
-\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3}, Invocation \arabic{r4}, \ifodd\value{r3}\else Metamagic \arabic{r2b}\fi Necromancy \arabic{r3b}}}% SKILLS
+\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3}, Invocation \arabic{r4}, \ifodd\value{r3} \arabic{r2b}\fi Necromancy \arabic{r3b}}}% SKILLS
 {\Dagger}% EQUIPMENT
 {\mana{4}}
 }
@@ -1459,7 +1459,7 @@
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Metamagic \arabic{r4}, Necromancy 4}}% SKILLS
+\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 4}}% SKILLS
 {\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
@@ -1477,7 +1477,7 @@
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Metamagic \arabic{r4}, Necromancy 5}}% SKILLS
+\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 5}}% SKILLS
 {\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
@@ -1495,7 +1495,7 @@
 {2}% DR
 {\arabic{r3b}}% COMBAT
 {Aggression 2, Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2b}, Medicine 3, Vigilance \arabic{r3b}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Fate \fi\arabic{r3}, Invocation \arabic{r4}, Metamagic \arabic{r3}, Necromancy 5}}% SKILLS
+\Path{Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Fate \fi\arabic{r3}, Invocation \arabic{r4}, Necromancy 5}}% SKILLS
 {\ifodd\value{r3}\longsword\else\Dagger, embalmed hand of a king; capable of dealing $1D6+3$ direct HP Damage to anyone who strikes the lich\fi}% EQUIPMENT
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
@@ -1660,7 +1660,7 @@
 {0}% DR
 {0}% AGGRESSION
 {Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2}, Ether Lore \arabic{r2b}, Tactics \arabic{r3b}
-\Path{Divinity}{\addtocounter{age}{2} Force \arabic{age}, Illusion \arabic{r3}, Invocation \arabic{r4}, Conjuration \arabic{enc}, \addtocounter{r3b}{2} Metamagic \arabic{r3b}}}% SKILLS
+\Path{Divinity}{\addtocounter{age}{2} Force \arabic{age}, Illusion \arabic{r3}, Invocation \arabic{r4}, Conjuration \arabic{enc}, \addtocounter{r3b}{2}}}% SKILLS
 {None}% ABILITIES
 {\addtocounter{sp}{20}\mana{8}\addtocounter{xpbonus}{4}}
 }
