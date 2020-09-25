@@ -141,12 +141,55 @@ Quick Spells are challenging, and require the mage know a spell intimately.  The
 
 \subsection{Spell Enhancements}
 
-Spells can be changed at a cost.
-Each enhancement requires the spell to be cast at a higher level, sometimes many levels higher.
+Spell enhancement increase a spell's level in return for adding some ability.
 These enhancements always take the form of adjectives.
 For example, the first level \textit{Fireball} spell, has the enhancement ``(1) Raging'', meaning the mage can cast a \textit{Raging Fireball}, which would count as a second level spell.
+The enhancement ``(1) Wide'' can be used on any spell to have it cover a wide area, so while a Fireball spell would normally be level 1, a \textit{Wide, Raging Fireball} would be a level 3 spell.
+The spell would then cost 3 \glspl{mp} to cast, and require 6 Initiative Points if cast during combat.
 
-Some spells have their own enhancements, and all of them have two in common.
+\end{multicols}
+
+\section{The Pillar of Magic}
+
+\begin{multicols}{2}
+
+\index{Metamagic}
+
+\noindent
+Metamagic allows the \gls{miracleworker} to enhance their other magic spheres -- adding to their range, casting more spells in a \gls{round}, gaining more \gls{mp} to power them and eventually includes the ability to create magical items.
+
+Metamagic spell enhancements are special.
+They can be used to enhance \emph{any} spell from any other sphere.
+
+When Metamagic is used to create magical items by imbuing spells, spells come out in the same way they were put in.
+If a spell was cast as a quick spell, it comes out instantly.
+It it was cast as a ritual spell, it takes a full scene to take effect.
+
+Magical items always cast spells with the Traits of their casters.
+Someone creating an item which raises people from the dead will have a magical item with the same effective Intelligence, Wits and Academics as the caster.
+
+\subsection{Mana 1}
+
+\spell{Identify Mana}{Empathy}\\
+The caster identifies which Path of magic someone is walking, or which Path was used to create an item which holds \glsentrylongpl{mp}.
+
+\spell{Detect Mana}{Instant}{Empathy}\\
+The mage casts the spell on any person or item and finds out how many \glsentrylongpl{mp} the target has, including any mana stones the target has.
+
+\subsection{Mana 2}
+
+\spell{Spell Breaking}{Instant}{Sphere Rating}\\
+The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
+The spell requires an opposed roll of Intelligence + the sphere being used.
+For example, a priest casts an Aldaron spell.
+She has Intelligence +2 and Aldaron 3.
+The \gls{tn} is therefore ($7+2+3=$) 12.
+Later, an alchemist attempts to dispel the magic.
+He rolls with his Intelligence Bonus of +3, but he does not have the Aldaron sphere, so he can add nothing more.
+If he fails the roll, he can attempt to try again, turning this into a ritual spell.
+However, if that fails, he simply cannot roll again.
+
+\subsection{Mana 3}
 
 \enhancement{1}{Wide}
 \index{Spell Enhancements!Wide}
@@ -155,14 +198,99 @@ The squares are always continuous, so a spell targeting four squares could form 
 
 If the spell targets people, one person per square is always a reasonable baseline.
 
+\enhancement{1}{Ranged}
+\index{Spell Enhancements!Ranged}
+
+Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
+
+\subsection{Mana 4}
+
+\spell{Mana Stones}{Continuous}{Academics}\\
+A mana stone is an item which stores mana, and each path of magic has its own version.\footnote{See page \pageref{magic_paths} for more on Paths of Magic.}
+Once an item (or creature) is designated as a mana stone, the spell is cast and the mage forfeits any number of \gls{mp} from their maximum.
+For each \gls{mp} forfeited, the mage can store 2 \gls{mp} in the stone.
+These stones always start life empty, but regenerate 2 \gls{mp} per scene until they reach their maximum.
+Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
+The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
+Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points
+
+The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
+
+Mana stones form the basis of all magical items, and \glspl{miracleworker} can only use their traditional mana stones to create magical items.
+
+\subsection{Mana 5}
+
+\spell{Pocket Spell}{Continuous}{Crafts}\\
+Pocket Spell is cast on an item to implant a second spell.
+Both spells must be cast in succession.\footnote{The magic cannot regenerate mana between casting spells, but can use mana stones while casting a ritual spell in order to gain more mana.}
+
+Some mages create scrolls which are destroyed once read.  Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
+The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
+
+The pocket spell always produces a single effect.
+The mage can create an item which casts an illusion of a dragon, but never a scroll where the user determines the illusion cast.
+Any continuous effects last for \arabic{spelllevel} scenes plus the caster's Wits Bonus.
+
+These magical items are activated by a `command word'.
+Command words do not necessarily have to be actual words -- they could be entire phrases or gestures.
+Importantly, when activating an item people must spend the usual 8 Initiative points for using an item, because some concentration is always required.\footnote{Knacks cannot reduce this cost.}
+Once a spell has started, it cannot be stopped except by counter-spells, even by the original mage who crafted the item.
+
+\subsection{Mana 6}
+
+\spell{Magical Item}{Continuous}{Academics}\\
+The mage takes a mana stone and allows it to cast a spell, forging a new magical item. A sword could be made which can summon blinding light, or a ruby could be infused with the power to teleport the caster to a nearby location.
+
+Just as with Pocket Spell, above, the mage casts Magical Item and the spell to be implanted in succession, while also relinquishing a number of \gls{mp}.
+Any number of spells can be cast into the item, so long as each one is implanted within the same casting.
+
+Magical items function as mana stones and continue to store \gls{mp} for use by people on that Path of Magic.
+However, each spell cast into the item lowers the item's \gls{mp} by one.
+
+Such basic spells always take effect in exactly the same way and use the mage's stats for any rolls. A second level Aldaron spell set to freeze water will always do just that, and can never cast a Sunray. An illusion-generating mask, making the wearer into a bush, will always turn that wearer into a bush, regardless of what the user may want the illusion to be of.
+
+Magical items which do not have enough mana simply fail to cast. The one exception here is the Path of Song, wherein spell-songs which have too much mana drawn from them simply break.
+
+\subsection{Mana 7}
+
 \enhancement{2}{Massive}
 
 The spell spreads across a massive space -- indoors this could be multiple rooms, outdoors it could be a field, or a massive segment of a forest.
 Massive spells target a number of areas equal to the spell's level plus the caster's Wits.
 
-\vspace{.3in} 
+\subsection{Mana 8}
 
-\noindent Now that the basics are covered, let's have a look at the \glspl{sphere}. There are ten in total, each of which covers a very different range of spells. Most \glspl{sphere} allow the mage to cast a different spell at each level, though some grant multiple spells at each level.
+\spell{Greater Item}{Instant}{Academics}\\
+This functions just like the Magical Item spell, except that the mage can imbue a full sphere's level.
+If the item has Necromancy level 2, it can cast any Necromancy spell of level 2 or less.
+If it has Invocation level 3, it can cast any spell at level 3 or less.
+Each sphere (but not each level) reduces the item's \gls{mp} by 1.
+
+\subsection{Mana 9}
+
+\enhancement{1}{Sentient}
+\index{Spell Enhancements!Sentient}
+
+The mage can make any spell gain some measure of sentience.
+Typically, this is made to allow magical items to activate upon a condition, such as a door which turns from solid stone back to wood once the password is stated.
+
+The item acts upon its own Initiative score, and uses the mage's Wits score as its Initiative Factor.
+Such items are never capable of a conversation - they only have enough instinct to carry out a single well-defined function.
+
+\enhancement{Varies}{Combined}
+
+A secondary spell can be combined to throw at the same target.
+The combined spells have a single target.
+Any applicable enhancements, such as \textit{Wide}, affect both spells.
+
+The smaller spell adds a number of levels equal to half its own level.
+
+\subsection{Mana 10}
+
+\enhancement{1}{Potent}
+\index{Spell Enhancements!Potent}
+
+Magical items and stones cast with this enhancement store 3 \gls{mp} per point sacrificed and regenerate 3 \gls{mp} per round.
 
 \end{multicols}
 
@@ -280,6 +408,13 @@ The curse only lasts while it's maintained, and only takes effect in a natural e
 The spell reaches out to any plant, dead or alive, and fast-travels it to its natural conclusion.
 Seeds grow into plants and blossom, plants grow tall, and older plants whither and die.
 
+The result depends upon the margin.
+
+Poorly made weapons with wooden parts collapse once aged a decade.
+Most will collapse after 5.
+
+Bushes targeted by the spell can grow tall instantly, while trees can take decades, or even a century to grow to full height.
+
 \begin{wrapfigure}{r}{.25\textwidth}
 
 	\begin{rollchart}
@@ -301,13 +436,6 @@ Seeds grow into plants and blossom, plants grow tall, and older plants whither a
 	\end{rollchart}
 
 \end{wrapfigure}
-
-The result depends upon the margin.
-
-Poorly made weapons with wooden parts collapse once aged a decade.
-Most will collapse after 5.
-
-Bushes targeted by the spell can grow tall instantly, while trees can take decades, or even a century to grow to full height.
 
 The spell must target a complete `thing', and never a piece of a thing.
 A basic spell can target a sword, therefore destroying its handle with age, but could not target a door in a house -- the entire house would have to be targeted, or the spell would not work.
@@ -974,134 +1102,6 @@ The caster increases the spell's level by one and increases the spell's Damage b
 The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
 
 If cast with the \textit{Wide} or \textit{Massive} enhancement, the spell targets everyone inside the area.
-
-\end{multicols}
-
-\sphere{Metamagic}
-
-\begin{multicols}{2}
-
-\index{Metamagic}
-
-\noindent
-Metamagic allows the \gls{miracleworker} to enhance their other magic spheres -- adding to their range, casting more spells in a \gls{round}, gaining more \gls{mp} to power them and eventually includes the ability to create magical items.
-
-Metamagic spell enhancements are special.
-They can be used to enhance \emph{any} spell from any other sphere.
-
-When Metamagic is used to create magical items by imbuing spells, spells come out in the same way they were put in.
-If a spell was cast as a quick spell, it comes out instantly.
-It it was cast as a ritual spell, it takes a full scene to take effect.
-
-Magical items always cast spells with the Traits of their casters.
-Someone creating an item which raises people from the dead will have a magical item with the same effective Intelligence, Wits and Academics as the caster.
-
-\spelllevel
-
-\spell{Detect Mana}{Instant}{Empathy}\\
-The mage casts the spell on any person or item and finds out how many \glsentrylongpl{mp} the target has, including any mana stones the target has.
-
-\spell{Spell Breaking}{Instant}{Sphere Rating}\\
-The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
-The spell requires an opposed roll of Intelligence + the sphere being used.
-For example, a priest casts an Aldaron spell.
-She has Intelligence +2 and Aldaron 3.
-The \gls{tn} is therefore ($7+2+3=$) 12.
-Later, an alchemist attempts to dispel the magic.
-He rolls with his Intelligence Bonus of +3, but he does not have the Aldaron sphere, so he can add nothing more.
-If he fails the roll, he can attempt to try again, turning this into a ritual spell.
-However, if that fails, he simply cannot roll again.
-
-\enhancement{1}{Ranged}
-\index{Spell Enhancements!Ranged}
-
-Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
-
-\spell{Mana Stones}{Continuous}{Academics}\\
-A mana stone is an item which stores mana, and each path of magic has its own version.\footnote{See page \pageref{magic_paths} for more on Paths of Magic.}
-Once an item (or creature) is designated as a mana stone, the spell is cast and the mage forfeits any number of \gls{mp} from their maximum.
-For each \gls{mp} forfeited, the mage can store 2 \gls{mp} in the stone.
-These stones always start life empty, but regenerate 2 \gls{mp} per scene until they reach their maximum.
-Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
-The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
-Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points
-
-The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
-
-Mana stones form the basis of all magical items, and \glspl{miracleworker} can only use their traditional mana stones to create magical items.
-
-\spelllevel
-
-\spell{Pocket Spell}{Continuous}{Crafts}\\
-Pocket Spell is cast on an item to implant a second spell.
-Both spells must be cast in succession.\footnote{The magic cannot regenerate mana between casting spells, but can use mana stones while casting a ritual spell in order to gain more mana.}
-
-Some mages create scrolls which are destroyed once read.  Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
-The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
-
-The pocket spell always produces a single effect.
-The mage can create an item which casts an illusion of a dragon, but never a scroll where the user determines the illusion cast.
-Any continuous effects last for \arabic{spelllevel} scenes plus the caster's Wits Bonus.
-
-These magical items are activated by a `command word'.
-Command words do not necessarily have to be actual words -- they could be entire phrases or gestures.
-Importantly, when activating an item people must spend the usual 8 Initiative points for using an item, because some concentration is always required.\footnote{Knacks cannot reduce this cost.}
-Once a spell has started, it cannot be stopped except by counter-spells, even by the original mage who crafted the item.
-
-\enhancement{2}{Mirrored}
-\index{Spell Enhancements!Mirrored}
-
-This Metamagic enhancement allows \emph{any} spell be be doubled at the cost of raising it by 2 levels.
-A fireball could turn into two fireballs.
-An illusion could disguise two people instead of one.
-
-In each case the spell must have different targets, because two copies targeting the same person, would just result in one spell.
-
-\spelllevel
-
-\spell{Magical Item}{Continuous}{Academics}\\
-The mage takes a mana stone and allows it to cast a spell, forging a new magical item. A sword could be made which can summon blinding light, or a ruby could be infused with the power to teleport the caster to a nearby location.
-
-Just as with Pocket Spell, above, the mage casts Magical Item and the spell to be implanted in succession, while also relinquishing a number of \gls{mp}.
-Any number of spells can be cast into the item, so long as each one is implanted within the same casting.
-
-Magical items function as mana stones and continue to store \gls{mp} for use by people on that Path of Magic.
-However, each spell cast into the item lowers the item's \gls{mp} by one.
-
-Such basic spells always take effect in exactly the same way and use the mage's stats for any rolls. A second level Aldaron spell set to freeze water will always do just that, and can never cast a Sunray. An illusion-generating mask, making the wearer into a bush, will always turn that wearer into a bush, regardless of what the user may want the illusion to be of.
-
-Magical items which do not have enough mana simply fail to cast. The one exception here is the Path of Song, wherein spell-songs which have too much mana drawn from them simply break.
-
-\spelllevel
-
-\spell{Greater Item}{Instant}{Academics}\\
-This functions just like the Magical Item spell, except that the mage can imbue a full sphere's level.
-If the item has Necromancy level 2, it can cast any Necromancy spell of level 2 or less.
-If it has Invocation level 3, it can cast any spell at level 3 or less.
-Each sphere (but not each level) reduces the item's \gls{mp} by 1.
-
-\enhancement{1}{Sentient}
-\index{Spell Enhancements!Sentient}
-
-The mage can make any spell gain some measure of sentience.
-Typically, this is made to allow magical items to activate upon a condition, such as a door which turns from solid stone back to wood once the password is stated.
-
-The item acts upon its own Initiative score, and uses the mage's Wits score as its Initiative Factor.
-Such items are never capable of a conversation - they only have enough instinct to carry out a single well-defined function.
-
-\enhancement{2}{Forked}
-\index{Spell Enhancements!Forked}
-
-\emph{Any} spell, whether Metamagic or otherwise, can now be cast at two levels higher, and gets a number of copies equal to the spell's level plus the mage's Wits.
-
-As with the Mirror enhancement, above, each spell must select a different target.
-
-\spelllevel
-
-\enhancement{1}{Potent}
-\index{Spell Enhancements!Potent}
-
-Magical items and stones cast with this enhancement store 3 \gls{mp} per point sacrificed and regenerate 3 \gls{mp} per round.
 
 \end{multicols}
 
