@@ -5,9 +5,10 @@ compile_pdf:
     - makeglossaries main
     - makeindex main.idx
     - pdflatex main.tex
+    - mv main.pdf bind.pdf
   except:
     - dev
     - master
   artifacts:
     paths:
-      - main.pdf
+      - bind.pdf
