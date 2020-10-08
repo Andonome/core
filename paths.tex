@@ -53,6 +53,7 @@ Instead they must pick up levels slowly and through intense study.
 They only receive new levels during \gls{downtime}.
 
 \subsection{Mana Stones}
+\index{Mana Stones!Alchemy}
 
 Alchemical mana stones are always precious items, such as gold, rubies, or diamonds.  A mana stone costs 10 gp per \gls{mp} which can be stored inside it, so a mana stone storing 3 \gls{mp} would cost 30 gp. The exact item might be a simply ruby which stores mana, a diamond-headed wand of ivory which blasts out fireballs or a sword with jewels on the handle which surrounds the warrior with moving illusions of their. Alchemical mana stones with a spell always activate those spells with a command word.
 
@@ -75,6 +76,12 @@ Blood sorcerers need only use movements to cast their spells. Without the abilit
 Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
 
 Blood sorcerers are barred from ritual castings -- spending all day trying to cast a spell will not help in the slightest. They cannot cast subtle spells, so enchantment effects will always be at least a little noticeable to those watching out for them, at least at the time of casting.
+
+\subsection{Mana Stones}
+\index{Mana Stones!Blood}
+
+Those with magic flowing through their own blood can only use themselves as mana stones.
+They can store magic in their heart, their fingers, or eyes, but can never use an external item to store mana.
 
 \end{multicols}
 
@@ -99,7 +106,7 @@ Specifically, the character can only raise those spheres at the exact moment the
 
 A first level sphere requires only earning 1 \gls{xp}, a second level spell requires earning 3 \glspl{xp}, a third level spell requires earning 5 \glspl{xp}, a fourth level spell requires earning 10 \glspl{xp}, and finally, a fifth level spell requires earning 15 \glspl{xp}.
 
-\subsection{Mana Stone}
+\subsection{Mana Stones}
 
 Each type of devotion has its own mana stone.
 See the individual references in chapter \ref{gods_codes}.
@@ -137,6 +144,7 @@ They could only use it for runic magics, but later they could spend 5 \gls{xp} t
 Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
 
 \subsection{Mana Stones}
+\index{Mana Stones!Runes}
 
 Rune casters mana stones are, of course, runic carvings, and can never be painted onto anything.
 
@@ -159,6 +167,7 @@ In order to learn the Path of Song, the mage must have the second level of the P
 Just as with rune magic, song magic can never be cast in an instant.  Their highest level of a sphere can only be cast as a ritual spell, and quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
 
 \subsection{Mana Stones}
+\index{Mana Stones!Song}
 
 The mana stones of the Path of Song are actual songs. The bard composes a song especially for the purpose; when anyone -- anywhere in the world -- plays the song on the correct instrument the mana can be regained. Such songs can also become vessels for spells, becoming magical items which activate once played.
 
@@ -276,7 +285,6 @@ The spell would then cost 3 \glspl{mp} to cast, and require 6 Initiative Points 
 
 \begin{multicols}{2}
 
-\index{Metamagic}
 \index{Path Rating}
 
 \noindent
@@ -301,22 +309,26 @@ Anyone who walks any Path of Magic can make use of any of these abilities, even 
 \subsection{Mana 1}
 \label{detectmagic}
 
+\spell{Identify Item}{Instant}{Academics}\\
+The mage detects whether or not something is a mana stone (i.e. an item or person which stores mana).
+
+\subsection{Mana 2}
+
 \spell{Identify Mana}{Empathy}\\
 The caster identifies which Path of magic someone is walking, or which Path was used to create an item which holds \glsentrylongpl{mp}.
 
 \spell{Detect Mana}{Instant}{Empathy}\\
 The mage casts the spell on any person or item and finds out how many \glsentrylongpl{mp} the target has, including any mana stones the target has.
 
-\subsection{Mana 2}
+\subsection{Mana 3}
 
-\enhancement{1}{Subtle Spells}
+\enhancement{1}{Subtle}
+\index{Spell Enhancements!Subtle}
 
 Casting an illusion or enchantment on someone with a flashing, loud and generally obvious spell can be quite a give away.
 Any caster can attempt to cast a spell while simply whispering and moving their hands slowly and subtly.
 
 People around the mage can still sometimes spot a spell being cast. They use their Wits + Academics in a resisted roll against the mage's Dexterity + Deceit.
-
-\subsection{Mana 3}
 
 \enhancement{1}{Wide}
 \index{Spell Enhancements!Wide}
@@ -325,17 +337,15 @@ The squares are always continuous, so a spell targeting four squares could form 
 
 If the spell targets people, one person per square is always a reasonable baseline.
 
-\enhancement{1}{Ranged}
-\index{Spell Enhancements!Ranged}
-
-Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
-
 \subsection{Mana 4}
 
 \spell{Mana Stones}{Continuous}{Academics}\\
 A mana stone is an item which stores mana, and each path of magic has its own version.\footnote{See page \pageref{magic_paths} for more on Paths of Magic.}
-Once an item (or creature) is designated as a mana stone, the spell is cast and the mage forfeits any number of \gls{mp} from their maximum.
+Once an item (or creature) is designated as a mana stone, the spell is cast and the mage forfeits any number of \glspl{mp} from their maximum.
 For each \gls{mp} forfeited, the mage can store 2 \gls{mp} in the stone.
+For example, a mage with 5 \glspl{mp} might pour 3 into a mana stone.
+The mage would be left with only 2 \glspl{mp}, but the stone would have 6 \glspl{mp}.
+
 These stones always start life empty, but regenerate 2 \gls{mp} per scene until they reach their maximum.
 Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
 The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
@@ -360,8 +370,11 @@ However, if that fails, he simply cannot roll again.
 \subsection{Mana 5}
 
 \spell{Pocket Spell}{Continuous}{Crafts}\\
-Pocket Spell is cast on an item to implant a second spell.
-Both spells must be cast in succession.\footnote{The magic cannot regenerate mana between casting spells, but can use mana stones while casting a ritual spell in order to gain more mana.}
+The pocket spell changes a mana stone so that it can contain one spell.
+The mana stone loses access to a single point of mana, and then the mage casts a spell \textit{into} the mana stone.
+The pocket spell can then cast the spell once, at which point it ceases to be a mana stone, and all imbued mana returns to the caster.
+
+The mage must cast the spell immediately after \textit{Pocket Spell}, and has no chance to regain mana between castings.
 
 Some mages create scrolls which are destroyed once read.  Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
 The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
@@ -372,8 +385,9 @@ Any continuous effects last for \arabic{spelllevel} scenes plus the caster's Wit
 
 These magical items are activated by a `command word'.
 Command words do not necessarily have to be actual words -- they could be entire phrases or gestures.
-Importantly, when activating an item people must spend the usual 8 Initiative points for using an item, because some concentration is always required.\footnote{Knacks cannot reduce this cost.}
-Once a spell has started, it cannot be stopped except by counter-spells, even by the original mage who crafted the item.
+
+Pocket spells require the same initiative to use as the spell would require, and use the same Traits as the caster.
+For example, if an illusionist made a scroll which created an illusion of a bear, and had Intelligence +2 and Beast Ken +2, the scroll would cast an illusion with a +4 bonus to the roll, no matter who used it.
 
 \subsection{Mana 6}
 
@@ -390,31 +404,22 @@ Such basic spells always take effect in exactly the same way and use the mage's 
 
 Magical items which do not have enough mana simply fail to cast. The one exception here is the Path of Song, wherein spell-songs which have too much mana drawn from them simply break.
 
+\enhancement{1}{Ranged}
+\index{Spell Enhancements!Ranged}
+
+Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
+
 \subsection{Mana 7}
 
 \enhancement{2}{Massive}
 
 The spell spreads across a massive space -- indoors this could be multiple rooms, outdoors it could be a field, or a massive segment of a forest.
 Massive spells target a number of areas equal to the spell's level plus the caster's Wits.
+\iftoggle{verbose}{%
+This spell has the usual range, so if a caster cannot also cast at long-range, the spell must begin in the area the caster currently stands.
+}{}
 
 \subsection{Mana 8}
-
-\spell{Greater Item}{Instant}{Academics}\\
-This functions just like the Magical Item spell, except that the mage can imbue a full sphere's level.
-If the item has Necromancy level 2, it can cast any Necromancy spell of level 2 or less.
-If it has Invocation level 3, it can cast any spell at level 3 or less.
-Each sphere (but not each level) reduces the item's \gls{mp} by 1.
-
-\subsection{Mana 9}
-
-\enhancement{1}{Sentient}
-\index{Spell Enhancements!Sentient}
-
-The mage can make any spell gain some measure of sentience.
-Typically, this is made to allow magical items to activate upon a condition, such as a door which turns from solid stone back to wood once the password is stated.
-
-The item acts upon its own Initiative score, and uses the mage's Wits score as its Initiative Factor.
-Such items are never capable of a conversation - they only have enough instinct to carry out a single well-defined function.
 
 \enhancement{Varies}{Combined}
 
@@ -424,6 +429,24 @@ Any applicable enhancements, such as \textit{Wide}, affect both spells.
 
 The smaller spell adds a number of levels equal to half its own level.
 
+\enhancement{1}{Sentient}
+\index{Spell Enhancements!Sentient}
+
+The mage can make any spell gain some measure of sentience.
+Typically, this is made to allow magical items to activate upon a condition, such as a door which turns from solid stone back to wood once the password is stated.
+Such spells can also select their targets.
+A conjuration spell could be cast over a massive area, but only turn particular areas of water into ice, or a \textit{Fireball} spell could target only a caster's enemies.
+
+The item acts upon its own Initiative score, and uses the mage's Wits score as its Initiative Factor.
+Such items are never capable of a conversation - they only have enough instinct to carry out a single well-defined function.
+
+\subsection{Mana 9}
+
+\spell{Greater Item}{Instant}{Academics}\\
+This functions just like the Magical Item spell, except that the mage can imbue a full sphere's level.
+If the item has Necromancy level 2, the item can cast any Necromancy spell of level 2 or less.
+If it has Invocation level 3, it can cast any spell at level 3 or less.
+Each sphere (but not each level) reduces the item's \gls{mp} by 1, just as with \textit{Pocket Spell}.
 \subsection{Mana 10}
 
 \enhancement{1}{Potent}
