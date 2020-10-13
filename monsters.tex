@@ -354,10 +354,10 @@
 	}%
 	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP, }{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP, }}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP
 
-}{}
+}{}%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{}{%
 	\Repeat{\value{hp}}{\ding{111}}
-	}
+	}%
 \iftoggle{examplecharacter}{\addtocounter{fp}{\value{cha}}, \arabic{fp} FP}{}
 
 
