@@ -205,6 +205,7 @@ Any character can decide that a conjuration spell targeting them fails by spendi
 
 \spelllevel
 
+\noindent
 The mage can turn any single, cohesive, target into another of the same type.  Mist can turn to air, or air can turn into mist.
 Ice can turn into rock, and water can turn into sludge.
 
@@ -227,17 +228,26 @@ Once the spell is over, the target turns back to normal.
 Anyone may spend 5 \gls{fp} in order to stipulate that the spell fails.
 
 Fast moving items, such as a spear used in combat, are additionally difficult to target.  When in use, whatever skills the wielder is using add to the \glsentrylong{tn}.
+\iftoggle{verbose}{%
+For example, if someone wielded a club (with weight rating 1), defending herself with Dexterity +1 and Combat +2, the TN for the spell would be ($7 + 4 = $) 11.
+}{}
 
 Metal cannot be targeted by this spell.
 
 \spell{Slime}{Continuous}{Survival}\\
-The caster turns any nearby liquid into a slippery slime.  Anyone running across the area makes a Dexterity + Athletics roll, \gls{tn} 7 + the caster's Intelligence.  Some kind of liquid must be in the right place for the spell to work.
+The caster turns any nearby liquid into a slippery slime.
+Anyone running full speed across the area makes a Dexterity + Athletics roll, \gls{tn} 7 + the caster's Intelligence + Survival.
+Anyone simply running (but not at full speed) gains a +2 bonus.
+Those who fail, fall over, becoming \textit{prone}.%
+\footnote{See page \pageref{prone} for falling prone.}
 
+\iftoggle{verbose}{
+Some kind of liquid must be in the right place for the spell to work.
 Casters acting quickly often carry their own water.  Throwing water requires 8 initiative for using an item, as usual.
+}{}
 
 \spell{Web}{Continuous}{Survival}\\
 The caster turns any liquid into a vicious, sticky substance.
-Anyone coming into the liquid gets stuck, and needs to take a full movement action to try to get free.
 
 Casters roll their Intelligence + Survival at a \gls{tn} of 7 + the target's Strength + Athletics. Alternatively, players can avoid being stuck in the web by rolling Strength + Athletics, at \gls{tn} 7 + the caster's Intelligence + Survival.
 
@@ -246,7 +256,28 @@ Anyone can attempt to break free instead of their usual movement action.
 Webbing cannot be used instead of rope -- it's too elastic, and tends to snap when stretched.
 
 \enhancement{1}{Artefact}
-The caster can now transform targets into detailed forms.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
+
+\iftoggle{verbose}{
+Spells can now turn targets into complex forms, i.e. those composed of multiple substances, or with complex shapes.
+These include:
+
+\begin{itemize}
+
+	\item{Acid (see the level 2 spell for details)}
+	\item{Blade weapons (assuming the spell is also \textit{Metallic})}
+	\item{Equipment for horses}
+	\item{Rope}
+	\item{A statue}
+	\item{A table}
+	\item{Wine}
+
+\end{itemize}
+}{
+The caster can now transform targets into detailed forms.
+Air can become a complex, and rich scent.
+Solid wood can turn into a sword, or rope.
+Water can become beer, wine or even acid.
+}
 
 \enhancement{1}{Metallic}
 \index{Spell Enhancements!Metallic}
@@ -262,33 +293,31 @@ Living creatures turned using Stone Spell into a solid substance, and then turne
 
 \spelllevel
 
-Level 2 conjuration can use all the enhancements of the previous level.
+\spell{Summon}{Continuous}{Varies}\\
+The mage can summon materials from nothing.
+This functions as per the previous level, but no target is required.
 
 \spell{Acid}{Continuous}{Academics}\\
-The caster can turn any liquid into a potent acid.
-If the acid achieves a Vitals Shot, it gets around armour or clothing, and deals $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus.
+Acid can be devastating when it hits skin, but does very little to hurt someone covered in even basic clothing.
+If the acid achieves a Vitals Shot, it gets around armour or clothing, and deals $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus, otherwise it deals half damage
 
-The spell can either be cast a \textit{Transient} spell, in which case it can attack targets by turning air into acid, or it can be cast against a target already covered in some liquid.
-
-Alternatively, if the acid is held in a tough bowl, made or metal or dense wood, it can be thrown like a normal projectile, so long as the range is short (-2 penalty per square's distance).
+If the acid is held in a tough bowl, made or metal or dense wood, it can be thrown like a normal projectile, so long as the range is short (-2 penalty per square's distance).
+If the spell is used as a level 2 \textit{Summon} spell, the mage rolls Intelligence + Academics to hit the target, who can dodge as per a standard ranged attack.
 
 \spell{Prison}{Continuous}{Crafts}\\
-This spell is simply an example of stacking spell enhancements together.  The caster freezes water around a target, or turns surrounding air to stone, imprisoning them.
-While the spell is being cast, the target can attempt to break free as a Quick Action, costing 2 Initiative, by rolling Strength + Athletics.
-The \gls{tn} is 7 plus caster's Intelligence Bonus plus Crafts.
-
-If the spell completes, the \gls{tn} to break free increases by 2.
+The caster summons ice surrounding a target, or turns surrounding air to stone, imprisoning them.
+While the spell is being cast, the target can attempt to break free as a instead of a movement action by rolling Strength + Athletics vs the caster's Intelligence + Crafts.
 
 \spelllevel
 
 \spell{Teleport}{Instant}{Academics}\\
-The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
-
-If cast as a \textit{Massive} spell, the portal gains can travel across multiple areas, but always remains as around the size of a doorway.
+The mage teleports the target a short distance -- a number of squares equal to the spell's level plus the caster's Wits.
+As with many other `insta-kill' spells, the target can cancel the spell by spending 5 \gls{fp}.%
+\footnote{This is not because any teleportation can kill someone, but because the target could \emph{potentially} die from a teleport spell, putting them over a cliff, or similar.}
 
 \enhancement{1}{Gated}
 \index{Spell Enhancements!Gated}
-The mage can not simply teleport something but open a doorway from one place to another, within the normal range.
+The mage can not simply teleport something but open a doorway from wherever the mage is to somewhere within range.
 The magical portal can change direction, pour water from the sea to a rock, or form falling loops as one portal falls into another.
 If placed on a surface, it opens seamlessly, as if it were a normal opening.
 People can wander into another land entirely and never know it.
@@ -296,25 +325,28 @@ People can wander into another land entirely and never know it.
 The portals are always seamless -- the edges contain no flickering or wobbles.
 Portals must always rest upon unchanging surfaces; any movement destroys the circle instantly.
 
-	\begin{rollchart}
-
-		{\bf \glsentrytext{tn}} & {\bf Range} \\\hline
-
-		16 & Somewhere the caster has heard of. \\
-
-		12 & Somewhere the caster once was. \\
-
-		10 & Somewhere the caster has visited a few times. \\
-
-		8 & Somewhere the caster has lived. \\
-
-		6 & The caster's home. \\
-
-	\end{rollchart}
+If cast as a \textit{Range, Gated, Teleport}, the far portal can appear anywhere the mage can see.
+If cast as a \textit{Wide}, or \textit{Massive} spell, the two portals can appear anywhere within the targeted area.
 
 \enhancement{1}{Unrestrained}
-The mage can ignore all spacial barriers to the teleportation spell, allowing it to go anywhere the caster is familiar with, up to a number of areas away equal to \arabic{spelllevel} plus the caster's Wits Bonus.
 \index{Spell Enhancements!Unrestrained}
+The mage can ignore all spacial barriers to the teleportation spell, allowing it to go anywhere the caster is familiar with.
+
+\begin{rollchart}
+
+	{\bf \glsentrytext{tn}} & {\bf Range} \\\hline
+
+	16 & Somewhere the caster has heard of. \\
+
+	12 & Somewhere the caster once was. \\
+
+	10 & Somewhere the caster has visited a few times. \\
+
+	8 & Somewhere the caster has lived. \\
+
+	6 & The caster's home. \\
+
+\end{rollchart}
 
 Particularly crazy casters have used such spells to open portals to strange etherial lands, filling the area with all manner of dangerous and bizarre creatures.
 
