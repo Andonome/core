@@ -205,7 +205,6 @@ Any character can decide that a conjuration spell targeting them fails by spendi
 
 \spelllevel
 
-\noindent
 The mage can turn any single, cohesive, target into another of the same type.  Mist can turn to air, or air can turn into mist.
 Ice can turn into rock, and water can turn into sludge.
 
@@ -228,9 +227,6 @@ Once the spell is over, the target turns back to normal.
 Anyone may spend 5 \gls{fp} in order to stipulate that the spell fails.
 
 Fast moving items, such as a spear used in combat, are additionally difficult to target.  When in use, whatever skills the wielder is using add to the \glsentrylong{tn}.
-\iftoggle{verbose}{%
-For example, if someone wielded a club (with weight rating 1), defending herself with Dexterity +1 and Combat +2, the TN for the spell would be ($7 + 4 = $) 11.
-}{}
 
 Metal cannot be targeted by this spell.
 
@@ -241,13 +237,12 @@ Anyone simply running (but not at full speed) gains a +2 bonus.
 Those who fail, fall over, becoming \textit{prone}.%
 \footnote{See page \pageref{prone} for falling prone.}
 
-\iftoggle{verbose}{
 Some kind of liquid must be in the right place for the spell to work.
 Casters acting quickly often carry their own water.  Throwing water requires 8 initiative for using an item, as usual.
-}{}
 
 \spell{Web}{Continuous}{Survival}\\
 The caster turns any liquid into a vicious, sticky substance.
+Anyone coming into the liquid gets stuck, and needs to take a full movement action to try to get free.
 
 Casters roll their Intelligence + Survival at a \gls{tn} of 7 + the target's Strength + Athletics. Alternatively, players can avoid being stuck in the web by rolling Strength + Athletics, at \gls{tn} 7 + the caster's Intelligence + Survival.
 
@@ -256,28 +251,7 @@ Anyone can attempt to break free instead of their usual movement action.
 Webbing cannot be used instead of rope -- it's too elastic, and tends to snap when stretched.
 
 \enhancement{1}{Artefact}
-
-\iftoggle{verbose}{
-Spells can now turn targets into complex forms, i.e. those composed of multiple substances, or with complex shapes.
-These include:
-
-\begin{itemize}
-
-	\item{Acid (see the level 2 spell for details)}
-	\item{Blade weapons (assuming the spell is also \textit{Metallic})}
-	\item{Equipment for horses}
-	\item{Rope}
-	\item{A statue}
-	\item{A table}
-	\item{Wine}
-
-\end{itemize}
-}{
-The caster can now transform targets into detailed forms.
-Air can become a complex, and rich scent.
-Solid wood can turn into a sword, or rope.
-Water can become beer, wine or even acid.
-}
+The caster can now transform targets into detailed forms.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
 
 \enhancement{1}{Metallic}
 \index{Spell Enhancements!Metallic}
@@ -293,31 +267,33 @@ Living creatures turned using Stone Spell into a solid substance, and then turne
 
 \spelllevel
 
-\spell{Summon}{Continuous}{Varies}\\
-The mage can summon materials from nothing.
-This functions as per the previous level, but no target is required.
+Level 2 conjuration can use all the enhancements of the previous level.
 
 \spell{Acid}{Continuous}{Academics}\\
-Acid can be devastating when it hits skin, but does very little to hurt someone covered in even basic clothing.
-If the acid achieves a Vitals Shot, it gets around armour or clothing, and deals $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus, otherwise it deals half damage
+The caster can turn any liquid into a potent acid.
+If the acid achieves a Vitals Shot, it gets around armour or clothing, and deals $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus.
 
-If the acid is held in a tough bowl, made or metal or dense wood, it can be thrown like a normal projectile, so long as the range is short (-2 penalty per square's distance).
-If the spell is used as a level 2 \textit{Summon} spell, the mage rolls Intelligence + Academics to hit the target, who can dodge as per a standard ranged attack.
+The spell can either be cast a \textit{Transient} spell, in which case it can attack targets by turning air into acid, or it can be cast against a target already covered in some liquid.
+
+Alternatively, if the acid is held in a tough bowl, made or metal or dense wood, it can be thrown like a normal projectile, so long as the range is short (-2 penalty per square's distance).
 
 \spell{Prison}{Continuous}{Crafts}\\
-The caster summons ice surrounding a target, or turns surrounding air to stone, imprisoning them.
-While the spell is being cast, the target can attempt to break free as a instead of a movement action by rolling Strength + Athletics vs the caster's Intelligence + Crafts.
+This spell is simply an example of stacking spell enhancements together.  The caster freezes water around a target, or turns surrounding air to stone, imprisoning them.
+While the spell is being cast, the target can attempt to break free as a Quick Action, costing 2 Initiative, by rolling Strength + Athletics.
+The \gls{tn} is 7 plus caster's Intelligence Bonus plus Crafts.
+
+If the spell completes, the \gls{tn} to break free increases by 2.
 
 \spelllevel
 
 \spell{Teleport}{Instant}{Academics}\\
-The mage teleports the target a short distance -- a number of squares equal to the spell's level plus the caster's Wits.
-As with many other `insta-kill' spells, the target can cancel the spell by spending 5 \gls{fp}.%
-\footnote{This is not because any teleportation can kill someone, but because the target could \emph{potentially} die from a teleport spell, putting them over a cliff, or similar.}
+The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
+
+If cast as a \textit{Massive} spell, the portal gains can travel across multiple areas, but always remains as around the size of a doorway.
 
 \enhancement{1}{Gated}
 \index{Spell Enhancements!Gated}
-The mage can not simply teleport something but open a doorway from wherever the mage is to somewhere within range.
+The mage can not simply teleport something but open a doorway from one place to another, within the normal range.
 The magical portal can change direction, pour water from the sea to a rock, or form falling loops as one portal falls into another.
 If placed on a surface, it opens seamlessly, as if it were a normal opening.
 People can wander into another land entirely and never know it.
@@ -325,28 +301,25 @@ People can wander into another land entirely and never know it.
 The portals are always seamless -- the edges contain no flickering or wobbles.
 Portals must always rest upon unchanging surfaces; any movement destroys the circle instantly.
 
-If cast as a \textit{Range, Gated, Teleport}, the far portal can appear anywhere the mage can see.
-If cast as a \textit{Wide}, or \textit{Massive} spell, the two portals can appear anywhere within the targeted area.
+	\begin{rollchart}
+
+		{\bf \glsentrytext{tn}} & {\bf Range} \\\hline
+
+		16 & Somewhere the caster has heard of. \\
+
+		12 & Somewhere the caster once was. \\
+
+		10 & Somewhere the caster has visited a few times. \\
+
+		8 & Somewhere the caster has lived. \\
+
+		6 & The caster's home. \\
+
+	\end{rollchart}
 
 \enhancement{1}{Unrestrained}
+The mage can ignore all spacial barriers to the teleportation spell, allowing it to go anywhere the caster is familiar with, up to a number of areas away equal to \arabic{spelllevel} plus the caster's Wits Bonus.
 \index{Spell Enhancements!Unrestrained}
-The mage can ignore all spacial barriers to the teleportation spell, allowing it to go anywhere the caster is familiar with.
-
-\begin{rollchart}
-
-	{\bf \glsentrytext{tn}} & {\bf Range} \\\hline
-
-	16 & Somewhere the caster has heard of. \\
-
-	12 & Somewhere the caster once was. \\
-
-	10 & Somewhere the caster has visited a few times. \\
-
-	8 & Somewhere the caster has lived. \\
-
-	6 & The caster's home. \\
-
-\end{rollchart}
 
 Particularly crazy casters have used such spells to open portals to strange etherial lands, filling the area with all manner of dangerous and bizarre creatures.
 
@@ -371,14 +344,13 @@ While under the care of an enchanter, all Morale Checks gain a bonus equal to th
 The caster pours a little life-essence into an object, animal, or anything else.
 When used on animals, the creature slowly becomes smarter, though this can take some days to have any real effect.
 
-The spell attracts undead to the target, who feed on the destruction of life.  Any undead in the area will follow the target, just as if it were a person.
+The spell attracts undead to the target, who feed on the kind of sentient souls that the spell imbues.
+Any undead in the area will follow the target, just as if it were a person.
 With mindless undead, this works without failure, though intelligent undead can plainly understand that the item is not a person if they can see it properly.
 
-\spell{Mind's Healing}{Continuous}{Empathy}\\
-The enchanter can cut any ill effects caused by level 1, 2 or 3 Enchantment spells. If used as a standing spell, the target becomes immune to such spells unless they want to be affected by them.
-
 \spell{Fear}{Continuous}{Deceit}\\
-\Glspl{npc} hit by this spell suffer a -2 Morale penalty.  \Glspl{pc} hit by this spell are not allowed to know their current \gls{fp} total -- the \gls{gm} tracks it instead.
+\Glspl{npc} hit by this spell suffer a Morale penalty equal to the spell's level plus the caster's Intelligence Bonus.
+\Glspl{pc} hit by this spell are not allowed to know their current \gls{fp} total -- the \gls{gm} tracks it instead.
 
 \spell{Reading the Ripples}{Instant}{Vigilance}\\
 The enchanter can read any target's Mind Attributes, see which Code or God they follow (if any) and sees all of their Knacks.\footnote{See page \pageref{gods_codes}.}
@@ -417,17 +389,12 @@ While the spell is in effect, the target suffers a penalty to all Mental Attribu
 
 At the end of the scene, targets make one final resisted roll against the enchanter's Intelligence + Deceit (even if the enchanter is no longer present). Failure indicates that the target has forgotten the encounter entirely, including some moments before when the spell began.
 
+\iftoggle{verbose}{
 If an \gls{npc} enchanter intends to cast this on a \gls{pc} during a scene, the \gls{gm} is encouraged to simply make the resisted roll for the spell.
 If the player fails the roll then the \gls{gm} can infer what probably would have happened had the scene played out and skip to the next scene, telling the player that something important might have happened, but that they cannot remember any of it.
 
 When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought. The use of magic will is not obvious to those unfamiliar with such abilities.
-
-\spell{Mind of Stone}{Continuous}{Empathy}\\
-Enchanters of this level can also cast a greater version of Mind's Healing. The spell can cut the ill effects of any Enchantment spell and if cast as a standing spell the target becomes completely immune to unwanted Enchantment spells.
-
-\spelllevel
-
-The enchanter locks eyes or otherwise engages with the target and lulls them gently to sleep, forces them to repeat particular actions, or fills them with a dreadful fear. The target can reroll a failed resistance roll at the end of each scene.
+}{}
 
 \spell{Focus}{Continuous}{Empathy}\\
 The target holds the last action performed and repeats it, again and again.
@@ -437,11 +404,7 @@ If the target was attempting to mount a horse but the horse flees, they will cha
 The enchanter engages in a resisted roll of their Intelligence + Empathy versus the target's Wits + Academics.
 Targets can stop once their original action has become obviously impossible or is unmistakably complete.
 
-\spell{Panic}{Continuous}{Deceit}\\
-The enchanter and the target make a resisted roll; the caster adds their Intelligence Bonus and Deceit Skill while the target adds their Wits Bonus and Combat Skill. If the target fails, they automatically run away in fear, as the enchanter dictates.
-
-If the target would normally take a Morale Check, the caster's Intelligence + Deceit are added to the \gls{tn} for as long as the spell is in effect.
-Targets completely unable to flee can continue to fight.
+\spelllevel
 
 \spell{Sleep}{Continuous}{Empathy}\\
 Enchanters who want their target to fall asleep can make a resisted Intelligence + Empathy roll against the target's Wits + Academics.
@@ -460,7 +423,10 @@ The caster and target make a resisted roll: the caster uses their Intelligence +
 
 The \gls{gm} should make this roll for players, in secret. The target gains a bonus to resist (or the caster takes a penalty) if the illusion is particularly unbelievable (such as a bizarre object or an unexplained dragon). Targets also gain a penalty to resist if they suspect that magic is being used to trick them, which often becomes obvious if lots of people around are insisting that rats are not in fact biting off their toes.
 
-Such mental illusions can inflict up to 4 Fatigue Points plus the caster's Intelligence Bonus and multiple castings allow the Fatigue Points to stack up. These Fatigue Points are healed as normal. The player may be told that this is Damage, but the \gls{gm} should keep track of it separately to ensure that all the Damage is properly converted once the spell fails. Such Fatigue Points can kill a character in the usual manner, i.e. by giving the target a Fatigue Penalty beyond -5.
+Such mental illusions can inflict Fatigue Points instead of damage, as people's mind creates the damage they expect.
+The maximum number of Fatigue points inflicted is equal to the spell's level plus the caster's Intelligence Bonus and multiple castings allow the Fatigue Points to stack up.
+These Fatigue Points are healed as normal.
+The player may be told that this is Damage, but the \gls{gm} should keep track of it separately to ensure that all the Damage is properly converted once the spell ends.
 
 \spelllevel
 
