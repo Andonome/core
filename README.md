@@ -9,7 +9,7 @@ Gits available on github and gitlab.
 
 -->
 
-| [Download][core download] | [Character Sheet][cs] | [Wiki][wiki]
+| [Download][core download] | [Character Sheet][cs] | [Wiki][wiki] |
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
