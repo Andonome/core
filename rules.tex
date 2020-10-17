@@ -665,7 +665,7 @@ Characters can only buy expensive, artisan, items in cities.
 \index{Starting Equipment}
 \index{Adventuring Equipment}
 Characters begin with money, items, and \gls{adventuringequipment}.
-Characters each start with 2 items of 10 \gls{sp} value or less plus one items per Skill level.
+Characters each start with one items per Skill level, and each item can be worth 10 \glspl{sp} or less.
 This might include a sword, dagger, a donkey, or anything else worth 10 \gls{sp} or less.
 
 The player can decide to replace any of these items with a generic item called \gls{adventuringequipment}.
@@ -702,17 +702,24 @@ If a player has an \gls{adventuringequipment} item, they can decided to describe
 
 The amount of bare money a character starts out with depends upon social class, which is indicated by their Skills.
 Starting money is $3D6-5$\gls{cp}.
-Multiply this by itself for every level of the Academics Skill you have, and then multiply it by 2 for every level of a Specialist Skill you have.
+Multiply this result by 2 for every level in a specialist Skill the character has (meaning, those with an asterisk beside them).
+Finally, characters with Academics times this result by 100 (effectively giving them \glspl{sp} instead of \glspl{cp}).
 
-For example, a character with Academics 1 and Tactics 1 might roll a 7.  $7\times7\times2 = 98$, so the character starts out with 98\gls{cp}.
+For example, a character with Academics 1 and Tactics 1 might roll a 7.
+$7\times2\times2 = 28$, so the character starts out with 28\gls{sp}.
 
 \iftoggle{verbose}{
 	\begin{exampletext}
 
-Thenton now only needs his starting equipment. We covered already that he starts with any two items worth 10 \gls{sp} or less plus one more item per Skill. The Combat Skill, Empathy and Performance let him start with 5 items in total. We'll start with some shiny Partial chainmail and a longsword. He also gains an item from his Combat Skill, so perhaps a dagger on top of that would be good, just in case he loses the sword. He could also do with a flute so he can play, and finally since he's travelling I'm going to mark down basic camping equipment. It's pretty heavy, so it'll give him a -1 penalty to all Physical Attributes due to the weight, but he can just place it down if he's doing anything demanding.
+Thenton now only needs his starting equipment.
+We covered already that he starts with any two items worth 10 \gls{sp} or less plus one more item per Skill.
+The Combat Skill, Empathy and Performance let him start with 3 items in total.
+We'll start with some shiny Partial chainmail and a longsword so he can fight.
+His final item will be \gls{adventuringequipment}, so he'll have some flexibility for later.
 
 Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4 ($9-5=4$).
-The Academics Skill multiplies that by itself, and Thenton has two specialist Skills -- Combat and Performance.  All in all that's $4^2\times2\times 2 = 64$cp.
+His three specialized skills double that number, making it 32 ($4\times2^3$).
+Since one of those Skills is Academics, he'll start with 32 \glspl{sp} rather than \glspl{cp}.
 
 	\end{exampletext}
 
@@ -721,9 +728,13 @@ The Academics Skill multiplies that by itself, and Thenton has two specialist Sk
 \npc{\M}{Thenton}
 \settoggle{examplecharacter}{true}
 
-\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, dagger, flute, camping equipment, 64cp}{}
+\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, \gls{adventuringequipment} x 1, 32\glspl{sp}}{}
 
-	}{\end{multicols}}
+}{
+
+\end{multicols}
+
+}
 
 \section{Time \& Space}\label{space}\label{time}
 
