@@ -196,7 +196,7 @@ You can join by:
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/648535695/artifacts/download?file_type=archive
+[core download]: https://gitlab.com/bindrpg/core/uploads/215966e23cd12485e93cbdefef1da6f0/bind.pdf
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
-[aif]: https://gitlab.com/bindrpg/aif/-/jobs/658923970/artifacts/download?file_type=archive
+[aif]: https://gitlab.com/bindrpg/aif/uploads/82d3ba1c9942d617b37dc5975842417b/aif.pdf
 [cs]: https://gitlab.com/bindrpg/core/uploads/3bfd8ec119974c371484dc9f003650d7/BIND_CS.ods
