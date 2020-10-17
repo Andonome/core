@@ -848,6 +848,7 @@ Blast-radius spells such as a \textit{Wide Fireball} can inflict a Vitals Shot o
 
 \spell{Darkness}{Instant}{Survival}\\
 The mage focuses on any source of fire, and extinguishes it.
+Larger fires require a \textit{Wide Darkness} spell.
 
 \spell{Fireball}{Instant}{Projectiles}\\
 The mage throws out a ball of flaming, crackling light which strikes and burns the target. The Damage is $1D6$ plus the caster's Intelligence.
@@ -875,6 +876,53 @@ Necromancers summon souls from distant, black realms and place them in appropria
 
 \spelllevel
 
+\spell{Ghoul Calling}{Instant}{Medicine}\\
+The mage can create their own ghouls from easily accessible realms of malicious spirits.
+Small animals such as cats or frogs are easy, while larger creatures such as humans or basilisks are extremely difficult.
+The spell is cast on a corpse and the corpse is imbued with one such malicious spirit.
+It retains the Strength score (and therefore \gls{hp}) it had in life.
+The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
+The creature has neither Intelligence nor Charisma scores. Most will attack all living things on sight.
+
+The mage rolls their Intelligence + Medicine at \gls{tn} 7 to cast the spell.
+Any Medicine specialisations dealing with the affected species (e.g. `gnolls', or `humans'), or specialisations concerning death rituals can be used.
+
+Targets can have a maximum of 2 \glspl{hp} plus the mage's Intelligence Bonus, so a mage with Intelligence +1 could only raise targets with up to 3 \glspl{hp} -- perhaps a cat, or very small gnome.
+
+Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
+
+\enhancement{1}{Enervated}
+\index{Spell Enhancements!Enervated}
+The mage adds a level to the spell to increase the maximum number of \glspl{hp} by 2.
+A mage with Intelligence +2 could raise a solder with 8 \glspl{hp} with an \textit{Enervated Ghoul}.
+With the fourth level, the mage could raise a basilisk with 12 \glspl{hp}.
+
+\enhancement{1}{Cunning}
+\index{Spell Enhancements!Cunning}
+
+The caster pulls up not a regular ghoulish spirit, but a ghast -- an intelligent and sinister spirit with a mind of its own.
+The spirit begins with Intelligence and Wits scores of -2.
+Each use of the \textit{Cunning} enhancement can add 4 points plus the caster's Intelligence Bonus.
+These points can be spend on any Trait, e.g. Skills, Attributes, or even Spheres.
+However, the caster does not have complete control over which type of spirit is summoned.
+For every margin on the roll, the caster designates one point.
+The remaining points are assigned by the \gls{gm}.
+
+For example, the player rolls to summon a ghast at \gls{tn} 7, with a roll of 10 -- that's a margin of 3.
+The player then assigns 2 points to the Combat Skill and increases Dexterity from -2 to -1.
+The \gls{gm} then puts the rest into Wits, so that the creature is better able to defend itself against any attempts to control it.
+The mage's Intelligence of +3 means the ghast starts with 7 points, so the remaining 4 points raise the creature's Wits score from -2 to +2.
+With a natural Aggression score of +2, the Wits + Aggression is 4, so the \gls{tn} to control the creature with \textit{Command the Dead} is 11.
+
+\spell{Command the Dead}{Continuous}{Academics}\\
+The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb.
+`Dig',\footnote{The undead are the worst workers due to their stupidity, and typically destroy their own hands before they dig very far.
+They can be used for anything, but are not necessarily good for much.}
+`kill them all' or `wait here' are all appropriate commands.
+To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits + Aggression.
+
+This spell replicates all five levels of the enchantment sphere with the mage selecting any effect they wish; however, the mage uses Academics instead of any other Skill because the undead may only be `understood' in some technical sense, and not truly empathised with.
+
 \spell{Preservation}{Instant}{Survival}\\
 Trainee artists and necromancers have one thing in common -- fruit.
 Students of Necromancy often begin their journey by stopping food from degrading.
@@ -882,7 +930,8 @@ This spell gives a sort of `half-life' to rot, such that any foods affected slow
 They're not sustained in perfect condition forever, but never quite reach an entirely spoiled stage.
 
 \spell{Torpor}{Continuous}{Medicine}\\
-The targed enters an eltered state of semi-death. They ignore all Fatigue Point penalties (but can still become suddenly unconscious due to too many Fatigue Points).
+The target enters an altered state of semi-death.
+They ignore all Fatigue Point penalties (but can still become suddenly unconscious if the Fatigue Point penalty ever reaches -5).
 They gain a natural \gls{dr} of 1 which is cumulative with armour -- their corpse-like body bleeds less and feels little pain, only bare sensations written in the mind as cold information.
 While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them.
 While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \gls{fp}.
@@ -900,6 +949,8 @@ Additionally, the target's \gls{dr} raises to 2 as the target stops feeling pain
 
 Targets who die while this spell is in effect raise from the dead as an undead creature.\footnote{This spell cannot raise someone as undead if the necromancer's spell level would not normally allow them to raise a creature of that spell level.}
 
+\spelllevel
+
 \spell{Sickness}{Instant}{Medicine}\\
 Even low level necromancers have the terrifying ability to pull someone's soul out with a simple spell.  The spell inflicts $1D6-2$ Damage directly to the target's \gls{hp}.  \Glsentrylongpl{fp} and \glsentrylongpl{SP} can be bypassed entirely.  The caster adds their Intelligence Bonus to the Damage.
 
@@ -907,63 +958,6 @@ Even low level necromancers have the terrifying ability to pull someone's soul o
 \index{Spell Enhancements!Fetid}
 
 By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
-
-\spell{Command the Dead}{Continuous}{Academics}\\
-The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb.
-`Dig',\footnote{The undead are the worst workers due to their stupidity, and typically destroy their own hands before they dig very far.
-They can be used for anything, but are not necessarily good for much.}
-`kill them all' or `wait here' are all appropriate commands.
-To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits score, though most have a negative Wits score, which makes resistance difficult.
-
-This spell replicates all five levels of the enchantment sphere with the mage selecting any effect they wish; however, the mage uses Academics instead of any other Skill because the undead may only be `understood' in some technical sense, and not truly empathised with.
-The Undead always resist with their Wits + Aggression.
-
-\spelllevel
-
-\spell{Calling the Dead}{Instant}{Medicine}\\
-The mage can create their own ghouls from easily accessible realms of malicious spirits. The spell is cast on a small corpse and the corpse is imbued with one such malicious spirit. It retains the Strength score (and therefore \gls{hp}) it had in life.
-The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
-The creature has neither Intelligence nor Charisma scores. Most will attack all living things on sight.
-
-The mage rolls their Intelligence + Medicine at \gls{tn} 7 to cast the spell. Any Medicine specialisations dealing with the affected species (e.g. `gnolls', or `humans'), or specialisations concerning death rituals can be used.
-
-At this first level, the mage is limited to fairly small creatures.  The maximum \gls{hp} of the affected creature is equal to 4, plus the mage's Intelligence.  This allows the mage to summon cats, boars, and other animals back from the dead.  More gifted mages might even be able to raise a gnome or even an average human.
-
-Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
-
-\enhancement{1}{Clever}
-\index{Spell Enhancements!Clever}
-
-While the easiest spirits to summon are mindless creatures, more advanced mages can summon smarter creatures.  The creature's basic stats are now Intelligence -2, Wits -2 and Charisma -5.  The mage's Intelligence Bonus, plus each use of this enhancement adds 1 Attribute to the creature's Intelligence and Wits, and 2 levels of any Skill.  Such creatures have a basic mana pool equal to double their Intelligence Bonus.  
-
-For example, a mage with Intelligence +3, using one Clever enhancement, would summon a creature with Intelligence +2, Wits +2, and 4 basic \gls{mp} (6 \gls{mp} in total).
-
-The creatures begin with Intelligence -2, Wits equal to -2 plus $1D6$, and Charisma -5.  For each level of the spell, the mage can add 2 Attribute levels plus their Intelligence Bonus.  An Attribute point can be sacrificed in return for 2 levels in any Skill, or two Attribute points can be sacrified in return for a level in a sphere.
-
-The \gls{tn} is 7 plus one per spell level.  For every margin, the caster can decide where one of the target's Skill points are placed.  The \gls{gm} decides places the rest of the creature's points.
-
-\iftoggle{verbose}{
-
-\begin{exampletext}
-
-	When he was younger, Hugi witnesses his uncle torn apart by a terrible spirit.  His uncle thought to contain it in a small creature, so he summoned the all powerful creature into the body of a little gnome.
-
-	Hugi's uncle, the runecaster, has Intelligence +2, and applies the enhancement twice.  The resulting creature would have Intelligence and Wits at +2, and 8 levels of Skills.  The runecaster rolls a 10, which barely passes the \gls{tn} of 9.  He assigns two of the Skill points to Academics so that he can ask the spirit the question he wants to know.
-
-	The \gls{gm} decides to assign 3 Skill points to Vigilance, 1 to Tactics, and another to Necromancy.
-
-	The result was an uncontainable spirit which cast a death touch spell upon the old runecaster, killing him instantly.
-
-	Hugi decided never to entertain learning necromantic rune magic after that day.
-
-\end{exampletext}
-}{}
-
-\enhancement{1}{Greater}
-\index{Spell Enhancements!Greater}
-
-With an extra level, the mage can summon the souls of the dead into large creatures.  The maximum \gls{hp} of the target equal to the spell's level times 4 plus the caster's Intelligence Bonus.
-A mage with Intelligence +2 could cast Calling the Dead at second level to raise a target with up to 10 \gls{hp}, or at third level for up to 14 \gls{hp}.
 
 \end{multicols}
 
