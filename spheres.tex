@@ -1015,19 +1015,6 @@ Spotting someone who has been transformed requires a Wits + Empathy roll, with a
 
 Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.  The undead are completely immunte to the Polymorph sphere.
 
-\iftoggle{verbose}{
-
-\begin{exampletext}
-
-	Meldon the elf has 5 \glspl{hp}.
-He takes 3 \glspl{hp} Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions.
-He then transforms himself into a bird, lowering to 2 \glspl{hp}.
-He now has zero Damage but retains his -1 penalty due to Fatigue.
-After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his \gls{hp} increases to the point where they can affect him.
-
-\end{exampletext}
-}{}
-
 \sidejpg{Roch_Hercka/polymorph.jpg}{
 \label{roch:polymorph}}
 
@@ -1041,6 +1028,19 @@ All Fatigue stays where it is and no Fatigue Points which previously gave no pen
 The new form granted by a Polymorph spell always feels a little strange, so anyone who transforms suffers a -1 penalty to Dexterity until they get used to the new form.\footnote{Any amount of downtime is a reasonable amount of time.}
 
 Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
+
+\iftoggle{verbose}{
+
+\begin{exampletext}
+
+	Meldon the elf has 5 \glspl{hp}.
+He takes 3 \glspl{hp} Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions.
+He then transforms himself into a bird, lowering to 2 \glspl{hp}.
+He now has zero Damage but retains his -1 penalty due to Fatigue.
+After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his \gls{hp} increases to the point where they can affect him.
+
+\end{exampletext}
+}{}
 
 \spelllevel
 
@@ -1101,7 +1101,7 @@ The Form Points can each be spent on one of the following:
 	\item{Claws \& Teeth: +1 Damage}
 	\item{Flight: The creature has wings, and can use them properly.}
 	\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
-	\item{Underwater Breath}
+	\item{Underwater Breathing}
 
 \end{itemize}
 
@@ -1118,7 +1118,8 @@ Alternatively, the Polymorpher can turn an animal into a person.
 This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.
 Such creatures start with Intelligence -5 and Charisma 0.
 
-This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one.  It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
+This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one (the enhancement \textit{Empathy} changes this to \gls{tn} 7).
+It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
 
 \spelllevel
 
@@ -1132,7 +1133,7 @@ As with the \textit{Realistic} enhancement, the caster gains a number of Form Po
 	\item{Massive Claws \& Teeth: +2 Damage.}
 	\item{Impenetrable Hide: +4 \gls{dr}.}
 	\item{Etherial Form: The caster turns into a thick smoke or mist, becoming immune to almost all physical damage.}
-	\item{Fiery Form: The caster's body is composed mostly of acid, fire, or some other dangerous substance.  }
+	\item{Fiery Form: The caster's body is composed mostly of acid, fire, or some other dangerous substance.}
 
 \end{itemize}
 
