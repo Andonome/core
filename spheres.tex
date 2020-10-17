@@ -598,24 +598,30 @@ The mage can shape pure energy, pushing and pulling at the world with the power 
 
 \spelllevel
 
-\spell{Levitation}{Continuous}{Combat/ Craft}\\
-The mage focusses on something and forces it to float in the air.
-The caster rolls their Intelligence and Craft Skill against a \gls{tn} of 7 plus the target's \gls{weightrating}.
-The spell grants an effective Strength Bonus equal to the level in the Force sphere being used.
-Any object with a \gls{weightrating} of up to 4 points higher than this Strength score can be lifted into the air but the heavier something is the slower it will move.
+\spell{Cage}{Continuous}{Combat}\\
+The mage levitates and traps a target, forcing them to remain where they are, or move as the caster desires.
+While powerful, the spell is particularly challenging to cast, as it has a \gls{tn} equal to 7 plus the target's Weight Rating.%
+\iftoggle{verbose}{%
+\footnote{Everyone's Weight Rating is equal to their \glspl{hp}.}
+}{}
 
-If creatures are targeted for levitation, they have a \gls{weightrating} equal to their \gls{hp} and the mage rolls Intelligence + Combat to lift them.
-They can add their Speed Bonus to the spell's \gls{tn} in order to attempt to wriggle free of the telekinetic hold.
-Trying to wriggle free takes 2 Initiative points.
-Targets can be moved at a Speed rating equal to the level in Force.
+Those caught by the spell count as \textit{prone}, leaving them open to Sneak Attacks.%
+\iftoggle{verbose}{%
+	\footnote{See page \pageref{prone}.}
+}{}
 
-Mages attempting to lift people into the air can move the target only at the rate of a standard action -- i.e. 3 squares per turn plus their effective Speed rating.
-The effective Speed rating is equal to the spell's level, but the spell can be encumbered just like lifting a normal person.
-So casting a spell at level 3 means an effective Strength and Speed rating of 3; if the target had Strength +1 they would have 7 \glspl{hp} and therefore a \gls{weightrating} of 7.
-That's 4 points above the spell's rating so the Speed suffers a -4 encumbrance penalty, making the total movement 1 square every two \glspl{round}.
-The target could roll to be free every 4 Initiative steps, rolling against the spell's effective Strength Bonus.
+The spell has an effective Speed Bonus equal to its level plus the caster's Intelligence Bonus, so casters can move their quarry just as if the spell were running.
+As usual, the target cannot be moved outside of the normal spell range.
 
-While a target is being levitated, they are especially vulnerable to attack, and all attacks against them count as Sneak Attacks, gaining +4 to Strike and +2 to Damage.
+\spell{Levitation}{Continuous}{Craft}\\
+The mage focuses on lifting something into the air with pure magical energy.
+The spell cannot lift moving, wriggling matter, such as live people or animals.
+However, mages can lift themselves into the air if they are content to stay extremely still.%
+\footnote{Staying still typically makes spell-casting difficult.}
+
+The spell acts as any person would when lifting things, and has an effective Strength, Dexterity and Speed Bonus equal to the spell's level plus the caster's Intelligence Bonus.
+The maximum Weight Rating anyone can lift is equal to their Strength Bonus plus 4, therefore, levitating a cart with a Weight Rating of 10 would require a spell with an effective Strength of +6.
+The cart could then travel at 16 squares per round.
 
 \spell{Lock}{Continuous}{Craft}\\
 The mage can erect a magical force field, similar to mage armour, over a doorway to make it more difficult to break through.
@@ -623,7 +629,7 @@ The \gls{tn} to break through the door increases by an amount equal to double th
 For example, if a door were at \gls{tn} 8 to burst through, a mage with Intelligence +2 could cast the second level of the Force sphere, raising the \gls{tn} to 14.
 
 Mages can also create barriers of pure force to block passageways without a door, just as with mage armour.
-The blockade has a number of \gls{SP} equal to triple the level of Force sphere being employed plus the mage's Intelligence Bonus and must be battered through with repeated blows to get through the portal.
+The blockade has a number of \glspl{SP} equal to triple the level of Force sphere being employed, plus the mage's Intelligence Bonus and must be battered through with repeated blows to get through the portal.
 
 \spell{Mage Sight}{Continuous}{Vigilance}\\
 The mage can `feel' by delicately touching things with mental movement rather than actually seeing them. They can see in complete darkness whether underwater or on land.
@@ -638,7 +644,8 @@ They can even identify the other mage with a Wits + Empathy roll.
 
 \spell{Slow Fall}{Continuous \& Instant}{Athletics}\\
 When people (or even items) are falling to their doom, force mages can slow the decent, limiting the Damage from such a fall.
-The total spell grants a resistance to any Damage incurred through falling equal to 4 points per level of the Force sphere used plus the mage's Intelligence score.
+The total spell grants a resistance to any Damage incurred through falling equal to 4 points per level of the Force sphere used, plus the mage's Intelligence score.%
+\footnote{$(Level \times 4) + Int$}
 Therefore, a mage with Intelligence +2 using the third level of the Force sphere would subtract 14 from any Damage incurred through falling.
 
 If cast as a Quick Spell, it can be cast as a Quick Action, outside the usual Initiative order.
@@ -646,8 +653,8 @@ If cast as a Quick Spell, it can be cast as a Quick Action, outside the usual In
 \spell{Telekinetic Fist}{Continuous}{Combat}\\
 The mage uses powerful telekinetic blasts to hold and crumple targets in close combat.
 Unarmed attacks using Telekinetic fist count as normal Damage instead of inflicting Fatigue Points.
-For the purposes of these attacks, the caster counts as having a Strength Bonus equal to the level of the Force sphere being used.
-For example, someone employing the third level of the Force sphere would count as having +3 Strength, and would inflict $1D6+3$ Damage with unarmed attacks.
+For the purposes of these attacks, the caster counts as having a Strength Bonus equal to the level of the Force sphere being used, plus the caster's Intelligence Bonus.
+For example, someone employing the third level of the Force sphere with Intelligence +3 would count as having +6 Strength, and would inflict $2D6+2$ Damage with unarmed attacks.
 
 \spell{Telekinetic Retreat}{Continuous}{Athletics}\\
 Mages can add their mental ability to move things to aid their movement.
@@ -659,34 +666,27 @@ The mage can cast the spell on others and it will automatically push them onward
 \spell{Dancing Swords}{Continuous}{Combat}\\
 The force mage can make a weapon levitate with the power of their mind. It can float nearby to defend them and even float off to stab at enemies who will be hard pushed to counterattack the wielder when they're standing some distance away.
 
-The caster rolls Intelligence + Combat to levitate the weapon.
-They gain an effective Strength Bonus for the purposes of wielding the weapon equal to the level of the Force sphere being used minus one.
-This must be sufficient to lift the weapon without encumbrance, so a mage casting the first level of the Force sphere would have an effective Strength Bonus of 0 and could wield a dagger.
+The caster rolls Intelligence + Combat to levitate the weapon at a \gls{tn} equal to 7 plus the weapon's Weight.
+The weapon has effective Strength, Dexterity, and Speed Bonuses equal to the level of the spell being employed minus 1, so using the third level of the Force sphere with a longsword would mean the sword could attack as if it were a person who dealt $1D6+3$ damage, with an Initiative Factor of +3.
+It would travel 4 squares in a turn using the mage's movement action.
+
+To use the weapon to attack or defend, the mage must focus, so casting spells in the same round would incur the usual panalties.%
+\footnote{See page \pageref{combatcasting} for casting spells while fighting.}
+
+The spell's effective Strength Bonus must be sufficient to lift the weapon without encumbrance, so a mage casting the second level of the Force sphere would have an effective Strength Bonus of 1 and could wield a longsword.
 To wield an axe a mage would have to use the fourth level of the Force sphere, gaining an effective Strength Bonus of +3.
 
-While the weapon is next to the caster it can defend them just as any weapon. An axe would add +1 to the caster's Evasion Bonus while a long sword would add +3 to the caster's Evasion total. The weapon can add this defence to anyone nearby but only one person at a time.
-
-To attack with the weapon, the mage spends the normal amount of Initiative for that weapon; e.g. 4 for a dagger and 6 for a shortsword.
-They roll with Intelligence + Combat and deals the normal amount of Damage given the effective Strength Bonus, so a fourth level Force sphere spell could wield a dagger to deal $2D6$ Damage, or could wield an axe to deal $2D6+2$ Damage.
-
-If the mage levitates multiple weapons (through multiple castings or casting a \textit{Wide} spell), each additional weapon adds +1 to their Strike score, adds +1 Damage and +1 to the Evasion Bonus.\footnote{Casting over a massive number of weapons works fine, but the mage cannot direct all weapons properly at the same time, so the maximum number of weapons in use is always equal to the spell's level plus the caster's Wits Bonus.}
-In this way the mage can add up to a maximum of +3 to each stat, meaning only the first four weapons can have an effect.
-Additional weapons can add Evasion Bonuses behind or to the side of the mage to ensure they do not lose any Evasion Bonus when attacked from behind but a fifth weapon cannot add additional Damage.
+While the weapon is next to the caster it can defend the caster using its own stats by using an action to Guard.
 
 If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character.
-The mage defends with their normal Evasion Factor and a successful grab means that the weapon has been arrested.
-The weapon gains a \gls{weightrating} equal to the Weight of the character grabbing the weapon (which is equal to their maximum \gls{hp}).
-At this point the weapon is too heavy to lift and the spell ends.
-
-The levitated weapons do not add a Speed Bonus to the caster's Initiative -- they must use their Wits Bonus as usual.
-
-The caster may not employ any special combat manoeuvres such as pushing people back or fighting in the Aggressive Stance. No Knacks concerned with Combat apply to the mage wielding such weapons.
-
-Mages who must slowly cast a spell can still weild weapons instantly.  Runecasters might require a full scene to make a dagger float, but the floating dagger can thereafter be used to attack or even defend at the normal Initiative rate.
+A successful grapple means the weapon is too heavy to lift and the spell ends.
 
 \spell{Mage Armour}{Continuous}{Academics}\\
-The mage casts a shield of crackling energy around the target to protect from all harm, and most often mages target themselves.  The barrier can shatter if attacked but can take a serious beating before breaking. Each barrier counts as a having a number of \index{Shield Points}\gls{SP}, which are destroyed by Damage like \gls{fp}, but always before \gls{fp} are targeted.
-The target gains a number of \gls{SP} equal to the level of spell used times 3 plus their Intelligence Bonus.
+\index{Shield Points}
+The mage casts a shield of crackling energy around the target to protect from all harm, and most often mages target themselves.
+The barrier can shatter if attacked but can take a serious beating before breaking.
+Each barrier counts as a having a number of \glsentryfullpl{SP}, which are destroyed by Damage like \gls{fp}, but always before \gls{fp} are targeted.
+The target gains a number of \glspl{SP} equal to the level of spell used times 3 plus their Intelligence Bonus.
 
 Those protected by the shield cannot attack others as the shield stops all attacks.
 However, casters are able to focus enough to use missile weapons and spells by allowing small breaches in the shield's wall.
@@ -734,7 +734,10 @@ If a \gls{pc} could be tricked by an illusion, the \gls{gm} should always roll f
 If someone has a reason to suspect that something is an illusion, they should receive a +2 bonus to resist it.
 The party also receive a bonus for multiple people who might spot the illusion, as per the standard Vigilance Skill rules.
 
-Illusionists add different Skills to the roll, depending upon what they are making an illusion of. An illusion of a cart or sword might require the Craft Skill. An illusion of a monster might use the Academics Skill. Specialisations in the correct area are, as usual, a requirement if the caster wants to avoid the usual -1 penalty for lacking the appropriate specialisation.
+Illusionists add different Skills to the roll, depending upon what they are making an illusion of.
+An illusion of a cart or sword might require the Craft Skill.
+An illusion of a monster might use the Beast Ken Skill.
+Specialisations in the correct area are, as usual, a requirement if the caster wants to avoid the usual -1 penalty for lacking the appropriate specialisation.
 
 For example, a gnome creates an illusion of a fleeing gnoll with a great bundle of treasure in his hand, hoping the \glspl{pc} will chase after him immediately.
 His Intelligence is +2 and his Academics is at +1 though he has no appropriate specialisations, so the players are rolling at \gls{tn} 9.
