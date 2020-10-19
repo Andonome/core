@@ -932,7 +932,7 @@
 {Academics \arabic{r3}, Empathy \arabic{r3b}
 \ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}, \ifodd\value{r4} \else Aldaron \arabic{enc}\fi}\fi}% SKILLS
 {\ifodd\value{r2b}\quarterstaff\else\Dagger\fi}% ABILITIES
-{\mana{\arabic{age}}}
+{\ifodd\value{r3b}\mana{2}\fi}
 }
 
 \newcommand{\humansoldier}[1][\npc{\M\F\T}{\arabic{r12} Soldiers}]{
