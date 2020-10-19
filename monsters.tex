@@ -754,7 +754,7 @@
 			\arabic{gold} sp in earrings, bracelets and necklaces, \else%
 			\ifodd\value{r3}50' of rope\fi
 		\fi}}% EQUIPMENT
-	{\mana{\value{age}}}
+	{\mana{\value{age}}\addtocounter{mp}{\value{age}}}
 	}
 
 \newcommand{\elvenenchanter}[1][\npc{\M}{Elven Enchanter}]{
@@ -772,7 +772,7 @@
 	{\arabic{enc}\randomtwo}% WITS
 	{\arabic{enc}}}% CHARISMA
 	{0}% DR
-	{\ifodd\value{r2b} 1\else 0\fi}% COMBAT
+	{\ifodd\value{mp} 1\else 0\fi}% COMBAT
 	{Projectiles \arabic{r2b}, Academics 3, Empathy 3, Deceit \arabic{enc}, Performance \arabic{r2}, \ifodd\value{r2}Stealth \else Tactics \fi \arabic{r2b}, Vigilance 2%
 	\Path{Blood}{Aldaron \arabic{r3}, Enchantment 5, Fate \arabic{r3}, Forces \arabic{r4}, Invocation 1, Polymorph 2}}% SKILLS
 	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
@@ -780,7 +780,7 @@
 		{\ifnumcomp{\value{r4}}{>}{2}%
 			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp worth of earrings}{random magical item}}{ornamental dagger, worth \thepage sp}}%
 			{\setcounter{gold}{\day}\addtocounter{gold}{\value{r4}} one necklace worth \arabic{gold} sp}}}% EQUIPMENT
-	{\addtocounter{r4}{\value{r3}}\mana{\arabic{r4}}\addtocounter{xpbonus}{5}}
+	{\mana{6}\addtocounter{xpbonus}{\value{mp}}\addtocounter{xpbonus}{-2}}
 }
 
 \newcommand{\gnome}[1][\npc{\M}{Wandering Gnome}]{
@@ -803,7 +803,7 @@
 {\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
 	{$4D6$ cp and a promisary note}%
 	{\thepage sp}}% EQUIPMENT
-{}
+{\mana{2}}
 }
 
 \newcommand{\gnomishillusionist}[1][\npc{\M}{Gnomish Illusionist}]{
@@ -829,7 +829,7 @@
 		{\ifnumcomp{\value{r4}}{>}{2}%
 			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \arabic{r12} gp}}{Glimmering diamond worth \thepage sp}}%
 			{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
-	{\mana{6}}
+	{\mana{6}\addtocounter{xpbonus}{\value{mp}}\addtocounter{xpbonus}{-5}}
 }
 
 \newcommand{\humanfarmer}[1][\npc{\M}{Farmer}]{
