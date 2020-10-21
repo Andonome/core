@@ -981,7 +981,7 @@
 \else%
 	\partialchain%
 \fi, %
-\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
+ \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
 	{$5D6$cp}%
 	{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% EQUIPMENT
 {}
@@ -1037,7 +1037,7 @@
 		\else{\shortsword, }%
 	\fi\fi%
 	\ifnum\value{r4}=1%
-		\partialleather,%
+		\partialleather, %
 	\fi%
 \setcounter{gold}{\thepage}\multiply\value{gold} by \value{r3}\addtocounter{gold}{3}\arabic{gold}cp}% EQUIPMENT
 {}
