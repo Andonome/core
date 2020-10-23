@@ -335,7 +335,6 @@ For each \gls{mp} forfeited, the mage can store 2 \gls{mp} in the stone.
 For example, a mage with 5 \glspl{mp} might pour 3 into a mana stone.
 The mage would be left with only 2 \glspl{mp}, but the stone would have 6 \glspl{mp}.
 
-These stones always start life empty, but regenerate 2 \gls{mp} per scene until they reach their maximum.
 Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
 The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
 Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points
@@ -343,6 +342,21 @@ Retrieving the mana takes the normal amount of time to use an item -- 8 Initiati
 The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
 
 Mana stones form the basis of all magical items, and \glspl{miracleworker} can only use their traditional mana stones to create magical items.
+
+\subsubsection{Ambient Mana}
+\label{ambientmana}
+These stones always start life empty, but regenerate \glspl{mp} each scene until they reach their maximum.
+Mana stones only fill up through the ambient mana in the air.
+Typically, this means 2 \glspl{mp} at the end of each scene, or 3 within a deep forest, or anywhere secluded.
+
+However, there is only so much mana to go around.
+Multiple mana stones in an area must divide the mana between them.
+Whichever has the most empty slots restores mana first, so if one item has 1 out of 5 \glspl{mp} left, while another has 8 out of a maximum 9 \glspl{mp} left, the first item takes ambient \glspl{mp} first, because it has 4 empty points, so it draws more in.
+If items are tied, roll a die to see which regenerates \glspl{mp} first.
+
+\iftoggle{verbose}{
+	For this reason, adventuring parties cannot make use of as many magical items as they might have.
+}{}
 
 \spell{Spell Breaking}{Instant}{Sphere Rating}\\
 The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
