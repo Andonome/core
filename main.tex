@@ -1,5 +1,5 @@
 \documentclass[titlepage,a4paper,openany]{book}
-\usepackage[indexonlyfirst]{glossaries}
+\usepackage[acronym]{glossaries}
 \setacronymstyle{short-long-desc}
 \title{BIND}
 \date{}
@@ -68,6 +68,8 @@
 \pagebreak
 
 \input{appendix.tex}
+
+\printacronyms[style=mcolindex, title=Abbreviations, nonumberlist]
 
 \printglossary[style=mcolindex]
 
