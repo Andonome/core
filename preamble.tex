@@ -227,7 +227,7 @@ bookmarks=true]%
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
 \newcommand{\spelllevel}{\addtocounter{spelllevel}{1}%
 	\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
-\newcommand{\enhancement}[2]{\paragraph{(#1) Enhancement -- #2:}}
+\newcommand{\enhancement}[3]{\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}}
 \newcommand{\magicitem}[7]{\vspace{1em}\noindent\textbf{#1}
 
 	\noindent
@@ -250,7 +250,7 @@ bookmarks=true]%
 
 }
 
-\newcommand{\spell}[3]{\subsubsection{#1}
+\newcommand{\spell}[4]{\subsubsection[#1: #4]{#1}
 
 {\it Type: #2, Skill: #3}
 
