@@ -92,17 +92,17 @@ The abilities are parsimonious, providing the standard inputs and outputs, but w
 
 Combat starts! You can put your combat-points into *Strike* to hit opponents better, or *Evasion* to stay safe.  You decide to go for *Strike* as bandits spring from the bushes, then roll for Initiative.
 
-| The Count | Health | Actions |
-|:--:|:---:|:----------------|
-| Initiative 9 | `8 HP`, `10 FP` | You spend 2 Initiative to protect the priest from harm |
+| The Count    | Health          | Actions                                                            |
+|:------------:|:---------------:|:-------------------------------------------------------------------|
+| Initiative 9 | `8 HP`, `10 FP` | You spend 2 Initiative to protect the priest from harm             |
 | Initiative 8 | `8 HP`, `10 FP` | The bandits spend 2 Initiative to move towards you. The priest spends 6 Initiative to attack with a staff. |
-| Initiative 7 | `8 HP`, `10 FP` | You spend 6 Initiative to attack,  and slash a bandit's arm open. |
-| Initiative 6 | `8 HP`, `2 FP` | 2 bandits attack with knives, costing 4 Initiative.  Another two attack with swords, costing 6 Initiative.  You roll to defend against each one, and each defence costs 2 Initiative. You go from Initiative 1, to -2, then down as you continue to defend. One bandit hits, and you lose 8 Fate Points. |
-| Initiative 5 | `8 HP`, `2 FP` | Your companion spends 6 Initiative to attack with an axe, and  finishes off the bandit you wounded. |
-| Initiative 4 | `8 HP`, `2 FP` | |
-| Initiative 3 | `8 HP`, `2 FP` | |
-| Initiative 2 | `6 HP`, `0 FP` | The two bandits with knives attack again. The priest spends 6 Initiative and knocks one over the head, but not before you get 4 Damage and a nasty wound on the arm. |
-| Initiative 1 | `6 HP`, `0 FP` |  |
+| Initiative 7 | `8 HP`, `10 FP` | You spend 6 Initiative to attack,  and slash a bandit's arm open.  |
+| Initiative 6 | `8 HP`, `2 FP`  | 2 bandits attack with knives, costing 4 Initiative.  Another two attack with swords, costing 6 Initiative.  You roll to defend against each one, and each defence costs 2 Initiative. You go from Initiative 1, to -2, then down as you continue to defend. One bandit hits, and you lose 8 Fate Points. |
+| Initiative 5 | `8 HP`, `2 FP`  | Your companion spends 6 Initiative to attack with an axe, and  finishes off the bandit you wounded. |
+| Initiative 4 | `8 HP`, `2 FP`  |                                                                    |
+| Initiative 3 | `8 HP`, `2 FP`  |                                                                    |
+| Initiative 2 | `6 HP`, `0 FP`  | The two bandits with knives attack again. The priest spends 6 Initiative and knocks one over the head, but not before you get 4 Damage and a nasty wound on the arm. |
+| Initiative 1 | `6 HP`, `0 FP`  |                                                                    |
 
 The round ends, a new one starts, and this time you decide to go defensive.  Once the battle's over you get back 4 Fate Points, putting you on `6 HP`, and `4 FP`.
 
@@ -149,11 +149,11 @@ Spellcasters spend Mana to cast spells.  They generally have 2-6 points of Mana 
 
 A caster with Aldaron 2 and Fate 3 would have the following spells to choose from.  Level 1 spells cost 1 Mana Point, and level 2 spells cost 2 Mana Points.
 
-| Level | Fate | Aldaron |
-| :----:|:---- |:--------|
-| 1   |  Curse an enemy or ask for divine guidance. | Calm an animal. Freeze water. |
-| 2    | Heal a companion's Fate Points. | Summon mist.  Create blinding light. |
-| 3    | Request minor divine intervention. Boost someone's luck. |  |
+| Level | Fate                                                     | Aldaron                              |
+| :----:|:---------------------------------------------------------|:-------------------------------------|
+| 1     |  Curse an enemy or ask for divine guidance.              | Calm an animal. Freeze water.        |
+| 2     | Heal a companion's Fate Points.                          | Summon mist.  Create blinding light. |
+| 3     | Request minor divine intervention. Boost someone's luck. |                                      |
 
 <img src="images/Roch_Hercka/flashing_light.jpg" width="400">
 
