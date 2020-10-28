@@ -178,11 +178,9 @@ Did you know that git can diff svg images?
 Not only that, with a little finagling, git can merge two different changes to art.
 I can't envision artists getting terribly excited about this, but that's not going to stop me getting excited about it.
 
-## Joining
+## Getting Involved
 
-Join me!
-
-You can join by: 
+If you want to get involved, there are a number of ways to contribute:
 
 - Emailing ideas [here](mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com).
 
