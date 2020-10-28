@@ -267,6 +267,8 @@ The spell would then cost 3 \glspl{mp} to cast, and require 6 Initiative Points 
 
 \end{multicols}
 
+\resumecontents[magic]
+
 \sphere{Metamagic}
 \index{Metamagic}
 
@@ -300,24 +302,24 @@ A level 8 Metamagic spell requires 8 \glspl{mp} to cast, and requires 11 Initiat
 \spelllevel
 \label{detectmagic}
 
-\spell{Identify Item}{Instant}{Academics}\\
+\spell{Identify Item}{Instant}{Academics}{Find out if an item is magical}\\
 The mage detects whether or not something is a mana stone (i.e. an item or person which stores mana).
 
 \spelllevel
 
-\spell{Identify Mana}{Empathy}\\
+\spell{Identify Mana}{Instant}{Empathy}{Find out which path of magic made an item}\\
 The caster identifies which Path of magic someone is walking, or which Path was used to create an item which holds \glsentrylongpl{mp}.
 
-\spell{Detect Mana}{Instant}{Empathy}\\
+\spell{Detect Mana}{Instant}{Empathy}{Find out exactly how many \glspl{mp} are in the target}\\
 The mage casts the spell on any person or item and finds out how many \glsentrylongpl{mp} the target has, including any mana stones the target has.
 
 \spelllevel
 
-\spell{Imbuing}{Instant}{Empathy}\\
+\spell{Imbuing}{Instant}{Empathy}{Add \glspl{mp} to a mana stone}\\
 The mage spills any number of mana points into a mana stone created through the same path of magic the mage walks.
 If cast as a \textit{Wide} spell, the mage can spend \glspl{mp} to spread between multiple items, but can only Imbue total \glspl{mp} equal to what is spent.
 
-\enhancement{1}{Subtle}
+\enhancement{1}{Subtle}{Cast any spell unseen}
 \index{Spell Enhancements!Subtle}
 
 Casting an illusion or enchantment on someone with a flashing, loud and generally obvious spell can be quite a give away.
@@ -325,7 +327,7 @@ Any caster can attempt to cast a spell while simply whispering and moving their 
 
 People around the mage can still sometimes spot a spell being cast. They use their Wits + Academics in a resisted roll against the mage's Dexterity + Deceit.
 
-\enhancement{1}{Wide}
+\enhancement{1}{Wide}{Widen the spell to hit $Level + Wits$ targets}
 \index{Spell Enhancements!Wide}
 The spell extends to cover a wide area -- a total area equal to the spell's level, plus the caster's Wits Bonus.
 The squares are always continuous, so a spell targeting four squares could form a $2\times 2$ area, or four continuous squares.
@@ -334,7 +336,7 @@ If the spell targets people, one person per square is always a reasonable baseli
 
 \spelllevel
 
-\spell{Mana Stones}{Continuous}{Academics}\\
+\spell{Mana Stones}{Continuous}{Academics}{Create a vessel for \glspl{mp} equal to double the \glspl{mp} you sacrifice}\\
 A mana stone is an item which stores mana, and each path of magic has its own version.\footnote{See page \pageref{magic_paths} for more on Paths of Magic.}
 Once an item (or creature) is designated as a mana stone, the spell is cast and the mage forfeits any number of \glspl{mp} from their maximum.
 For each \gls{mp} forfeited, the mage can store 2 \gls{mp} in the stone.
@@ -365,7 +367,7 @@ If items are tied, roll a die to see which regenerates \glspl{mp} first.
 	For this reason, adventuring parties cannot make use of dozens of magical items at once.
 }{}
 
-\spell{Spell Breaking}{Instant}{Sphere Rating}\\
+\spell{Spell Breaking}{Instant}{Sphere Rating}{Destroy a spell.}\\
 The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
 The spell requires an opposed roll of Intelligence + the sphere being used.
 
@@ -379,7 +381,7 @@ However, if that fails, he simply cannot roll again.
 
 \spelllevel
 
-\spell{Pocket Spell}{Instant}{Crafts}\\
+\spell{Pocket Spell}{Instant}{Crafts}{Allow a mana stone to cast a single spell at the cost of 1 permanent \gls{mp} from the mana stone, after which the stone is broken}\\
 The pocket spell changes a mana stone so that it can contain one spell.
 The mana stone loses access to a single point of mana, and then the mage casts a spell \textit{into} the mana stone.
 The pocket spell can then cast the spell once, at which point it ceases to be a mana stone, and all imbued mana returns to the caster.
@@ -401,14 +403,14 @@ For example, if an illusionist made a scroll which created an illusion of a bear
 
 \spelllevel
 
-\enhancement{1}{Ranged}
+\enhancement{1}{Ranged}{Increase any spell's range to line of sight}
 \index{Spell Enhancements!Ranged}
 
 Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
 
 \spelllevel
 
-\spell{Artefact}{Continuous}{Academics}\\
+\spell{Artefact}{Continuous}{Academics}{Sacrifice one permanent \gls{mp} in a mana stone to let it cast a spell}\\
 The mage takes a mana stone and allows it to cast a spell, forging a new magical item. A sword could be made which can summon blinding light, or a ruby could be infused with the power to teleport the caster to a nearby location.
 
 Just as with Pocket Spell, above, the mage casts Artefact and the spell to be implanted in succession, while also relinquishing a number of \gls{mp}.
@@ -421,7 +423,7 @@ Such basic spells always take effect in exactly the same way and use the mage's 
 
 Magical items which do not have enough mana simply fail to cast. The one exception here is the Path of Song, wherein spell-songs which have too much mana drawn from them simply break, rendering the Artefact-song useless.
 
-\enhancement{2}{Massive}
+\enhancement{2}{Massive}{Increase the target area until it's the size of $level + Wits$ areas}
 
 The spell spreads across a massive space -- indoors this could be multiple rooms, outdoors it could be a field, or a massive segment of a forest.
 Massive spells target a number of areas equal to the spell's level plus the caster's Wits.
@@ -431,7 +433,7 @@ This spell has the usual range, so if a caster cannot also cast at long-range, t
 
 \spelllevel
 
-\enhancement{Varies}{Combined}
+\enhancement{Varies}{Combined}{Add a second spell effect to the target}
 
 A secondary spell can be combined to throw at the same target.
 The combined spells have a single target.
@@ -444,7 +446,7 @@ The highest level spell there is \textit{Fetid Sickness} at level 3, and the oth
 With the two spells together, the total cost is 4 \glspl{mp}, and the spell takes 8 Initiative points to cast.
 The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ damage from the fireball, and loses $1D6+2$ \glspl{hp} directly.
 
-\enhancement{1}{Sentient}
+\enhancement{1}{Sentient}{Allow the spell to make its own decisions}
 \index{Spell Enhancements!Sentient}
 
 The mage can make any spell gain some measure of sentience.
@@ -466,7 +468,7 @@ Sentient spells have the same Code as their caster, so a caster who followed \gl
 
 \spelllevel
 
-\spell{Greater Artefact}{Instant}{Academics}\\
+\spell{Greater Artefact}{Instant}{Academics}{As `Artefact', but the item gains a full sphere of magic}\\
 This functions just like the Artefact spell, except that the mage can imbue a full sphere's level.
 If the item has Necromancy level 2, the item can cast any Necromancy spell of level 2 or less.
 If it has Invocation level 3, it can cast any spell at level 3 or less.
@@ -475,9 +477,11 @@ The item's user simply focusses on what they want, and the spell casts.
 
 \spelllevel
 
-\spell{Greater Mana Stone}{Continuous}{Academics}\\
+\spell{Greater Mana Stone}{Continuous}{Academics}{Allow a mana stone to store 3 \glspl{mp} per point sacrificed}\\
 This spell works like a standard mana stone, except stones cast with this enhancement store 3 \gls{mp} per point sacrificed instead of 2.
 So a \gls{miracleworker} sacrificing 4 \glspl{mp} would create a mana stone capable of storing 12 \glspl{mp}.
+
+\stopcontents[magic]
 
 \end{multicols}
 
