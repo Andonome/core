@@ -36,7 +36,7 @@ For anyone wanting to make their own book, modifications, or otherwise understan
   * Highest level of a sphere has to be cast slowly.
 - Background is created by spending Story Points.
   * Spend 1 point to say you've learnt a language.
-  * Spend 2 points to add an ally with martial ability.
+  * Spend 3 points to add an ally with martial ability.
   * Spend 4 points to bring in an all-powerful mage from your past.
 
 # Parsimony
