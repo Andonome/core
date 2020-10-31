@@ -661,7 +661,7 @@
 	{0}% DR
 	{1}% COMBAT
 	{Crafts \arabic{r2b}, Deceit \arabic{r3}}% SKILLS
-	{\shortsword, \ifnumcomp{\thechapter}{=}{6}{3D6sp}{\setcounter{gold}{\thepage}\arabic{gold}sp}}% EQUIPMENT
+	{\shortsword, \ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$3D6$sp}{\setcounter{gold}{\thepage}\arabic{gold}sp}}% EQUIPMENT
 	{}
 	}
 %
