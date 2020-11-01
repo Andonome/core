@@ -51,11 +51,12 @@
 
 }
 
+\startcontents[Combat]
+
+\iftoggle{verbose}{
 \section{Overview}
 
 \begin{multicols}{2}
-
-\startcontents[Combat]
 
 \printcontents[Combat]{}{1}[2]{}
 
@@ -92,6 +93,7 @@ Each \gls{round} you select your tactics anew and have a range of options for ma
 
 \end{multicols}
 
+}{}
 \section{Basic Combat}
 
 \begin{multicols}{2}
@@ -206,7 +208,9 @@ For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, 
 That makes the \gls{tn} 7 for the Vitality Check.
 
 A failed Vitality check means that the character is dead.%
-\footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}
+\iftoggle{verbose}{%
+\footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
+}{}
 A successful one means that the character is unconscious for the remainder of the scene but alive.
 At the end of the scene they can make further Vitality Checks to see if they wake up.
 When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
@@ -995,16 +999,23 @@ His Sneak Attack gives him +4 to strike the ogre - which he does - and +2 Damage
 \begin{multicols}{2}
 
 \noindent
+\iftoggle{verbose}{%
 Unsure if your \glspl{npc} want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 6.
 
 Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
 
 The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
+}{%
+Before each round of combat, the \gls{gm} rolls a Morale Check for \glspl{npc} at \gls{tn} 6, using their Combat or Aggression Skill, along with the following modifiers.
+If the \glspl{npc} fail the roll, they attempt to flee, otherwise, they fight.
+}
 
 \moralechart
 
+\iftoggle{verbose}{%
 Morale checks are rolled at \gls{tn} 6 with a character's Combat Skill (or Aggression Skill if the character is an animal). As usual, the \gls{gm} rolls for an entire group with one roll. If the characters have just attacked a group of 10 hobgoblins and injured 3 then the troop will roll at \gls{tn} 6 to see if they should flee, but the injured 3 hobgoblins roll at \gls{tn} 8.
 If the final result is a 7 then the three injured hobgoblins flee, but the rest remain.
+}{}
 
 When an enemy flees the scene, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
 
@@ -1277,6 +1288,7 @@ If a character's Evasion score ever becomes negative, it applies to the Strike s
 
 \end{multicols}
 
+\iftoggle{verbose}{
 \section{Combat Summary}\index{Combat Summary}
 
 \begin{multicols}{2}
@@ -1299,5 +1311,7 @@ If a character's Evasion score ever becomes negative, it applies to the Strike s
 \end{enumerate}
 
 \end{multicols}
+
+}{}
 
 \stopcontents[Combat]
