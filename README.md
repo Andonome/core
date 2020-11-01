@@ -172,12 +172,6 @@ The basics just take an afternoon.
 
 <img src="images/Roch_Hercka/dwarf_encumbrance.jpg" width="400">
 
-## Art
-
-Did you know that git can diff svg images?
-Not only that, with a little finagling, git can merge two different changes to art.
-I can't envision artists getting terribly excited about this, but that's not going to stop me getting excited about it.
-
 ## Getting Involved
 
 If you want to get involved, there are a number of ways to contribute:
