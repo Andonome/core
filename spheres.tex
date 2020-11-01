@@ -358,7 +358,7 @@ The spell attracts undead to the target, who feed on the kind of sentient souls 
 Any undead in the area will follow the target, just as if it were a person.
 With mindless undead, this works without failure, though intelligent undead can plainly understand that the item is not a person if they can see it properly.
 
-\spell{Fear}{Continuous}{Deceit}{The target suffers a morale penalty}\\
+\spell{Fear}{Continuous}{Deceit}{The target suffers a morale penalty of 1 plus caster's Int}\\
 \Glspl{npc} hit by this spell suffer a Morale penalty equal to the spell's level plus the caster's Intelligence Bonus.
 \Glspl{pc} hit by this spell are not allowed to know their current \gls{fp} total -- the \gls{gm} tracks it instead.
 
@@ -373,7 +373,7 @@ The enchanter telepathically sends a short message to the target within normal r
 
 If the enchanter does not have any languages in common with the target then the \gls{tn} is 9 rather than 7. The target cannot send messages back.
 
-\spell{Twitch}{Continuous}{Performance}{Make spells faster to cast}\\
+\spell{Twitch}{Continuous}{Performance}{Gain Init bonus to spell casting equal to 1 plus Int}\\
 The spellcaster focusses on their own mental acuity, gaining a bonus to Initiative for all spell casting.
 The bonus is equal to the spell's level plus the caster's Intelligence Bonus.
 
@@ -416,7 +416,7 @@ Targets can stop once their original action has become obviously impossible or i
 
 \spelllevel
 
-\spell{Sleep}{Continuous}{Empathy}{Make a target instantly sleep}\\
+\spell{Sleep}{Continuous}{Empathy}{Make a target instantly sleep. Intelligence + Empathy vs Wits + Academics}\\
 Enchanters who want their target to fall asleep can make a resisted Intelligence + Empathy roll against the target's Wits + Academics.
 The target can spend 5 \gls{fp} to ignore the results of the spell. A successful spell means that the target has fallen asleep.
 
@@ -871,7 +871,7 @@ The mage throws out a ball of flaming, crackling light which strikes and burns t
 \index{Spell Enhancements!Raging}
 The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Fireball at third level would deal $2D6+2$ Damage.
 
-\enhancement{2}{Internal}{The fire ignores all \gls{dr}}
+\enhancement{2}{Internal}{The fire ignores all \gls{dr} and \glspl{SP}}
 \index{Spell Enhancements!Internal}
 The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
 
@@ -1096,7 +1096,7 @@ The caster uses the spell level plus their Intelligence Bonus to determine all f
 
 }
 
-\enhancement{1}{Empathetic}{Lower the \gls{tn} to 7}
+\enhancement{1}{Empathic}{Lower the \gls{tn} to 7 and remove Dex penalty}
 \index{Spell Enhancements!Empathetic}
 
 Advanced shapeshifters can extend a little mana into their understanding of alternate forms, and discard the usual \gls{tn} restrictions.  All \glspl{tn} become 7, and the target no longer suffers a Dexterity penalty for transforming.
