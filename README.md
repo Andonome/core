@@ -194,9 +194,9 @@ If you want to get involved, there are a number of ways to contribute:
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://gitlab.com/bindrpg/core/uploads/215966e23cd12485e93cbdefef1da6f0/bind.pdf
+[core download]: https://belgradecats.tk/pdfs/bind.pdf
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
-[aif]: https://gitlab.com/bindrpg/aif/uploads/82d3ba1c9942d617b37dc5975842417b/aif.pdf
+[aif]: https://belgradecats.tk/pdfs/aif.pdf
 [cs]: https://gitlab.com/bindrpg/core/uploads/3bfd8ec119974c371484dc9f003650d7/BIND_CS.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
