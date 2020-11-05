@@ -981,7 +981,7 @@ By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
 
 	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} \\\hline
 
-	Cow & 0 & +5 \\
+	Cow & 0 & +4 \\
 
 	Badger & -4 & -2 \\
 
@@ -995,9 +995,11 @@ By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
 
 	Cat & -5 & -5 \\
 
+	Chitincrawler & +3 & +5 \\
+
 	Deer & 0 & +2 \\
 
-	Donkey & 0 & +4 \\
+	Donkey & 0 & +3 \\
 
 	Frog & -5 & -5 \\
 
@@ -1025,7 +1027,8 @@ A ginger person transformed into a cat would become a ginger cat.
 A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
 Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the Polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
 
-Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.  The undead are completely immunte to the Polymorph sphere.
+Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.
+The undead are completely immune to the Polymorph sphere.
 
 \sidejpg{Roch_Hercka/polymorph.jpg}{
 \label{roch:polymorph}}
@@ -1046,32 +1049,19 @@ Nobody is terribly comfortable holding another creature's form.  Like a newborn 
 \begin{exampletext}
 
 	Meldon the elf has 5 \glspl{hp}.
-He takes 3 \glspl{hp} Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions.
-He then transforms himself into a bird, lowering to 2 \glspl{hp}.
-He now has zero Damage but retains his -1 penalty due to Fatigue.
-After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his \gls{hp} increases to the point where they can affect him.
+	He takes 3 \glspl{hp} Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions.
+	He then transforms himself into a bird, lowering to 2 \glspl{hp}.
+	He now has zero Damage but retains his -1 penalty due to Fatigue.
+	After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his \gls{hp} increases to the point where they can affect him.
 
 \end{exampletext}
 }{}
 
 \spelllevel
 
-\spell{Polymorph}{Continuous}{Medicine}{Turn any humanoid into another race, \gls{tn} 10}
+Enhancements from the first level can be applied to all levels of the Polymorph sphere.
 
-The basic Polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
-When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
-
-Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.
-Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
-
-Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
-
-Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
-
-Polymorphing into another race does not grant any of its racial abilities.
-Changing one's shape to look like an elf will not grant cold-immunity, and Polymorphing into a human will not allow one walk long distances without fatigue.
-
-\spell{Animal Transformation}{Continuous}{Beast Ken}{Turn any animal into another, \gls{tn} 12}\\
+\spell{Animal Transformation}{Continuous}{Beast Ken}{Turn any animal into another, \gls{tn} 7 vs target's Str + \gls{dr}}\\
 This spell allows the mage to transform one animal into another.
 An animal is defined as any living creature without an Intelligence Bonus.
 As before, the mage can increase or decrease the target's Strength Bonus by the spell level,
@@ -1079,15 +1069,16 @@ but have to keep within the normal size-boundaries of the animal.
 If a boar has Strength +1, turning it into a bear will require an additional 3 points of Strength, because bears have a minimum Strength of +4.
 If the caster instead tries to turn a dangerous bear into a housecat, this is a prohibitively difficult task, as house cats have a difference of at least 9 levels of Strength.
 
-The \gls{tn} for such a transformation is 12, as understanding how animals function is a serious challenge to those used to walking on two legs.
+The \gls{tn} for such a transformation is 7 plus the target's Strength + \gls{dr}, as tougher creatures are harder to transform.
 
 Such animal transformations are in shape alone, and do not grant any abilities.  Polymorphing into a bird will not let one fly, and taking the shape of a bear will leave a weakened facsimile of the bear's strong teeth and hide.
+All transmformed animals lose all \gls{dr}, regardless of their new form.
 
 \enhancement{1}{Bolstered}{Add your Intelligence Bonus to the Polymorph points}
 \index{Spell Enhancements!Bolstered}
 
 \iftoggle{verbose}{
-While basic shapeshifters base their range on the Polymorph spell's level, a \textit{Bolstered} spell allows the caster to use a number of points equal to the spell's level plus their Intelligence Bonus.
+While basic shapeshifters base their transformative range on the Polymorph spell's level, a \textit{Bolstered} spell allows the caster to use a number of points equal to the spell's level plus their Intelligence Bonus.
 If a shapeshifter cast this spell at the second level, with Intelligence +1, they could lower an animal's Strength Bonus by 3, or could turn a human into a gnome, since that requires a Strength adjustment of 3.
 
 Those with the \textit{Realistic} enhancement also gain a number of \textit{Form Points} equal to the spell level plus the caster's Intelligence Bonus, instead of simply gaining points equal to the Spell's level.}{
@@ -1132,6 +1123,23 @@ Such creatures start with Intelligence -5 and Charisma 0.
 
 This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one (the enhancement \textit{Empathy} changes this to \gls{tn} 7).
 It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
+
+\spelllevel
+
+\spell{Race Change}{Continuous}{Medicine}{Turn any humanoid into another race, \gls{tn} 10}
+
+The basic Polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
+When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
+
+Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.
+Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
+
+Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
+
+Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
+
+Polymorphing into another race does not grant any of its racial abilities.
+Changing one's shape to look like an elf will not grant cold-immunity, and Polymorphing into a human will not allow one walk long distances without fatigue.
 
 \spelllevel
 
