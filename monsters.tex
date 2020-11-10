@@ -1291,17 +1291,20 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\addtocounter{r2b}{-2}
 	\addtocounter{enc}{1}
-\person{-1}% STRENGTH
+\person{\arabic{r2b}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
 {{0}% INTELLIGENCE
 {0}% WITS
 {-4}}% CHARISMA
 {0}% DR
-{\arabic{r2b}}% COMBAT
-{Aggression 2, Projectiles \arabic{r2}, Athletics 1, Deceit 1, Stealth \arabic{r3}, Tactics \arabic{r2}}% SKILLS
-{\ifodd\value{r3}\woodaxe\else\javelin, dagger\fi}% EQUIPMENT
+{\arabic{r2}}% COMBAT
+{Aggression 2, Projectiles \arabic{r2}, Athletics 1, Deceit 1, Stealth \arabic{r3}, \ifodd\value{r4}Tactics \arabic{r2}\fi%
+\ifodd\value{r3} \else\knacks{\perfectsneakattack}\fi%
+}% SKILLS
+{\ifodd\value{r2}\woodaxe\else\javelin, dagger\fi}% EQUIPMENT
 {}
 }
 
@@ -1359,6 +1362,8 @@
 \newcommand{\hobgoblin}[1][\npc{\T\M\N}{\arabic{r12} Hobgoblins}]{
 	#1
 	\randomtwo
+	\randomtwoB
+	\randomthree
 \person{\arabic{r2b}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{r3}}% SPEED
@@ -1375,6 +1380,7 @@
 \newcommand{\deephobgoblin}[1][\npc{\T\N}{\arabic{r12} Hobgoblins}]{
 	#1
 	\randomtwo
+	\randomtwoB
 	\randomthree
 \person{\arabic{r2}}% STRENGTH
 {1}% DEXTERITY 
@@ -1413,8 +1419,8 @@
 {0}% WITS
 {-5}}% CHARISMA
 {2}% DR
-{1}% COMBAT
-{Aggression 2, Crafts 2, Tactics 1}% SKILLS
+{\arabic{r2}}% COMBAT
+{Aggression 2, Crafts 2, Tactics \arabic{r3}}% SKILLS
 {None}% EQUIPMENT
 {}
 }
@@ -1475,9 +1481,11 @@
 
 \newcommand{\ghast}[1][\npc{\D}{Ghast}]{
 	#1
-\randomtwo\addtocounter{enc}{1}
+	\randomtwo\addtocounter{enc}{1}
+	\randomtwoB
+	\addtocounter{r2b}{-1}
 \person{\arabic{enc}}% STRENGTH
-{2}% DEXTERITY 
+{\arabic{r2b}}% DEXTERITY 
 {0}% SPEED
 {{\arabic{enc}}% INTELLIGENCE
 {0}% WITS
@@ -1518,6 +1526,7 @@
 	#1
 	\randomtwo
 	\addtocounter{enc}{1}
+	\randomtwoB
 \person{\arabic{r2}}% STRENGTH
 {-1}% DEXTERITY 
 {-2}% SPEED
@@ -1527,7 +1536,7 @@
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 5}}% SKILLS
+\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r4} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 5}}% SKILLS
 {\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
