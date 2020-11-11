@@ -347,10 +347,9 @@ Roll & Result \\
 \newcommand{\randomdozen}{
 	\randomthree
 	\randomfour
-	\setcounter{r12}{5}
-	\addtocounter{r12}{\value{r2}}
-	\addtocounter{r12}{\value{r3}}
-	\addtocounter{r12}{\value{r4}}
+	\setcounter{r12}{1}
+	\multiply\value{age} by \value{r4}
+	\addtocounter{r12}{\value{age}}
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
