@@ -9,20 +9,20 @@
 
 \newcommand{\lootSmall}{%
 \iftoggle{bestiarychapter}{%
-$3D6$cp}{
-\arabic{r12} cp}%
+\ifodd\value{r2}$3D6$\else$2D6$\fi cp}{
+\randomdozen\arabic{r12} cp}%
 }
 
 \newcommand{\lootMedium}{%
 \iftoggle{bestiarychapter}{%
-$3D6$sp}{%
-\thepage sp}%
+\ifodd\value{r2}$3D6$\else$2D6$\fi sp}{%
+\setcounter{gold}{\thepage}\divide\value{gold} by \value{r3}\arabic{gold} sp}%
 }
 
 \newcommand{\lootBig}{%
 \iftoggle{bestiarychapter}{%
-$3D6-2$gp}{%
-\multiply\value{r3} by \value{r4}\arabic{r3}gp}%
+\ifodd\thepage $3D6-2$\else$2D6+4$\fi gp}{%
+\randomdozen\addtocounter{r12}{5}\arabic{r12}gp}%
 }
 
 \newcommand{\lootMagic}{%
@@ -39,17 +39,17 @@ $3D6-2$gp}{%
 		Bag of Tricks\fi}}}
 
 \newcommand{\lootJewellery}{%
-\iftoggle{bestiarychapter}{jewellery worth $3D6$sp}%
+\iftoggle{bestiarychapter}{jewellery worth \ifodd\value{r2}$3D6$sp\else$1D6+2$gp\fi}%
 	{\ifnumcomp{\value{r2}}{>}{1}{\ifodd\value{r3}%
 		\ifodd\value{r4}%
-			golden necklace worth \thepage sp\else%
+			golden necklace worth \arabic{r12} sp\else%
 			golden ring worth \thechapter sp\fi\else%
 		jewel encrusted dagger worth \thepage sp\fi}%
 	{\ifodd\value{r3}%
 		\ifodd\value{r4}%
 			ornate silver earrings worth 1 gp\else
 			gem encrusted broach worth \thechapter gp\fi\else%
-		saphire pendant worth \thepage cp\fi}}}
+		\randomthreeB saphire pendant worth \arabic{r3b}gp\fi}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                           _
 % _ __ ___   ___  _ __  ___| |_ ___ _ __
@@ -434,7 +434,7 @@ $3D6-2$gp}{%
 	\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
 	}%
 	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP}{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP}%
-	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{}{%
+	\iftoggle{bestiarychapter}{, }{%
 	\ \Repeat{\value{mp}}{\ding{111}}, %
 	}%
 	}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP
@@ -783,6 +783,7 @@ $3D6-2$gp}{%
 \newcommand{\dryad}[1][\npc{\E}{Dryad}]{
 	#1
 	\randomtwo
+	\randomtwoB
 	\addtocounter{enc}{2}
 	\randomthree
 	\addtocounter{age}{1}
@@ -1045,7 +1046,7 @@ $3D6-2$gp}{%
 \else%
 	\partialchain%
 \fi, %
-	\lootMedium}% EQUIPMENT
+	\ifnum\value{enc}=3\lootMedium\else\lootSmall\fi}% EQUIPMENT
 {}
 }
 
@@ -1101,7 +1102,7 @@ $3D6-2$gp}{%
 	\ifnum\value{r4}=1%
 		\partialleather, %
 	\fi%
-\lootMedium}% EQUIPMENT
+\ifodd\thepage\lootMedium\else\lootSmall\ifodd\thechapter, \lootJewellery\fi\fi}% EQUIPMENT
 {}
 }
 
@@ -1124,8 +1125,8 @@ $3D6-2$gp}{%
 	\else\ifnum\value{age}>2%
 		{\rapier, dagger, }%
 		\else\fi\fi%
-	\lootMedium}% EQUIPMENT
-{\ifnum\value{list}>13{\mana{2}}\fi}
+	\lootMedium\ifodd\thepage, \lootJewellery\fi}% EQUIPMENT
+{\ifnum\value{r12}>9\mana{2}\fi}
 }
 
 \newcommand{\humanalchemist}[1][\npc{\M}{The Alchemist}]{
@@ -1142,14 +1143,14 @@ $3D6-2$gp}{%
 {0}% DEXTERITY 
 {0}% SPEED
 {{\arabic{enc}}% INTELLIGENCE
-{\arabic{age}}% WITS
+{\arabic{r2b}}% WITS
 {0}}% CHARISMA
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, \ifodd\value{r3} Deceit \arabic{r2}, Tactics \arabic{enc}\else Empathy \arabic{r2}, Vigilance \arabic{enc}\fi
-\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi
+\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi, \ifodd\thepage Illusion \arabic{r3}\fi
 }}% SKILLS
-{\lootMedium, \lootMagic}% EQUIPMENT
+{\lootMedium\ifodd\thepage\lootMagic\else mana stone with 4 mp\fi}% EQUIPMENT
 {\mana{6}\lockedmana{\value{r2}}}
 }
 
@@ -1190,7 +1191,7 @@ $3D6-2$gp}{%
 \ifnum\value{r3}>1%
 	{Survival \arabic{enc}, Vigilance \arabic{enc}}%
 	\fi%
-\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3}, Invocation \arabic{r4}, \ifodd\value{r3} \arabic{r2b}\fi Necromancy \arabic{r3b}}}% SKILLS
+\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3},  Necromancy \arabic{r3b}}}% SKILLS
 {\Dagger}% EQUIPMENT
 {\mana{4}}
 }

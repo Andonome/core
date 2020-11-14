@@ -330,18 +330,18 @@ Roll & Result \\
 	\randomthreeB
 }
 
-\newcommand{\randomthree}{
-	\ifnumcomp{\value{r3}}{>}{2}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}
-	\setcounter{age}{\value{r3}}
+\newcommand{\randomthree}{%
+	\ifnumcomp{\value{r3}}{>}{2}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}%
+	\setcounter{age}{\value{r3}}%
 }
 
 \newcommand{\randomthreeB}{
 	\ifnumcomp{\value{r3b}}{>}{2}{\setcounter{r3b}{1}}{\addtocounter{r3b}{1}}
 }
 
-\newcommand{\randomfour}{
-	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}
-\setcounter{track}{\value{r4}}
+\newcommand{\randomfour}{%
+	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}%
+\setcounter{track}{\value{r4}}%
 }
 
 \newcommand{\randomdozen}{%
