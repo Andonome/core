@@ -320,9 +320,9 @@ Roll & Result \\
 	\addtocounter{increment}{1}
 }
 
-\newcommand{\randomtwo}{
-	\ifnumcomp{\value{r2}}{>}{1}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}
-\setcounter{enc}{\value{r2}}
+\newcommand{\randomtwo}{%
+	\ifnumcomp{\value{r2}}{>}{1}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}%
+\setcounter{enc}{\value{r2}}%
 }
 
 \newcommand{\randomtwoB}{
@@ -344,12 +344,12 @@ Roll & Result \\
 \setcounter{track}{\value{r4}}
 }
 
-\newcommand{\randomdozen}{
-	\randomthree
-	\randomfour
-	\setcounter{r12}{1}
-	\multiply\value{age} by \value{r4}
-	\addtocounter{r12}{\value{age}}
+\newcommand{\randomdozen}{%
+\randomthree%
+\randomfour%
+\setcounter{r12}{1}%
+\multiply\value{age}by\value{r4}%
+\addtocounter{r12}{\value{age}}%
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}

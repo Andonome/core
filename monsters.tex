@@ -3,6 +3,53 @@
 % This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
 % If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
 
+%%%%%%%%%%%%%%%%%%%% LOOT %%%%%%%%%%%%%%%%%%%%
+\newtoggle{bestiarychapter}
+\settoggle{bestiarychapter}{false}
+
+\newcommand{\lootSmall}{%
+\iftoggle{bestiarychapter}{%
+$3D6$cp}{
+\arabic{r12} cp}%
+}
+
+\newcommand{\lootMedium}{%
+\iftoggle{bestiarychapter}{%
+$3D6$sp}{%
+\thepage sp}%
+}
+
+\newcommand{\lootBig}{%
+\iftoggle{bestiarychapter}{%
+$3D6-2$gp}{%
+\multiply\value{r3} by \value{r4}\arabic{r3}gp}%
+}
+
+\newcommand{\lootMagic}{%
+\iftoggle{bestiarychapter}{}%
+	{\ifnumcomp{\value{r2}}{>}{1}{\ifodd\value{r3}%
+		\ifodd\value{r4}%
+			Townmaster's Hat\else
+			Wild Seeds\fi\else
+		Bag of Holding\fi}%
+	{\ifodd\value{r3}%
+		\ifodd\value{r4}%
+			Portal Scroll\else
+			Deck of Cards\fi\else
+		Bag of Tricks\fi}}}
+
+\newcommand{\lootJewellery}{%
+\iftoggle{bestiarychapter}{jewellery worth $3D6$sp}%
+	{\ifnumcomp{\value{r2}}{>}{1}{\ifodd\value{r3}%
+		\ifodd\value{r4}%
+			golden necklace worth \thepage sp\else%
+			golden ring worth \thechapter sp\fi\else%
+		jewel encrusted dagger worth \thepage sp\fi}%
+	{\ifodd\value{r3}%
+		\ifodd\value{r4}%
+			ornate silver earrings worth 1 gp\else
+			gem encrusted broach worth \thechapter gp\fi\else%
+		saphire pendant worth \thepage cp\fi}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                           _
 % _ __ ___   ___  _ __  ___| |_ ___ _ __
@@ -386,7 +433,7 @@
 	TN \arabic{dex}%
 	\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
 	}%
-	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP, }{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP}%
+	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr} \armourtype,}{} \ifnumcomp{\value{mp}}{>}{0}{\addtocounter{mp}{\value{int}}\ifnumcomp{\value{mpb}}{=}{0}{\arabic{mp} MP}{\addtocounter{mpb}{\value{mp}}\arabic{mpb} / \arabic{mp} MP}%
 	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{}{%
 	\ \Repeat{\value{mp}}{\ding{111}}, %
 	}%
@@ -691,7 +738,7 @@
 	{0}% DR
 	{1}% COMBAT
 	{Crafts \arabic{r2b}, Deceit \arabic{r3}}% SKILLS
-	{\shortsword, \ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$3D6$sp}{\setcounter{gold}{\thepage}\arabic{gold}sp}}% EQUIPMENT
+	{\shortsword, \ifodd\thepage\lootMedium\else\lootBig, \lootJewellery\fi}% EQUIPMENT
 	{}
 	}
 %
@@ -708,7 +755,8 @@
 	{0}% DR
 	{2}% COMBAT
 	{Crafts 1, Tactics 1}% SKILLS
-	{\ifodd\value{r2}\shortsword\else\woodaxe\fi, \completeplate}{\knacks{Chosen Enemy: Goblinoids}\ifodd\value{r2b}, \defender\fi}% SKILLS
+	{\ifodd\value{r2}\shortsword\else\woodaxe\fi, \completeplate, \lootMedium}% EQUIPMENT
+	{\knacks{Chosen Enemy: Goblinoids}\ifodd\value{r2b}, \defender\fi}% SKILLS
 	}
 
 \newcommand{\dwarvenrunemaster}[1][\npc{\M}{Dwarven Runemaster}]{
@@ -726,7 +774,9 @@
 	{0}}%  CHARISMA
 	{0}% DR
 	{1}% COMBAT
-	{Academics \arabic{enc}, Crafts 1, Tactics 2\Path{Runes}{Fate \arabic{enc}, Force \arabic{r3}, Conjuration \arabic{r3b}}}{\shortsword, \partialchain, \ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{$4D6$ sp}{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter\arabic{gold}sp}}{\mana{4}}
+	{Academics \arabic{enc}, Crafts 1, Tactics 2\Path{Runes}{Fate \arabic{enc}, Force \arabic{r3}, Conjuration \arabic{r3b}}}% SKILLS
+	{\shortsword, \partialchain, \lootMedium}% EQUIPMENT
+	{\mana{4}}
 	}
 
 
@@ -748,7 +798,7 @@
 	{6}% DR
 	{\arabic{r3}}% COMBAT
 	{Academics 3, Athletics \arabic{r3}, \ifodd\value{r2}Crafts 2, Performance \arabic{r3}, \else Empathy \arabic{r2b}, Survival 3, Vigilance \arabic{r3b}\fi \Path{Blood \& Song}{Polymorph 5, Aldaron \arabic{enc}, Fate \arabic{r3b}, \ifodd\value{r3} Enchantment \arabic{r2b}\fi}}% SKILLS
-	{\ifodd\thepage\Dagger\else\spear\fi}% EQUIPMENT
+	{\ifodd\thepage\Dagger, \lootJewellery\else\spear\fi}% EQUIPMENT
 	{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
 	}
 
@@ -782,13 +832,7 @@
 		\fi}\fi
 	}% SKILLS
 	{\ifnumcomp{\value{r4}}{=}{2}{\Dagger, shortbow, }{\rapier, dagger, }%
-	\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
-		{$3D6$sp worth of jewellery}%
-		{\ifodd\value{r2} 
-			\setcounter{gold}{\value{age}}\multiply\value{gold} by \value{page}\addtocounter{gold}{\value{r2}}%
-			\arabic{gold} sp in earrings, bracelets and necklaces, \else%
-			\ifodd\value{r3}50' of rope\fi
-		\fi}}% EQUIPMENT
+	\lootJewellery}% EQUIPMENT
 	{\mana{\value{age}}\addtocounter{mp}{\value{age}}}
 	}
 
@@ -810,11 +854,7 @@
 	{\ifodd\value{mp} 1\else 0\fi}% COMBAT
 	{Projectiles \arabic{r2b}, Academics 3, Empathy 3, Deceit \arabic{enc}, Performance \arabic{r2}, \ifodd\value{r2}Stealth \else Tactics \fi \arabic{r2b}, Vigilance 2%
 	\Path{Blood}{Aldaron \arabic{r3}, Enchantment 5, Fate \arabic{r3}, Forces \arabic{r4}, Invocation 1, Polymorph 2}}% SKILLS
-	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
-		{$5D6$sp worth of jewellery}%
-		{\ifnumcomp{\value{r4}}{>}{2}%
-			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp worth of earrings}{random magical item}}{ornamental dagger, worth \thepage sp}}%
-			{\setcounter{gold}{\day}\addtocounter{gold}{\value{r4}} one necklace worth \arabic{gold} sp}}}% EQUIPMENT
+	{\Dagger, \lootJewellery\ifodd\thepage, \randomtwo\lootJewellery\fi}% EQUIPMENT
 	{\mana{6}}
 }
 
@@ -835,9 +875,7 @@
 \ifodd\value{page}
 	\Path{Alchemy}{Illusion \arabic{r2}}
 \fi}% SKILLS
-{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
-	{$4D6$ cp and a promisary note}%
-	{\thepage sp}}% EQUIPMENT
+{\Dagger, \lootMedium}% EQUIPMENT
 {\mana{2}}
 }
 
@@ -859,11 +897,7 @@
 	{0}% COMBAT
 	{\ifodd\value{r2}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc}, \fi Deceit \arabic{age},  Stealth \arabic{enc}
 	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{age}}}% SKILLS
-	{\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}%
-		{Promisary note}%
-		{\ifnumcomp{\value{r4}}{>}{2}%
-			{\multiply\value{enc} by \thepage \ifnumcomp{\value{enc}}{>}{0}{\divide\value{enc} by 100 \ifnumcomp{\value{enc}}{>}{0}{Giant ruby worth \arabic{enc}gp}{Green emerald worth \arabic{r12} gp}}{Glimmering diamond worth \thepage sp}}%
-			{\setcounter{gold}{\thechapter}\addtocounter{gold}{1} interesting piece of quartz.}}}%
+	{\lootBig, \ifodd\thepage\lootMagic\fi}% EQUIPMENT
 	{\mana{6}}
 }
 
@@ -881,7 +915,7 @@
 {0}% DR
 {\ifodd\value{r2} 0\else 1\fi}% AGGRESSION
 {Beast Ken \arabic{r2}, Crafts \arabic{r2b}, \ifodd\value{r4} Empathy 1\fi}% SKILLS
-{\Dagger, \thechapter cp in a purse.}% EQUIPMENT
+{\Dagger, \lootSmall}% EQUIPMENT
 {}
 }
 
@@ -898,7 +932,7 @@
 {0}% DR
 {\ifodd\value{r3} 0\else 1\fi}% AGGRESSION
 {Empathy 1, \ifodd\thechapter Deceit \arabic{r2}\fi}% SKILLS
-{\Dagger, \thechapter cp}% EQUIPMENT
+{\ifodd\thepage \Dagger, \lootSmall\else None\fi}% EQUIPMENT
 {}
 }
 
@@ -917,10 +951,7 @@
 {0}% DR
 {\arabic{enc}}% AGGRESSION
 {Academics \arabic{r2b}, \ifodd\value{r2} Crafts 1, Empathy \else Deceit \fi \arabic{r3}}% SKILLS
-{\Dagger, \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
-	{$3D6\times 100$cp.}%
-	{\setcounter{gold}{\thepage}\multiply\value{gold} by \value{list}\ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}sp hidden in the cart.}{None}}
-}% EQUIPMENT
+{\shortsword, \lootBig}% EQUIPMENT
 {}
 }
 
@@ -942,7 +973,7 @@
 {0}% DR
 {\arabic{enc}}% COMBAT
 {Academics \arabic{r3}, Deceit \arabic{r3}, \ifodd\value{gold} Empathy \arabic{r3}, \fi Vigilance \arabic{r2}}% SKILLS
-{\Dagger, \setcounter{gold}{\thepage}\addtocounter{gold}{\thechapter}\arabic{gold}cp, \divide\value{gold} by \value{r3} \arabic{gold}sp stored secretly nearby.}% EQUIPMENT
+{\Dagger, \lootSmall, \lootBig~ hidden nearby}% EQUIPMENT
 {}
 }
 
@@ -964,7 +995,7 @@
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, Empathy \arabic{r3b}
 \ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}, \ifodd\value{r4} \else Aldaron \arabic{enc}\fi}\fi}% SKILLS
-{\ifodd\value{r2b}\quarterstaff\else\Dagger\fi}% ABILITIES
+{\ifodd\value{r2b}\quarterstaff\else\Dagger, \lootMedium\fi}% EQUIPMENT
 {\ifodd\value{r3b}\mana{2}\fi}
 }
 
@@ -1014,9 +1045,7 @@
 \else%
 	\partialchain%
 \fi, %
- \ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
-	{$5D6$cp}%
-	{\setcounter{gold}{\thepage}\multiply\value{gold} by \thechapter \divide\value{gold} by 10\addtocounter{gold}{1}\arabic{gold}cp}}% EQUIPMENT
+	\lootMedium}% EQUIPMENT
 {}
 }
 
@@ -1038,7 +1067,7 @@
 \else%
 	\knacks{\mightydraw}
 \fi}% SKILLS
-{\longbow, dagger, \ifodd\value{r2}\partialleather\fi}% EQUIPMENT
+{\longbow, dagger, \ifodd\value{r2}\partialleather, \lootMedium\fi}% EQUIPMENT
 {}
 }
 
@@ -1072,7 +1101,7 @@
 	\ifnum\value{r4}=1%
 		\partialleather, %
 	\fi%
-\setcounter{gold}{\thepage}\multiply\value{gold} by \value{r3}\addtocounter{gold}{3}\arabic{gold}cp}% EQUIPMENT
+\lootMedium}% EQUIPMENT
 {}
 }
 
@@ -1080,6 +1109,7 @@
 	#1
 	\randomtwo
 	\randomthree
+	\randomthreeB
 \person{1}% STRENGTH
 {\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
 {\arabic{r2}}% SPEED
@@ -1087,14 +1117,14 @@
 {1}% WITS
 {\arabic{r3}}}% CHARISMA
 {0}% DR
-{\ifodd\thechapter 4\else 1\fi}% AGGRESSION
-{Academics \arabic{r2}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi\ifnum\value{list}>13\ifodd\thechapter\Path{Song}{Illusion \arabic{r2}, Fate 2}\fi\fi}% SKILLS
+{2}% AGGRESSION
+{Academics \arabic{r2}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi\ifnum\value{r12}>9{\Path{Song}{Illusion \arabic{r2}, Fate \arabic{r3b}}}\fi}% SKILLS
 {\ifnum\value{enc}>5%
 	{\shortsword, dagger, }%
 	\else\ifnum\value{age}>2%
 		{\rapier, dagger, }%
-		\else\fi\fi
-	\setcounter{gold}{\thepage}\multiply\value{gold} by \value{gold}\divide\value{gold} by 300\addtocounter{gold}{4} \arabic{gold}\ifnum\value{gold}>100 sp\else cp\fi}% EQUIPMENT
+		\else\fi\fi%
+	\lootMedium}% EQUIPMENT
 {\ifnum\value{list}>13{\mana{2}}\fi}
 }
 
@@ -1119,7 +1149,7 @@
 {Academics \arabic{r3}, \ifodd\value{r3} Deceit \arabic{r2}, Tactics \arabic{enc}\else Empathy \arabic{r2}, Vigilance \arabic{enc}\fi
 \Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi
 }}% SKILLS
-{\ifnumcomp{\value{r3}}{=}{3}{Mana stone jewel with \arabic{age} mana,}{Spell book,} \arabic{gold} gp, \thepage sp}% EQUIPMENT
+{\lootMedium, \lootMagic}% EQUIPMENT
 {\mana{6}\lockedmana{\value{r2}}}
 }
 
@@ -1496,9 +1526,9 @@
 {\ifodd\value{r2}%
 	\longsword%
 \else%
-	\greatsword, dagger, %
-\fi
-\ifnumcomp{\thechapter}{=}{\value{bestiarychapter}}{}{\ifnumcomp{\thechapter}{>}{3}{\multiply\value{gold} by \thepage \ifnumcomp{\value{gold}}{>}{0}{\divide\value{gold} by 1000 \ifnumcomp{\value{enc}}{>}{0}{\arabic{enc} sp}{\thepage cp in a small pouch}}{ornamental dagger, worth \thepage sp}}{\thepage gp worth of rubies, sewn across the flesh of the entire body.}}}% EQUIPMENT
+	\greatsword, dagger%
+\fi%
+\ifodd\thepage, \lootBig\fi}% EQUIPMENT
 {}
 }
 
@@ -1518,7 +1548,7 @@
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 4}}% SKILLS
-{\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
+{\Dagger, mana stone holding 6 MP, \ifodd\thechapter\lootJewellery\fi}% EQUIPMENT
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
 
@@ -1537,7 +1567,7 @@
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r4} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 5}}% SKILLS
-{\Dagger, mana stone holding 6 MP, \arabic{page}sp worth of jewellery}% EQUIPMENT
+{\Dagger, mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
 
@@ -1555,7 +1585,7 @@
 {\arabic{r3b}}% COMBAT
 {Aggression 2, Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2b}, Medicine 3, Vigilance \arabic{r3b}
 \Path{Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Fate \fi\arabic{r3}, Invocation \arabic{r4}, Necromancy 5}}% SKILLS
-{\ifodd\value{r3}\longsword\else\Dagger, embalmed hand of a king; capable of dealing $1D6+3$ direct HP Damage to anyone who strikes the lich\fi}% EQUIPMENT
+{\ifodd\value{r3}\longsword\else\Dagger\fi, \lootMagic, \lootJewellery, \randomtwo\lootJewellery}% EQUIPMENT
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
