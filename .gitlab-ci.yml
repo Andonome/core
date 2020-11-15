@@ -6,9 +6,14 @@ compile_pdf:
     - makeindex main.idx
     - pdflatex main.tex
     - mv main.pdf bind.pdf
+    - cd CS
+    - pdflatex resources.tex
+    - cd ..
+    - mv CS/resources.pdf .
   except:
     - dev
     - master
   artifacts:
     paths:
       - bind.pdf
+      - resources.pdf
