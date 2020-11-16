@@ -1470,18 +1470,18 @@
 {0}% DEXTERITY 
 {\arabic{enc}}% SPEED
 {{-3}% INTELLIGENCE
-{-2}% WITS
+{-1}% WITS
 {-4}}% CHARISMA
 {0}% DR
 {\arabic{r2b}}% AGGRESSION
 {Beast Ken \arabic{r2}, \ifodd\value{r2}Crafts \else Tactics \fi \arabic{r2}}% SKILLS
 {\ifodd\value{r2}
-	\greatclub
+	Nothing.
 \else
 	\ifodd\value{r3}
 		\greatsword
 	\else
-		Nothing.
+		\greatclub
 	\fi
 \fi
 \ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}% EQUIPMENT
@@ -1490,27 +1490,31 @@
 
 \newcommand{\undeadogre}[1][\npc{\D\N}{Undead Ogre}]{
 	#1
-	\animal{6}% STRENGTH
+	\randomtwo
+	\addtocounter{enc}{4}
+	\animal{\arabic{enc}}% STRENGTH
 	{-2}% DEXTERITY
 	{0}% SPEED
 	{-4}% WITS
 	{2}% DR
 	{2}% AGGRESSION
-	{Deceit 1}% SKILLS
-	{None}% ABILITIES
+	{}% SKILLS
+	{Undead}% ABILITIES
 	{}%
 }
 
 \newcommand{\ghoul}[1][\npc{\D\T}{\arabic{r12} Ghouls}]{
 	#1
-\randomtwo
-\animal{\arabic{enc}}% STRENGTH
+	\randomtwo
+	\randomtwoB
+	\addtocounter{enc}{-3}
+\animal{\arabic{r2b}}% STRENGTH
 {-2}% DEXTERITY 
-{-2}% SPEED
+{\arabic{enc}}% SPEED
 {-2}% WITS
 {2}% DR
 {2}% AGGRESSION
-{}% STRENGTH
+{}% SKILLS
 {Undead}% ABILITIES
 {}
 }
@@ -1527,14 +1531,20 @@
 {0}% WITS
 {-5}}% CHARISMA
 {2}% DR
-{2}% AGGRESSION
-{Aggression 2, Beast Ken 1, Survival 1, Tactics \arabic{r2}, Vigilance 1}% SKILLS
+{2}% COMBAT
+{Aggression 2, \ifodd\thepage Beast Ken \else Deceit \fi \arabic{r3}, Survival \arabic{r3b}, Tactics \arabic{r2}, Vigilance 1}% SKILLS
 {\ifodd\value{r2}%
 	\longsword%
+	\ifodd\value{r4}%
+		\partialleather%
+	\fi%
 \else%
 	\greatsword, dagger%
+	\ifodd\value{r4}%
+		\partialchain%
+	\fi%
 \fi%
-\ifodd\thepage, \lootBig\fi}% EQUIPMENT
+\ifodd\thepage, \lootJewellery\fi}% EQUIPMENT
 {}
 }
 
@@ -1551,7 +1561,7 @@
 {\arabic{r2b}}% WITS
 {-5}}% CHARISMA
 {2}% DR
-{\arabic{r2}}% AGGRESSION
+{\arabic{r2}}% COMBAT
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3}\else \fi, Necromancy 4}}% SKILLS
 {\Dagger, mana stone holding 6 MP, \ifodd\thechapter\lootJewellery\fi}% EQUIPMENT
@@ -1564,8 +1574,9 @@
 	\addtocounter{enc}{1}
 	\randomtwoB
 	\randomthree
+	\addtocounter{age}{-2}
 \person{\arabic{r2}}% STRENGTH
-{-1}% DEXTERITY 
+{\arabic{age}}% DEXTERITY 
 {-2}% SPEED
 {{\arabic{enc}}% INTELLIGENCE
 {\arabic{r2b}}% WITS
@@ -1574,7 +1585,11 @@
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}\else \fi, Necromancy 5}}% SKILLS
-{\Dagger, mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
+{\Dagger, %
+\ifodd\value{r4}%
+	\partialplate%
+\fi%
+mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
 {\mana{6}}
 }
 
@@ -1585,8 +1600,10 @@
 	\randomthree
 	\addtocounter{age}{1}
 	\randomthreeB
+	\randomfour
+	\addtocounter{track}{-3}
 \person{\arabic{r2}}% STRENGTH
-{-2}% DEXTERITY 
+{\arabic{track}}% DEXTERITY 
 {\arabic{enc}}% SPEED
 {{3}% INTELLIGENCE
 {\arabic{r3}}% WITS
@@ -1595,8 +1612,17 @@
 {\arabic{r3b}}% COMBAT
 {Aggression 2, \ifodd\thechapter Projectiles \arabic{r3}, \fi Academics 3, Deceit \arabic{r2b}, Medicine 3, Vigilance \arabic{r3b}
 \Path{Alchemy \& Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Conjuration \arabic{age}, Fate \fi\arabic{r3}, Enchantment \arabic{r4}, \ifodd\thechapter Invocation \arabic{r3}, \fi Necromancy 5}}% SKILLS
-{\ifodd\value{r3}\longsword\ifodd\value{r4}\completechain\else\partialplate\fi\else\Dagger\fi, \lootMagic, \lootJewellery, \randomtwo\lootJewellery}% EQUIPMENT
-{\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
+{\ifnum\value{r3b}>2%
+	\longsword%
+	\ifodd\value{r4}%
+		\completechain%
+	\else%
+		\partialplate%
+	\fi%
+\else%
+	\Dagger%
+\fi, \lootMagic, \lootJewellery, \randomtwo\lootJewellery}% EQUIPMENT
+{\mana{6}\lockedmana{3}}
 }
 
 \newcommand{\jelly}[1][\npc{\A}{\ifnum\value{r4}>3 Black\else \ifnum\value{r4}>2 Red \else \ifnum\value{r4}>1 Brown\else Invisible\fi\fi\fi~ Ooze}]{
