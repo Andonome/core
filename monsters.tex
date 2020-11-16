@@ -1110,19 +1110,21 @@
 	#1
 	\randomtwo
 	\randomthree
+	\addtocounter{age}{-1}
 	\randomthreeB
-	\addtocounter{enc}{-1}
+	\randomfour
+	\randomdozen
 \person{1}% STRENGTH
 {\arabic{r3b}}% DEXTERITY 
 {\arabic{r2b}}% SPEED
-{{\arabic{enc}}% INTELLIGENCE
+{{\arabic{age}}% INTELLIGENCE
 {1}% WITS
 {\arabic{r3}}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Academics \ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi%
+{Academics \ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Empathy \arabic{r3}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi%
 \ifnumcomp{\value{r12}}{>}{9}{%
-\Path{Song}{Fate \arabic{r3}, Illusion \arabic{r3b}} }{}
+\Path{Song}{\ifodd\value{r3} Fate \else Aldaron \fi\arabic{r3b}, \ifodd\value{r3b} Enchantment \arabic{r4}, \fi \ifodd\thepage Illusion \arabic{r3b}\fi} }{}
 }% SKILLS
 {\ifodd\value{r3}\rapier%
 	\else%
