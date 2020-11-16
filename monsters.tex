@@ -1111,21 +1111,24 @@
 	\randomtwo
 	\randomthree
 	\randomthreeB
+	\addtocounter{enc}{-1}
 \person{1}% STRENGTH
-{\ifodd\thepage 2 \else 1\fi}% DEXTERITY 
-{\arabic{r2}}% SPEED
-{{\arabic{r3}}% INTELLIGENCE
+{\arabic{r3b}}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{{\arabic{enc}}% INTELLIGENCE
 {1}% WITS
 {\arabic{r3}}}% CHARISMA
 {0}% DR
-{2}% AGGRESSION
-{Academics \arabic{r2}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi\ifnum\value{r12}>9{\Path{Song}{Illusion \arabic{r2}, Fate \arabic{r3b}}}\fi}% SKILLS
-{\ifnum\value{enc}>5%
-	{\shortsword, dagger, }%
-	\else\ifnum\value{age}>2%
-		{\rapier, dagger, }%
-		\else\fi\fi%
-	\lootMedium\ifodd\thepage, \lootJewellery\fi}% EQUIPMENT
+{\arabic{r2}}% COMBAT
+{Academics \ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi%
+\ifnumcomp{\value{r12}}{>}{9}{%
+\Path{Song}{Fate \arabic{r3}, Illusion \arabic{r3b}} }{}
+}% SKILLS
+{\ifodd\value{r3}\rapier%
+	\else%
+	\Dagger%
+\fi%
+	, lute, \lootMedium\ifodd\thepage, \lootJewellery\fi}% EQUIPMENT
 {\ifnum\value{r12}>9\mana{2}\fi}
 }
 
@@ -1594,20 +1597,21 @@
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
-\newcommand{\jelly}[1][\npc{\A}{Acidic Ooze}]{
+\newcommand{\jelly}[1][\npc{\A}{\ifnum\value{r4}>3 Black\else \ifnum\value{r4}>2 Green \else \ifnum\value{r4}>1 Red\else Invisible\fi\fi\fi~ Ooze}]{
 	#1
-	\randomtwo
-	\addtocounter{enc}{4}
 	\randomfour
-	\randomthree
-	\addtocounter{age}{-2}
+	\addtocounter{track}{2}
+	\setcounter{gold}{\value{r4}}
+	\multiply\value{gold} by -1
+	\addtocounter{gold}{2}
+	\randomthreeB
 \animal{\arabic{r4}}% STRENGTH
-{2}% DEXTERITY 
-{\arabic{age}}% SPEED
-{-3}% WITS
-{\arabic{enc}}% DR
-{2}% AGGRESSION
-{Stealth \arabic{r4}, \knacks{\unstoppable}}% SKILLS
+{\arabic{r3b}}% DEXTERITY 
+{\arabic{gold}}% SPEED
+{\arabic{r4}}% WITS
+{\arabic{track}}% DR
+{\arabic{r4}}% AGGRESSION
+{\ifnum\value{gold}>0 Stealth \arabic{gold}\else Projectiles \arabic{r4}\fi, \knacks{\ifodd\thepage\disarm, \fi \unstoppable}}% SKILLS
 {Acidic damage, gelatinous (DR does not apply to fire-based attacks)}% ABILITIES
 {}
 }
