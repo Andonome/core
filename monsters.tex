@@ -1187,11 +1187,11 @@
 {-2}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Aggression 2, Projectiles \arabic{r2b}, Academics \arabic{r2}, Beast Ken \arabic{r2b}, Stealth \arabic{r3},
-\ifnum\value{r3}>1%
+{Aggression 2, Projectiles \arabic{r2b}, Academics \arabic{r2}, Beast Ken \arabic{r2b}, \ifodd\value{r3b}\else Deceit \arabic{r3b}, \fi Stealth \arabic{r3},
+\ifnum\value{r4}>1%
 	{Survival \arabic{enc}, Vigilance \arabic{enc}}%
 	\fi%
-\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3},  Necromancy \arabic{r3b}}}% SKILLS
+\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3}, \ifodd\value{r3b}\else Enchantment \arabic{r3}, \fi Necromancy \arabic{r3b}}}% SKILLS
 {\Dagger}% EQUIPMENT
 {\mana{4}}
 }
@@ -1548,7 +1548,7 @@
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r2} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 4}}% SKILLS
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3}\else \fi, Necromancy 4}}% SKILLS
 {\Dagger, mana stone holding 6 MP, \ifodd\thechapter\lootJewellery\fi}% EQUIPMENT
 {\mana{6}\setcounter{spd}{\value{wts}}}
 }
@@ -1558,6 +1558,7 @@
 	\randomtwo
 	\addtocounter{enc}{1}
 	\randomtwoB
+	\randomthree
 \person{\arabic{r2}}% STRENGTH
 {-1}% DEXTERITY 
 {-2}% SPEED
@@ -1567,26 +1568,29 @@
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{Fate \arabic{enc}, \ifodd\value{r4} Invocation \arabic{r3}\else Aldaron \arabic{enc}\fi, Necromancy 5}}% SKILLS
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r3}, Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}\else \fi, Necromancy 5}}% SKILLS
 {\Dagger, mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
-{\mana{6}\setcounter{spd}{\value{wts}}}
+{\mana{6}}
 }
 
 \newcommand{\lich}[1][\npc{\D}{Lich}]{
 	#1
 	\randomtwo
+	\addtocounter{enc}{-3}
+	\randomthree
+	\addtocounter{age}{1}
 	\randomthreeB
 \person{\arabic{r2}}% STRENGTH
 {-2}% DEXTERITY 
-{-2}% SPEED
+{\arabic{enc}}% SPEED
 {{3}% INTELLIGENCE
 {\arabic{r3}}% WITS
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r3b}}% COMBAT
-{Aggression 2, Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2b}, Medicine 3, Vigilance \arabic{r3b}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Fate \fi\arabic{r3}, Invocation \arabic{r4}, Necromancy 5}}% SKILLS
-{\ifodd\value{r3}\longsword\else\Dagger\fi, \lootMagic, \lootJewellery, \randomtwo\lootJewellery}% EQUIPMENT
+{Aggression 2, \ifodd\thechapter Projectiles \arabic{r3}, \fi Academics 3, Deceit \arabic{r2b}, Medicine 3, Vigilance \arabic{r3b}
+\Path{Alchemy \& Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Conjuration \arabic{age}, Fate \fi\arabic{r3}, Enchantment \arabic{r4}, \ifodd\thechapter Invocation \arabic{r3}, \fi Necromancy 5}}% SKILLS
+{\ifodd\value{r3}\longsword\ifodd\value{r4}\completechain\else\partialplate\fi\else\Dagger\fi, \lootMagic, \lootJewellery, \randomtwo\lootJewellery}% EQUIPMENT
 {\mana{6}\lockedmana{3}\setcounter{spd}{\value{wts}}}
 }
 
