@@ -341,7 +341,7 @@ Roll & Result \\
 
 \newcommand{\randomfour}{%
 	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}%
-\setcounter{track}{\value{r4}}%
+	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}\setcounter{track}{\value{r4}}%
 }
 
 \newcommand{\randomdozen}{%
