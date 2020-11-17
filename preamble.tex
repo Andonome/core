@@ -228,7 +228,7 @@ bookmarks=true]%
 \newcommand{\spelllevel}{\addtocounter{spelllevel}{1}%
 	\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
 \newcommand{\enhancement}[3]{\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}}
-\newcommand{\magicitem}[7]{\vspace{1em}\noindent\textbf{#1}
+\newcommand{\magicitem}[7]{\vspace{2em}\needspace{4em}\noindent\textbf{#1}
 
 	\noindent
 	\textit{Spells: #2, }%
@@ -237,17 +237,14 @@ bookmarks=true]%
 	\textit{Type: #5, }%
 	\textit{Potence: #6, }%
 	\textit{MP: #7}%
-	% Type can be 'pocket spell', 'magical item', or 'greater item'.
-	\vspace{.3em}
-
+	% Type can be 'Pocket Spell', 'Talisman', or 'Artefact'.
+	\needspace{2em}%
 }
 
 \newcommand{\manalake}[8]{\subsection{#1 (Level #8)}
 
 	\textit{Spells: #2, }\textit{Path: #3, }\textit{Duration: #4, }\textit{Type: #5, }\textit{Potence: #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
 	\vspace{.3em}
-
-
 }
 
 \newcommand{\spell}[4]{\subsubsection[#1: #4]{#1}
