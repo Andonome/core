@@ -22,21 +22,42 @@
 \newcommand{\lootBig}{%
 \iftoggle{bestiarychapter}{%
 \ifodd\thepage $3D6-2$\else$2D6+4$\fi gp}{%
-\randomdozen\addtocounter{r12}{5}\arabic{r12}gp}%
+\randomdozen\addtocounter{r12}{8}\arabic{r12}gp}%
 }
 
 \newcommand{\lootMagic}{%
 \iftoggle{bestiarychapter}{}%
-	{\ifnumcomp{\value{r2}}{>}{1}{\ifodd\value{r3}%
-		\ifodd\value{r4}%
-			Townmaster's Hat\else
-			Wild Seeds\fi\else
-		Bag of Holding\fi}%
-	{\ifodd\value{r3}%
-		\ifodd\value{r4}%
-			Portal Scroll\else
-			Deck of Cards\fi\else
-		Bag of Tricks\fi}}}
+	{\ifnumcomp{\value{r2}}{>}{1}{%
+		\ifodd\value{r3}%
+			\ifodd\value{r4}%
+				\ifodd\value{r3b}%
+					Townmaster's Hat\else%
+					Deck of Cards%
+				\fi%
+				\else%
+				Wild Seeds\fi%
+			\else%
+				\ifodd\value{r2b}%
+					Bag of Holding%
+				\else%
+					Taming Flute%
+				\fi%
+			\fi}%
+		{\ifodd\value{r3}%
+			\ifodd\value{r4}%
+				Portal Scroll\else%
+				Sleeping Dust%
+			\fi%
+			\else%
+			\ifodd\value{r2b}%
+				\ifodd\value{r2b}%
+					Ring of Asphyxiation\else%
+					Ghost Shield%
+				\fi%
+			\else%
+				Bag of Tricks%
+			\fi%
+		\fi}}}
 
 \newcommand{\lootJewellery}{%
 \iftoggle{bestiarychapter}{jewellery worth \ifodd\value{r2}$3D6$sp\else$1D6+2$gp\fi}%
@@ -896,7 +917,9 @@
 	{\arabic{enc}}}% CHARISMA
 	{0}% DR
 	{0}% COMBAT
-	{\ifodd\value{r2}\else Projectiles \arabic{enc}, \fi Academics 3, \ifodd\value{chapter} Crafts \arabic{enc}, \fi Deceit \arabic{age},  Stealth \arabic{enc}
+	{\ifodd\value{r2}%
+		\else Projectiles \arabic{enc}, \fi%
+	Academics 3, \ifodd\value{chapter} Crafts \arabic{enc}, \fi Deceit \arabic{age},  Stealth \arabic{enc}
 	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{age}}}% SKILLS
 	{\lootBig, \ifodd\thepage\lootMagic\fi}% EQUIPMENT
 	{\mana{6}}
@@ -1532,11 +1555,11 @@
 {-5}}% CHARISMA
 {2}% DR
 {2}% COMBAT
-{Aggression 2, \ifodd\thepage Beast Ken \else Deceit \fi \arabic{r3}, Survival \arabic{r3b}, Tactics \arabic{r2}, Vigilance 1}% SKILLS
+{Aggression \arabic{enc}, \ifodd\thepage Beast Ken \else Deceit \fi \arabic{r3}, Survival \arabic{r3b}, Tactics \arabic{r2}, Vigilance 1}% SKILLS
 {\ifodd\value{r2}%
 	\longsword%
 	\ifodd\value{r4}%
-		\partialleather%
+		, \partialleather%
 	\fi%
 \else%
 	\greatsword, dagger%
@@ -1584,7 +1607,7 @@
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}\else \fi, Necromancy 5}}% SKILLS
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}, \else \fi Necromancy 5}}% SKILLS
 {\Dagger, %
 \ifodd\value{r4}%
 	\partialplate%
