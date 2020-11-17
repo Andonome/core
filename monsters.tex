@@ -16,7 +16,10 @@
 \newcommand{\lootMedium}{%
 \iftoggle{bestiarychapter}{%
 \ifodd\value{r2}$3D6$\else$2D6$\fi sp}{%
-\setcounter{gold}{\thepage}\divide\value{gold} by \value{r3}\arabic{gold} sp}%
+\setcounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
+\ifnum\value{gold}<4%
+	\setcounter{gold}{7}\fi%
+\arabic{gold} sp}%
 }
 
 \newcommand{\lootBig}{%
