@@ -855,7 +855,7 @@
 	}% SKILLS
 	{\ifnumcomp{\value{r4}}{=}{2}{\Dagger, shortbow, }{\rapier, dagger, }%
 	\lootJewellery\ifnum\value{r12}>12%
-		\lootMagic%
+		, \lootMagic%
 	\fi}% EQUIPMENT
 	{\mana{\value{age}}\addtocounter{mp}{\value{age}}}
 	}
@@ -1180,7 +1180,7 @@
 {Academics \arabic{r3}, \ifodd\value{r3} Deceit \arabic{r2}, Tactics \arabic{enc}\else Empathy \arabic{r2}, Vigilance \arabic{enc}\fi
 \Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi, \ifodd\thepage Illusion \arabic{r3}\fi
 }}% SKILLS
-{\lootMedium\ifodd\thepage\lootMagic\else mana stone with 4 mp\fi}% EQUIPMENT
+{\lootMedium, \ifodd\thepage\lootMagic\else mana stone with 4 mp\fi}% EQUIPMENT
 {\mana{6}\lockedmana{\value{r2}}}
 }
 
