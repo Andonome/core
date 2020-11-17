@@ -1063,14 +1063,14 @@
 		{\shortsword}%
 	\fi%
 \fi, %
-\ifodd\value{r4}
-	\shield, 
-\fi
 \ifnum\value{r3}=3%
 	\partialleather%
 \else%
 	\partialchain%
 \fi, %
+\ifodd\value{r4}
+	\shield, 
+\fi
 	\ifnum\value{enc}=3\lootMedium\else\lootSmall\fi}% EQUIPMENT
 {}
 }

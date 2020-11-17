@@ -344,7 +344,8 @@ Roll & Result \\
 
 \newcommand{\randomdozen}{%
 \ifnum\value{r12}>12\setcounter{r12}{2}\fi%
-\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\addtocounter{r12}{\value{r4}}\fi%
+\ifnum\value{r12}<4\setcounter{r12}{2}\fi%
+\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
 }
 
 \newcommand{\mapentry}[1]{\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
