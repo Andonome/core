@@ -1608,11 +1608,17 @@
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}, \else \fi Necromancy 5}}% SKILLS
-{\Dagger, %
-\ifodd\value{r4}%
-	\partialplate%
+{\ifodd\thechapter%
+	\Dagger, %
+\else
+	\longsword, %
 \fi%
-mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
+	\ifodd\value{r4}%
+		\partialplate%
+	\else%
+		\completechain%
+	\fi%
+, mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
 {\mana{6}}
 }
 
