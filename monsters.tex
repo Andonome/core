@@ -854,7 +854,9 @@
 		\fi}\fi
 	}% SKILLS
 	{\ifnumcomp{\value{r4}}{=}{2}{\Dagger, shortbow, }{\rapier, dagger, }%
-	\lootJewellery}% EQUIPMENT
+	\lootJewellery\ifnum\value{r12}>12%
+		\lootMagic%
+	\fi}% EQUIPMENT
 	{\mana{\value{age}}\addtocounter{mp}{\value{age}}}
 	}
 
@@ -876,7 +878,7 @@
 	{\ifodd\value{mp} 1\else 0\fi}% COMBAT
 	{Projectiles \arabic{r2b}, Academics 3, Empathy 3, Deceit \arabic{enc}, Performance \arabic{r2}, \ifodd\value{r2}Stealth \else Tactics \fi \arabic{r2b}, Vigilance 2%
 	\Path{Blood}{Aldaron \arabic{r3}, Enchantment 5, Fate \arabic{r3}, Forces \arabic{r4}, Invocation 1, Polymorph 2}}% SKILLS
-	{\Dagger, \lootJewellery\ifodd\thepage, \randomtwo\lootJewellery\fi}% EQUIPMENT
+	{\Dagger, \lootJewellery\ifodd\thepage, \randomtwo\lootJewellery\ifodd\value{r4}, \lootMagic\fi\fi}% EQUIPMENT
 	{\mana{6}}
 }
 
