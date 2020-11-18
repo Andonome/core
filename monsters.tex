@@ -1603,6 +1603,7 @@
 	\randomtwoB
 	\randomthree
 	\addtocounter{age}{-2}
+	\randomfour
 \person{\arabic{r2}}% STRENGTH
 {\arabic{age}}% DEXTERITY 
 {-2}% SPEED
@@ -1623,8 +1624,9 @@
 	\else%
 		\completechain%
 	\fi%
-, mana stone holding 6 MP, \ifodd\thepage\lootMagic, \fi\ifodd\thechapter\lootJewellery\else\lootBig\fi}% EQUIPMENT
-{\mana{6}}
+\multiply\value{track} by 2%
+, mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \lootMagic}% EQUIPMENT
+{\mana{6}\lockedmana{\value{r4}}}
 }
 
 \newcommand{\lich}[1][\npc{\D}{Lich}]{
@@ -1655,8 +1657,9 @@
 	\fi%
 \else%
 	\Dagger%
-\fi, \lootMagic, \lootJewellery, \randomtwo\lootJewellery}% EQUIPMENT
-{\mana{6}\lockedmana{3}}
+\fi, \multiply\value{track} by 2%
+, mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \lootMagic}% EQUIPMENT
+{\mana{8}\lockedmana{\value{r4}}}
 }
 
 \newcommand{\jelly}[1][\npc{\A}{\ifnum\value{r4}>3 Black\else \ifnum\value{r4}>2 Red \else \ifnum\value{r4}>1 Brown\else Invisible\fi\fi\fi~ Ooze}]{
