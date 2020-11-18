@@ -171,7 +171,7 @@ bookmarks=true]%
 \renewcommand{\mannerism}{#4}
 \renewcommand{\archetype}{#5}
 }
-\newcommand{\T}{\opposition} % groups
+\newcommand{\T}{\opposition\settoggle{team}{false}} % groups
 \newcommand{\M}{\mars} % male
 \newcommand{\F}{\venus} % female
 \newcommand{\E}{\mercury} % blood casters
@@ -188,6 +188,10 @@ bookmarks=true]%
 \newtoggle{personality}
 \settoggle{personality}{false}
 
+% This toggle tells you if this is just one creature or a team.
+\newtoggle{team}
+\settoggle{team}{false}
+
 \iftoggle{verbose}{
 	\setcounter{tocdepth}{1}
 	\setcounter{secnumdepth}{1}
@@ -200,11 +204,12 @@ bookmarks=true]%
 \newcounter{r3}
 \setcounter{r3}{2}
 \newcounter{r3b}
-\setcounter{r3}{3}
+\setcounter{r3}{\month}
+\divide\value{r3} by 4
 \newcounter{r4}
-\setcounter{r4}{3}
+\setcounter{r4}{\day}
 \newcounter{r12}
-\setcounter{r12}{9}
+\setcounter{r12}{\month}
 \newcounter{enc}
 \newcounter{list}
 \newcounter{spelllevel}
@@ -331,6 +336,7 @@ Roll & Result \\
 \newcommand{\randomthree}{%
 	\ifnumcomp{\value{r3}}{>}{2}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}%
 	\setcounter{age}{\value{r3}}%
+	\ifnum\value{r3}<1\setcounter{r3}{2}\fi%
 }
 
 \newcommand{\randomthreeB}{
