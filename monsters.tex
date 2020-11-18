@@ -1226,7 +1226,7 @@
 	{Survival \arabic{enc}, Vigilance \arabic{enc}}%
 	\fi%
 \Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron \fi \arabic{r3}, \ifodd\value{r3b}\else Enchantment \arabic{r3}, \fi Necromancy \arabic{r3b}}}% SKILLS
-{\Dagger}% EQUIPMENT
+{\Dagger\ifodd\value{r3}\else, \lootMagic\fi}% EQUIPMENT
 {\mana{4}}
 }
 
@@ -1375,15 +1375,17 @@
 
 \newcommand{\undeadgoblin}[1][\npc{\D\T}{\arabic{r12} Undead Hobgoblins}]{
 	#1
-\randomtwo\addtocounter{enc}{-2}
+	\randomtwo\addtocounter{enc}{-2}
+	\randomtwoB
+	\addtocounter{r2b}{-1}
 \animal{\arabic{enc}}% STRENGTH
 {-2}% DEXTERITY 
-{1}% SPEED
+{\arabic{r2b}}% SPEED
 {-4}% WITS
 {2}% DR
 {2}% AGGRESSION
 {}% SKILLS
-{}% ABILITIES
+{Undead}% ABILITIES
 {}
 }
 
@@ -1409,6 +1411,7 @@
 	#1
 	\randomtwo
 	\randomthree
+	\addtocounter{age}{-1}
 	\randomthreeB
 \person{-2}% STRENGTH
 {\arabic{r3}}% DEXTERITY 
@@ -1417,8 +1420,8 @@
 {0}% WITS
 {-4}}% CHARISMA
 {0}% DR
-{0}% AGGRESSION
-{Projectiles \arabic{r2}, Deceit \arabic{r3}, Medicine \arabic{r2}, Stealth 1, Tactics 2
+{\arabic{age}}% AGGRESSION
+{Projectiles \arabic{r2}, \ifodd\value{r3} Deceit \else Athletics \fi \arabic{r3}, Medicine \arabic{r2}, Stealth 1, Tactics 2
 \Path{Nura}{Invocation \arabic{r3}, Necromancy \arabic{r3b}, Saurecanta \arabic{r4}}}% SKILLS
 {\Dagger}% EQUIPMENT
 {\mana{4}}
@@ -1570,7 +1573,7 @@
 \else%
 	\greatsword, dagger%
 	\ifodd\value{r4}%
-		\partialchain%
+		, \partialchain%
 	\fi%
 \fi%
 \ifodd\thepage, \lootJewellery\fi}% EQUIPMENT
@@ -1583,6 +1586,8 @@
 	\addtocounter{enc}{1}
 	\randomtwoB
 	\addtocounter{r2b}{-1}
+	\randomthree
+	\randomfour
 \person{\arabic{r2}}% STRENGTH
 {0}% DEXTERITY 
 {\arabic{r2b}}% SPEED
@@ -1593,8 +1598,17 @@
 {\arabic{r2}}% COMBAT
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3}\else \fi, Necromancy 4}}% SKILLS
-{\Dagger, mana stone holding 6 MP, \ifodd\thechapter\lootJewellery\fi}% EQUIPMENT
-{\mana{6}\setcounter{spd}{\value{wts}}}
+{\ifodd\thepage%
+	\dagger%
+\else%
+	\shortsword%
+	\ifodd\value{gold}%
+		, \partialleather%
+	\fi%
+\fi%
+, \multiply\value{track} by 2%
+mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIPMENT
+{\mana{6}\lockedmana{\value{r4}}}
 }
 
 \newcommand{\demilich}[1][\npc{\D\E}{Demilich}]{
@@ -1834,11 +1848,12 @@
 \newcommand{\watcher}[1][\npc{\A}{Watcher}]{
 	#1
 	\randomthree
-\animal{-3}% STRENGTH
+	\addtocounter{age}{-3}
+\animal{\arabic{age}}% STRENGTH
 {-2}% DEXTERITY 
 {-2}% SPEED
 {\arabic{r3}}% WITS
-{0}% DR
+{3}% DR
 {0}% AGGRESSION
 {Stealth 3, Vigilance 2}% SKILLS
 {Gas}% ABILITIES
