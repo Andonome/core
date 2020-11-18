@@ -1587,6 +1587,7 @@
 	\randomtwoB
 	\addtocounter{r2b}{-1}
 	\randomthree
+	\randomthreeB
 	\randomfour
 \person{\arabic{r2}}% STRENGTH
 {0}% DEXTERITY 
@@ -1597,7 +1598,7 @@
 {2}% DR
 {\arabic{r2}}% COMBAT
 {Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3}\else \fi, Necromancy 4}}% SKILLS
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3b}, \else \fi Necromancy 4}}% SKILLS
 {\ifodd\thepage%
 	\Dagger%
 \else%
@@ -1648,6 +1649,8 @@ mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIP
 	#1
 	\randomtwo
 	\addtocounter{enc}{-3}
+	\randomtwoB
+	\addtocounter{r2b}{2}
 	\randomthree
 	\addtocounter{age}{1}
 	\randomthreeB
@@ -1656,24 +1659,24 @@ mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIP
 \person{\arabic{r2}}% STRENGTH
 {\arabic{track}}% DEXTERITY 
 {\arabic{enc}}% SPEED
-{{3}% INTELLIGENCE
+{{\arabic{r2b}}% INTELLIGENCE
 {\arabic{r3}}% WITS
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r3b}}% COMBAT
-{Aggression 2, \ifodd\thechapter Projectiles \arabic{r3}, \fi Academics 3, Deceit \arabic{r2b}, Medicine 3, Vigilance \arabic{r3b}
-\Path{Alchemy \& Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Conjuration \arabic{age}, Fate \fi\arabic{r3}, Enchantment \arabic{r4}, \ifodd\thechapter Invocation \arabic{r3}, \fi Necromancy 5}}% SKILLS
+{Aggression 2, \ifodd\thechapter Projectiles \arabic{r3}, \fi Academics 3, \ifodd\value{gold}Crafts \arabic{r3}, \fi Deceit \arabic{r2b}, Medicine \arabic{r2b}, Vigilance \arabic{r3b}
+\Path{Alchemy \& Devotion (Qualm\"e)}{\ifodd\value{page}Aldaron \else Conjuration \arabic{age}, Fate \fi\arabic{r3}, Enchantment \arabic{r4}, \ifodd\thechapter Invocation \arabic{r2b}, \fi Necromancy 5}}% SKILLS
 {\ifnum\value{r3b}>2%
 	\longsword%
 	\ifodd\value{r4}%
-		\completechain%
+		, \completechain%
 	\else%
-		\partialplate%
+		, \partialplate%
 	\fi%
 \else%
 	\Dagger%
-\fi, \multiply\value{track} by 2%
-, mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \lootMagic}% EQUIPMENT
+\fi, \addtocounter{track}{3}\multiply\value{track} by 2%
+mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \lootMagic}% EQUIPMENT
 {\mana{8}\lockedmana{\value{r4}}}
 }
 
