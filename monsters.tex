@@ -30,7 +30,7 @@
 
 \newcommand{\lootMagic}{%
 \iftoggle{bestiarychapter}{}%
-	{\ifnumcomp{\value{r2}}{>}{1}{%
+	{\iftoggle{team}{}{\ifnumcomp{\value{r2}}{>}{1}{%
 		\ifodd\value{r3}%
 			\ifodd\value{r4}%
 				\ifodd\value{r3b}%
@@ -53,14 +53,14 @@
 			\fi%
 			\else%
 			\ifodd\value{r2b}%
-				\ifodd\value{r2b}%
+				\ifnum\value{dr}>0%
 					Ring of Asphyxiation\else%
 					Ghost Shield%
 				\fi%
 			\else%
 				Bag of Tricks%
 			\fi%
-		\fi}}}
+		\fi}}}}
 
 \newcommand{\lootJewellery}{%
 \iftoggle{bestiarychapter}{jewellery worth \ifodd\value{r2}$3D6$sp\else$1D6+2$gp\fi}%
@@ -366,6 +366,7 @@
 	\setcounter{mp}{0}
 	\setcounter{mpb}{0}
 	\setcounter{xpbonus}{0}
+	\settoggle{team}{false}
 
 }
 
