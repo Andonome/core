@@ -465,8 +465,8 @@
 	}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP
 
 }{}%
-	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{}{%
-	\ \Repeat{\value{hp}}{\ding{111}}
+	\iftoggle{bestiarychapter}{}{%
+	\ \Repeat{\value{hp}}{\ding{111}}%
 	}%
 \iftoggle{examplecharacter}{\addtocounter{fp}{\value{cha}}, \arabic{fp} FP}{}
 
@@ -530,8 +530,8 @@
 \iftoggle{examplecharacter}{%
 }{
 	\iftoggle{mind}{\addtocounter{fp}{\value{cha}} \arabic{fp} FP
-	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}{}{%
-	\Repeat{\value{fp}}{\ding{111}}
+	\iftoggle{bestiarychapter}{}{%
+	\Repeat{\value{fp}}{\ding{111}}%
 	}
 }{}
 	\vspace{.1cm}
@@ -745,10 +745,10 @@
 	{Aggression \arabic{enc}, Projectiles \arabic{r3b}, Academics \arabic{r3}, Athletics \arabic{r2b}, Deceit \arabic{enc}, Tactics 2, Vigilance 3
 	\knacks{\ifodd\value{page}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{r3}}{>}{2}{\laststand}{\adrenalinesurge}}
 	\Path{Blood}{\ifodd\value{r4}Aldaron \else Enchantment \fi \arabic{r4}, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
-	\ifnumcomp{\value{bestiarychapter}}{=}{\thechapter}%
-		{$3D6\times 100$gp, sitting in a lair.}%
-		{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}%
-	{\mana{\arabic{age}}\gdef\armourtype{C}}
+	\iftoggle{bestiarychapter}{$3D6\times 100$gp, sitting in a lair.}{%
+		{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}}%
+	{\addtocounter{age}{-4}\multiply\value{age} by 2%
+	\mana{\arabic{age}}\gdef\armourtype{C}}
 	}
 
 \newcommand{\dwarventrader}[1][\npc{\M}{Dwarven Trader}]{
