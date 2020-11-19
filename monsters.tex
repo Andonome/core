@@ -592,13 +592,18 @@
 
 \newcommand{\bear}[1][\npc{\A}{Bear}]{
 	#1
-\animal{5}% STRENGTH
-{-1}% DEXTERITY 
-{4}% SPEED
+	\randomtwo
+	\addtocounter{enc}{4}
+	\randomtwoB
+	\addtocounter{r2b}{-2}
+	\randomthreeB
+\animal{\arabic{enc}}% STRENGTH
+{\arabic{r2b}}% DEXTERITY 
+{\arabic{r2b}}% SPEED
 {0}% WITS
 {2}% DR
-{2}% AGGRESSION
-{Athletics 2, Stealth 2, Survival 2, Vigilance 2}% SKILLS
+{\arabic{r3b}}% AGGRESSION
+{Athletics \arabic{r2}, Stealth 2, Survival 2, Vigilance 2}% SKILLS
 {None}% ABILITIES
 {}
 }
@@ -606,13 +611,16 @@
 \newcommand{\boar}[1][\npc{\A}{Boar}]{
 	#1
 	\randomtwoB
+	\randomtwo
+	\addtocounter{enc}{-3}
+	\randomthree
 	\animal{\arabic{r2b}}% STRENGTH
-{-2}% DEXTERITY 
+{\arabic{enc}}% DEXTERITY 
 {3}% SPEED
-{1}% WITS
-{2}% DEXTERITY 
+{\arabic{r2}}% WITS
+{2}% DR
 {2}% AGGRESSION
-{Survival 1, Vigilance 1}% STRENGTH
+{Athletics \arabic{r2}, Survival 1, Vigilance \arabic{r3}}% STRENGTH
 {None}% ABILITIES
 {}
 }
@@ -696,7 +704,7 @@
 {{-4}% INTELLIGENCE
 {\arabic{r2b}}% WITS
 {-5}}% CHARISMA
-{2}% DR
+{\ifodd\thepage 2\else 3\fi}% DR
 {\arabic{r3}}% AGGRESSION
 {Athletics 2, Stealth \arabic{enc}, Survival \arabic{r2b}, Tactics \arabic{r3}}% SKILLS
 {None}% ABILITIES
@@ -782,7 +790,7 @@
 	{Crafts 1, Tactics 1}% SKILLS
 	{\ifodd\value{r2}\shortsword\else\woodaxe\fi, \completeplate, \lootMedium}% EQUIPMENT
 	{\knacks{Chosen Enemy: Goblinoids}\ifodd\value{r2b}, \defender\fi}% SKILLS
-	}
+}
 
 \newcommand{\dwarvenrunemaster}[1][\npc{\M}{Dwarven Runemaster}]{
 	#1
@@ -833,9 +841,10 @@
 	\randomtwo
 	\randomtwoB
 	\randomthree
+	\randomthreeB
 	\randomfour
-	\setcounter{enc}{1}\addtocounter{enc}{-\value{age}}
-	\person{\value{enc}}%STRENGTH
+	\setcounter{gold}{1}\addtocounter{enc}{-\value{age}}
+	\person{\value{gold}}%STRENGTH
 	{\arabic{r2}}%DEXTERITY
 	{\arabic{r2b}}%SPEED
 	{{\arabic{age}}% INTELLIGENCE
@@ -843,13 +852,13 @@
 	{\ifodd\value{r3}\arabic{r2}\else -1\fi}}% CHARISMA
 	{0}% DR
 	{\ifodd\value{list}1\else2\fi}% COMBAT
-	{\ifnumcomp{\value{r4}}{<}{2}{}{Projectiles \arabic{age},} Academics \arabic{age}, Athletics 1, \ifodd\value{r4} Crafts \arabic{r3}\else Performance \arabic{r3}\fi, Stealth \arabic{r2}, Survival 2, Vigilance \arabic{age}
+	{\ifnumcomp{\value{r4}}{<}{2}{}{Projectiles \arabic{age},} Academics \arabic{age}, Athletics 1, \ifodd\value{r4} Crafts \arabic{r3}\else Performance \arabic{r2b}\fi, Stealth \arabic{r2}, Survival \arabic{r3b}, Vigilance \arabic{age}
 	\Path{Blood \ifodd\thepage\else \& Song\fi}%
 	{\ifnumcomp{\value{r4}}{<}{3}%
 		{Aldaron \arabic{r3}, }%
 		{Invocation \arabic{r3b}, }%
 	\ifodd\value{r3}\else Fate \arabic{r2}, \fi%
-	\addtocounter{gold}{1}\ifodd\value{gold} Polymorph \arabic{r2b}\else Enchantment \arabic{age}, \fi}%
+	\ifodd\value{gold} Polymorph \arabic{r2b}\else Enchantment \arabic{r4}, \fi}%
 	\ifodd\value{r4} \else\knacks{%
 		\ifodd\value{r2}%
 			\laststand%
@@ -1195,7 +1204,7 @@
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, \ifodd\value{r3} Deceit \arabic{r2}, Tactics \arabic{enc}\else Empathy \arabic{r2}, Vigilance \arabic{enc}\fi
-\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3}, Force \arabic{r4}\else Invocation \arabic{r4}\fi, \ifodd\thepage Illusion \arabic{r3}\fi
+\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3b}, Force \arabic{r4}\else Invocation \arabic{r4}\fi, \ifodd\thepage Illusion \arabic{r3}\fi
 }}% SKILLS
 {\lootMedium, \ifodd\thepage\lootMagic\else mana stone with 4 mp\fi}% EQUIPMENT
 {\mana{6}\lockedmana{\value{r2}}}
@@ -1492,11 +1501,12 @@
 
 \newcommand{\sentientundeadhobgoblin}[1][\npc{\D\T}{\arabic{r12} Sentient Undead Hobgoblins}]{
 	#1
-\randomtwo
+	\randomtwo
+	\randomtwoB
 \person{\arabic{r2}}% STRENGTH
 {-1}% DEXTERITY 
 {-2}% SPEED
-{{1}% INTELLIGENCE
+{{\arabic{r2b}}% INTELLIGENCE
 {0}% WITS
 {-5}}% CHARISMA
 {2}% DR
