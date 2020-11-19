@@ -462,11 +462,13 @@
 	\iftoggle{bestiarychapter}{, }{%
 	\ \Repeat{\value{mp}}{\ding{111}}, %
 	}%
-	}{}\arabic{hp} HP\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP
+	}{}\arabic{hp} HP \iftoggle{bestiarychapter}{}{%
+	\ \Repeat{\value{hp}}{\ding{111}}%
+	\ifnumcomp{\value{sp}}{>}{0}{, \arabic{sp} SP %
+	\iftoggle{bestiarychapter}{}{\Repeat{\value{sp}}{\ding{111}}}%
 
 }{}%
-	\iftoggle{bestiarychapter}{}{%
-	\ \Repeat{\value{hp}}{\ding{111}}%
+
 	}%
 \iftoggle{examplecharacter}{\addtocounter{fp}{\value{cha}}, \arabic{fp} FP}{}
 
@@ -695,12 +697,13 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\randomtwoC
 	\addtocounter{enc}{2}
 	\randomthree
 	\randomfour
 \person{\arabic{r4}}% STRENGTH
 {\arabic{enc}}% DEXTERITY 
-{\arabic{r2}}% SPEED
+{\arabic{r2c}}% SPEED
 {{-4}% INTELLIGENCE
 {\arabic{r2b}}% WITS
 {-5}}% CHARISMA
@@ -715,6 +718,7 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\randomtwoC
 	\addtocounter{r2b}{-1}
 	\randomthree
 	\addtocounter{age}{5}
@@ -726,7 +730,7 @@
 	{\arabic{r2b}}% WITS
 	{4}% DR
 	{\arabic{r3b}}% AGGRESSION
-	{Projectiles \arabic{r2}, Athletics \arabic{r3}}% SKILLS
+	{Projectiles \arabic{r2}, Athletics \arabic{r2c}}% SKILLS
 	{Odour demands Strength check, TN 9. Acidic breath (1D6-2 Damage).}% ABILITIES
 	{\knacks{\unstoppable}}
 }
@@ -755,8 +759,13 @@
 	\Path{Blood}{\ifodd\value{r4}Aldaron \else Enchantment \fi \arabic{r4}, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
 	\iftoggle{bestiarychapter}{$3D6\times 100$gp, sitting in a lair.}{%
 		{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}}%
-	{\addtocounter{age}{-4}\multiply\value{age} by 2%
-	\mana{\arabic{age}}\gdef\armourtype{C}}
+	{\ifodd\value{r2}%
+	\setcounter{gold}{\value{r3b}}\multiply\value{gold} by 3%
+	\addtocounter{gold}{\value{int}}%
+	\lockedmana{\value{r3b}}%
+	\setcounter{sp}{\value{gold}}%
+	\fi%
+	\ifnum\value{age}>7\mana{8}\else\mana{6}\fi\gdef\armourtype{C}}
 	}
 
 \newcommand{\dwarventrader}[1][\npc{\M}{Dwarven Trader}]{
@@ -817,6 +826,7 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\randomtwoC
 	\addtocounter{enc}{2}
 	\randomthree
 	\addtocounter{age}{1}
@@ -831,7 +841,7 @@
 	{\arabic{r4}}}% CHARISMA
 	{6}% DR
 	{\arabic{r3}}% COMBAT
-	{Academics 3, Athletics \arabic{r3}, \ifodd\value{r2}Crafts 2, Performance \arabic{r3}, \else Empathy \arabic{r2b}, Survival 3, Vigilance \arabic{r3b}\fi \Path{Blood \& Song}{Polymorph 5, Aldaron \arabic{enc}, Fate \arabic{r3b}, \ifodd\value{r3} Enchantment \arabic{r2b}\fi}}% SKILLS
+	{Academics 3, Athletics \arabic{r3c}, \ifodd\value{r2}Crafts 2, Performance \arabic{r3}, \else Empathy \arabic{r2b}, Survival 3, Vigilance \arabic{r3b}\fi \Path{Blood \& Song}{Polymorph 5, Aldaron \arabic{enc}, Fate \arabic{r3b}, \ifodd\value{r3} Enchantment \arabic{r2b}\fi}}% SKILLS
 	{\ifodd\thepage\Dagger, \lootJewellery\else\spear\fi}% EQUIPMENT
 	{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
 	}
@@ -843,7 +853,8 @@
 	\randomthree
 	\randomthreeB
 	\randomfour
-	\setcounter{gold}{1}\addtocounter{enc}{-\value{age}}
+	\randomdozen
+	\setcounter{gold}{1}\addtocounter{gold}{-\value{age}}
 	\person{\value{gold}}%STRENGTH
 	{\arabic{r2}}%DEXTERITY
 	{\arabic{r2b}}%SPEED
@@ -1204,7 +1215,7 @@
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics \arabic{r3}, \ifodd\value{r3} Deceit \arabic{r2}, Tactics \arabic{enc}\else Empathy \arabic{r2}, Vigilance \arabic{enc}\fi
-\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3b}, Force \arabic{r4}\else Invocation \arabic{r4}\fi, \ifodd\thepage Illusion \arabic{r3}\fi
+\Path{Alchemy}{\ifodd\value{r2b} Conjuration \arabic{r3b}, Force \else Invocation \fi \arabic{r4}, \ifodd\thepage Illusion \arabic{r3}\fi
 }}% SKILLS
 {\lootMedium, \ifodd\thepage\lootMagic\else mana stone with 4 mp\fi}% EQUIPMENT
 {\mana{6}\lockedmana{\value{r2}}}
@@ -1214,6 +1225,7 @@
 	#1
 	\randomtwo\addtocounter{enc}{1}
 	\randomtwoB
+	\randomtwoC
 	\addtocounter{r2b}{-1}
 \person{\arabic{enc}}% STRENGTH
 {\arabic{r2b}}% DEXTERITY 
@@ -1223,7 +1235,7 @@
 {-1}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Aggression 2, Projectiles 1, Survival 3\knacks{\ifodd\value{enc}\adrenalinesurge\else\charge\fi}}% SKILLS
+{Aggression 2, Projectiles \arabic{r2c}, Survival 3\knacks{\ifodd\value{enc}\adrenalinesurge\else\charge\fi}}% SKILLS
 {\spear}% EQUIPMENT
 {}
 }
@@ -1234,7 +1246,10 @@
 	\randomtwo
 	\randomtwoB
 	\randomthree
+	\randomthreeB
+	\randomthreeC
 	\randomfour
+	\randomdozen
 \person{\arabic{age}}% STRENGTH
 {0}% DEXTERITY 
 {\arabic{r2}}% SPEED
@@ -1247,7 +1262,7 @@
 \ifnum\value{r4}>1%
 	{Survival \arabic{enc}, Vigilance \arabic{enc}}%
 	\fi%
-\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate \else Aldaron \fi \arabic{r3}, \ifodd\value{r3b}\else Enchantment \arabic{r3}, \fi Necromancy \arabic{r3b}}}% SKILLS
+\Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate \else Aldaron \fi \arabic{r3}, \ifodd\value{r3b}\else Enchantment \arabic{r3}, \fi Necromancy \arabic{r3c}}}% SKILLS
 {\Dagger\ifodd\value{r3}\else, \lootMagic\fi}% EQUIPMENT
 {\mana{4}}
 }
@@ -1285,7 +1300,7 @@
 {Survival \arabic{r2}}% SKILLS
 {}% ABILITIES
 {}
-	}
+}
 
 \newcommand{\nurahorse}[1][\npc{\A\N}{Nura Horse}]{
 	#1
@@ -1303,14 +1318,15 @@
 {}
 }
 
-\newcommand{\nuraslug}[1][\npc{\A\N\T}{\arabic{r12} Nura Slugs}]{
+\newcommand{\nuraslug}[1][\npc{\A\N\T}{\multiply\value{r12} by \value{r2b}\arabic{r12} Nura Slugs}]{
 	#1
 	\randomtwo
+	\addtocounter{enc}{-3}
 \animal{\arabic{enc}}% STRENGTH
 {-1}% DEXTERITY 
 {-4}% SPEED
 {-3}% WITS
-{\arabic{r2}}% DR
+{\arabic{r2b}}% DR
 {\arabic{r2}}% AGGRESSION
 {Projectiles \arabic{r2}, Survival 1}% SKILLS
 {Acid Spray}% ABILITIES
@@ -1380,6 +1396,7 @@
 	\randomtwoB
 	\addtocounter{r2b}{-2}
 	\addtocounter{enc}{1}
+	\randomdozen
 \person{\arabic{r2b}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1432,6 +1449,7 @@
 \newcommand{\goblinnuramancer}[1][\npc{\F\N}{Goblin Nuramancer}]{
 	#1
 	\randomtwo
+	\randomtwoB
 	\randomthree
 	\addtocounter{age}{-1}
 	\randomthreeB
@@ -1454,6 +1472,7 @@
 	\randomtwo
 	\randomtwoB
 	\randomthree
+	\randomdozen
 \person{\arabic{r2b}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{r3}}% SPEED
@@ -1472,6 +1491,7 @@
 	\randomtwo
 	\randomtwoB
 	\randomthree
+	\randomdozen
 \person{\arabic{r2}}% STRENGTH
 {1}% DEXTERITY 
 {\arabic{r3}}% SPEED
@@ -1516,11 +1536,12 @@
 {}
 }
 
-\newcommand{\ogre}[1][\npc{\F\N}{Ogre}]{
+\newcommand{\ogre}[1][\npc{\T\N}{\arabic{r4b} Ogres}]{
 	#1
 	\randomthree\addtocounter{age}{3}
 	\randomtwo\addtocounter{enc}{2}
 	\randomtwoB
+	\randomfourB
 \person{\arabic{age}}% STRENGTH
 {0}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1563,6 +1584,7 @@
 	\randomtwo
 	\randomtwoB
 	\addtocounter{enc}{-3}
+	\randomdozen
 \animal{\arabic{r2b}}% STRENGTH
 {-2}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1608,9 +1630,11 @@
 	\randomtwo
 	\addtocounter{enc}{1}
 	\randomtwoB
+	\randomtwoC
 	\addtocounter{r2b}{-1}
 	\randomthree
 	\randomthreeB
+	\randomthreeC
 	\randomfour
 \person{\arabic{r2}}% STRENGTH
 {0}% DEXTERITY 
@@ -1620,8 +1644,8 @@
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r2}}% COMBAT
-{Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3b}, \else \fi Necromancy 4}}% SKILLS
+{Aggression 2, Projectiles \arabic{r2c}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2c}, Vigilance \arabic{r2}
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3c}, \else \fi Necromancy 4}}% SKILLS
 {\ifodd\thepage%
 	\Dagger%
 \else%
@@ -1642,6 +1666,7 @@ mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIP
 	\randomtwoB
 	\randomthree
 	\addtocounter{age}{-2}
+	\randomthreeC
 	\randomfour
 \person{\arabic{r2}}% STRENGTH
 {\arabic{age}}% DEXTERITY 
@@ -1651,7 +1676,7 @@ mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIP
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r2}}% AGGRESSION
-{Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2b}, Vigilance \arabic{r2}
+{Aggression 2, Projectiles \arabic{r2}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r3c}, Vigilance \arabic{r2}
 \Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}, \else \fi Necromancy 5}}% SKILLS
 {\ifodd\thechapter%
 	\Dagger, %
@@ -1868,7 +1893,8 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2}, Ether Lore \arabic{r2b}, Tactics \arabic{r3b}
 \Path{Divinity}{\addtocounter{age}{2} Force \arabic{age}, Illusion \arabic{r3}, Invocation \arabic{r4}, Conjuration \arabic{enc}, \addtocounter{r3b}{2}}}% SKILLS
 {None}% ABILITIES
-{\addtocounter{sp}{20}\mana{8}\addtocounter{xpbonus}{4}}
+{\setcounter{gold}{\value{age}}\multiply\value{gold} by 3\addtocounter{gold}{\value{int}}\setcounter{sp}{\value{gold}}%
+\mana{8}\lockedmana{\value{age}}\addtocounter{xpbonus}{4}}
 }
 
 \newcommand{\watcher}[1][\npc{\A}{Watcher}]{
