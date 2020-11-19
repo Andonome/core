@@ -1138,6 +1138,7 @@
 \newcommand{\humanbard}[1][\npc{\F}{Bard}]{
 	#1
 	\randomtwo
+	\addtocounter{enc}{1}
 	\randomthree
 	\addtocounter{age}{-1}
 	\randomthreeB
@@ -1151,10 +1152,22 @@
 {\arabic{r3}}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Academics \ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Empathy \arabic{r3}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi%
-\ifnumcomp{\value{r12}}{>}{9}{%
-\Path{Song}{\ifodd\value{r3} Fate \else Aldaron \fi\arabic{r3b}, \ifodd\value{r3b} Enchantment \arabic{r4}, \fi \ifodd\thepage Illusion \arabic{r3b}\fi} }{}
-}% SKILLS
+{Academics \ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Empathy \arabic{enc}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi%
+
+\ifnum\value{r3}>2
+	\ifnum\value{r12}>6
+		\Path{Alchemy}{\ifodd\value{r3b}%
+			Enchantment%
+		\else%
+			Aldaron%
+		\fi \arabic{r4}, \ifodd\value{r12}%
+			Fate \arabic{enc}%
+		\fi \ifodd\value{gold}%
+			\addtocounter{r2b}{1} Illusion \arabic{r2b}%
+		\fi}
+	\fi
+\else
+\fi}% SKILLS
 {\ifodd\value{r3}\rapier%
 	\else%
 	\Dagger%
