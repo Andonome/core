@@ -201,13 +201,20 @@ bookmarks=true]%
 \setcounter{r2}{1}
 \newcounter{r2b}
 \setcounter{r2}{2}
+\newcounter{r2c}
+\setcounter{r2c}{2}
 \newcounter{r3}
-\setcounter{r3}{2}
-\newcounter{r3b}
 \setcounter{r3}{\month}
 \divide\value{r3} by 4
+\newcounter{r3b}
+\setcounter{r3b}{2}
+\newcounter{r3c}
+\setcounter{r3c}{3}
 \newcounter{r4}
 \setcounter{r4}{\day}
+\newcounter{r4b}
+\setcounter{r4b}{\day}
+\addtocounter{r4b}{1}
 \newcounter{r12}
 \setcounter{r12}{\month}
 \newcounter{enc}
@@ -327,8 +334,14 @@ Roll & Result \\
 }
 
 \newcommand{\randomtwoB}{
-	\ifodd\value{r3b}\setcounter{r2b}{1}\else\setcounter{r2b}{2}\fi
-	\randomthreeB
+	\ifodd\value{r3b}\setcounter{r2b}{1}\else\setcounter{r2b}{2}\fi%
+}
+
+\newcommand{\randomtwoC}{
+	\ifnum\value{r2c}>2%
+	\setcounter{r2c}{1}\else%
+	\addtocounter{r2c}{1}%
+	\fi%
 }
 
 \newcommand{\randomthree}{%
@@ -341,9 +354,23 @@ Roll & Result \\
 	\ifnumcomp{\value{r3b}}{>}{2}{\setcounter{r3b}{1}}{\addtocounter{r3b}{1}}
 }
 
+\newcommand{\randomthreeC}{
+	\ifnum\value{r3c}>3%
+	\setcounter{r3c}{1}\else%
+	\addtocounter{r3c}{1}%
+	\fi%
+}
+
 \newcommand{\randomfour}{%
 	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}%
 	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}\setcounter{track}{\value{r4}}%
+}
+
+\newcommand{\randomfourB}{%
+	\ifnum\value{r4b}>3\setcounter{r4b}{1}%
+	\else%
+	\addtocounter{r4b}{1}%
+	\fi%
 }
 
 \newcommand{\randomdozen}{%
