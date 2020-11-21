@@ -56,13 +56,11 @@
 \startcontents[Combat]
 
 \iftoggle{verbose}{
-\section{Overview}
-
 \begin{multicols}{2}
 
-\printcontents[Combat]{}{1}[2]{}
-
-\columnbreak
+\begin{tcolorbox}[title=Overview]
+	\printcontents[Combat]{}{1}[1]{}
+\end{tcolorbox}
 
 \noindent
 These life and death rolls are handled somewhat differently from other tasks. Let's start with an overview of the basic features then go over them again in more detail. 
@@ -1308,6 +1306,9 @@ If a character's Evasion score ever becomes negative, it applies to the Strike s
 \end{multicols}
 
 \iftoggle{verbose}{
+
+\pagebreak
+
 \section{Combat Summary}\index{Combat Summary}
 
 \begin{multicols}{2}
