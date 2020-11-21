@@ -74,8 +74,10 @@ The animals targeted by this spell do not become any smarter, unless the enhance
 
 \iftoggle{verbose}{
 
+\begin{figure*}[t]
 	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/flashing_light.jpg}
 	\label{roch:light}
+\end{figure*}
 }{}
 
 The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
@@ -589,7 +591,7 @@ This healing should be understood as a retroactive blessing from the gods, indic
 The spell must be cast within the same scene as the target lost their last \gls{hp}.
 
 If cast on a member of the undead, the target loses $2D6$ \gls{hp} plus the caster's Intelligence Bonus.
-No roll is made, and no protection can be given from \gls{fp} or \gls{SP}.
+No roll is made, and no protection can be given from \glspl{fp} or \glspl{SP}.
 
 \spell{Mana Lake}{Continuous}{Empathy}{Create a font of mana}\\
 The priest spends a Story Point to sanctify an area, creating a mana lake.
@@ -773,8 +775,10 @@ Illusions are typically delicate, and even a single \gls{hp}'s damage will dissi
 \spelllevel
 
 \iftoggle{verbose}{
+\begin{figure*}[t]
 	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/illusion_trogdor.jpg}
 	\label{roch:trogdor}
+\end{figure*}
 }{}
 
 \spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}\\
@@ -977,6 +981,17 @@ By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
 
 \begin{multicols}{2}
 
+The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move themselves or others along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as griffins, while smaller, lighter people find it easier to take on the form of birds.  Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
+
+Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of.
+Many conjecture that the face is a facet of one's soul showing in the world.
+A ginger person transformed into a cat would become a ginger cat.
+A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
+Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the Polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
+
+Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.
+The undead are completely immune to the Polymorph sphere.
+
 	\begin{tcolorbox}[arc=1mm,tabularx={XXX}]
 
 	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} \\\hline
@@ -1018,17 +1033,6 @@ By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
 	Wolf & -2 & +1 \\
 
 \end{tcolorbox}
-
-The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move themselves or others along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as griffins, while smaller, lighter people find it easier to take on the form of birds.  Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
-
-Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of.
-Many conjecture that the face is a facet of one's soul showing in the world.
-A ginger person transformed into a cat would become a ginger cat.
-A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
-Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the Polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
-
-Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.
-The undead are completely immune to the Polymorph sphere.
 
 As Polymorph changes people's form it also changes Strength and therefore \gls{hp} maximums.
 All \gls{hp} lost to Damage remain as lost \gls{hp} after transformation but might not have any effect.
@@ -1125,9 +1129,6 @@ It uses the Skill associated with the creature the target will become, so turnin
 
 \spell{Race Change}{Continuous}{Medicine}{Turn any humanoid into another race, \gls{tn} 10}
 
-\sidejpg{Roch_Hercka/polymorph.jpg}{
-\label{roch:polymorph}}
-
 \noindent
 The basic Polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
 When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
@@ -1136,6 +1137,11 @@ Once the change has applied, the original racial Bonuses are discarded, and the 
 Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
 
 Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
+
+\iftoggle{verbose}{
+	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/polymorph.jpg}
+\label{roch:polymorph}
+}{}
 
 Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
 
