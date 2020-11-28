@@ -9,7 +9,11 @@ Gits available on github and gitlab.
 
 -->
 
-| [Download][core download] | [Character Sheet][cs] | [Wiki][wiki] | [Raise an Issue][issuesEmail] |
+|             Downloads          |         Questions             |
+|:-------------------------------|:------------------------------|
+| [Core Book][core download]     | [Wiki][wiki]                  | 
+| [Character Sheet][cs]          | [Raise an Issue][issuesEmail] |
+| [Reference Version][reference] | [Issues Board][board]         |
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
@@ -189,6 +193,7 @@ If you want to get involved, there are a number of ways to contribute:
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
 [core download]: https://belgradecats.tk/pdfs/bind.pdf
+[reference]: https://belgradecats.tk/pdfs/bind_ref.pdf
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://belgradecats.tk/pdfs/aif.pdf
 [cs]: https://gitlab.com/bindrpg/core/uploads/3bfd8ec119974c371484dc9f003650d7/BIND_CS.ods
