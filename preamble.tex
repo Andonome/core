@@ -236,8 +236,8 @@ bookmarks=true]%
 \newcommand{\currentsphere}{magic}
 \newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
 \newcommand{\spelllevel}{\addtocounter{spelllevel}{1}%
-	\subsection{\currentsphere~ Level \arabic{spelllevel}}\noindent}
-\newcommand{\enhancement}[3]{\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}}
+	\subsection{\currentsphere~ Level \arabic{spelllevel}}}
+\newcommand{\enhancement}[3]{\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}\index{Enhancement!#2}}
 \newcommand{\magicitem}[7]{\vspace{2em}\needspace{4em}\noindent\textbf{#1}
 \index{Magical Item!#1}
 
@@ -255,6 +255,7 @@ bookmarks=true]%
 \newcommand{\manalake}[8]{\subsection{#1 (Level #8)}
 
 	\textit{Spells: #2, }\textit{Path: #3, }\textit{Duration: #4, }\textit{Type: #5, }\textit{Potence: #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
+	\index{Mana Lakes!#1}
 	\vspace{.3em}
 }
 
@@ -307,7 +308,7 @@ Roll & Result \\
 
 \newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
-\newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{#2}}
+\newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{Antagonists!#2}}
 
 \newcounter{random}
 \setcounter{random}{1}
