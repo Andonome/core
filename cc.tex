@@ -4,17 +4,19 @@
 \begin{multicols}{2}
 
 \noindent
+\iftoggle{verbose}{%
 Over this chapter, you can learn to craft a \gls{pc}.
 Either pick a race and an Attribute, or trust to fate and roll up random Traits, then interpret the result.
 
 Once you think you know what kind of character lies on your character sheet, you can spend 50 \glspl{xp} and gain some Skills.
-
+}{}%
 Characters are defined by \glspl{trait}, and the two main types are \glspl{attribute} and \glspl{skill}.
-Attributes are innate Traits, deeply tied to who the \gls{pc} is.
-The Physical \glspl{attribute} used here are \textit{Strength, Dexterity, and Speed}, and the Mental Attributes are \textit{Intelligence, Wits, and Charisma}.
+Attributes are innate \glspl{trait}, deeply tied to who the \gls{pc} is.
+The Physical \glspl{attribute} used here are \textit{Strength, Dexterity, and Speed}, and the Mental \glspl{attribute} are \textit{Intelligence, Wits, and Charisma}.
 \glspl{skill}, meanwhile, are things the \gls{pc} learns.
 
-Typically, players take actions by rolling two six-sided dice (``$2D6$'') and adding a Trait and Skill to the result.  If you roll high enough, you succeed.
+Typically, players take actions by rolling two six-sided dice (``$2D6$'') and adding a \gls{trait} and a \gls{skill} to the result.
+If you roll high enough, you succeed.
 Otherwise, you fail.
 
 \iftoggle{verbose}{
@@ -73,7 +75,6 @@ Character creation is random by default -- it helps new players get started quic
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans.
 Whichever race you've landed on, go and have a look at chapter \ref{races}.
 You will also find suggestions on why someone of that race might be adventuring.
-}{}
 
 Either print out a character sheet or make some paper notes as we go.
 We begin by randomly assigning your race.
@@ -83,14 +84,44 @@ What do the Attribute Bonuses say about them?
 You will later be deciding on what kind of Skills and training will compliment the character, but the basics will all be random.
 Grab a pair of D6's and compare the result to the following chart.
 
-\iftoggle{verbose}{
 I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
-}{}
 
 Next up, time to roll the Attributes -- Strength, Dexterity, et c..
 Roll $2D6$ for each of the Bonuses (or negatives).
 Continue rolling until all 6 Attributes have a value.
 Your race will give you modifiers to these results.
+
+}{
+
+Roll $2D6$ on the chart to produce a random race.
+The racial modifiers will add to the Attributes you roll later.
+Each race also has a special ability or two.
+
+\paragraph{Dwarves}
+are taciturn, and so cannot spend Story Points within the first two sessions.
+Their tenacity also allows them to endure 2 more Fatigue Points than other races before penalties accrue.
+Dwarves suffer only half the usual Damage of Fatigue Points from poisons (but not venom).
+
+\paragraph{Elves}
+suffer no Fatigue Points from natural weather conditions such as heavy sunlight or snow.
+Their long lives also grant them an additional Story Point.
+
+\paragraph{Gnolls}
+are naturally quite aggressive, so they begin with the \textit{Aggression} Skill at +2.
+
+\paragraph{Gnomes}
+are famously attentive when they can be bothered, but often can't be.
+When they perform \gls{restingaction}, they do not turn one die to a `6'.
+Instead, they roll $2D6+3$ for any \gls{restingaction}.
+
+Gnomes don't go out much, so they begin with only 3 Story Points.
+However, whenever they spend their last Story Point, they may flip a coin; if they win then two Story Points return.
+
+\paragraph{Humans}
+tend to travel a lot more than the other races, so they begin with an additional Story Point.
+They also suffer only half the usual Fatigue from travel.
+
+}
 
 \end{multicols}
 
@@ -246,8 +277,8 @@ Skills define what a character does with most of their time -- what they are pra
 They are always paired with an Attribute to give a bonus to rolls.
 We'll go over how which Skills are available below.\footnote{page \pageref{skills}.}
 For now, just jot down a few of the Skills you think your character should have so you can see how they work with the basic actions in the next chapter.
-}{}
-
+}{
+\noindent}
 A basic Skill grants a +1 bonus to actions where it is used.
 This is the level of a very basic worker in that field -- those just finishing an apprenticeship in Crafts would have the basic Skill level.
 Advanced Skills are those with a +2 bonus, indicating an established member of the field.

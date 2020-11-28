@@ -684,6 +684,7 @@ This might include a sword, dagger, a donkey, or anything else worth 10 \gls{sp}
 The player can decide to replace any of these items with a generic item called \gls{adventuringequipment}.
 If a player has an \gls{adventuringequipment} item, they can decided to describe exactly what it is at any point later in the game.
 
+\iftoggle{verbose}{
 \begin{exampletext}
 
 	Out in the forest, the group need some fire starting equipment.
@@ -693,8 +694,9 @@ If a player has an \gls{adventuringequipment} item, they can decided to describe
 	Meanwhile, Hugi is out of rations, so his player marks his last piece of \gls{adventuringequipment} as a day's rations.
 
 \end{exampletext}
+}{}
 
-\gls{adventuringequipment} can include any of the following items:
+\Gls{adventuringequipment} can include any of the following items:
 
 \begin{itemize}
 
@@ -782,7 +784,10 @@ When gallivanting through open plains one \gls{area} might be a copse of trees, 
 
 The final unit is a `region'.
 Regions encompasses a full forest, a town, or a collection of villages.
-Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.\footnote{If all this looks like a repugnant abstraction, just set a square to two yards, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
+Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.%
+\iftoggle{verbose}{%
+\footnote{If all this looks like a repugnant abstraction, just set a square to two yards, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
+}{}
 
 \end{multicols}
 
