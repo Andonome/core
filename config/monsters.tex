@@ -1371,6 +1371,24 @@
 {}
 }
 
+\newcommand{\nurarat}[1][\npc{\A\N}{\arabic{r12} Nura Rats}]{
+	#1
+	\randomtwo
+	\addtocounter{enc}{-1}
+	\randomtwoB
+	\randomthree
+	\randomthreeB
+\animal{\arabic{enc}}% STRENGTH
+{0}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{\arabic{r2}}% WITS
+{1}% DR
+{\arabic{r3}}% AGGRESSION
+{Athletics \arabic{r2b}, Survival \arabic{r2}, Vigilance \arabic{r2b}}% SKILLS
+{\teeth, \quadraped}% ABILITIES
+{}
+}
+
 \newcommand{\nurawolf}[1][\npc{\A\N}{\arabic{r12} Nura Wolves}]{
 	#1
 	\randomtwo
@@ -1453,6 +1471,7 @@
 	\randomthree
 	\addtocounter{age}{-1}
 	\randomthreeB
+	\randomfour
 \person{-2}% STRENGTH
 {\arabic{r3}}% DEXTERITY 
 {1}% SPEED
