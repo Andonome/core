@@ -12,6 +12,7 @@ compile_pdf:
     - mv CS/resources.pdf .
   only:
     - master
+    - run
   artifacts:
     paths:
       - bind.pdf
