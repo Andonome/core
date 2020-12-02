@@ -10,8 +10,7 @@ compile_pdf:
     - pdflatex resources.tex
     - cd ..
     - mv CS/resources.pdf .
-  except:
-    - dev
+  only:
     - master
   artifacts:
     paths:
