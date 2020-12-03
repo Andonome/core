@@ -121,14 +121,25 @@ If the caster can extend the range, then the spell can travel any distance, alth
 
 \spell{Wind Blast}{Instant}{Survival}{Push enemies back, lowering their Initiative}\\
 Wind can also be made to blow forward in a blast in front of the mage.
-The blast spans out, affecting \arabic{spelllevel} squares plus the mage's Wits Bonus.
-Each person affected instantly loses 2 Initiative points plus the caster's Intelligence Bonus, minus the targets' Strength Bonus (minimum 1).
-The wind can emanate from any location in range and stop at any location in range but any wind coming from behind people will not be effective in slowing them down.
-Those affected by such a wind cannot move until their Initiative comes up again, i.e. movement is no longer a Quick Action.
-Finally, the wind moves the target back 2 squares plus the caster's Intelligence Bonus minus their Strength Bonus, since larger, heavier creatures are more difficult to move, while smaller creatures (with a negative Strength) move farther.
+The blast spans out, affecting a number of squares equal to the spell's level plus the mage's Wits Bonus.
+The target instantly loses a number of Initiative points equal to the spell's level plus the caster's Intelligence Bonus.
+This spell can be dodged like any other missile.%
+\footnote{See page \pageref{edgy} for Keeping Edgy to dodge missiles.}
 
-For example, Darren the druid blasts out a scathing wind against a row of goblins -- his Wits of +2 means he affects \setcounter{list}{2}\addtocounter{list}{\value{spelllevel}}\arabic{list} squares; since his Intelligence is +1, each target would lose each \setcounter{enc}{1}\addtocounter{enc}{\value{spelllevel}}\arabic{enc} points of Initiative, however the goblins' Strength Bonus is -1, so they finally lose \addtocounter{enc}{1}\arabic{enc} points and cannot move until their next Initiative action.
-Each moves back (in the direction of the wind) \arabic{enc} squares minus their Strength Bonus -- again, since this is -1 they move back \arabic{enc} squares.
+\iftoggle{verbose}{%
+Those affected by the spell cannot take Quick Actions again, except Evasion, until their Initiative comes up; so no moving, or speaking is possible until they regain their balance.}{%
+Targets cannot take Quick Actions again except Evasion until their Initiative comes up.
+}%
+\iftoggle{verbose}{%
+Finally, the wind moves the target back a number of squares equal to the spell's level plus the caster's Intelligence Bonus minus their Strength Bonus, since larger, heavier creatures are more difficult to move, while smaller creatures (with a negative Strength) move farther.
+
+For example, an elf with Intelligence +1, casts a \textit{Wide Air Blast} at second level, on two goblins and an ogre.
+Each of them loses 3 Initiative points.
+Then the goblins, with Strength -1, are moved back 4 squares.
+The ogre has Strength +5, so he's unmoved, but still cannot speak or move until his Initiative comes up again.
+}{
+The wind moves all targets away from the caster a number of squares equal to the spell's level, plus the caster's Intelligence Bonus, minus the target's Strength Bonus.
+}
 
 \spelllevel
 
