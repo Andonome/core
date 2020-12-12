@@ -768,8 +768,9 @@
 	\ifnum\value{age}>7\mana{8}\else\mana{6}\fi\gdef\armourtype{C}}
 	}
 
-\newcommand{\dwarventrader}[1][\npc{\M}{Dwarven Trader}]{
+\newcommand{\dwarventrader}[1][\npc{\M}{\arabic{r12} Dwarven Traders}]{
 	#1
+	\randomdozen
 	\randomthree\randomtwo\addtocounter{enc}{-1}
 	\person{\arabic{enc}}% STRENGTH
 	{1}% DEXTERITY
