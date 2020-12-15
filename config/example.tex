@@ -1,6 +1,7 @@
 \documentclass[a4paper,openany]{book}
 \usepackage{bind}
 \usepackage{monsters}
+\usepackage{lipsum}
 
 \date{\today}
 
@@ -8,11 +9,15 @@
 
 \chapter{How to Make Monsters}
 
+\section{Introduction}
+
 \begin{multicols}{2}
+
+\subsection{All about Dragons}
 
 \begin{boxtext}
 
-As you embark upon your first adventure, you summon your first monster with a simple backstroke.  You write down {\tt \textbackslash dragon}, and behold!
+As you embark upon your first adventure, you summon your first monster with a simple backstroke.  You write down {\tt {\tt\textbackslash dragon}}, and behold!
 
 \end{boxtext}
 
@@ -23,17 +28,25 @@ The next one might look like this:
 
 \dragon
 
-If you find it hard to tell the difference between all the dragons, you can give them names in square brackets with the \textbackslash npc command, like this:
+If you find it hard to tell the difference between all the dragons, you can give them names in square brackets with the {\tt\textbackslash NPC command}, like this:
 
-\textbackslash dragon[\textbackslash npc\{\textbackslash M\}\{Bob the dragon\}] 
+{\tt\textbackslash dragon[\textbackslash npc\{\textbackslash M\}\{Bob the dragon\}] }
 
 Which then makes a male dragon called ``Bob'':
 
 \dragon[\npc{\M}{Bob the Dragon}]
 
-The first field can also indicate a female with an \textbackslash F (\F), a team of people with a \textbackslash T (\T), or undead with \textbackslash D (\D).
+The first field can also indicate a female with an {\tt\textbackslash F} (\F), a team of people with a {\tt\textbackslash T} (\T), or undead with \textbackslash D (\D).
 
-With a little study, you can summon dozens of monsters, including \textbackslash human fighter, \textbackslash basilisk, and \textbackslash ghoul.
+With a little study, you can summon dozens of monsters, including {\tt\textbackslash human fighter}, {\tt\textbackslash basilisk}, and {\tt \textbackslash ghoul}.
+
+\subsection{Random Text}
+
+\lipsum[7]
+
+\subsection{And further more\ldots}
+
+\lipsum[10]
 
 \end{multicols}
 
@@ -155,7 +168,11 @@ With a little study, you can summon dozens of monsters, including \textbackslash
 
 \nurawolf
 
+\end{multicols}
+
 \chapter{Outsiders}
+
+\begin{multicols}{2}
 
 \archmage
 
@@ -300,5 +317,15 @@ When using a bestiary chapter, the stats appear as dice rolls, rather than fixed
 \end{multicols}
 
 \settoggle{bestiarychapter}{false}
+
+\chapter{Lots of Text}
+
+\begin{multicols}{2}
+
+\noindent
+\lipsum
+
+
+\end{multicols}
 
 \end{document}
