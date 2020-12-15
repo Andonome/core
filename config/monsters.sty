@@ -1,4 +1,4 @@
-% !TeX root = main.tex
+\ProvidesPackage{monsters}
 %%%%%%%%%%%%%%%%%%%% Introduction
 % This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
 % If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
@@ -768,8 +768,9 @@
 	\ifnum\value{age}>7\mana{8}\else\mana{6}\fi\gdef\armourtype{C}}
 	}
 
-\newcommand{\dwarventrader}[1][\npc{\M}{Dwarven Trader}]{
+\newcommand{\dwarventrader}[1][\npc{\M}{\arabic{r12} Dwarven Traders}]{
 	#1
+	\randomdozen
 	\randomthree\randomtwo\addtocounter{enc}{-1}
 	\person{\arabic{enc}}% STRENGTH
 	{1}% DEXTERITY
@@ -797,7 +798,7 @@
 	{0}% DR
 	{2}% COMBAT
 	{Crafts 1, Tactics 1}% SKILLS
-	{\ifodd\value{r2}\shortsword\else\woodaxe\fi, \completeplate, \lootMedium}% EQUIPMENT
+	{\ifodd\value{r2}\woodaxe, \partialchain\else\shortsword, \partialplate\fi, \lootMedium}% EQUIPMENT
 	{\knacks{Chosen Enemy: Goblinoids}\ifodd\value{r2b}, \defender\fi}% SKILLS
 }
 

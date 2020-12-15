@@ -1,31 +1,34 @@
-\usepackage[latin1]{inputenc}
-\usepackage{stmaryrd} % For boxy Maths symbols
-\usepackage{wasysym} % for circly Maths symbols
-\usepackage{epsdice} % for dice symbols
-\usepackage{dingbat} % for curly section symbols
-\usepackage{appendix}
-\usepackage{geometry} % changes page borders
+\ProvidesPackage{bind}
+\RequirePackage{glossaries}
+\RequirePackage{glossary-mcols}
+\RequirePackage[latin1]{inputenc}
+\RequirePackage{stmaryrd} % For boxy Maths symbols
+\RequirePackage{wasysym} % for circly Maths symbols
+\RequirePackage{epsdice} % for dice symbols
+\RequirePackage{dingbat} % for curly section symbols
+\RequirePackage{appendix}
+\RequirePackage{geometry} % changes page borders
 	\geometry{margin=50pt}
-\usepackage{svg}
-\usepackage{alltt}
+\RequirePackage{svg}
+\RequirePackage{alltt}
 	\svgsetup{width=\textwidth}
-\usepackage{tabularx}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{epigraph} % part quotes
-\usepackage{makeidx}
-\usepackage[english]{babel}
-\usepackage{multicol}
+\RequirePackage{tabularx}
+\RequirePackage{wrapfig}
+\RequirePackage{float}
+\RequirePackage{epigraph} % part quotes
+\RequirePackage{makeidx}
+\RequirePackage[english]{babel}
+\RequirePackage{multicol}
 	\raggedcolumns
-\usepackage{graphicx}
-\usepackage{etoolbox}
-\usepackage{titlesec,titletoc}
-\usepackage{needspace}
-\usepackage{tikz}
+\RequirePackage{graphicx}
+\RequirePackage{etoolbox}
+\RequirePackage{titlesec,titletoc}
+\RequirePackage{needspace}
+\RequirePackage{tikz}
 	\usetikzlibrary{mindmap,trees}
-\usepackage{pifont}
-\usepackage{colortbl}
-\usepackage[poster]{tcolorbox}
+\RequirePackage{pifont}
+\RequirePackage{colortbl}
+\RequirePackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
 %\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,arc=6mm,outer arc=1mm}
 
@@ -44,7 +47,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 }
 }
 
-\usepackage[
+\RequirePackage[
 pdfstartpage=2,
 bookmarks=true]%
 {hyperref}
