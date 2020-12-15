@@ -2,8 +2,9 @@
 \RequirePackage{glossaries}
 \RequirePackage{glossary-mcols}
 \RequirePackage[latin1]{inputenc}
-\RequirePackage{auncial,rotunda} % fancy fonts
-\RequirePackage[B1,T1]{fontenc} % auncial needs B1
+\RequirePackage{chancery} % fancy fonts
+\RequirePackage{gfsartemisia-euler} % fancy fonts
+\RequirePackage[T1]{fontenc} % 
 \RequirePackage{stmaryrd} % For boxy Maths symbols
 \RequirePackage{wasysym} % for circly Maths symbols
 \RequirePackage{epsdice} % for dice symbols
@@ -93,7 +94,7 @@ bookmarks=true]%
 
 
 \newcommand{\chapnumfont}{
-	\fontsize{144}{0}
+	\fontsize{40}{0}
 	\selectfont
 }
 
@@ -130,8 +131,8 @@ bookmarks=true]%
 
 \colorlet{chapnumcol}{black!55}
 
-\newcommand{\FancyFont}{\aunclfamily}
-\newcommand{\fancyfont}{\rtndfamily}
+\newcommand{\FancyFont}{}
+\newcommand{\fancyfont}{}
 
 \titleformat{\chapter}[display]
 {\bfseries}
