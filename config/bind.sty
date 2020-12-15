@@ -2,6 +2,9 @@
 \RequirePackage{glossaries}
 \RequirePackage{glossary-mcols}
 \RequirePackage[latin1]{inputenc}
+\RequirePackage{chancery} % fancy fonts
+\RequirePackage{gfsartemisia-euler} % fancy fonts
+\RequirePackage[T1]{fontenc} % 
 \RequirePackage{stmaryrd} % For boxy Maths symbols
 \RequirePackage{wasysym} % for circly Maths symbols
 \RequirePackage{epsdice} % for dice symbols
@@ -91,8 +94,8 @@ bookmarks=true]%
 
 
 \newcommand{\chapnumfont}{
-  \fontsize{144}{0}
-  \selectfont
+	\fontsize{40}{0}
+	\selectfont
 }
 
 % change bullet points
@@ -128,23 +131,26 @@ bookmarks=true]%
 
 \colorlet{chapnumcol}{black!55}
 
+\newcommand{\FancyFont}{}
+\newcommand{\fancyfont}{}
+
 \titleformat{\chapter}[display]
 {\bfseries}
 {\begin{tikzpicture}
   \node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
-  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\huge \headingtype~~};
+  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
   \node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\thechapter}};
 \end{tikzpicture}}
 {0pt}
-{\Huge}
+{\Huge\FancyFont}
 
 \titleformat{\section}[frame]
 {\needspace{20em}\normalfont}
 {\filright
 \footnotesize
-\enspace SECTION \thesection\enspace}
+\enspace \fancyfont SECTION \thesection\enspace}
 {8pt}
-{\Large\bfseries\filcenter}
+{\Large\bfseries\filcenter\fancyfont}
 
 \titleformat{\subsection}{\needspace{10em}\center\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
 %
