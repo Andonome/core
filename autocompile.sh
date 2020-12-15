@@ -8,6 +8,7 @@
 [ ! -e main.tex ] && [ -e config/main.tex ] && \
 	cp config/main.tex . && \
 	ln -s config/autocompile.sh . && \
+	ln -s config/latexmkrc . && \
 	ln -s config/.gitignore .
 
 git gc --auto
