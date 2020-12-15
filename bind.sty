@@ -30,7 +30,7 @@
 \RequirePackage{colortbl}
 \RequirePackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
-%\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,colback=white,arc=6mm,outer arc=1mm}
+%\tcbset{enhanced, attach boxed title to top center={yshift*=-3mm},drop shadow east,callback=white,arc=6mm,outer arc=1mm}
 
 \tcbset{enhanced, drop shadow east,
 colframe=black,colbacktitle=black!5!white,
@@ -47,10 +47,28 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 }
 }
 
+\RequirePackage{xr-hyper}
 \RequirePackage[
 pdfstartpage=2,
 bookmarks=true]%
 {hyperref}
+
+%%%%%%%%%% Allow for external referencing
+
+\newcommand*{\externalReferent}[1]{
+	\newtoggle{#1}
+	\IfFileExists{../#1/main.tex}{
+		\makeatletter
+		\@addtofilelist{../#1/main.tex}
+		\@addtofilelist{../#1/main.aux}%
+		\makeatother
+		\externaldocument{../#1/main}%
+		\settoggle{#1}{true}
+	}%
+	{\typeout{No file #1.}
+	\settoggle{#1}{false}
+	}
+}
 
 
 %%%%%%%%%% Section Headers %%%%%%%%%%
