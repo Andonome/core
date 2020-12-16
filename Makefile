@@ -1,6 +1,8 @@
 filename=main
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: main.pdf main.aux
+	makeindex main.idx
+	makeglossaries main
 	pdflatex ${filename}.tex
 main.aux:
 	pdflatex ${filename}.tex
