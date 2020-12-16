@@ -10,8 +10,6 @@ main.pdf:
 	pdflatex ${filename}.tex
 resources:
 	pdflatex CS/resources.tex
-	cd ..
-	mv main.pdf bind.pdf
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
@@ -19,4 +17,4 @@ tree:
 	git subtree -P config push ../config ${branch}
 
 clean:
-	rm *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo
+	rm *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.pdf
