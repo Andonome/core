@@ -1,11 +1,11 @@
 filename=main
 branch := $(shell git rev-parse --abbrev-ref HEAD)
-output: main.pdf main.aux
+output: svg-inkscape main.pdf 
 	makeindex main.idx
 	makeglossaries main
 	pdflatex ${filename}.tex
-main.aux:
-	pdflatex ${filename}.tex
+svg-inkscape:
+	pdflatex -shell-escape ${filename}.tex
 main.pdf:
 	pdflatex ${filename}.tex
 resources:

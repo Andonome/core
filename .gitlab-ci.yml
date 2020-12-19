@@ -1,8 +1,11 @@
 compile_pdf:
   image: aergus/latex
   script:
+    - apt-get update -y
+    - apt-get install -y inkscape
     - make resources
     - make
+    - mv main.pdf bind.pdf
   only:
     - master
     - run
