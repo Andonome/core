@@ -4,3 +4,6 @@
 
 ![Vitals Shot by Roch Hercka](Roch_Hercka/vitals_shot.jpg)
 
+
+
+![Escape by Vladimir Arabadzhi](Vladimir_Arabadzhi/escape.svg)
