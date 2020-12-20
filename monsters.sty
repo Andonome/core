@@ -935,6 +935,38 @@
 {\mana{2}}
 }
 
+\newcommand{\gnomishsoldier}[1][\npc{\M}{Gnomish Soldier}]{
+	#1
+	\randomtwo
+	\addtocounter{enc}{-2}
+	\randomtwoB
+	\randomtwoC
+	\addtocounter{r2b}{-1}
+	\randomthree
+	\randomthreeB
+\person{\arabic{enc}}% STRENGTH
+{\arabic{r2}}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{{\arabic{age}}% INTELLIGENCE
+{\arabic{r2}}% WITS
+{\arabic{r2b}}}% CHARISMA
+{0}% DR
+{\arabic{r2}}% COMBAT
+{\ifnum\value{enc}<0%
+	Projectiles \arabic{r2c}
+\fi%
+Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\value{page} \else Larceny \arabic{r2c}, \fi Stealth \arabic{r2c}
+}% SKILLS
+{\ifnum\value{enc}=0%
+	\shortsword
+\else%
+	Shortbow, \Dagger%
+\fi%
+, \lootMedium
+}% EQUIPMENT
+{}
+}
+
 \newcommand{\gnomishillusionist}[1][\npc{\M}{Gnomish Illusionist}]{
 	#1
 	\randomtwo
