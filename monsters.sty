@@ -221,6 +221,12 @@
 
 % ARMOUR
 
+\newcommand{\partialelvish}{partial leather armour%
+	\ifnumcomp{\value{dr}}{>}{2}%
+	{\addtocounter{dr}{1}}%
+	{\divide\value{dr} by 2 \addtocounter{dr}{2}}%
+}
+
 \newcommand{\partialleather}{partial leather armour%
 	\ifnumcomp{\value{dr}}{>}{3}%
 	{\addtocounter{dr}{2}}%
@@ -961,6 +967,9 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 	\shortsword
 \else%
 	Shortbow, \Dagger%
+\fi%
+\ifnum\value{r3c}=2%
+	, \partialelvish%
 \fi%
 , \lootMedium
 }% EQUIPMENT
