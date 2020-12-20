@@ -1417,6 +1417,7 @@
 	\addtocounter{r2b}{-2}
 	\addtocounter{enc}{1}
 	\randomdozen
+	\randomfourB
 \person{\arabic{r2b}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1428,7 +1429,19 @@
 {Aggression 2, Projectiles \arabic{r2}, Athletics 1, Deceit 1, Stealth \arabic{r3}, \ifodd\value{r4}Tactics \arabic{r2}\fi%
 \ifodd\value{r3} \else\knacks{\perfectsneakattack}\fi%
 }% SKILLS
-{\ifodd\value{r2}\woodaxe\else\javelin, dagger\fi}% EQUIPMENT
+{\ifodd\value{r2}%
+	\woodaxe%
+\else%
+	\ifodd\value{r12}%
+		\javelin, dagger%
+	\else%
+		\Dagger%
+	\fi%
+\fi%
+\ifnum\value{r4b}=4%
+	, lock picking set
+\fi%
+.}% EQUIPMENT
 {}
 }
 
