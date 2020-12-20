@@ -16,7 +16,7 @@
 \newcommand{\lootMedium}{%
 \iftoggle{bestiarychapter}{%
 \ifodd\value{r2}$3D6$\else$2D6$\fi sp}{%
-\setcounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
+\addtocounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
 \ifnum\value{gold}<4%
 	\setcounter{gold}{7}\fi%
 \arabic{gold} sp}%
@@ -913,6 +913,7 @@
 	\randomtwo
 	\addtocounter{enc}{-2}
 	\randomtwoB
+	\randomthreeB
 \person{-2}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -925,7 +926,12 @@
 \ifodd\value{page}
 	\Path{Alchemy}{Illusion \arabic{r2}}
 \fi}% SKILLS
-{\Dagger, \lootMedium}% EQUIPMENT
+{\ifodd\value{r3}%
+	\Dagger,
+\else%
+	\lootMedium%
+\fi%
+}% EQUIPMENT
 {\mana{2}}
 }
 
