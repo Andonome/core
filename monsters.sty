@@ -550,16 +550,17 @@
 	\ent{Abilities:} & #1 
 	}
 
-	\newcommand{\claws}{
-		Claws (+1 Damage) \addtocounter{str}{1}
-		}
+\newcommand{\claws}{
+	Claws (+1 Damage) \addtocounter{str}{1}
+	}
 
-\newcommand{\quadraped}{
-	Quadraped (double movement)
+\newcommand{\quadraped}{%
+	Quadraped (double movement)%
 }
 
-	\newcommand{\teeth}{Teeth (+1 Damage after grapple) \addtocounter{str}{1}
-		}
+\newcommand{\teeth}{%
+	Teeth (+1 Damage after grapple)\addtocounter{str}{1}%
+}
 
 	\newcommand{\web}{
 		\setcounter{track}{6}\addtocounter{track}{\value{str}}
