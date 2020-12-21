@@ -1617,7 +1617,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {}
 }
 
-\newcommand{\ogre}[1][\npc{\T\N}{\addtocounter{rb4}{1}\arabic{r4b} Ogres}]{
+\newcommand{\ogre}[1][\npc{\T\N}{\addtocounter{r4b}{1}\arabic{r4b} Ogres}]{
 	#1
 	\randomthree\addtocounter{age}{3}
 	\randomtwo\addtocounter{enc}{2}
@@ -1642,6 +1642,35 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 	\fi
 \fi
 \ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}% EQUIPMENT
+{}
+}
+
+\newcommand{\deepogre}[1][\npc{\T\N}{\addtocounter{r4b}{1}\arabic{r4b} Ogres}]{
+	#1
+	\randomthree\addtocounter{age}{3}
+	\randomtwo\addtocounter{enc}{2}
+	\randomtwoB
+	\randomthreeC
+	\randomfourB
+\person{\arabic{age}}% STRENGTH
+{0}% DEXTERITY 
+{\arabic{enc}}% SPEED
+{{-3}% INTELLIGENCE
+{-1}% WITS
+{-4}}% CHARISMA
+{0}% DR
+{\arabic{r2b}}% COMBAT
+{\ifodd\value{r2c}%
+	Beast Ken 
+\else%
+	Vigilance 
+\fi\arabic{r2}}% SKILLS
+{\ifodd\value{r3c}
+	Nothing.
+\else
+	\greatclub
+\fi
+}% EQUIPMENT
 {}
 }
 
