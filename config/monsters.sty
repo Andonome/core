@@ -16,7 +16,7 @@
 \newcommand{\lootMedium}{%
 \iftoggle{bestiarychapter}{%
 \ifodd\value{r2}$3D6$\else$2D6$\fi sp}{%
-\setcounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
+\addtocounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
 \ifnum\value{gold}<4%
 	\setcounter{gold}{7}\fi%
 \arabic{gold} sp}%
@@ -220,6 +220,12 @@
 \newcommand{\bucklar}{\addtocounter{dex}{1}bucklar shield}
 
 % ARMOUR
+
+\newcommand{\partialelvish}{partial leather armour%
+	\ifnumcomp{\value{dr}}{>}{2}%
+	{\addtocounter{dr}{1}}%
+	{\divide\value{dr} by 2 \addtocounter{dr}{2}}%
+}
 
 \newcommand{\partialleather}{partial leather armour%
 	\ifnumcomp{\value{dr}}{>}{3}%
@@ -550,16 +556,17 @@
 	\ent{Abilities:} & #1 
 	}
 
-	\newcommand{\claws}{
-		Claws (+1 Damage) \addtocounter{str}{1}
-		}
+\newcommand{\claws}{
+	Claws (+1 Damage) \addtocounter{str}{1}
+	}
 
-\newcommand{\quadraped}{
-	Quadraped (double movement)
+\newcommand{\quadraped}{%
+	Quadraped (double movement)%
 }
 
-	\newcommand{\teeth}{Teeth (+1 Damage after grapple) \addtocounter{str}{1}
-		}
+\newcommand{\teeth}{%
+	Teeth (+1 Damage after grapple)\addtocounter{str}{1}%
+}
 
 	\newcommand{\web}{
 		\setcounter{track}{6}\addtocounter{track}{\value{str}}
@@ -912,6 +919,7 @@
 	\randomtwo
 	\addtocounter{enc}{-2}
 	\randomtwoB
+	\randomthreeB
 \person{-2}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -924,8 +932,48 @@
 \ifodd\value{page}
 	\Path{Alchemy}{Illusion \arabic{r2}}
 \fi}% SKILLS
-{\Dagger, \lootMedium}% EQUIPMENT
+{\ifodd\value{r3}%
+	\Dagger,
+\else%
+	\lootMedium%
+\fi%
+}% EQUIPMENT
 {\mana{2}}
+}
+
+\newcommand{\gnomishsoldier}[1][\npc{\M}{Gnomish Soldier}]{
+	#1
+	\randomtwo
+	\addtocounter{enc}{-2}
+	\randomtwoB
+	\randomtwoC
+	\addtocounter{r2b}{-1}
+	\randomthree
+	\randomthreeB
+\person{\arabic{enc}}% STRENGTH
+{\arabic{r2}}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{{\arabic{age}}% INTELLIGENCE
+{\arabic{r2}}% WITS
+{\arabic{r2b}}}% CHARISMA
+{0}% DR
+{\arabic{r2}}% COMBAT
+{\ifnum\value{enc}<0%
+	Projectiles \arabic{r2c}, 
+\fi%
+Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\value{page} \else Larceny \arabic{r2c}, \fi Stealth \arabic{r2c}
+}% SKILLS
+{\ifnum\value{enc}=0%
+	\shortsword
+\else%
+	Shortbow, \Dagger%
+\fi%
+\ifnum\value{r3c}=2%
+	, \partialelvish%
+\fi%
+, \lootMedium
+}% EQUIPMENT
+{}
 }
 
 \newcommand{\gnomishillusionist}[1][\npc{\M}{Gnomish Illusionist}]{
@@ -1416,6 +1464,7 @@
 	\addtocounter{r2b}{-2}
 	\addtocounter{enc}{1}
 	\randomdozen
+	\randomfourB
 \person{\arabic{r2b}}% STRENGTH
 {\arabic{r2}}% DEXTERITY 
 {\arabic{enc}}% SPEED
@@ -1427,7 +1476,19 @@
 {Aggression 2, Projectiles \arabic{r2}, Athletics 1, Deceit 1, Stealth \arabic{r3}, \ifodd\value{r4}Tactics \arabic{r2}\fi%
 \ifodd\value{r3} \else\knacks{\perfectsneakattack}\fi%
 }% SKILLS
-{\ifodd\value{r2}\woodaxe\else\javelin, dagger\fi}% EQUIPMENT
+{\ifodd\value{r2}%
+	\woodaxe%
+\else%
+	\ifodd\value{r12}%
+		\javelin, dagger%
+	\else%
+		\Dagger%
+	\fi%
+\fi%
+\ifnum\value{r4b}=4%
+	, lock picking set
+\fi%
+.}% EQUIPMENT
 {}
 }
 
@@ -1556,7 +1617,7 @@
 {}
 }
 
-\newcommand{\ogre}[1][\npc{\T\N}{\arabic{r4b} Ogres}]{
+\newcommand{\ogre}[1][\npc{\T\N}{\addtocounter{r4b}{1}\arabic{r4b} Ogres}]{
 	#1
 	\randomthree\addtocounter{age}{3}
 	\randomtwo\addtocounter{enc}{2}
@@ -1581,6 +1642,35 @@
 	\fi
 \fi
 \ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}% EQUIPMENT
+{}
+}
+
+\newcommand{\deepogre}[1][\npc{\T\N}{\addtocounter{r4b}{1}\arabic{r4b} Ogres}]{
+	#1
+	\randomthree\addtocounter{age}{3}
+	\randomtwo\addtocounter{enc}{2}
+	\randomtwoB
+	\randomthreeC
+	\randomfourB
+\person{\arabic{age}}% STRENGTH
+{0}% DEXTERITY 
+{\arabic{enc}}% SPEED
+{{-3}% INTELLIGENCE
+{-1}% WITS
+{-4}}% CHARISMA
+{0}% DR
+{\arabic{r2b}}% COMBAT
+{\ifodd\value{r2c}%
+	Beast Ken 
+\else%
+	Vigilance 
+\fi\arabic{r2}}% SKILLS
+{\ifodd\value{r3c}
+	Nothing.
+\else
+	\greatclub
+\fi
+}% EQUIPMENT
 {}
 }
 
@@ -1750,6 +1840,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 
 \newcommand{\jelly}[1][\npc{\A}{\ifnum\value{r4}>3 Black\else \ifnum\value{r4}>2 Red \else \ifnum\value{r4}>1 Brown\else Invisible\fi\fi\fi~ Ooze}]{
 	#1
+	\randomfour
 	\randomfour
 	\randomfour
 	\addtocounter{track}{2}
