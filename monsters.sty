@@ -1617,7 +1617,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {}
 }
 
-\newcommand{\ogre}[1][\npc{\T\N}{\arabic{r4b} Ogres}]{
+\newcommand{\ogre}[1][\npc{\T\N}{\addtocounter{rb4}{1}\arabic{r4b} Ogres}]{
 	#1
 	\randomthree\addtocounter{age}{3}
 	\randomtwo\addtocounter{enc}{2}
