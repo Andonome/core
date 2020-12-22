@@ -124,6 +124,10 @@ Heavy weapons are generally more effective than Light weapons, but they cost 6 I
 Heavy weapons are those with a \gls{weightrating} of -1 or greater.
 Smaller weapons, those with a \gls{weightrating} of -2 or less, and brawling attacks with fists, all count as light weapons.
 
+\iftoggle{verbose}{
+	The total bonus to Initiative, including bonuses from weapons, is called the \textit{Initiative Factor}.
+}{}
+
 \subsubsection{\Glspl{quickaction}}
 
 \Glspl{quickaction} can interrupt the usual Initiative priorities.
@@ -144,6 +148,10 @@ However, defending oneself after this point would have a -2 penalty, and further
 
 To attack an opponent, you roll $2D6$ as usual, but only add your Combat Skill.
 The \gls{tn} is 7 plus your opponent's Dexterity.
+
+\iftoggle{verbose}{
+	Your total bonus to attack (usually just your Combat Bonus), is known as the \textit{Strike Factor}.
+}{}
 
 \subsection{Damage}\index{Damage}
 
@@ -186,6 +194,10 @@ Defending costs 2 Initiative and counts as a \gls{quickaction}, so it can be don
 
 Characters on 0 initiative or below suffer a -1 penalty to defence for each additional defence action.
 You might block the attacks of three fighters, but after that everyone becomes tired, so once initiative is down, defence becomes progressively more challenging.
+
+\iftoggle{verbose}{
+	The total bonus to defence, including any bonuses from weapons, is called the \textit{Evasion Factor}.
+}{}
 
 \subsection{Movement}\index{Movement}
 \label{movement}
@@ -794,6 +806,21 @@ The character can take a moment to note their \index{Dodge!Long-range}long-range
 This takes only 2 Initiative points and for the rest of the \gls{round}, any time the character is being fired upon in combat they can use their basic Speed Bonus in a resisted action to leap out of the way of an incoming missile or targeted spell, such as a fireball.
 Spells which simply target people by gaze or magical effects such as Polymorphing are unaffected.
 
+\subsubsection{Rage}
+\label{stances}
+\index{Stance}
+
+The character switches into the \textit{Aggressive Stance} while making an attack, until their next standard action, meaning that their Strike and Evasion factors swap place.
+
+\iftoggle{verbose}{
+	A character with Combat +2, Dexterity +1 and a longsword would normally have a Strike of +2, and an Evasion of +4 (because the longsword adds +3 to the Evasion).
+	However, while using \textit{Rage} manoeuvre, the character's Strike would be +4, and their Evasion +2.
+
+	The character reverts to the default \textit{Defensive} stance at their next, standard action, whether this is a normal attack, defending someone, or anything else.
+	Taking a Quick Action does not change someone's stance.
+
+}{}
+
 \subsubsection{Ram}\index{Combat!Ram}
 \label{ram}
 
@@ -919,14 +946,14 @@ Weapons also receive a -2 penalty to Damage.
 
 	\begin{exampletext}
 
-		``Remember your attack stances this time everyone'', says the \gls{gm}.
 
-		The players wonder if they want to add their Dexterity Bonus and Weapon's Evasion Bonus to Strike opponents instead of Evading attacks, but at this stage defence is more important, especially for Hugi - currently being pinned down by an ogre, and Arneson, currently down to only his Hit Points.
-
-		Next up, players assign their Combat Skill. On the last \gls{round}, they left it as the default - it added to the Strike Factor. Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2. He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
+		The players start by assigning their Combat Skill.
+		On the last \gls{round}, they left it as the default - it added to the Strike Factor.
+		Arneson repeats the move and Hugi has no Combat score to speak of, but Thenton has Combat +2.
+		He knows speed is of the essence if he wants to save his friend, so he adds +2 to his Initiative Factor, giving him a total of +3.
 
 		The characters roll to get their bearings but achieve only a `4', so Thenton will act at Initiative 7.
-The \gls{gm} rolls for the hobgoblins and achieves `9' - with Speed +1 they will act on Initiative 10.
+		The \gls{gm} rolls for the hobgoblins and achieves `9' - with Speed +1 they will act on Initiative 10.
 
 		\vspace{1em}
 
@@ -940,7 +967,6 @@ The \gls{gm} rolls for the hobgoblins and achieves `9' - with Speed +1 they will
 				6 & The Ogre deals 5 Damage. \\
 
 				5 & Thenton kills the ogre. \\
-
 
 		\end{tabularx}
 
@@ -1259,30 +1285,12 @@ With their \gls{fp} now replenishing quickly, the group can rest and worry less 
 \end{multicols}
 
 \section{Advanced Combat}
+\label{divide_combat}
 
 \begin{multicols}{2}
 
 \noindent
-With the advanced combat rules, \glspl{pc} have the option to change how they attack each round.
-Those who are certain they can strike the shambling undead might focus more on defence than attack.
-Others, hoping to bring down a massive basilisk in one hit might put all their resources into an accurate attack with a high Initiative score.
-
-To keep track of all this, we track three `Factors'.  The \textit{Strike Factor} is to attack, the \textit{Evasion Factor} to avoid being attacked, and the \textit{Initiative Factor} to add to Initiative.
-\label{combat_factor}
-
-\subsection{Stances}\label{stances}
-\index{Stance}
-
-The Dexterity Bonus can be assigned to either the Strike Factor or the Evasion Factor.
-This includes the weapon bonus.
-Someone with a Dexterity Bonus of +1 and a longsword would have a total Dexterity Bonus of +4, and can assign that to either Strike or Evasion.
-
-This bonus cannot be picked apart - the entire thing must go towards only one of these two Factors.
-
-\subsection{The Combat Bonus}
-
-\iftoggle{verbose}{
-
+\iftoggle{verbose}{%
 	Characters can focus on different parts of combat -- perhaps attempting to strike quickly, to hit the enemy, or to keep themself safe.
 
 }{}
@@ -1308,10 +1316,6 @@ In all cases there is an optimal configuration which will itself depend upon the
 \end{figure*}
 }{}
 
-Characters can attack in an \textit{Aggressive} or \textit{Defensive} stance. This system takes the Defensive stance as default -- the Dexterity Bonus is added to the Evasion score to keep the character safe. However, a character can forego safety for additional combat ability and add the Dexterity Bonus to Strike should they wish. Any Bonuses to Evasion from weapons also add to the Strike Factor. The score cannot be divided between the two -- the Stances are an `all or nothing' affair. Delicate decisions concerning priorities require the Combat Skill, which can be added one piece at a time to any of the Combat Factors.
-
-If a character's Evasion score ever becomes negative, it applies to the Strike score when using the Defensive Stance. It is possible to swap it back by taking the Aggressive stance but this almost guarantees that opponents will hit the character every time they strike.
-
 \end{multicols}
 
 \iftoggle{verbose}{
@@ -1324,12 +1328,7 @@ If a character's Evasion score ever becomes negative, it applies to the Strike s
 
 \begin{enumerate}
 	\item{The \gls{gm} rolls for enemy Morale if appropriate.}
-	\item{If using advanced rules:}
-		\begin{enumerate}
-		\item{Characters publicly declare stances. If no stance is declared, assume a Defensive stance.
-		See page \pageref{stances}.}
-		\item{Each character divides the Combat score (if any) between Initiative, Strike and Evasion. Page \pageref{combat_factor}.}
-		\end{enumerate}
+	\item{If using advanced rules, each character divides the Combat score (if any) between Initiative, Strike and Evasion. Page \pageref{divide_combat}.}
 	\item{One Initiative score is rolled for \glspl{pc} and \glspl{npc}. Page \pageref{initiative}.}
 	\begin{itemize}
 
