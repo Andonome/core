@@ -196,6 +196,6 @@ If you want to get involved, there are a number of ways to contribute:
 [reference]: https://belgradecats.tk/pdfs/bind_ref.pdf
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://belgradecats.tk/pdfs/aif.pdf
-[cs]: https://gitlab.com/bindrpg/core/uploads/3bfd8ec119974c371484dc9f003650d7/BIND_CS.ods
+[cs]: https://gitlab.com/bindrpg/core/uploads/5dd319ad8d163f9c69f059a8dceaa971/BIND_CS.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
