@@ -1,0 +1,482 @@
+\ProvidesPackage{bind}
+\RequirePackage{glossaries}
+\RequirePackage{glossary-mcols}
+\RequirePackage{gfsartemisia-euler} % fancy fonts
+\RequirePackage[T1]{fontenc} % 
+\RequirePackage{stmaryrd} % For boxy Maths symbols
+\RequirePackage{wasysym} % for circly Maths symbols
+\RequirePackage{dingbat} % for curly section symbols
+\RequirePackage{appendix}
+\RequirePackage{geometry} % changes page borders
+	\geometry{margin=50pt}
+\RequirePackage{svg}
+\RequirePackage{alltt}
+	\svgsetup{width=\textwidth}
+\RequirePackage{tabularx}
+\RequirePackage{wrapfig}
+\RequirePackage{float}
+\RequirePackage{epigraph} % part quotes
+\RequirePackage{microtype} % more precise word-placement
+\RequirePackage{makeidx}
+\RequirePackage[english]{babel}
+\RequirePackage{multicol}
+	\raggedcolumns
+\RequirePackage{graphicx}
+\RequirePackage{etoolbox}
+\RequirePackage{titlesec,titletoc}
+\RequirePackage{needspace}
+\RequirePackage{tikz}
+	\usetikzlibrary{mindmap,trees}
+\RequirePackage{pifont}
+\RequirePackage{colortbl}
+\RequirePackage[poster]{tcolorbox}
+\tcbuselibrary{breakable,raster}
+
+\tcbset{enhanced, drop shadow east,
+colframe=gray,colbacktitle=black!5!white,
+fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
+{yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
+boxed title style={boxrule=-0.5mm,
+frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+-- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+-- (frame.south east) -- (frame.south west) -- cycle; },
+interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+-- (interior.north west) -- (interior.north east)
+-- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+-- cycle;}
+}
+}
+
+\RequirePackage{xr-hyper}
+\RequirePackage[
+pdfstartpage=2,
+hidelinks=true,
+bookmarks=true]%
+{hyperref}
+
+%%%%%%%%%% Allow for external referencing
+
+\newcommand*{\externalReferent}[1]{
+	\newtoggle{#1}
+	\IfFileExists{../#1/main.tex}{
+		\makeatletter
+		\@addtofilelist{../#1/main.tex}
+		\@addtofilelist{../#1/main.aux}%
+		\makeatother
+		\externaldocument{../#1/main}%
+		\settoggle{#1}{true}
+	}%
+	{\typeout{No file #1.}
+	\settoggle{#1}{false}
+	}
+}
+
+
+%%%%%%%%%% Section Headers %%%%%%%%%%
+
+%%% Allow quotes under part headers
+\makeatletter
+\let\old@endpart\@endpart
+\renewcommand\@endpart[1][]{%
+\begin{quote}#1\end{quote}%
+\old@endpart}
+\makeatother
+
+%%%%% Make table of contents two column
+
+\makeatletter
+\renewcommand\tableofcontents{%
+\begin{multicols}{2}
+
+    \@starttoc{toc}%
+\end{multicols}
+}
+% and make repeating function
+\newcommand{\Repeat}[1]{%
+	\expandafter\@Repeat\expandafter{\the\numexpr #1\relax}%
+}
+
+\def\@Repeat#1{%
+    \ifnum#1>0
+        \expandafter\@@Repeat\expandafter{\the\numexpr #1-1\expandafter\relax\expandafter}%
+    \else
+        \expandafter\@gobble
+    \fi
+}
+\def\@@Repeat#1#2{%
+    \@Repeat{#1}{#2}#2%
+}
+\makeatother
+
+
+\newcommand{\chapnumfont}{
+	\fontsize{40}{0}
+	\selectfont
+}
+
+% change bullet points
+
+\renewcommand{\labelitemi}{\ding{250}}
+\renewcommand{\labelitemii}{\ding{254}}
+
+%%%%%%%%%% Encounter Numbers
+
+\newcounter{encnum}
+\newcommand{\lescounter}{\addtocounter{enc}{-1}}
+\setcounter{encnum}{1}
+\newcommand{\encsymbol}{\ding{168}}
+\newcommand{\encnum}{\ifnumcomp{\value{encnum}}{=}{1}{$A$}{\arabic{encnum}}\encsymbol\addtocounter{encnum}{1}}
+\newcommand{\sqarea}{town}
+
+\newcommand{\headingtype}{CHAPTER}
+
+\newcommand{\sidepic}[2][5]{
+	\needspace{2cm}\begin{wrapfigure}{R}{.#1\linewidth}
+\noindent\includesvg[width=\linewidth]{images/#2}
+\end{wrapfigure}
+}
+
+\newcommand{\sidejpg}[3][5]{
+	\iftoggle{verbose}{
+		\begin{wrapfigure}{O}{.#1\linewidth}
+			\noindent\includegraphics[width=\linewidth]{images/#2}
+		#3
+	\end{wrapfigure}
+}
+}
+
+\colorlet{chapnumcol}{black!55}
+
+\newcommand{\FancyFont}{}
+\newcommand{\fancyfont}{}
+
+\titleformat{\chapter}[display]
+{\bfseries}
+{\begin{tikzpicture}
+  \node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
+  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
+  \node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
+\end{tikzpicture}}
+{0pt}
+{\Huge\FancyFont}
+
+\titleformat{\section}[frame]
+{\needspace{20em}\normalfont}
+{\filright
+\footnotesize
+\enspace \fancyfont SECTION \thesection\enspace}
+{8pt}
+{\Large\bfseries\filcenter\fancyfont}
+
+\titleformat{\subsection}{\needspace{10em}\center\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
+%
+\titleformat{\subsubsection}
+{\needspace{3em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+%%%%% Character Sheet Tracker
+
+		\newcounter{track}
+		\setcounter{track}{18}
+		\newcommand{\tracker}{\center\noindent\arabic{track}\addtocounter{track}{-1}\vspace{.54cm}
+
+		}
+
+%%%%% NPC Names
+
+\newcommand{\name}{}
+\newcommand{\personality}{}
+\newcommand{\mannerism}{}
+\newcommand{\archetype}{}
+\newcommand{\npcsymbol}{}
+\newcommand{\npc}[2]{\settoggle{personality}{false}\renewcommand{\name}{#1 #2}\renewcommand{\npcsymbol}{#1}}
+\newcommand{\NPC}[5]{\renewcommand{\name}{#1 #2}
+\renewcommand{\npcsymbol}{#1}
+\settoggle{personality}{true}
+\renewcommand{\personality}{#3}
+\renewcommand{\mannerism}{#4}
+\renewcommand{\archetype}{#5}
+}
+\newcommand{\T}{\opposition\settoggle{team}{false}} % groups
+\newcommand{\M}{\mars} % male
+\newcommand{\F}{\venus} % female
+\newcommand{\E}{\mercury} % blood casters
+\newcommand{\A}{\taurus} % creature
+\newcommand{\N}{\leftmoon} % nura
+\newcommand{\D}{\fullmoon} % undead
+
+\newcommand{\monster}[1]{\needspace{4em}\vspace{.38cm} \ding{70} #1 \ding{70}\vspace{.18cm}}
+
+%%%%%%%%%%%%%%%%%%%% TOGGLES %%%%%%%%%%%%%%%%%%%%
+
+\newtoggle{verbose}
+\settoggle{verbose}{true}
+\newtoggle{personality}
+\settoggle{personality}{false}
+
+% This toggle tells you if this is just one creature or a team.
+\newtoggle{team}
+\settoggle{team}{false}
+
+\iftoggle{verbose}{
+	\setcounter{tocdepth}{1}
+	\setcounter{secnumdepth}{1}
+}
+
+\newcounter{r2}
+\setcounter{r2}{1}
+\newcounter{r2b}
+\setcounter{r2}{2}
+\newcounter{r2c}
+\setcounter{r2c}{2}
+\newcounter{r3}
+\setcounter{r3}{\month}
+\divide\value{r3} by 4
+\newcounter{r3b}
+\setcounter{r3b}{2}
+\newcounter{r3c}
+\setcounter{r3c}{3}
+\newcounter{r4}
+\setcounter{r4}{\day}
+\newcounter{r4b}
+\setcounter{r4b}{\day}
+\addtocounter{r4b}{1}
+\newcounter{r12}
+\setcounter{r12}{\month}
+\newcounter{enc}
+\newcounter{list}
+\newcounter{spelllevel}
+\setcounter{spelllevel}{0}
+
+\newcounter{age}
+\setcounter{age}{1}
+\newcounter{gold}
+\setcounter{gold}{\day}
+\setcounter{enc}{0}
+
+
+%%%%%%%%%%%%%%%%%%%% LAYOUT %%%%%%%%%%%%%%%%%%%%
+\makeindex
+\raggedbottom
+
+\newcommand{\currentsphere}{magic}
+\newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
+\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}%
+	\subsection{\currentsphere~ Level \arabic{spelllevel}}}
+\newcommand{\enhancement}[3]{\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}\index{Enhancement!#2}}
+\newcommand{\magicitem}[7]{\vspace{2em}\needspace{4em}\noindent\textbf{#1}
+\index{Magical Item!#1}
+
+	\noindent
+	\textit{Spells: #2, }%
+	\textit{Path: #3, }%
+	\textit{Duration: #4, }%
+	\textit{Type: #5, }%
+	\textit{Potence: #6, }%
+	\textit{MP: #7}%
+	% Type can be 'Pocket Spell', 'Talisman', or 'Artefact'.
+	\needspace{2em}%
+}
+
+\newcommand{\manalake}[8]{\subsection{#1 (Level #8)}
+
+	\textit{Spells: #2, }\textit{Path: #3, }\textit{Duration: #4, }\textit{Type: #5, }\textit{Potence: #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
+	\index{Mana Lakes!#1}
+	\vspace{.3em}
+}
+
+\newcommand{\spell}[4]{\subsubsection[#1: #4]{#1}
+
+{\it Type: #2, Skill: #3}
+
+\noindent}
+
+% Toggles for knacks
+
+%%%%%%%%%%%%%%%%%%%% Environments %%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{boxtext}{}{}
+
+\newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
+
+\tcolorboxenvironment{boxtext}{arc=0mm, before upper={\parindent15pt}}
+\tcolorboxenvironment{speechtext}{}
+
+\newenvironment{rolltable}%
+{\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}
+
+
+Roll & Result \\
+\hline
+
+}%
+{\end{tabular}}
+
+
+\newenvironment{exampletext}{\needspace{2em}\vspace{.3cm}
+
+\rule{.9\linewidth}{0.2pt}
+
+\vspace{.3cm}
+
+\it}{\normalfont\vspace{2em}}
+
+\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
+
+\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{adjusted title=Encounters in #1,arc=1mm,tabularx={XXp{.6\textwidth}},code={\setcounter{enc}{19}\setcounter{list}{18}}}
+
+\newtcolorbox{rollchart}{tabularx={p{.3\linewidth}X},arc=1mm}
+
+\newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
+
+
+%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
+
+\newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{Antagonists!#2}}
+
+\newcounter{random}
+\setcounter{random}{1}
+\newcounter{increment}
+\setcounter{increment}{1}
+
+\newcommand{\random}{
+	\addtocounter{random}{\value{page}}
+	\multiply\value{random} by \value{chapter}\addtocounter{random}{\value{increment}}
+	\whileboolexpr{
+		test {\ifnumcomp{\value{random}}{>}{100}}
+	}
+	{\addtocounter{random}{-100}}
+	\whileboolexpr{
+		test {\ifnumcomp{\value{random}}{>}{10}}
+	}
+	{\addtocounter{random}{-10}}
+	\addtocounter{increment}{1}
+}
+
+\newcommand{\randomtwo}{%
+	\ifnumcomp{\value{r2}}{>}{1}{\setcounter{r2}{1}}{\addtocounter{r2}{1}}%
+\setcounter{enc}{\value{r2}}%
+}
+
+\newcommand{\randomtwoB}{
+	\ifodd\value{r3b}\setcounter{r2b}{1}\else\setcounter{r2b}{2}\fi%
+}
+
+\newcommand{\randomtwoC}{
+	\ifnum\value{r2c}>1%
+	\setcounter{r2c}{1}\else%
+	\addtocounter{r2c}{1}%
+	\fi%
+}
+
+\newcommand{\randomthree}{%
+	\ifnumcomp{\value{r3}}{>}{2}{\setcounter{r3}{1}}{\addtocounter{r3}{1}}%
+	\setcounter{age}{\value{r3}}%
+	\ifnum\value{r3}<1\setcounter{r3}{2}\fi%
+}
+
+\newcommand{\randomthreeB}{
+	\ifnumcomp{\value{r3b}}{>}{2}{\setcounter{r3b}{1}}{\addtocounter{r3b}{1}}
+}
+
+\newcommand{\randomthreeC}{
+	\ifnum\value{r3c}>3%
+	\setcounter{r3c}{1}\else%
+	\addtocounter{r3c}{1}%
+	\fi%
+}
+
+\newcommand{\randomfour}{%
+	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}%
+	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}\setcounter{track}{\value{r4}}%
+}
+
+\newcommand{\randomfourB}{%
+	\ifnum\value{r4b}>3\setcounter{r4b}{1}%
+	\else%
+	\addtocounter{r4b}{1}%
+	\fi%
+}
+
+\newcommand{\randomdozen}{%
+\ifnum\value{r12}>12\setcounter{r12}{2}\fi%
+\ifnum\value{r12}<4\setcounter{r12}{2}\fi%
+\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
+}
+
+\newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
+\newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
+\newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
+
+%%%%% Side Quests
+
+% the first side quest gets a ticked box in the toc.
+% the rest get an empty box, so the GM can tick it once it's ready.
+
+\newtoggle{firstsq}
+\settoggle{firstsq}{true}
+
+\newcommand{\sqtoc}{\printcontents[\sqarea]{l}{2}{\section*{Summaries}\setcounter{tocdepth}{3}}}
+
+% Change the tocdepth from 2 to 3 in order to output a miniature table of contents on all side quests
+\newcommand{\sqminitoc}{
+
+	\begin{figure*}[t]
+	
+	\begin{tcolorbox}[adjusted title={Summary: \sqName}]
+	
+	\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}
+	
+	\end{tcolorbox}
+	
+	\end{figure*}
+}
+
+\newcommand{\sqName}{}
+
+\newcommand{\sidequest}[1]{\renewcommand{\sqName}{#1}
+	\resumecontents[\sqarea]
+	\subsection{\sqName}
+	\stopcontents[\sqarea]
+	\settoggle{firstsq}{true}
+}
+
+\newcommand{\sqpart}[3]{\resumecontents[#1]\subsubsection[\iftoggle{firstsq}{\CheckedBox}{\Square} #2 -- #3]{(#1) #2}\stopcontents[#1]\settoggle{firstsq}{false}}
+
+%%%%% Character Sheet Commands
+
+\newcommand{\trait}[1]{
+\vspace{.2cm} #1 \line(1,0){30}
+
+	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
+
+		\ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\
+		\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111}  \\
+	\end{tabular}
+
+}
+
+		\newcommand{\shortline}{\line(1,0){22}}	
+		\newcommand{\weeline}{\line(1,0){30} \hspace{.6cm}}
+		\newcommand{\vlongline}{\line(1,0){100}\hspace{0.8cm}}
+		\newcommand{\writeline}{\line(1,0){59}}
+\newcommand{\fiveboxes}{\ding{111}\ding{111}\ding{111}\ding{111}\ding{111}}
+\newcommand{\threeboxes}{\ding{111}\ding{111}\ding{111}}
+\newcommand{\threecircles}{\ding{109}\ding{109}\ding{109}}
+\newcommand{\tenboxes}{	\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111}  \\}
+\newcommand{\tencircles}{\ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\}
+\newcommand{\attributecircles}{\ding{175}\ding{174}\ding{173}\ding{172}{\Large\ding{109}}\ding{172}\ding{173}\ding{174}\ding{175}}
+\newcommand{\Split}{
+	\line(1,0){120}
+
+	}
+\newcommand{\skill}[1]{#1 & \ding{109} & \ding{109} & \ding{109} \\
+}
+\newcommand{\sskill}[1]{#1 & \ding{109} & \ding{109} & \ding{109}\\
+& \ding{111} & \ding{111} & \ding{111} \\
+}
+
+
+\newcommand{\longline}{\line(1,0){340}\par\vspace{.2cm}}
+
