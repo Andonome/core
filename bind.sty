@@ -138,11 +138,13 @@ bookmarks=true]%
 
 \newcommand{\sidejpg}[3][5]{
 	\iftoggle{verbose}{
-		\begin{wrapfigure}{O}{.#1\linewidth}
+		\needspace{12em}%
+		\begin{wrapfigure}{R}{.#1\linewidth}
 			\noindent\includegraphics[width=\linewidth]{images/#2}
 		#3
 	\end{wrapfigure}
 }
+\noindent
 }
 
 \colorlet{chapnumcol}{black!55}
