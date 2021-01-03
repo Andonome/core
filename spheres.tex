@@ -538,7 +538,7 @@ The target always retains their first language.
 
 \noindent
 Fate deals with divine blessings and luck.
-It adds and subtracts luck, shows what the future may hold, and grants \textit{deus ex machina}-style aid.
+It adds and subtracts luck, shows what the future may hold, and grants \textit{deus ex machine}-style aid.
 
 Bards picture this sphere as a kind of deep intuition, while priests view it as the ability to make requests from the gods.
 
@@ -603,13 +603,23 @@ This spell can take a character beyond the standard Skill levels.
 The caster rolls during any scene in which someone spends at least 2 \glspl{storypoint}.
 With a successful roll, one \gls{storypoint} is returned to the character.
 
+\spell{Snapback}{Instant}{Tactics}{Start a round over again}\\
+The caster casts a spell to determine if some plan will work, and subtly alters fate to ensure it gets its best shot.
+Once the spell is cast on a person, the caster can decide to rewind this person's round and try the entire round again.
+If the target interacts with anything or anyone not covered by the spell then the spell fails.
+
+\iftoggle{verbose}{%
+	The only way to use the spell for a fight is to cover all combatants with a \textit{Wide Snapback}.
+	The one-person version might be used on a person picking a lock on a door.
+}{}
+
 \spelllevel
 
 \spell{God's Chosen}{Continuous}{Academics}{Increase a target's maximum \glspl{fp} by $4+Int$ along with $2D6 + Int$ \glspl{fp}}\\
 The target increases their maximum \glspl{fp} by a number equal to the spell's level, plus the caster's Intelligence Bonus.
 The character instantly heals a number of \glspl{fp} equal to $2D6$ plus the caster's Intelligence Bonus.
 When the spell ends, the maximum FP return to normal.
-The spell does not increase the rate at which FP are regenerated.
+The spell does not increase the rate at which \glspl{fp} are regenerated.
 
 \spelllevel
 
