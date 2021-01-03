@@ -384,19 +384,19 @@ For example, if someone were to carry a long sword and a shield, they would rece
 
 \newcommand{\armourchart}{
 
-	\begin{tcolorbox}[arc=1mm,tabularx={XXXX}]
+	\begin{tcolorbox}[arc=1mm,tabularx={ccccc}]
 
-	\textbf{Armour} & \glsentrytext{dr} & \textbf{Weight} & \textbf{Price} \\\hline
+	\textbf{Armour} & \textbf{\glsentrytext{dr}} & \textbf{Weight} & \textbf{Noise} & \textbf{Price} \\\hline
 
-	Elvish & 2 & -2 & 3 gp/9 gp \\
+	Elvish & 2 & -1 & 0 & 3gp/ 9gp \\
 
-	Padded & 2 & 1 & 1sp/3sp \\
+	Padded & 2 & 2 & 0 & 1sp/ 3sp \\
 
-	Leather & 3 & 0 & 5sp/15sp \\
+	Leather & 3 & 1 & 1 & 5sp/ 15sp \\
 
-	Chain & 4 & 1 & 10sp/30sp \\
+	Chain & 4 &  2 & 3 & 10sp/ 30sp \\
 
-	Plate & 5 & 2 & 12gp/36gp \\
+	Plate & 5 &  3 & 4 & 12gp/ 36gp \\
 
 	\end{tcolorbox}
 }
@@ -420,9 +420,9 @@ Perfect armour is a rating used for certain creatures which have natural armour 
 
 \subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
 
-When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
-
 	\sidejpg{Roch_Hercka/vitals_shot.jpg}{\label{roch:vitals}}
+
+When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
 
@@ -438,6 +438,16 @@ The \gls{weightrating} above are for Partial Armour.
 If anyone wears Complete armour the Weight is increased by 1, so Complete chain armour which comes past the knees, has a helmet and uses arm-guards, would have a \gls{weightrating} of 2.
 
 Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
+
+\subsection{Noise}
+
+\iftoggle{verbose}{%
+	Some armours make noise when walking around, which alerts everyone around, and typically stops sneaking attempts.
+	The `Noise' rating shows the added difficulty to any Stealth rolls which involve moving silently.
+	While sufficient padding can make Partial Armour silent, no amount of padding can remove the penalty from Complete.
+}{
+	The `Noise' rating shows the penalty to moving silently while wearing Complete armour of this type.
+}
 
 \subsection{Perfect Strikes}
 
