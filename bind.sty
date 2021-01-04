@@ -82,6 +82,15 @@ bookmarks=true]%
 \old@endpart}
 \makeatother
 
+%%%%%%%%%% Give higher penalty to ~
+% The ~ character usually functions as a space with a high penalty for line breaks.
+% This stops the line breaks altogether, so we can write 'Athletics 3', without a line-break between the Skill and the number.
+
+\DeclareRobustCommand{\nobreakspace}{%
+   \leavevmode\nobreak\ }
+\catcode `\~=13
+\def~{\nobreakspace{}}
+
 %%%%% Make table of contents two column
 
 \makeatletter
