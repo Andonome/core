@@ -758,6 +758,8 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\randomtwoC
+	\addtocounter{r2c}{2}
 	\addtocounter{enc}{3}
 	\randomthree
 	\randomthreeB
@@ -772,9 +774,9 @@
 	{\arabic{track}}}% CHARISMA
 	{4}%DR
 	{\arabic{age}}% COMBAT
-	{Aggression \arabic{enc}, Projectiles \arabic{r3b}, Academics \arabic{r3}, Athletics \arabic{r2b}, Deceit \arabic{enc}, Tactics 2, Vigilance 3
+	{Aggression~\arabic{enc}, Projectiles~\arabic{r3b}, Academics~\arabic{r3}, Athletics~\arabic{r2b}, Deceit~\arabic{r2c}, Tactics~2, Vigilance~3
 	\knacks{\ifodd\value{page}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{r3}}{>}{2}{\laststand}{\adrenalinesurge}}
-	\Path{Blood}{\ifodd\value{r4}Aldaron \else Enchantment \fi \arabic{r4}, Invocation \arabic{enc}, \ifodd\value{r2}Force \arabic{r3b} \else Polymorph \arabic{r3}\fi }}{%
+	\Path{Blood}{\ifodd\value{r4}Aldaron\else Enchantment\fi~\arabic{r4}, Invocation~\arabic{enc}, \ifodd\value{r2}Force~\arabic{r3b}\else Polymorph~\arabic{r3}\fi }}{%
 	\iftoggle{bestiarychapter}{$3D6\times 100$gp, sitting in a lair.}{%
 		{\setcounter{gold}{\thepage}\addtocounter{gold}{-50}\multiply\value{gold} by \value{list}\multiply\value{gold} by \thechapter \ifnumcomp{\value{gold}}{>}{0}{\arabic{gold}gp in lair in assorted change}{None}}}}%
 	{\ifodd\value{r2}%
@@ -789,6 +791,7 @@
 \newcommand{\dwarventrader}[1][\npc{\M}{\arabic{r12} Dwarven Traders}]{
 	#1
 	\randomdozen
+	\randomtwoB
 	\randomthree\randomtwo\addtocounter{enc}{-1}
 	\person{\arabic{enc}}% STRENGTH
 	{1}% DEXTERITY
@@ -798,7 +801,7 @@
 	{0}}% CHARISMA
 	{0}% DR
 	{1}% COMBAT
-	{Crafts \arabic{r2b}, Deceit \arabic{r3}}% SKILLS
+	{Crafts~\arabic{r2b}, Deceit~\arabic{r3}}% SKILLS
 	{\shortsword, \ifodd\thepage\lootMedium\else\lootBig, \lootJewellery\fi}% EQUIPMENT
 	{}
 	}
@@ -815,7 +818,7 @@
 	{-1}}% CHARISMA
 	{0}% DR
 	{2}% COMBAT
-	{Crafts 1, Tactics 1}% SKILLS
+	{Crafts~1, Tactics~1}% SKILLS
 	{\ifodd\value{r2}\woodaxe, \partialchain\else\shortsword, \partialplate\fi, \lootMedium}% EQUIPMENT
 	{\knacks{Chosen Enemy: Goblinoids}\ifodd\value{r2b}, \defender\fi}% SKILLS
 }
@@ -835,7 +838,7 @@
 	{0}}%  CHARISMA
 	{0}% DR
 	{1}% COMBAT
-	{Academics \arabic{enc}, Crafts 1, Tactics 2\Path{Runes}{Fate \arabic{enc}, Force \arabic{r3}, Conjuration \arabic{r3b}}}% SKILLS
+	{Academics~\arabic{enc}, Crafts~1, Tactics~2\Path{Runes}{Fate~\arabic{enc}, Force~\arabic{r3}, Conjuration~\arabic{r3b}}}% SKILLS
 	{\shortsword, \partialchain, \lootMedium}% EQUIPMENT
 	{\mana{4}}
 	}
@@ -860,7 +863,7 @@
 	{\arabic{r4}}}% CHARISMA
 	{6}% DR
 	{\arabic{r3}}% COMBAT
-	{Academics 3, Athletics \arabic{r3c}, \ifodd\value{r2}Crafts 2, Performance \arabic{r3}, \else Empathy \arabic{r2b}, Survival 3, Vigilance \arabic{r3b}\fi \Path{Blood \& Song}{Polymorph 5, Aldaron \arabic{enc}, Fate \arabic{r3b}, \ifodd\value{r3} Enchantment \arabic{r2b}\fi}}% SKILLS
+	{Academics~3, Athletics~\arabic{r3c}, \ifodd\value{r2}Crafts~2, Performance~\arabic{r3}, \else Empathy~\arabic{r2b}, Survival~3, Vigilance~\arabic{r3b}\fi \Path{Blood \& Song}{Polymorph~5, Aldaron~\arabic{enc}, Fate~\arabic{r3b}, \ifodd\value{r3} Enchantment~\arabic{r2b}\fi}}% SKILLS
 	{\ifodd\thepage\Dagger, \lootJewellery\else\spear\fi}% EQUIPMENT
 	{\mana{6}\lockedmana{5}\gdef\armourtype{C}}
 	}
@@ -919,8 +922,8 @@
 	{\arabic{enc}}}% CHARISMA
 	{0}% DR
 	{\ifodd\value{mp} 1\else 0\fi}% COMBAT
-	{Projectiles \arabic{r2b}, Academics 3, Empathy 3, Deceit \arabic{enc}, Performance \arabic{r2}, \ifodd\value{r2}Stealth \else Tactics \fi \arabic{r2b}, Vigilance 2%
-	\Path{Blood}{Aldaron \arabic{r3}, Enchantment 5, Fate \arabic{r3}, Forces \arabic{r4}, Invocation 1, Polymorph 2}}% SKILLS
+	{Projectiles~\arabic{r2b}, Academics~3, Empathy~3, Deceit~\arabic{enc}, Performance~\arabic{r2}, \ifodd\value{r2}Stealth~\else Tactics~\fi \arabic{r2b}, Vigilance~2%
+	\Path{Blood}{Aldaron~\arabic{r3}, Enchantment~5, Fate~\arabic{r3}, Forces~\arabic{r4}, Invocation~1, Polymorph~2}}% SKILLS
 	{\Dagger, \lootJewellery\ifodd\thepage, \randomtwo\lootJewellery\ifodd\value{r4}, \lootMagic\fi\fi}% EQUIPMENT
 	{\mana{6}}
 }
@@ -939,9 +942,9 @@
 {\arabic{r2}}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Academics \arabic{r3}, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Empathy \arabic{r2b}, \ifodd\value{page} \else Larceny 1, Stealth 1 \fi 
+{Academics~\arabic{r3}, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Empathy~\arabic{r2b}, \ifodd\value{page} \else Larceny~1, Stealth~1 \fi 
 \ifodd\value{page}
-	\Path{Alchemy}{Illusion \arabic{r2}}
+	\Path{Alchemy}{Illusion~\arabic{r2}}
 \fi}% SKILLS
 {\ifodd\value{r3}%
 	\Dagger,
@@ -972,7 +975,7 @@
 {\ifnum\value{enc}<0%
 	Projectiles \arabic{r2c}, 
 \fi%
-Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\value{page} \else Larceny \arabic{r2c}, \fi Stealth \arabic{r2c}
+Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\value{page} \else Larceny~\arabic{r2c}, \fi Stealth~\arabic{r2c}
 }% SKILLS
 {\ifnum\value{enc}=0%
 	\shortsword
@@ -1005,8 +1008,8 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 	{0}% COMBAT
 	{\ifodd\value{r2}%
 		\else Projectiles \arabic{enc}, \fi%
-	Academics 3, \ifodd\value{chapter} Crafts \arabic{enc}, \fi Deceit \arabic{age},  Stealth \arabic{enc}
-	\Path{Alchemy}{Conjuration \arabic{age}, \ifodd\value{r2} Force \arabic{enc}, \else Invocation \arabic{enc}, \fi Illusion \arabic{age}}}% SKILLS
+	Academics~3, \ifodd\value{chapter} Crafts~\arabic{enc}, \fi Deceit~\arabic{age},  Stealth~\arabic{enc}
+	\Path{Alchemy}{Conjuration~\arabic{age}, \ifodd\value{r2} Force~\arabic{enc}, \else Invocation~\arabic{enc}, \fi Illusion~\arabic{age}}}% SKILLS
 	{\lootBig, \ifodd\thepage\lootMagic\fi}% EQUIPMENT
 	{\mana{6}}
 }
@@ -1041,7 +1044,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {0}}% CHARISMA
 {0}% DR
 {\ifodd\value{r3} 0\else 1\fi}% AGGRESSION
-{Empathy 1, \ifodd\thechapter Deceit \arabic{r2}\fi}% SKILLS
+{Empathy~1, \ifodd\thechapter Deceit~\arabic{r2}\fi}% SKILLS
 {\ifodd\thepage \Dagger, \lootSmall\else None\fi}% EQUIPMENT
 {}
 }
@@ -1105,7 +1108,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {0}% DR
 {\arabic{r2b}}% COMBAT
 {Academics~\arabic{r3}, Empathy~\arabic{r3b}
-\ifodd\value{r3b}\Path{Devotion}{Fate \arabic{age}, \ifodd\value{r4} \else Aldaron \arabic{enc}\fi}\fi}% SKILLS
+\ifodd\value{r3b}\Path{Devotion}{Fate~\arabic{age}, \ifodd\value{r4}\else Aldaron~\arabic{enc}\fi}\fi}% SKILLS
 {\ifodd\value{r2b}\quarterstaff\else\Dagger, \lootMedium\fi}% EQUIPMENT
 {\ifodd\value{r3b}\mana{2}\fi}
 }
@@ -1233,7 +1236,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {\arabic{r3}}}% CHARISMA
 {0}% DR
 {\arabic{r2}}% COMBAT
-{Academics \ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Empathy \arabic{enc}, Deceit \ifodd\thepage 2 \else 1\fi, Performance \ifodd\thechapter 2 \else 1\fi%
+{Academics~\ifodd\thepage\arabic{r2}\else\arabic{r3b}\fi, Empathy~\arabic{enc}, Deceit~\ifodd\thepage 2\else 1\fi, Performance~\ifodd\thechapter 2\else 1\fi%
 
 \ifnum\value{r3}>2
 	\ifnum\value{r12}>6
@@ -1241,10 +1244,14 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 			Enchantment%
 		\else%
 			Aldaron%
-		\fi \arabic{r4}, \ifodd\value{r12}%
+		\fi~%
+			\arabic{r4}, %
+		\ifodd\value{r12}%
 			Fate \arabic{enc}%
-		\fi \ifodd\value{gold}%
-			\addtocounter{r2b}{1} Illusion \arabic{r2b}%
+		\fi %
+		\ifodd\value{gold}%
+			\addtocounter{r2b}{1}%
+			Illusion \arabic{r2b}%
 		\fi}
 	\fi
 \else
@@ -1321,7 +1328,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {1}% COMBAT
 {Aggression~2, Projectiles~\arabic{r2b}, Academics~\arabic{r2}, Beast Ken~\arabic{r2b}, \ifodd\value{r3b}\else Deceit~\arabic{r3b}, \fi Stealth~\arabic{r3},
 \ifnum\value{r4}>1%
-	{Survival \arabic{enc}, Vigilance \arabic{enc}}%
+	{Survival~\arabic{enc}, Vigilance~\arabic{enc}}%
 	\fi%
 \Path{Divinity (Qualm\"e)}{\ifodd\value{r2} Fate\else Aldaron\fi~\arabic{r3}, \ifodd\value{r3b}\else Enchantment~\arabic{r3}, \fi Necromancy~\arabic{r3c}}}% SKILLS
 {\Dagger\ifodd\value{r3}\else, \lootMagic\fi}% EQUIPMENT
@@ -1643,7 +1650,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {-4}}% CHARISMA
 {0}% DR
 {\arabic{r2b}}% AGGRESSION
-{Beast Ken \arabic{r2}, \ifodd\value{r2}Crafts \else Tactics\fi~\arabic{r2}}% SKILLS
+{Beast Ken \arabic{r2}, \ifodd\value{r2}Crafts\else Tactics\fi~\arabic{r2}}% SKILLS
 {\ifodd\value{r2}
 	Nothing.
 \else
@@ -1731,7 +1738,7 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {-5}}% CHARISMA
 {2}% DR
 {2}% COMBAT
-{Aggression \arabic{enc}, \ifodd\thepage Beast Ken \else Deceit \fi \arabic{r3}, Survival \arabic{r3b}, Tactics \arabic{r2}, Vigilance 1}% SKILLS
+{Aggression~\arabic{enc}, \ifodd\thepage Beast~Ken\else Deceit\fi~\arabic{r3}, Survival~\arabic{r3b}, Tactics~\arabic{r2}, Vigilance~1}% SKILLS
 {\ifodd\value{r2}%
 	\longsword%
 	\ifodd\value{r4}%
@@ -1766,8 +1773,8 @@ Academics 1, \ifodd\value{page} Crafts \arabic{r2}, \else \fi Deceit 1, \ifodd\v
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r2}}% COMBAT
-{Aggression 2, Projectiles \arabic{r2c}, Academics \arabic{r3}, Deceit 1, Medicine \arabic{r2c}, Vigilance \arabic{r2}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r2} Enchantment \arabic{r3c}, \else \fi Necromancy 4}}% SKILLS
+{Aggression~2, Projectiles~\arabic{r2c}, Academics~\arabic{r3}, Deceit~1, Medicine~\arabic{r2c}, Vigilance~\arabic{r2}
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r4} Aldaron~\arabic{enc}, \fi Fate~\arabic{enc}, \ifodd\value{r2} Enchantment~\arabic{r3c}, \fi Necromancy~4}}% SKILLS
 {\ifodd\thepage%
 	\Dagger%
 \else%
@@ -1799,7 +1806,7 @@ mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIP
 {2}% DR
 {\arabic{r2}}% AGGRESSION
 {Aggression 2, Projectiles~\arabic{r2}, Academics~\arabic{r3}, Deceit~1, Medicine~\arabic{r3c}, Vigilance~\arabic{r2}
-\Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron \arabic{enc}, \fi Fate \arabic{enc}, \ifodd\value{r4} Enchantment \arabic{r3}, \else \fi Necromancy 5}}% SKILLS
+\Path{Devotion (Qualm\"e)}{\ifodd\value{r3}Aldaron~\arabic{enc}, \fi Fate~\arabic{enc}, \ifodd\value{r4} Enchantment~\arabic{r3}, \fi Necromancy~5}}% SKILLS
 {\ifodd\thechapter%
 	\Dagger, %
 \else
@@ -2013,8 +2020,8 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {-5}}% CHARISMA
 {0}% DR
 {0}% AGGRESSION
-{Projectiles \arabic{r3}, Academics 3, Deceit \arabic{r2}, Ether Lore \arabic{r2b}, Tactics \arabic{r3b}
-\Path{Divinity}{\addtocounter{age}{2} Force \arabic{age}, Illusion \arabic{r3}, Invocation \arabic{r4}, Conjuration \arabic{enc}, \addtocounter{r3b}{2}}}% SKILLS
+{Projectiles~\arabic{r3}, Academics~3, Deceit~\arabic{r2}, Ether~Lore~\arabic{r2b}, Tactics~\arabic{r3b}
+\Path{Divinity}{\addtocounter{age}{2} Force~\arabic{age}, Illusion~\arabic{r3}, Invocation~\arabic{r4}, Conjuration~\arabic{enc},}}% SKILLS
 {None}% ABILITIES
 {\setcounter{gold}{\value{age}}\multiply\value{gold} by 3\addtocounter{gold}{\value{int}}\setcounter{sp}{\value{gold}}%
 \mana{8}\lockedmana{\value{age}}\addtocounter{xpbonus}{4}}
@@ -2030,7 +2037,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r3}}% WITS
 {3}% DR
 {0}% AGGRESSION
-{Stealth 3, Vigilance 2}% SKILLS
+{Stealth~3, Vigilance~2}% SKILLS
 {Gas}% ABILITIES
 {\addtocounter{xpbonus}{3}}
 }

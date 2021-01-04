@@ -387,8 +387,15 @@ Roll & Result \\
 	\ifnum\value{r3}<1\setcounter{r3}{2}\fi%
 }
 
-\newcommand{\randomthreeB}{
-	\ifnumcomp{\value{r3b}}{>}{2}{\setcounter{r3b}{1}}{\addtocounter{r3b}{1}}
+\newcommand{\randomthreeB}{%
+	\ifnum\value{r3b}>2%
+		\setcounter{r3b}{1}%
+	\else%
+		\addtocounter{r3b}{1}%
+	\fi%
+	\ifnum\value{r3b}<1%
+		\setcounter{r3b}{3}
+	\fi%
 }
 
 \newcommand{\randomthreeC}{
