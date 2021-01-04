@@ -758,6 +758,8 @@
 	#1
 	\randomtwo
 	\randomtwoB
+	\randomtwoC
+	\addtocounter{r2c}{2}
 	\addtocounter{enc}{3}
 	\randomthree
 	\randomthreeB
@@ -772,7 +774,7 @@
 	{\arabic{track}}}% CHARISMA
 	{4}%DR
 	{\arabic{age}}% COMBAT
-	{Aggression~\arabic{enc}, Projectiles~\arabic{r3b}, Academics~\arabic{r3}, Athletics~\arabic{r2b}, Deceit~\arabic{enc}, Tactics~2, Vigilance~3
+	{Aggression~\arabic{enc}, Projectiles~\arabic{r3b}, Academics~\arabic{r3}, Athletics~\arabic{r2b}, Deceit~\arabic{r2c}, Tactics~2, Vigilance~3
 	\knacks{\ifodd\value{page}\combatcaster\else\backtothewall\fi, \ifnumcomp{\value{r3}}{>}{2}{\laststand}{\adrenalinesurge}}
 	\Path{Blood}{\ifodd\value{r4}Aldaron\else Enchantment\fi~\arabic{r4}, Invocation~\arabic{enc}, \ifodd\value{r2}Force~\arabic{r3b}\else Polymorph~\arabic{r3}\fi }}{%
 	\iftoggle{bestiarychapter}{$3D6\times 100$gp, sitting in a lair.}{%
