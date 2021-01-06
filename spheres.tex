@@ -433,11 +433,6 @@ Each subsequent turn the target makes a resisted roll of Wits + Academics agains
 
 While the spell is in effect, the target suffers a penalty to all Mental Attributes equal to \arabic{spelllevel} plus the enchanter's Intelligence Bonus; so a mage with Intelligence +3 would inflict a -5 penalty. If the target attempted to cast spells, any rolls would suffer a -5 penalty and any spell-effects which relied on the Intelligence Attribute would suffer as well.
 
-\iftoggle{verbose}{
-	\noindent\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
-	\label{roch:enchanter}
-}{}
-
 At the end of the scene, targets make one final resisted roll against the enchanter's Intelligence + Deceit (even if the enchanter is no longer present). Failure indicates that the target has forgotten the encounter entirely, including some moments before when the spell began.
 
 \iftoggle{verbose}{
@@ -445,6 +440,10 @@ If an \gls{npc} enchanter intends to cast this on a \gls{pc} during a scene, the
 If the player fails the roll then the \gls{gm} can infer what probably would have happened had the scene played out and skip to the next scene, telling the player that something important might have happened, but that they cannot remember any of it.
 
 When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought. The use of magic will is not obvious to those unfamiliar with such abilities.
+
+\noindent\includegraphics[width=.43\textwidth]{images/Roch_Hercka/elvish_enchanter.jpg}
+\label{roch:enchanter}
+
 }{}
 
 \spell{Focus}{Continuous}{Empathy}{Force a target to repeat whatever they're doing}\\
@@ -1038,47 +1037,54 @@ Spotting someone who has been transformed requires a Wits + Empathy roll, with a
 Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.
 The undead are completely immune to the Polymorph sphere.
 
-	\begin{tcolorbox}[arc=1mm,tabularx={XXX}]
+\begin{figure*}[t]
+	\begin{tcolorbox}[arc=1mm,tabularx={lccX}]
 
-	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} \\\hline
+	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} & \textbf{Realistic Enhancements (Optional)} \\\hline
 
-	Cow & 0 & +4 \\
+	Cow & 0 & +4 & Quadraped \\
 
-	Badger & -4 & -2 \\
+	Badger & -4 & -3 & Quadraped \\
 
-	Basilisk & +5 & +8 \\
+\iftoggle{aif}{
+	Basilisk & +5 & +8 & DR 4-6, Quadraped \\
+}{}
 
-	Bear & +4 & +5 \\
+	Bear & +4 & +5 & DR 2, Quadraped \\
 
-	Beaver & -5 & -4 \\
+	Beaver & -5 & -4 & Quadraped \\
 
-	Bird/ Bat & -5 & -5 \\
+	Bird/ Bat & -5 & -5 & Flight \\
 
 	Cat & -5 & -5 \\
 
-	Chitincrawler & +3 & +5 \\
-
+\iftoggle{aif}{
+	Chitincrawler & +3 & +5 & DR 4 \\
+}{}
 	Deer & 0 & +2 \\
 
 	Donkey & 0 & +3 \\
 
-	Frog & -5 & -5 \\
+	Frog & -5 & -5 & Amphibious \\
 
-	Goat & -1 & +2 \\
+	Goat & -1 & +2 & DR 2, Quadraped \\
 
-	Griffin & -1 & +2 \\
+\iftoggle{aif}{
+	Griffin & -1 & +2 & Flight \\
+}{}
 
-	Horse & +1 & +4 \\
+	Horse & +1 & +4 & Quadraped \\
 
-	Large Cat & +1 & +3 \\
+	Large Cat & +1 & +3 & Quadraped \\
 
-	Pig & 0 & +3 \\
+	Pig & 0 & +3 & DR 2, Quadraped \\
 
-	Rat & -5 & -5 \\
+	Rat & -5 & -5 & Quadraped \\
 
-	Wolf & -2 & +1 \\
+	Wolf & -2 & +1 & Quadraped \\
 
 \end{tcolorbox}
+\end{figure*}
 
 As Polymorph changes people's form it also changes Strength and therefore \gls{hp} maximums.
 All \gls{hp} lost to Damage remain as lost \gls{hp} after transformation but might not have any effect.
@@ -1148,24 +1154,14 @@ The Form Points can each be spent on one of the following:
 	\item{Claws \& Teeth: +1 Damage}
 	\item{Flight: The creature has wings, and can use them properly.}
 	\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
-	\item{Underwater Breathing}
+	\item{Amphibious}
+	\item{Quadraped: The creature can fully utilize four limbs to run at double the normal speed when spending a full round moving}
 
 \end{itemize}
 
 When the target is to transform into an animal, all unused points are applied to the target's Speed Bonus.  Someone transforming into a bird with 3 Form Points could use one to gain realistic flight, and then +2 Speed.
 
 When transforming into another race, the target merely loses their racial ability, and gains any racial abilities of the target which are concerned with the body.  For example, elves who transform into dwarves lose their immunity from natural cold, but gain the dwarvish ability to consume strong drink.
-
-\enhancement{1}{Trans Species}{Transform humanoids into animals}
-
-The Polymorpher can now cross the species boundary, making themself or another transform entirely into an animal.
-
-Alternatively, the Polymorpher can turn an animal into a person.
-This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.
-Such creatures start with Intelligence -5 and Charisma 0.
-
-This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one (the enhancement \textit{Empathy} changes this to \gls{tn} 7).
-It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
 
 \spelllevel
 
@@ -1189,6 +1185,17 @@ Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
 
 Polymorphing into another race does not grant any of its racial abilities.
 Changing one's shape to look like an elf will not grant cold-immunity, and Polymorphing into a human will not allow one walk long distances without fatigue.
+
+\enhancement{1}{Trans Species}{Transform humanoids into animals}
+
+The Polymorpher can now cross the species boundary, making themself or another transform entirely into an animal.
+
+Alternatively, the Polymorpher can turn an animal into a person.
+This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.
+Such creatures start with Intelligence -5 and Charisma 0.
+
+This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one (the enhancement \textit{Empathy} changes this to \gls{tn} 7).
+It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
 
 \spelllevel
 
