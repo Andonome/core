@@ -153,6 +153,10 @@ The \gls{tn} is 7 plus your opponent's Dexterity.
 	Your total bonus to attack (usually just your Combat Bonus), is known as the \textit{Strike Factor}.
 }{}
 
+\subsubsection{Aggression}
+
+Animals use a Skill called `\index{Aggression@Aggression}' to Strike -- Aggression works exactly like the Combat Skill but only adds to the Strike Factor, and never to Initiative or Evasion.
+
 \subsection{Damage}\index{Damage}
 
 \iftoggle{verbose}{
@@ -420,11 +424,11 @@ Perfect armour is a rating used for certain creatures which have natural armour 
 
 \subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
 
-	\sidejpg{Roch_Hercka/vitals_shot.jpg}{\label{roch:vitals}}
-
 When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
+
+	\sidejpg{Roch_Hercka/vitals_shot.jpg}{\label{roch:vitals}}
 
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
@@ -457,10 +461,6 @@ Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in
 
 Characters gain \gls{dr} from armour, but animals can gain  \gls{dr} from a thick hide, while the undead gain \gls{dr} from having less need of a functioning body.
 When multiple types of \gls{dr} stack, the second counts for only half (rounded up), and any tertiary damage types count for a quarter, and so on.
-
-\subsubsection{Aggression}
-
-Animals use a Skill called `\index{Aggression}Aggression' to Strike -- Aggression works exactly like the Combat Skill but only adds to the Strike Factor, and never to Initiative or Evasion.
 
 \end{multicols}
 
@@ -1007,7 +1007,8 @@ Weapons also receive a -2 penalty to Damage.
 
 		The \gls{gm} thinks about it - the action is not clearly covered in the rules, so she decides the following.
 
-		``Okay - make a sneak roll. If he sees you then he's going to stop the action and defend himself, otherwise your next attack can count as a Sneak Attack. Roll Speed + Stealth at Target Number 6.''
+		``Okay - make a sneak roll.
+		If he sees you then he's going to stop the action and defend himself, otherwise your next attack can count as a Sneak Attack. Roll Speed + Stealth at \glsentrytext{tn} 6.''
 
 		Thenton has no bonus to either, but that ogre is so dim the test is easily passed. 
 
