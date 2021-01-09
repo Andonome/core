@@ -1,6 +1,8 @@
 filename=main
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: main.pdf
+	makeindex main.idx
+	makeglossaries main
 	pdflatex ${filename}.tex
 main.pdf: svg-inkscape main.idx
 	makeindex main.idx
