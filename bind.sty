@@ -59,7 +59,7 @@ bookmarks=true]%
 
 \newcommand*{\externalReferent}[1]{
 	\newtoggle{#1}
-	\IfFileExists{../#1/main.tex}{
+	\IfFileExists{../#1/main.aux}{
 		\makeatletter
 		\@addtofilelist{../#1/main.tex}
 		\@addtofilelist{../#1/main.aux}%
