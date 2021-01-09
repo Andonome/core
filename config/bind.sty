@@ -140,6 +140,11 @@ bookmarks=true]%
 
 \newcommand{\headingtype}{CHAPTER}
 
+\newcommand{\pic}[1]{
+	\noindent\includesvg[width=\linewidth]{images/#1}
+
+}
+
 \newcommand{\sidepic}[2][5]{
 	\needspace{2cm}\begin{wrapfigure}{R}{.#1\linewidth}
 \noindent\includesvg[width=\linewidth]{images/#2}
