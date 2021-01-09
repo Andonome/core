@@ -1713,6 +1713,7 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 	\randomtwo
 	\randomtwoB
 	\addtocounter{enc}{-3}
+	\randomthreeC
 	\randomdozen
 \animal{\arabic{r2b}}% STRENGTH
 {-2}% DEXTERITY 
@@ -1722,7 +1723,16 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 {2}% AGGRESSION
 {}% SKILLS
 {Undead}% ABILITIES
-{}
+{
+\ifnumcomp{\value{r3c}}{=}{1}%
+	{\textbf{Equipment:} & \lootSmall \\}%
+	{
+	\ifnumcomp{\value{r4b}}{=}{1}%
+		{\textbf{Equipment:} & \lootMedium \\}%
+		{}%
+	}
+
+}%
 }
 
 \newcommand{\ghast}[1][\npc{\D}{Ghast}]{
