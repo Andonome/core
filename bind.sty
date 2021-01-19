@@ -44,12 +44,12 @@
 \newcounter{chapshift}
 \addtocounter{chapshift}{-1}
 
+\newcounter{pageDarkness}
+\setcounter{pageDarkness}{20}
+
 \newcommand\pageSideColor{%
 	black!\arabic{pageDarkness}%
 }
-
-\newcounter{pageDarkness}
-\setcounter{pageDarkness}{0}
 
 \newcommand\ChapFrame{%
   \AddEverypageHook{%
@@ -67,7 +67,7 @@
           ]
           at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
           {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
-              \raggedright\textcolor{black}{\scshape\leftmark}}}};
+              \raggedright\textcolor{white}{\scshape\leftmark}}}};
         \end{tikzpicture}%
       }%
     }
@@ -85,14 +85,16 @@
         ]
         at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
         {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
-            \raggedright\textcolor{black}{\scshape\leftmark}}}};
+            \raggedright\textcolor{white}{\scshape\leftmark}}}};
         \end{tikzpicture}%
       }%
     }
     \fi
   \BgMaterial}%
   \stepcounter{chapshift}%
-  \addtocounter{pageDarkness}{5}
+  \ifnum\value{pageDarkness}<90
+	\addtocounter{pageDarkness}{10}
+  \fi
 }
 
 % redefinition of \chaptermark to contain only the title
