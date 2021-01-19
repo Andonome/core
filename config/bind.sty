@@ -10,6 +10,12 @@
 \RequirePackage{appendix}
 \RequirePackage{geometry} % changes page borders
 	\geometry{margin=50pt}
+\RequirePackage[
+  scale=1,
+  angle=0,
+  opacity=1,
+  contents={}
+]{background}% for fancy borders
 \RequirePackage{svg}
 \RequirePackage{alltt}
 	\svgsetup{width=\textwidth}
@@ -27,11 +33,73 @@
 \RequirePackage{titlesec,titletoc}
 \RequirePackage{needspace}
 \RequirePackage{tikz}
-	\usetikzlibrary{mindmap,trees}
+	\usetikzlibrary{calc,mindmap,trees}% calc for fancy borders
 \RequirePackage{pifont}
 \RequirePackage{colortbl}
 \RequirePackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
+
+%%%%% Add fancy page chapter sides %%%%%
+\pagestyle{plain}% needed for fancy borders
+\newcounter{chapshift}
+\addtocounter{chapshift}{-1}
+
+\newcommand\pageSideColor{%
+	black!\arabic{pageDarkness}%
+}
+
+\newcounter{pageDarkness}
+\setcounter{pageDarkness}{0}
+
+\newcommand\ChapFrame{%
+  \AddEverypageHook{%
+    \ifodd\value{page}
+      \backgroundsetup{contents={%
+        \begin{tikzpicture}[overlay,remember picture]
+          \node[
+            fill=\pageSideColor,
+            inner sep=5pt,
+            rectangle,
+            text width=1.2cm,
+            text height=4cm,
+            align=center,
+            anchor=north east
+          ]
+          at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
+          {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
+              \raggedright\textcolor{black}{\scshape\leftmark}}}};
+        \end{tikzpicture}%
+      }%
+    }
+    \else
+      \backgroundsetup{contents={%
+        \begin{tikzpicture}[overlay,remember picture]
+        \node[
+          fill=\pageSideColor,
+          inner sep=5pt,
+          rectangle,
+          text width=1.2cm,
+          text height=4cm,
+          align=center,
+          anchor=north west
+        ]
+        at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
+        {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
+            \raggedright\textcolor{black}{\scshape\leftmark}}}};
+        \end{tikzpicture}%
+      }%
+    }
+    \fi
+  \BgMaterial}%
+  \stepcounter{chapshift}%
+  \addtocounter{pageDarkness}{5}
+}
+
+% redefinition of \chaptermark to contain only the title
+\renewcommand\chaptermark[1]{\markboth{\thechapter.~#1}{}}
+
+
+%%%%% TColorBox Basic Setup %%%%%
 
 \tcbset{enhanced, drop shadow east,
 colframe=gray,colbacktitle=black!5!white,
@@ -170,12 +238,13 @@ bookmarks=true]%
 \titleformat{\chapter}[display]
 {\bfseries}
 {\begin{tikzpicture}
-  \node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
-  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
+  \node[minimum width=\linewidth, text=\pageSideColor, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
+  \node[minimum width=.8\textwidth, text=white, inner sep=3, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
   \node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
-{\Huge\FancyFont}
+{\Huge\FancyFont\ChapFrame}
+
 
 \titleformat{\section}[frame]
 {\needspace{20em}\normalfont}
