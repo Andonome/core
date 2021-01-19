@@ -49,7 +49,7 @@
 }
 
 \newcounter{pageDarkness}
-\setcounter{pageDarkness}{15}
+\setcounter{pageDarkness}{0}
 
 \newcommand\ChapFrame{%
   \AddEverypageHook{%
@@ -65,7 +65,7 @@
             align=center,
             anchor=north east
           ]
-          at ($ (current page.north east) + (-0cm,-2.7*\thechapshift cm) $)
+          at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
           {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
               \raggedright\textcolor{black}{\scshape\leftmark}}}};
         \end{tikzpicture}%
@@ -83,7 +83,7 @@
           align=center,
           anchor=north west
         ]
-        at ($ (current page.north west) + (-0cm,-2.7*\thechapshift cm) $)
+        at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
         {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
             \raggedright\textcolor{black}{\scshape\leftmark}}}};
         \end{tikzpicture}%
@@ -92,7 +92,7 @@
     \fi
   \BgMaterial}%
   \stepcounter{chapshift}%
-  \addtocounter{pageDarkness}{7}
+  \addtocounter{pageDarkness}{5}
 }
 
 % redefinition of \chaptermark to contain only the title
@@ -239,7 +239,7 @@ bookmarks=true]%
 {\bfseries}
 {\begin{tikzpicture}
   \node[minimum width=\linewidth, text=\pageSideColor, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
-  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
+  \node[minimum width=.8\textwidth, text=white, inner sep=3, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
   \node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
