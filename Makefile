@@ -1,16 +1,16 @@
 filename=main
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
-	pdflatex ${filename}.tex
 ${filename}.pdf: ${filename}.ind ${filename}.glg
 svg-inkscape:
 	pdflatex -shell-escape ${filename}.tex
-${filename}.ind: svg-inkscape ${filename}.idx
+${filename}.ind: svg-inkscape ${filename}.idx $(wildcard *.tex)
 	pdflatex ${filename}.tex
 	makeindex ${filename}.idx
-${filename}.glg: svg-inkscape ${filename}.glo
+${filename}.glg: svg-inkscape
 	pdflatex ${filename}.tex
 	makeglossaries ${filename}
+	pdflatex ${filename}.tex
 resources:
 	pdflatex CS/resources.tex
 tree:
