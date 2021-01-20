@@ -51,50 +51,58 @@
 	black!\arabic{pageDarkness}%
 }
 
+\newtoggle{sideTab}
+\settoggle{sideTab}{true}
+
 \newcommand\ChapFrame{%
-  \AddEverypageHook{%
-    \ifodd\value{page}
-      \backgroundsetup{contents={%
-        \begin{tikzpicture}[overlay,remember picture]
-          \node[
-            fill=\pageSideColor,
-            inner sep=5pt,
-            rectangle,
-            text width=1.2cm,
-            text height=4cm,
-            align=center,
-            anchor=north east
-          ]
-          at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
-          {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
-              \raggedright\textcolor{white}{\scshape\leftmark}}}};
-        \end{tikzpicture}%
-      }%
-    }
-    \else
-      \backgroundsetup{contents={%
-        \begin{tikzpicture}[overlay,remember picture]
-        \node[
-          fill=\pageSideColor,
-          inner sep=5pt,
-          rectangle,
-          text width=1.2cm,
-          text height=4cm,
-          align=center,
-          anchor=north west
-        ]
-        at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
-        {\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
-            \raggedright\textcolor{white}{\scshape\leftmark}}}};
-        \end{tikzpicture}%
-      }%
-    }
-    \fi
-  \BgMaterial}%
-  \stepcounter{chapshift}%
-  \ifnum\value{pageDarkness}<90
+	\AddEverypageHook{%
+		\iftoggle{sideTab}%
+		{
+		\ifodd\value{page}
+			\backgroundsetup{contents={%
+				\begin{tikzpicture}[overlay,remember picture]
+					\node[
+						fill=\pageSideColor,
+						inner sep=5pt,
+						rectangle,
+						text width=1.2cm,
+						text height=4cm,
+						align=center,
+						anchor=north east
+					]
+			 		at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
+			 		{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
+			 		\raggedright\textcolor{white}{\scshape\leftmark}}}};
+				\end{tikzpicture}%
+			}%
+		}
+		\else
+			\backgroundsetup{contents={%
+				\begin{tikzpicture}[overlay,remember picture]
+				\node[
+					fill=\pageSideColor,
+					inner sep=5pt,
+					rectangle,
+					text width=1.2cm,
+					text height=4cm,
+					align=center,
+					anchor=north west
+				]
+				at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
+				{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
+					\raggedright\textcolor{white}{\scshape\leftmark}}}};
+				\end{tikzpicture}%
+			}%
+		}
+		\fi
+		}
+		{}%
+	\BgMaterial
+	}%
+	\stepcounter{chapshift}%
+	\ifnum\value{pageDarkness}<90
 	\addtocounter{pageDarkness}{10}
-  \fi
+	\fi
 }
 
 % redefinition of \chaptermark to contain only the title
