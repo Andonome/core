@@ -167,6 +167,17 @@ A caster with Aldaron 2 and Fate 3 would have the following spells to choose fro
 
 # Project Notes
 
+## Installation
+
+Dependencies:
+
+- git
+- git-lfs
+- inkscape
+- pdflatex (lots of packages)
+
+Install by typing `make`, in the directory, and the Makefile should do the rest.
+
 ## LaTeX
 
 This thing's written in LaTeX, a magical document format where you describe the layout to the computer, then the computer does the layout for you.
