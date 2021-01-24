@@ -11,8 +11,10 @@ ${filename}.glg: svg-inkscape
 	pdflatex ${filename}.tex
 	makeglossaries ${filename}
 	pdflatex ${filename}.tex
-resources:
+resources: resources.pdf
+resources.pdf:
 	pdflatex CS/resources.tex
+all: resources.pdf main.pdf
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
