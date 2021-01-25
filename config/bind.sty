@@ -298,7 +298,7 @@ bookmarks=true]%
 \renewcommand{\mannerism}{#4}
 \renewcommand{\archetype}{#5}
 }
-\newcommand{\T}{\opposition\settoggle{team}{false}} % groups
+\newcommand{\T}{\opposition\settoggle{team}{true}} % groups
 \newcommand{\M}{\mars} % male
 \newcommand{\F}{\venus} % female
 \newcommand{\E}{\mercury} % blood casters
@@ -324,24 +324,30 @@ bookmarks=true]%
 	\setcounter{secnumdepth}{1}
 }
 
+\newcounter{r4}
+\setcounter{r4}{\day}
+	\whileboolexpr{
+		test {\ifnumcomp{\value{r4}}{>}{4}}
+	}
+	{\addtocounter{r4}{-3}}
+
 \newcounter{r2}
-\setcounter{r2}{1}
+\setcounter{r2}{\value{r4}}
 \newcounter{r2b}
-\setcounter{r2}{2}
+	\setcounter{r2b}{\value{r2}}
+	\addtocounter{r2b}{-1}
 \newcounter{r2c}
 \setcounter{r2c}{2}
 \newcounter{r3}
 \setcounter{r3}{\month}
-\divide\value{r3} by 4
+	\divide\value{r3} by 4
 \newcounter{r3b}
-\setcounter{r3b}{2}
+	\setcounter{r3b}{\value{r4}}
+	\addtocounter{r3b}{-1}
 \newcounter{r3c}
-\setcounter{r3c}{3}
-\newcounter{r4}
-\setcounter{r4}{\day}
+	\setcounter{r3c}{0}
 \newcounter{r4b}
-\setcounter{r4b}{\day}
-\addtocounter{r4b}{1}
+	\setcounter{r4b}{\day}
 \newcounter{r12}
 \setcounter{r12}{\month}
 \newcounter{enc}
@@ -498,7 +504,8 @@ Roll & Result \\
 
 \newcommand{\randomfour}{%
 	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}%
-	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}\setcounter{track}{\value{r4}}%
+	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}
+	\setcounter{track}{\value{r4}}%
 }
 
 \newcommand{\randomfourB}{%
@@ -509,9 +516,9 @@ Roll & Result \\
 }
 
 \newcommand{\randomdozen}{%
-\ifnum\value{r12}>12\setcounter{r12}{2}\fi%
-\ifnum\value{r12}<4\setcounter{r12}{2}\fi%
-\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
+	\ifnum\value{r12}>12\setcounter{r12}{2}\fi%
+	\ifnum\value{r12}<4\setcounter{r12}{2}\fi%
+	\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
 }
 
 \newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
@@ -586,6 +593,4 @@ Roll & Result \\
 & \ding{111} & \ding{111} & \ding{111} \\
 }
 
-
 \newcommand{\longline}{\line(1,0){340}\par\vspace{.2cm}}
-
