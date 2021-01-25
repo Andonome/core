@@ -101,9 +101,6 @@
 	\BgMaterial
 	}%
 	\stepcounter{chapshift}%
-	\ifnum\value{pageDarkness}<90
-	\addtocounter{pageDarkness}{10}
-	\fi
 }
 
 % redefinition of \chaptermark to contain only the title
@@ -199,7 +196,7 @@ bookmarks=true]%
 
 
 \newcommand{\chapnumfont}{
-	\fontsize{40}{0}
+	\fontsize{50}{0}
 	\selectfont
 }
 
@@ -248,10 +245,14 @@ bookmarks=true]%
 
 \titleformat{\chapter}[display]
 {\bfseries}
-{\begin{tikzpicture}
-  \node[minimum width=\linewidth, text=\pageSideColor, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
-  \node[minimum width=.8\textwidth, text=white, inner sep=3, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
-  \node[minimum width=.2\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
+{%
+	\ifnum\value{pageDarkness}<90
+	\addtocounter{pageDarkness}{10}
+	\fi
+\begin{tikzpicture}
+  \node[minimum width=\linewidth+1em, text=white, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\Huge \headingtype};
+ \node[minimum width=.75\textwidth, text=white, inner sep=3, outer sep=0, anchor=south west, text width=.75\textwidth, align=right] at (rectinit.south west) (chapname) {};
+  \node[minimum width=.25\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.25\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
 {\Huge\FancyFont\ChapFrame}
