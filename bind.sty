@@ -247,8 +247,10 @@ bookmarks=true]%
 {\bfseries}
 {%
 	\ChapFrame
-	\ifnum\value{pageDarkness}<90
-	\addtocounter{pageDarkness}{10}
+	\ifnum\value{pageDarkness}<80
+		\addtocounter{pageDarkness}{7}
+	\else
+		\colorlet{chapnumcol}{black!40}
 	\fi
 	\hspace*{-1.5em}
 \begin{tikzpicture}
