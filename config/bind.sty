@@ -71,7 +71,7 @@
 						align=center,
 						anchor=north east
 					]
-			 		at ($ (current page.north east) + (-0cm,-1*\thechapshift cm) $)
+			 		at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
 			 		{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
 			 		\raggedright\textcolor{white}{\scshape\rightmark}}}};
 				\end{tikzpicture}%
@@ -89,7 +89,7 @@
 					align=center,
 					anchor=north west
 				]
-				at ($ (current page.north west) + (-0cm,-1*\thechapshift cm) $)
+				at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
 				{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
 					\raggedright\textcolor{white}{\scshape\leftmark}}}};
 				\end{tikzpicture}%
@@ -246,6 +246,7 @@ bookmarks=true]%
 \titleformat{\chapter}[display]
 {\bfseries}
 {%
+	\ChapFrame
 	\ifnum\value{pageDarkness}<90
 	\addtocounter{pageDarkness}{10}
 	\fi
@@ -265,7 +266,7 @@ bookmarks=true]%
 \footnotesize
 \enspace \fancyfont SECTION \thesection\enspace}
 {8pt}
-{\Large\bfseries\filcenter\fancyfont\ChapFrame}
+{\Large\bfseries\filcenter\fancyfont}
 
 \titleformat{\subsection}%
 	{\needspace{9em}\center\large\bfseries}%
