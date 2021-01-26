@@ -249,8 +249,9 @@ bookmarks=true]%
 	\ifnum\value{pageDarkness}<90
 	\addtocounter{pageDarkness}{10}
 	\fi
+	\hspace*{-1.5em}
 \begin{tikzpicture}
-  \node[minimum width=\linewidth+1em, text=white, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\Huge \headingtype};
+  \node[minimum width=\linewidth+3em, text=white, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\Huge \headingtype};
  \node[minimum width=.75\textwidth, text=white, inner sep=3, outer sep=0, anchor=south west, text width=.75\textwidth, align=right] at (rectinit.south west) (chapname) {};
   \node[minimum width=.25\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.25\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
