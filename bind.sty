@@ -71,7 +71,7 @@
 						align=center,
 						anchor=north east
 					]
-			 		at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
+			 		at ($ (current page.north east) + (-0cm,-1*\thechapshift cm) $)
 			 		{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
 			 		\raggedright\textcolor{white}{\scshape\rightmark}}}};
 				\end{tikzpicture}%
@@ -256,7 +256,7 @@ bookmarks=true]%
   \node[minimum width=.25\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.25\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
-{\Huge\FancyFont\ChapFrame}
+{\Huge\FancyFont}
 
 
 \titleformat{\section}[frame]
@@ -265,7 +265,7 @@ bookmarks=true]%
 \footnotesize
 \enspace \fancyfont SECTION \thesection\enspace}
 {8pt}
-{\Large\bfseries\filcenter\fancyfont}
+{\Large\bfseries\filcenter\fancyfont\ChapFrame}
 
 \titleformat{\subsection}%
 	{\needspace{9em}\center\large\bfseries}%
@@ -441,7 +441,7 @@ Roll & Result \\
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
+\newcommand{\story}[2]{\needspace{4em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
 \newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{Antagonists!#2}}
 
