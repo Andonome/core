@@ -12,7 +12,7 @@ ${filename}.glg: svg-inkscape
 	makeglossaries ${filename}
 	pdflatex ${filename}.tex
 resources: resources.pdf
-resources.pdf:
+resources.pdf: CS/$(wildcard *.tex)
 	pdflatex CS/resources.tex
 all: resources.pdf main.pdf
 tree:
