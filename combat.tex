@@ -441,6 +441,20 @@ Many creatures have a \gls{dr} from natural armour, representing especially thic
 
 \iftoggle{verbose}{Vitals Shots not only provide incentive for people to push their Strike Factor as high as possible, even at the expense of their own defence.  It also provides an equalizer for weaker forces as even the most heavily armoured creature can be struck by a lucky blow.}{}
 
+\subsection{Stacking Armour}
+\label{stackingarmour}
+
+Some creatures have a natural \gls{dr}, which would then stack with their armour.
+The primary armour counts for its full value, and the lower \gls{dr} score counts for half.
+Any tertiary armour counts for a quarter, and so on.
+Once you have a total, round up anything over half.
+\iftoggle{verbose}{
+
+	For example, a basilisk with \gls{dr} 4 might die, and then get raised from the dead by a necromancer.
+	The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
+	If the mage were crazy enough to add plate armour to the basilisk, the total \gls{dr} would be $5 + \frac{4}{2} + \frac{2}{4} = 7.25$, or `7'.
+}{}
+
 \subsection{Weight}
 \index{Weight}
 
@@ -449,6 +463,11 @@ The \gls{weightrating} above are for Partial Armour.
 If anyone wears Complete armour the Weight is increased by 1, so Complete chain armour which comes past the knees, has a helmet and uses arm-guards, would have a \gls{weightrating} of 2.
 
 Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
+
+\subsubsection{Stacking}
+
+Adding extra weight works with same as adding armour -- just count the heaviest item, and half of the second, a quarter of the next, and so on.
+Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrating} of 3 would have a total \gls{weightrating} of 6.
 
 \subsection{Noise}
 
