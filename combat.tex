@@ -448,11 +448,14 @@ Some creatures have a natural \gls{dr}, which would then stack with their armour
 The primary armour counts for its full value, and the lower \gls{dr} score counts for half.
 Any tertiary armour counts for a quarter, and so on.
 Once you have a total, round up anything over half.
+Stacked armour can consist of both partial and complete layers, meaning a roll could bypass one set of armour by rolling 3 over the creature's \gls{tn}, but bypass all armour with a roll of 5 over the \gls{tn}.
 \iftoggle{verbose}{
 
 	For example, a basilisk with \gls{dr} 4 might die, and then get raised from the dead by a necromancer.
 	The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
 	If the mage were crazy enough to add plate armour to the basilisk, the total \gls{dr} would be $5 + \frac{4}{2} + \frac{2}{4} = 7.25$, or `7'.
+
+	Of course if this were \textit{partial} plate armour, any roll which gets 3 over the basilisk's \gls{tn} would only get the \gls{dr} of 5.
 }{}
 
 \subsection{Weight}
@@ -483,11 +486,6 @@ Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrat
 
 \index{Combat!Perfect Strikes}Rolling a \gls{natural} `12' in combat, i.e. rolling two 6's, means the roll was a Perfect Strike. A Perfect Strike is guaranteed to hit even if it doesn't reach the opponent's \gls{tn}, it ignores both Partial and Complete armour (covered below) and it grants +2 Damage.
 
-\subsection{Stacking Armour}
-
-Characters gain \gls{dr} from armour, but animals can gain  \gls{dr} from a thick hide, while the undead gain \gls{dr} from having less need of a functioning body.
-When multiple types of \gls{dr} stack, the second counts for only half (rounded up), and any tertiary damage types count for a quarter, and so on.
-
 \end{multicols}
 
 \section{\glsentrylongpl{fp}}\label{fate_points}\index{Fate Points}
@@ -509,7 +507,6 @@ When multiple types of \gls{dr} stack, the second counts for only half (rounded 
 	\end{xpbox}
 
 \end{wraptable}
-
 
 At this point you might be wondering how anyone is going to survive past their first battle.
 6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
