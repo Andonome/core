@@ -342,33 +342,25 @@ Enchanters can calm down scared people including those who have failed a Morale 
 While under the care of an enchanter, all Morale Checks gain a bonus equal to the spell's level plus the Enchanter's Intelligence Bonus.
 
 \spell{Dream Walk}{Continuous}{Empathy}{See a target's Dream}\\
-The mage focusses on a dreaming target and perceives their dreams.
+The mage focusses on a dreaming target and perceives their dreams while interacting with them.
 
-\begin{wrapfigure}{r}{.25\textwidth}
+Those inside a dream can use any spell, as long as their relevant Skill is equal to the level of sphere they want to employ, as if they were on the Path of Blood.
+\iftoggle{verbose}{%
+	For example, someone with Survival 1 can use Plantform from the Aldaron sphere (which is a level 1 spell, and uses the Survival Skill).
+	Someone with Empathy 2 could use the Enchantment spells \textit{Calm}, and \textit{Focus}, but not \textit{Sleep} (as this is a level 3 spell.)
 
-	\begin{rollchart}
-	
-		Margin & Result \\\hline
-		
-		0 & Spotted \\
-	
-		2 & Solo Journey \\
-	
-		4 & Observation \\
-	
-	\end{rollchart}
+	Their total \glspl{mp} determine their Metamagic ability, as usual.
+}{}
+All dreamers can use their standard spheres in addition to any gained through these lucid dreaming abilities.
 
-\end{wrapfigure}
-
-Anyone within a dream can cast any spells.
-Any damage inflicted reduces to $1/5$th of that Damage, before being converted into Fatigue Points.
-Any enchantment spells work as normal.
-
-Illusion spells are bolstered, and always have Strength, Dexterity, and Speed Attributes equal to the spell's level.
-Everyone in dreams has +1 levels in the Illusion sphere, so everyone has at least 1 level in the illusion sphere, although they may not have the mana to cast anything.
-
-If the caster fails at the roll, they have been spotted by the dreamer, and the dreamer will easily understand that another sentience creature has violated their space.
 The caster can interact normally with the target, and those on good terms can communicate with each other.
+
+Anyone damaged in a dream loses \glspl{mp} instead of \glspl{hp}.
+Everyone has a natural \gls{dr} equal to double their Charisma Bonus.
+Once they receive damage without having further \glspl{mp} to sacrifice, they wake up.
+\iftoggle{verbose}{
+	The spell can be used in this way to exhaust people, as it robs them of the ability to recover \glspl{fatigue} while sleeping.
+	}{}
 
 A \textit{Wide Dream Walk} spell pulls targets into a single dream space.
 
