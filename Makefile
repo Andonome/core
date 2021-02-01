@@ -1,7 +1,6 @@
 filename=example
 output: ${filename}.pdf
-	pdflatex ${filename}.tex
-${filename}.pdf:
+${filename}.pdf: ${filename}.tex bind.sty monsters.sty
 	pdflatex ${filename}.tex
 new:
 	if [ ! -d .git ] && [ -e ../.git ]
@@ -9,4 +8,4 @@ new:
 		cp -n main.tex .gitignore ..
 	fi
 clean:
-	rm -r *.{aux,toc,acn,acr,log,ptc,out,idx,ist,alg,glo} 2>/dev/null
+	rm -r *.{pdf,aux,toc,acn,acr,log,ptc,out,idx,ist,alg,glo} 2>/dev/null

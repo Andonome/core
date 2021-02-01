@@ -1,6 +1,8 @@
 \ProvidesPackage{bind}
-\RequirePackage{glossaries}
+\RequirePackage[acronym]{glossaries}
+\setacronymstyle{short-long-desc}
 \RequirePackage{glossary-mcols}
+\RequirePackage{glossaries-extra}
 \RequirePackage{gfsartemisia-euler} % fancy fonts
 \RequirePackage[T1]{fontenc} % 
 \RequirePackage{stmaryrd} % For boxy Maths symbols
@@ -9,6 +11,12 @@
 \RequirePackage{appendix}
 \RequirePackage{geometry} % changes page borders
 	\geometry{margin=50pt}
+\RequirePackage[
+  scale=1,
+  angle=0,
+  opacity=1,
+  contents={}
+]{background}% for fancy borders
 \RequirePackage{svg}
 \RequirePackage{alltt}
 	\svgsetup{width=\textwidth}
@@ -26,11 +34,80 @@
 \RequirePackage{titlesec,titletoc}
 \RequirePackage{needspace}
 \RequirePackage{tikz}
-	\usetikzlibrary{mindmap,trees}
+	\usetikzlibrary{calc,mindmap,trees}% calc for fancy borders
 \RequirePackage{pifont}
 \RequirePackage{colortbl}
 \RequirePackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
+
+%%%%% Add fancy page chapter sides %%%%%
+\pagestyle{plain}% needed for fancy borders
+\newcounter{chapshift}
+\addtocounter{chapshift}{-1}
+
+\newcounter{pageDarkness}
+\setcounter{pageDarkness}{20}
+
+\newcommand\pageSideColor{%
+	black!\arabic{pageDarkness}%
+}
+
+\newtoggle{sideTab}
+\settoggle{sideTab}{true}
+
+\newcommand\ChapFrame{%
+	\AddEverypageHook{%
+		\iftoggle{sideTab}%
+		{
+		\ifodd\value{page}
+			\backgroundsetup{contents={%
+				\begin{tikzpicture}[overlay,remember picture]
+					\node[
+						fill=\pageSideColor,
+						inner sep=5pt,
+						rectangle,
+						text width=1.2cm,
+						text height=4cm,
+						align=center,
+						anchor=north east
+					]
+			 		at ($ (current page.north east) + (-0cm,-2*\thechapshift cm) $)
+			 		{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
+			 		\raggedright\textcolor{white}{\scshape\rightmark}}}};
+				\end{tikzpicture}%
+			}%
+		}
+		\else
+			\backgroundsetup{contents={%
+				\begin{tikzpicture}[overlay,remember picture]
+				\node[
+					fill=\pageSideColor,
+					inner sep=5pt,
+					rectangle,
+					text width=1.2cm,
+					text height=4cm,
+					align=center,
+					anchor=north west
+				]
+				at ($ (current page.north west) + (-0cm,-2*\thechapshift cm) $)
+				{\rotatebox{90}{\hspace*{.3cm}\parbox[c][1.5cm][t]{3.4cm}{%
+					\raggedright\textcolor{white}{\scshape\leftmark}}}};
+				\end{tikzpicture}%
+			}%
+		}
+		\fi
+		}
+		{}%
+	\BgMaterial
+	}%
+	\stepcounter{chapshift}%
+}
+
+% redefinition of \chaptermark to contain only the title
+\renewcommand\chaptermark[1]{\markboth{\thechapter.~#1}{}}
+
+
+%%%%% TColorBox Basic Setup %%%%%
 
 \tcbset{enhanced, drop shadow east,
 colframe=gray,colbacktitle=black!5!white,
@@ -50,6 +127,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \RequirePackage{xr-hyper}
 \RequirePackage[
 pdfstartpage=2,
+hidelinks=true,
 bookmarks=true]%
 {hyperref}
 
@@ -57,7 +135,7 @@ bookmarks=true]%
 
 \newcommand*{\externalReferent}[1]{
 	\newtoggle{#1}
-	\IfFileExists{../#1/main.tex}{
+	\IfFileExists{../#1/main.aux}{
 		\makeatletter
 		\@addtofilelist{../#1/main.tex}
 		\@addtofilelist{../#1/main.aux}%
@@ -80,6 +158,15 @@ bookmarks=true]%
 \begin{quote}#1\end{quote}%
 \old@endpart}
 \makeatother
+
+%%%%%%%%%% Give higher penalty to ~
+% The ~ character usually functions as a space with a high penalty for line breaks.
+% This stops the line breaks altogether, so we can write 'Athletics 3', without a line-break between the Skill and the number.
+
+\DeclareRobustCommand{\nobreakspace}{%
+   \leavevmode\nobreak\ }
+\catcode `\~=13
+\def~{\nobreakspace{}}
 
 %%%%% Make table of contents two column
 
@@ -109,7 +196,7 @@ bookmarks=true]%
 
 
 \newcommand{\chapnumfont}{
-	\fontsize{40}{0}
+	\fontsize{50}{0}
 	\selectfont
 }
 
@@ -129,35 +216,63 @@ bookmarks=true]%
 
 \newcommand{\headingtype}{CHAPTER}
 
+\newcommand{\pic}[1]{
+	\noindent\includesvg[width=\linewidth]{images/#1}
+
+}
+
 \newcommand{\sidepic}[2][5]{
-	\needspace{2cm}\begin{wrapfigure}{O}{.#1\linewidth}
+	\needspace{2cm}\begin{wrapfigure}{R}{.#1\linewidth}
 \noindent\includesvg[width=\linewidth]{images/#2}
 \end{wrapfigure}
 }
 
 \newcommand{\sidejpg}[3][5]{
 	\iftoggle{verbose}{
-		\begin{wrapfigure}{O}{.#1\linewidth}
+		\needspace{12em}%
+		\begin{wrapfigure}{R}{.#1\linewidth}
 			\noindent\includegraphics[width=\linewidth]{images/#2}
 		#3
 	\end{wrapfigure}
 }
+\noindent
 }
 
-\colorlet{chapnumcol}{black!55}
+\newcommand{\toppic}[2]{
+	\iftoggle{verbose}{
+		\begin{figure*}[t!]
+			\IfFileExists{images/#1.svg}{
+				\includesvg[width=\textwidth]{images/#1}
+			}{
+				\includegraphics[width=\textwidth]{images/#1.jpg}
+			}
+		\end{figure*}
+	}
+}
+
+\colorlet{chapnumcol}{black!100}
 
 \newcommand{\FancyFont}{}
 \newcommand{\fancyfont}{}
 
 \titleformat{\chapter}[display]
 {\bfseries}
-{\begin{tikzpicture}
-  \node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
-  \node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\FancyFont\headingtype~~};
-  \node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
+{%
+	\ChapFrame
+	\ifnum\value{pageDarkness}<80
+		\addtocounter{pageDarkness}{7}
+	\else
+		\colorlet{chapnumcol}{black!40}
+	\fi
+	\hspace*{-1.5em}
+\begin{tikzpicture}
+  \node[minimum width=\linewidth+3em, text=white, fill=\pageSideColor, inner sep=1, outer sep=0, anchor=south] (rectinit) {\Huge \headingtype};
+ \node[minimum width=.75\textwidth, text=white, inner sep=3, outer sep=0, anchor=south west, text width=.75\textwidth, align=right] at (rectinit.south west) (chapname) {};
+  \node[minimum width=.25\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.25\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
 {\Huge\FancyFont}
+
 
 \titleformat{\section}[frame]
 {\needspace{20em}\normalfont}
@@ -167,7 +282,12 @@ bookmarks=true]%
 {8pt}
 {\Large\bfseries\filcenter\fancyfont}
 
-\titleformat{\subsection}{\needspace{10em}\center\large\bfseries}{}{1em}{}[\rule{.9\linewidth}{.2pt}]
+\titleformat{\subsection}%
+	{\needspace{9em}\center\large\bfseries}%
+	{}%
+	{1em}%
+	{}%
+	[\rule{.9\linewidth}{.2pt}]
 %
 \titleformat{\subsubsection}
 {\needspace{3em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
@@ -195,7 +315,7 @@ bookmarks=true]%
 \renewcommand{\mannerism}{#4}
 \renewcommand{\archetype}{#5}
 }
-\newcommand{\T}{\opposition\settoggle{team}{false}} % groups
+\newcommand{\T}{\opposition\settoggle{team}{true}} % groups
 \newcommand{\M}{\mars} % male
 \newcommand{\F}{\venus} % female
 \newcommand{\E}{\mercury} % blood casters
@@ -221,24 +341,30 @@ bookmarks=true]%
 	\setcounter{secnumdepth}{1}
 }
 
+\newcounter{r4}
+\setcounter{r4}{\day}
+	\whileboolexpr{
+		test {\ifnumcomp{\value{r4}}{>}{4}}
+	}
+	{\addtocounter{r4}{-3}}
+
 \newcounter{r2}
-\setcounter{r2}{1}
+\setcounter{r2}{\value{r4}}
 \newcounter{r2b}
-\setcounter{r2}{2}
+	\setcounter{r2b}{\value{r2}}
+	\addtocounter{r2b}{-1}
 \newcounter{r2c}
 \setcounter{r2c}{2}
 \newcounter{r3}
 \setcounter{r3}{\month}
-\divide\value{r3} by 4
+	\divide\value{r3} by 4
 \newcounter{r3b}
-\setcounter{r3b}{2}
+	\setcounter{r3b}{\value{r4}}
+	\addtocounter{r3b}{-1}
 \newcounter{r3c}
-\setcounter{r3c}{3}
-\newcounter{r4}
-\setcounter{r4}{\day}
+	\setcounter{r3c}{0}
 \newcounter{r4b}
-\setcounter{r4b}{\day}
-\addtocounter{r4b}{1}
+	\setcounter{r4b}{\day}
 \newcounter{r12}
 \setcounter{r12}{\month}
 \newcounter{enc}
@@ -323,14 +449,14 @@ Roll & Result \\
 
 \newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{adjusted title=Encounters in #1,arc=1mm,tabularx={XXp{.6\textwidth}},code={\setcounter{enc}{19}\setcounter{list}{18}}}
 
-\newtcolorbox{rollchart}{tabularx={cp{.7\linewidth}},arc=1mm}
+\newtcolorbox{rollchart}{tabularx={p{.25\linewidth}X},arc=1mm}
 
 \newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
 
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\story}[2]{\needspace{2em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
+\newcommand{\story}[2]{\needspace{4em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
 
 \newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{Antagonists!#2}}
 
@@ -375,8 +501,15 @@ Roll & Result \\
 	\ifnum\value{r3}<1\setcounter{r3}{2}\fi%
 }
 
-\newcommand{\randomthreeB}{
-	\ifnumcomp{\value{r3b}}{>}{2}{\setcounter{r3b}{1}}{\addtocounter{r3b}{1}}
+\newcommand{\randomthreeB}{%
+	\ifnum\value{r3b}>2%
+		\setcounter{r3b}{1}%
+	\else%
+		\addtocounter{r3b}{1}%
+	\fi%
+	\ifnum\value{r3b}<1%
+		\setcounter{r3b}{3}
+	\fi%
 }
 
 \newcommand{\randomthreeC}{
@@ -388,7 +521,8 @@ Roll & Result \\
 
 \newcommand{\randomfour}{%
 	\ifnumcomp{\value{r4}}{>}{3}{\setcounter{r4}{1}}{\addtocounter{r4}{1}}%
-	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}\setcounter{track}{\value{r4}}%
+	\ifnumcomp{\value{r4}}{<}{1}{\setcounter{r4}{1}}{}
+	\setcounter{track}{\value{r4}}%
 }
 
 \newcommand{\randomfourB}{%
@@ -399,9 +533,9 @@ Roll & Result \\
 }
 
 \newcommand{\randomdozen}{%
-\ifnum\value{r12}>12\setcounter{r12}{2}\fi%
-\ifnum\value{r12}<4\setcounter{r12}{2}\fi%
-\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
+	\ifnum\value{r12}>12\setcounter{r12}{2}\fi%
+	\ifnum\value{r12}<4\setcounter{r12}{2}\fi%
+	\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
 }
 
 \newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
@@ -476,6 +610,4 @@ Roll & Result \\
 & \ding{111} & \ding{111} & \ding{111} \\
 }
 
-
 \newcommand{\longline}{\line(1,0){340}\par\vspace{.2cm}}
-
