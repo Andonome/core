@@ -238,6 +238,18 @@ bookmarks=true]%
 \noindent
 }
 
+\newcommand{\toppic}[2]{
+	\iftoggle{verbose}{
+		\begin{figure*}[t!]
+			\IfFileExists{images/#1.svg}{
+				\includesvg[width=\textwidth]{images/#1}
+			}{
+				\includegraphics[width=\textwidth]{images/#1.jpg}
+			}
+		\end{figure*}
+	}
+}
+
 \colorlet{chapnumcol}{black!100}
 
 \newcommand{\FancyFont}{}

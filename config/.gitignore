@@ -28,7 +28,6 @@ svg-inkscape
 *.ptc
 old
 *.png
-*.jpg
 *.jpeg
 *.tiff
 *.xcf
