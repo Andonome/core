@@ -1196,7 +1196,7 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 \else%
 	\knacks{\mightydraw}
 \fi}% SKILLS
-{\longbow, dagger, \ifodd\value{r2}\partialleather, \lootMedium\fi%
+{\longbow, dagger\ifodd\value{r2}, \partialleather, \lootMedium\fi%
 \iftoggle{team}{}%
 	{%
 		\ifnum\value{r12}<4%
