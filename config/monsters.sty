@@ -2081,3 +2081,48 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\addtocounter{xpbonus}{3}}
 }
 
+%%%% items from bastards of bann
+
+\newcommand{\mindflayer}[1][\npc{\E}{Mind Flayer}\setcounter{gold}{100}]{
+	#1
+	\randomtwo
+	\addtocounter{enc}{1}
+	\randomtwoB
+	\addtocounter{r2b}{-1}
+	\randomtwoC
+	\addtocounter{r2c}{-1}
+	\randomthree
+	\randomthreeC
+	\addtocounter{age}{1}
+	\randomthreeB
+	\randomthreeC
+	\randomfour
+	\randomfourB
+	\addtocounter{r4b}{-2}
+	\person{\arabic{r2c}}% STRENGTH
+	{\arabic{r2c}}% DEXTERITY 
+	{\arabic{r4b}}% SPEED
+	{{\arabic{enc}}% INTELLIGENCE
+	{2}% WITS
+	{-5}}% CHARISMA
+	{0}% DR
+	{\arabic{r2b}}% COMBAT
+	{\ifodd\value{r3b}Crafts \arabic{r2}, \fi Deceit \arabic{r3b}, Tactics \arabic{r3c}\Path{Divinity}%
+	{\ifodd\value{r4b}%
+		Force \arabic{r3}, %
+		\addtocounter{sp}{\value{r3}}%
+		\addtocounter{sp}{\value{r3}}%
+		\addtocounter{sp}{\value{r3}}%
+		\addtocounter{sp}{\value{enc}}%
+		\lockedmana{\value{r3}}
+	\fi%
+	\ifodd\value{r3c}%
+		Illusion \arabic{r4}, %
+	\fi%
+	\addtocounter{r3b}{1}%
+	Enchantment \arabic{r3b}
+	}
+}% SKILLS
+	{\iftoggle{bestiarychapter}{\ifnum\value{gold}=100\lootMagic\fi}{\Dagger}}% EQUIPMENT
+	{\mana{6}}
+}
