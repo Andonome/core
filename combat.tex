@@ -555,23 +555,23 @@ One exception here is creatures without a Charisma Attribute. Animals, undead an
 \newcommand{\fatiguechart}{
 
 	\begin{tcolorbox}[title={Fatigue Chart},arc=1mm,tabularx={lX}]
-		Action & Fatigue \\\hline
+		\textbf{Action} & \textbf{\Glspl{fatigue}} \\\hline
 
-		Armour & Wearing armour inflicts 1 Fatigue per \gls{weightrating} of the armour. \\
+		Armour & Wearing armour inflicts 1 \gls{fatigue} per \gls{weightrating} of the armour. \\
 
-		Bleeding & 1 Fatigue point per slashing damage. \\
+		Bleeding & 1 \gls{fatigue} per slashing damage which was not mitigated by armour. \\
 
-		Climbing & 2 Fatigue per square. \\
+		Climbing & 1 \gls{fatigue} per square. \\
 
-		Fighting & Each round inflicts 1 Fatigue Point. \\
+		Fighting & Each round inflicts 1 \gls{fatigue}. \\
 
-		Holding Breath & 2 Fatigue per round. \\
+		Holding Breath & 1 \gls{fatigue} per round. \\
 
-		Marching & 1 Fatigue point per mile. \\
+		Marching & 1 \gls{fatigue} per mile. \\
 
-		Starving & Each meal skipped inflicts 1 Fatigue plus half the character's Strength Bonus (rounded up). \\
+		Starving & Each meal skipped inflicts 1 \gls{fatigue} plus half the character's Strength Bonus (rounded up). \\
 
-		Swimming & Each square swum inflicts 1 Fatigue. \\
+		Swimming & Each square swum inflicts 1 \gls{fatigue}. \\
 
 	\end{tcolorbox}
 
@@ -599,10 +599,20 @@ Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their 
 	\fatiguechart
 \end{figure*}
 
-Fatigue is gained extremely quickly, for all manner of reasons.
-However, it is only applied at the end of the scene.
-Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
-The real danger in Fatigue is persistent action, when characters have no chance to recover from a previous battle.
+\iftoggle{verbose}{%
+
+	Fatigue is gained extremely quickly, for all manner of reasons.
+	However, it is only applied at the end of the scene.
+	Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
+	The real danger in Fatigue is persistent action, when characters have no chance to recover from a previous battle.
+
+}{
+	Each round running, climbing, in combat, or otherwise exerting oneself inflicts a \gls{fatigue}.
+	Armour also inflicts a number of \glspl{fatigue} equal to its \gls{weightrating} at the end of each scene.
+
+	Fatigue can only be gained at the end of a scene.
+}
+
 
 \paragraph{Bleeding} occurs when a character has lost \glspl{hp} to piercing or slashing weapons.
 They then gain Fatigue Points equal to the number of \glspl{hp} lost.
@@ -615,12 +625,14 @@ Fatigue inflicted from starvation is marked with an `$S$', and each of these poi
 
 \subsection{Healing Fatigue}\index{Resting}
 
-When the party take a quiet scene to rest, they can heal a number of \glspl{hp} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{hp} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.
-
-In most cases, Fatigue Points will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
-However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
+When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{hp} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
+\footnote{The day is divided into four parts. See page \pageref{time}.}
 
 \iftoggle{verbose}{
+
+	In most cases, Fatigue Points will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
+	However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
+
 	\begin{exampletext}
 
 	The next morning the trio gave a wide berth to the area between the fallen village and the mountain, in the hopes of avoiding attack from the rear.
