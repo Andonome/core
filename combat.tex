@@ -194,15 +194,21 @@ This applies to all Damage, including magical Damage. It continues through all D
 This also applies to lower Damage, so `2 Damage', would be $1D6-2$ damage.
 
 \subsection{Defence}
+\index{Active Defence}
+\index{Passive Defence}
 
-When the enemy attempts to hit you, roll for defence with your Dexterity at \gls{tn} 8 plus your opponent's Combat Skill.
-Defending costs 2 Initiative and counts as a \gls{quickaction}, so it can be done immediately.
+When the enemy attempts to hit you, roll $2D6$ against \gls{tn} 8 plus your enemy's Strike Factor (this is generally their Combat score).
+If you want to have an \gls{activeDefence}, you can spend 2 Initiative as a \gls{quickaction} to add your Dexterity Bonus, and any bonus from weapons.
+Otherwise, a \gls{passiveDefence} means you just roll the dice, and hope for a good result.
 
-Characters on 0 initiative or below suffer a -1 penalty to defence for each additional defence action.
-You might block the attacks of three fighters, but after that everyone becomes tired, so once initiative is down, defence becomes progressively more challenging.
+Characters on 0 initiative or below suffer a -1 cumulative penalty to defence for each additional defence action.
+
+The total bonus to defence, including any bonuses from weapons, is called the \textit{Evasion Factor}.
 
 \iftoggle{verbose}{
-	The total bonus to defence, including any bonuses from weapons, is called the \textit{Evasion Factor}.
+
+	Passive defence is a perfectly valid tactic -- you can rely on armour and luck (i.e. \glspl{fp}) for a while if you don't want to spend your Initiative.
+
 }{}
 
 \subsection{Movement}\index{Movement}
@@ -213,7 +219,6 @@ Characters can run 3 squares plus their Speed Bonus during this time.
 This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
 
 Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics Skill Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
-
 
 \subsection{Hit Points}
 
@@ -246,7 +251,6 @@ At the end of the scene they can make further Vitality Checks to see if they wak
 When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
 
 \glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
-
 
 \end{multicols}
 
@@ -666,9 +670,9 @@ These Fatigue Points are marked with a `$B$' instead of the usual dash across a 
 If the bleeding is not stopped, the character should bleed for the same number of points minus one on the next scene until they are dead or the bleeding has stopped on its own.
 The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
 
-\paragraph{Poisons} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to return home.
+\paragraph{Poison} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to return home.
 
-\paragraph{Starving} is another special case.
+\paragraph{Starvation} is another special case.
 Fatigue inflicted from starvation is marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
 \subsection{Healing Fatigue}\index{Resting}
@@ -1213,7 +1217,6 @@ So much for that plan.
 
 	\end{exampletext}
 }{}
-
 
 \end{multicols}
 
