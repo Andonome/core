@@ -265,6 +265,11 @@ As the story progresses, the \glspl{pc} gain \gls{xp}.
 Each part of the character can be improved by spending \gls{xp}.
 Buying basic stats is cheap while higher level stats quickly become extremely expensive.
 
+\subsubsection{Starting \glspl{xp}}
+
+Characters begin play with an amount of \glspl{xp} stipulated by the \gls{gm} depending upon the level of their campaign.
+The suggested starting \glspl{xp} is 50, with up to 150 \glspl{xp} for more advanced campaigns.
+
 \subsection{Gaining \gls{xp}}
 
 Players receive \gls{xp} from the \gls{gm} for killing monsters, pious endeavours or fulfilling one's personal goals.
@@ -426,9 +431,9 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \subsection{Concept}
 
-\sidejpg{Roch_Hercka/xp-2.jpg}{\label{roch:xp2}}
-
 Now is the time to look at your character's base Attributes and think about what they might be good at. The best place to start is your highest Attribute. If you have a positive (or simply not negative) Intelligence score, making a spell caster is a good option. Buy off any Wits penalties and put a magic sphere down on the character sheet and a couple of \glsentrylongpl{mp}. Alternatively, if your highest Trait so far is a Body Attribute perhaps this character is more suited to being a fighter. Don't worry if you have negative Body Attributes -- your starting \gls{xp} can buy all of that up to 0 quite easily.
+
+\sidejpg{Roch_Hercka/xp-2.jpg}{\label{roch:xp2}}
 
 Mixed characters are easy to make -- a spell-casting, sword-swinging elf or a dwarf who prays to dark gods and sneaks well through the shadows simply requires a couple of Traits.
 Think about which way the character is headed and at this point write something down in the character's `Concept' section at the top.
@@ -440,15 +445,7 @@ You could also wander off the traditional RPG model, playing a `lost outlander',
 My own character, Thenton, has a good Charisma score and some basic ability to fight with his enhanced human Strength Attribute.
 I think I'm going to make him a `knightly poet'.
 
-\end{exampletext}
-
-}{}
-
-\subsubsection{Starting \gls{xp}}
-
-Characters begin play with an amount of \gls{xp} stipulated by the \gls{gm} depending upon the level of their campaign.
-The suggested starting \gls{xp} is 50, with up to 150 \gls{xp} for more advanced campaigns.
-\iftoggle{verbose}{With that in mind, it's time for me to spend some of that 50 \gls{xp} on Thenton, the knightly poet.
+With that in mind, it's time for me to spend some of that 50 \gls{xp} on Thenton, the knightly poet.
 
 For a start, he'll need the Performance Skill, and he gets two specialisations with it because it's a specialised Skill.
 `Poetry' is a good start, and perhaps the flute after that, because why not? That costs 5 \gls{xp} so I have 45 left.
@@ -457,6 +454,9 @@ Since he's a fighter he needs the Dexterity penalty removed.
 Removing the penalty costs only 5 \gls{xp}, so with 10 left I'm going to buy a level of Empathy to make him a socialite.
 Deceit would also be good, but I think a knightly poet would be too naive for that.
 Finally, a member of the nobility, even a minor noble, should have some basic Academics knowledge, so his last Trait will be the first level of the Academics Skill.
+
+\end{exampletext}
+
 }{}
 
 \end{multicols}
@@ -750,30 +750,26 @@ $7\times2\times2 = 28$, so the character starts out with 28\gls{sp}.
 \iftoggle{verbose}{
 	\begin{exampletext}
 
-Thenton now only needs his starting equipment.
-We covered already that he starts with any two items worth 10 \gls{sp} or less plus one more item per Skill.
-The Combat Skill, Empathy and Performance let him start with 3 items in total.
-We'll start with some shiny Partial chainmail and a longsword so he can fight.
-His final item will be \gls{adventuringequipment}, so he'll have some flexibility for later.
+		Thenton now only needs his starting equipment.
+		We covered already that he starts with any two items worth 10 \gls{sp} or less plus one more item per Skill.
+		The Combat Skill, Empathy and Performance let him start with 3 items in total.
+		We'll start with some shiny Partial chainmail and a longsword so he can fight.
+		His final item will be \gls{adventuringequipment}, so he'll have some flexibility for later.
 
-Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4 ($9-5=4$).
-His three specialized skills double that number, making it 32 ($4\times2^3$).
-Since one of those Skills is Academics, he'll start with 32 \glspl{sp} rather than \glspl{cp}.
+		Rolling $3D6$ for his starting money, I've got a `9', so I'm starting with 4 ($9-5=4$).
+		His three specialized skills double that number, making it 32 ($4\times2^3$).
+		Since one of those Skills is Academics, he'll start with 32 \glspl{sp} rather than \glspl{cp}.
 
 	\end{exampletext}
 
-\end{multicols}
+	\npc{\M}{Thenton}
+	\settoggle{examplecharacter}{true}
 
-\npc{\M}{Thenton}
-\settoggle{examplecharacter}{true}
+	\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, \gls{adventuringequipment} x 1, 32\glspl{sp}}{}
 
-\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, \gls{adventuringequipment} x 1, 32\glspl{sp}}{}
-
-}{
+}{}
 
 \end{multicols}
-
-}
 
 \section{Time \& Space}
 

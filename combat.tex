@@ -450,7 +450,7 @@ When attacking an opponent in armour, it is possible to make a shot so precise a
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
 
-	\sidejpg{Roch_Hercka/vitals_shot.jpg}{\label{roch:vitals}}
+\pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
 
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
@@ -511,6 +511,20 @@ Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrat
 
 \begin{multicols}{2}
 
+At this point you might be wondering how anyone is going to survive past their first battle.
+6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
+The mechanism which saves the plot-important character is \glsentryfullpl{fp}.
+Every time someone would lose \glspl{hp}, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
+
+Everyone in the world begins with 5 base \gls{fp}.
+This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
+The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full allotment of \gls{fp} at the beginning of each adventure.
+\glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual.
+As a result, most \glspl{npc} effectively have 0 \gls{fp}.
+The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} \glspl{hp}.
+
+\subsection{Regaining \glsentrylongpl{fp}}
+
 \begin{wraptable}{O}{.17\textheight}
 
 	\begin{xpbox}{C}
@@ -526,20 +540,6 @@ Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrat
 	\end{xpbox}
 
 \end{wraptable}
-
-At this point you might be wondering how anyone is going to survive past their first battle.
-6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
-The mechanism which saves the plot-important character is \glsentryfullpl{fp}.
-Every time someone would lose \glspl{hp}, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
-
-Everyone in the world begins with 5 base \gls{fp}.
-This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
-The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full allotment of \gls{fp} at the beginning of each adventure.
-\glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual.
-As a result, most \glspl{npc} effectively have 0 \gls{fp}.
-The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} \glspl{hp}.
-
-\subsection{Regaining \glsentrylongpl{fp}}
 
 At the end of each Scene, players regenerate 2/5ths of their \glspl{fp}.
 Those with 5 \glspl{fp} total regenerate 2 temporary \glspl{fp}, and those with 10 \glspl{fp} regenerate 4 temporary \glspl{fp}, and so on.
@@ -663,15 +663,13 @@ The hobgoblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 
 	``Eight!'' shouts Arneson's player. ``I'm going at eight! \ I'm going for the ogre - you said he was unarmoured so we should be able to take him down with a couple of good hits''.
 
-
 	Arneson's player needs to roll an 8 to hit the ogre, so he rolls and adds +1 for his Combat Skill. His total is `11' and he hits. He has already rolled his damage die at the same time. It landed on a `2'. He adds +2 for his Strength and +1 for the sword's Damage bonus for a total of 5. The ogre shrieks in pain as Arneson's sword sticks in. Arneson's action took 6 Initiative points so he goes down to `2', and the hobgoblin has spent 2 Initiative to defend himself.
-
-	\noindent\includegraphics[width=\linewidth]{images/Boris_Pecikozic/nura_brawl.jpg}
-	\label{boris:brawl}
 
 	``Seven!'', she cries. Thenton's player jumps in. He only deals $1D6+2$ Damage but he has a much better Combat Skill of +2. He rolls to Strike but misses the ogre with a `5'. His Initiative score reduces to 1, and he reduces the hobgoblin's from 6 to 4.
 
 	``Six!'', beckons the \gls{gm}, and starts to describe leering hobgoblins stabbing at everyone's feet from the base of the great stone step the trio are sitting on. She gives them each a -1 to attack due to occupying the lower ground.
+
+	\pic{Boris_Pecikozic/nura_brawl}{\label{boris:brawl}}
 
 	A hobgoblin hits Arneson, so he spends 2 Initiative to attempt to Dodge. Arneson rolls a 7 but the \gls{tn} is 10.
 	The hobgoblin's Strength is +2 and the battle axe adds +3 Damage for a total of +5.
@@ -1320,6 +1318,8 @@ With their \gls{fp} now replenishing quickly, the group can rest and worry less 
 		That's six in total''.
 
 \vspace{1em}
+
+\needspace{3em}
 
 \textbf{Hit Points and Fatigue}
 
