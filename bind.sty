@@ -217,7 +217,12 @@ bookmarks=true]%
 \newcommand{\headingtype}{CHAPTER}
 
 \newcommand{\pic}[1]{
-	\noindent\includesvg[width=\linewidth]{images/#1}
+	\noindent%
+	\IfFileExists{images/#1.jpg}{%
+		\includegraphics[width=\linewidth]{images/#1}
+	}{%
+		\noindent\includesvg[width=\linewidth]{images/#1}
+	}
 
 }
 
@@ -290,7 +295,7 @@ bookmarks=true]%
 	[\rule{.9\linewidth}{.2pt}]
 %
 \titleformat{\subsubsection}
-{\needspace{4em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+{\needspace{3em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 %%%%% Character Sheet Tracker
 
