@@ -722,6 +722,7 @@ If a player has an \gls{adventuringequipment} item, they can decided to describe
 
 \Gls{adventuringequipment} can include any of the following items:
 
+\begin{multicols}{2}
 \begin{itemize}
 
 \item{Chalk}
@@ -736,6 +737,15 @@ If a player has an \gls{adventuringequipment} item, they can decided to describe
 \item{Writing equipment}
 
 \end{itemize}
+\end{multicols}
+
+\begin{figure*}[t]
+	\npc{\M}{Thenton}
+	\settoggle{examplecharacter}{true}
+
+	\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, \gls{adventuringequipment} x 1, 32\glspl{sp}}{}
+
+\end{figure*}
 
 \subsubsection{Starting Money}
 
@@ -761,11 +771,6 @@ $7\times2\times2 = 28$, so the character starts out with 28\gls{sp}.
 		Since one of those Skills is Academics, he'll start with 32 \glspl{sp} rather than \glspl{cp}.
 
 	\end{exampletext}
-
-	\npc{\M}{Thenton}
-	\settoggle{examplecharacter}{true}
-
-	\person{1}{0}{0}{{0}{-1}{1}}{0}{2}{Academics 1, Empathy 1, Performance 1}{\longsword, \partialchain, \gls{adventuringequipment} x 1, 32\glspl{sp}}{}
 
 }{}
 
@@ -805,18 +810,22 @@ Lastly, there is an adventure. The adventure lasts until the current plot-thread
 \subsection{Space as Squares}\index{Space}\index{Squares}\index{Areas}
 \label{space}
 
+\subsubsection{Squares}
+
 Space is tracked through \glspl{square}.
 A \gls{square} is just any unit of space within the battlefield.
 If you are using a battlemap which has squares marked out on it, then those squares are the size of a square, even if those squares happen to look very hexagonal.
 A square might be ten metres wide as each one covers an entire house when the battlefield is a large town, or it might be just two yards wide when moving through a detailed map of a dungeon.
 The precise distances represented do not matter, just so long as they consistently balance one character's ability to run away with another's ability to hit someone with a projectile.
 
-The next unit of space is the `\gls{area}'.
+\subsubsection{Areas}
+
 An \gls{area} is just any \gls{area} which looks different from another.
 While traipsing through a small dungeon, each room and cavern entered might be thought of as an \gls{area}.
 When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area a village.
 
-The final unit is a `region'.
+\subsubsection{Region}
+
 Regions encompasses a full forest, a town, or a collection of villages.
 Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.%
 \iftoggle{verbose}{%
