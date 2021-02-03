@@ -584,12 +584,47 @@ One exception here is creatures without a Charisma Attribute. Animals, undead an
 Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
 Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
+\begin{tcolorbox}[arc=1mm,tabularx={llllllllll}]
+
+	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
+	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
+	\Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
+	\multicolumn{10}{l}{Fatigue Points} \\
+	\XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
+	\multicolumn{10}{l}{Penalty: 0} \\
+	
+\end{tcolorbox}
+
 Below the character's \gls{hp} bar are spaces for Fatigue Points to be gained.
 Once the character has more Fatigue Points than their current \glspl{hp}, they take a -1 penalty for every Fatigue Point in excess of their \glspl{hp}.
- This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions.
-But it might also occur because the character has 4 Fatigue Points and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
-Characters may reach a maximum penalty of -5 due to Fatigue Points, after which they die. If the character is accruing Fatigue Points from running or wrestling, they would normally simply pass out at this point, but if they are gaining Fatigue from swimming or bleeding, the character will almost certainly just die.
+\begin{tcolorbox}[arc=1mm,tabularx={llllllllll}]
+
+	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
+	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
+	\Square & \Square & \Square & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
+	\multicolumn{10}{l}{Fatigue Points} \\
+	\XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square \\
+	\multicolumn{10}{l}{Penalty: 1} \\
+	
+\end{tcolorbox}
+
+This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions.
+But it might also occur because the character has 4 \glspl{fatigue} and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
+
+\begin{tcolorbox}[arc=1mm,tabularx={llllllllll}]
+
+	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
+	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
+	\Square & \Square & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
+	\multicolumn{10}{l}{Fatigue Points} \\
+	\XBox & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square \\
+	\multicolumn{10}{l}{Penalty: 3} \\
+	
+\end{tcolorbox}
+
+Characters may reach a maximum penalty of -5 due to \glspl{fatigue}, after which they fall unconscious.
+If the character is accruing Fatigue Points from running or wrestling, they would normally simply pass out at this point, but if they are gaining Fatigue from swimming or bleeding, the character will almost certainly just die.
 
 Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
 
@@ -599,6 +634,9 @@ Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their 
 	\fatiguechart
 \end{figure*}
 
+Each round running, climbing, in combat, or otherwise exerting oneself inflicts a \gls{fatigue}.
+Armour also inflicts a number of \glspl{fatigue} equal to its \gls{weightrating} at the end of each scene.
+
 \iftoggle{verbose}{%
 
 	Fatigue is gained extremely quickly, for all manner of reasons.
@@ -607,12 +645,20 @@ Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their 
 	The real danger in Fatigue is persistent action, when characters have no chance to recover from a previous battle.
 
 }{
-	Each round running, climbing, in combat, or otherwise exerting oneself inflicts a \gls{fatigue}.
-	Armour also inflicts a number of \glspl{fatigue} equal to its \gls{weightrating} at the end of each scene.
 
 	Fatigue can only be gained at the end of a scene.
 }
 
+\subsubsection{The Skill Discount}
+
+Characters can use skills as a sort of `\gls{dr}' against Fatigue.
+3 \glspl{round} of combat inflicts 3 \glspl{fatigue}, but someone with Combat 1 can ignore 1 Fatigue point per round of combat.%
+\footnote{Skills never help \glspl{fatigue} due to heavy items.}
+Athletics curbs \glspl{fatigue} accumulated through running, Survival curbs \glspl{fatigue} gained through marching, and so on.
+
+\subsubsection{Special Categories}
+
+\Glspl{fatigue} can represent all manner of problems a character has -- not just tiredness.
 
 \paragraph{Bleeding} occurs when a character has lost \glspl{hp} to piercing or slashing weapons.
 They then gain Fatigue Points equal to the number of \glspl{hp} lost.
@@ -620,12 +666,14 @@ These Fatigue Points are marked with a `$B$' instead of the usual dash across a 
 If the bleeding is not stopped, the character should bleed for the same number of points minus one on the next scene until they are dead or the bleeding has stopped on its own.
 The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
 
+\paragraph{Poisons} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to return home.
+
 \paragraph{Starving} is another special case.
 Fatigue inflicted from starvation is marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
 \subsection{Healing Fatigue}\index{Resting}
 
-When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{hp} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
+When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{fatigue} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
 \footnote{The day is divided into four parts. See page \pageref{time}.}
 
 \iftoggle{verbose}{
