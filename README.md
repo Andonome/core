@@ -1,11 +1,19 @@
 # BIND
 <!--
 
-The config directory is a subtree, so all commits to it should only involve files in that directory.
+# Dependencies
 
-Binary files placed here were a mistake. No further binaries accepted.
+- pdflatex (loads of packages)
+- git-lfs
+- inkscape (for composing svg images)
 
-Gits available on github and gitlab.
+# config/
+
+The config directory is a subtree, so don't touch it unless you know what you're doing.
+
+# compiling
+
+> make
 
 -->
 
