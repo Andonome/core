@@ -561,7 +561,7 @@ Characters who continue to cast Auguary receive the same answer each time until 
 
 Nobody with this power ever says ``you cannot change your fate''.  Changing your fate is the entire point of this spell.  Besides, if the spell ever appears to go wrong, the local priests will explain that it actually predicted events correctly.  It was simply your knowledge of the spell that -- somehow or other -- altered what would otherwise have been a fine prediction.
 
-\spell{Blessing}{Instant}{Academics}{Target regains $1D6 + Int$ \glspl{fp}}\\
+\spell{Blessing}{Instant}{Empathy}{Target regains $1D6 + Int$ \glspl{fp}}\\
 The priest blesses the target with the favour of the gods. The target `heals' or regenerates $1D6$ \gls{fp} plus the priest's Intelligence Bonus. This cannot take the target above their maximum \gls{fp} score.
 
 \enhancement{1}{Generous}{Heal a target for additional \glspl{fp}}
@@ -966,10 +966,13 @@ To execute the spell, the mage rolls with Intelligence and their Academics score
 This spell replicates all five levels of the enchantment sphere with the mage selecting any effect they wish; however, the mage uses Academics instead of any other Skill because the undead may only be `understood' in some technical sense, and not truly empathised with.
 
 \spell{Preservation}{Instant}{Survival}{Slow something's ageing}\\
+\iftoggle{verbose}{%
 Trainee artists and necromancers have one thing in common -- fruit.
 Students of Necromancy often begin their journey by stopping food from degrading.
-This spell gives a sort of `half-life' to rot, such that any foods affected slow their own aging process incrementally.
+}{%
+This spell gives a sort of `half-life' to rot, such that any foods, corpses, or anything else affected slow their own ageing process incrementally.
 They're not sustained in perfect condition forever, but never quite reach an entirely spoiled stage.
+}
 
 \spell{Torpor}{Continuous}{Medicine}{Make the target enter a semi-death state, ignoring Fatigue and gaining \gls{dr} 1}\\
 The target enters an altered state of semi-death.
