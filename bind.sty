@@ -543,7 +543,7 @@ Roll & Result \\
 	\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
 }
 
-\newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
+\newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection[#1]{\arabic{list}: #1}}
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
 
