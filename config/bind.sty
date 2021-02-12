@@ -218,29 +218,24 @@ bookmarks=true]%
 
 \newcommand{\pic}[1]{
 	\noindent%
-	\IfFileExists{images/#1.jpg}{%
-		\includegraphics[width=\linewidth]{images/#1}
+	\IfFileExists{images/#1.svg}{%
+		\includegraphics[width=\linewidth]{images/#1.svg}
 	}{%
-		\noindent\includesvg[width=\linewidth]{images/#1}
+		\noindent\includesvg[width=\linewidth]{images/#1.jpg}
 	}
 
 }
 
-\newcommand{\sidepic}[2][5]{
+\newcommand{\sidepic}[3][5]{
 	\needspace{2cm}\begin{wrapfigure}{R}{.#1\linewidth}
-\noindent\includesvg[width=\linewidth]{images/#2}
-\end{wrapfigure}
-}
-
-\newcommand{\sidejpg}[3][5]{
-	\iftoggle{verbose}{
-		\needspace{12em}%
-		\begin{wrapfigure}{R}{.#1\linewidth}
-			\noindent\includegraphics[width=\linewidth]{images/#2}
-		#3
+	\noindent%
+	\IfFileExists{images/#2.svg}{%
+		\includesvg[width=\linewidth]{images/#2.svg}
+	}{
+		\includesvg[width=\linewidth]{images/#2.jpg}
+	}
+	#3
 	\end{wrapfigure}
-}
-\noindent
 }
 
 \newcommand{\toppic}[2]{
@@ -251,14 +246,42 @@ bookmarks=true]%
 			}{
 				\includegraphics[width=\textwidth]{images/#1.jpg}
 			}
+			#2
+		\end{figure*}
+	}
+}
+
+\newcommand{\bottompic}[2]{
+	\iftoggle{verbose}{
+		\begin{figure*}[b!]
+			\IfFileExists{images/#1.svg}{
+				\includesvg[width=\textwidth]{images/#1}
+			}{
+				\includegraphics[width=\textwidth]{images/#1.jpg}
+			}
+			#2
 		\end{figure*}
 	}
 }
 
 \colorlet{chapnumcol}{black!100}
 
-\newcommand{\FancyFont}{}
-\newcommand{\fancyfont}{}
+%%%%% Section Formatting %%%%%
+
+\newcommand{\frontpage}[3]{
+	\begin{titlepage}
+		\centering
+		\vspace{2cm}
+		{\scshape\Huge\bfseries #1\par}
+		\vspace{2cm}
+		\includegraphics[width=0.35\textwidth]{#3}\par\vspace{1cm}
+		{\Large #2\par}
+		\vspace{1.5cm}
+		{\large Last edited \today\par}
+	
+	\end{titlepage}
+	\cleardoublepage
+}
 
 \titleformat{\chapter}[display]
 {\bfseries}
@@ -276,16 +299,16 @@ bookmarks=true]%
   \node[minimum width=.25\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.25\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
-{\Huge\FancyFont}
+{\Huge}
 
 
 \titleformat{\section}[frame]
 {\needspace{20em}\normalfont}
 {\filright
 \footnotesize
-\enspace \fancyfont SECTION \thesection\enspace}
+\enspace SECTION \thesection\enspace}
 {8pt}
-{\Large\bfseries\filcenter\fancyfont}
+{\Large\bfseries\filcenter}
 
 \titleformat{\subsection}%
 	{\needspace{9em}\center\large\bfseries}%
@@ -543,7 +566,7 @@ Roll & Result \\
 	\ifnum\value{age}>0\addtocounter{r12}{\value{age}}\else\ifnum\value{r4}>0\addtocounter{r12}{\value{r4}}\else\addtocounter{r12}{3}\fi\fi%
 }
 
-\newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection{\arabic{list}: #1}}
+\newcommand{\mapentry}[1]{\needspace{2em}\addtocounter{list}{1}\subsubsection[#1]{\arabic{list}: #1}}
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
 
