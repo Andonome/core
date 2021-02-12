@@ -219,7 +219,7 @@ bookmarks=true]%
 \newcommand{\pic}[1]{
 	\noindent%
 	\IfFileExists{images/#1.svg}{%
-		\noindent\includesvg[width=\linewidth]{images/#1.svg}
+		\noindent\includesvg[width=\linewidth]{images/#1}
 	}{%
 		\includegraphics[width=\linewidth]{images/#1.jpg}
 	}
@@ -230,7 +230,7 @@ bookmarks=true]%
 	\needspace{2cm}\begin{wrapfigure}{R}{.#1\linewidth}
 	\noindent%
 	\IfFileExists{images/#2.svg}{%
-		\includesvg[width=\linewidth]{images/#2.svg}
+		\includesvg[width=\linewidth]{images/#2}
 	}{
 		\includegraphics[width=\linewidth]{images/#2.jpg}
 	}
@@ -239,29 +239,25 @@ bookmarks=true]%
 }
 
 \newcommand{\toppic}[2]{
-	\iftoggle{verbose}{
-		\begin{figure*}[t!]
-			\IfFileExists{images/#1.svg}{
-				\includesvg[width=\textwidth]{images/#1}
-			}{
-				\includegraphics[width=\textwidth]{images/#1.jpg}
-			}
-			#2
-		\end{figure*}
-	}
+	\begin{figure*}[t!]
+		\IfFileExists{images/#1.svg}{
+			\includesvg[width=\textwidth]{images/#1}
+		}{
+			\includegraphics[width=\textwidth]{images/#1.jpg}
+		}
+		#2
+	\end{figure*}
 }
 
 \newcommand{\bottompic}[2]{
-	\iftoggle{verbose}{
-		\begin{figure*}[b!]
-			\IfFileExists{images/#1.svg}{
-				\includesvg[width=\textwidth]{images/#1}
-			}{
-				\includegraphics[width=\textwidth]{images/#1.jpg}
-			}
-			#2
-		\end{figure*}
-	}
+	\begin{figure*}[b!]
+		\IfFileExists{images/#1.svg}{
+			\includesvg[width=\textwidth]{images/#1}
+		}{
+			\includegraphics[width=\textwidth]{images/#1.jpg}
+		}
+		#2
+	\end{figure*}
 }
 
 \colorlet{chapnumcol}{black!100}
@@ -269,6 +265,7 @@ bookmarks=true]%
 %%%%% Section Formatting %%%%%
 
 \newcommand{\frontpage}[3]{
+	\iftoggle{verbose}{
 	\begin{titlepage}
 		\centering
 		\vspace{2cm}
@@ -281,6 +278,7 @@ bookmarks=true]%
 	
 	\end{titlepage}
 	\cleardoublepage
+	}{}
 }
 
 \titleformat{\chapter}[display]
