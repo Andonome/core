@@ -271,9 +271,6 @@ bookmarks=true]%
 
 \colorlet{chapnumcol}{black!100}
 
-\newcommand{\FancyFont}{}
-\newcommand{\fancyfont}{}
-
 \titleformat{\chapter}[display]
 {\bfseries}
 {%
@@ -290,16 +287,16 @@ bookmarks=true]%
   \node[minimum width=.25\textwidth, inner sep=-5, outer sep=0, anchor=south west, text width=.25\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\Roman{chapter}}};
 \end{tikzpicture}}
 {0pt}
-{\Huge\FancyFont}
+{\Huge}
 
 
 \titleformat{\section}[frame]
 {\needspace{20em}\normalfont}
 {\filright
 \footnotesize
-\enspace \fancyfont SECTION \thesection\enspace}
+\enspace SECTION \thesection\enspace}
 {8pt}
-{\Large\bfseries\filcenter\fancyfont}
+{\Large\bfseries\filcenter}
 
 \titleformat{\subsection}%
 	{\needspace{9em}\center\large\bfseries}%
