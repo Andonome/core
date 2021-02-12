@@ -219,9 +219,9 @@ bookmarks=true]%
 \newcommand{\pic}[1]{
 	\noindent%
 	\IfFileExists{images/#1.svg}{%
-		\includegraphics[width=\linewidth]{images/#1.svg}
+		\noindent\includesvg[width=\linewidth]{images/#1.svg}
 	}{%
-		\noindent\includesvg[width=\linewidth]{images/#1.jpg}
+		\includegraphics[width=\linewidth]{images/#1.jpg}
 	}
 
 }
@@ -232,7 +232,7 @@ bookmarks=true]%
 	\IfFileExists{images/#2.svg}{%
 		\includesvg[width=\linewidth]{images/#2.svg}
 	}{
-		\includesvg[width=\linewidth]{images/#2.jpg}
+		\includegraphics[width=\linewidth]{images/#2.jpg}
 	}
 	#3
 	\end{wrapfigure}
