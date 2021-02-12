@@ -271,6 +271,23 @@ bookmarks=true]%
 
 \colorlet{chapnumcol}{black!100}
 
+%%%%% Section Formatting %%%%%
+
+\newcommand{\frontpage}[3]{
+	\begin{titlepage}
+		\centering
+		\vspace{2cm}
+		{\scshape\Huge\bfseries #1\par}
+		\vspace{2cm}
+		\includegraphics[width=0.35\textwidth]{#3}\par\vspace{1cm}
+		{\Large #2\par}
+		\vspace{1.5cm}
+		{\large Last edited \today\par}
+	
+	\end{titlepage}
+	\cleardoublepage
+}
+
 \titleformat{\chapter}[display]
 {\bfseries}
 {%
