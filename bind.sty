@@ -256,6 +256,19 @@ bookmarks=true]%
 	}
 }
 
+\newcommand{\bottompic}[2]{
+	\iftoggle{verbose}{
+		\begin{figure*}[b!]
+			\IfFileExists{images/#1.svg}{
+				\includesvg[width=\textwidth]{images/#1}
+			}{
+				\includegraphics[width=\textwidth]{images/#1.jpg}
+			}
+			#2
+		\end{figure*}
+	}
+}
+
 \colorlet{chapnumcol}{black!100}
 
 \newcommand{\FancyFont}{}
