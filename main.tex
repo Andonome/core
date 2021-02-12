@@ -14,23 +14,9 @@
 
 \pagenumbering{gobble}
 
-\iftoggle{verbose}{
-
-\begin{titlepage}
-	\centering
-	\vspace{2cm}
-	{\scshape\Huge\bfseries BIND\par}
-	\vspace{2cm}
-	\includegraphics[width=0.35\textwidth]{images/Boris_Pecikozic/the_storyteller.jpg}\par\vspace{1cm}
-	{\Large The Open Source RPG\par}
-	\vspace{1.5cm}
-	{\large Last edited \today\par}
-
-\end{titlepage}
-
-\cleardoublepage
-
-}{}
+\frontpage{BIND}%
+	{The Open Source RPG}%
+	{images/Boris_Pecikozic/the_storyteller.jpg}
 
 \tableofcontents
 
