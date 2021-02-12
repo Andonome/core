@@ -265,6 +265,7 @@ bookmarks=true]%
 %%%%% Section Formatting %%%%%
 
 \newcommand{\frontpage}[3]{
+	\iftoggle{verbose}{
 	\begin{titlepage}
 		\centering
 		\vspace{2cm}
@@ -277,6 +278,7 @@ bookmarks=true]%
 	
 	\end{titlepage}
 	\cleardoublepage
+	}{}
 }
 
 \titleformat{\chapter}[display]
