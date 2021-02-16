@@ -249,6 +249,19 @@ bookmarks=true]%
 	\end{figure*}
 }
 
+\newcommand{\toppicBorder}[2]{
+	\begin{figure*}[t!]
+		\begin{tcolorbox}[colframe=black,colback=gray]
+		\IfFileExists{images/#1.svg}{
+			\includesvg[width=\textwidth]{images/#1}
+		}{
+			\includegraphics[width=\textwidth]{images/#1.jpg}
+		}
+		#2
+		\end{tcolorbox}
+	\end{figure*}
+}
+
 \newcommand{\bottompic}[2]{
 	\begin{figure*}[b!]
 		\IfFileExists{images/#1.svg}{
@@ -257,6 +270,19 @@ bookmarks=true]%
 			\includegraphics[width=\textwidth]{images/#1.jpg}
 		}
 		#2
+	\end{figure*}
+}
+
+\newcommand{\bottompicBorder}[2]{
+	\begin{figure*}[b!]
+		\begin{tcolorbox}[colframe=black,colback=gray]
+		\IfFileExists{images/#1.svg}{
+			\includesvg[width=\textwidth]{images/#1}
+		}{
+			\includegraphics[width=\textwidth]{images/#1.jpg}
+		}
+		#2
+		\end{tcolorbox}
 	\end{figure*}
 }
 
