@@ -184,8 +184,11 @@ The character then spends the mana and makes a roll against some \gls{tn} to cas
 Anyone can buy some base \gls{mp} which is then modified by their Intelligence.\footnote{See the section on Experience, page \pageref{xp}, for costs of base \gls{mp}.} For example, someone with Intelligence +1 who buys Base \gls{mp} 2 would have a store of 3 \gls{mp} to cast spells. Those with a Base \gls{mp} of 0 can still have some \gls{mp} if their Intelligence Bonus is positive.
 
 If a caster has no \gls{mp} left, they can still cast spells by paying the cost with \gls{hp} instead of \gls{mp}.
+\iftoggle{verbose}{%
 The magical energies pull the power they need from the blood and bones of the caster, leaving them with a bleeding nose, raging headache and sometimes stranger effects such as acidic pustules or discoloured skin patches.
-Many a desperate caster has died through the use of their own magic rather than an enemy's sword; a wizard with their back to the wall is a dangerous opponent indeed.\iftoggle{verbose}{\footnote{\Glsentrylongpl{hp} cannot be spent instead.}}{}
+Many a desperate caster has died through the use of their own magic rather than an enemy's sword; a wizard with their back to the wall is a dangerous opponent indeed.
+}{}
+\Glspl{fp} cannot be spent in lieu of \glspl{hp}.
 
 Mana is a fickle thing -- when lazing \ around a village it can take hours to regain even a little driblet of magic.
 When fighting in deep caves, a few minutes' focus can summon most of a mage's magical energies back.
@@ -239,9 +242,14 @@ While a tune may carry over the hilltops, the force of the magic usually remains
 
 \subsection{Duration}
 
-Some spells are instant -- a ball of fire flashes from the mage and incinerates someone, or a touch grants the favour of the gods, healing FP -- but most are continuous. Continuous spells can be cancelled at will or maintained indefinitely. However, while they are being maintained, the \gls{mp} required to cast them remains spent, lowering the mage's maximum \gls{mp}.
+Some spells are instant -- a ball of fire flashes from the mage and incinerates someone, or a touch grants the favour of the gods, healing FP -- but most are `\textit{continuous}'.
+Continuous spells can be cancelled at will or maintained indefinitely.
+However, while they are being maintained, the \gls{mp} required to cast them remains spent, lowering the mage's maximum \gls{mp}.%
+\iftoggle{verbose}{%
+\footnote{Spell enhancements (see below) do not lock mana in this way.}
 
 For example, Tauron the elven sorcerer casts a spell on himself to appear as a gnome -- all the better to blend into surrounding society. He spends 1 \gls{mp}. Later, he enchants an animal to be his companion for 2 \gls{mp}. Normally, his maximum \gls{mp} is 6, but he is currently reduced to a maximum of 3 \gls{mp} so long as he continues to be a bear-riding gnome.
+}{}
 
 These still-active spells are known as \glspl{standingspell}. Some mages operate by continuously casting different spells and then going `empty' when the mana is gone. Others typically operate with \gls{standingspell} alone, casting everything they might need before the day begins and leaving their useful spells `running' but leaving themselves unable to cast more.
 
@@ -266,12 +274,19 @@ Some mages create sparks as they cast spells, others summon dark mists -- it all
 Quick Spells are challenging, and require the mage know a spell intimately.  They cannot be cast with the mage's highest spell level.  A mage with Polymorph at level 3 cannot cast level 3 as a Quick Spell.
 
 \subsection{Spell Enhancements}
+\label{Enhancements}
 
 Spell enhancement increase a spell's level in return for adding some ability.
 These enhancements always take the form of adjectives.
 For example, the first level \textit{Fireball} spell, has the enhancement ``(1) Enhancement -- Raging'', meaning the mage can cast a \textit{Raging Fireball}, which would count as a second level spell.
 The enhancement ``(1) Wide'' can be used on any spell to have it cover a wide area, so while a Fireball spell would normally be level 1, a \textit{Wide, Raging Fireball} would be a level 3 spell.
 The spell would then cost 3 \glspl{mp} to cast, and require 6 Initiative Points if cast during combat.
+
+Spell enhancements do \emph{not} lock mana up as continuous spells do.
+\iftoggle{verbose}{%
+If someone casts an illusion as a level 1 spell, this would lock 1 \gls{mp} for as long as the spell lasts.
+Adding the enhancements \textit{Wide}, and \textit{Solid}, so make a \textit{Wide, Solid, Illusion} of a basilisk would make the spell level 3, so it would require 3 \gls{mp} to cast, but since the spell is only a level 1 spell, only 1 \gls{mp} is locked.
+}{}
 
 \iftoggle{verbose}{
 	\subsection{Spell Failure}
