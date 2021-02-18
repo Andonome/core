@@ -75,10 +75,7 @@ The animals targeted by this spell do not become any smarter, unless the enhance
 
 \iftoggle{verbose}{
 
-\begin{figure*}[t]
-	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/flashing_light.jpg}
-	\label{roch:light}
-\end{figure*}
+	\toppic{Roch_Hercka/flashing_light}{\label{roch:light}}
 }{}
 
 \noindent
@@ -403,7 +400,9 @@ The enchanter gives someone a particularly off-putting look and they immediately
 They have trouble articulating exactly what's wrong, but will remain confused for as long as the spell continues.
 The spell is sometimes initiated by eye contact, sometimes by song -- any number of social interactions can suffice for transferring the spell's effects.
 
-\pic{Roch_Hercka/elvish_enchanter}{\label{roch:enchanter}}
+\iftoggle{verbose}{
+	\pic{Roch_Hercka/elvish_enchanter}{\label{roch:enchanter}}
+}{}
 
 A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Academics.
 If the target loses the roll they immediately loses all remaining actions for the turn but can still defend themself; the target's Initiative score instantly reduces to 0.
@@ -805,10 +804,7 @@ Illusions are typically delicate, and even a single \gls{hp}'s damage will dissi
 \spelllevel
 
 \iftoggle{verbose}{
-\begin{figure*}[t]
-	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/illusion_trogdor.jpg}
-	\label{roch:trogdor}
-\end{figure*}
+	\pic{Roch_Hercka/illusion_trogdor}{\label{roch:trogdor}}
 }{}
 
 \spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}\\
@@ -1175,8 +1171,7 @@ This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a pe
 It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
 
 \iftoggle{verbose}{
-	\noindent\includegraphics[width=\linewidth]{images/Roch_Hercka/polymorph.jpg}
-\label{roch:polymorph}
+	\pic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
 }{}
 
 \spelllevel
