@@ -535,7 +535,13 @@ Once the spell is cast, the priest knows the current \gls{fp} of the target.
 When cast on oneself, this spell grants total immunity to the Enchantment spell, \textit{Fear}.
 
 \spell{Intuition}{Instant}{Varies}{Find out the \glsentrytext{tn} for an action}\\
-When players search for an item, or ask around town for someone's whereabouts, the \gls{gm} often won't tell them the \gls{tn}.  With this spell, the priest may demand to know the \gls{tn}.  The Skill used is the same as that being used in the task, so asking about a roll for Crafts means using the Crafts Skill for the spell.
+\iftoggle{verbose}{%
+	Players often don't know the \gls{tn} for an action before they try it, but with this spell, the priest may demand to know the \gls{tn}.
+	This can be used to figure out how difficult it would be to strike an enemy, or how challenging it would be to spread a rumour around town.
+}{%
+	The player can ask the \gls{gm} the \gls{tn} for any currently possible action.
+}
+The Skill used is the same as that being used in the task, so asking about a roll for Crafts means using the Crafts Skill for the spell.
 
 \spell{Lending Hand}{Continuous}{Empathy}{Bless a target with +1 to any skill so long as you have a higher Skill level than the target}\\
 The priest blesses a target with +1 to any Skill, so long as the priest has a higher level in that Skill than the target.
@@ -574,7 +580,7 @@ The priest blesses a target, who then receives a +1 to any Skill.
 This does not stack with any other Fate spells.
 This spell can take a character beyond the standard Skill levels.
 
-\spell{Prayer of Gratitude}{Instant}{Academics}{Retrieve 1 \gls{storypoint} after you spend 2 or more}
+\spell{Prayer of Gratitude}{Instant}{Academics}{Retrieve 1 \gls{storypoint} after you spend 2 or more}\\
 The caster rolls during any scene in which someone spends at least 2 \glspl{storypoint}.
 With a successful roll, one \gls{storypoint} is returned to the character.
 
