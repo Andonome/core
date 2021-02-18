@@ -7,11 +7,9 @@
 \usepackage{config/monsters}
 \input{glossary.tex}
 
-\ifdefined\isref
-	\settoggle{verbose}{false}
-\else
-	\settoggle{verbose}{true}
-\fi
+\IfFileExists{.ref}%
+	{\settoggle{verbose}{false}}
+	{\settoggle{verbose}{true}}
 
 \externalReferent{aif}
 

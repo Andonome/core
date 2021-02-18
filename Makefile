@@ -15,17 +15,15 @@ resources: resources.pdf
 resources.pdf: $(wildcard CS/*.tex)
 	pdflatex CS/resources.tex
 ref:
-	filename=bind-ref
-	pdflatex -jobname ${filename} -shell-ecape "\def\isref{1} \input{main.tex}" 
-	makeindex bind-ref.idx
-	makeglossaries bind-ref
-	pdflatex  -jobname bind-ref "\def\isref{1} \input{main.tex}"
-	pdflatex  -jobname bind-ref "\def\isref{1} \input{main.tex}"
-all: resources.pdf ${filename}.pdf ref
+	touch .ref
+	make
+	rm .ref
+	mv main.pdf bind_ref.pdf
+all: ref resources.pdf ${filename}.pdf
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
 	git subtree -P config pull ../config ${branch}
 	git subtree -P config push ../config ${branch}
 clean:
-	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape
+	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf .ref svg-inkscape
