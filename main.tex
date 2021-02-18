@@ -7,7 +7,12 @@
 \usepackage{config/monsters}
 \input{glossary.tex}
 
-\settoggle{verbose}{true}
+\ifdefined\isref
+	\settoggle{verbose}{false}
+\else
+	\settoggle{verbose}{true}
+\fi
+
 \externalReferent{aif}
 
 \begin{document}

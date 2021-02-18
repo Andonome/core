@@ -14,7 +14,14 @@ ${filename}.glg: svg-inkscape
 resources: resources.pdf
 resources.pdf: $(wildcard CS/*.tex)
 	pdflatex CS/resources.tex
-all: resources.pdf main.pdf
+ref:
+	filename=bind-ref
+	pdflatex -jobname ${filename} -shell-ecape "\def\isref{1} \input{main.tex}" 
+	makeindex bind-ref.idx
+	makeglossaries bind-ref
+	pdflatex  -jobname bind-ref "\def\isref{1} \input{main.tex}"
+	pdflatex  -jobname bind-ref "\def\isref{1} \input{main.tex}"
+all: resources.pdf ${filename}.pdf ref
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
