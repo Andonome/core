@@ -240,7 +240,9 @@ A \textit{Wide Fireball} covering 3 squares might be cast 5 squares away, but it
 This range limitation applies to all magic, including Song magic.
 While a tune may carry over the hilltops, the force of the magic usually remains close to the caster.
 
-\subsection{Duration}
+\subsection{Instant \& Continuous Spells}
+\index{Continuous Spells}
+\index{Instant Spells}
 
 Some spells are instant -- a ball of fire flashes from the mage and incinerates someone, or a touch grants the favour of the gods, healing FP -- but most are `\textit{continuous}'.
 Continuous spells can be cancelled at will or maintained indefinitely.
@@ -476,22 +478,29 @@ The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ da
 
 \enhancement{1}{Sentient}{Allow the spell to make its own decisions}
 
-The mage can make any spell gain some measure of sentience.
-Typically, this is made to allow magical items to activate upon a condition, such as a door which turns from solid stone back to wood once the password is stated.
-Such spells can also select their own targets, such as acid which can hit a specific person in the dark, or around a corner.
-A conjuration spell could be cast over a massive area, but only turn particular areas of water into ice, or a \textit{Fireball} spell could target only a caster's enemies.
+Powerful \glspl{miracleworker} can make their spells sentient.
+This does not affect the \emph{target} of the spell (enchanted dogs do not become suddenly self-aware), but the spell itself.
 
-The item acts upon its own Initiative score, and uses the mage's Wits score as its Initiative Factor.
-Sentient illusions can converse on their own, with simple-minded and predictable (but plausible) personalities.
-Sentience levitating swords can fight on their own, without aid.
+Sentient spells can `miss' a caster's allies, so a sentient spell to freeze over a river would target only the caster's enemies, or a \textit{Wide, Sentient Fireball} would burn only enemies.
 
-Sentient spells have about the same ability to perceive the environment as the caster would were they present.
-Such spells could also use other spells to find out further information, such as a swords which detects someone's Code, and then activates other abilities selectively.
+Sentient illusions can independently walk, talk, and use any languages the caster knows.
+These spells are never fully-fledged people, but simple stereotypes with stock phrases.
 
-Sentient spells only create one sentience per spell, even with \textit{Wide} spells.
-A spell which levitates 4 daggers would only be able to use one at a time, and an illusion of a banquet hall, full of dancers, would only have enough focus to make them all dance, but could not make each one individually speak.
+Sentient Force spells, such as levitation, allow a spell to independently decide where an item will be lifted, or even attack with Dancing Swords.
+However, \textit{Wide, Sentient} spells do not gain multiple consciences -- they can only focus on one thing at a time, just like a normal person.
+\iftoggle{verbose}{%
+A \textit{Wide, Sentient, Dancing Swords} spell which levitated 4 daggers would not be able to make 4 attacks per round.
+}{}
 
-Sentient spells have the same Code as their caster, so a caster who followed \gls{justicegod} and then cast an enchantment on an animal would create a very law-abiding animal, while an alchemist who followed the Code of Experience would cast very inquisitive illusions, that persistently tried new things.
+Sentient spells take the Mental Attributes of their caster, so they can enter combat with their own Initiative score, at the same time as the caster.
+They also take their caster's Code, so a mage devoted to \gls{justicegod} would create spells which seek to enforce the local laws.
+
+\iftoggle{verbose}{%
+	The most common use of a sentient spell is to create a Pocket Spell, Talisman, or other magical item which can make its own decisions about when to cast.
+	A sword which casts fireball upon enemies when striking, or a tree which shines with light when a human enters the area, or a runic enscription on a stone door that turns the stone back to wood once the password is stated are all possibilities.
+}{
+	Sentient Pocket Spells, Talismans, and Artefacts can cast their own spells.
+}
 
 \spelllevel
 
