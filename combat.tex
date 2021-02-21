@@ -833,15 +833,17 @@ This might happen when someone is surrounded, but wants to run away.
 \subsubsection[Spell Casting: Combat Skill cannot be added to Evasion, and lowest of Wits or Speed is used for Initiative. -2 penalty to cast]{Spell Casting in Combat}\index{Combat!Spell Casting}
 \label{combatcasting}
 
-Spell casters are assumed to be focussing on their spells and using both hands for that purpose rather than weapons. They use their Wits for the Initiative bonus rather than Speed and receive no Combat Skill Bonus to Evasion -- they only use their basic Dexterity score.
+Casters capable of Quick Spells may cast spells in the middle of combat.
+If they have any weapons, then their hands cannot move freely, which inflicts a -2 penalty to all spell-casting rolls.
+Additionally, a character thinking of casting spells or attacking must be aware of two Initiative scores at the same time -- their Initiative for M\^{e}l\'ee and their Initiative for spell-casting.
 
-Casting one-handed is possible, but difficult.
-Any roll the spell requires receives a -2 penalty.
-Casting one-handed allows the caster to hold a weapon in the other hand, for either defensive or offensive purposes.
-
-Spell casters who wish to both attack and cast spells within the same \gls{round} must use the lower of their Speed and Wits score when determining Initiative. They can then use their full Combat Skill Bonus for the \gls{round} to add to the Combat Factors but cannot take their Initiative Factor higher than their Wits Bonus.
-
-Switching away from one's focus on spells or martial combat must be decided at the start of the \gls{round} -- mages who are not mentally prepared to cast spells or use a sword cannot do so at a second's notice.
+\iftoggle{verbose}{%
+	For example, a character with Speed +1 and longsword would normally have +2 Initiative when entering battle.
+	Their Wits +1 would give them a +1 Initiative when spell-casting.
+	If the group rolls a `7' for Initiative they could attack with the longsword on Initiative 9, but could only cast spells from Initiative 8.
+}{
+	Initiative Bonuses to m\^{e}l\'ee do not help when casting, and vice versa.
+}
 
 \subsubsection[Trapped/ Entangled: All attacks against the character count as a Sneak Attack, but they can still defend with full Dexterity Bonus as usual]{Trapped or Entangled}
 
