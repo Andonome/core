@@ -432,8 +432,26 @@ Any continuous effects last for \arabic{spelllevel} scenes plus the caster's Wit
 These magical items are activated by a `command word'.
 Command words do not necessarily have to be actual words -- they could be entire phrases or gestures.
 
-Pocket spells require the same initiative to use as the spell would require, and use the same Traits as the caster.
-For example, if an illusionist made a scroll which created an illusion of a bear, and had Intelligence +2 and Beast Ken +2, the scroll would cast an illusion with a +4 bonus to the roll, no matter who used it.
+Whoever activated the item counts as `the caster', for the purpose of casting a spell.
+\iftoggle{verbose}{%
+	For example, a spell which allows `the caster' to detect what is happening far away, could be placed into an alchemical scroll.
+	Whoever uses the scroll would then be able to detect the area.
+}{}%
+If the item changes hands while the spell is active, `the caster' changes too.
+\iftoggle{verbose}{%
+	If a magical item allows `the caster', to enchant people, then whoever holds the item at that moment counts as `the caster', even if the item changes hands several times.
+}{}
+
+Pocket spells require 8 Initiative to cast, just like using any other item.
+
+These items always use the caster's Intelligence Bonus, but have no relation to Skills, so they do not gain any Bonus from anyone's Skills, and do not suffer from a lack of specialization.
+\iftoggle{verbose}{%
+	When casting a scroll with a Fireball spell, if the caster's Intelligence Bonus were +1, the scroll rolls to hit with +1 Bonus, even if neither scroll's creator, or user, have the Projectiles Skill.
+}{}
+
+The item's effective Wits Bonus is also equal to the caster's Intelligence, so a caster with Intelligence +2 would make items which have an effective Intelligence of +2 and Wits +2.
+This is known as the item's `\textit{Potency}'.
+\index{Potency (for magical items)}
 
 \spelllevel
 
