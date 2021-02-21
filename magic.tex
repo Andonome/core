@@ -196,18 +196,13 @@ Every scene, characters regenerate 2 Mana plus their Wits Bonus.
 If this total would be 0 then the amount of time required to gather a single \gls{mp} increases by 1 scene.
 Characters with a Wits score of -2 must wait 2 scenes before regenerating 1 \gls{mp} while those with Wits -3 must wait 3 scenes.
 
-\needspace{15em}
 \subsection{Range}
 
-\begin{wrapfigure}{r}{.16\textwidth}
+\begin{wrapfigure}{r}{.20\textwidth}
 
 \begin{rollchart}
 
 	Wits & Range \\\hline
-
-	-4 & 1 \\
-
-	-3 & 2 \\
 
 	-2 & 3 \\
 
@@ -220,8 +215,6 @@ Characters with a Wits score of -2 must wait 2 scenes before regenerating 1 \gls
 	2 & 15 \\
 
 	3 & 20 \\
-
-	4 & 25 \\
 
 \end{rollchart}
 
@@ -237,8 +230,18 @@ Magic extends all around the character but mages can rarely affect targets anywh
 Spells which affect a large area are only restricted by where they \emph{start}.
 A \textit{Wide Fireball} covering 3 squares might be cast 5 squares away, but it could extend past that, reaching a total of 7 squares.
 
+\iftoggle{verbose}{%
+
 This range limitation applies to all magic, including Song magic.
 While a tune may carry over the hilltops, the force of the magic usually remains close to the caster.
+
+}{}
+
+If a caster leaves a spell, the spell remains, with no regard for range limitations.
+
+\iftoggle{verbose}{%
+	A mage could cast an illusion over a dog, and leave the area, but the spell remains despite the dog being miles away.
+}{}
 
 \subsection{Instant \& Continuous Spells}
 \index{Continuous Spells}
