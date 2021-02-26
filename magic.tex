@@ -412,7 +412,7 @@ The pocket spell can then cast the spell once, at which point it ceases to be a 
 
 The mage must cast the spell immediately after \textit{Pocket Spell}, which must be cast on a freshly-made Mana Stone.
 
-Some mages create scrolls which are destroyed once read.  Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
+Some mages create scrolls which become useless once read.  Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
 The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
 
 The pocket spell always produces a single effect.
@@ -491,6 +491,10 @@ This spell has the usual range, so if a caster cannot also cast at long-range, t
 This enhancement affects magical items such as Pocket Spells, Talismans, and Artefacts.
 The resulting spell lasts until it is cancelled by a command word, rather than dying after a number of scenes equal to its Potency.
 
+\iftoggle{verbose}{
+If an \textit{Eternal Talisman} or other item allows the caster to control undead and then changes hands, the control of the undead changes with it, because the effective `caster' is just whoever holds the item at the time.
+}{}
+
 \enhancement{Varies}{Combined}{Add a second spell effect to the target}
 
 A secondary spell can be combined to throw at the same target.
@@ -550,7 +554,7 @@ Therefore, a mage creating an item with the 3rd level of Necromancy must first s
 \enhancement{5}{Exceptional}{Make Mana Stones regenerate and store 3 \glspl{mp}}
 
 Mana Stones cast with this enhancement can store 3 \glspl{mp} for each level of the spell, rather than the usual 2.
-They also regenerate 3 \glspl{mp} per turn.
+They also regenerate 3 \glspl{mp} per scene.
 
 \stopcontents[magic]
 
