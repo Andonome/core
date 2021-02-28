@@ -217,6 +217,7 @@ bookmarks=true]%
 \newcommand{\headingtype}{CHAPTER}
 
 \newcommand{\pic}[1]{
+	\needspace{4cm}
 	\noindent%
 	\IfFileExists{images/#1.svg}{%
 		\noindent\includesvg[width=\linewidth]{images/#1}
@@ -227,7 +228,8 @@ bookmarks=true]%
 }
 
 \newcommand{\sidepic}[3][5]{
-	\needspace{2cm}\begin{wrapfigure}{R}{.#1\linewidth}
+	\needspace{4cm}
+	\begin{wrapfigure}{R}{.#1\linewidth}
 	\noindent%
 	\IfFileExists{images/#2.svg}{%
 		\includesvg[width=\linewidth]{images/#2}
