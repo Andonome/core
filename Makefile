@@ -24,6 +24,5 @@ tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
 	git subtree -P config pull ../config ${branch}
-	git subtree -P config push ../config ${branch}
 clean:
 	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf .ref svg-inkscape
