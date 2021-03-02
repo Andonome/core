@@ -32,8 +32,8 @@ This would make a heading called **Rincewind** in bold with a male symbol, and p
 |:---:|:----:|
 | \\M | Male |
 | \\F | Female |
-| \\G | Group |
-| \\U | Undead |
+| \\T | Team |
+| \\D | Undead |
 | \\N | Nura |
 
 For a complete list of all the creatures and characters which can be used, see the 'monsters.tex' file.
