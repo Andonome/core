@@ -257,9 +257,16 @@ Your standard spell takes a while to cast -- normally 1 \gls{round} per level, s
 Mages who take their time over spells can attempt a Ritual Spell -- they cast it as a \gls{restingaction}.%
 \footnote{See page \pageref{restingactions}.}.
 The mage can gain mana slowly, spending some, drawing more from a mana stone or item, then spending more before finally casting the spell.
-The mage can gather a number of \gls{mp} equal to double their normal maximum \gls{mp}, ignoring \glspl{standingspell}.
+The mage can gather a number of \gls{mp} equal to double their normal maximum \gls{mp}, ignoring any \glspl{standingspell}.
+\iftoggle{verbose}{%
+	For example, a \gls{miracleworker} with 3 \glspl{mp} could spend up to 6 \glspl{mp} in a single casting in order to cast a powerful spell, by drawing mana from mana stones.
+}{}
+
 Ritual spells can also be cast as a team effort -- any number of spell casters who are on the same \gls{path} of magic can cast any spell they all know together.
 They can each invest \gls{mp} to create \gls{standingspell}, and thereafter any one of them can cancel the spell.
+\iftoggle{verbose}{%
+	As usual, the primary caster can spend mana up to double their Metamagic score (meaning total \glspl{mp}), the second caster can add a maximum number of \glspl{mp} up to their regular total, and the next caster can \glspl{mp} up to a quarter of their total, and so on.
+}{}
 
 \subsubsection{Quick Spells}
 
@@ -497,8 +504,10 @@ This spell has the usual range, so if a caster cannot also cast at long-range, t
 
 \enhancement{1}{Eternal}{Make any magical item's effects permanent}
 
-This enhancement affects magical items such as Pocket Spells, Talismans, and Artefacts.
+This enhancement affects spells imbued in magical items such as Pocket Spells, Talismans, and Artefacts.
 The resulting spell lasts until it is cancelled by a command word, rather than dying after a number of scenes equal to its Potency.
+
+If the item has multiple spells, only one becomes \textit{Eternal}.
 
 \iftoggle{verbose}{
 If an \textit{Eternal Talisman} or other item allows the caster to control undead and then changes hands, the control of the undead changes with it, because the effective `caster' is just whoever holds the item at the time.
