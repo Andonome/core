@@ -321,13 +321,17 @@ Only the last 5 ghouls count, bringing 10 \gls{xp} in total.  Dividing this amon
 
 If players need to discount multiple adversaries, they are counted from highest to lowest \gls{xp} value.
 
+\iftoggle{verbose}{
 \subsection{Spending \gls{xp}}
 
-Each additional level of a Trait has a steeply progressive cost. The costs represent buying the next level; the first level of a school of magic costs 15 and the second costs 20 -- buying up to the second level costs 35 \gls{xp} in total. Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp}.
+Each additional level of a Trait has a steeply progressive cost.
+The costs represent buying the next level; the first level of a school of magic costs 10 and the second costs 15 -- buying up to the second level costs 25 \gls{xp} in total.
+Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the second Knack a Player purchases costs 10, and so on, with each additional Knack costing an additional 5 \gls{xp} cumulatively.
 
-\iftoggle{verbose}{
 \sidepic{Roch_Hercka/xp-1}{\label{roch:xp1}}
-}{}
+}{
+	\subsection{Maximum Traits}
+}
 
 Attributes have a standard maximum of +3 and minimum of -3. This is adjusted by race, so for instance elves have a +1 bonus to Wits but -1 to Strength, so their maximum Strength score would be 2 and the minimum -4, while the maximum Wits is +4 and the minimum -2.
 
@@ -594,18 +598,24 @@ Quadrupeds can run at double the standard speed when going full pace, so horses 
 \settoggle{examplecharacter}{true}
 \horse
 
+Characters can significantly improve their average travel-times with a horse, covering 25 miles per day without tiring.
+
 \settoggle{examplecharacter}{true}
 \warhorse
 
+War horses aren't much faster than regular horses, but they won't become so easily frightened when danger approaches.
+
 \settoggle{examplecharacter}{true}
 \huntingdog[\npc{\A}{Hunting Dog}]
+
+Hunting dogs are mostly useless in warfare, but they make excellent watchmen.
 
 \subsection{Weight \& Encumbrance}\index{Weight}\index{Encumbrance}
 \label{weightrating}
 
 We measure weight in broad terms.
 Characters have a \gls{weightrating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a \gls{weightrating} of 7.
-Items work similarly, with \gls{weightrating} between -4 (for very light items) and +11 (for wardrobes, carts, and boulders).
+Items work similarly, with \gls{weightrating} between -4 (for very light items), through +11 (for wardrobes, carts, and boulders), and so on.
 
 \iftoggle{verbose}{
 	\pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}

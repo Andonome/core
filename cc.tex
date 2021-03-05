@@ -13,7 +13,7 @@ Once you think you know what kind of character lies on your character sheet, you
 Characters are defined by \glspl{trait}, and the two main types are \glspl{attribute} and \glspl{skill}.
 Attributes are innate \glspl{trait}, deeply tied to who the \gls{pc} is.
 The Physical \glspl{attribute} used here are \textit{Strength, Dexterity, and Speed}, and the Mental \glspl{attribute} are \textit{Intelligence, Wits, and Charisma}.
-\glspl{skill}, meanwhile, are things the \gls{pc} learns.
+\glspl{skill}, meanwhile, are things the character learns.
 
 Typically, players take actions by rolling two six-sided dice (``$2D6$'') and adding a \gls{trait} and a \gls{skill} to the result.
 If you roll high enough, you succeed.
@@ -180,11 +180,20 @@ Strength represents a character's muscles -- their ability to endure, to take da
 
 \subsubsection{Speed}
 
-Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run. Since it allows characters to flee dangerous situations, a group can be held back by its slowest member. A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat. Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
+Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run.
+\iftoggle{verbose}{%
+Since it allows characters to flee dangerous situations, a group can be held back by its slowest member.
+A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat.
+Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
+}{}
 
 \subsubsection{Dexterity}
 
-Dexterity represents someone's hand-eye coordination and natural grace. It's used to dodge, parry, block and also to aim projectile weapons. It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
+Dexterity represents someone's hand-eye coordination and natural grace.
+It's used to dodge, parry, block and also to aim projectile weapons.
+\iftoggle{verbose}{%
+It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
+}{}
 
 \subsection{Mind Attributes}
 
@@ -196,7 +205,12 @@ Intelligent characters understand ideas, remember well and always come prepared.
 
 \subsubsection{Wits}
 
-Where intelligence represents how well a character thinks, Wits just tells you how fast they think. The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits. Wits is also the primary Attribute for resisting magical enchantments. Wits is the only Mind Attribute available to animals.
+Where intelligence represents how well a character thinks, Wits just tells you how fast they think.
+The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits.
+\iftoggle{verbose}{%
+Wits is also the primary Attribute for resisting magical enchantments.
+Wits is the only Mind Attribute available to animals.
+}{}
 
 \subsubsection{Charisma}
 
@@ -627,7 +641,7 @@ Those fighting could be forced to continue until they die from a sword or drop d
 
 \subsection{Rogue}\index{Rogue}
 
-Rogues begin with Combat 1, 10 \glspl{fp}, Stealth 2, Larceny 1 and the Knack: Perfect Sneak Attack.
+Rogues begin with Combat 1, 10 \glspl{fp}, Stealth~2, Larceny~1 and the Knack: Perfect Sneak Attack.
 If they have a Body Attribute at -1, raise it by one level.
 If not, purchase one level of the Deceit Skill.
 
@@ -727,8 +741,8 @@ After progressing, particularly pious fighters can gain a level or two in Fate, 
 {0}}% CHARISMA
 {0}% DR
 {2}% COMBAT
-{Academics~1, Deceit~1, Tactics~1\Path{Divinity}{Fate 2}\knacks{\adrenalinesurge, \finishingblow}}% SKILLS
-{\longsword, \partialchain, \bucklar, 2 x adventuring equipment}% EQUIPMENT
+{Academics~1, Deceit~1, Tactics~1\Path{Divinity}{Fate 2}\knacks{\adrenalinesurge, \charge}}% SKILLS
+{\greatsword, \partialchain, \bucklar, 2 x adventuring equipment}% EQUIPMENT
 {\mana{2}\addtocounter{fp}{10}}
 
 \subsubsection{Ranger}\index{Ranger}
