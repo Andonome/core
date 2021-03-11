@@ -197,10 +197,13 @@ Your battle cries and demeanour are particularly fearsome. Enemies receive a -2 
 \subsubsection{Blood Caster}
 
 The caster's magic is fuelled by hatred and tenacity.
-If the character has 0 \gls{fp} and loses a single \gls{hp} then they gain +2 to their effective Intelligence Bonus.
-If they lose half their \gls{hp} then they gain an additional bonus equal to the number of Knacks they have.
-For example, a caster might lose 2 \glspl{hp} then gain an effective +2 bonus to casting Fireball spells and a +2 bonus to the Damage inflicted by such spells.
-When they are later struck again and goes down to 1 \gls{hp} then (since they have 2 Knacks) they gain a +4 bonus to such spells and a +4 bonus to Damage.
+If the character has 0 \gls{fp} and loses a single \gls{hp} then they gain +2 to their effective Intelligence Bonus until the end of the scene.
+If they have lost half their \gls{hp} then they gain an additional bonus equal to the number of Knacks they have.
+
+\iftoggle{verbose}{
+For example, a caster with just this knack might lose 2 \glspl{hp} then gain an effective +2 bonus to casting Fireball spells and a +2 bonus to the Damage inflicted by such spells.
+When they are later struck again and go down to 1 \gls{hp} then they gain a +3 bonus to such spells and a +3 bonus to Damage.
+}{}
 
 This Knack can only be used when there is a legitimate grievance.
 The mage does not gain the bonus when they have harmed themself.
