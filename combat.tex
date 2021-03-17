@@ -416,7 +416,7 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 
 	Leather & 3 & 0 & 0 & 5sp \\
 
-	Chain & 4 &  1 & 2 & 10sp \\
+	Chain & 4 &  1 & 1 & 10sp \\
 
 	Plate & 5 &  2 & 4 & 12gp \\
 	\hline
@@ -429,7 +429,7 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 
 	Leather & 3 & 1  & 1 & 15sp \\
 
-	Chain & 4 &  2  & 3 & 30sp \\
+	Chain & 4 &  2  & 2 & 30sp \\
 
 	Plate & 5 &  3  & 5 & 36gp \\
 
@@ -523,10 +523,14 @@ Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrat
 \begin{multicols}{2}
 
 \noindent
+\iftoggle{verbose}{%
 At this point you might be wondering how anyone is going to survive past their first battle.
 6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
 The mechanism which saves the plot-important character is \glsentryfullpl{fp}.
 Every time someone would lose \glspl{hp}, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
+}{
+	If a character would lose \glspl{hp}, they can mark off \glspl{fp} instead.
+}
 
 Everyone in the world begins with 5 base \gls{fp}.
 This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
