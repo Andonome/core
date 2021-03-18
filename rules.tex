@@ -321,6 +321,19 @@ Only the last 5 ghouls count, bringing 10 \gls{xp} in total.  Dividing this amon
 
 If players need to discount multiple adversaries, they are counted from highest to lowest \gls{xp} value.
 
+\subsubsection{Mass-Damage Discount}
+\label{xpCreatureMax}
+
+\iftoggle{verbose}{%
+	Sufficiently powerful characters can take out entire armies with a single spell.
+	However, only the first three enemies killed by a single action give \glspl{xp}.
+	Any further enemies give no \glspl{xp}.
+	Killing 80 goblins with a \textit{Massive Fireball} grants the same \glspl{xp} as killing 3.
+}{
+	Players may receive \glspl{xp} for killing up to 3 creatures within a single Initiative click.
+	The highest \gls{xp} total is taken first, then the second highest, and then the third.
+}
+
 \iftoggle{verbose}{
 \subsection{Spending \gls{xp}}
 
