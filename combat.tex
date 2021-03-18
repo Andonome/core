@@ -146,7 +146,7 @@ However, defending oneself after this point would have a -2 penalty, and further
 
 \subsection{Attack}
 
-To attack an opponent, you roll $2D6$ as usual, but only add your Combat Skill.
+To attack an opponent, you roll $2D6$ as usual, but only add your Combat \gls{skill}.
 The \gls{tn} is 7 plus your opponent's Dexterity.
 
 \iftoggle{verbose}{
@@ -156,8 +156,8 @@ The \gls{tn} is 7 plus your opponent's Dexterity.
 \subsubsection{Aggression}
 \index{Aggression} 
 
-Animals use a Skill called Aggression.
-It works exactly like the Combat Skill but only adds to the Strike Factor, and never to Initiative or Evasion.
+Animals use a \gls{skill} called Aggression.
+It works exactly like the Combat \gls{skill} but only adds to the Strike Factor, and never to Initiative or Evasion.
 
 \subsection{Damage}\index{Damage}
 
@@ -220,7 +220,7 @@ By spending two Initiative, characters can run as a \gls{quickaction}, acting be
 Characters can run 3 squares plus their Speed Bonus during this time.
 This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
 
-Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics Skill Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
+Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics \gls{skill} Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
 
 \subsection{Hit Points}
 
@@ -799,11 +799,20 @@ The hobgoblins each have a +1 bonus to Initiative and the ogre has a +0 bonus.
 \subsubsection[Blindness: -8 penalty + Wits + Vigilance (maximum -6). Rolling equal to allies means hitting an ally]{Blindness}
 \index{Combat!Blindness}
 
-Fighting while blind is no fun -- your opponent can see you coming, and you can't see them. Blinded opponents suffer a penalty equal to -8 plus their Wits and Vigilance Bonuses with a maximum penalty of -6. For example, a character with With -1 would receive a -9 penalty to attack, except that the maximum penalty is -6. Someone with Wits +1 and Vigilance +3 \ would suffer a -4 penalty to attack because both reduce the basic penalty of -8.
+Fighting while blind is no fun -- your opponent can see you coming, and you can't see them.
+Blinded opponents suffer a penalty equal to -8 plus their Wits and Vigilance Bonuses with a maximum penalty of -6.
+\iftoggle{verbose}{%
+For example, a character with with a Wits + Vigilance total of -1 would receive a -9 penalty to attack, except that the maximum penalty is -6.
+Someone with Wits +1 and Vigilance +3 \ would suffer a -4 penalty to attack because both reduce the basic penalty of -8.
+}{}
 
 This penalty only counts when one side of a fight is blind. When both sides are blind, we use the Darkness Fighting rules below.
 
-While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on their side (including themself) then they hit a companion. If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2. If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion. Companions who are are accidentally hit can attempt an Evasion roll by rolling with their current Evasion Factor against \gls{tn} 10; failure implies normal Damage from that attack. It is quite possible to kill a companion while fighting blind.
+While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on the character's side side (including themself) then they hit a companion.
+If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2.
+If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion.
+Companions who are are accidentally hit can attempt an Evasion roll by rolling with their current Evasion Factor against \gls{tn} 10; failure implies normal Damage from that attack.
+It is quite possible to kill a companion while fighting blind.
 
 \subsubsection[Darkness: Penalty equals difference between combatants' Wits + Vigilance]{Darkness}\label{darkness}\index{Darkness}
 \index{Combat!Darkness}
@@ -1052,7 +1061,7 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 \end{figure*}
 
 
-\noindent Projectiles have their own Skill which is bought just like the Combat Skill.
+\noindent Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
 Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
 The \gls{tn} is always 6 plus one for every five full squares away the target is.
 Targets 14 squares away would have a \gls{tn} of 8 to hit.
