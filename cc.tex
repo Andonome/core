@@ -148,28 +148,9 @@ These are the basic Traits which characters must use over and over again for eve
 
 \end{tcolorbox}
 
-\begin{figure*}[t!]
-
-\begin{boxtext}
-
-\subsection{The Story of Sean}
-
-After rolling the dice, my final results are Strength +1, Speed 0, Dexterity -1, Intelligence 0, Wits -1 and Charisma +1.
-That doesn't look like it speaks of much, but consider what kind of human might be `Charismatic yet clumsy'.
-Perhaps a noble?
-It could be a performer, but what kind of performer doesn't have the coordination to play the difficult songs on the banjo? A poet! Imagine a minor noble, perhaps the third son of a townmaster or some such.
-He's always rushing about then falling over.
-His poems aren't terribly good (just look at that banal Intelligence score) but he can get better.
-Meanwhile, he earns his pay, and perhaps attempts to chat up a few ladies, based on his dashing good looks and likeable personality.
-
-He just needs a name now -- something which captures the idea of a slightly silly fop, a knightly poet.
-`Sean' should do it.
-Roll up a character of your own, and you can use it for practice rolls in a moment.
-
-\end{boxtext}
-
-\end{figure*}
-
+\iftoggle{verbose}{
+	\input{story/2-cc.tex}
+}{}
 
 \subsection{Body Attributes}\index{Body Attributes}\index{Physical Attributes}
 
@@ -216,46 +197,6 @@ Wits is the only Mind Attribute available to animals.
 \subsubsection{Charisma}
 
 Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
-
-\iftoggle{verbose}{
-
-\begin{exampletext}
-
-The skinny man greets Sean with overbearing enthusiasm as he continues to explained the mission.
-
-``\emph{The book was stolen from our library}'' emphasizing ``our'' to make it obvious that it was as much his library as any other wizard's.
-``\emph{It is very dangerous and we must have it back.
-It contains a song - a bad one}''.
-
-Sean pulls his face to its own centre for a moment. ``\emph{You mean, you think the song in the book is awful?}''
-
-``\emph{No no no. I mean yes}'', the wizard replied, as happily as ever.
-``\emph{The book contains a song, the song contains the magic.
-When you play or sing it or whatever it is, things happen.
-Bad things}''.
-
-``\emph{Okay.
-What kinds of things?}''
-
-``\emph{That's a guild secret I'm afraid, but the important thing to know is to never let him sing.}''
-
-``\emph{Might he do that while we're charging towards him with swords and rope?}'', Sean asks.
-
-``\emph{Oh yes}'', the wizard grinned wider.
-``\emph{After all, he is a bard.
-We allowed him into the college to show off his odd abilities - those sorcerer powers from his elven heritage.
-And he stole our book, from the secret section at the back with all the forbidden books.
-He must have stolen the key from me.
-Anyway -- we can pay handsomely.
-Perhaps two hundred gold in total.
-Do you think your friends would be interested?}''
-
-``\emph{I'm going to speak with my guys, but two hundred gold for a apprehending a single criminal? Easiest job we've ever had.}''
-
-The wizard smiled again.
-
-\end{exampletext}
-}{}
 
 \subsection{Player Chosen Characters}
 \label{playerchosen}
@@ -765,6 +706,8 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 {Projectiles~1, Beast~Ken~1, Survival~1, Tactics~1\Path{Blood}{Aldaron 2}\knacks{\mightydraw, \charge}}% SKILLS
 {\longsword, \partialchain, \bucklar, bow, 2 x adventuring equipment}% EQUIPMENT
 {\mana{2}\addtocounter{fp}{10}}
+
+\input{story/3-xp.tex}
 
 \end{multicols}
 
