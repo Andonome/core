@@ -1188,9 +1188,8 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 {\longbow, dagger\ifodd\value{r2}, \partialleather, \lootMedium\fi%
 \iftoggle{team}{}%
 	{%
-		\ifnum\value{r12}<4%
-			, Spider Arrows.%
-		\fi%
+		\iftoggle{team}{%
+			, \arabic{r12} Spider arrows}.%
 	}%
 }% EQUIPMENT
 {}
