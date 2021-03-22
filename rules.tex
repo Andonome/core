@@ -513,10 +513,6 @@ We measure weight in broad terms.
 Characters have a \gls{weightrating} equal to their \gls{hp}, so elves tend to have 5, while humans tend to have a \gls{weightrating} of 7.
 Items work similarly, with \gls{weightrating} between -4 (for very light items), through +11 (for wardrobes, carts, and boulders), and so on.
 
-\iftoggle{verbose}{
-	\pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
-}{} 
-
 If an item's \gls{weightrating} is equal or below your character's Strength, you can lift it easily.
 However, if the items has a greater \gls{weightrating} than your Strength Bonus, you gain a point of Encumbrance for every increment that item is above your Strength Bonus.
 Encumbrance slows you down and makes you tired, detracting from your Speed Bonus, and adding to your Fatigue each Scene.
@@ -528,18 +524,15 @@ Items carried in only one hand count as having +2 to the \gls{weightrating}, so 
 Characters cannot carry any item which gives them a -5 Encumbrance rating or higher.
 
 \iftoggle{verbose}{
+	\pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
+}{} 
+
+\iftoggle{verbose}{
 
 	\input{story/encumbrance.tex}
 }{}
 
-\subsection{Services}
-
-Money can buy you more than things.  In fact, for the right money in a large city, characters can buy a full entourage.  Villages, however, will not admit of the same opportunities.
-
-The costs below show the starting price for a few services, plus additional fees for the details.
-For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 800 \glspl{cp}.
-
-\end{multicols}
+\begin{figure*}{t}
 
 \begin{tcolorbox}[arc=1mm,tabularx={XX},title=Services]
 
@@ -573,7 +566,7 @@ For example, hiring a guide for an uncharted and dangerous area for 5 days would
 
 \end{tcolorbox}
 
-\begin{multicols}{2}
+\end{figure*}
 
 \subsection{Cultures \& Exchange Rates}
 
@@ -604,7 +597,8 @@ Different races will also have different items available.
 In general, anything of a basic (non adjusted) value of over 2 \gls{sp} will not be available in a village, while towns will not have anything of over 1 gp in value.
 Characters can only buy expensive, artisan, items in cities.
 
-\subsubsection{Starting Equipment}\label{start_equipment}
+\subsection{Starting Equipment}
+\label{start_equipment}
 
 \index{Starting Equipment}
 \label{adventuringequipment}
@@ -656,6 +650,13 @@ $7\times2\times2 = 28$, so the character starts out with 28 \glspl{sp}.
 \iftoggle{verbose}{
 	\input{story/equipment.tex}
 }{}
+
+\subsection{Services}
+
+Money can buy you more than things.  In fact, for the right money in a large city, characters can buy a full entourage.  Villages, however, will not admit of the same opportunities.
+
+The costs below show the starting price for a few services, plus additional fees for the details.
+For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 800 \glspl{cp}.
 
 \end{multicols}
 
