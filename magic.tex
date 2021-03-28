@@ -348,6 +348,21 @@ A level 8 Metamagic spell requires 8 \glspl{mp} to cast, and requires 11 Initiat
 \spell{Identify Item}{Instant}{Academics}{Find out if an item is magical}\\
 The mage detects whether or not something is a mana stone (i.e. an item or person which stores mana).
 
+\spell{Mana Stones}{Continuous}{Academics}{Create a vessel for \glspl{mp} equal to double the \glspl{mp} you sacrifice}\\
+A mana stone is an item which stores mana, and each path of magic has its own version.\footnote{See page \pageref{magic_paths} for more on Paths of Magic.}
+Once an item (or creature) is designated as a mana stone, the item becomes a vessel which can store up to 2 \glspl{mp} per level of the spell.
+
+For example, a mage with 5 \glspl{mp} might cast this spell at level 3.
+The mage would be left with only 2 \glspl{mp} to use, but the stone would have 6 \glspl{mp}.
+
+Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
+The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
+Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points.
+
+The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
+
+Mana stones form the basis of all magical items, and \glspl{miracleworker} can only use their traditional mana stones to create magical items.
+
 \spelllevel
 
 \spell{Identify Mana}{Instant}{Empathy}{Find out which path of magic made an item}\\
@@ -376,21 +391,6 @@ The squares are always continuous, so a spell targeting four squares could form 
 If the spell targets people, one person per square is always a reasonable baseline, but more might be targeted in a narrow tunnel, or fewer if targets are spread out to surround the party.
 
 \spelllevel
-
-\spell{Mana Stones}{Continuous}{Academics}{Create a vessel for \glspl{mp} equal to double the \glspl{mp} you sacrifice}\\
-A mana stone is an item which stores mana, and each path of magic has its own version.\footnote{See page \pageref{magic_paths} for more on Paths of Magic.}
-Once an item (or creature) is designated as a mana stone, the item becomes a vessel which can store up to 2 \glspl{mp} per level of the spell.
-
-For example, a mage with 5 \glspl{mp} might cast this spell at level 3.
-The mage would be left with only 2 \glspl{mp} to use, but the stone would have 6 \glspl{mp}.
-
-Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
-The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
-Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points.
-
-The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
-
-Mana stones form the basis of all magical items, and \glspl{miracleworker} can only use their traditional mana stones to create magical items.
 
 \subsubsection{Ambient Mana Regeneration}
 \label{ambientmana}
@@ -423,21 +423,21 @@ However, if that fails, he simply cannot roll again.
 \spelllevel
 
 \spell{Pocket Spell}{Instant}{Crafts}{Allow a mana stone to cast a single spell at the cost of 1 permanent \gls{mp} from the mana stone, after which the stone is broken}\\
-The pocket spell changes a mana stone so that it can contain one spell.
-The mana stone loses access to a single point of mana, and then the mage casts a spell \textit{into} the mana stone.
-The pocket spell can then cast the spell once, at which point it ceases to be a mana stone, and all imbued mana returns to the caster.
+This spell permanently reduces the \glspl{mp} in a mana stone by 1, and allows the mana stone to permanently use a single spell which the mage casts immediately after this spell.
 
-The mage must cast the spell immediately after \textit{Pocket Spell}, which must be cast on a freshly-made Mana Stone.
-
-Some mages create scrolls which become useless once read.  Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
+Once the mana stone is a pocket spell, it can activate once, and then the mana stone becomes useless, and can never contain \glspl{mp} again.
+Some alchemists create scrolls which become useless once read.
+Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
 The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
 
+\iftoggle{verbose}{
 The pocket spell always produces a single effect.
-The mage can create an item which casts an illusion of a dragon, but never a scroll where the user determines the illusion cast.
-Any continuous effects last for \arabic{spelllevel} scenes plus the caster's Wits Bonus.
+A scroll of illusion might cast an illusion of a griffin, but cannot cast `just whatever the user desires'.
+Any continuous effects last for a number of scenes equal to the mage's Intelligence Bonus.
+}{}
 
 These magical items are activated by a `command word'.
-Command words do not necessarily have to be actual words -- they could be entire phrases or gestures.
+Command words do not necessarily have to be actual words -- they could be entire phrases, gestures, or even thought-patterns.
 
 Whoever activated the item counts as `the caster', for the purpose of casting a spell.
 \iftoggle{verbose}{%
