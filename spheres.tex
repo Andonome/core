@@ -119,17 +119,16 @@ Creatures only frozen up to their waist or ankles can gain a bonus to break out 
 If the caster can extend the range, then the spell can travel any distance, although longer distances can make the spell rather a long-shot, with each area traversed raising the \gls{tn} by 3.
 
 \spell{Wind Blast}{Instant}{Survival}{Push enemies back, lowering their Initiative}\\
-Wind can also be made to blow forward in a blast in front of the mage.
-The blast spans out, affecting a number of squares equal to the spell's level plus the mage's Wits Bonus.
-The target instantly loses a number of Initiative points equal to the spell's level plus the caster's Intelligence Bonus.
-This spell can be dodged like any other missile.%
+Wind blows from the mage, pushing the target back.
+The target instantly loses a number of Initiative points equal to the spell's level plus the caster's Intelligence Bonus.%
 \footnote{See page \pageref{edgy} for Keeping Edgy to dodge missiles.}
+\label{windblast}
 
 \iftoggle{verbose}{%
 Those affected by the spell cannot take Quick Actions again, except Evasion, until their Initiative comes up; so no moving, or speaking is possible until they regain their balance.}{%
 Targets cannot take Quick Actions again except Evasion until their Initiative comes up.
 }%
-\iftoggle{verbose}{%
+\iftoggle{verbose}{
 Finally, the wind moves the target back a number of squares equal to the spell's level plus the caster's Intelligence Bonus minus their Strength Bonus, since larger, heavier creatures are more difficult to move, while smaller creatures (with a negative Strength) move farther.
 
 For example, an elf with Intelligence +1, casts a \textit{Wide Air Blast} at second level, on two goblins and an ogre.
@@ -139,6 +138,7 @@ The ogre has Strength +5, so he's unmoved, but still cannot speak or move until 
 }{
 The wind moves all targets away from the caster a number of squares equal to the spell's level, plus the caster's Intelligence Bonus, minus the target's Strength Bonus.
 }
+This spell can be dodged like any other missile.%
 
 \spelllevel
 
@@ -676,6 +676,10 @@ For example, if a door were at \gls{tn} 8 to burst through, a mage with Intellig
 
 Mages can also create barriers of pure force to block passageways without a door, just as with mage armour.
 The blockade has a number of \glspl{SP} equal to triple the level of Force sphere being employed, plus the mage's Intelligence Bonus and must be battered through with repeated blows to get through the portal.
+
+\spell{Shunt}{Instant}{Combat}{Push someone back, as per \textit{Wind}.}\\
+The caster pushes over objects, or pushes back people.
+This spell functions exactly like \textit{Wind Blast}, page \pageref{windblast}.
 
 \spell{Slow Fall}{Continuous \& Instant}{Athletics}{Reduce falling damage}\\
 When people (or even items) are falling to their doom, force mages can slow the decent, limiting the Damage from such a fall.
