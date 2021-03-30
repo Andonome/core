@@ -35,11 +35,11 @@
 	{\ifodd\value{r3}%
 		\ifodd\value{r4}%
 			\ifodd\value{r3b}%
-				Townmaster's Hat%
+				Sorcerer's Eye%
 			\else%
 		Deck of Cards\fi\else Wild Seeds\fi\else\ifodd\value{r2b}Bag of Holding%
 		\else%
-			Taming Flute%
+			Defensive Heart%
 		\fi%
 	\fi}%
 	{\ifodd\value{r3}%
@@ -1188,9 +1188,8 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 {\longbow, dagger\ifodd\value{r2}, \partialleather, \lootMedium\fi%
 \iftoggle{team}{}%
 	{%
-		\ifnum\value{r12}<4%
-			, Spider arrows.%
-		\fi%
+		\iftoggle{team}{%
+			, \arabic{r12} Spider arrows}.%
 	}%
 }% EQUIPMENT
 {}
