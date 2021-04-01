@@ -363,6 +363,22 @@ The mana in mana stones cannot be used to create more mana stones and mages cann
 
 Mana stones form the basis of all magical items, and \glspl{miracleworker} can only use their traditional mana stones to create magical items.
 
+\subsubsection{Ambient Mana Regeneration}
+\label{ambientmana}
+\index{Ambient Mana}
+These stones always start life empty, but regenerate \glspl{mp} each scene until they reach their maximum.
+Mana stones only fill up through the ambient mana in the air.
+Typically, this means 2 \glspl{mp} at the end of each scene, or 3 within a deep forest, or anywhere secluded.
+
+However, there is only so much mana to go around.
+Multiple mana stones in an area must divide the mana between them.
+Whichever has the most empty slots restores mana first, so if one item has 1 out of 5 \glspl{mp} left, while another has 8 out of a maximum 9 \glspl{mp} left, the first item takes ambient \glspl{mp} first, because it has 4 empty points, so it draws more in.
+If items are tied, roll a die to see which regenerates \glspl{mp} first.
+
+\iftoggle{verbose}{
+	For this reason, adventuring parties cannot make use of dozens of magical items at once.
+}{}
+
 \spelllevel
 
 \spell{Identify Mana}{Instant}{Empathy}{Find out which path of magic made an item}\\
@@ -392,22 +408,6 @@ The squares are always continuous, so a spell targeting four squares could form 
 If the spell targets people, one person per square is always a reasonable baseline, but more might be targeted in a narrow tunnel, or fewer if targets are spread out to surround the party.
 
 \spelllevel
-
-\subsubsection{Ambient Mana Regeneration}
-\label{ambientmana}
-\index{Ambient Mana}
-These stones always start life empty, but regenerate \glspl{mp} each scene until they reach their maximum.
-Mana stones only fill up through the ambient mana in the air.
-Typically, this means 2 \glspl{mp} at the end of each scene, or 3 within a deep forest, or anywhere secluded.
-
-However, there is only so much mana to go around.
-Multiple mana stones in an area must divide the mana between them.
-Whichever has the most empty slots restores mana first, so if one item has 1 out of 5 \glspl{mp} left, while another has 8 out of a maximum 9 \glspl{mp} left, the first item takes ambient \glspl{mp} first, because it has 4 empty points, so it draws more in.
-If items are tied, roll a die to see which regenerates \glspl{mp} first.
-
-\iftoggle{verbose}{
-	For this reason, adventuring parties cannot make use of dozens of magical items at once.
-}{}
 
 \spell{Spell Breaking}{Instant}{Sphere Rating}{Destroy a spell.}\\
 The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
