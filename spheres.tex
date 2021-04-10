@@ -227,14 +227,23 @@ The \gls{tn} is typically 7 plus the target's \gls{weightrating}.
 What follows are a number of spells derived from Transmutation.
 
 \spell{Choking Fog}{Continuous}{Survival}{Create noxious gas which causes Fatigue}\\
-The caster changes the nearby air into a caustic mess.  When cast outdoors the mist disipates at the end of the \gls{round}.  When cast in a windy area, the fog disappears instantly.
+The caster changes the nearby air into a caustic mess.
+When cast outdoors the mist dissipates at the end of the \gls{round}.
+When cast in a windy area, the fog disappears instantly.
 
-Anyone Keeping Edgy can hold their breath.  Others gain \arabic{spelllevel} + the cater's Intelligence in Fatigue points each \gls{round}.
+Anyone Keeping Edgy can hold their breath.
+Others gain \arabic{spelllevel} + the cater's Intelligence in Fatigue points each \gls{round}.
 
-The spell affects a number of squares equal to \arabic{spelllevel} + the caster's Wits.
+The spell affects a single square by default.
 
 \spell{Purify Air}{Continuous}{Survival}{Clear air in a small area}\\
-Smoke, fog, or any other substance can be purified.  The spell affects a number of areas equal to \arabic{spelllevel} + the caster's Wits.
+\iftoggle{verbose}{
+	Smoke, fog, or any other substance can be purified.
+	The spell affects a single square by default.
+	Casting this as a \textit{Wide} spell allows a larger area to be cleared.
+}{
+	Smoke, fog, or any other air impurities can be cleared in a single square.
+}
 
 \spell{Stonespell}{Continuous}{Crafts}{Turn any person or other matter to stone, with a TN equal to 7 plus the target's \glsentrytext{weightrating}}\\
 The caster changes any solid target to stone, ice, or any other simple, solid, substance.  The \gls{tn} is 7 plus the target's \gls{weightrating}.\footnote{A living target's \gls{weightrating} is equal to their \glsentrytext{hp}.}
