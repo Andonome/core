@@ -673,7 +673,11 @@ However, mages can lift themselves into the air if they are content to stay extr
 
 The spell acts as any person would when lifting things, and has an effective Strength, Dexterity and Speed Bonus equal to the spell's level plus the caster's Intelligence Bonus.
 The maximum \gls{weightrating} anyone can lift is equal to their Strength Bonus plus 4, therefore, levitating a cart with a \gls{weightrating} of 10 would require a spell with an effective Strength of +6.
-The cart could then travel at 16 squares per round.
+
+If cast as a \textit{Wide} spell on a single target, each additional square affected adds the spell's level to the total the spell can lift.
+\iftoggle{verbose}{%
+	For example, a \textit{Wide Levitation} cast at level 3 and covering 3 squares, could lift a total \gls{weightrating} of 9 plus the caster's Intelligence Bonus.
+}{}
 
 \spell{Lock}{Continuous}{Craft}{Bind a door shut}\\
 The mage can erect a magical force field, similar to mage armour, over a doorway to make it more difficult to break through.
