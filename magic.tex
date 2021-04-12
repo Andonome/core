@@ -173,7 +173,10 @@ The character then spends the mana and makes a roll against some \gls{tn} to cas
 
 \index{Mana}\subsection{Mana}
 
-Anyone can buy some base \gls{mp} which is then modified by their Intelligence.\footnote{See the section on Experience, page \pageref{xp}, for costs of base \gls{mp}.} For example, someone with Intelligence +1 who buys Base \gls{mp} 2 would have a store of 3 \gls{mp} to cast spells. Those with a Base \gls{mp} of 0 can still have some \gls{mp} if their Intelligence Bonus is positive.
+Everyone's total mana is equal to double the number of spheres they have, plus their Intelligence Bonus.
+\iftoggle{verbose}{%
+	For example, a caster with Invocation 3, Fate 1, and an Intelligence Bonus of +2, would have 8 \glspl{mp} in total.
+}{}
 
 If a caster has no \gls{mp} left, they can still cast spells by paying the cost with \gls{hp} instead of \gls{mp}.
 \iftoggle{verbose}{%
@@ -323,7 +326,7 @@ Adding the enhancements \textit{Wide}, and \textit{Solid}, so make a \textit{Wid
 \noindent
 The total \glsentrylongpl{mp} a mage has grants additional spell-casting powers.
 The more power a mage has, the more flexible their spells.
-A mage with a base mana score of 2 and an Intelligence Bonus of +1 would have a total Metamagic rating of 3.
+A mage with 2 spheres and an Intelligence Bonus of +1 would have a total Metamagic rating of 5.
 
 Every power level offers the caster new spells or -- more often -- enhancements to existing spells.
 The enhancements drawn from Metamagic can affect all spells the caster has, not simply the spells listed here.
