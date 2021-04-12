@@ -1520,9 +1520,9 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 	\fi%
 \fi%
 \ifodd\value{r3b}%
-	\iftoggle{team}{}{
+	\iftoggle{team}{}{%
 		, lock picking set%
-	}
+	}%
 \fi%
 .}% EQUIPMENT
 {}
@@ -1884,7 +1884,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\mana{8}\lockedmana{\value{r4}}}
 }
 
-\newcommand{\jelly}[1][\npc{\A}{\ifnum\value{r4}>3 Black\else \ifnum\value{r4}>2 Red \else \ifnum\value{r4}>1 Brown\else Invisible\fi\fi\fi~ Ooze}]{
+\newcommand{\jelly}[1][\npc{\A}{\ifnum\value{r4}>3 Black\else \ifnum\value{r4}>2 Red \else \ifnum\value{r4}>1 Brown\else Transluscent\fi\fi\fi~ Ooze}]{
 	#1
 	\randomfour
 	\randomfour
