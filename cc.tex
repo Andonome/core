@@ -463,14 +463,15 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
-{{0}% INTELLIGENCE
+{{1}% INTELLIGENCE
 {0}% WITS
 {0}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Academics~1, Crafts~1\Path{Alchemy}{Invocation 2, Illusion 1}}% SKILLS
+{Academics~1,
+\Path{Alchemy}{\invocation 2, \illusion 1}}% SKILLS
 {Dagger, 1 x adventuring equipment}% EQUIPMENT
-{\mana{4}}
+{}
 
 \subsubsection{Illusionist}
 \index{Illusionist}
@@ -490,9 +491,10 @@ The Craft and Empathy skills means the illusionist is best at making illusions o
 {0}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Academics~2, Empathy~1, Crafts~1\Path{Alchemy}{Force~1, Invocation~2, Illusion~3}}% SKILLS
+{Academics~2, Empathy~1, Crafts~1
+\Path{Alchemy}{\force~1, \invocation~2, \illusion~3}}% SKILLS
 {\Dagger, \completeleather, 2 x adventuring equipment}% EQUIPMENT
-{\mana{8}}
+{}
 
 \subsection{Priest of \Glsentrytext{naturegod}}
 
@@ -512,9 +514,10 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics~1, Beast~Ken~1, Survival~1\Path{Divinity}{Aldaron~1, Polymorph~1}}% SKILLS
+{Academics~1, Beast~Ken~1, Survival~1
+\Path{Divinity}{\aldaron~1, \polymorph~1}}% SKILLS
 {\spear, \partialleather, dagger}% EQUIPMENT
-{\mana{4}}
+{}
 
 \subsubsection{Arch Druid}
 
@@ -533,9 +536,10 @@ Water can be turned to slime or webbing, webs could be turned to water, and the 
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics~1, Beast~Ken~2, Survival~1\Path{Divinity}{Aldaron~2, Conjuration~1, Polymorph~3}}% SKILLS
+{Academics~1, Beast~Ken~2, Survival~1
+\Path{Divinity}{\aldaron~2, \conjuration~1, \polymorph~3}}% SKILLS
 {\spear, \partialleather, dagger, 1 x adventuring equipment}% EQUIPMENT
-{\mana{7}}
+{}
 
 \subsection{Priest of \Glsentrytext{justicegod}}
 
@@ -556,9 +560,10 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 {0}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Academics~1, Medicine~1\Path{Divinity}{Fate~2}}% SKILLS
+{Academics~1, Medicine~1
+\Path{Divinity}{\fate~2}}% SKILLS
 {\quarterstaff, \partialleather}% EQUIPMENT
-{\mana{2}}
+{}
 
 \subsubsection{Cleric}
 
@@ -577,9 +582,10 @@ Those fighting could be forced to continue until they die from a sword or drop d
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics~1, Empathy~1, Deceit~1, Medicine~1\Path{Divinity}{Enchantment~3, Fate~2}}% SKILLS
+{Academics~1, Empathy~1, Deceit~1, Medicine~1
+\Path{Divinity}{\enchantment~3, \fate~2}}% SKILLS
 {\quarterstaff, \partialchain, medical equipment, 2 x adventuring equipment}% EQUIPMENT
-{\mana{5}\addtocounter{fp}{5}}
+{\addtocounter{fp}{5}}
 
 \subsection{Rogue}\index{Rogue}
 
@@ -621,9 +627,12 @@ Alternatively, rogues may go the route of a singing socialite, and even learn to
 {1}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics~1, Empathy~1, Deceit~2, Performance~2, Vigilance~1}% SKILLS
-{\longsword, \partialleather, dagger, lantern, camping equipment, writing equipment, 2 x adventuring equipment.\Path{Song}{Fate 1, Enchantment 2}}% EQUIPMENT
-{\mana{5}\addtocounter{fp}{10}}
+{Academics~1, Empathy~1, Deceit~2, Performance~2, Vigilance~1
+\Path{Song}{\fate 1, \enchantment 2}
+}% SKILLS
+{\longsword, \partialleather, dagger, lantern, camping equipment, writing equipment, 2 x adventuring equipment.
+}% EQUIPMENT
+{\addtocounter{fp}{10}}
 
 \subsection{Warrior}\index{Warrior}
 
@@ -683,9 +692,10 @@ After progressing, particularly pious fighters can gain a level or two in Fate, 
 {0}}% CHARISMA
 {0}% DR
 {2}% COMBAT
-{Academics~1, Deceit~1, Tactics~1\Path{Divinity}{Fate 2}\knacks{\adrenalinesurge, \charge}}% SKILLS
+{Academics~1, Deceit~1, Tactics~1
+\Path{Divinity}{\fate~2}\knacks{\adrenalinesurge, \charge}}% SKILLS
 {\greatsword, \partialchain, \bucklar, 2 x adventuring equipment}% EQUIPMENT
-{\mana{2}\addtocounter{fp}{10}}
+{\addtocounter{fp}{10}}
 
 \subsubsection{Ranger}\index{Ranger}
 
@@ -703,9 +713,10 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 {0}}% CHARISMA
 {0}% DR
 {2}% COMBAT
-{Projectiles~1, Beast~Ken~1, Survival~1, Tactics~1\Path{Blood}{Aldaron 2}\knacks{\mightydraw, \charge}}% SKILLS
+{Projectiles~1, Beast~Ken~1, Survival~1, Tactics~1
+\Path{Blood}{\aldaron 2}\knacks{\mightydraw, \charge}}% SKILLS
 {\longsword, \partialchain, \bucklar, bow, 2 x adventuring equipment}% EQUIPMENT
-{\mana{2}\addtocounter{fp}{10}}
+{\addtocounter{fp}{10}}
 
 \input{story/3-xp.tex}
 
