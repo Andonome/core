@@ -514,7 +514,7 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics~1, Beast~Ken~1, Survival~1
+{Academics~1, Athletics~1, Beast~Ken~1, Survival~1
 \Path{Divinity}{\aldaron~1, \polymorph~1}}% SKILLS
 {\spear, \partialleather, dagger}% EQUIPMENT
 {}
@@ -537,9 +537,9 @@ Water can be turned to slime or webbing, webs could be turned to water, and the 
 {0}% DR
 {1}% COMBAT
 {Academics~1, Beast~Ken~2, Survival~1
-\Path{Divinity}{\aldaron~2, \conjuration~1, \polymorph~3}}% SKILLS
+\Path{Divinity (\gls{naturegod})}{\aldaron~2, \conjuration~1, \polymorph~3}}% SKILLS
 {\spear, \partialleather, dagger, 1 x adventuring equipment}% EQUIPMENT
-{}
+{\addtocounter{fp}{5}}}
 
 \subsection{Priest of \Glsentrytext{justicegod}}
 
@@ -560,10 +560,10 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 {0}}% CHARISMA
 {0}% DR
 {0}% COMBAT
-{Academics~1, Medicine~1
+{Academics~1, Empathy~1, Medicine~1
 \Path{Divinity}{\fate~2}}% SKILLS
 {\quarterstaff, \partialleather}% EQUIPMENT
-{}
+{\addtocounter{fp}{5}}
 
 \subsubsection{Cleric}
 
@@ -577,12 +577,13 @@ Those fighting could be forced to continue until they die from a sword or drop d
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
-{{1}% INTELLIGENCE
+{{2}% INTELLIGENCE
 {0}% WITS
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
 {Academics~1, Empathy~1, Deceit~1, Medicine~1
+\knacks{\combatcaster}
 \Path{Divinity}{\enchantment~3, \fate~2}}% SKILLS
 {\quarterstaff, \partialchain, medical equipment, 2 x adventuring equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
