@@ -653,6 +653,7 @@
 	#1
 	\randomtwo
 	\addtocounter{enc}{3}
+	\addtocounter{r2}{2}
 	\randomtwoB
 	\addtocounter{r2b}{-1}
 	\randomthree
@@ -662,7 +663,7 @@
 {\arabic{r2b}}% DEXTERITY 
 {\arabic{r3b}}% SPEED
 {\arabic{r4}}% WITS
-{\arabic{enc}}% DR
+{\arabic{r2}}% DR
 {\ifodd\value{r3} 3\else 4\fi}% AGGRESSION
 {Athletics~\arabic{r3b}, Survival~\arabic{r3}, \ifodd\value{r4} Vigilance~\arabic{r3b}\fi}% SKILLS
 {\web}% ABILITIES
