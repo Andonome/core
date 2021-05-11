@@ -19,7 +19,7 @@ ref:
 	make
 	rm .ref
 	mv main.pdf bind_ref.pdf
-all: ref resources.pdf ${filename}.pdf
+all: ref ${filename}.pdf resources.pdf
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status
