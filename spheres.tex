@@ -710,20 +710,22 @@ Mages can add their mental ability to move things to aid their movement.
 Any attempts to move, whether fleeing or just flitting around a room, gain a bonus equal to the level of the Force sphere being employed plus their Intelligence Bonus.
 The mage can cast the spell on others and it will automatically push them onwards in whichever direction they are running.
 
-\spelllevel
-
 \spell{Clairvoyance}{Continuous}{Vigilance}{Sense the world without sight}\\
 The mage can `feel' by delicately touching things with mental movement rather than actually seeing them. They can see in complete darkness whether underwater or on land.
 
 The mage rolls Intelligence and Vigilance at \gls{tn} 6 plus the spell's level.
 The spell covers a progressively larger area depending upon the level used.
 
-Mages able to perceive events multiple areas away make for legendary spies, although the power is limited by the fact that while the make can feel events at a distance, they cannot hear voices or read anything.
+\iftoggle{verbose}{%
+	Mages able to cast \textit{Ranged} spells make for legendary spies, although the power is limited by the fact that while the mage can feel events at a distance, they cannot hear voices or read anything.
+}{}
 
 Any two mages `looking' at the same area can feel each other's presence and instantly understand that someone else is using Clairvoyance.
 They can even identify the other mage with a Wits + Empathy roll.
 
 This spell cannot be cast on others -- the target is what is being felt.
+
+\spelllevel
 
 \spell{Dancing Swords}{Continuous}{Combat}{Levitate a weapon with effective Physical Attributes equal to 2}\\
 The force mage can make a weapon levitate with the power of their mind. It can float nearby to defend them and even float off to stab at enemies who will be hard pushed to counterattack the wielder when they're standing some distance away.
