@@ -62,8 +62,13 @@ The \gls{gm} is, of course, free to veto any Story suggestions without explanati
 All stories should be noted down on the back of the character sheet, including any stats from companions, just in case they enter during a later adventure.
 
 \subsection{Experience Points}
+\label{storyXP}
 
-Each time a player spends a \glspl{storypoint}, the character earns 3 \glspl{xp}.
+Each time a player spends a \glspl{storypoint}, the character earns a number of \glspl{xp} equal to the number of \glspl{storypoint} they have.
+\iftoggle{verbose}{%
+	The first \gls{storypoint} grants 5 \glspl{xp}, the second grants 4, and so on.
+	}%
+	{}
 
 \subsection{Combining Stories}
 
