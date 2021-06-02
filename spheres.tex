@@ -586,9 +586,13 @@ The priest blesses a target, who then receives a +1 to any Skill.
 This does not stack with any other Fate spells.
 This spell can take a character beyond the standard Skill levels.
 
-\spell{Prayer of Gratitude}{Instant}{Academics}{Retrieve 1 \gls{storypoint} after you spend 2 or more}\\
-The caster rolls during any scene in which someone spends at least 2 \glspl{storypoint}.
-With a successful roll, one \gls{storypoint} is returned to the character.
+\spell{Prayer of Gratitude}{Instant}{Empathy}{Lower the cost of a Story by 1 (minimum 1)}\\
+The caster rolls during any scene in which someone spends at least 2 \glspl{storypoint}, and reduces the cost of telling that Story by 1 if the spell succeeds.
+\iftoggle{aif}{
+	For example, Janus spends 2 \glspl{storypoint} to state that he knows a thug in town who can infiltrate a nearby castle, and attempt to raise the port culllis to let the party enter.
+	The Story would normally cost 2 \glspl{storypoint}, but the party's priest of \gls{justicegod} casts \textit{Prayer of Gratitude}, so the the cost is reduced to 1.
+	Janus then receives 3 \glspl{xp} for spending his third \glspl{storypoint} as usual.
+}{}
 
 \spell{Snapback}{Instant}{Tactics}{Start a round over again}\\
 The caster casts a spell to determine if some plan will work, and subtly alters fate to ensure it gets its best shot.
