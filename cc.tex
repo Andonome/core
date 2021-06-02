@@ -1,4 +1,7 @@
-\chapter{Character Creation}\index{Traits}\index{Character Creation}\label{character_rolls}
+\chapter{Character Creation}
+\index{Traits}
+\index{Character Creation}
+\label{character_rolls}
 \settoggle{bestiarychapter}{true}
 
 \begin{multicols}{2}
@@ -35,7 +38,8 @@ Otherwise, you fail.
 
 \end{multicols}
 
-\section{Races}\index{Race}
+\section{Races}
+\index{Race}
 \newcommand{\racechart}{
 
 \begin{tcolorbox}[tabularx={clX},arc=1mm,adjusted title=Race]
@@ -152,7 +156,9 @@ These are the basic Traits which characters must use over and over again for eve
 	\input{story/2-cc.tex}
 }{}
 
-\subsection{Body Attributes}\index{Body Attributes}\index{Physical Attributes}
+\subsection{Body Attributes}
+\index{Body Attributes}
+\index{Physical Attributes}
 
 These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
 
@@ -179,7 +185,8 @@ It is slightly less visible than the other Body Attributes, but can still be see
 
 \subsection{Mind Attributes}
 
-\index{Mind Attributes}Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
+\index{Mind Attributes}
+Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
 
 \subsubsection{Intelligence}
 
@@ -216,11 +223,14 @@ If players prefer, they can design their own characters. In this case they selec
 \begin{figure*}[t]
 
 	\begin{tcolorbox}[tabularx={>{\small}c||>{\small}X|>{\small}X|>{\small}X|>{\small}X|>{\small}X|>{\small}X},arc=1mm]
-\tiny
+\tiny\raggedright
 
 	 & Strength & Dexterity & Speed & Intelligence & Wits & Charisma \\\hline\hline
-	Academics & Lifting Books & Forgery & Sorting Paperwork & Recalling facts & Resisting an enchantment spell & Storytelling \\\hline
+	Academics & Orating to a massive crowd & Forgery & Courier Runs & Recalling facts & Resisting an enchantment spell & Storytelling \\\hline
+	Athletics & Lifting heavy loads & Climbing & Sprinting & Finding the easiest route to climb & Identifying optimal climbing conditions & Stage acrobatics \\\hline
+	Beast Ken & Wrestling a~boar & Untying a~horse's bridle & Catching a~chicken & Understanding how to make a~horse ride longer & Spotting that a boar is pregnant & Calming a~horse \\\hline
 	Deceit & Intimidation & Feigning an injury & Spreading a rumour across an entire town & Crafting a plausible lie & Making a quick excuse & Implausible lies \\\hline
+	Stealth & Hiding in a hay bail & Moving quietly & Escaping into a crowd & Identifying the best hiding spot & Quickly hiding & Pretending to be anther guest at the ball \\\hline
 	Vigilance & Keeping watch all night & Feeling for an exit in the dark & Searching a full forest for a particular tree & Investigating a crime scene & Spotting an illusion spell & Finding the best con target at a banquet \\\hline
 
 	\end{tcolorbox}
@@ -431,8 +441,8 @@ One might also add this Skill to Intelligence to spot important facts written on
 \begin{multicols}{2}
 
 \noindent
-If you're used to a more class-based system, or just want some suggestions getting started, you can use the following starting defaults.
-An alchemist is just someone with spells, and a rogue is just someone with skills.
+There are no `character classes' in BIND, but if you want some sensible defaults to make a `fighter', or `thief', you can start with these values.
+An alchemist is just someone with spells, and a rogue is just someone with the Sneak Skill.
 To apply a template, you can add the racial bonuses to the characters as they are, or roll up a random race and random Attributes, then apply the template.
 
 Once the game starts, you can continue with the same concept, or morph the character into something else.
@@ -448,7 +458,8 @@ These templates can also be used to pull in quick \glspl{npc} with \glspl{storyp
 Need a quick druid companion to drop onto the set?
 Take the druid below, adjust stats if the \glspl{xp} totals don't work, and your \gls{npc} is ready to go.
 
-\subsection{Alchemist}\index{Alchemist}
+\subsection{Alchemist}
+\index{Alchemist}
 
 Alchemists start with Academics 1, Invocation 2, Illusion 1 and MP 2.
 If their Intelligence or Wits is below 0 then raise it by one level.
@@ -470,8 +481,21 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 {0}% COMBAT
 {Academics~1,
 \Path{Alchemy}{\invocation 2, \illusion 1}}% SKILLS
-{Dagger, 1 x adventuring equipment}% EQUIPMENT
+{\Dagger, 1 x adventuring equipment}% EQUIPMENT
 {}
+
+\subsubsection{Spells}
+
+\paragraph{Standard Spells:}
+With Invocation 2, the alchemist can focus for 2 rounds and spend 2 \glspl{mp}, and cast a \textit{Raging Fireball}.
+This spell inflicts $1D6+2 Damage$, but isn't terribly useful, due to the long casting time.
+
+With Illusion level 1, the alchemist can focus for 1 round and spend 1 \gls{mp} to make anything look like anything.
+
+\paragraph{Quick Spells:}
+Invocation level 1 can be cast instantly, because it it not the highest level.
+The alchemist can cast a \textit{Fireball} spell for 1 \gls{mp}, by spending only 4 Initiative.
+It deals $1D6$ Damage.
 
 \subsubsection{Illusionist}
 \index{Illusionist}
@@ -496,6 +520,17 @@ The Craft and Empathy skills means the illusionist is best at making illusions o
 {\Dagger, \completeleather, 2 x adventuring equipment}% EQUIPMENT
 {}
 
+\subsubsection{Spells}
+\paragraph{Standard Spells:}
+
+With a full three rounds (and 3 \glspl{mp}), the caster could create a \textit{Wide, Independent Illusion}, creating just about any two facsimiles out of nothing.
+Or at the same cost, the illusionist might make themself completely invisible, with a \textit{Negative Illusion}.
+
+\paragraph{Quick Spells:}
+With Illusion at level 3, this alchemist can cast up to level 2 Illusion spells instantly by spending 5 Initiative and 2 \glspl{mp}.
+A \textit{Ranged Illusion} could make something far away change its appearance, or a \textit{Wide Illusion} might change how two people look, instantly.
+Alternatively, the cast could create a \textit{Realistic Illusion} or himself as another type of creature, or cast an \textit{Independent Illusion} at any point.
+
 \subsection{Priest of \Glsentrytext{naturegod}}
 
 Priests of \Glsentrytext{naturegod} make a good stand-in for druids or witches, given their affinity for animals and ability to shapeshift.
@@ -519,6 +554,11 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 {\spear, \partialleather, dagger}% EQUIPMENT
 {}
 
+\subsubsection{Spells}
+
+\paragraph{Standard Spells:}
+Such a druid can focus for a round and spend 1 \gls{mp} to transform one animal into another, or can freeze over a patch of river, cast a magical light, or perform any other first level Aldaron spell.
+
 \subsubsection{Arch Druid}
 
 This follower of \gls{naturegod} has later gained both martial and magical ability.
@@ -540,6 +580,9 @@ Water can be turned to slime or webbing, webs could be turned to water, and the 
 \Path{Divinity (\gls{naturegod})}{\aldaron~2, \conjuration~1, \polymorph~3}}% SKILLS
 {\spear, \partialleather, dagger, 1 x adventuring equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
+
+The arch druid can perform the same spells as before, but faster -- level 1 Aldaron spells can be cast instantly, such as \textit{Light}; as can level 2 Polymorph spells such as \textit{Race Change}.
+Additionally, the druid can spend 3 rounds to cast a \textit{Freeform} spell to Polymorph into all manner of weird and wonderful shapes, such as a fire elemental with an \textit{impenetrable hide} (with 4 \gls{dr}).
 
 \subsection{Priest of \Glsentrytext{justicegod}}
 
@@ -565,6 +608,17 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 {\quarterstaff, \partialleather}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
+
+\subsubsection{Spells}
+
+\paragraph{Standard Spells:}
+
+By focussing for 2 rounds and spending \glspl{mp}, the priest can divine the future, with the Auguary spell, or bless their companions with $1D6$ \glspl{fp}.
+
+\paragraph{Quick Spells:}
+With \textit{Blessing}, by spending 4 Initiative and 1 \gls{mp}, the priest can curse a target, stripping them of $1D6$ \glspl{fp}.
+The \textit{Lending Hand} spell allows priests to add a +1 Bonus to any skill of any character, so long as the priest's Skill level is higher than the character's.
+
 \subsubsection{Cleric}
 
 Those with the rarest blessings from \gls{justicegod} can command enemies to `halt', dazzling them with visions of a wrathful god, or even curse those doing something wrong to continue that same action forever.
@@ -588,7 +642,8 @@ Those fighting could be forced to continue until they die from a sword or drop d
 {\quarterstaff, \partialchain, medical equipment, 2 x adventuring equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
-\subsection{Rogue}\index{Rogue}
+\subsection{Rogue}
+\index{Rogue}
 
 Rogues begin with Combat 1, 10 \glspl{fp}, Stealth~2, Larceny~1 and the Knack: Perfect Sneak Attack.
 If they have a Body Attribute at -1, raise it by one level.
@@ -613,7 +668,8 @@ They follow the Code of Acquisition.
 {\longsword, \completeleather, dagger, lock pick tools, 1 x adventuring equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
-\subsubsection{Bard}\index{Bard}
+\subsubsection{Bard}
+\index{Bard}
 
 Alternatively, rogues may go the route of a singing socialite, and even learn to imbue that song with magic.
 
@@ -636,7 +692,8 @@ Alternatively, rogues may go the route of a singing socialite, and even learn to
 }% EQUIPMENT
 {\addtocounter{fp}{5}}
 
-\subsection{Warrior}\index{Warrior}
+\subsection{Warrior}
+\index{Warrior}
 
 Warriors begin play with Combat 2, \gls{fp} 10 and the Knack: Adrenaline Surge.
 If the character has a single Body Attribute below 0 then buy it up a level; otherwise purchase the Tactics Skill at 1st level.
@@ -679,7 +736,8 @@ Those focussed narrowly on advancing in martial abilities can become deadly.
 {\longsword, \partialchain, \bucklar}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
-\subsubsection{Paladin}\index{Paladin}
+\subsubsection{Paladin}
+\index{Paladin}
 
 After progressing, particularly pious fighters can gain a level or two in Fate, allowing them to ask for Divine Guidance, curse enemies, or even gain additional \glspl{fp} before going into battle.
 
@@ -699,7 +757,8 @@ After progressing, particularly pious fighters can gain a level or two in Fate, 
 {\greatsword, \partialchain, \bucklar, 2 x adventuring equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
-\subsubsection{Ranger}\index{Ranger}
+\subsubsection{Ranger}
+\index{Ranger}
 
 Fighters with an affinity for the wilderness may pick up nature-related abilities, such as talking with animals, or even summoning mists.
 Whether this comes through prayer or inborn abilities which develop over time, a little magic on the side of a character can make for a formidable fighter.

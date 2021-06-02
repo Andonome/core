@@ -188,7 +188,7 @@
 %
 \newcommand{\adrenalinesurge}{Adrenaline Surge\addtocounter{strb}{1}\addtocounter{knacks}{1}}
 \newcommand{\disarm}{Disarm\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
-\newcommand{\Defender}{Defender\addtocounter{knacks}{1}\addtocounter{xpbonus}{1}}
+\newcommand{\guardian}{Guardian\addtocounter{knacks}{1}}
 \newcommand{\furiousblows}{Furious Blows\addtocounter{knacks}{1}}
 \newcommand{\firststrike}{First Strike\addtocounter{spd}{1}\addtocounter{spdb}{2}\addtocounter{knacks}{1}}
 \newcommand{\specialist}[1]{Specialist (#1)\addtocounter{knacks}{1}}
@@ -662,6 +662,7 @@
 	#1
 	\randomtwo
 	\addtocounter{enc}{3}
+	\addtocounter{r2}{2}
 	\randomtwoB
 	\addtocounter{r2b}{-1}
 	\randomthree
@@ -671,7 +672,7 @@
 {\arabic{r2b}}% DEXTERITY 
 {\arabic{r3b}}% SPEED
 {\arabic{r4}}% WITS
-{\arabic{enc}}% DR
+{\arabic{r2}}% DR
 {\ifodd\value{r3} 3\else 4\fi}% AGGRESSION
 {Athletics~\arabic{r3b}, Survival~\arabic{r3}, \ifodd\value{r4} Vigilance~\arabic{r3b}\fi}% SKILLS
 {\web}% ABILITIES

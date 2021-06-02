@@ -37,7 +37,7 @@ Lithe characters will find it easier to turn into a bird, while stronger people 
 
 \end{multicols}
 
-\startcontents[magic]
+\resumecontents[magic]
 
 \sphere{Aldaron}
 
@@ -63,7 +63,7 @@ Umber hulks, bears, birds, et c. -- all can be affected with the language of the
 However, mammals are the easiest to work with.
 The \gls{gm} should add to the \gls{tn} to affect birds, insects and other non-mammalian creatures.
 
-Forest Song replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people, and the \gls{tn} and Skill is determined by this level, not the enchantment spell.
+Forest Song replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people, the caster always uses the Beast Ken Skill.
 
 \enhancement{1}{Binding}{Replicate all 5 levels of Enchantment}
 
@@ -131,7 +131,7 @@ Each point pushes the target back by 1 square and subtracts 1 from their Initiat
 	Since it's a \textit{Wide} spell, it's cast at level 2, and the +1 Intelligence Bonus makes the total spell-potency 3.%
 	\footnote{See page \pageref{wide_enhancement} for casting big spells.}
 	The two goblins are pushed back 4 squares and lose 4 Initiative.%
-	\footnote{($3 - -1 = -4$)}
+	\footnote{($3 - -1 = 4$)}
 	The ogre, however, ignores the spell entirely.
 }{}
 
@@ -150,6 +150,7 @@ It provides a total \gls{dr} of \arabic{spelllevel} + Intelligence against all r
 \spelllevel
 
 \spell{Forest's Call}{Continuous}{Beast Ken}{Mark someone for a monster encounter}\\
+\label{forestsCall}%
 The caster makes a call to the forest to come and attack the nearby target.  If the target is a player, the \gls{gm} rolls \arabic{spelllevel} times plus the caster's Intelligence on the local encounter table, and the \gls{pc} faces all encounters within the next day, and typically within the next scene.  The \gls{gm} is encouraged to combine all encounters into one.
 
 If the target is an \gls{npc}, they lose \arabic{spelllevel} \gls{fp} + the caster's Intelligence.
@@ -413,7 +414,8 @@ The spell is sometimes initiated by eye contact, sometimes by song -- any number
 A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Academics.
 If the target loses the roll they immediately loses all remaining actions for the turn but can still defend themself; the target's Initiative score instantly reduces to 0.
 
-Each subsequent turn the target makes a resisted roll of Wits + Academics against the mage's Intelligence + Deceit. Failure indicates that they suffer an Initiative penalty equal to the spell's level plus the mage's Intelligence Bonus.
+Each subsequent turn the target makes a resisted roll of Wits + Academics against the mage's Intelligence + Deceit.
+Failure indicates that they suffer an Initiative penalty equal to the spell's level plus the caster's Intelligence Bonus.
 
 While the spell is in effect, the target suffers a penalty to all Mental Attributes equal to \arabic{spelllevel} plus the enchanter's Intelligence Bonus; so a mage with Intelligence +3 would inflict a -5 penalty. If the target attempted to cast spells, any rolls would suffer a -5 penalty and any spell-effects which relied on the Intelligence Attribute would suffer as well.
 
@@ -434,6 +436,13 @@ If the target was attempting to mount a horse but the horse flees, they will cha
 
 The enchanter engages in a resisted roll of their Intelligence + Empathy versus the target's Wits + Academics.
 Targets can stop once their original action has become obviously impossible or is unmistakably complete.
+
+\spell{Oath}{Continuous}{Academics}{Force a target to fulfill any promise}\\
+The target repeats and emphasises an oath while the caster completes the spell.
+For as long as the spell endures, the target cannot break their oath.
+
+A Quick spell allows casters to accept any statement made on the same round.
+Even short sentences, such as `I'll find out', or `I'm going to leave at sunrise', can be interpreted as oaths, although if someone does not state \textit{when} they do something, the expected time defaults to any time up until the end of the scene.
 
 \spelllevel
 
@@ -654,7 +663,7 @@ The mage can shape pure energy, pushing and pulling at the world with the power 
 The mage levitates and traps a target, forcing them to remain where they are, or move as the caster desires.
 While powerful, the spell is particularly challenging to cast, as it has a \gls{tn} equal to 7 plus the target's \gls{weightrating}.%
 \iftoggle{verbose}{%
-\footnote{Everyone's \glsentrytext{weightrating} is equal to their \glspl{hp}.}
+\footnote{Everyone's \glsentrytext{weightrating} is equal to their maximum \glspl{hp}.}
 }{}
 
 Those caught by the spell count as \textit{prone}, leaving them open to Sneak Attacks.%
@@ -760,9 +769,9 @@ When cast wide, it can cover a group of people, but the shield will cover all of
 She's low on \gls{mp} so she casts it at level 2, gaining 8 \gls{SP}.
 On the very next Initiative Count she's hit for 10 Damage and loses all 8 \gls{SP} then 2 FP.}
 
-The spell must be maintained as a \gls{standingspell} to function.
 Multiple castings do not stack -- only the highest casting it used.
-The shield can be placed on others if need be, not only the mage.
+
+The shield can be placed on others if need be, not only the mage, but this will limit their ability to attack.
 
 Armour does not block Damage going onto \gls{SP} -- the character simply subtracts \gls{SP} without any \gls{dr}. The Mage Armour is not affected by a Vitals Shot -- it protects all around, counting as Perfect armour, although not quite continuously enough to keep out water or gasses. Multiples of such spells do not stack -- only the highest is used.
 

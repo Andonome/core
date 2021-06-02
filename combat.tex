@@ -1,4 +1,5 @@
-\chapter{Combat}\index{Combat}
+\chapter{Combat}
+\index{Combat}
 \label{combat}
 
 \newcommand{\initiativechart}{
@@ -163,10 +164,11 @@ The \gls{tn} is 7 plus your opponent's Dexterity.
 Animals use a \gls{skill} called Aggression.
 It works exactly like the Combat \gls{skill} but only adds to the Strike Factor, and never to Initiative or Evasion.
 
-\subsection{Damage}\index{Damage}
+\subsection{Damage}
+\index{Damage}
 
 \iftoggle{verbose}{
-	\begin{figure*}[b]
+	\begin{figure*}[t]
 		\begin{tcolorbox}[title=Dicey Damage]
 	
 			If you prefer your Dice in a more old-school format, you can easily give each weapon a different Damage die.
@@ -189,7 +191,8 @@ If you hit, roll $1D6$ plus your Strength Bonus to determine Damage.
 The Damage is then taken off the enemy's \gls{hp}.
 Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
 
-\subsubsection{Stacking Damage}\index{Combat!Stacking Damage}
+\subsubsection{Stacking Damage}
+\index{Combat!Stacking Damage}
 
 Damage Bonuses cannot extend forever. If the Damage bonus ever exceeds +3 then 4 points of the bonus are replaced with a die. Therefore, what might usually be $1D6+4$ Damage becomes $2D6$ Damage.
 
@@ -218,7 +221,8 @@ The total bonus to defence, including any bonuses from weapons, is called the \t
 
 }{}
 
-\subsection{Movement}\index{Movement}
+\subsection{Movement}
+\index{Movement}
 \label{movement}
 
 By spending two Initiative, characters can run as a \gls{quickaction}, acting before all other actions.
@@ -237,11 +241,14 @@ A long fall might have broken the character's bone.
 A dagger could have slashed open several veins.
 Characters do not have many \glspl{hp} so losing even one is a serious matter.
 
-\subsubsection{Healing}\index{Healing}
+\subsubsection{Healing}
+\index{Healing}
 Characters heal a quarter their \gls{hp} each week, rounded up.
 
 \subsubsection{Death}
-\index{Death}Once a \gls{pc} reaches 0 \gls{hp} they must make a \index{Vitality Check}Vitality Check in order to stay alive.
+\index{Death}
+Once a \gls{pc} reaches 0 \gls{hp} they must make a \index{Vitality Check}
+Vitality Check in order to stay alive.
 This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
 Stronger characters already have more \gls{hp}, which has already kept them farther from death.}}{}
 For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
@@ -300,6 +307,8 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Rock & +1 & \ 0 & \ 0 & -5 & \\
 
+	Stick & +1 & +1 & +1 & -2 & & \\
+
 	\end{tcolorbox}
 
 	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}}]
@@ -308,7 +317,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Boulder & +4 & -1 & \ 0 & 6/8 & & Finishing Blow (page \pageref{finishingblow}) \\
 
-	Cast Iron Skillet & +2 & \ 0 & \ +1 & -1/1 & & Adrenaline Surge (page \pageref{adrenalinesurge}) \\
+	Cast Iron Skillet & +2 & \ -1 & \ +1 & -1/1 & & Adrenaline Surge (page \pageref{adrenalinesurge}) \\
 
 	Chair & +1 & +1 & +1 & 1/ 3 & \\
 
@@ -367,11 +376,13 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 \begin{multicols}{2}
 
-\subsubsection{Light Weapons}\index{Light Weapons}
+\subsubsection{Light Weapons}
+\index{Light Weapons}
 
 Light Weapons are those with a \gls{weightrating} of -2 or less. People wield them in one hand only, without problem, and can slash or stab with them in flurries of blows, quickly. They require only 4 Initiative points to attack with, so while an axe is far more damaging than a dagger, a dagger can unleash a flurry of blows before a single axe swing has taken place.
 
-\subsubsection{Medium Weapons}\index{Combat!Medium Weapons}
+\subsubsection{Medium Weapons}
+\index{Combat!Medium Weapons}
 
 Swords, axes and all the regular weapons of warfare require a full 6 Initiative points to be swung.
 They grant excellent Combat Bonuses, often increasing the effects of all three Attributes.
@@ -384,14 +395,16 @@ While this is a steep penalty to Initiative, the price can be worth the wielding
 
 Anyone wielding a medium (or indeed heavy) weapon with a \gls{weightrating} equal or greater than their racial maximum has an unwieldy weapon indeed, and suffers a -3 penalty to their Initiative.
 
-\subsubsection{Heavy Weapons}\index{Combat!Heavy Weapons}
+\subsubsection{Heavy Weapons}
+\index{Combat!Heavy Weapons}
 
 Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a \gls{weightrating} of 4 or more.
 They grant excellent Bonuses, but require 8 Initiative points to attack.
 
 Anyone insane enough to attempt to use a large weapon one handed must suffer through a +4 increase in the weapon's \gls{weightrating}, which would make such weapons prohibitively heavy for most people.
 
-\subsection{Shields}\index{Shields}
+\subsection{Shields}
+\index{Shields}
 
 Shields work like any other weapon, so they are useful both for attack and defence.
 However, they work best in defence.
@@ -441,7 +454,8 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 	\end{tcolorbox}
 }
 
-\section{Armour}\index{Armour}
+\section{Armour}
+\index{Armour}
 
 \begin{multicols}{2}
 
@@ -458,7 +472,9 @@ Perfect armour is a rating used for certain creatures which have natural armour 
 
 \paragraph{Complete} armour adds +1 to the \gls{weightrating} and multiplies the price by 3.
 
-\subsection{Vitals Shots}\label{vitals}\index{Combat!Vitals Shots}
+\subsection{Vitals Shots}
+\label{vitals}
+\index{Combat!Vitals Shots}
 
 When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
 
@@ -524,7 +540,9 @@ Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrat
 
 \subsection{Perfect Strikes}
 
-\index{Combat!Perfect Strikes}Rolling a \gls{natural} `12' in combat, i.e. rolling two 6's, means the roll was a Perfect Strike. A Perfect Strike is guaranteed to hit even if it doesn't reach the opponent's \gls{tn}, it ignores both Partial and Complete armour (covered below) and it grants +2 Damage.
+\index{Combat!Perfect Strikes}
+Rolling a \gls{natural} `12' in combat, i.e. rolling two 6's, means the roll was a Perfect Strike.
+A Perfect Strike is guaranteed to hit even if it doesn't reach the opponent's \gls{tn}, it ignores both Partial and Complete armour (covered below) and it grants +2 Damage.
 
 \end{multicols}
 
@@ -570,9 +588,11 @@ The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied dir
 At the end of each Scene, players regenerate 2/5ths of their \glspl{fp}.
 Those with 5 \glspl{fp} total regenerate 2 temporary \glspl{fp}, and those with 10 \glspl{fp} regenerate 4 temporary \glspl{fp}, and so on.
 
-While \glspl{npc} begin with 0 \gls{fp}, they too regenerate the normal amount each scene. In this way, an \gls{npc} might accumulate quite a number of \gls{fp}, and when some climactic end scene arises where the \glspl{pc} finally confront them, they will have a harder time of it, because the \gls{npc} has now become plot-important enough to merit some plot immunity, just like them.
+While \glspl{npc} begin with 0 \gls{fp}, they too regenerate the normal amount each scene.
+In this way, an \gls{npc} might accumulate quite a number of \gls{fp}, and when some climactic end scene arises where the \glspl{pc} finally confront them, they will have a harder time of it, because the \gls{npc} has now become plot-important enough to merit some plot immunity, just like them.
 
-One exception here is creatures without a Charisma Attribute. Animals, undead and other creatures without any Charisma Bonus can never store \gls{fp} except through the use of Magic.
+One exception here is creatures without a Charisma Attribute.
+Animals, undead and other creatures without any Charisma Bonus can never store \gls{fp} except through the use of Magic.
 
 \end{multicols}
 
@@ -606,7 +626,8 @@ One exception here is creatures without a Charisma Attribute. Animals, undead an
 
 \begin{multicols}{2}
 
-\label{fatigue}\index{Fatigue}
+\label{fatigue}
+\index{Fatigue}
 \noindent
 Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
 Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
@@ -698,7 +719,8 @@ The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points 
 \paragraph{Starvation} is another special case.
 Fatigue inflicted from starvation is marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
-\subsection{Healing Fatigue}\index{Resting}
+\subsection{Healing Fatigue}
+\index{Resting}
 
 When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{fatigue} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
 \footnote{The day is divided into four parts. See page \pageref{time}.}
@@ -743,7 +765,9 @@ If they are part of a group of 5 people, any roll of 5 or under means they have 
 Companions who are are accidentally hit can attempt an Evasion roll by rolling with their current Evasion Factor against \gls{tn} 10; failure implies normal Damage from that attack.
 It is quite possible to kill a companion while fighting blind.
 
-\subsubsection[Darkness: Penalty equals difference between combatants' Wits + Vigilance]{Darkness}\label{darkness}\index{Darkness}
+\subsubsection[Darkness: Penalty equals difference between combatants' Wits + Vigilance]{Darkness}
+\label{darkness}
+\index{Darkness}
 \index{Combat!Darkness}
 
 Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
@@ -1131,14 +1155,21 @@ Chases form some of the most dramatic scenes in an adventure. When running on an
 
 The system is simple -- one player rolls $2D6$ for the group. Each person then modifies this group score. Since the party will probably run at different paces, they have the option of abandoning slower members or slowing down to the pace of the slowest member.
 
-The \gls{tn} is 6 plus the enemy's Speed + Athletics Bonuses. Failure means the characters are instantly caught, before they are able to run anywhere. If the players hit the \gls{tn} they manage to run through 1 area while being chased. For every Marginal point, they run through an additional area. If the Margin is ever 3 or more then they completely evade the enemy. If the party obtain less than total success, they and their pursuers both move and must roll again.
+The \gls{tn} is 6 plus the enemy's Speed + Athletics Bonuses.
+Failure means the characters are instantly caught, before they are able to run anywhere.
+If the players hit the \gls{tn} they manage to run through 1 area while being chased.
+For every Marginal point, they run through an additional area.
+If the Margin is ever 3 or more then they completely evade the enemy.
+If the party obtain less than total success, they and their pursuers both move and must roll again.
 
 The table is a guide to an unaltered roll. In most situations enemy Traits will affect the actual results of such a total by increasing or decreasing the \gls{tn}.
 
 The \gls{gm} is encouraged to give a fast-paced description of fast-moving scenery, hurriedly telling the players about a new area before moving instantly on.
 Each area covered holds new opportunities for getting away, or trapping the quarry -- whether that is the players or their prey.
 
-Characters running through forests might encounter a marshy area, a stream, dense thickets, an open plain and then a sudden, steep hill. Those crossing plains might find a random encounter in their path, then a copse of trees. Those running up a mountain could find an area of loose rocks where the ground slides away from under their feet, a narrowing path upwards as rocky walls envelop them and then a misty lake covered in low-lying cloud.
+Characters running through forests might encounter a marshy area, a stream, dense thickets, an open plain and then a sudden, steep hill.
+Those crossing plains might find a random encounter in their path, then a copse of trees.
+Those running up a mountain could find an area of loose rocks where the ground slides away from under their feet, a narrowing path upwards as rocky walls envelop them and then a misty lake covered in low-lying cloud.
 
 Each area covered also inflicts 1 Fatigue Point in addition to any for wearing armour or for Encumbrance Points. These Fatigue Points are applied after every roll rather than waiting until the end of the scene.
 
@@ -1167,7 +1198,11 @@ Such is life.
 
 \subsection[Falling Damage]{Falling Damage}
 
-\index{Falling}Characters who fall from a height suffer 2 Damage per square the character fell. 2 Damage alone converts to $1D6-2$ Damage, while 4 Damage would simply be $1D6$ and so on. Characters falling straight downward can attempt to mitigate 4 Damage by rolling Dexterity + Athletics at \gls{tn} 9. Those falling forward and down in an arc can try to roll along the ground to mitigate the Damage; they roll Dexterity + Athletics at \gls{tn} 7 and a successful roll indicates that they reduce incoming Damage by 4.
+\index{Falling}
+Characters who fall from a height suffer 2 Damage per square the character fell.
+2 Damage alone converts to $1D6-2$ Damage, while 4 Damage would simply be $1D6$ and so on.
+Characters falling straight downward can attempt to mitigate 4 Damage by rolling Dexterity + Athletics at \gls{tn} 9.
+Those falling forward and down in an arc can try to roll along the ground to mitigate the Damage; they roll Dexterity + Athletics at \gls{tn} 7 and a successful roll indicates that they reduce incoming Damage by 4.
 
 The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
 
