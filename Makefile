@@ -11,7 +11,7 @@ ${filename}.glg: svg-inkscape
 	pdflatex ${filename}.tex
 	makeglossaries ${filename}
 	pdflatex ${filename}.tex
-resources: resources.pdf
+resources: resources.pdf ${filename}.pdf
 resources.pdf: $(wildcard CS/*.tex)
 	pdflatex CS/resources.tex
 ref:
