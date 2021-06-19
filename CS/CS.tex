@@ -31,8 +31,8 @@
 }
 
 %----
-	\posterbox[adjusted title=Attributes]{name=attributes,column=1,row=2,span=4,rowspan=2}{\vspace{-.3cm}\begin{tabular}{ll}
-		& {\tiny Penalties \hspace{2.3em} Bonuses} \\
+	\posterbox[adjusted title=Attributes (5 \textbar~10/20/30/50)]{name=attributes,column=1,row=2,span=4,rowspan=2}{\vspace{-.3cm}\begin{tabular}{ll}
+		& {\tiny Penalties \hspace{30pt} Bonuses} \\
 		Strength & \attributecircles \\
 		Dexterity & \attributecircles \\
 		Speed & \attributecircles \\
@@ -171,12 +171,17 @@
 
 	}
 %----
-	\posterbox[adjusted title=Skills]{name=skills,column=8,row=8,span=3.1,rowspan=4.8}{
+	\posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=8,row=8,span=3.1,rowspan=1}{
 		\begin{tabular}{lp{0em}p{0em}p{0em}}
 
 			\skill{Combat*}
 			\skill{Projectiles*}
-			& \\
+			\end{tabular}
+	}
+
+	\posterbox[adjusted title=Skills (5/10/15)]{name=skills,column=8,row=9,span=3.1,rowspan=4}{
+		\begin{tabular}{lp{0em}p{0em}p{0em}}
+
 			\skill{Academics*}
 			\skill{Athletics}
 			\skill{Beast Ken*}
@@ -199,8 +204,11 @@
 		\textbf{Specialisations}
 	}
 
-	\posterbox[adjusted title=Spheres]{name=spheres,column=1,row=8,span=3.8,rowspan=2}
-	{\vspace{.2cm} \line(1,0){110} \fiveboxes
+	\posterbox[adjusted title=Spheres (10/15/25)]{name=spheres,column=1,row=8,span=3.8,rowspan=2}
+	{
+	\vspace{.2cm} \line(1,0){110} \fiveboxes
+
+\vspace{.2cm} \line(1,0){110} \fiveboxes
 
 \vspace{.2cm} \line(1,0){110} \fiveboxes
 
@@ -212,7 +220,7 @@
 
 %----
 
-	\posterbox[adjusted title=Equipment]{name=equipment,column=1,row=10,span=7,rowspan=2.8}{
+	\posterbox[adjusted title=Equipment (1 per Skill)]{name=equipment,column=1,row=10,span=7,rowspan=2.8}{
 
 	\vspace{.4cm}
 
@@ -234,7 +242,7 @@
 
 	Total XP \weeline Remaining XP \weeline}
 
-	\posterbox[adjusted title=Knacks]{name=knacks,column=5,row=8,span=3,rowspan=2}{
+	\posterbox[adjusted title=Knacks (5/10/15)]{name=knacks,column=5,row=8,span=3,rowspan=2}{
 		\vspace{.3cm}
 
 		\Split
