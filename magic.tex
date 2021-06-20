@@ -253,9 +253,16 @@ For example, Tauron the elven sorcerer casts a spell on himself to appear as a g
 
 These still-active spells are known as \glspl{standingspell}. Some mages operate by continuously casting different spells and then going `empty' when the mana is gone. Others typically operate with \gls{standingspell} alone, casting everything they might need before the day begins and leaving their useful spells `running' but leaving themselves unable to cast more.
 
-\subsection{Spell Types}
+\subsection{Casting Times}
 
-Your standard spell takes a while to cast -- normally 1 \gls{round} per level, so a Level 3 spell would normally take 3 \glspl{round} to complete.  Casters can go slower or faster and gain bonuses or penalties to their roll.
+\iftoggle{verbose}{
+	Your standard spell takes a while to cast -- specifically a number of rounds equal to half the spell's level.
+	A first level spell takes a full \gls{round} to cast, and activates at Initiative 0, while a third level spell requires 2 \glspl{round} to cast.
+}{
+	Spells require a number of full \glspl{round} to cast equal to half the spell's level.
+}
+
+Casters who take any other action during this time, such as evading an attack or speaking, lose the spell and must start over (but lose no \glspl{mp}).
 
 \subsubsection{Ritual Spells}
 
