@@ -15,11 +15,11 @@
 
 \newcommand{\lootMedium}{%
 \iftoggle{bestiarychapter}{%
-\ifodd\value{r2}$3D6$\else$2D6$\fi sp}{%
+\ifodd\value{r2}$3D6$\else$2D6$\fi~sp}{%
 \addtocounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
 \ifnum\value{gold}<4%
 	\setcounter{gold}{7}\fi%
-\arabic{gold} sp}%
+\arabic{gold}~sp}%
 }
 
 \newcommand{\lootBig}{%
@@ -65,9 +65,9 @@
 \iftoggle{bestiarychapter}{jewellery worth \ifodd\value{r2}$3D6$sp\else$1D6+2$gp\fi}%
 	{\ifnumcomp{\value{r2}}{>}{1}{\ifodd\value{r3}%
 		\ifodd\value{r4}%
-			golden necklace worth \arabic{r12} sp\else%
-			golden ring worth \thechapter sp\fi\else%
-		jewel encrusted dagger worth \thepage sp\fi}%
+			golden necklace worth \arabic{r12}~sp\else%
+			golden ring worth \thechapter~sp\fi\else%
+		jewel encrusted dagger worth \thepage~sp\fi}%
 	{\ifodd\value{r3}%
 		\ifodd\value{r4}%
 			ornate silver earrings worth 1 gp\else
@@ -1683,7 +1683,7 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 		\greatclub
 	\fi
 \fi
-\ifnumcomp{\thechapter}{>}{8}{, \thepage sp}{}}% EQUIPMENT
+\ifnumcomp{\thechapter}{>}{8}{, \thepage~sp}{}}% EQUIPMENT
 {}
 }
 
