@@ -591,9 +591,12 @@ bookmarks=true]%
 
 %%%%%%%%%%%%%%%%%%%% Environments %%%%%%%%%%%%%%%%%%%%
 
-\newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
-
-\tcolorboxenvironment{speechtext}{}
+\newenvironment{speechtext}{
+	\begin{boxtext}\it
+\begin{quotation}\noindent}%
+{\end{quotation}
+\end{boxtext}%
+}
 
 \newenvironment{rolltable}%
 {\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}
@@ -616,9 +619,9 @@ Roll & Result \\
 
 \newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
 
-\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{adjusted title=Encounters in #1,arc=1mm,tabularx={XXp{.6\textwidth}},code={\setcounter{enc}{19}\setcounter{list}{18}}}
+\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{ornamented,adjusted title=Encounters in #1,tabularx={XXp{.6\textwidth}},bottom=10pt,code={\setcounter{enc}{19}\setcounter{list}{18}}}
 
-\newtcolorbox{rollchart}{tabularx={p{.25\linewidth}X},arc=1mm}
+\newtcolorbox{rollchart}{ornamented,boxsep=12pt,tabularx={p{.25\linewidth}X},top=20pt,bottom=20pt}
 
 \newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
 
