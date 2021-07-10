@@ -318,6 +318,7 @@ bookmarks=true]%
 \tcbsubskin{ornamented}{empty}{
   skin first=ornamented,  skin last=ornamented,
   title engine=standard,
+  colbacktitle=white,
   top=10pt,
   frame code={
     % Account for the line widths in order not to draw beyond the bounding
@@ -730,8 +731,8 @@ Roll & Result \\
 
 	\begin{figure*}[t]
 	
-	\begin{tcolorbox}[adjusted title={Summary: \sqName}]
-	
+	\begin{tcolorbox}[ornamented,adjusted title={Summary: \sqName}]
+	\vspace{-1em}
 	\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}
 	
 	\end{tcolorbox}
