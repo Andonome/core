@@ -109,23 +109,6 @@
 \renewcommand\chaptermark[1]{\markboth{\thechapter.~#1}{}}
 
 
-%%%%% TColorBox Basic Setup %%%%%
-
-\tcbset{enhanced,
-colbacktitle=black!5!white,
-fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
-{yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
-boxed title style={boxrule=-0.5mm,
-frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
--- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
--- (frame.south east) -- (frame.south west) -- cycle; },
-interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
--- (interior.north west) -- (interior.north east)
--- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
--- cycle;}
-}
-}
-
 \RequirePackage{xr-hyper}
 \RequirePackage[
 pdfstartpage=1,
@@ -289,6 +272,8 @@ bookmarks=true]%
 	\end{figure*}
 }
 
+% Define the 'ornamentedbox' environment
+
 % Wiggly Borders
 \makeatletter
 \tikzset{
@@ -319,7 +304,6 @@ bookmarks=true]%
   skin first=ornamented,  skin last=ornamented,
   title engine=standard,
   colbacktitle=white,
-  top=10pt,
   frame code={
     % Account for the line widths in order not to draw beyond the bounding
     % box---except for a few very small details for which this is intentional.
@@ -389,9 +373,6 @@ bookmarks=true]%
                            coltitle=black}
 }
 
-% Define the 'ornamentedbox' environment
-\newtcolorbox{boxtext}[1][]{ornamented,colback=white,fonttitle=\scshape, #1}
-
 % Convenient style to use with a tcolorbox preceded by text (or anything),
 % when one wants to prevent any page break before the tcolorbox.
 \tcbset{skip and no break/.style={
@@ -405,6 +386,25 @@ bookmarks=true]%
   before={\kern 5pt}, after={\kern 5pt}}
 }
 
+%%%%% TColorBox Basic Setup %%%%%
+
+\tcbset{enhanced,
+ornamented,
+fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
+{yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
+boxed title style={boxrule=-0.5mm,
+frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+-- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+-- (frame.south east) -- (frame.south west) -- cycle; },
+interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+-- (interior.north west) -- (interior.north east)
+-- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+-- cycle;}
+}
+}
+
+
+\newtcolorbox{boxtext}[1][]{ornamented,colback=white,fonttitle=\scshape, #1}
 
 % Chapter Heading Color
 \colorlet{chapnumcol}{black!100}
@@ -619,13 +619,13 @@ Roll & Result \\
 
 \it}{\normalfont\vspace{2em}}
 
-\newtcolorbox{xpchart}[1]{ornamented,tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,bottom=10pt}
+\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,bottom=10pt}
 
 \newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{ornamented,adjusted title=Encounters in #1,tabularx={XXp{.6\textwidth}},bottom=10pt,code={\setcounter{enc}{19}\setcounter{list}{18}}}
 
-\newtcolorbox{rollchart}{ornamented,tabularx={p{.25\linewidth}X},top=10pt,bottom=10pt}
+\newtcolorbox{rollchart}{tabularx={p{.25\linewidth}X},top=10pt,bottom=10pt}
 
-\newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
+\newtcolorbox{xpbox}[1]{tabularx={lc},bottom=10pt,top=10pt,equal height group=#1}
 
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
