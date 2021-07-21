@@ -4,7 +4,7 @@
 
 \newcommand{\initiativechart}{
 
-	\begin{tcolorbox}[title={Initiative Costs},arc=1mm,tabularx={lc}]
+	\begin{tcolorbox}[title={Initiative Costs},tabularx={lc},bottom=10pt]
 
 	\textbf{Action} & \textbf{Init. Cost} \\\hline
 
@@ -288,7 +288,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 \end{multicols}
 
 \newcommand{\weaponschart}{
-	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}}]
+	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}},bottom=10pt,top=10pt]
 	\textbf{Light Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
 		Cudgel & +2 & \ 0 & \ 0 & -3 & & Stunning Strike (page \pageref{stunningstrike}) \\
@@ -311,7 +311,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	\end{tcolorbox}
 
-	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}}]
+	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}},top=10pt,bottom=10pt]
 
 	\textbf{Medium Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
@@ -347,7 +347,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	\end{tcolorbox}
 
-	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}}]
+	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}},bottom=10pt,top=10pt]
 
 	\textbf{Heavy Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
@@ -361,11 +361,11 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	\end{tcolorbox}
 
-	\begin{tcolorbox}[arc=1mm,tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}}]
+	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrp{.30\textwidth}},bottom=10pt,top=10pt]
 
 	\textbf{Shields} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
-	Bucklar Shield & +0 & \ 0 & +2 & -2 & 4 sp & \\
+	Bucklar Shield & 0 & \ 0 & +2 & -2 & 4 sp & \\
 
 	Kite Shield & 0 & \ 0 & +3 & 2/4 & 8 sp & Solid Defence (page \pageref{soliddefence}), Dodger (page \pageref{dodger}) \\
 
@@ -425,7 +425,7 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 
 \newcommand{\armourchart}{
 
-	\begin{tcolorbox}[arc=1mm,tabularx={ccccc}]
+	\begin{tcolorbox}[tabularx={ccccc},bottom=10pt,top=10pt]
 
 	\textbf{Armour} & \textbf{\glsentrytext{dr}} & \textbf{Weight} & \textbf{Noise} & \textbf{Price} \\\hline
 
@@ -603,7 +603,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 
 \newcommand{\fatiguechart}{
 
-	\begin{tcolorbox}[title={Fatigue Chart},arc=1mm,tabularx={lX}]
+	\begin{tcolorbox}[title={Fatigue Chart},tabularx={lX},bottom=10pt,top=10pt]
 		\textbf{Action} & \textbf{\Glspl{fatigue}} \\\hline
 
 		Armour & Wearing armour inflicts 1 \gls{fatigue} per \gls{weightrating} of the armour. \\
@@ -622,7 +622,6 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 		Starving & Each meal skipped inflicts 1 \gls{fatigue} plus half the character's Strength Bonus (rounded up). \\
 
 		Swimming & Each square swum inflicts 1 \gls{fatigue}. \\
-
 	\end{tcolorbox}
 
 }
@@ -635,7 +634,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
 Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
-\begin{tcolorbox}[arc=1mm,tabularx={llllllllll}]
+\begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
@@ -649,7 +648,7 @@ Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too 
 Below the character's \gls{hp} bar are spaces for Fatigue Points to be gained.
 Once the character has more Fatigue Points than their current \glspl{hp}, they take a -1 penalty for every Fatigue Point in excess of their \glspl{hp}.
 
-\begin{tcolorbox}[arc=1mm,tabularx={llllllllll}]
+\begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
@@ -663,7 +662,7 @@ Once the character has more Fatigue Points than their current \glspl{hp}, they t
 This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions.
 But it might also occur because the character has 4 \glspl{fatigue} and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
-\begin{tcolorbox}[arc=1mm,tabularx={llllllllll}]
+\begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
@@ -973,7 +972,7 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 \begin{multicols}{2}
 
 \begin{figure*}[t]
-\begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XXXr}]
+\begin{tcolorbox}[tabularx={p{.3\textwidth}XXXr},bottom=10pt,top=10pt]
 
 	\textbf{Projectile} & \textbf{Initiative} & \textbf{Damage} & \textbf{Weight}  & \textbf{Cost} \\\hline
 
@@ -1042,7 +1041,7 @@ Weapons also receive a -2 penalty to Damage.
 \label{morale}
 \index{Morale}
 \newcommand{\moralechart}{
-	\begin{tcolorbox}[title={Morale Chart},arc=1mm,tabularx={cp{.75\textwidth}}]
+	\begin{tcolorbox}[title={Morale Chart},tabularx={cp{.75\textwidth}},bottom=10pt,top=10pt]
 		Bonus & Situation \\\hline
 
 		+4 & Monsters outnumber characters 3:1. \\
@@ -1089,7 +1088,7 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \newcommand{\chasechart}{
 
-	\begin{tcolorbox}[arc=1mm,tabularx={lp{.85\textwidth}}]
+	\begin{tcolorbox}[tabularx={lp{.85\textwidth}},bottom=10pt,top=10pt]
 
 	Total & Result \\\hline
 
@@ -1113,7 +1112,7 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \newcommand{\huntchart}{
 
-	\begin{tcolorbox}[arc=1mm,tabularx={lp{.85\textwidth}}]
+	\begin{tcolorbox}[tabularx={lp{.85\textwidth}},bottom=10pt,top=10pt]
 
 	Total & Result \\\hline
 

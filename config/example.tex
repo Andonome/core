@@ -40,6 +40,51 @@ The first field can also indicate a female with an {\tt\textbackslash F} (\F), a
 
 With a little study, you can summon dozens of monsters, including {\tt\textbackslash human fighter}, {\tt\textbackslash basilisk}, and {\tt \textbackslash ghoul}.
 
+\subsection{Individual NPCs}
+
+Individual characters can be created by using the {\tt\textbackslash npc} command then the \textbackslash person command, with its nine arguments:
+
+\begin{verbatim}
+
+\npc{\M}{Alice}
+
+\person{0}% STRENGTH
+{1}% DEXTERITY 
+{-1}% SPEED
+{{2}% INTELLIGENCE
+{0}% WITS
+{0}}% CHARISMA
+{0}% DR
+{1}% COMBAT
+{Academics 1, Survival 1}% SKILLS
+{\longsword, adventuring equipment}% EQUIPMENT
+{}
+
+\end{verbatim}
+
+\npc{\M}{Alice}
+\person{0}% STRENGTH
+{1}% DEXTERITY 
+{-1}% SPEED
+{{2}% INTELLIGENCE
+{0}% WITS
+{0}}% CHARISMA
+{0}% DR
+{1}% COMBAT
+{Academics 1, Survival 1}% SKILLS
+{\longsword, adventuring equipment}% EQUIPMENT
+{}
+
+You can add things for these people to say with a {\tt\textbackslash begin\{speechtext\}} command:
+
+\begin{speechtext}
+
+	``Would you tell me, please, which way I ought to go from here?''
+
+	``That depends a good deal on where you want to get to.''
+
+\end{speechtext}
+
 \subsection{And now for something completely different}
 
 This is a magical item.
@@ -51,6 +96,32 @@ This is a magical item.
 	{Pocket Spell}% TYPE
 	{2}% Potency
 	{5}% MP
+
+\subsection{Encounters}
+
+\begin{encounters}{Wonderland}
+
+	Fields & Gardens & Results \\\hline
+
+	\li & Doormouse \\
+	\li & Dodo \\
+	\li \lii Unicorn \\
+	\li \lii Red Queen \\
+	& \lii Black Queen \\
+	& \lii Green Queen \\
+
+
+\end{encounters}
+
+\begin{rollchart}
+
+Roll & Result \\\hline
+
+12 & Success \\
+
+11 & Failure \\
+
+\end{rollchart}
 
 \subsection{Random Text}
 

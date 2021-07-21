@@ -35,10 +35,12 @@
 \RequirePackage{needspace}
 \RequirePackage{tikz}
 	\usetikzlibrary{calc,mindmap,trees}% calc for fancy borders
+	\usetikzlibrary{intersections}% for very fancy borders with intersecting lines
 \RequirePackage{pifont}
 \RequirePackage{colortbl}
 \RequirePackage[poster]{tcolorbox}
 \tcbuselibrary{breakable,raster}
+\tcbuselibrary{skins} % used for wiggly-border boxes
 
 %%%%% Add fancy page chapter sides %%%%%
 \pagestyle{plain}% needed for fancy borders
@@ -106,23 +108,6 @@
 % redefinition of \chaptermark to contain only the title
 \renewcommand\chaptermark[1]{\markboth{\thechapter.~#1}{}}
 
-
-%%%%% TColorBox Basic Setup %%%%%
-
-\tcbset{enhanced, drop shadow east,
-colframe=gray,colbacktitle=black!5!white,
-fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
-{yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
-boxed title style={boxrule=-0.5mm,
-frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
--- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
--- (frame.south east) -- (frame.south west) -- cycle; },
-interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
--- (interior.north west) -- (interior.north east)
--- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
--- cycle;}
-}
-}
 
 \RequirePackage{xr-hyper}
 \RequirePackage[
@@ -287,6 +272,141 @@ bookmarks=true]%
 	\end{figure*}
 }
 
+% Define the 'ornamentedbox' environment
+
+% Wiggly Borders
+\makeatletter
+\tikzset{
+  use path for main/.code={%
+    \tikz@addmode{%
+      \expandafter\pgfsyssoftpath@setcurrentpath\csname tikz@intersect@path@name@#1\endcsname
+    }%
+  },
+  use path for actions/.code={%
+    \expandafter\def\expandafter\tikz@preactions\expandafter{\tikz@preactions\expandafter\let\expandafter\tikz@actions@path\csname tikz@intersect@path@name@#1\endcsname}%
+  },
+  use path/.style={%
+    use path for main=#1,
+    use path for actions=#1,
+  }
+}
+\makeatother
+
+\colorlet{ornamentedFrameInner}{white}
+\colorlet{ornamentedFrameOuter}{gray}
+
+\tikzset{ornamented frame inner/.style={color=ornamentedFrameInner,
+                                        line width=2pt},
+         ornamented frame outer/.style={color=ornamentedFrameOuter,
+                                        line width=3pt}}
+
+\tcbsubskin{ornamented}{empty}{
+  skin first=ornamented,  skin last=ornamented,
+  title engine=standard,
+  colbacktitle=white,
+  frame code={
+    % Account for the line widths in order not to draw beyond the bounding
+    % box---except for a few very small details for which this is intentional.
+    \coordinate (north west) at ([shift={(1.5pt,-1.5pt)}]frame.north west);
+    \coordinate (north east) at ([shift={(-1.5pt,-1.5pt)}]frame.north east);
+    \coordinate (south east) at ([shift={(-1.5pt,1.5pt)}]frame.south east);
+    \coordinate (south west) at ([shift={(1.5pt,1.5pt)}]frame.south west);
+    %
+    \foreach \xoffset/\point in {34pt/north west, -34pt/north east,
+                                  34pt/south west, -34pt/south east} {
+      \fill[color=ornamentedFrameOuter]
+        ([xshift=\xoffset]\point) circle[radius=2.5pt];
+    }
+    %
+    \path[name path=ornament 1]
+                                 ([yshift=-4pt]north west)
+      [rounded corners=0.5pt] -- ++(23pt,0)
+      [rounded corners=2pt]   -- ++(3pt,-4pt)
+                              -- ([shift={(-26pt,-8pt)}]north east)
+      [rounded corners=0.5pt] -- ++(3pt,4pt)
+      [rounded corners=4pt]   -- ([yshift=-4pt]north east)
+                              -- ([yshift=4pt]south east)
+      [rounded corners=0.5pt] -- ++(-23pt,0)
+      [rounded corners=2pt]   -- ++(-3pt,4pt)
+                              -- ([shift={(26pt,8pt)}]south west)
+      [rounded corners=0.5pt] -- ++(-3pt,-4pt)
+      [rounded corners=4pt]   -- ([yshift=4pt]south west)
+                              -- cycle;
+    %
+    \path[rounded corners=0.5pt, name path=ornament 2]
+                                 ([yshift=-20pt]north west)
+                              -- ++(-4pt,3pt)
+                              -- ++(0,4pt)
+               to[out=0, in=-90] ([shift={(8pt,0pt)}]north west)
+                              -- ([shift={(34pt,0pt)}]north west)
+                              -- ([shift={(-8pt,0pt)}]north east)
+             to[out=-90, in=180] ([shift={(4pt,-13pt)}]north east)
+                              -- ++(0,-4pt)
+                              -- ++(-4pt,-3pt)
+                              -- ([yshift=20pt]south east)
+                              -- ++(4pt,-3pt)
+                              -- ++(0,-4pt)
+              to[out=180, in=90] ([shift={(-8pt,0pt)}]south east)
+                              -- ([shift={(8pt,0pt)}]south west)
+                to[out=90, in=0] ([shift={(-4pt,13pt)}]south west)
+                              -- ++(0,4pt)
+                              -- ++(4pt,3pt)
+                              -- cycle;
+    %
+    \draw[ornamented frame outer, use path=ornament 1];
+    \draw[ornamented frame outer, use path=ornament 2];
+    \draw[ornamented frame inner, use path=ornament 1];
+    \draw[ornamented frame inner, use path=ornament 2];
+    %
+    \foreach \xoffset/\point in {34pt/north west, -34pt/north east,
+                                 34pt/south west, -34pt/south east} {
+      \fill[color=black]
+        ([xshift=\xoffset]\point) circle[radius=3pt];
+    }
+  }
+}
+
+% These parameters---especially those related to geometry---are better located
+% here in a style than in the subskin definition (see the Subskins section of
+% the tcolorbox manual).
+\tcbset{ornamented/.style={skin=ornamented, toptitle=14.5pt, top=15pt, bottom=9.5pt,
+                           coltitle=black}
+}
+
+% Convenient style to use with a tcolorbox preceded by text (or anything),
+% when one wants to prevent any page break before the tcolorbox.
+\tcbset{skip and no break/.style={
+  before={\par\nopagebreak\vspace{2ex}\noindent}}
+}
+
+% Style suitable for an “on line” (in the middle of a paragraph)
+% 'ornamentedbox'.
+\tcbset{my on line/.style={
+  capture=hbox, tcbox raise base, top=14pt, bottom=14pt,
+  before={\kern 5pt}, after={\kern 5pt}}
+}
+
+%%%%% TColorBox Basic Setup %%%%%
+
+\tcbset{enhanced,
+ornamented,
+fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
+{yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
+boxed title style={boxrule=-0.5mm,
+frame code={ \path[tcb fill frame] ([xshift=-4mm]frame.west)
+-- (frame.north west) -- (frame.north east) -- ([xshift=4mm]frame.east)
+-- (frame.south east) -- (frame.south west) -- cycle; },
+interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
+-- (interior.north west) -- (interior.north east)
+-- ([xshift=2mm]interior.east) -- (interior.south east) -- (interior.south west)
+-- cycle;}
+}
+}
+
+
+\newtcolorbox{boxtext}[1][]{ornamented,colback=white,fonttitle=\scshape, #1}
+
+% Chapter Heading Color
 \colorlet{chapnumcol}{black!100}
 
 %%%%% Section Formatting %%%%%
@@ -473,12 +593,12 @@ bookmarks=true]%
 
 %%%%%%%%%%%%%%%%%%%% Environments %%%%%%%%%%%%%%%%%%%%
 
-\newenvironment{boxtext}{}{}
-
-\newenvironment{speechtext}{\begin{quotation}\noindent}{\end{quotation}}
-
-\tcolorboxenvironment{boxtext}{arc=0mm, before upper={\parindent15pt}}
-\tcolorboxenvironment{speechtext}{}
+\newenvironment{speechtext}{
+	\begin{boxtext}\it
+\begin{quotation}\noindent}%
+{\end{quotation}
+\end{boxtext}%
+}
 
 \newenvironment{rolltable}%
 {\vspace{.3cm}\begin{tabular}{|lp{.8\textwidth}}
@@ -499,13 +619,13 @@ Roll & Result \\
 
 \it}{\normalfont\vspace{2em}}
 
-\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},arc=0mm,adjusted title=XP Rewards for #1}
+\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,bottom=10pt}
 
-\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{adjusted title=Encounters in #1,arc=1mm,tabularx={XXp{.6\textwidth}},code={\setcounter{enc}{19}\setcounter{list}{18}}}
+\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{ornamented,adjusted title=Encounters in #1,tabularx={XXp{.6\textwidth}},bottom=10pt,code={\setcounter{enc}{19}\setcounter{list}{18}}}
 
-\newtcolorbox{rollchart}{tabularx={p{.25\linewidth}X},arc=1mm}
+\newtcolorbox{rollchart}{tabularx={p{.25\linewidth}X},top=10pt,bottom=10pt}
 
-\newtcolorbox{xpbox}[1]{tabularx={lc},arc=1mm,equal height group=#1}
+\newtcolorbox{xpbox}[1]{tabularx={lc},bottom=10pt,top=10pt,equal height group=#1}
 
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
@@ -611,8 +731,8 @@ Roll & Result \\
 
 	\begin{figure*}[t]
 	
-	\begin{tcolorbox}[adjusted title={Summary: \sqName}]
-	
+	\begin{tcolorbox}[ornamented,adjusted title={Summary: \sqName}]
+	\vspace{-1em}
 	\printcontents[sq]{l}{2}{\setcounter{tocdepth}{3}}
 	
 	\end{tcolorbox}
