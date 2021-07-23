@@ -4,7 +4,7 @@
 
 \begin{figure*}[b!]
 
-\begin{tcolorbox}[tabularx={lp{.25\textwidth}X},arc=1mm]
+\begin{tcolorbox}[tabularx={lp{.25\textwidth}X},top=10pt,bottom=10pt]
 
 	Path & Spheres & Flavour \\\hline
 
@@ -31,13 +31,21 @@
 \noindent
 There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic.
 Any character with the appropriate requirements can learn to cast magic.
+
 Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically.
 A priest of war may call divine fire to to destroy enemies where an alchemist uses precise gestures to summon the essential form of fire, but both are just using the Invocation sphere.
 
+\subsection{Multiple Paths}
+
 People can pick up different Paths of Magic by simply fulfilling different requirements.
-If someone has access to one sphere of magic through multiple Paths and has bought access to the sphere, then learning the same sphere through the different Path simply requires some \gls{downtime} and study but carries no \gls{xp} cost.
-If a blood sorcerer were to learn the Aldaron sphere as a natural knack and later decided to become an adherent of \gls{naturegod}, they could channel the magic through divine means or through her innate abilities.
-All that is needed is a little time to pick up an understanding of how this same magic works through a different lens.
+If someone begins as a Blood mage with Aldaron 2 then later learns Song Magic, they would be able to cast Aldaron through Song magic with only a little practice.
+In gaming terms, the first \gls{downtime} grants full access to all spheres from any secondary Path.
+
+However, the opposite is not true.
+Those on the Path of Song learn spheres easier than others, spending 5 fewer \glspl{xp} to purchase a sphere.
+If a sphere has not been `fully' paid for then the remaining \glspl{xp} must be spent to use that sphere on a different path.
+
+Casters never gain \glspl{mp} for learning a sphere on a secondary Path -- whichever Path would grant them the most \glspl{mp} is the only one which counts.
 
 \subsection{The Path of Alchemy}
 \index{Alchemy}
@@ -173,7 +181,10 @@ The character then spends the mana and makes a roll against some \gls{tn} to cas
 
 \index{Mana}\subsection{Mana}
 
-Anyone can buy some base \gls{mp} which is then modified by their Intelligence.\footnote{See the section on Experience, page \pageref{xp}, for costs of base \gls{mp}.} For example, someone with Intelligence +1 who buys Base \gls{mp} 2 would have a store of 3 \gls{mp} to cast spells. Those with a Base \gls{mp} of 0 can still have some \gls{mp} if their Intelligence Bonus is positive.
+Everyone's total mana is equal to double the number of spheres they have, plus their Intelligence Bonus.
+\iftoggle{verbose}{%
+	For example, a caster with Invocation 3, Fate 1, and an Intelligence Bonus of +2, would have 8 \glspl{mp} in total.
+}{}
 
 If a caster has no \gls{mp} left, they can still cast spells by paying the cost with \gls{hp} instead of \gls{mp}.
 \iftoggle{verbose}{%
@@ -250,9 +261,16 @@ For example, Tauron the elven sorcerer casts a spell on himself to appear as a g
 
 These still-active spells are known as \glspl{standingspell}. Some mages operate by continuously casting different spells and then going `empty' when the mana is gone. Others typically operate with \gls{standingspell} alone, casting everything they might need before the day begins and leaving their useful spells `running' but leaving themselves unable to cast more.
 
-\subsection{Spell Types}
+\subsection{Casting Times}
 
-Your standard spell takes a while to cast -- normally 1 \gls{round} per level, so a Level 3 spell would normally take 3 \glspl{round} to complete.  Casters can go slower or faster and gain bonuses or penalties to their roll.
+\iftoggle{verbose}{
+	Your standard spell takes a while to cast -- specifically a number of rounds equal to half the spell's level.
+	A first level spell takes a full \gls{round} to cast, and activates at Initiative 0, while a third level spell requires 2 \glspl{round} to cast.
+}{
+	Spells require a number of full \glspl{round} to cast equal to half the spell's level.
+}
+
+Casters who take any other action during this time, such as evading an attack or speaking, lose the spell and must start over (but lose no \glspl{mp}).
 
 \subsubsection{Ritual Spells}
 
@@ -323,7 +341,7 @@ Adding the enhancements \textit{Wide}, and \textit{Solid}, so make a \textit{Wid
 \noindent
 The total \glsentrylongpl{mp} a mage has grants additional spell-casting powers.
 The more power a mage has, the more flexible their spells.
-A mage with a base mana score of 2 and an Intelligence Bonus of +1 would have a total Metamagic rating of 3.
+A mage with 2 spheres and an Intelligence Bonus of +1 would have a total Metamagic rating of 5.
 
 Every power level offers the caster new spells or -- more often -- enhancements to existing spells.
 The enhancements drawn from Metamagic can affect all spells the caster has, not simply the spells listed here.

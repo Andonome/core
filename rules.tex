@@ -186,6 +186,11 @@ Larger and more dangerous monsters garner more \gls{xp}, as do grander missions.
 The personal goals and piety of a character are denoted by different codes of belief and gods.
 See page \pageref{gods_codes} for details on the gods and personal codes of honour.
 
+\iftoggle{verbose}{
+	Players also gain \glspl{xp} for spending \glspl{storypoint} (see page \pageref{storyXP}).
+}
+{}
+
 \subsubsection{Training Time}
 
 The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may restrict when it can be spent.
@@ -295,22 +300,6 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \begin{xpbox}{B}
 
-		Mana Base & Cost \\\hline
-
-		2 & 5 \\
-
-		4 & 10 \\
-
-		6 & 20 \\
-
-		8 & 40 \\
-
-		10 & 80
-
-\end{xpbox}
-
-\begin{xpbox}{B}
-
 		Magic Sphere & Cost \\\hline
 
 		1st & 10 \\
@@ -362,7 +351,7 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 Now is the time to look at your character's base Attributes and think about what they might be good at.
 The best place to start is your highest Attribute.
 If you have a positive (or simply not negative) Intelligence score, making a spell caster is a good option.
-Buy off any Wits penalties and put a magic sphere down on the character sheet and a couple of \glsentrylongpl{mp}.
+Buy off any Wits penalties and put a magic sphere down on the character sheet.
 Alternatively, if your highest Trait so far is a Body Attribute perhaps this character is more suited to being a fighter.
 Don't worry if you have negative Body Attributes -- your starting \gls{xp} can buy all of that up to 0 quite easily.
 
@@ -399,7 +388,7 @@ The average free trader -- a blacksmith or cloth dyer -- can expect to make 5 \g
 
 Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \pageref{weaponschart}.
 
-\begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
+\begin{tcolorbox}[tabularx={p{.3\textwidth}XX},bottom=10pt,top=10pt]
 
 	\textbf{Animal} & & \textbf{Cost} \\\hline
 
@@ -419,7 +408,7 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
+\begin{tcolorbox}[tabularx={p{.3\textwidth}XX},bottom=10pt,top=10pt]
 
 	\textbf{Buildings} & & \textbf{Cost} \\\hline
 
@@ -435,7 +424,7 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
+\begin{tcolorbox}[tabularx={p{.3\textwidth}XX},bottom=10pt,top=10pt]
 
 	\textbf{Clothing} & \textbf{Weight} & \textbf{Cost} \\\hline
 
@@ -449,7 +438,7 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
 \end{tcolorbox}
 
-\begin{tcolorbox}[arc=1mm,tabularx={p{.3\textwidth}XX}]
+\begin{tcolorbox}[tabularx={p{.3\textwidth}XX},bottom=10pt,top=10pt]
 
 	\textbf{Professional Tools} & \textbf{Weight} & \textbf{Cost} \\\hline
 
@@ -478,7 +467,7 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 \end{tcolorbox}
 
 \index{Camping}
-\begin{tcolorbox}[arc=1mm,tabularx={XX}]
+\begin{tcolorbox}[tabularx={XX},bottom=10pt,top=10pt]
 
 	\textbf{Travel} & \textbf{Cost} \\\hline
 
@@ -548,7 +537,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 \begin{figure*}
 
-\begin{tcolorbox}[arc=1mm,tabularx={XX},title=Services]
+\begin{tcolorbox}[tabularx={XX},title=Services,bottom=10pt]
 
 	\textbf{Sellsword} & 10sp/ day \\\hline
 
@@ -614,8 +603,6 @@ The costs of the items here are based on the most common race -- humans. Other r
 
 		Gnolls & $\frac{1}{2}$ \\
 		
-		\vspace{.1cm} & \\
-
 	\end{rollchart}
 
 \end{wrapfigure}
@@ -723,7 +710,21 @@ Of course after 10 miles, they will have 10 Fatigue points (except humans, who w
 
 \subsubsection{Adventure}
 
-Lastly, there is an adventure. The adventure lasts until the current plot-thread is resolved, or some period of `sandboxing' through a world until a proper use of one's time can be found.
+The adventure lasts until the current plot-thread is resolved, or some period of `sandboxing' through a world until a proper use of one's time can be found.
+At the end of every adventure, \gls{downtime} should be called, and all characters should heal all \glspl{hp}, \glspl{mp}, \glspl{fp}, and \glspl{fatigue}.
+
+\iftoggle{verbose}{%
+	\subsubsection{Downtime}
+
+	Both players and the \gls{gm} can call for \gls{downtime} any time they want, and either party can cancel the \gls{downtime} by declaring that something is happening.
+	Downtime is important to play, as this is when characters learn specialist skills, such as Survival and Craft, or alchemy spheres.
+
+	\Gls{downtime} should be viewed as a normal part of any campaign, given that no healing can take place without it.
+	The \gls{gm} might also award \glspl{storypoint} during longer downtimes, to give some filler about the character's exploits during this time (which can be filled in later).
+
+}{}
+
+
 
 \subsection{Space as Squares}\index{Space}\index{Squares}\index{Areas}
 \label{space}
