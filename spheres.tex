@@ -595,18 +595,25 @@ The priest blesses a target, who then receives a +1 to any Skill.
 This does not stack with any other Fate spells.
 This spell can take a character beyond the standard Skill levels.
 
-\spell{Prayer of Gratitude}{Instant}{Academics}{Retrieve 1 \gls{storypoint} after you spend 2 or more}\\
-The caster rolls during any scene in which someone spends at least 2 \glspl{storypoint}.
-With a successful roll, one \gls{storypoint} is returned to the character.
-
 \spell{Snapback}{Instant}{Tactics}{Start a round over again}\\
 The caster casts a spell to determine if some plan will work, and subtly alters fate to ensure it gets its best shot.
-Once the spell is cast on a person, the caster can decide to rewind this person's round and try the entire round again.
-If the target interacts with anything or anyone not covered by the spell then the spell fails.
+Once the spell is cast on a person, the caster can decide to rewind time, and declare that the last round never took place.
+
+The spell affects only one person.
+If they interact with anyone else, the spell instantly fails, and the action cannot be undone.
 
 \iftoggle{verbose}{%
+\begin{exampletext}
+
+	Artemis wants to know if a nearby begger is a spy in disguise.
+	He begins by casting a \textit{Wide Snapback} over himself and the begger, then jumps forward, kicks the begger in the face, and tells him he has been found out.
+	The begger simply looks shocked -- apparently Artemis has the wrong person, so he takes his decision back.
+	Artemis finds himself at the end of the spell, with a prophetic knowledge of what \textit{would} have happened if he had kicked the begger, without ever having done so.
+
+\end{exampletext}
+
 	The only way to use the spell for a fight is to cover all combatants with a \textit{Wide Snapback}.
-	The one-person version might be used on a person picking a lock on a door.
+	The spell might be used on a single person picking a lock on a door (but if the door triggers an explosion and damages others, the spell fails).
 }{}
 
 \spelllevel
@@ -623,6 +630,8 @@ The spell does not increase the rate at which \glspl{fp} are regenerated.
 The priest spends 1 \gls{storypoint} and gains an addtional 5 \glspl{storypoint} plus their Intelligence Bonus, which must be spent immediately.
 This can be used on a summoning miraculous help, such as a crew of soldiers who have a debt to the priest, or a magical ally.%
 \footnote{As usual \gls{gm} is free to veto any ideas, but the player is also free to continue pulling new ideas out.}
+
+The player gains no \glspl{xp} for these `fake` \glspl{storypoint}, only for spending the initial \gls{storypoint}.
 
 \spell{Resurrection}{Instant}{Medicine}{Bring the recently deceased back from the dead}\\
 The priest summons the soul of a recently deceased person back to their body.
