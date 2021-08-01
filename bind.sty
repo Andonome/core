@@ -237,7 +237,7 @@ bookmarks=true]%
 
 \newcommand{\toppicBorder}[2]{
 	\begin{figure*}[t!]
-		\begin{tcolorbox}[colframe=black,colback=gray]
+		\begin{tcolorbox}[before upper={\parindent0pt},colframe=black,colback=gray]
 		\IfFileExists{images/#1.svg}{
 			\includesvg[width=\textwidth]{images/#1}
 		}{
@@ -261,7 +261,7 @@ bookmarks=true]%
 
 \newcommand{\bottompicBorder}[2]{
 	\begin{figure*}[b!]
-		\begin{tcolorbox}[colframe=black,colback=gray]
+		\begin{tcolorbox}[before upper={\parindent0pt},colframe=black,colback=gray]
 		\IfFileExists{images/#1.svg}{
 			\includesvg[width=\textwidth]{images/#1}
 		}{
