@@ -1177,6 +1177,52 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 {}
 }
 
+\newcommand{\royalguard}[1][\npc{\M\F\T}{\arabic{r12} Guards}]{
+	#1
+	\randomtwo
+	\addtocounter{enc}{1}
+	\randomtwoB
+	\setcounter{gold}{\value{r2b}}
+	\addtocounter{gold}{-1}
+	\randomthree
+	\addtocounter{age}{-1}
+	\randomfour
+\person{\arabic{enc}}% STRENGTH
+{\arabic{age}}% DEXTERITY 
+{\arabic{gold}}% SPEED
+{{0}% INTELLIGENCE
+{-1}% WITS
+{0}}% CHARISMA
+{0}% DR
+{2}% COMBAT
+{\ifodd\value{r3}Craft \else Survival\fi~\arabic{r2}, Tactics~\arabic{r2b}%
+	\ifodd\value{r3}%
+		\knacks{\ifodd\value{r2b}
+			\adrenalinesurge, 
+		\else
+			\disarm, 
+		\fi
+		\ifodd\value{r4}
+			\charge
+		\fi}
+	\fi}% SKILLS
+{\ifodd\value{enc}%
+	{\greatsword}%
+\else%
+	\ifodd\value{age}%
+		{\longsword}%
+	\else%
+		{\spear}%
+	\fi%
+\fi, %
+	\partialplate%
+\ifodd\value{r4}
+	\shield, 
+\fi
+	\ifnum\value{enc}=3\lootMedium\else\lootSmall\fi}% EQUIPMENT
+{}
+}
+
 \newcommand{\humanarcher}[1][\npc{\M\T}{\arabic{r12} Archers}]{
 	#1
 	\randomtwo
