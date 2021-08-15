@@ -1,8 +1,8 @@
 compile_pdf:
-  image: aergus/latex
+  image: ctornau/latex
   script:
     - apt-get update -y
-    - apt-get install -y inkscape
+    - apt-get install -y inkscape make
     - make
     - make resources
     - mv main.pdf bind.pdf
