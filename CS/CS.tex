@@ -8,7 +8,7 @@
       watermark color=black!25!white,
       watermark opacity=0.4
   },
-  poster   = {showframe=false,columns=11,rows=12},
+  poster   = {showframe=false,columns=30,rows=12},
   boxes    = {
       enhanced standard jigsaw,sharp corners=downhill,arc=7mm,boxrule=.6mm,
       colback=white,opacityback=0.7,colframe=black,
@@ -20,7 +20,7 @@
 %----
 % try removing 'interior engine'
 \posterbox[blankest,interior engine=path, halign=center,valign=center,colupper=white!25!black,
-	]{name=title,column=1,span=11,below=top}{
+	]{name=title,column=1,span=29,below=top}{
 		\vspace{.3cm}
 		\begin{tabular}{llllll}
 			Name: & \vlongline & Player: & \vlongline & Code: & \vlongline \\
@@ -31,7 +31,7 @@
 }
 
 %----
-	\posterbox[adjusted title=Attributes (5 \textbar~10/20/30/50)]{name=attributes,column=1,row=2,span=4,rowspan=2}{\vspace{-.3cm}\begin{tabular}{ll}
+	\posterbox[adjusted title=Attributes (5 \textbar~10/20/30/50)]{name=attributes,column=1,row=2,span=10,rowspan=2}{\vspace{-.3cm}\begin{tabular}{ll}
 		& {\tiny Penalties \hspace{30pt} Bonuses} \\
 		Strength & \attributecircles \\
 		Dexterity & \attributecircles \\
@@ -42,7 +42,7 @@
 	\end{tabular}}
 %----
 
-	\posterbox{name=gumption,column=5,row=2,span=3,rowspan=2}{
+	\posterbox{name=gumption,column=11,row=2,span=8,rowspan=2}{
 
 	\vspace{.2cm} {\small HP \tiny{(6 + Str)}}
 
@@ -63,7 +63,7 @@
 
 	}
 %----
-	\posterbox{name=mp,column=8,row=2,span=3,rowspan=2}{
+	\posterbox{name=mp,column=19,row=2,span=8,rowspan=2}{
 
 		\vspace{.2cm} {\small FP (10/15/20)} \shortline {\tiny $+ Cha$}
 
@@ -90,7 +90,7 @@
 %----
 
 		\setcounter{track}{18}
-		\posterbox{name=track,column=11,row=1,span=1,rowspan=12}{ 
+		\posterbox{name=track,column=27,row=1,span=3,rowspan=12}{ 
 			{\large
 
 			\Repeat{18}{\tracker}
@@ -102,13 +102,13 @@
 
 %----
 
-		\posterbox[adjusted title=Damage]{name=track,column=1,row=4,span=2,rowspan=1}{ 
+		\posterbox[adjusted title=Damage]{name=track,column=1,row=4,span=5,rowspan=1}{ 
 	\tiny{(Strength)}
 }
 
 %----
 
-	\posterbox[blankest]{name=factors,column=2,row=4}{\begin{tikzpicture}
+	\posterbox[blankest]{name=factors,column=3,row=4}{\begin{tikzpicture}
   \begin{scope}[blend group = soft light]
     \fill[gray!11!white,opacity=0.8]   ( 90:1.5) circle (1.2);
     \fill[gray!12!white,opacity=0.8] (210:1.5) circle (1.2);
@@ -122,7 +122,7 @@
 
 %----
 
-	\posterbox{name=initbox,column=1,row=7,span=3.7,rowspan=1.1}{\begin{multicols}{2}{\tiny \begin{tabular}{lc}
+	\posterbox{name=initbox,column=1,row=7,span=8,rowspan=1.1}{\begin{multicols}{2}{\tiny \begin{tabular}{lc}
 		{\bf Action} & {\bf Cost} \\\hline
 		Draw Weapon & 2 \\
 		Guarding & 2 \\
@@ -146,10 +146,10 @@
 }
 %----
 
-	\posterbox[adjusted title=Racial Abilities]{name=racial_abilities,column=5,row=7,rowspan=1,span=6}{}
+	\posterbox[adjusted title=Racial Abilities]{name=racial_abilities,column=12,row=7,rowspan=1,span=15}{}
 
 %----
-	\posterbox[adjusted title=Armoury]{name=armoury,column=5,row=4,span=6,rowspan=3}{
+	\posterbox[adjusted title=Armoury]{name=armoury,column=12,row=4,span=15,rowspan=3}{
 		\begin{tabular}{p{.2\textwidth}lllll}
 			Weapon & Dam. & Init. & Ev. & Wt. & Knack \\
 			\\
@@ -171,7 +171,7 @@
 
 	}
 %----
-	\posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=8,row=8,span=3.1,rowspan=1}{
+	\posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=19,row=8,span=8,rowspan=1}{
 		\begin{tabular}{lp{0em}p{0em}p{0em}}
 
 			\skill{Combat}
@@ -179,7 +179,7 @@
 			\end{tabular}
 	}
 
-	\posterbox[adjusted title=Skills (5/10/15)]{name=skills,column=8,row=9,span=3.1,rowspan=4}{
+	\posterbox[adjusted title=Skills (5/10/15)]{name=skills,column=19,row=9,span=8,rowspan=4}{
 		\begin{tabular}{lp{0em}p{0em}p{0em}}
 
 			\skill{Academics*}
@@ -204,7 +204,7 @@
 		\textbf{Specialisations}
 	}
 
-	\posterbox[adjusted title=Spheres (10/15/25)]{name=spheres,column=1,row=8,span=3.8,rowspan=2}
+	\posterbox[adjusted title=Spheres (10/15/25)]{name=spheres,column=1,row=8,span=10,rowspan=2}
 	{
 	\vspace{.2cm} \line(1,0){110} \fiveboxes {~\tiny (2MP)}
 
@@ -220,7 +220,7 @@
 
 %----
 
-	\posterbox[adjusted title=Equipment (1 per Skill)]{name=equipment,column=1,row=10,span=7,rowspan=3}{
+	\posterbox[adjusted title=Equipment (1 per Skill)]{name=equipment,column=1,row=10,span=18,rowspan=3}{
 
 	\vspace{.4cm}
 
@@ -242,7 +242,7 @@
 
 	Total XP \weeline Remaining XP \weeline}
 
-	\posterbox[adjusted title=Knacks (5/10/15)]{name=knacks,column=5,row=8,span=3,rowspan=2}{
+	\posterbox[adjusted title=Knacks (5/10/15)]{name=knacks,column=11,row=8,span=8,rowspan=2}{
 		\vspace{.3cm}
 
 		\Split
