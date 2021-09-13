@@ -106,15 +106,56 @@ Likewise, the \gls{gm} can declare a \gls{downtime} at any point, but the player
 The following is a suggested list of Stories the players can tell and their costs.
 The players are strongly encouraged to suggest more to the \gls{gm} who will either veto them or give them an appropriate cost.
 
-\story{1}{Perhaps we can make a detour}
-You know of a sacred location nearby, perhaps a church, or a shrine or just a sacred cavern where the land is teeming with magic.
-In this sacred area, anyone stepping into it receives 1 \gls{mp} per \gls{round}.
-If the spot has a guardian then they are friendly to you.
-The place will not necessarily help you hide or defend yourself unless you are also spending \glspl{storypoint} to make it a place to rest.
-\footnote{Those following the Code of Experience gain no \glsentrytext{xp} for finding this location.}
+\story{1-3}{The Old Friend}
+You know someone in town who has just the skills you are all looking for.
+
+The player can make this character themselves, just like a normal character, however, buying martial abilities.
+For the sake of brevity, consider using the rules for player chosen characters (page \pageref{playerchosen}).
+The \gls{npc}'s starting \glspl{xp} is half the current \glspl{xp} total of whichever party member has the highest total \glspl{xp}, so if the highest \glspl{xp} total in the party is 83, that's 42 \glspl{xp} to make this character.
+
+Martial or magical abilities cost an extra \gls{storypoint}, so a character with both would cost 3 \glspl{storypoint}.
+
+\iftoggle{verbose}{
+	This is a particularly important story, as these form the secondary characters which players can use if their first characters die.
+
+	\begin{itemize}
+	\item Everyone wants to buy expensive chainmail, and your dwarvish friend just so happens to have retired here, selling top-quality armours of all types.
+	\item With no idea how to talk to the local lord, you suddenly find your old military friend guarding the gate.
+	\item The party needs an expert tracker, and on the road you meet your brother.
+	He never liked people, so once he got out of the military, he began working independently as a bounty hunter.
+	\end{itemize}
+}{}
+
+\story{1}{The Second Language}
+You have spent a significant amount of time in another culture. You know their language and enough of their background to transfer over basic Skill knowledge. If you have the Performance Skill and are familiar with elvish culture then you also know some Elvish songs.
+If you are familiar with gnoll culture and have the Empathy Skill then you know a range of details about gnoll etiquette and lineage.
+
+\iftoggle{verbose}{%
+	\begin{itemize}
+	\item While the dwarves think they're sneakily planning to stab you in plain sight, you actually learnt dwarvish from a blacksmith dwarf who decided to live among humans.
+	\item Back in the circus, the gnomes could never figure out your `elvish arrow trick'.
+	They could never figure it out, so you eventually convinced them to teach you how they communicate through whistles.
+	\end{itemize}
+}{}
+
+\story{1}{The Surprise Skill}
+You have a surprising Skill or Knack which will comes in useful.
+As you tell this story, you can buy a Skill level so long as you have the requisite \gls{xp}.
+This cannot be a Skill which you have clearly lacked in the past, e.g. if your character has so far been illiterate then you cannot suddenly learn a level of Academics.
+However, if you have never wanted for Craft ability then you could declare that you have always known how to forge iron, or that you have a Seafaring Skill.
+
+\iftoggle{verbose}{
+	\begin{itemize}
+	\item You're not one to boss others about, but now you need a plan you may as well pull out the training your brothers taught you about how to set an ambush, and how to wait patiently.
+	\item Despite your bad manners, you have learnt to read while a member of the thieves' guild some time ago.
+	You used to use this just for forgeries, but there's nothing in principle stopping you from reading a book.
+	\item Protecting your siblings from chitincrawler attacks on multiple occasions gave you all the knowledge you need to defend them.
+	You reveal you have the Knack `Guardian'.
+	\end{itemize}
+}{}
 
 \label{oldnpc}
-\story{1}{Oh! Don't I know him}
+\story{1}{The Return}
 You recognise a friendly character from some previous Story you have told.
 The \gls{gm} will explain why they are in town but you are free to offer suggestions.
 Said characters won't necessarily be as useful as they would be if they were brought into the adventure for the first time with Story points and may only help for a scene, but they should be somehow useful.
@@ -131,23 +172,31 @@ This does not count again for the same domain of expertise -- it is only a bonus
 
 A failed roll indicates that while you have a lot of history intertwined with this problem, you are still wrong.
 
-\story{1}{My uncle taught me something about this}
-You have a surprising Skill or Knack which will comes in useful.
-As you tell this story, you can buy a Skill level so long as you have the requisite \gls{xp}.
-This cannot be a Skill which you have clearly lacked in the past, e.g. if your character has so far been illiterate then you cannot suddenly learn a level of Academics.
-However, if you have never wanted for Craft ability then you could declare that you have always known how to forge iron, or that you have a Seafaring Skill.
+\iftoggle{verbose}{%
+	\begin{itemize}
+	\item The party want to know how the magical item works.
+	You've failed the roll, but then remember you've seen this magical item in your mother's book collection.
+	She had extensive shelves full of bizarre tomes, and all the leafing through those tomes finally paid off.
+	\item While nobody knows where they are, you suddenly remember your uncle's maps.
+	They were always plastered all over the walls, and you used to imagine walking in those locations.
+	\item It was unclear if the noble was telling the truth, but you recognise the dyes on his tunic; they come only from the Shale, which can only mean one thing\ldots
+	\end{itemize}
+}{}
 
-\story{1}{Fun fact about the Elvish first person plural}
-You have spent a significant amount of time in another culture. You know their language and enough of their background to transfer over basic Skill knowledge. If you have the Performance Skill and are familiar with elvish culture then you also know some Elvish songs.
-If you are familiar with gnoll culture and have the Empathy Skill then you know a range of details about gnoll etiquette and lineage.
-
-\story{1}{Good job I always carry one of these for special occasions}
+\story{1}{The Special Item}
 You may reveal you have any piece of Adventuring Equipment (see page \pageref{adventuringequipment}) or any item worth 10 \gls{sp} or less.
 \iftoggle{verbose}{%
 	Perhaps you have a flask of wine, kept from a special celebration, or a piece of chalk you kept after getting lost in a maze.
+
+	\begin{itemize}
+	\item The dungeon paths seem infinite, but you've come prepared.
+	After getting trapped in the king's endless prison rooms, you've always carried a piece of chalk to mark your route when there are no other markings.
+	\item The guards don't fancy letting some random wanderers through the door, but you've been saving a small bottle of dwarvish spirits for a special occasion, gifted by your family's dwarvish friend.
+	With a bit of water, it should be strong enough for all four of them.
+	\end{itemize}
 }{}
 
-\story{1}{It'll be just like the old days, remember that time}
+\story{1}{Shared Stories}
 At the point a new character joins the group you can select one other player and have a shared background with them (or with another, if your character is new).
 You describe how you previously met and possibly adventured together.
 From then on, you can split the cost of stories, so if the group wants to find a safe space to rest then instead of one character spending 2 Story points you could each spend 1.
@@ -156,86 +205,63 @@ If you are both of noble heritage, any money you get must be divided between you
 If you are both friends with a skilled armourer, they will only be able to repair one piece of armour at a time.%
 \footnote{This Story is transitive and symmetrical, so if player A shares a background with player B and player B shares a background with player C then player C also shares a background with player A.}
 
+\iftoggle{verbose}{%
+	\begin{itemize}
+	\item When the game starts, you pick another character as cousin.
+	When you declare you know elvish, the other character does as well.
+	Soon after, you both decide to return home, and get a royal welcome from the entire village.
+	\item Your character may have died, but the next one can at least be related to the group.
+	One character has spent the entire campaign complaining about his ex-wife, and why he had to leave home to adventure.
+	You decide to return as the ex-wife, who's also been pushed into adventuring due to poverty.
+	\end{itemize}
+}{}
 
-\story{1}{I know a guy who'd be perfect}
-You know someone in town who has just the skills you are all looking for.
-They might be a farmer, willing to put you and the group up for the night, or someone who knows all the local rumours.
+\story{1}{The Mana Lake}
+You know of a sacred location nearby, perhaps a church, or a shrine or just a sacred cavern where the land is teeming with magic.
+In this sacred area, anyone stepping into it receives 1 \gls{mp} per \gls{round}.
+If the spot has a guardian then they are friendly to you.
+The place will not necessarily help you hide or defend yourself unless you are also spending \glspl{storypoint} to make it a place to rest.
+\footnote{Those following the Code of Experience gain no \glsentrytext{xp} for finding this location.}
 
-The player can make this character themselves, just like a normal character, except they cannot have any martial or magical abilities.
-For the sake of brevity, consider using the rules for player chosen characters (page \pageref{playerchosen}).
-The \gls{npc}'s starting \glspl{xp} is half the current \glspl{xp} total of whichever party member has the highest total \glspl{xp}, so if the highest \glspl{xp} total in the party is 83, that's 42 \glspl{xp} to make this character.
+\iftoggle{verbose}{%
+	\begin{itemize}
+	\item After the battle, nobody has a drip of mana left, but you recall a nearby grove of elves, centred around a mana well.
+	They helped you out last time you had to run away from the law, and you're hoping they'll help you again.
+	\item You have the perfect idea for an artefact to help the town, but it will need a constant supply of mana.
+	You remember the local temple has a mana font, and the local priest of war -- Lucretius -- owes you a favour from that time you defended the temple from a drunken rabble trying to steal weapons.
+	\end{itemize}
+}{}
 
-This \gls{npc} refuses to join the party on any martial escapades unless this is paid for with a grand story (see below).
-
-This is a particularly important story, as these form the secondary characters which players can use if their first characters die.
-
-\story{2}{I know a place we can rest}
+\story{2}{The Resting Spot}
 You know of a secluded and secret location where you will be safe.
-Perhaps there is a safe spot in a tavern you know -- a secret room in the basement, or maybe just an abandoned and deep cavern in the hills that nobody knows about.
-
 If your safe space is ever invaded due to events outside your control, you receive both Story points back if it is within the same session or 1 Story point back if it during a later session where the same place is used again.
 
-\story{3}{Ah! This is near the spot we buried the treasure}
+\iftoggle{verbose}{%
+	\begin{itemize}
+	\item The guards may be chasing after you, but the Mincing Pig is nearby.  It's famous for some nasty customers and a deep cellar where even the town guard don't want to enter.
+	It's been your regular bar since you were twelve years old, and you're sure they'll put you up.
+	\item The goblins have found your tracks, and they'll catch up soon.
+	However, you recall a nearby cave in the forest where you slept the last time you came through here on a mission with the other guards.
+	\item The bandits are catching up soon, but you recall a walled village nearby.
+	Your grandfather was the chief noble before he died, and you're hoping the guards remember you, despite your new beard.
+	\end{itemize}
+}{}
+
+\story{3}{The Treasure}
 You have access to large funds now that you have returned to this area.
-Perhaps you and companions, once buried treasure close by.
-Perhaps a local bank simply has your money, or a rich man owes it to you.
 The total amount obtained is $2D6 \times 10$ gold pieces.%
 \footnote{Those following the Code of Acquisition gain no \gls{xp} for gaining gold through \glspl{storypoint}.}
 
-\label{tim}
-\story{4}{There is a man whom they call}
-Your miraculous ally is a mage, or priest or some other \gls{miracleworker}.
-They will not enter combat with you but will agree to employ whatever magics you wish.
-They have the standard \glspl{npc} attributes from \glspl{storypoint}.
-Additionally, their minimum Intelligence Bonus is +2, and they have one magic sphere at 4th level, another at 3rd level, and another at the 2nd level.
-They walk a single path of magic.
-
-\story{5}{Do you know who I am!?  Because I happen to be}
-You are the child to a noble and powerful parent.
-While within the area, you can make a request as long as it can be fulfilled by any other story worth 3 or fewer points.
 \iftoggle{verbose}{%
-	For example, you might ask a parent for gold (as per the buried treasure story above) and then request a single man-at-arms join you on a quest (as per, `I know a guy', and `he's willing to fight', below).
+	\begin{itemize}
+	\item When you were back in the military, you and the platoon raided a rich person's house, stole a lot of items, then buried the valuables.
+	You all swore not to return to the treasure for five years, but you need the money badly.
+	\item The local noble is your father, and it's time to ask for a big favour; gold.
+	While there, you spend 2 more \glspl{storypoint} to get a tracker, as you ask your father for a skilled warrior to help you track down the local bandits.
+	\item You found the local noble was hoarding illegal magical items, and you agreed to keep quiet for money.
+	It's time to ask for a little more hush money.
+	\end{itemize}
 }{}
-
-You may spend up to 6 \glspl{storypoint} in total during the first time you see your parents, then up to 3 Story points during any subsequent visits to the area.
-
-\story{7}{My father will give us a royal welcome when we get to}
-You are revealed to be the child of royalty or some other type of nobility, and you are returning to your kingdom.
-This functions as above in `Do you know who I am', but the character may spend 8 \glspl{storypoint} during the first visit, and each story can be worth up to 4 points.
-
-\iftoggle{verbose}{%
-	Since this Story costs 7 Story points, no player should expect to use it until there has been some downtime -- if the character starts out claiming to be a prince then it will be a long time before the story recognises this claim.
-}{}
-
-\subsection{Grand Stories}
-
-Grander stories can be constructed by modifying existing stories.
-Standard tales can be given some bonuses at an additional cost.
-
-If the \gls{pc} knows someone around the village, multiple \glspl{npc} could be introduced -- perhaps because this is the \gls{pc}'s home town, or the \gls{pc} saved the village some time.
-
-\story{1}{\ldots and he's willing to fight with us}
-The character from `I know a guy\ldots', (above) is willing to fight with the party for one mission.
-The party must make their way directly to the mission, and those willing to fight will leave after a single combat encounter, whether or not that was the chosen encounter.
-
-\story{1}{\ldots and this one knows a trick or two}
-Your ally may have a path of magic, and spell spheres.
-This might be a helpful priest willing to bless the group, or an alchemist who's created a basic magical item, which the party can use for the session.
-
-\story{2}{Fancy seeing you here}
-You can add two to the cost of any other Story and tell it at an inappropriate juncture.
-Your characters might be locked in a dungeon and happen upon a weapon smith in the next cell, with his confiscated weapons lying in a nearby pile outside his cell.
-They might find a place they can rest in secret inside the terrifying dwarvish city turned into an undead haunting ground.
-Or perhaps while on the run from bandits they find a helpful soldier hoping to be hired.
-
-\story{2}{Actually, there were a few more}
-Increase the cost of any story you tell by 2, and raise the number of people or places to the number of story points you're spending plus your Charisma Bonus.
-If telling the story of a safe space nearby, you might know about a few.
-If you know a sellsword interested in adventure, you might increase this to four people, so you now know four people ready to join you on a mission.
-
-Each location or person must be specified immediately.
-If you have money, each source of money must be in a different location.
-If you know where multiple mana lakes are, you must provide a good reason so many rare places are so close together.
 
 \end{multicols}
 
