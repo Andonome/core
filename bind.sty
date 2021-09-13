@@ -631,7 +631,9 @@ Roll & Result \\
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\story}[2]{\needspace{4em}\vspace{.3cm}\noindent\textbf{#2\ldots}\par\noindent Cost: #1\par\noindent}
+\newcommand{\story}[2]{%
+\subsubsection{#2}
+Cost: #1\par\noindent}
 
 \newcommand{\best}[2][\C]{\npc{#1}{#2}\subsubsection{#2}\index{Antagonists!#2}}
 
