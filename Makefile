@@ -14,11 +14,15 @@ ${filename}.glg: svg-inkscape
 resources: resources.pdf ${filename}.pdf
 resources.pdf: $(wildcard CS/*.tex)
 	pdflatex CS/resources.tex
-ref:
+svg-ref:
 	touch .ref
-	make
-	rm .ref
-	mv main.pdf bind_ref.pdf
+	pdflatex -jobname=bind_ref -shell-escape ${filename}.tex
+	pdflatex -jobname=bind_ref ${filename}.tex
+	pdflatex -jobname=bind_ref ${filename}.tex
+ref: svg-ref
+	touch .ref
+	pdflatex -jobname=bind_ref ${filename}.tex
+	rm -f .ref
 creds:
 	cd images && pandoc artists.md -o ../art.pdf
 all: ref ${filename}.pdf resources.pdf creds
