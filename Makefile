@@ -19,6 +19,8 @@ svg-ref:
 	pdflatex -jobname=bind_ref -shell-escape ${filename}.tex
 	pdflatex -jobname=bind_ref ${filename}.tex
 	pdflatex -jobname=bind_ref ${filename}.tex
+	makeglossaries bind_ref
+	makeindex bind_ref
 ref: svg-ref
 	touch .ref
 	pdflatex -jobname=bind_ref ${filename}.tex
