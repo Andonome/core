@@ -10,7 +10,7 @@ Then copy main.tex into your main folder and make a symbolic link to the `.gitig
 
 > cp config/main.tex .
 
-> ln -s config/.gitignore .
+> cp config/.gitignore .
 
 Edit 'main.tex', and input your tex files by writing `\include{my_file.tex}.
 
