@@ -8,4 +8,4 @@ new:
 		cp -n main.tex .gitignore ..
 	fi
 clean:
-	rm -r *.{pdf,aux,toc,acn,acr,log,ptc,out,idx,ist,alg,glo} 2>/dev/null
+	rm -f *pdf *.aux *.toc *.acn *.acr *.log *.ptc *.out *.idx *.ist *.alg *.glo
