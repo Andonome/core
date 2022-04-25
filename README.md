@@ -6,6 +6,7 @@
 - pdflatex (loads of packages)
 - git-lfs
 - inkscape (for composing svg images)
+- (optional) pandoc
 
 # config/
 
@@ -13,7 +14,7 @@ The config directory is a subtree, so don't touch it unless you know what you're
 
 # compiling
 
-> make
+> make all
 
 -->
 
