@@ -41,7 +41,6 @@ For anyone wanting to make their own book, modifications, or otherwise understan
 - Roll 2D6 + Attribute + Skill to succeed at standard Target Number 7.
 - Combat is tactical.
   * Initiative is based on action-points.
-  * The Combat Skill is divided between attack, defence and initiative.
   * Fate Points allow Damage to be avoided.
 - Magic gets you multiple spells per level in a magic sphere
   * Spend MP to cast.
@@ -49,8 +48,8 @@ For anyone wanting to make their own book, modifications, or otherwise understan
   * Highest level of a sphere has to be cast slowly.
 - Background is created by spending Story Points.
   * Spend 1 point to say you've learnt a language.
-  * Spend 3 points to add an ally with martial ability.
-  * Spend 4 points to bring in an all-powerful mage from your past.
+  * Spend 2 points to add an ally with martial ability.
+  * Spend 2 point to find a safe spot to rest.
 
 # Parsimony
 
