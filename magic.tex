@@ -445,7 +445,9 @@ However, if that fails, he simply cannot roll again.
 
 \spelllevel
 
-\spell{Pocket Spell}{Instant}{Crafts}{Allow a mana stone to cast a single spell at the cost of 1 permanent \gls{mp} from the mana stone, after which the stone is broken}\\
+\spell{Pocket Spell}{Instant}{Crafts}{Allow a mana stone to cast a single spell at the cost of 1 permanent \gls{mp} from the mana stone, after which the stone is broken}
+\label{pocketSpell}
+
 This spell permanently reduces the \glspl{mp} in a mana stone by 1, and allows the mana stone to permanently use a single spell which the mage casts immediately after this spell.
 
 Once the mana stone is a pocket spell, it can activate once, and then the mana stone becomes useless, and can never contain \glspl{mp} again.
@@ -488,10 +490,12 @@ All Pocket Spells last a number of scenes equal to their \textit{Potency} (minim
 \spelllevel
 
 \enhancement{1}{Ranged}{Increase any spell's range to line of sight}
+\label{ranged}
 
 Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
 
 \enhancement{2}{Potent}{Increase a magical item's Potency}
+\label{potent}
 
 This enhancement increases a magical item's Potency by 1.
 \iftoggle{verbose}{%
@@ -504,7 +508,8 @@ This enhancement increases a magical item's Potency by 1.
 
 \spelllevel
 
-\spell{Talisman}{Instant}{Academics}{Sacrifice one permanent \gls{mp} in a mana stone to let it cast a spell}\\
+\spell{Talisman}{Instant}{Academics}{Sacrifice one permanent \gls{mp} in a mana stone to let it cast a spell}
+\label{talisman}
 The mage takes a mana stone and allows it to cast a spell, forging a new magical item. A sword could be made which can summon blinding light, or a ruby could be infused with the power to teleport the caster to a specific nearby location.
 
 Talismans work exactly like Pocket Spells, except that the item regenerates 2 \glspl{mp} per scene, and can be recast.
@@ -520,6 +525,7 @@ Talismans which do not have enough mana simply fail to cast.
 The one exception here is the Path of Song, wherein spell-songs which have too much mana drawn from them simply break, rendering the Talisman-song useless.
 
 \enhancement{2}{Massive}{Increase the target area until it's the size of $level + Wits$ areas}
+\label{Massive}
 
 The spell spreads across a massive space -- indoors this could be multiple rooms, outdoors it could be a field, or a massive segment of a forest.
 Massive spells target a number of areas equal to the spell's level plus the caster's Wits.
@@ -554,7 +560,7 @@ With the two spells together, the total cost is 3 \glspl{mp}, and the spell take
 The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ damage from the fireball, and loses $1D6+2$ \glspl{hp} directly.
 
 \enhancement{1}{Sentient}{Allow the spell to make its own decisions}
-
+\label{sentient}
 Powerful \glspl{miracleworker} can make their spells sentient.
 This does not affect the \emph{target} of the spell (enchanted dogs do not become suddenly self-aware), but the spell itself.
 
