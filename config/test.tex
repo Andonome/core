@@ -1,5 +1,6 @@
 \documentclass[a4paper,openany]{book}
-\usepackage{bind}
+\usepackage{layout}
+\usepackage{stats}
 \usepackage{monsters}
 \usepackage{lipsum}
 
@@ -7,75 +8,30 @@
 
 \begin{document}
 
-\chapter{How to Make Monsters}
+\chapter{Random Stuff}
 
 \section{Introduction}
 
 \begin{multicols}{2}
 
-\subsection{All about Dragons}
+\subsection{This Document}
 
-\begin{boxtext}
+This is a test document, to make sure new code works before sticking it in a project.
 
-As you embark upon your first adventure, you summon your first monster with a simple backstroke.  You write down {\tt {\tt\textbackslash dragon}}, and behold!
-
-\end{boxtext}
-
-\dragon
-
-Each time you conjure the dragon, it will look a little different.
-The next one might look like this:
-
-\dragon
-
-If you find it hard to tell the difference between all the dragons, you can give them names in square brackets with the {\tt\textbackslash NPC command}, like this:
-
-{\tt\textbackslash dragon[\textbackslash npc\{\textbackslash M\}\{Bob the dragon\}] }
-
-Which then makes a male dragon called ``Bob'':
-
-\dragon[\npc{\M}{Bob the Dragon}]
-
-The first field can also indicate a female with an {\tt\textbackslash F} (\F), a team of people with a {\tt\textbackslash T} (\T), or undead with \textbackslash D (\D).
-
-With a little study, you can summon dozens of monsters, including {\tt\textbackslash human fighter}, {\tt\textbackslash basilisk}, and {\tt \textbackslash ghoul}.
-
-\subsection{Individual NPCs}
-
-Individual characters can be created by using the {\tt\textbackslash npc} command then the \textbackslash person command, with its nine arguments:
-
-\begin{verbatim}
-
-\npc{\M}{Alice}
-
-\person{0}% STRENGTH
+\npc{\M}{Random Guy}
+\person{1}% STRENGTH
 {1}% DEXTERITY 
-{-1}% SPEED
-{{2}% INTELLIGENCE
-{0}% WITS
+{1}% SPEED
+{{-2}% INTELLIGENCE
+{-1}% WITS
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Academics 1, Survival 1}% SKILLS
-{\longsword, adventuring equipment}% EQUIPMENT
+{Academics 1, Survival 1
+\Path{Alchemy}{\illusion~3, \invocation~1}
+}% SKILLS
+{\Dagger, pieces of string}% EQUIPMENT
 {}
-
-\end{verbatim}
-
-\npc{\M}{Alice}
-\person{0}% STRENGTH
-{1}% DEXTERITY 
-{-1}% SPEED
-{{2}% INTELLIGENCE
-{0}% WITS
-{0}}% CHARISMA
-{0}% DR
-{1}% COMBAT
-{Academics 1, Survival 1}% SKILLS
-{\longsword, adventuring equipment}% EQUIPMENT
-{}
-
-You can add things for these people to say with a {\tt\textbackslash begin\{speechtext\}} command:
 
 \begin{speechtext}
 
@@ -86,8 +42,6 @@ You can add things for these people to say with a {\tt\textbackslash begin\{spee
 \end{speechtext}
 
 \subsection{And now for something completely different}
-
-This is a magical item.
 
 \magicitem{Noodle of Death}% NAME
 	{Extinguish}% SPELL
@@ -422,16 +376,6 @@ When using a bestiary chapter, the stats appear as dice rolls, rather than fixed
 \settoggle{bestiarychapter}{false}
 
 \chapter{Lots of Text}
-
-\begin{multicols}{2}
-
-\noindent
-\lipsum
-
-
-\end{multicols}
-
-\chapter{Lots More Text}
 
 \begin{multicols}{2}
 
