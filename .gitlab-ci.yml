@@ -5,6 +5,7 @@ compile_pdf:
     - apt-get install -y inkscape make
     - make
     - make resources
+    - make ref
     - mv main.pdf bind.pdf
   only:
     - master
@@ -13,3 +14,4 @@ compile_pdf:
     paths:
       - bind.pdf
       - resources.pdf
+      - bind_ref.pdf

@@ -211,10 +211,12 @@ If you want to get involved, there are a number of ways to contribute:
 
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://ttrpgs.org/share/bind.pdf
-[reference]: https://ttrpgs.org/share/bind_ref.pdf
+
+[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/bind.pdf?job=compile_pdf
+[reference]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/bind_ref.pdf?job=compile_pdf
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
-[cs]: https://ttrpgs.org/share/bind_cs.ods
+[cs]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/resources.pdf?job=compile_pdf
+
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
