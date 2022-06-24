@@ -1,17 +1,24 @@
 \documentclass[a4paper,openany]{book}
 
 \usepackage{config/bind}
-\usepackage{config/monsters}
 
 \settoggle{verbose}{true}
 
 \begin{document}
 
-%\pagenumbering{roman}
+\pagenumbering{gobble}
+
+\frontpage{Book Title}%
+	{Subtitle}%
+	{images/image.jpg}
 
 \tableofcontents
 
-\pagebreak
+\frontmatter
+
+% include intro
+
+\mainmatter
 
 
 \end{document}
