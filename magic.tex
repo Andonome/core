@@ -359,7 +359,6 @@ However, such spells quickly become expensive.
 A level 8 Metamagic spell requires 8 \glspl{mp} to cast, and requires 11 Initiative points.
 
 \spelllevel
-\label{detectmagic}
 
 \spell{Identify Item}{Instant}{Academics}{Find out if an item is magical}\\
 The mage detects whether or not something is a mana stone (i.e. an item or person which stores mana).
@@ -395,16 +394,13 @@ If items are tied, roll a die to see which regenerates \glspl{mp} first.
 	For this reason, adventuring parties cannot make use of dozens of magical items at once.
 }{}
 
-\enhancement{1}{Colorful}{Change a spell's appearance}
-
-This enhancement allows a \gls{miracleworker} to alter the appearance of any spell.
-The changes are purely cosmetic.
-\iftoggle{verbose}{%
-This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
-}{}
+\spell{Imbuing}{Instant}{Empathy}{Add \glspl{mp} to a mana stone}\\
+The mage spills any number of mana points into a mana stone created through the same path of magic the mage walks.
+If cast as a \textit{Wide} spell, the mage can spend \glspl{mp} to spread between multiple items, but can only Imbue total \glspl{mp} equal to what is spent.
 
 \spelllevel
 
+\label{detectmagic}
 \spell{Identify Mana}{Instant}{Empathy}{Find out which path of magic made an item}\\
 The caster identifies which Path of magic someone is walking, or which Path was used to create an item which holds \glsentrylongpl{mp}.
 
@@ -423,16 +419,15 @@ While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit
 \textit{Fast} spells can be cast instantly, and require only 3 Initiative, plus the spell's level.
 }
 
-\spell{Imbuing}{Instant}{Empathy}{Add \glspl{mp} to a mana stone}\\
-The mage spills any number of mana points into a mana stone created through the same path of magic the mage walks.
-If cast as a \textit{Wide} spell, the mage can spend \glspl{mp} to spread between multiple items, but can only Imbue total \glspl{mp} equal to what is spent.
+\spelllevel
 
-\enhancement{1}{Subtle}{Cast any spell unseen}
+\enhancement{1}{Colourful}{Change a spell's appearance}
 
-Casting an illusion or enchantment on someone with a flashing, loud and generally obvious spell can be quite a give away.
-Any caster can attempt to cast a spell while simply whispering and moving their hands slowly and subtly.
-
-People around the mage can still sometimes spot a spell being cast. They use their Wits + Academics in a resisted roll against the mage's Dexterity + Deceit.
+This enhancement allows a \gls{miracleworker} to alter the appearance of any spell.
+The changes are purely cosmetic.
+\iftoggle{verbose}{%
+This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
+}{}
 
 \enhancement{1}{Wide}{Widen the spell to hit $Level + Wits$ targets}
 \label{wide_enhancement}
@@ -459,6 +454,7 @@ This includes \textit{Pocket Spells}, \textit{Talismans}, and \textit{Artefacts}
 The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
 The spell requires an opposed roll of Intelligence + the sphere being used.
 
+\iftoggle{verbose}{%
 For example, a priest casts an Aldaron spell.
 She has Intelligence +2 and Aldaron 3.
 The \gls{tn} is therefore ($7+2+3=$) 12.
@@ -466,8 +462,16 @@ Later, an alchemist attempts to dispel the magic.
 He rolls with his Intelligence Bonus of +3, but he does not have the Aldaron sphere, so he can add nothing more.
 If he fails the roll, he can attempt to try again, turning this into a ritual spell.
 However, if that fails, he simply cannot roll again.
+}{}
 
 \spelllevel
+
+\enhancement{1}{Subtle}{Cast any spell unseen}
+
+Casting an illusion or enchantment on someone with a flashing, loud and generally obvious spell can be quite a give away.
+Any caster can attempt to cast a spell while simply whispering and moving their hands slowly and subtly.
+
+People around the mage can still sometimes spot a spell being cast. They use their Wits + Academics in a resisted roll against the mage's Dexterity + Deceit.
 
 \spell{Pocket Spell}{Instant}{Crafts}{Allow a mana stone to cast a single spell at the cost of 1 permanent \gls{mp} from the mana stone, after which the stone is broken}
 \label{pocketSpell}
@@ -509,7 +513,7 @@ The item's effective Wits Bonus is also equal to the caster's Intelligence, so a
 This is known as the item's `\textit{Potency}'.
 \index{Potency (for magical items)}
 
-All Pocket Spells last a number of scenes equal to their \textit{Potency} (minimum 1).
+All Pocket Spells last a number of scenes equal to the caster's Intelligence Bonus at the time of casting.
 
 \spelllevel
 
@@ -535,6 +539,34 @@ An illusion-generating mask, making the wearer into a bush, will always turn tha
 
 Talismans which do not have enough mana simply fail to cast.
 The one exception here is the Path of Song, wherein spell-songs which have too much mana drawn from them simply break, rendering the Talisman-song useless.
+
+\enhancement{1}{Sentient}{Allow the spell to make its own decisions}
+\label{sentient}
+Powerful \glspl{miracleworker} can make their spells sentient.
+This does not affect the \emph{target} of the spell (enchanted dogs do not become suddenly self-aware), but the spell itself.
+
+Sentient spells can `miss' a caster's allies, so a sentient spell to freeze over a river would target only the caster's enemies, or a \textit{Wide, Sentient Fireball} would burn only enemies.
+
+Sentient illusions can independently walk, talk, and use any languages the caster knows.
+These spells are never fully-fledged people, but simple, often mute, stereotypes.
+
+Sentient Force spells, such as levitation, allow a spell to independently decide where an item will be lifted, or even attack with Dancing Swords.
+However, \textit{Wide, Sentient} spells do not gain multiple consciences -- they can only focus on one thing at a time, just like a normal person.
+\iftoggle{verbose}{%
+A \textit{Wide, Sentient, Dancing Swords} spell which levitated 4 daggers would not be able to make 4 attacks per round.
+}{}
+
+Sentient spells take the Mental Attributes of their caster, so they can enter combat with their own Initiative score, at the same time as the caster.
+They also take their caster's Code, so a mage devoted to \gls{justicegod} would create spells which seek to enforce the local laws.
+
+\iftoggle{verbose}{%
+	The most common use of a sentient spell is to create a Pocket Spell, Talisman, or other magical item which can make its own decisions about when to cast.
+	A sword which casts fireball upon enemies when striking, or a tree which shines with light when a human enters the area, or a runic enscription on a stone door that turns the stone back to wood once the password is stated are all possibilities.
+}{
+	Sentient Pocket Spells, Talismans, and Artefacts can cast their own spells.
+}
+
+\spelllevel
 
 \enhancement{2}{Massive}{Increase the target area until it's the size of $level + Wits$ areas}
 \label{Massive}
@@ -571,32 +603,6 @@ The highest level spell there is \textit{Raging Fireball} at level 2, and the ot
 With the two spells together, the total cost is 3 \glspl{mp}, and the spell takes 7 Initiative points to cast.
 The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ damage from the fireball, and loses $1D6+2$ \glspl{hp} directly.
 
-\enhancement{1}{Sentient}{Allow the spell to make its own decisions}
-\label{sentient}
-Powerful \glspl{miracleworker} can make their spells sentient.
-This does not affect the \emph{target} of the spell (enchanted dogs do not become suddenly self-aware), but the spell itself.
-
-Sentient spells can `miss' a caster's allies, so a sentient spell to freeze over a river would target only the caster's enemies, or a \textit{Wide, Sentient Fireball} would burn only enemies.
-
-Sentient illusions can independently walk, talk, and use any languages the caster knows.
-These spells are never fully-fledged people, but simple, often mute, stereotypes.
-
-Sentient Force spells, such as levitation, allow a spell to independently decide where an item will be lifted, or even attack with Dancing Swords.
-However, \textit{Wide, Sentient} spells do not gain multiple consciences -- they can only focus on one thing at a time, just like a normal person.
-\iftoggle{verbose}{%
-A \textit{Wide, Sentient, Dancing Swords} spell which levitated 4 daggers would not be able to make 4 attacks per round.
-}{}
-
-Sentient spells take the Mental Attributes of their caster, so they can enter combat with their own Initiative score, at the same time as the caster.
-They also take their caster's Code, so a mage devoted to \gls{justicegod} would create spells which seek to enforce the local laws.
-
-\iftoggle{verbose}{%
-	The most common use of a sentient spell is to create a Pocket Spell, Talisman, or other magical item which can make its own decisions about when to cast.
-	A sword which casts fireball upon enemies when striking, or a tree which shines with light when a human enters the area, or a runic enscription on a stone door that turns the stone back to wood once the password is stated are all possibilities.
-}{
-	Sentient Pocket Spells, Talismans, and Artefacts can cast their own spells.
-}
-
 \spelllevel
 
 \spell{Artefact}{Instant}{Academics}{As `Talisman', but the item gains a full sphere of magic}\\
@@ -615,7 +621,7 @@ Therefore, a mage creating an item with the 3rd level of Necromancy must first s
 
 \enhancement{5}{Exceptional}{Make Mana Stones regenerate and store 3 \glspl{mp}}
 
-Mana Stones cast with this enhancement can store 3 \glspl{mp} for each level of the spell, rather than the usual 2.
+Mana Stones, Talismans, and Artefacts cast with this enhancement can store 3 \glspl{mp} for each level of the spell, rather than the usual 2.
 They also regenerate 3 \glspl{mp} per scene.
 
 \stopcontents[magic]
