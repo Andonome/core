@@ -65,29 +65,6 @@ The \gls{gm} should add to the \gls{tn} to affect birds, insects and other non-m
 
 Forest Song replicates the first three levels of the Enchantment Sphere but the targets are beasts rather than people, the caster always uses the Beast Ken Skill.
 
-\enhancement{1}{Binding}{Replicate all 5 levels of Enchantment}
-
-With an additional level added, the spell can replicate all five levels of the Enchantment sphere, but retains the exception that the only Skill used is Beast Ken.
-The animals targeted by this spell do not become any smarter, unless the enhancement \textit{Sentient} is used with the spell.
-
-\spell{Light}{Continuous}{Survival}{Blind enemies and light the way}\\
-\label{light}
-
-\iftoggle{verbose}{
-
-	\toppic{Roch_Hercka/flashing_light}{\label{roch:light}}
-}{}
-
-\noindent
-The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
-This light can blind an opponents in the darkness by casting it directly in their face.
-Anyone having the werelight flare up in their face becomes blinded for a number of rounds equal to the spell's level minus the target's Wits Bonus.
-The average human, having a Wits Bonus of -1, would be blinded for 1 round.
-The blindness can be automatically avoided by anyone who was Keeping Edgy (see page \pageref{edgy}), as quickly shielding one's eyes averts any damage.
-
-Undead are terrified of this light.
-Those affected by the spell make a Wits + Aggression roll, \gls{tn} 7 plus the caster's Intelligence + Survival.
-
 \spell{Plantform}{Continuous}{Survival}{Change a plant's natural adult form}\\
 Young plants have a natural destinty.
 With this spell, a plant's destined form can be changed.
@@ -147,6 +124,11 @@ Weather-workers can summon an air bubble anywhere within range, with a diameter 
 Any projectiles targeted at the airbubble lose a lot of their power -- arrows, and fireballs both become a little impotent when faced with it.
 It provides a total \gls{dr} of \arabic{spelllevel} + Intelligence against all ranged attacks.
 
+\spell{Spell Song}{Continuous}{Beast Ken}{Enchant animals as per levels 4-5 of Enchantment}
+
+With an additional level added, the spell can replicate all five levels of the Enchantment sphere, but retains the exception that the only Skill used is Beast Ken.
+The animals targeted by this spell do not become any smarter, unless the enhancement \textit{Sentient} is used with the spell.
+
 \spelllevel
 
 \spell{Forest's Call}{Continuous}{Beast Ken}{Mark someone for a monster encounter}\\
@@ -201,59 +183,63 @@ Spells massive enough to target a building might affect the exterior, but would 
 \begin{multicols}{2}
 
 \noindent
-Conjuration deals with changing matter.
-It starts by shifting water into mud, or stone into ice.  Later the caster can change types of matter -- liquids into solid, solid metal into air, anything simple.
-Higher levels are less limited, and complex items like a bow and arrow, or cart, can be made in an instant, as matter's shape can be changed.  Casters soon also learn how to change matter's location, teleporting items from one place to another.
+Conjuration spells change matter from one thing to another.
+The simplest spells change single-form objects, like a wooden staff, or water, into other single-form materials.
+More challenging spells allow the caster to target complex items, like swords, clothing or houses, or to transform simple items into complex ones.
+Finally, the conjurer learns to change living beings into other, simpler, forms.
+At this higher level, the conjurer can begin to recreate an object as it is, but somewhere else, effectively teleporting it.
 
-Conjuration uses various skills to cast, but most commonly Crafts for summoning or changing items, or Survival for water or other simple substances.
-
-Conjuration divides the world into three essential forms -- solid, liquid and gas.  Gases are easiest to work with, liquids come shortly after, and solid objects are usually the most difficult to work with.
-
-Conjuration spells targeting larger items are always more difficult.  The \gls{tn} for anything besides a gas, such as air, is always increased by the \gls{weightrating}.
-In the case of living targets, the \gls{weightrating} is always equal to their \gls{hp}, so targeting someone with 6 \gls{hp} would increase the \gls{tn} by 6.
-
-Any character can decide that a conjuration spell targeting them fails by spending 5 \gls{fp}, if that spell would be fatal.
+Conjuration spells work best on gases or light materials.
+Heavier targets, such as metal, rocks, or people can take a lot of focus to target or create.
 
 \spelllevel
 
-\spell{Transmutation}{Continuous}{Varies}{Turn solid objects, liquid, or gasses into something simple, of the same type}\\
-The mage can turn any single, cohesive, target into another of the same type.  Mist can turn to air, or air can turn into mist.
-Ice can turn into rock, and water can turn into sludge.
+\spell{Alteration}{Continuous}{Varies}{Transmute any mono form matter into any other}\\
+This spell targets only simple matter, made from a continuous substance.
+Air, water, wine, very plain clothing, poisons, and even acidic liquids count.
+The caster can turn any of these into any other form.
 
-Food substances, gold coins with complex engravings, bows, and other crafted items are too complicated for this spell -- it only transforms matter into something simple of the same type.
+This spell cannot create coinage or swords, as swords contain multiple materials (irons, leather, wood, et c.) and coins have complex engravings on them.
+However, a \textit{Colourful Alteration} would allow coins to show the standard face or other insignia of the realm.
 
-The \gls{tn} is typically 7 plus the target's \gls{weightrating}.
+The spell has a massive variety of implementations.
+Wooden logs can turn into water, water can turn into air, and ice can transform into clothing.
 
-What follows are a number of spells derived from Transmutation.
+The spell's \gls{tn} is always 7 plus the highest \gls{weightrating} involved.
+Air weighs nothing, so turning air into a Choking Fog would be \gls{tn} 7.
+However, turning air into blocks of wood with a \gls{weightrating} of 3 would be \gls{tn} 10.
+
+Once a spell has finished, the original item returns, unharmed.
+Stone turned into air becomes stone again.
+Stone turned into water reforms into stone.
+
+Casters cannot target sections of an object.
+A full statue or wall must be transformed, or nothing at all.
+The mage cannot create tunnels through a mountain by targeting chunks of rock; one must target the whole mountain, or nothing.
+
+When casting a \textit{Wide Alteration}, we count the \gls{weightrating} per-square.
+If a wall of wood 4 squares long had a \gls{weightrating} of 8, a mage could cast a \textit{Wide Alteration} spell, to turn the entire thing into air (assuming the mage was capable of targeting 4 squares).
+
+\paragraph{Acid}
+liquids can sting targets if the acid can make skin contact.
+The spell deals 4 Damage at the end of the round, then 1 less Damage on the next round, and so on.
+Those wearing Partial armour or clothing receive 3 Damage initially.
+Anyone with Complete or better armour receives 1 Damage, then nothing.
+Those with Perfect armour receive no Damage.
+
+Other varieties of the same spell might include summoning boiling water, or tiny flecks of lava.
+Alchemists think of each as individual spells, and divine casters may have a different prayer for each substance, but mechanically, they are all one spell.
 
 \spell{Choking Fog}{Continuous}{Survival}{Create noxious gas which causes Fatigue}\\
-The caster changes the nearby air into a caustic mess.
-When cast outdoors the mist dissipates at the end of the \gls{round}.
-When cast in a windy area, the fog disappears instantly.
+deals a number of \glspl{fatigue} equal to the spell's level plus the caster's Intelligence Bonus.
+Anyone can avoid breathing in the fog if they were already Keeping Edgy.
+Targets receive the \glspl{fatigue} at the end of the round.
 
-Anyone Keeping Edgy can hold their breath.
-Others gain \arabic{spelllevel} + the cater's Intelligence in Fatigue points each \gls{round}.
+When cast as a normal spell, covering a single square, the spell won't find much use as a target can simply move away.
+It finds practical application once cast as a \textit{Massive Choking Fog}, so targets cannot easily flee.
 
-The spell affects a single square by default.
-
-\spell{Purify Air}{Continuous}{Survival}{Clear air in a small area}\\
-\iftoggle{verbose}{
-	Smoke, fog, or any other substance can be purified.
-	The spell affects a single square by default.
-	Casting this as a \textit{Wide} spell allows a larger area to be cleared.
-}{
-	Smoke, fog, or any other air impurities can be cleared in a single square.
-}
-
-\spell{Stonespell}{Continuous}{Crafts}{Turn any person or other matter to stone, with a TN equal to 7 plus the target's \glsentrytext{weightrating}}\\
-The caster changes any solid target to stone, ice, or any other simple, solid, substance.  The \gls{tn} is 7 plus the target's \gls{weightrating}.\footnote{A living target's \gls{weightrating} is equal to their \glsentrytext{hp}.}
-Once the spell is over, the target turns back to normal.
-
-Anyone may spend 5 \gls{fp} in order to stipulate that the spell fails.
-
-Fast moving items, such as a spear used in combat, are additionally difficult to target.  When in use, whatever skills the wielder is using add to the \glsentrylong{tn}.
-
-Metal cannot be targeted by this spell.
+\paragraph{Web}
+spells turn something into a sticky substance.
 
 \spell{Slime}{Continuous}{Survival}{Make any liquid into a slippery slime}\\
 The caster turns any nearby liquid into a slippery slime.
@@ -265,6 +251,11 @@ Those who fail, fall over, becoming \textit{prone}.%
 Some kind of liquid must be in the right place for the spell to work.
 Casters acting quickly often carry their own water.  Throwing water requires 8 initiative for using an item, as usual.
 
+\spell{Purify Air}{Continuous}{Survival}{Clear air in a small area}\\
+Smoke, fog, or any other substance can be purified.
+The spell affects a single square by default.
+Casting this as a \textit{Wide} spell allows a larger area to be cleared.
+
 \spell{Web}{Continuous}{Survival}{Turn a liquid into a sticky substance - targets roll to be free with Strength + Athletics vs the caster's Intelligence + Survival}\\
 The caster turns any liquid into a vicious, sticky substance.
 Anyone coming into the liquid gets stuck, and needs to take a full movement action to try to get free.
@@ -275,57 +266,44 @@ Anyone can attempt to break free instead of their usual movement action.
 
 Webbing cannot be used instead of rope -- it's too elastic, and tends to snap when stretched.
 
-\enhancement{1}{Meticulous}{Make detailed creations}
-The caster can now transform targets into detailed forms.  Air can become a complex, and rich scent.  Solid wood can turn into a sword, or rope.  Water can become beer, wine or even acid.
+\spelllevel
 
-\enhancement{1}{Metallic}{Target and make metals}
-The caster can now target and create basic metals such as copper, bronze, or iron.  Gold and silver cannot be targeted or created, nor can alloys, or weapons adorned with precious metals.
+\spell{Transmutation}{Continuous}{Varies}{Transmute any mono form matter into any other}\\
+The mage can now target (but not create) complex objects, such as swords, clothing, houses, candles, or any other non-living matter.
 
-\enhancement{1}{Transient}{Transform any type of matter to any other}
-The conjuration spells can now move from any type of matter to any other.  Webbing, slime, or acid can be created from any substance except metals.
+Living things, and anything too complicated to be described in a diagram (such as books) cannot be targeted.
 
-Casters turning air into rocks can rain a heavy load down on an enemy, inflicting $1D6$ Damage, plus their Intelligence, plus the spell level.
+Transmutation otherwise works exactly like the previous level.
+The mage can turn a bow into a Web, a house into stone, or turn clothing into acid.
 
-Living creatures turned using Stone Spell into a solid substance, and then turned into air or water using Form Breach, are dead.
+Despite the rarity of \glspl{miracleworker}, people rich people often inscribe complex passages on their clothing or armour, so that Transmutation spells cannot target them.
 
 \spelllevel
 
-Level 2 conjuration can use all the enhancements of the previous level.
+\spell{Metamorphosis}{Continuous}{Varies}{Transmute anything into anything.}\\
+The mage finally learns how to create more complex items (like books and weapons), and how to target living creatures.
 
-\spell{Acid}{Continuous}{Academics}{Create caustic acid to burn unclothed targets}\\
-The caster can turn any liquid into a potent acid.
-If the acid achieves a Vitals Shot (or the target is not wearing clothes), it gets around armour or clothing, and deals $1D6$ Damage plus the spell's level, plus the caster's Intelligence Bonus.
-Thin clothing may only provide partial \gls{dr}.
-
-The spell can either be cast a \textit{Transient} spell, in which case it can attack targets by turning air into acid, or it can be cast against a target already covered in some liquid.
-
-Alternatively, if the acid is held in a tough bowl, made or metal or dense wood, it can be thrown like a normal projectile, so long as the range is short (-2 penalty per square's distance).
-
-However the caster creates the acid, targets can dodge like any other missile weapon.
-
-\spell{Prison}{Continuous}{Crafts}{Ice forms around the target, trapping them, unless they move with a Strength + Athletics vs Intelligence + Crafts roll}\\
-This spell is simply an example of stacking spell enhancements together.  The caster freezes water around a target, or turns surrounding air to stone, imprisoning them.
-While the spell is being cast, the target can attempt to break free as a Quick Action, costing 2 Initiative, by rolling Strength + Athletics.
-The \gls{tn} is 7 plus caster's Intelligence Bonus plus Crafts.
-
-If the spell completes, the \gls{tn} to break free increases by 2.
-
-\spelllevel
+\iftoggle{verbose}{%
+A book could turn into a sword, a bucket of water can transform into a sword, and a tree could transform into an entire house, with a big enough spell.
+}{}
 
 \spell{Teleport}{Instant}{Academics}{The mage teleports 3 squares + Wits away}\\
-The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.  As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
+The mage teleports the target a short distance -- up to \arabic{spelllevel} squares plus the caster's Wits.
+As with many other instant skill spells, the target can cancel the spell by spending 5 \gls{fp}.
 
-If cast as a \textit{Massive} spell, the portal gains can travel across multiple areas, but always remains as around the size of a doorway.
+\spelllevel
 
-\enhancement{1}{Gated}{Open a portal instead of teleporting}
-The mage can not simply teleport something but open a doorway from one place to another, within the normal range.
-The magical portals always maintain the same direction, so one which opens facing upwards will always match another which opens facing upwards.
+\spell{Gate}{Instant}{Academics}{A magical portal opens}\\
 
-If placed on a surface, it opens seamlessly, as if it were a normal opening.
-People can wander into another land entirely and never know it.
+A rift opens in space, allowing the mage to connect any two locations in range.
+Anyone walking into one portal, comes out the other.
 
-The portals are always seamless -- the edges contain no flickering or wobbles.
-Portals must always rest upon unchanging surfaces; any movement destroys the circle instantly.
+\iftoggle{verbose}{%
+Cast on its own, the spell can form an impenetrable barrier by simply looping a hallway: once a portal blocks the way, nothing can get past it, because hitting the portal does nothing more than throwing fists into the other side.
+From the back, such gates look black, but anyone can pass through them harmlessly.
+
+Those rare \glspl{miracleworker} able to cast a \textit{Ranged Gate} can link any two areas in line of sight, allowing anyone to replace a day's walk with a single footstep.
+}{}
 
 \end{multicols}
 
@@ -396,7 +374,7 @@ If the enchanter does not have any languages in common with the target then the 
 This communication is one-way only.
 
 \spell{Twitch}{Continuous}{Performance}{Gain Init bonus to spell casting equal to 1 plus Int}\\
-The spellcaster focusses on their own mental acuity, gaining a bonus to Initiative for all spell casting.
+The target's mind sharpens, and they gain a bonus to Initiative for all spell casting.
 The bonus is equal to the spell's level plus the caster's Intelligence Bonus.
 
 \spelllevel
@@ -469,10 +447,12 @@ The player may be told that this is Damage, but the \gls{gm} should keep track o
 
 \spelllevel
 
-\spell{Domination}{Continuous}{Deceit}{The target obeys all commands}\\
-The target is given a simple command by the enchanter, consisting of no more words than \arabic{spelllevel} plus the enchanter's Intelligence + Deceit. If the target fails the resisted task of their Wits + Academics against the enchanter's Intelligence + Deceit then they must immediately obey any commands the enchanter gives them.
+\spell{Domination}{Continuous}{Deceit}{The target obeys a command of Lv. + Int words. Intelligence + Deceit vs Wits + Academics.}\\
+The target is given a simple command by the enchanter, consisting of no more words than the spell's level, plus the enchanter's Intelligence.
+The target resists with their Wits + Academics, and if they fail, must immediately obey the command.%
+\footnote{The command must be a grammatically accurate, complete sentence. `Leave!', is fine, but `Find money, give me' is not.}
 
-If the enchanter maintains the spell then the target can reroll at the beginning of each scene to break the spell again, otherwise it ends when the enchanter drops the spell.
+If the enchanter maintains the spell then the target can re-roll at the beginning of each scene to break the spell again, otherwise it ends when the enchanter drops the spell.
 
 \end{multicols}
 
@@ -483,11 +463,12 @@ If the enchanter maintains the spell then the target can reroll at the beginning
 
 		Betrayal & +4 & Targets who would otherwise be weak-willed and at the mercy of the enchanter gain a +4 bonus to resist attacking their allies. This bonus can increase up to +6 to resist attacking loved ones such as family and close friends.\\
 
-		Code Violation & Variable & Targets forced to act against their own code or god gain an additional bonus to act equal to the amount of \gls{xp} they would receive for completing the action.
+		Code Breach & Variable & Targets forced to act against their own code or god gain an additional bonus to act equal to the amount of \gls{xp} they would receive for completing the action.
 	For example, those following \gls{joygod} would gain 1\gls{xp} for trying a new type of food or drink, so they gain a +1 bonus to resist commands which inhibit their ability to act in this way.
 	Those following \gls{wargod} gain 10 \glspl{xp} for bringing down a sufficiently large monster, so they would gain a +10 bonus to resist any enchantment which prohibits them from slaying such quarry.
-	This can also be used against the target, with the enchanter gaining a bonus to affect someone with an order if it adheres to the target's code.
-	\\
+		\\
+		Code Fulfilment & Variable & As above, the caster gains a bonus to forcing people to act in line with their Code, equal to the \glspl{xp} they would gain.
+		\\
 
 	\end{tcolorbox}
 
@@ -763,7 +744,7 @@ While the weapon is next to the caster it can defend the caster using its own st
 If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character.
 A successful grapple means the weapon is too heavy to lift and the spell ends.
 
-\spell{Mage Armour}{Continuous}{Academics}{Create a magical barrier with $6 + Int$ \glsentrylongpl{sp}}\\
+\spell{Mage Armour}{Continuous}{Academics}{Create a magical barrier with $6 + Int$ \glsentrylongpl{SP}}\\
 The mage casts a shield of crackling energy around the target to protect from all harm, and most often mages target themselves.
 The barrier can shatter if attacked but can take a serious beating before breaking.
 Each barrier counts as a having a number of \glsentryfullpl{SP}, which are destroyed by Damage like \gls{fp}, but always before \gls{fp} are targeted.
@@ -778,7 +759,7 @@ When cast wide, it can cover a group of people, but the shield will cover all of
 
 \textit{For example, Annabel the alchemist has the Force sphere at level 3 and Intelligence +2.
 She's low on \gls{mp} so she casts it at level 2, gaining 8 \gls{SP}.
-On the very next Initiative Count she's hit for 10 Damage and loses all 8 \gls{SP} then 2 FP.}
+On the very next Initiative Count she's hit for 10 Damage and loses all 8 \gls{hp} then 2 FP.}
 
 Multiple castings do not stack -- only the highest casting it used.
 
@@ -801,8 +782,6 @@ Their Initiative Score would suffer and they would accrue additional Fatigue Poi
 
 When cast over a full area, all are effected, and movement becomes extremely difficult.
 
-
-
 \end{multicols}
 
 \sphere{Illusion}
@@ -814,95 +793,78 @@ When cast over a full area, all are effected, and movement becomes extremely dif
 }{}
 
 \noindent
-Illusions create a facsimile of sounds and sights out of pure magic. The thing created might look like a hat, a coin, a rat or even a dragon at higher levels. Illusions also create convincing sound -- loud echoes, the sound of nearby battle, perhaps even imitating an enemy commander's orders in battle. However, illusions are little more than coloured air and noise -- once touched they fade away. They are frightening and if properly used can defeat armies, but are not perfect weapons by any means.
+Illusionists begin by controlling shadows.
+They can look like the sillhouettes of people, at least at night, from a distance.
+The shadows can also help hiding in dimly lit areas.
 
-Seeing through an illusion is always an opposed roll -- the victim uses Wits + Vigilance, while the Illusionist uses Intelligence + some appropriate Skill.
-If a \gls{pc} could be tricked by an illusion, the \gls{gm} should always roll for the illusionist, without informing the players.
-If someone has a reason to suspect that something is an illusion, they should receive a +2 bonus to resist it.
-The party also receive a bonus for multiple people who might spot the illusion, as per the standard Vigilance Skill rules.
+By colouring these moving shadows, the aparitions can appear like people, monsters, jewels, or anything else.
 
-Illusionists add different Skills to the roll, depending upon what they are making an illusion of.
-An illusion of a cart or sword might require the Craft Skill.
-An illusion of a monster might use the Beast Ken Skill.
-
-For example, a gnome creates an illusion of a fleeing gnoll with a great bundle of treasure in his hand, hoping the \glspl{pc} will chase after him immediately.
-The party must roll at \gls{tn} 7 plus the gnome's Intelligence + Empathy, for a grand total of \gls{tn} 10.
-The highest party member has a Wits + Empathy total of +3, and the next highest score in the party is +2 but nobody else has anything to contribute.
-The party's total is +4\footnote{See the rules on teamwork, page \pageref{teamwork}.} so the \gls{gm} rolls for them and obtains a total of 8 -- that's not enough.
-As they begin to run, one of the \glspl{pc} remembers they heard about a gnomish illusionist and asks `Are we chasing an illusion?' -- that puts that final score up to 10; the \gls{tn} is reached and the \gls{gm} informs the player that she sees that the gnoll's feet are not always touching the ground properly, so it must be an illusion.
-
-The \gls{gm} should grant bonuses and penalties to illusions depending upon lighting conditions -- illusions inside a shadowy cottage seen from far away should receive an immense bonus, while far-fetched illusions on a sunny day seen up close might receive a penalty.
-
-Illusionists typically create images of things they are familiar with. Unfamiliar objects, such as an illusionist trying to recreate a dragon while never having seen a dragon, suffer a -2 penalty to the roll, at minimum.
-
-While most people are aware that illusion magic exists and so are suspicious of anything outlandish or out of the ordinary, those who have never heard about illusory magics suffer a -2 penalty to disbelieve.
-
-If someone sees an illusion for what it is then the illusion remains, but of course will have less effect. However, while someone fully believes an illusion to be real, they can be psychosomatically damaged by it simply by believing that it's real. All illusions can inflict a total of 1 Fatigue Point per level of the illusion spell plus one per Intelligence Bonus of the caster. For example, a song mage might sing a griffin illusion into existence; all who are fooled by the illusion can be `attacked' by it, receiving up to 4 Fatigue Points. On later \glspl{round} the song causes no more Fatigue Points, even if it keeps playing, but the bard could then create the illusion of a sword using the first level of the illusion sphere. They could use the sword to attack as usual, but not parry blows. While attacking, they could inflict up to 2 Fatigue Points as people believe they have been wounded by the sword, but subsequent attacks would not increase the amount of Damage.
-
-Illusions must be summoned within the normal range of spells, but once summoned they can travel away from the caster without worry -- so long as they are maintained as \glspl{standingspell}, they endure, no matter how far away the caster might be.
-
-Illusions are typically delicate, and even a single \gls{hp}'s damage will dissipate them.
+Seeing past an Illusion always requires a Wits + Vigilance roll, with a \gls{tn} equal to the caster's Intelligence plus some Skill.
+The exact Skill depends on what the illusionist wants to fake.
+Turning someone into a person uses the Empathy Skill, while making a door look like a wall requires Crafts.
 
 \spelllevel
+
+\spell{Cloak}{Continuous}{Varies}{Create shadows}\\
+By wrapping the target in shadows, they gain a bonus to hiding equal to the spell's Level plus the caster's Intelligence Bonus.
+This won't do much good when someone walks close to an inky patch of darkness, and can be actively harmful when a patch of blackness is wandering across a Sunny street.
+
+Casting this as a \textit{Colourful Cloak} allows the shadow to take on real colours, so the caster can make something look like just about anything else.
+When only trying to hide, the Stealth Skill is used, but if an illusion is cast to make something look like another, the Skill depends on what it should look like.
 
 \spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}\\
 The mage places a spell on any item or person, so it seems to have more of fewer \glspl{mp} than it really has.
 This circumvents spells such as `Detect Mana'.\footnote{See page \pageref{detectmagic}.}
 
-The caster rolls against a \gls{tn} 7, and each margin allows the apparent total \glspl{mp} of the target to increase or decrease by one level.
+The caster rolls against a \gls{tn} 7, and if successful, the caster can alter the apparent mana in an item by an amount equal to the spell's Level plus their Intelligence Bonus.
 
-\spell{Illusion}{Continuous}{Varies}{Make anything look like something else}\\
-The illusionist can make anything look like another of roughly the same size.  A fox can look like a dog, a copper coin can look golden, or a gnome can appear like a gnoll.
+\spell{Aparition}{Continuous}{Varies}{Create a shadow-puppet in the air}\\
+The caster creates a shadow, with depth and cohesion.
+Typically, these are used to fool people on dark nights that some person or creature is there.
+A \textit{Wide Aparition} might appear as a giant monster, or a \textit{Massive Aparition} could even suggest a full house has appeared.
+As per \textit{Cloak}, the \textit{Colourful} enhancement can paint colour over the spell, making it look like a real thing.
 
-Illusionists can use this to hide by making themselves look like a bush, or slip unseen into a party by making themselves look like one of the other guests.
+\spell{Silence}{Continuous}{Stealth}{Stop all noise getting to a target}\\
+The target hears nothing, and produces no sound.
+\iftoggle{verbose}{%
+When cast as a \textit{Wide} spell, a full group can lose the ability to communicate.
+}{}
 
-Copying a person requires the Empathy skill, while copying furniture would require the Crafts skill.
+\spelllevel
 
-Anyone touching an illusion finds that it melts in their hands -- a simple handshake can shatter a basic illusion, and handling fake coins quickly dissipates the magic.
+\spell{Light}{Continuous}{Survival}{Blind enemies and light the way}\\
+\label{light}
 
-Illusionists cover both sound and appearance.  Illusions crafted for sound can change a nearby river to sound like howling wolves, or make someone's voice come out high-pitched.
+\iftoggle{verbose}{
 
-Illusionists who speak another language can make someone else's speech sound like that language.
-If you speak gnomish, your colleagues can be made to sound like they speak gnomish.
-Another spell could make a number of gnomes sound like they're speaking in the common tongue.\footnote{Of course at that point, everyone would understand each other, but have a hard time understanding themselves.}
+	\toppic{Roch_Hercka/flashing_light}{\label{roch:light}}
+}{}
 
-Seeing through an illusion requires a Wits + Vigilance roll, with a \gls{tn} equal to 7 plus the caster's Intelligence and skill (whatever it happens to be).  Alternatively, when a player rolls for an illusion, the \gls{tn} is 7 plus an opponent's Wits + Vigilance.  Having multiple \glspl{tn} can mean some opponents are fooled and some are not.  Anyone specifically looking out for an illusion can gain a +2 Bonus on the roll, or a +4 if they have reason to suspect that the thing in front of them is an illusion.
+\noindent
+The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
+This light can blind an opponents in the darkness by casting it directly in their face.
+Anyone having the werelight flare up in their face becomes blinded for a number of rounds equal to the spell's level minus the target's Wits Bonus.
+The average human, having a Wits Bonus of -1, would be blinded for 1 round.
+The blindness can be automatically avoided by anyone who was Keeping Edgy (see page \pageref{edgy}), as quickly shielding one's eyes averts any damage.
 
-Illusions require a caster's full focus in order to remain realistic.
-A caster who make his friend look like an elf while his friend talks, would have to pay attention to his friend to make sure the facial movements followed along with the real face.
+Undead are terrified of this light.
+Those affected by the spell make a Wits + Aggression roll, \gls{tn} 7 plus the caster's Intelligence + Survival.
 
-Illusions can only adjust something's size so much.
-Something's \gls{weightrating}/ \glspl{hp} can increase or decrease by a number equal to the spell level plus the caster's Intelligence.
-A first level Illusion spell cast with Intelligence +1 could make an elf look like a gnoll, but could not make a gnome look like an ogre.
-Similarly, a shortsword could be made to look like a simple dagger, but turning a chainmail suit into a small bird would extremely difficult.
+\spell{Tendril}{Continuous}{Varies}{The caster summons a solid shadow}\\
+The shadow summoned gain some limited solidity.
+Despite the name, the shadow doesn't have to form a grabbing arm -- it can take any form, just like the other illusion shadow-tricks.
+They each have Strength, Dexterity and Speed of -5 (and therefore 1 \gls{hp}).
+The mage can add a number of points to these Traits  equal to the spell's Level plus the mage's IntelligenceThe mage can add a number of points to these Traits  equal to the Spell's Bonus.
 
-The same applies to sounds -- a babbling brooke can be made to sound like a mellow song, but not like the cries of war, unless the illusionist is particularly proficient.
+The tendrils require focus to move, unless made \textit{Sentient}, otherwise they stand like smoke on a windless day.
 
-\enhancement{1}{Independent}{Illusions can be complete fabrications}
+When made \textit{Colourful}, the tendrils form exceptionally convincing illusions.
 
-Illusions can now be cast without any `base' -- they simply appear on their own.
-Coins, dogs, dragons, or more, can be fashioned from nothing.
-
-\enhancement{1}{Solid}{The illusions can be felt, and gain +2 \gls{tn} to spot}
-
-Solid illusions are not all that solid, but they can be touched without disipating and hold all manner of nice details, such as \emph{smelling} right, or stopping smoke from blowing through them.  They are also far more realistic, and increase the \gls{tn} to see through the illusion by 2.
-
-These illusions have a Strength score equal to -6, plus the spell's level, plus the caster's Intelligence.
-They cannot carry anything which would give them Fatigue, so any illusion with a Strength score of -1 could use a dagger, but not a longsword.
-
-Solid illusions become an extension of the caster, and any caster can cast a spell \textit{through} the illusion, as if the illusion were the caster.  This might be used to cast an Invocation spell through a dragon illusion, or could employ Force to help an illusory creature lift a sword.
-
-Once even a single point of Damage has been dealt to the illusion, it vanishes.
-
-\enhancement{2}{Negative}{The target becomes invisible}
-
+\spell{Invisibility}{Continuous}{Stealth}{The target becomes invisible}\\
 The illusionist finally learns to make less of something, rather than more.  A single person can be silenced, or made invisible (or both).
 An empty patch of ground could suddenly appear to break open, showing a great chasm in the ground.
 
-As usual, the illusion is still delicate, and if the person is struck or disturbed in any way, the illusion dissipates.  Combat rolls, for defence or attack, always break such spells unless they are also make \textit{Solid}.
-
-\spell{Light}{Continuous}{Survival}{Create a light to blind enemies}\\
-This replicates the Aldaron spell, \textit{Light}, page \pageref{light}.
+As usual, the illusion is still delicate, and if the person is struck or disturbed in any way, the illusion dissipates.
 
 \end{multicols}
 
@@ -942,8 +904,13 @@ The mage throws out a ball of flaming, crackling light which strikes and burns t
 \enhancement{1}{Raging}{The fireball deals +2 Damage}
 The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Fireball at third level would deal $2D6+2$ Damage.
 
-\enhancement{2}{Internal}{The fire ignores all \gls{dr} and \glspl{SP}}
-The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range. It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour. The target cannot resist in any way.
+\spelllevel
+
+\spell{Internal}{Instant}{Projectiles}{This fire spell all \gls{dr} and \glspl{SP}}
+
+The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range.
+It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour.
+The target cannot resist in any way, except with \glspl{fp}.
 
 If cast with the \textit{Wide} or \textit{Massive} enhancement, the spell targets everyone inside the area.
 
@@ -954,62 +921,53 @@ If cast with the \textit{Wide} or \textit{Massive} enhancement, the spell target
 \begin{multicols}{2}
 
 \noindent
-Necromancers summon souls from distant, black realms and place them in appropriate bodies -- those of the once living and now dead. The corpses are sometimes filled with their old hosts, locking people into a state of permanent semi-death, or more often with ravenous and malicious spirits from foreign realms. Mages of this sphere begin by imitating the dead, becoming half dead themselves, which allows them to dissuade malicious spirits from attacking.
+Necromancers summon souls from distant realms and place them in appropriate bodies -- those of the once living and now dead.
+The corpses, infused with these ravenous spirits, begin to move and try to kill any sentient life nearby, to feast on their freshly freed soul.
+
+\iftoggle{verbose}{
+Mages of this sphere begin by imitating the dead, becoming half dead themselves, which allows them to dissuade malicious spirits from attacking.
+}{}
 
 \spelllevel
 
-\spell{Ghoul Calling}{Instant}{Medicine}{Summon a hungry spirit into a corpse, creating a ghoul. Maximum $2 + Int$ \glspl{hp}}\\
+\spell{Ghoul}{Instant}{Medicine}{Summon a hungry spirit into a corpse, creating a ghoul. Maximum Str of $3 + Lv. + Int$ \glspl{hp}}\\
 The mage can create their own ghouls from easily accessible realms of malicious spirits.
+\iftoggle{verbose}{%
 Small animals such as cats or frogs are easy, while larger creatures such as humans or basilisks are extremely difficult.
+}{}%
 The spell is cast on a corpse and the corpse is imbued with one such malicious spirit.
 It retains the Strength score (and therefore \gls{hp}) it had in life.
 The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
-The creature has neither Intelligence nor Charisma scores. Most will attack all living things on sight.
+The creature has neither Intelligence nor Charisma scores.
+Most will attack all living things on sight.
 
 The mage rolls their Intelligence + Medicine at \gls{tn} 7 to cast the spell.
 Any Medicine specialisations dealing with the affected species (e.g. `gnolls', or `humans'), or specialisations concerning death rituals can be used.
 
-Targets can have a maximum of 2 \glspl{hp} plus the mage's Intelligence Bonus, so a mage with Intelligence +1 could only raise targets with up to 3 \glspl{hp} -- perhaps a cat, or very small gnome.
+Targets can have a maximum of 3 \glspl{hp}, plus the spell's Level, plus the mage's Intelligence Bonus.
+\iftoggle{verbose}{%
+A mage with Intelligence +1 could cast this spell at level 1 to raise anything with up to 4 \glspl{hp}.
+Cast a \textit{Potent Ghoul} at level 2 with Intelligence +2, the mage could raise a human soldier with Strength +2, and 8 \glspl{hp}.
 
 Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
+}{}
 
-\enhancement{1}{Enervated}{The target corpse can go up to 3 \glspl{hp} higher}
-The mage adds a level to the spell to increase the maximum number of \glspl{hp} by 3.
-A mage with Intelligence +2 could raise a solder with 7 \glspl{hp} with an \textit{Enervated Ghoul}.
-With the fourth level, the mage could raise a basilisk with 13 \glspl{hp}.
-
-\enhancement{1}{Cunning}{The mage raises an intelligent spirit}
-The caster pulls up not a regular ghoulish spirit, but a ghast -- an intelligent and sinister spirit with a mind of its own.
-The spirit begins with Intelligence and Wits scores of -2.
-Each use of the \textit{Cunning} enhancement can add 4 points plus the caster's Intelligence Bonus.
-These points can be spend on any Trait, e.g. Skills, Attributes, or even Spheres.
-However, the caster does not have complete control over which type of spirit is summoned.
-For every margin on the roll, the caster designates one point.
-The remaining points are assigned by the \gls{gm}.
-
-For example, the player rolls to summon a ghast at \gls{tn} 7, with a roll of 10 -- that's a margin of 3.
-The player then assigns 2 points to the Combat Skill and increases Dexterity from -2 to -1.
-The \gls{gm} then puts the rest into Wits, so that the creature is better able to defend itself against any attempts to control it.
-The mage's Intelligence of +3 means the ghast starts with 7 points, so the remaining 4 points raise the creature's Wits score from -2 to +2.
-With a natural Aggression score of +2, the Wits + Aggression is 4, so the \gls{tn} to control the creature with \textit{Command the Dead} is 11.
-
-\spell{Command the Dead}{Continuous}{Academics}{Give any order to the dead, as per the Enchantment sphere.  Intelligence + Academics vs Wits + Aggression}\\
+\spell{Command the Dead}{Continuous}{Academics}{Give any order to the dead, as per Level 4 of the Enchantment sphere.  Intelligence + Academics vs Wits + Academics}\\
+The necromancer learns to command the undead with short, simple, commands.
 The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb.
 `Dig',\footnote{The undead are the worst workers due to their stupidity, and typically destroy their own hands before they dig very far.
 They can be used for anything, but are not necessarily good for much.}
 `kill them all' or `wait here' are all appropriate commands.
 To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits + Aggression.
 
-This spell replicates all five levels of the enchantment sphere with the mage selecting any effect they wish; however, the mage uses Academics instead of any other Skill because the undead may only be `understood' in some technical sense, and not truly empathised with.
+This spell replicates the fourth level of the Enchantment sphere, except that it targets the undead.
 
-\spell{Preservation}{Instant}{Survival}{Slow something's ageing}\\
-\iftoggle{verbose}{%
+\spell{Preservation}{Instant}{Survival}{Slow the target's rot}\\
 Trainee artists and necromancers have one thing in common -- fruit.
 Students of Necromancy often begin their journey by stopping food from degrading.
-}{%
+
 This spell gives a sort of `half-life' to rot, such that any foods, corpses, or anything else affected slow their own ageing process incrementally.
 They're not sustained in perfect condition forever, but never quite reach an entirely spoiled stage.
-}
 
 \spell{Torpor}{Continuous}{Medicine}{Make the target enter a semi-death state, ignoring Fatigue and gaining \gls{dr} 1}\\
 The target enters an altered state of semi-death.
@@ -1018,51 +976,47 @@ They gain a natural \gls{dr} of 1.
 While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them.
 While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \glspl{fp}.
 
-This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell. It can never be cast on others. While the spell is in effect they suffer no ill effects from Fatigue Points but cannot heal them. Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to Fatigue. The caster faces a real danger of death if ever they gain enough Fatigue Points to push them over a -5 penalty; they may not gain the penalty but must make a Vitals Check to avoid death and then make another roll each time they gain Fatigue.
-
-\enhancement{1}{Necrotic}{Increase the \gls{dr} to 2, and see as the dead do}
-
-By adding an additional level to the process, the target can gain the special sight of the undead (in addition to their normal vision).
-They can now see all living things, even in the darkness.
-Addtionally, the Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
-
-Additionally, the target's \gls{dr} raises to 2 as the target stops feeling pain altogether.  They can even hold their breath for one minute per spell level.
-
-Targets who die while this spell is in effect raise from the dead as an undead creature.\footnote{This spell cannot raise someone as undead if the necromancer's spell level would not normally allow them to raise a creature of that spell level.}
+This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell.
+While the spell is in effect they suffer no ill effects from \glspl{fatigue} but cannot heal either \glspl{fatigue} or \glspl{hp}.
+Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to Fatigue.
+The caster faces a real danger of death if ever they gain enough \glspl{fatigue} to push them over a -5 penalty; they may not gain the penalty but must make a Vitality Check to avoid death and then make another roll each time they gain Fatigue.
 
 \spelllevel
 
+\spell{Soul Sight}{Instant}{Medicine}{Make the target enter a semi-death state, ignoring Fatigue and gaining \gls{dr} 1}\\
+
+The target can gain the special sight of the undead (in addition to their normal vision).
+They can now see all living things, even in the darkness.
+
+Additionally, the target's \gls{dr} raises to 2 as the target stops feeling pain altogether.
+They can even hold their breath for one minute per spell level, plus the caster's Intelligence Bonus.
+
+Targets who die while this spell is in effect raise from the dead as an undead creature.\footnote{This spell cannot raise someone as undead if the necromancer's spell level would not normally allow them to raise a creature of that spell level.}
+
+These abilities come with weaknesses.
+Bright lights, including the \textit{Light} spell irritate the target.
+The Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
+
 \spell{Sickness}{Instant}{Medicine}{The target loses $1D6 - 2 + Int$ \glspl{hp}}\\
-Even low level necromancers have the terrifying ability to pull someone's soul out with a simple spell.  The spell inflicts $1D6-2$ Damage directly to the target's \gls{hp}.  \Glsentrylongpl{fp} and \glsentrylongpl{SP} can be bypassed entirely.  The caster adds their Intelligence Bonus to the Damage.
+\iftoggle{verbose}{%
+Powerful Necromancers have the terrifying ability to pull someone's soul out with a simple spell.
+Even those who survive suffer a nasty sickness, often accompanied by pale, necrotic lines racing across their skin.
 
-\enhancement{1}{Fetid}{Add 1 to the Damage}
-
-By adding additional levels, the caster can add 1 \gls{hp} to the total Damage.
+}{}%
+The spell inflicts Damage directly to the target's \glspl{hp}.
+\Glsentrylongpl{fp} and \glsentrylongpl{SP} can be bypassed entirely.
+The spell inflicts 1 Damage, plus the caster's Intelligence Bonus.
+\iftoggle{verbose}{%
+As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence +2, casting a \textit{Potent Sickness}, would inflict $1D6$ Damage.
+}{}
 
 \end{multicols}
 
 \sphere{Polymorph}
-
-\begin{multicols}{2}
-
-\noindent
-The Polymorph sphere of magic allows the mage to grasp at different strands in the tree of life, and move themselves or others along different paths.  Nearby forms include other races, such as elves turning into men, and later shapeshifters learn to turn into bears, hawks or other animals.  Larger men find it easier to turn into large animals such as griffins, while smaller, lighter people find it easier to take on the form of birds.  Master shapeshifters learn to go beyond the great tree of life and turn into arbitrary forms of their chosing, including living fire, or a gust of wind.
-
-Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of.
-Many conjecture that the face is a facet of one's soul showing in the world.
-A ginger person transformed into a cat would become a ginger cat.
-A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
-Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 8 plus the level of the Polymorph sphere being employed; e.g. if an elf used the first level to transform into a gnome the \gls{tn} would be 9, but if the elf used the fifth level to transform into a magma elemental, the \gls{tn} would be 14.
-
-Unwilling targets who are to be transformed with Polymorph can spend 5 FP in order to retroactively stipulate that the spell fails.
-The undead are completely immune to the Polymorph sphere.
-
 \begin{figure*}[t]
 	\begin{tcolorbox}[tabularx={lccX},bottom=10pt,top=10pt]
 
 	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} & \textbf{Realistic Enhancements (Optional)} \\\hline
-
-	Cow & 0 & +4 & Quadraped \\
 
 	Badger & -4 & -3 & Quadraped \\
 
@@ -1074,9 +1028,11 @@ The undead are completely immune to the Polymorph sphere.
 
 	Beaver & -5 & -4 & Quadraped \\
 
-	Bird/ Bat & -5 & -5 & Flight \\
+	Bird/ Bat & -5 & 4 & Flight \\
 
 	Cat & -5 & -5 \\
+
+	Cow & 0 & +4 & Quadraped \\
 
 \iftoggle{aif}{
 	Chitincrawler & +3 & +5 & DR 4 \\
@@ -1101,73 +1057,35 @@ The undead are completely immune to the Polymorph sphere.
 
 	Rat & -5 & -5 & Quadraped \\
 
-	Wolf & -2 & +1 & Quadraped \\
+	Wolf & -2 & +2 & Quadraped \\
 
-\end{tcolorbox}
+	\end{tcolorbox}
+
 \end{figure*}
 
-As Polymorph changes people's form it also changes Strength and therefore \gls{hp} maximums.
-All \gls{hp} lost to Damage remain as lost \gls{hp} after transformation but might not have any effect.
-If a player's maximum \gls{hp} is lowered to the point where they are no longer wounded then all wounds simply vanish, though they are still tracked and reappear once the creature has transformed.
-If someone's maximum \gls{hp} increases, once again they count as having lost the same number of \gls{hp}, with no \gls{hp} being gained or lost through the transformation process.
-All Fatigue stays where it is and no Fatigue Points which previously gave no penalty move to giving the character a penalty.
 
-The new form granted by a Polymorph spell always feels a little strange, so anyone who transforms suffers a -1 penalty to Dexterity until they get used to the new form.\footnote{Any amount of downtime is a reasonable amount of time.}
+\begin{multicols}{2}
 
-Nobody is terribly comfortable holding another creature's form.  Like a newborn lamb, such transformations make people clumsy.
+\noindent
+Polymorph spells don't affect their target, but copy them.
+The mage pulls some feature from an animal into themselves, gaining additional speed, or strength, then finally transforming entirely into an animal.
 
-\iftoggle{verbose}{
+Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of.
+Many conjecture that the face is a facet of one's soul showing in the world.
+A ginger person transformed into a cat would become a ginger cat.
+A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
 
-\begin{exampletext}
+Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 7 plus the level of the Polymorph sphere being employed;
+e.g. if an elf used the first level to look more deer-like, the \gls{tn} would be 8, but using Level 4 to combine forms like some chimaera would demand \gls{tn} 11 to recognize the elf.
 
-	Meldon the elf has 5 \glspl{hp}.
-	He takes 3 \glspl{hp} Damage and already has 3 Fatigue Points leaving him with a -1 penalty to all actions.
-	He then transforms himself into a bird, lowering to 2 \glspl{hp}.
-	He now has zero Damage but retains his -1 penalty due to Fatigue.
-	After flying away to safety he rests for a while and heals all his Fatigue Points, but when he turns back into an elf all his old wound reappear as his \gls{hp} increases to the point where they can affect him.
+Standard animal examples on the table are provided for reference, but animal stats can vary.
 
-\end{exampletext}
-}{}
+Unwilling targets who are to be transformed with Polymorph can spend 5 \glspl{fp} in order to retroactively stipulate that the spell fails.
+The undead are completely immune to the Polymorph sphere.
 
 \spelllevel
 
-\noindent
-Enhancements from the first level can be applied to all levels of the Polymorph sphere.
-
-\spell{Animal Transformation}{Continuous}{Beast Ken}{Turn any animal into another, \gls{tn} 7 vs target's Str + \gls{dr}}\\
-This spell allows the mage to transform one animal into another.
-An animal is defined as any living creature without an Intelligence Bonus.
-As before, the mage can increase or decrease the target's Strength Bonus by the spell level,
-but have to keep within the normal size-boundaries of the animal.
-If a boar has Strength +1, turning it into a bear will require an additional 3 points of Strength, because bears have a minimum Strength of +4.
-If the caster instead tries to turn a dangerous bear into a housecat, this is a prohibitively difficult task, as house cats have a difference of at least 9 levels of Strength.
-
-The \gls{tn} for such a transformation is 7 plus the target's Strength + \gls{dr}, as tougher creatures are harder to transform.
-
-Such animal transformations are in shape alone, and do not grant any abilities.  Polymorphing into a bird will not let one fly, and taking the shape of a bear will leave a weakened facsimile of the bear's strong teeth and hide.
-All transmformed animals lose all \gls{dr}, regardless of their new form.
-
-\enhancement{1}{Bolstered}{Add your Intelligence Bonus to the Polymorph points}
-
-\iftoggle{verbose}{
-While basic shapeshifters base their transformative range on the Polymorph spell's level, a \textit{Bolstered} spell allows the caster to use a number of points equal to the spell's level plus their Intelligence Bonus.
-If a shapeshifter cast this spell at the second level, with Intelligence +1, they could lower an animal's Strength Bonus by 3, or could turn a human into a gnome, since that requires a Strength adjustment of 3.
-
-Those with the \textit{Realistic} enhancement also gain a number of \textit{Form Points} equal to the spell level plus the caster's Intelligence Bonus, instead of simply gaining points equal to the Spell's level.}{
-
-The caster uses the spell level plus their Intelligence Bonus to determine all facets of the spell's potence, rather than just the spell's level.
-
-}
-
-\enhancement{1}{Empathic}{Lower the \gls{tn} to 7 and remove Dex penalty}
-
-Advanced shapeshifters can extend a little mana into their understanding of alternate forms, and discard the usual \gls{tn} restrictions.  All \glspl{tn} become 7, and the target no longer suffers a Dexterity penalty for transforming.
-
-\enhancement{1}{Realistic}{Add augmentations, such as claws}
-
-The \textit{Realistic} enhancement allows mages to take on creatures' natural abilities with a number of \textit{Form Points} equal to the spell's level.  When transforming a target into an animal, the form of a bird can allow the target to fly, the form of a bear includes teeth, claws and a thick hide.
-
-The Form Points can each be spent on one of the following:
+\begin{tcolorbox}[title=Animal Abilities]
 
 \begin{itemize}
 
@@ -1181,69 +1099,73 @@ The Form Points can each be spent on one of the following:
 
 \end{itemize}
 
-When the target is to transform into an animal, all unused points are applied to the target's Speed Bonus.  Someone transforming into a bird with 3 Form Points could use one to gain realistic flight, and then +2 Speed.
+\end{tcolorbox}
 
-When transforming into another race, the target merely loses their racial ability, and gains any racial abilities of the target which are concerned with the body.  For example, elves who transform into dwarves lose their immunity from natural cold, but gain the dwarvish ability to consume strong drink.
 
-\spelllevel
-
-\spell{Race Change}{Continuous}{Medicine}{Turn any humanoid into another race, \gls{tn} 10}
+\spell{Form-Theft}{Continuous}{Beast Ken}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR.}\\
 
 \noindent
-The basic Polymorph spell allows someone to turn into another race, so long as the racial difference in Strength is not greater than the spell's level.
-When cast at first level, gnolls can turn into humans, humans can turn into dwarves, dwarves can turn into elves, and elves can turn into gnomes.
+A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, and later copy a full species.
+Once the target animal lies in range, the mage casts the spell, and gains a number of points equal to the spell's Level in Strength, Speed, Wits, or Damage resistance.
+The mage cannot copy more than an animal has.
+Copying a bear with Strength +5 can only allow a mage to gain up to Strength +5.
 
-Once the change has applied, the original racial Bonuses are discarded, and the new racial bonuses applied.
-Gnomes who turn into elves gain +1 Strength and +1 Speed, and dwarves who turn into gnolls gain +1 Strength, +1 Speed, but -1 Dexterity.
+Each feature taken from an animal radically alters the caster's appearance.
+Taking a bull's \gls{dr} will make the caster's skin tough and furry.
+Taking its Strength may have the caster grow small horns in addition to the extra muscle.
 
-Various enhancements allow the spell to be cast at a higher level, meaning a skilled Polymorphing gnome could eventually learn to turn into a gnoll.
+In lieu of an Attribute point, the caster can take on a feature of the animal, such as amphibiousness, or claws.
 
-Changing one's own form is \gls{tn} 7, while changing another's is \gls{tn} 10.
+Taking on the strange form comes with a subtle change in thinking.
+The caster gains a Charisma penalty equal to double the spell level being used.
 
-Polymorphing into another race does not grant any of its racial abilities.
-Changing one's shape to look like an elf will not grant cold-immunity, and Polymorphing into a human will not allow one walk long distances without fatigue.
+Any changes to Charisma do not affect \glspl{fp}, and additional Wits don't change Mana.
 
-\enhancement{1}{Trans Species}{Transform humanoids into animals}
+\spelllevel
 
-The Polymorpher can now cross the species boundary, making themself or another transform entirely into an animal.
+\spell{Beast Form}{Continuous}{Beast Ken}{Transform into an animal. Int + Beast Ken.}\\
+The caster targets an animal, and copies it completely.
+The closer an animal is to the caster, physically, the easier they can copy it.
 
-Alternatively, the Polymorpher can turn an animal into a person.
-This won't yeild any fantastic results, as animals don't suddenly become intelligent once turned into a gnome or dwarf, but it is possible.
-Such creatures start with Intelligence -5 and Charisma 0.
-
-\iftoggle{verbose}{
-	\pic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
+The distance between a target animal and the caster, is determined by the difference between their Strength and Speed.
+\iftoggle{verbose}{%
+An elven caster has Strength -2 and Speed +1.
+A bird has Strength -5, so that's a different of 3.
+The bird's Speed is +3, so that's a difference of 2, for a total of 5.
 }{}
-
-This spell is cast at \gls{tn} 12, as it either targets an animal, or makes a person into one (the enhancement \textit{Empathy} changes this to \gls{tn} 7).
-It uses the Skill associated with the creature the target will become, so turning a wolf into a man uses Medicine, while turning a man into a wolf requires Beast Ken.
-
-\iftoggle{verbose}{
-	\pic{Studio_DA/fire_form}{\label{da:fire}}
+The spell can breach a distance equal to twice the spell's Level, plus the caster's Intelligence.
+The caster rolls with Intelligence + Beast Ken, and must reach a \gls{tn} of 7 plus the number of Attribute points required to bridge the gap.
+\iftoggle{verbose}{%
+A caster with Intelligence +2 could bridge up to 6 Attribute points.
+Returning to the example above, the \gls{tn} would be 12.
+In general, larger casters find it easier to become bears and warthogs, while smaller casters find it easier to become birds or rats.
 }{}
 
 \spelllevel
 
-\spell{Freeform}{Continuous}{Ether Lore}{Turn a target into anything}\\
-The shapeshifter can throw off the limits of existing and known creatures, and turn into flamming bulls, acidic clouds, or anything else they might imagine.
-The basic \gls{tn} for the spell is 14 as the alternative forms are alien even to those who are capable of adopting them, but as usual the \gls{tn} can be reduced by other enhancements.
+\spell{Form Ken}{Instant}{Beast Ken}{Memorize the form of an animal.}\\
+The caster takes a mental snapshot of the target, forever memorizing its form.
+From that point on, the caster can transform into the animal with any other Polymorph spell, or transform others into that animal.
 
-As with the \textit{Realistic} enhancement, the caster gains a number of Form Points equal to the spell's level.  The caster can spend \textit{2} form points to purchase any of the following:
+\iftoggle{verbose}{%
+The target only counts if the player records it on their character sheet.
+}{}
 
-\needspace{3em}
+\spell{Beast Curse}{Continuous}{Beast Ken}{Transform someone into an animal}\\
+The target becomes any animal which the caster has memorized with \textit{Form Ken}.
+The same rules for \textit{Beast Form} apply, so the target must be with `Attribute range' of the animal they can transform into.
 
-\begin{itemize}
+The same requirements for \textit{Beast Form} apply here, so each Attribute-point difference between the target the animal will raise the \gls{tn} above 7, and requires a high enough Level + Intelligence.
 
-	\item{Massive Claws \& Teeth: +2 Damage.}
-	\item{Impenetrable Hide: +4 \gls{dr}.}
-	\item{Etherial Form: The caster turns into a thick smoke or mist, becoming immune to almost all physical damage.}
-	\item{Fiery Form: The caster's body is composed mostly of acid, fire, or some other dangerous substance.
-	All grappling attacks deal $1D6$ damage from the hold itself.}
-	\item{Many arms: You have many arms, and if they can grasp weapons, then you can have a third and fourth weapon.  The third weapon adds one quarter of its Evasion Bonus.  The weapons otherwise work as per standard \textit{Dual Wielding} rules (see page \pageref{dualWielding}).}
+%\iftoggle{verbose}{
+%	\pic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
+%}{}
 
-\end{itemize}
+%\iftoggle{verbose}{
+%	\pic{Studio_DA/fire_form}{\label{da:fire}}
+%}{}
+
 
 \end{multicols}
 
 \stopcontents[magic]
-

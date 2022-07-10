@@ -401,6 +401,14 @@ If items are tied, roll a die to see which regenerates \glspl{mp} first.
 	For this reason, adventuring parties cannot make use of dozens of magical items at once.
 }{}
 
+\enhancement{1}{Colorful}{Change a spell's appearance}
+
+This enhancement allows a \gls{miracleworker} to alter the appearance of any spell.
+The changes are purely cosmetic.
+\iftoggle{verbose}{%
+This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
+}{}
+
 \spelllevel
 
 \spell{Identify Mana}{Instant}{Empathy}{Find out which path of magic made an item}\\
@@ -430,6 +438,18 @@ The squares are always continuous, so a spell targeting four squares could form 
 If the spell targets people, one person per square is always a reasonable baseline, but more might be targeted in a narrow tunnel, or fewer if targets are spread out to surround the party.
 
 \spelllevel
+
+\enhancement{1}{Potent}{Increase the caster's effective Intelligence Bonus by +1}
+\label{potent}
+
+A \textit{Potent} spell casts as if the mage had +1 Intelligence.
+\iftoggle{verbose}{%
+Fireballs can deal additional damage.
+A mage with +1 Intelligence could cast a Pocket Spell which activates with a +2 Bonus, and lasts for 2 scenes.
+The \textit{Wide} enhancement would 
+}{
+This includes \textit{Pocket Spells}, \textit{Talismans}, and \textit{Artefacts}.
+}
 
 \spell{Spell Breaking}{Instant}{Sphere Rating}{Destroy a spell.}\\
 The caster can destroy an existing spell, whether that spell is a persistent effect, such as a Polymorph, or a magical item.
@@ -494,18 +514,6 @@ All Pocket Spells last a number of scenes equal to their \textit{Potency} (minim
 
 Any spell, from any sphere, can be targeted anywhere the mage can clearly sense, breaking all the normal range boundaries of spells.
 
-\enhancement{2}{Potent}{Increase a magical item's Potency}
-\label{potent}
-
-This enhancement increases a magical item's Potency by 1.
-\iftoggle{verbose}{%
-	A \gls{miracleworker} with Intelligence +1 would normally create \textit{Pocket Spells} which last for 1 scene, with an effective Intelligence and Wits Bonus of +1.
-	However, by casting a \textit{Pocket Spell} with this enhancement, the item gains a Potency of +2; so all rolls gain a +2 Bonus, it lasts for 2 scenes, and if the spell is cast as a \textit{Wide} spell, it covers a number of squares equal to its level +2.
-	The +2 level enhancement means the \textit{Pocket Spell} would be cast at level 7 rather than level 5, so the mage would require a Metamagic score of 7 or more.
-}{%
-	This includes \textit{Pocket Spells}, \textit{Talismans}, and \textit{Artefacts}.
-}
-
 \spelllevel
 
 \spell{Talisman}{Instant}{Academics}{Sacrifice one permanent \gls{mp} in a mana stone to let it cast a spell}
@@ -567,7 +575,7 @@ This does not affect the \emph{target} of the spell (enchanted dogs do not becom
 Sentient spells can `miss' a caster's allies, so a sentient spell to freeze over a river would target only the caster's enemies, or a \textit{Wide, Sentient Fireball} would burn only enemies.
 
 Sentient illusions can independently walk, talk, and use any languages the caster knows.
-These spells are never fully-fledged people, but simple stereotypes with stock phrases.
+These spells are never fully-fledged people, but simple, often mute, stereotypes.
 
 Sentient Force spells, such as levitation, allow a spell to independently decide where an item will be lifted, or even attack with Dancing Swords.
 However, \textit{Wide, Sentient} spells do not gain multiple consciences -- they can only focus on one thing at a time, just like a normal person.
