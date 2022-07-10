@@ -800,6 +800,10 @@ Turning someone into a person uses the Empathy Skill, while making a door look l
 By wrapping the target in shadows, they gain a bonus to hiding equal to the spell's Level plus the caster's Intelligence Bonus.
 This won't do much good when someone walks close to an inky patch of darkness, and can be actively harmful when a patch of blackness is wandering across a Sunny street.
 
+\iftoggle{verbose}{
+	\sidepic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
+}{}
+
 Casting this as a \textit{Colourful Cloak} allows the shadow to take on real colours, so the caster can make something look like just about anything else.
 When only trying to hide, the Stealth Skill is used, but if an illusion is cast to make something look like another, the Skill depends on what it should look like.
 
@@ -972,6 +976,10 @@ While the spell is in effect they suffer no ill effects from \glspl{fatigue} but
 Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to Fatigue.
 The caster faces a real danger of death if ever they gain enough \glspl{fatigue} to push them over a -5 penalty; they may not gain the penalty but must make a Vitality Check to avoid death and then make another roll each time they gain Fatigue.
 
+\iftoggle{verbose}{
+	\pic{Studio_DA/fire_form}{\label{da:fire}}
+}{}
+
 \spelllevel
 
 \spell{Soul Sight}{Instant}{Medicine}{Make the target enter a semi-death state, ignoring Fatigue and gaining \gls{dr} 1}\\
@@ -1004,6 +1012,9 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
 \end{multicols}
 
 \sphere{Polymorph}
+
+\begin{multicols}{2}
+
 \begin{figure*}[t]
 	\begin{tcolorbox}[tabularx={lccX},bottom=10pt,top=10pt]
 
@@ -1054,8 +1065,6 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
 
 \end{figure*}
 
-
-\begin{multicols}{2}
 
 \noindent
 Polymorph spells don't affect their target, but copy them.
@@ -1147,14 +1156,6 @@ The target becomes any animal which the caster has memorized with \textit{Form K
 The same rules for \textit{Beast Form} apply, so the target must be with `Attribute range' of the animal they can transform into.
 
 The same requirements for \textit{Beast Form} apply here, so each Attribute-point difference between the target the animal will raise the \gls{tn} above 7, and requires a high enough Level + Intelligence.
-
-%\iftoggle{verbose}{
-%	\pic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
-%}{}
-
-%\iftoggle{verbose}{
-%	\pic{Studio_DA/fire_form}{\label{da:fire}}
-%}{}
 
 
 \end{multicols}
