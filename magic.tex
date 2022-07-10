@@ -47,9 +47,7 @@ In gaming terms, the first \gls{downtime} grants full access to all spheres from
 
 However, the opposite is not true.
 Those on the Path of Song learn spheres easier than others, spending 5 fewer \glspl{xp} to purchase a sphere.
-If a sphere has not been `fully' paid for then the remaining \glspl{xp} must be spent to use that sphere on a different path.
-
-Casters never gain \glspl{mp} for learning a sphere on a secondary Path -- whichever Path would grant them the most \glspl{mp} is the only one which counts.
+If a sphere has not been `fully' paid for, then the remaining \glspl{xp} must be spent to use that sphere on a different path.
 
 \subsection{The Path of Alchemy}
 \index{Alchemy}
@@ -127,7 +125,8 @@ Those mana stones which have an imprinted spell can be activated by either a com
 
 \subsubsection{Special Considerations}
 
-Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for Quick Spells. They always use Ritual Spells for the highest level of any Sphere, and can use normal casting after that.
+Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for \textit{Fast} spell.
+They cannot use the \textit{Fast} enhancement.
 
 \iftoggle{verbose}{
 	\pic{Roch_Hercka/dwarvish_runes}{\label{roch:runes}}
@@ -158,7 +157,8 @@ In order to learn the Path of Song, the mage must have the second level of the P
 
 \subsubsection{Special Considerations}
 
-Just as with rune magic, song magic can never be cast in an instant.  Their highest level of a sphere can only be cast as a ritual spell, and quick spells are entirely barred, as a song takes time to be invoked with magic.  And as with rune magic, those on this Path need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
+Just as with rune magic, song magic can never be cast in an instant.
+Like those on the Path of Runes, Song mages cannot use the \textit{Fast} Enhancement, but need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
 
 \subsubsection{Mana Stones}
 \index{Mana Stones!Song}
@@ -185,9 +185,9 @@ The character then spends the mana and makes a roll against some \gls{tn} to cas
 
 \index{Mana}\subsection{Mana}
 
-Everyone's total mana is equal to double the number of spheres they have, plus their Intelligence Bonus.
+Everyone's total mana is equal to triple the number of spheres they have, plus their Wits Bonus.
 \iftoggle{verbose}{%
-	For example, a caster with Invocation 3, Fate 1, and an Intelligence Bonus of +2, would have 8 \glspl{mp} in total.
+	For example, a caster with Invocation 3, Fate 1, and a Wits Bonus of +2, would have 8 \glspl{mp} in total.
 }{}
 
 If a caster has no \gls{mp} left, they can still cast spells by paying the cost with \gls{hp} instead of \gls{mp}.
@@ -260,16 +260,22 @@ However, while they are being maintained, the \gls{mp} required to cast them rem
 \iftoggle{verbose}{%
 \footnote{Spell enhancements (see below) do not lock mana in this way.}
 
-For example, Tauron the elven sorcerer casts a spell on himself to appear as a gnome -- all the better to blend into surrounding society. He spends 1 \gls{mp}. Later, he enchants an animal to be his companion for 2 \gls{mp}. Normally, his maximum \gls{mp} is 6, but he is currently reduced to a maximum of 3 \gls{mp} so long as he continues to be a bear-riding gnome.
+For example, Tauron the elven sorcerer casts a spell on himself to appear as a human -- all the better to blend into surrounding society.
+He spends 1 \gls{mp}.
+Later, he enchants an animal to be his companion for 2 \gls{mp}.
+Normally, his maximum \gls{mp} is 6, but he is currently reduced to a maximum of 3 \gls{mp} so long as he continues to be a bear-riding man.
 }{}
 
-These still-active spells are known as \glspl{standingspell}. Some mages operate by continuously casting different spells and then going `empty' when the mana is gone. Others typically operate with \gls{standingspell} alone, casting everything they might need before the day begins and leaving their useful spells `running' but leaving themselves unable to cast more.
+These still-active spells are known as \glspl{standingspell}.
+Some mages operate by continuously casting different spells and then going `empty' when the mana is gone.
+Others typically operate with \gls{standingspell} alone, casting everything they might need before the day begins and leaving their useful spells `running' but leaving themselves unable to cast more.
 
 \subsection{Casting Times}
 
 \iftoggle{verbose}{
 	Your standard spell takes a while to cast -- specifically a number of rounds equal to half the spell's level.
 	A first level spell takes a full \gls{round} to cast, and activates at Initiative 0, while a third level spell requires 2 \glspl{round} to cast.
+	When casting spells in combat, a \gls{miracleworker} will generally use the \textit{Fast} Enhancement (page \pageref{fast}).
 }{
 	Spells require a number of full \glspl{round} to cast equal to half the spell's level.
 }
@@ -281,24 +287,12 @@ Casters who take any other action during this time, such as evading an attack or
 Mages who take their time over spells can attempt a Ritual Spell -- they cast it as a \gls{restingaction}%
 \footnote{See page \pageref{restingactions}.}.
 The mage can gain mana slowly, spending some, drawing more from a mana stone or item, then spending more before finally casting the spell.
-The mage can gather a number of \gls{mp} equal to double their normal maximum \gls{mp}, ignoring any \glspl{standingspell}.
-\iftoggle{verbose}{%
-	For example, a \gls{miracleworker} with 3 \glspl{mp} could spend up to 6 \glspl{mp} in a single casting in order to cast a powerful spell, by drawing mana from mana stones.
-}{}
 
 Ritual spells can also be cast as a team effort -- any number of spell casters who are on the same \gls{path} of magic can cast any spell they all know together.
 They can each invest \gls{mp} to create \gls{standingspell}, and thereafter any one of them can cancel the spell.
 \iftoggle{verbose}{%
 	As usual, the primary caster can spend mana up to double their Metamagic score (meaning total \glspl{mp}), the second caster can add a maximum number of \glspl{mp} up to their regular total, and the next caster can \glspl{mp} up to a quarter of their total, and so on.
 }{}
-
-\subsubsection{Quick Spells}
-
-Quick spells can be completed fast enough to cast in combat, costing 3 Initiative points plus the level of the spell.
-Such spells always force a little `flash and bang' out as the raw magic hits the air.
-Some mages create sparks as they cast spells, others summon dark mists -- it all depends upon the Path of Magic the mage is walking.
-
-Quick Spells are challenging, and require the mage know a spell intimately.  They cannot be cast with the mage's highest spell level.  A mage with Polymorph at level 3 cannot cast level 3 as a Quick Spell.
 
 \subsection{Spell Enhancements}
 \label{Enhancements}
@@ -419,6 +413,16 @@ The mage casts the spell on any person or item and finds out how many \glsentryl
 
 \spelllevel
 
+\enhancement{1}{Fast}{Make a spell cast instantly}\label{fast}
+\iftoggle{verbose}{%
+This enhancement alone allows \glspl{miracleworker} to  cast effectively on the battlefield.
+With this Enhancement, a spell no longer requires one round per level to cast, but can be cast with 3 Initiative plus the spell's level.
+
+While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit{Fast Oath}, cast at level 3, requires only 6 Initiative.
+}{
+\textit{Fast} spells can be cast instantly, and require only 3 Initiative, plus the spell's level.
+}
+
 \spell{Imbuing}{Instant}{Empathy}{Add \glspl{mp} to a mana stone}\\
 The mage spills any number of mana points into a mana stone created through the same path of magic the mage walks.
 If cast as a \textit{Wide} spell, the mage can spend \glspl{mp} to spread between multiple items, but can only Imbue total \glspl{mp} equal to what is spent.
@@ -444,9 +448,9 @@ If the spell targets people, one person per square is always a reasonable baseli
 
 A \textit{Potent} spell casts as if the mage had +1 Intelligence.
 \iftoggle{verbose}{%
-Fireballs can deal additional damage.
-A mage with +1 Intelligence could cast a Pocket Spell which activates with a +2 Bonus, and lasts for 2 scenes.
-The \textit{Wide} enhancement would 
+A \textit{Potent, Colourful, Cloak} Illusion spell would be harder to spot and a \textit{Potent Mage Armour} would gain the benefits of both the additional level, and the Intelligence Bonus.
+
+A mage with +1 Intelligence could cast a \textit{Potent Pocket Spell} which activates with a +2 Bonus, and lasts for 2 scenes, and the same applies to Talismans and Artefacts.
 }{
 This includes \textit{Pocket Spells}, \textit{Talismans}, and \textit{Artefacts}.
 }

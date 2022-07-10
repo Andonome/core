@@ -394,15 +394,16 @@ If the target loses the roll they immediately loses all remaining actions for th
 Each subsequent turn the target makes a resisted roll of Wits + Academics against the mage's Intelligence + Deceit.
 Failure indicates that they suffer an Initiative penalty equal to the spell's level plus the caster's Intelligence Bonus.
 
-While the spell is in effect, the target suffers a penalty to all Mental Attributes equal to \arabic{spelllevel} plus the enchanter's Intelligence Bonus; so a mage with Intelligence +3 would inflict a -5 penalty. If the target attempted to cast spells, any rolls would suffer a -5 penalty and any spell-effects which relied on the Intelligence Attribute would suffer as well.
+The target suffers the same penalty to their Mental Attributes Attributes, which can seriously impact any \gls{miracleworker}'s total \glspl{mp}, and casting ability.
 
-At the end of the scene, targets make one final resisted roll against the enchanter's Intelligence + Deceit (even if the enchanter is no longer present). Failure indicates that the target has forgotten the encounter entirely, including some moments before when the spell began.
+At the end of the scene, targets make one final resisted roll against the enchanter's Intelligence + Deceit (even if the enchanter is no longer present).
+Failure indicates that the target has forgotten the previous scene entirely, including some moments before when the spell began.
 
 \iftoggle{verbose}{
 If an \gls{npc} enchanter intends to cast this on a \gls{pc} during a scene, the \gls{gm} is encouraged to simply make the resisted roll for the spell.
 If the player fails the roll then the \gls{gm} can infer what probably would have happened had the scene played out and skip to the next scene, telling the player that something important might have happened, but that they cannot remember any of it.
 
-When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought. The use of magic will is not obvious to those unfamiliar with such abilities.
+When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought.
 
 }{}
 
@@ -418,7 +419,8 @@ Targets can stop once their original action has become obviously impossible or i
 The target repeats and emphasises an oath while the caster completes the spell.
 For as long as the spell endures, the target cannot break their oath.
 
-A Quick spell allows casters to accept any statement made on the same round.
+A \textit{Fast Oath} spell allows casters to accept any statement made on the same round.%
+\footnote{See page \pageref{fast} for \textit{Fast} spells.}
 Even short sentences, such as `I'll find out', or `I'm going to leave at sunrise', can be interpreted as oaths, although if someone does not state \textit{when} they do something, the expected time defaults to any time up until the end of the scene.
 
 \spelllevel
@@ -528,15 +530,6 @@ The priest locks into another's fate to see whom the gods deem worthy of special
 Once the spell is cast, the priest knows the current \gls{fp} of the target.
 
 When cast on oneself, this spell grants total immunity to the Enchantment spell, \textit{Fear}.
-
-\spell{Intuition}{Instant}{Varies}{Find out the \glsentrytext{tn} for an action}\\
-\iftoggle{verbose}{%
-	Players often don't know the \gls{tn} for an action before they try it, but with this spell, the priest may demand to know the \gls{tn}.
-	This can be used to figure out how difficult it would be to strike an enemy, or how challenging it would be to spread a rumour around town.
-}{%
-	The player can ask the \gls{gm} the \gls{tn} for any currently possible action.
-}
-The Skill used is the same as that being used in the task, so asking about a roll for Crafts means using the Crafts Skill for the spell.
 
 \spell{Lending Hand}{Continuous}{Empathy}{Bless a target with +1 to any skill so long as you have a higher Skill level than the target}\\
 The priest blesses a target with +1 to any Skill, so long as the priest has a higher level in that Skill than the target.
@@ -695,8 +688,6 @@ When people (or even items) are falling to their doom, force mages can slow the 
 The total spell grants a resistance to any Damage incurred through falling equal to 4 points per level of the Force sphere used, plus the mage's Intelligence score.%
 \footnote{$(Level \times 4) + Int$}
 Therefore, a mage with Intelligence +2 using the third level of the Force sphere would subtract 14 from any Damage incurred through falling.
-
-If cast as a Quick Spell, it can be cast as a Quick Action, outside the usual Initiative order.
 
 \spell{Telekinetic Fist}{Continuous}{Combat}{Improve unarmed combat damage, gaining an effective Strength of $2 + Int$}\\
 The mage uses powerful telekinetic blasts to hold and crumple targets in close combat.
