@@ -1,11 +1,9 @@
-
-%%                      _                       
-%%   ___ _ __ ___  __ _| |_ _   _ _ __ ___  ___ 
-%%  / __| '__/ _ \/ _` | __| | | | '__/ _ \/ __|
-%% | (__| | |  __/ (_| | |_| |_| | | |  __/\__ \
-%%  \___|_|  \___|\__,_|\__|\__,_|_|  \___||___/
-%%                                        
-
+%                              _                
+%    _ __ ___   ___  _ __  ___| |_ ___ _ __ ___ 
+%   | '_ ` _ \ / _ \| '_ \/ __| __/ _ \ '__/ __|
+%   | | | | | | (_) | | | \__ \ ||  __/ |  \__ \
+%   |_| |_| |_|\___/|_| |_|___/\__\___|_|  |___/
+%                                               
 
 \newcommand{\auroch}[1][\npc{\A\T}{\arabic{page} Aurochs}]{
 	#1
@@ -1425,6 +1423,22 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {}
 }
 
+\newcommand{\cat}[1][\npc{\A}{Cat}]{
+	#1
+	\randomtwo
+	\randomtwoB
+	\addtocounter{r2b}{2}
+\animal{-5}% STRENGTH
+{\arabic{enc}}% DEXTERITY 
+{\arabic{r2b}}% SPEED
+{3}% WITS
+{0}% DR
+{\arabic{r2}}% AGGRESSION
+{Survival 2, Vigilance 2}% SKILLS
+{\quadraped}% ABILITIES
+{}%
+}
+
 \newcommand{\huntingdog}[1][\npc{\A\T}{\randomfour\addtocounter{track}{2}\arabic{track} Hunting Dogs}]{
 	#1
 	\randomtwo
@@ -1523,48 +1537,3 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\addtocounter{xpbonus}{3}}
 }
 
-%%%% items from bastards of bann
-
-\newcommand{\mindflayer}[1][\npc{\E}{Mind Flayer}\setcounter{gold}{100}]{
-	#1
-	\randomtwo
-	\addtocounter{enc}{1}
-	\randomtwoB
-	\addtocounter{r2b}{-1}
-	\randomtwoC
-	\addtocounter{r2c}{-1}
-	\randomthree
-	\randomthreeC
-	\addtocounter{age}{1}
-	\randomthreeB
-	\randomthreeC
-	\randomfour
-	\randomfourB
-	\addtocounter{r4b}{-2}
-	\person{\arabic{r2c}}% STRENGTH
-	{\arabic{r2c}}% DEXTERITY 
-	{\arabic{r4b}}% SPEED
-	{{\arabic{enc}}% INTELLIGENCE
-	{2}% WITS
-	{-5}}% CHARISMA
-	{0}% DR
-	{\arabic{r2b}}% COMBAT
-	{\ifodd\value{r3b}Crafts \arabic{r2}, \fi Deceit \arabic{r3b}, Tactics \arabic{r3c}\Path{Divinity}%
-	{\ifodd\value{r4b}%
-		\force \arabic{r3}, %
-		\addtocounter{sp}{\value{r3}}%
-		\addtocounter{sp}{\value{r3}}%
-		\addtocounter{sp}{\value{r3}}%
-		\addtocounter{sp}{\value{enc}}%
-		\lockedmana{\value{r3}}
-	\fi%
-	\ifodd\value{r3c}%
-		\illusion \arabic{r4}, %
-	\fi%
-	\addtocounter{r3b}{1}%
-	\enchantment \arabic{r3b}
-	}
-}% SKILLS
-	{\iftoggle{bestiarychapter}{\ifnum\value{gold}=100\lootMagic\fi}{\Dagger}}% EQUIPMENT
-	{}
-}

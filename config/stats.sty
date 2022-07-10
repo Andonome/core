@@ -1,4 +1,4 @@
-\ProvidesPackage{monsters}
+\ProvidesPackage{config/stats}
 %%%%%%%%%%%%%%%%%%%% Introduction
 % This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
 % If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
@@ -167,16 +167,16 @@
 
 % magic
 \newcommand{\mana}[1]{\setcounter{mp}{#1}}
-\newcommand{\aldaron}{\addtocounter{mp}{2}Aldaron}
-\newcommand{\conjuration}{\addtocounter{mp}{2}Conjuration}
-\newcommand{\enchantment}{\addtocounter{mp}{2}Enchantment}
-\newcommand{\fate}{\addtocounter{mp}{2}Fate}
-\newcommand{\force}{\addtocounter{mp}{2}Force}
-\newcommand{\invocation}{\addtocounter{mp}{2}Invocation}
-\newcommand{\illusion}{\addtocounter{mp}{2}Illusion}
-\newcommand{\necromancy}{\addtocounter{mp}{2}Necromancy}
-\newcommand{\polymorph}{\addtocounter{mp}{2}Polymorph}
-\newcommand{\saurecanta}{\addtocounter{mp}{2}Saurecanta}
+\newcommand{\aldaron}{\addtocounter{mp}{3}Aldaron}
+\newcommand{\conjuration}{\addtocounter{mp}{3}Conjuration}
+\newcommand{\enchantment}{\addtocounter{mp}{3}Enchantment}
+\newcommand{\fate}{\addtocounter{mp}{3}Fate}
+\newcommand{\force}{\addtocounter{mp}{3}Force}
+\newcommand{\invocation}{\addtocounter{mp}{3}Invocation}
+\newcommand{\illusion}{\addtocounter{mp}{3}Illusion}
+\newcommand{\necromancy}{\addtocounter{mp}{3}Necromancy}
+\newcommand{\polymorph}{\addtocounter{mp}{3}Polymorph}
+\newcommand{\saurecanta}{\addtocounter{mp}{3}Saurecanta}
 \newcommand{\lockedmana}[1]{\setcounter{mpb}{-#1}}
 \newcommand{\armourtype}{N}
 
@@ -475,7 +475,7 @@
 	}%
 	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr}~\armourtype, }{}%
 	\ifnum\value{mp}>0%
-		\addtocounter{mp}{\value{int}}%
+		\addtocounter{mp}{\value{wts}}%
 		\mbox{
 		\ifnum\value{mpb}=0%
 			\arabic{mp}~MP%
