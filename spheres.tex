@@ -556,11 +556,6 @@ Nobody with this power ever says ``you cannot change your fate''.  Changing your
 \spell{Blessing}{Instant}{Empathy}{Target regains $1D6 + Int$ \glspl{fp}}\\
 The priest blesses the target with the favour of the gods. The target `heals' or regenerates $1D6$ \gls{fp} plus the priest's Intelligence Bonus. This cannot take the target above their maximum \gls{fp} score.
 
-\enhancement{1}{Generous}{Heal a target for additional \glspl{fp}}
-
-The priest heals the target for an additional 2 \glspl{fp}.
-These \glspl{fp} stack just like Damage, so $1D6+4$ \glspl{fp} becomes $2D6$ \glspl{fp}.
-
 \spelllevel
 
 \spell{Fortune}{Continuous}{Empathy}{Add +1 to any Skill}\\
@@ -891,23 +886,15 @@ Blast-radius spells such as a \textit{Wide Fireball} can inflict a Vitals Shot o
 The mage focuses on any source of fire, and extinguishes it.
 Larger fires require a \textit{Wide Darkness} spell.
 
-\spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $1D6 + Int$ Damage}\\\label{fireball}
-The mage throws out a ball of flaming, crackling light which strikes and burns the target. The Damage is $1D6$ plus the caster's Intelligence.
+\spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}\\\label{fireball}
+The mage throws out a ball of flaming, crackling ball of energy, which strikes and burns the target.
+The Damage is 3 Damage, plus the spell's Level, plus the caster's Intelligence Bonus.
 
-\subsubsection{Spell Enhancements}
-
-\enhancement{1}{Raging}{The fireball deals +2 Damage}
-The caster increases the spell's level by one and increases the spell's Damage by 2.  A mage with Intelligence +2, casting Fireball at third level would deal $2D6+2$ Damage.
+\iftoggle{verbose}{%
+As usual, 4 Damage becomes $1D6$, so a pyromancer with Intelligence +1, casting a \textit{Ranged Fireball}, would deal $1D6+2$ Damage.
+}{}
 
 \spelllevel
-
-\spell{Internal}{Instant}{Projectiles}{This fire spell all \gls{dr} and \glspl{SP}}
-
-The pyromancer finally learns how to summon fire upon a target without throwing it -- no ball of flame is thrown, fire simply appears, surrounding the target and instantly covers a target anywhere within normal range.
-It seeps into soft spots and gets into the chinks in armour, bypassing \gls{dr} entirely, including Perfect armour such as \gls{SP} from Mage Armour.
-The target cannot resist in any way, except with \glspl{fp}.
-
-If cast with the \textit{Wide} or \textit{Massive} enhancement, the spell targets everyone inside the area.
 
 \end{multicols}
 
