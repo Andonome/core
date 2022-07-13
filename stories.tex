@@ -70,8 +70,13 @@ Each time a player spends a \gls{storypoint}, the character earns a number of \g
 \iftoggle{verbose}{%
 	The first \gls{storypoint} grants 1 \glspl{xp}, the second grants 2, and so on.
 	If a character spends 3 \glspl{storypoint} to stipulate that their blacksmith uncle likes wandering around the depths of the forest, and lives in a small fort, then the player would receive ($1+2+3$) 6 \glspl{xp}.
+
 	}%
 	{}
+This number remains fixed, even after character death, so if a \gls{pc} dies, the next character can only gain \glspl{xp} from spending \glspl{storypoint} once they have spent the same number as the last character.
+\iftoggle{verbose}{%
+	If the character above died, they would gain nothing from the first three \glspl{storypoint}, but would then receive 4 \glspl{xp} once they spent the fourth \gls{storypoint}.
+}{}
 
 \subsection{Combining Stories}
 
