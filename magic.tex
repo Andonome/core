@@ -96,13 +96,20 @@ Such mana stones can be reworked to make other items, but can only store fewer \
 
 \textbf{Spheres}: Aldaron, Enchantment, Force, Invocation, Polymorph
 
+\iftoggle{verbose}{%
 \noindent Certain races, such as elves and dragons, are naturally magical and can learn forms of innate magic. Some humans with a touch of elven (or even draconic) blood have been known to walk the Path of Blood.
+}{}
 
 \subsubsection{Special Considerations}
 
-Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
+\iftoggle{verbose}{%
+	Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
 
-Blood sorcerers are barred from ritual castings -- spending all day trying to cast a spell will not help in the slightest.
+	Blood sorcerers are barred from ritual spells -- spending all day trying to cast a spell will not help in the slightest.
+
+}{
+	Blood sorcerers cannot use ritual spells.
+}
 
 \subsubsection{Mana Stones}
 \index{Mana Stones!Blood}
@@ -116,9 +123,13 @@ They can store magic in their heart, their fingers, or eyes, but can never use a
 
 \noindent The character is devoted to a god and studies with priests in how to unlock the magic of the deity. The character's god will determine their additional spheres of magic and their appearance.
 
-One slot of Academics is required to be able to sufficiently understand the precepts of the deity and the elaborate prayers. Specifically, characters must specialise in Theology. Devoting oneself to multiple deities is possible, so long as those deities are not antagonistic to each other, however, each deity requires an additional Theology specialisation. The appearance of spells and the form of mana stones varies depending upon deity.
+To start on the path of devotion, the character requires a level in Academics, with a specialization in Theology, and must take that god as their primary belief system.
 
+The appearance of spells and the form of mana stones varies depending upon deity.
+
+\iftoggle{verbose}{%
 This path is most commonly taken by humans and the occasional gnoll. Gnomes don't acknowledge gods, elves think they \emph{are} gods and dwarves tend to view their own rune magic as divine in a very general sense.
+}{}
 
 \subsubsection{Special Considerations}
 
@@ -267,7 +278,7 @@ While a tune may carry over the hilltops, the force of the magic usually remains
 
 }{}
 
-If a caster leaves a spell, the spell remains, with no regard for range limitations.
+If a caster leaves an active spell, the spell remains, with no regard for range limitations.
 
 \iftoggle{verbose}{%
 	A mage could cast an illusion over a dog, and leave the area, but the spell remains despite the dog being miles away.
