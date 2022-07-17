@@ -49,7 +49,7 @@ For anyone wanting to make their own book, modifications, or otherwise understan
 - Background is created by spending Story Points.
   * Spend 1 point to say you've learnt a language.
   * Spend 2 points to add an ally with martial ability.
-  * Spend 2 point to find a safe spot to rest.
+  * Spend 2 points to find a safe spot to rest.
 
 # Parsimony
 
