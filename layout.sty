@@ -407,6 +407,17 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 
 \newtcolorbox{boxtext}[1][]{ornamented,colback=white,fonttitle=\scshape, #1}
 
+\newcommand{\sidebox}[1]{
+
+	\iftoggle{verbose}{
+		\begin{wrapfigure}{R}{.23\textwidth} 
+		#1
+		\end{wrapfigure}
+	}{
+		#1
+	}
+}
+
 % Chapter Heading Color
 \colorlet{chapnumcol}{black!100}
 
