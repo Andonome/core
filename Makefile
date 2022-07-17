@@ -15,16 +15,13 @@ resources: resources.pdf ${filename}.pdf
 resources.pdf: $(wildcard CS/*.tex)
 	pdflatex CS/resources.tex
 svg-ref:
-	touch .ref
-	pdflatex -jobname=bind_ref -shell-escape ${filename}.tex
-	pdflatex -jobname=bind_ref ${filename}.tex
-	pdflatex -jobname=bind_ref ${filename}.tex
-	makeglossaries bind_ref
-	makeindex bind_ref
+	pdflatex  -shell-escape main_ref.tex
+	pdflatex  main_ref.tex
+	makeglossaries main_ref
+	makeindex main_ref.idx
+	pdflatex  main_ref.tex
 ref: svg-ref
-	touch .ref
-	pdflatex -jobname=bind_ref ${filename}.tex
-	rm -f .ref
+	pdflatex main_ref.tex
 creds:
 	cd images && pandoc artists.md -o ../art.pdf
 all: ref ${filename}.pdf resources.pdf creds
