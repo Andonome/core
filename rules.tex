@@ -7,7 +7,7 @@
 
 \begin{multicols}{2}
 
-\sidebox{
+\newcommand{\TNChart}{
 
 	\begin{rollchart}
 
@@ -35,6 +35,14 @@
 
 	\end{rollchart}
 
+}
+
+\iftoggle{verbose}{%
+	\sidebox{
+	\TNChart
+	}
+}{
+	\TNChart
 }
 
 \noindent
@@ -275,6 +283,13 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 		\setcounter{xp}{10}
 		\newcounter{bon}\setcounter{bon}{1}
 
+% On the ref version, we the page is small, so we end multicols here.
+% On the full version, the multicol ending comes below.
+
+\iftoggle{verbose}{}{
+\end{multicols}
+}
+
 \begin{multicols}{2}
 
 \begin{xpbox}{A}
@@ -351,9 +366,9 @@ Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so ta
 
 \end{xpbox}
 
-\end{multicols}
-
 \iftoggle{verbose}{
+
+\end{multicols}
 
 \subsection{Concept}
 
@@ -610,7 +625,7 @@ The costs of the items here are based on the most common race -- humans. Other r
 		Gnomes & $\times 2$ \\
 
 		Gnolls & $\frac{1}{2}$ \\
-		
+
 	\end{rollchart}
 
 }

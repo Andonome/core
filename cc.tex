@@ -5,6 +5,7 @@
 
 \begin{multicols}{2}
 
+\small
 \noindent
 \iftoggle{verbose}{%
 Over this chapter, you can learn to craft a \gls{pc}.
@@ -66,9 +67,14 @@ Character creation is random by default -- it helps new players get started quic
 
 \iftoggle{verbose}{
 	\toppic{Roch_Hercka/five_races}{\label{roch:races}}
-}{}
 
-\racechart
+	\racechart
+}{
+
+	\begin{figure*}[t!]
+	\racechart
+	\end{figure*}
+}
 
 \iftoggle{verbose}{
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans.

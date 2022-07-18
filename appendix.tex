@@ -93,7 +93,9 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \chapter{Combat}
 
-\begin{multicols}{2}
+\iftoggle{verbose}{
+	\begin{multicols}{2}
+}{}
 
 \initiativechart
 
@@ -103,7 +105,9 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \fatiguechart
 
+\iftoggle{verbose}{
 \end{multicols}
+}{}
 
 \chasechart
 
