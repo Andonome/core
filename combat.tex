@@ -59,10 +59,6 @@
 \iftoggle{verbose}{
 \begin{multicols}{2}
 
-\begin{tcolorbox}[title=Overview]
-	\printcontents[Combat]{}{1}[1]{}
-\end{tcolorbox}
-
 \noindent
 These life and death rolls are handled somewhat differently from other tasks.
 Let's start with an overview of the basic features, then cover the details later.
@@ -274,8 +270,10 @@ When waking up, all actions relying on movement take a penalty equal to the numb
 
 \begin{multicols}{2}
 
+\iftoggle{verbose}{%
 \noindent
 Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself. Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about. Longer weapons also grant a bonus to Initiative, representing the fighter's ability to hit opponents before they hit them due to the weapon's length.
+}{}
 
 Each weapons is rated for `Dam' (the Damage bonus), `Init' (the bonus to Initiative, generally through reach) and `Ev' (the weapon's Evasion bonus).
 
@@ -634,6 +632,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 
 \label{fatigue}
 \index{Fatigue}
+\iftoggle{verbose}{%
 \noindent
 Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
 Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
@@ -682,12 +681,10 @@ If the character is accruing \glspl{fatigue} from running or wrestling, they wou
 
 \Glspl{fatigue} cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
 
-\begin{figure*}[t]
-	\fatiguechart
-\end{figure*}
-
 \subsection{Gaining Fatigue}
+}{}
 
+\noindent
 Each round running, climbing, in combat, or otherwise exerting oneself inflicts a \gls{fatigue}.
 Armour also inflicts a number of \glspl{fatigue} equal to its \gls{weightrating} at the end of each scene.
 
@@ -723,6 +720,8 @@ The \gls{tn} to stop the bleeding is always 6 plus the number of \glspl{fatigue}
 
 \paragraph{Starvation} is another special case.
 \glspl{fatigue} inflicted from starvation are marked with an `$S$', and each of these points only heal once the character has had a full meal.
+
+\fatiguechart
 
 \subsection{Healing Fatigue}
 \index{Resting}
