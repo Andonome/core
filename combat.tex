@@ -526,7 +526,8 @@ All armour has a \gls{weightrating}, just like any other item.
 The \gls{weightrating} above are for Partial Armour.
 If anyone wears Complete armour the Weight is increased by 1, so Complete chain armour which comes past the knees, has a helmet and uses arm-guards, would have a \gls{weightrating} of 2.
 
-Armour also inflicts Fatigue very quickly, as mentioned above. Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
+Armour also inflicts \glspl{fatigue} quickly, as mentioned above.
+Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
 
 \subsubsection{Stacking}
 
@@ -607,7 +608,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 
 \newcommand{\fatiguechart}{
 
-	\begin{tcolorbox}[title={Fatigue Chart},tabularx={lX},bottom=10pt,top=10pt]
+	\begin{tcolorbox}[title={\gls{fatigue} Chart},tabularx={lX},bottom=10pt,top=10pt]
 		\textbf{Action} & \textbf{\Glspl{fatigue}} \\\hline
 
 		Armour & Wearing armour inflicts 1 \gls{fatigue} per \gls{weightrating} of the armour. \\
@@ -642,27 +643,27 @@ Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
 	\Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
-	\multicolumn{10}{l}{Fatigue Points} \\
+	\multicolumn{10}{l}{\glspl{fatigue}} \\
 	\XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
 	\multicolumn{10}{l}{Penalty: 0} \\
 	
 \end{tcolorbox}
 
-Below the character's \gls{hp} bar are spaces for Fatigue Points to be gained.
-Once the character has more Fatigue Points than their current \glspl{hp}, they take a -1 penalty for every Fatigue Point in excess of their \glspl{hp}.
+Below the character's \gls{hp} bar are spaces for \glspl{fatigue} to be gained.
+Once the character has more \glspl{fatigue} than their current \glspl{hp}, they take a -1 penalty for every \gls{fatigue} in excess of their \glspl{hp}.
 
 \begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
 	\Square & \Square & \Square & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
-	\multicolumn{10}{l}{Fatigue Points} \\
+	\multicolumn{10}{l}{\glspl{fatigue}} \\
 	\XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square \\
 	\multicolumn{10}{l}{Penalty: 1} \\
 	
 \end{tcolorbox}
 
-This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 Fatigue Points, and then gains a -2 penalty to all actions.
+This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 \glspl{fatigue}, and then gains a -2 penalty to all actions.
 But it might also occur because the character has 4 \glspl{fatigue} and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
 \begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
@@ -670,16 +671,16 @@ But it might also occur because the character has 4 \glspl{fatigue} and then Dam
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
 	\Square & \Square & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
-	\multicolumn{10}{l}{Fatigue Points} \\
+	\multicolumn{10}{l}{\glspl{fatigue}} \\
 	\XBox & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square \\
 	\multicolumn{10}{l}{Penalty: 3} \\
 	
 \end{tcolorbox}
 
 Characters may reach a maximum penalty of -5 due to \glspl{fatigue}, after which they fall unconscious.
-If the character is accruing Fatigue Points from running or wrestling, they would normally simply pass out at this point, but if they are gaining Fatigue from swimming or bleeding, the character will almost certainly just die.
+If the character is accruing \glspl{fatigue} from running or wrestling, they would normally simply pass out at this point, but if they are gaining \glspl{fatigue} swimming or bleeding, the character will almost certainly just die.
 
-Fatigue Points cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
+\Glspl{fatigue} cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
 
 \begin{figure*}[t]
 	\fatiguechart
@@ -692,19 +693,18 @@ Armour also inflicts a number of \glspl{fatigue} equal to its \gls{weightrating}
 
 \iftoggle{verbose}{%
 
-	Fatigue is gained extremely quickly, for all manner of reasons.
+	\Glspl{fatigue} gained extremely quickly, for all manner of reasons.
 	However, it is only applied at the end of the scene.
 	Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
-	The real danger in Fatigue is persistent action, when characters have no chance to recover from a previous battle.
+	The real danger in \glspl{fatigue} is persistent action, when characters have no chance to recover from a previous battle.
 
 }{
-
-	Fatigue can only be gained at the end of a scene.
+	\Glspl{fatigue} can only be gained at the end of a scene.
 }
 
 \subsubsection{The Skill Discount}
 
-Characters can use skills as a sort of `\gls{dr}' against Fatigue.
+Characters can use skills as a sort of `\gls{dr}' against \glspl{fatigue}.
 3 \glspl{round} of combat inflicts 3 \glspl{fatigue}, but someone with Combat 1 can ignore 1 \gls{fatigue} which comes from fighting in the first round of combat.%
 \footnote{Skills never help \glspl{fatigue} gained due to carrying heavy items.}
 Athletics curbs \glspl{fatigue} accumulated through running, Survival curbs \glspl{fatigue} gained through marching, and so on.
@@ -714,15 +714,15 @@ Athletics curbs \glspl{fatigue} accumulated through running, Survival curbs \gls
 \Glspl{fatigue} can represent all manner of problems a character has -- not just tiredness.
 
 \paragraph{Bleeding} occurs when a character has lost \glspl{hp} to piercing or slashing weapons.
-They then gain Fatigue Points equal to the number of \glspl{hp} lost.
-These Fatigue Points are marked with a `$B$' instead of the usual dash across a box and are healed at a rate of one per day rather than the usual, faster rate.
+They then gain \glspl{fatigue} equal to the number of \glspl{hp} lost.
+These \glspl{fatigue} are marked with a `$B$' instead of the usual dash across a box and are healed at a rate of one per day rather than the usual, faster rate.
 If the bleeding is not stopped, the character should bleed for the same number of points minus one on the next scene until they are dead or the bleeding has stopped on its own.
-The \gls{tn} to stop the bleeding is always 6 plus the number of Fatigue Points being lost on the current scene.
+The \gls{tn} to stop the bleeding is always 6 plus the number of \glspl{fatigue} being lost on the current scene.
 
 \paragraph{Poison} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to return home.
 
 \paragraph{Starvation} is another special case.
-Fatigue inflicted from starvation is marked with an `$S$', and each of these points only heal once the character has had a full meal.
+\glspl{fatigue} inflicted from starvation are marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
 \subsection{Healing Fatigue}
 \index{Resting}
@@ -732,7 +732,7 @@ When the party take any part of the day to rest, they can heal a number of \glsp
 
 \iftoggle{verbose}{
 
-	In most cases, Fatigue Points will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
+	In most cases, \glspl{fatigue} will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
 	However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
 
 
@@ -835,11 +835,11 @@ If they've already moved this \gls{round}, they have to wait until the next \gls
 
 \subsection{Manoeuvres}
 
-\subsubsection[Brawling: Make a normal attack roll, but any attack with a Margin less than 5 only inflicts Fatigue rather than Damage]{Brawling}
+\subsubsection[Brawling: Make a normal attack roll, but any attack with a Margin less than 5 only inflicts \glspl{fatigue} rather than Damage]{Brawling}
 \index{Combat!Brawling}
 \index{Brawling}
 
-Punches and kicks all use the Combat bonus. Such attacks inflict Fatigue Damage. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
+Punches and kicks all use the Combat bonus. Such attacks inflict \glspl{fatigue}. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
 
 \subsubsection[Blind Rage: You can mitigate an enemy's weapon bonus to Evasion, but they can make an attack against you as a Quick Action]{Blind Rage}\label{blindrage}
 
@@ -1165,7 +1165,8 @@ Characters running through forests might encounter a marshy area, a stream, dens
 Those crossing plains might find a random encounter in their path, then a copse of trees.
 Those running up a mountain could find an area of loose rocks where the ground slides away from under their feet, a narrowing path upwards as rocky walls envelop them and then a misty lake covered in low-lying cloud.
 
-Each area covered also inflicts 1 Fatigue Point in addition to any for wearing armour or for Encumbrance Points. These Fatigue Points are applied after every roll rather than waiting until the end of the scene.
+Each area covered also inflicts 1 \gls{fatigue} in addition to any for wearing armour or for Encumbrance Points.
+These \glspl{fatigue} are applied after every roll rather than waiting until the end of the scene.
 
 Players are encouraged to suggest Skills which might help. While running away from a band of guards, a character could use the Stealth Skill, quickly dipping into an alleyway to hide. When jumping around a busy area of town, the character might leap over a moving cart to gain some headway. Characters can, with \gls{gm} permission, use their Skills to aid an entire group. The Stealth Skill, in particular, might be used to aid the entire party to hide by finding the right spot. The Empathy Skill might be used to quickly convince farmers to hide the characters.
 
