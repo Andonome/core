@@ -7,6 +7,7 @@ compile_pdf:
     - make resources
     - make ref
     - mv main.pdf bind.pdf
+    - mv main_ref.pdf bind_ref.pdf
   only:
     - master
     - run
