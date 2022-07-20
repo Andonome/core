@@ -1,4 +1,5 @@
 \ProvidesPackage{layout}
+\RequirePackage[table]{xcolor}
 \RequirePackage[acronym]{glossaries}
 \setacronymstyle{short-long-desc}
 \RequirePackage{glossary-mcols}
@@ -390,6 +391,7 @@ bookmarks=true]%
 
 \tcbset{enhanced,
 ornamented,
+code={\rowcolors{2}{}{gray!10}},
 before upper={\parindent15pt},
 fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
 {yshift=-0.25mm-\tcboxedtitleheight/2,yshifttext=-2mm-\tcboxedtitleheight/2},
@@ -408,10 +410,14 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \newtcolorbox{boxtext}[1][]{ornamented,colback=white,fonttitle=\scshape, #1}
 
 \newcommand{\sidebox}[2][23]{
-
+	\iftoggle{verbose}{
 		\begin{wrapfigure}{R}{.#1\textwidth} 
 		#2
 		\end{wrapfigure}
+	}{
+		#2
+		
+	}
 }
 
 % Chapter Heading Color
@@ -629,7 +635,7 @@ Roll & Result \\
 
 \newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,bottom=10pt}
 
-\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{ornamented,adjusted title=Encounters in #1,tabularx={XXp{.6\textwidth}},bottom=10pt,code={\setcounter{enc}{19}\setcounter{list}{18}}}
+\newtcolorbox[use counter=enc, use counter=list]{encounters}[1]{ornamented,adjusted title=Encounters in #1,tabularx={XXp{.6\textwidth}},bottom=10pt,code={\rowcolors{2}{}{gray!10}\setcounter{enc}{19}\setcounter{list}{18}}}
 
 \newtcolorbox{rollchart}{tabularx={p{.25\linewidth}X},top=10pt,bottom=10pt}
 
