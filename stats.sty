@@ -419,7 +419,7 @@
 	\iftoggle{verbose}{Strength}{STR} & \arabic{str} & \iftoggle{verbose}{Dexterity}{DEX} & \arabic{dex} & \iftoggle{verbose}{Speed}{SPD} & \arabic{spd} \\
 \iftoggle{mind}{
 	\iftoggle{verbose}{Intelligence}{INT} & \arabic{int}  & \iftoggle{verbose}{Wits}{WTS} & \arabic{wts} & \iftoggle{verbose}{Charisma}{CHA} & \arabic{cha}  \\}{%
-	\iftoggle{verbose}{Wits}{WTS} & \arabic{wts} \\
+	&& \iftoggle{verbose}{Wits}{WTS} & \arabic{wts} \\
 	}
 	\setcounter{hp}{\value{str}}
 \end{tabularx}
