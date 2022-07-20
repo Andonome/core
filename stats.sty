@@ -411,6 +411,11 @@
 \setcounter{dexb}{0}
 
 \begin{tabularx}{\textwidth}{lrlrlr}
+
+% the tcolorbox has coloured rows (xcolor package)
+% but that doesn't work with creature stats, so we suppress it here
+\hiderowcolors
+
 	\iftoggle{verbose}{Strength}{STR} & \arabic{str} & \iftoggle{verbose}{Dexterity}{DEX} & \arabic{dex} & \iftoggle{verbose}{Speed}{SPD} & \arabic{spd} \\
 \iftoggle{mind}{
 	\iftoggle{verbose}{Intelligence}{INT} & \arabic{int}  & \iftoggle{verbose}{Wits}{WTS} & \arabic{wts} & \iftoggle{verbose}{Charisma}{CHA} & \arabic{cha}  \\}{%
