@@ -633,7 +633,12 @@ Roll & Result \\
 
 \it}{\normalfont\vspace{2em}}
 
-\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,bottom=10pt}
+\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,
+	bottom=10pt,
+	left=3pt,
+	right=3pt,
+	code={\rowcolors{3}{}{gray!10}}
+	}
 
 % this shows encounters, and the two counters below show the encounter number
 
@@ -642,6 +647,8 @@ Roll & Result \\
 	adjusted title=Encounters in #1,
 	tabularx={XXp{.6\textwidth}},
 	bottom=10pt,
+	left=3pt,
+	right=3pt,
 	code={\rowcolors{2}{}{gray!10}\setcounter{enc}{19}\setcounter{list}{18}}}
 
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
@@ -650,13 +657,21 @@ Roll & Result \\
 \newtcolorbox{rollchart}{
 	tabularx={p{.25\linewidth}X},
 	top=10pt,
-	bottom=10pt}
+	bottom=10pt,
+	left=3pt,
+	right=3pt,
+	code={\rowcolors{2}{}{gray!10}}
+	}
 
 \newtcolorbox{xpbox}[1]{
 	tabularx={lX},
 	bottom=10pt,
+	left=3pt,
+	right=3pt,
 	top=10pt,
-	equal height group=#1}
+	code={\rowcolors{2}{}{gray!10}},
+	equal height group=#1
+	}
 
 
 %%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%
