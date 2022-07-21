@@ -917,7 +917,17 @@ Mages of this sphere begin by imitating the dead, becoming half dead themselves,
 
 \spelllevel
 
-\spell{Ghoul}{Instant}{Medicine}{Summon a hungry spirit into a corpse, creating a ghoul. Maximum Str of $3 + Lv. + Int$ \glspl{hp}}\\
+\spell{Command the Dead}{Continuous}{Academics}{Give any order to the dead, as per Level 4 of the Enchantment sphere.  Intelligence + Academics vs Wits + Academics}\\
+The necromancer learns to command the undead with short, simple, commands.
+The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb.
+`Dig',\footnote{The undead are the worst workers due to their stupidity, and typically destroy their own hands before they dig very far.
+They can be used for anything, but are not necessarily good for much.}
+`kill them all' or `wait here' are all appropriate commands.
+To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits + Academics.
+
+This spell replicates the fourth level of the Enchantment sphere, except that it targets the undead.
+
+\spell{Ghoul Calling}{Instant}{Medicine}{Summon a hungry spirit into a corpse, creating a ghoul. Maximum Str of $3 + Lv. + Int$ \glspl{hp}}\\
 The mage can create their own ghouls from easily accessible realms of malicious spirits.
 \iftoggle{verbose}{%
 Small animals such as cats or frogs are easy, while larger creatures such as humans or basilisks are extremely difficult.
@@ -925,6 +935,8 @@ Small animals such as cats or frogs are easy, while larger creatures such as hum
 The spell is cast on a corpse and the corpse is imbued with one such malicious spirit.
 It retains the Strength score (and therefore \gls{hp}) it had in life.
 The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
+It also gains an Aggression score of +2.%
+\footnote{See page \autoref{aggression} for Aggression.}
 The creature has neither Intelligence nor Charisma scores.
 Most will attack all living things on sight.
 
@@ -939,15 +951,32 @@ Cast a \textit{Potent Ghoul} at level 2 with Intelligence +2, the mage could rai
 Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
 }{}
 
-\spell{Command the Dead}{Continuous}{Academics}{Give any order to the dead, as per Level 4 of the Enchantment sphere.  Intelligence + Academics vs Wits + Academics}\\
-The necromancer learns to command the undead with short, simple, commands.
-The mage can also command any one undead creature to perform any simple action -- a basic phrase without caveats and no more than one verb.
-`Dig',\footnote{The undead are the worst workers due to their stupidity, and typically destroy their own hands before they dig very far.
-They can be used for anything, but are not necessarily good for much.}
-`kill them all' or `wait here' are all appropriate commands.
-To execute the spell, the mage rolls with Intelligence and their Academics score at \gls{tn} 7 -- undead creatures resist with their Wits + Aggression.
+\paragraph{Sentient Ghoul Calling}
+spells summon sentient undead, typically referred to as `ghasts'.
 
-This spell replicates the fourth level of the Enchantment sphere, except that it targets the undead.
+The ghast gains a number of additional points equal to the spell's level, plus the caster's Intelligence Bonus.
+For each margin on the roll, the caster assigns 1 point to any Attribute, Skill, or magic sphere.
+The \gls{gm} then assigns the rest.
+
+These ghouls have a basic Intelligence and Wits score of 0.
+
+Summoned ghouls with magic spheres can only use the Paths of Alchemy, Runes, or Divinity (\gls{deathgod}).
+
+\iftoggle{verbose}{}{
+	\begin{exampletext}
+
+	Sirius attempts to  call a ghoul, with a \textit{Potent, Sentient, Ghoul Calling}.
+	With his +2 Intelligence Bonus, the ghast will have 6 points.
+
+	Initially, Sirius plans to summon a ghast to cast spells for him, so he plans to spend those 6 points on Academics (so he can summon someone on the Path of Alchemy), and 5 points in Invocation.
+
+	Unfortunately, he rolls a `10', which is precisely the \gls{tn}, leaving him with only 1 point to assign.
+	He goes for `Combat 1' instead, and the crafty \gls{gm} spends the rest of the points on the ghast's Wits and Academics.
+
+	With Wits +2 and Academics +3, the ghouls will not succumb to Sirius' \textit{Command the Dead} spell so easily, as it requires \gls{tn} `12' to control.
+
+	\end{exampletext}
+}{}
 
 \spell{Preservation}{Instant}{Survival}{Slow the target's rot}\\
 Trainee artists and necromancers have one thing in common -- fruit.
