@@ -103,6 +103,11 @@ Each initiative click brings new decisions to the group with a kind of 1-dimensi
 }{}
 \section{Basic Combat}
 
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
+	\initiativechart
+	\end{figure*}
+}
 \begin{multicols}{2}
 
 \subsection{Initiative}
@@ -143,7 +148,10 @@ For example, you can move, then Keep Edgy, even after you're too disoriented to 
 Meanwhile, Keeping Edgy requires no roll and has no associated numbers, so it does not incur any penalty.
 However, defending oneself after this point would have a -2 penalty, and further \gls{quickaction} would suffer a -3 penalty.
 
-\initiativechart
+\iftoggle{verbose}{
+
+	\initiativechart
+}{}
 
 \subsection{Attack}
 \label{attack}
