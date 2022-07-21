@@ -558,7 +558,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 	\input{story/encumbrance.tex}
 }{}
 
-\begin{figure*}
+\newcommand{\servicesChart}{
 
 \begin{tcolorbox}[tabularx={XX},title=Services,bottom=10pt,code={\rowcolors{2}{}{gray!10}}]
 
@@ -601,8 +601,18 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 	Fancy Room & 1sp \\
 
 \end{tcolorbox}
+}
 
-\end{figure*}
+\iftoggle{verbose}{
+	\begin{figure*}[t!]
+	\servicesChart
+	\end{figure*}
+}{
+	\begin{figure*}[t!]
+	\footnotesize
+	\servicesChart
+	\end{figure*}
+}
 
 \subsection{Cultures \& Exchange Rates}
 \index{Exchange Rates}

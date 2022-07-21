@@ -105,6 +105,7 @@ Each initiative click brings new decisions to the group with a kind of 1-dimensi
 
 \iftoggle{verbose}{}{
 	\begin{figure*}[t!]
+	\footnotesize
 	\initiativechart
 	\end{figure*}
 }
@@ -313,7 +314,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Rapier & +1 & +2 & +1 & -2 & 15sp & \\
 
-	Rock & +1 & \ 0 & \ 0 & -5 & \\
+	Rock & +1 & \ 0 & \ 0 & -5 & & \\
 
 	Stick & +1 & +1 & +1 & -2 & & \\
 
@@ -359,7 +360,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	\textbf{Heavy Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
-	Great Club & +4 & +1 & +1 & 5 & \\
+	Great Club & +4 & +1 & +1 & 5 & & \\
 
 	Giant Boulder & +5 & 0 & \ -2 & 8 & & Finishing Blow (page~\pageref{finishingblow}) \\
 
@@ -481,6 +482,7 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 	\armourchart
 }{
 	\begin{figure*}[t!]
+	\footnotesize
 	\armourchart
 	\end{figure*}
 }
@@ -759,6 +761,7 @@ The \gls{tn} to stop the bleeding is always 6 plus the number of \glspl{fatigue}
 	\fatiguechart
 }{
 	\begin{figure*}[t!]
+	\footnotesize
 	\fatiguechart
 	\end{figure*}
 }
@@ -1009,7 +1012,7 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 
 \begin{multicols}{2}
 
-\begin{figure*}[t]
+\newcommand{\projectilesChart}{
 \begin{tcolorbox}[tabularx={p{.3\textwidth}XXXr},bottom=10pt,top=10pt]
 
 	\textbf{Projectile} & \textbf{Initiative} & \textbf{Damage} & \textbf{Weight}  & \textbf{Cost} \\\hline
@@ -1023,7 +1026,17 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 	Throwing knives & +1 & $1D6-1$ & -5/-3 &  {100 cp} \\
 
 \end{tcolorbox}
-\end{figure*}
+}
+\iftoggle{verbose}{
+	\begin{figure*}[t]
+	\projectilesChart
+	\end{figure*}
+}{
+	\begin{figure*}[t]
+	\footnotesize
+	\projectilesChart
+	\end{figure*}
+}
 
 
 \noindent Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
@@ -1150,7 +1163,7 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \newcommand{\huntchart}{
 
-	\begin{tcolorbox}[tabularx={lp{.85\textwidth}},bottom=10pt,top=10pt]
+	\begin{tcolorbox}[tabularx={lX},bottom=10pt,top=10pt]
 
 	Total & Result \\\hline
 
@@ -1178,9 +1191,16 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \begin{multicols}{2}
 
-\begin{figure*}[t]
+\iftoggle{verbose}{
+	\begin{figure*}[t]
 	\chasechart
-\end{figure*}
+	\end{figure*}
+}{
+	\begin{figure*}[t]
+	\footnotesize
+	\chasechart
+	\end{figure*}
+}
 
 \subsection{Fleeing}
 

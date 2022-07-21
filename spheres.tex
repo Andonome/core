@@ -1003,11 +1003,7 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
 
 \end{multicols}
 
-\sphere{Polymorph}
-
-\begin{multicols}{2}
-
-\begin{figure*}[t]
+\newcommand{\animalStats}{
 	\begin{tcolorbox}[tabularx={lccX},bottom=10pt,top=10pt]
 
 	\textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} & \textbf{Realistic Enhancements (Optional)} \\\hline
@@ -1054,9 +1050,22 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
 	Wolf & -2 & +2 & Quadraped \\
 
 	\end{tcolorbox}
+}
 
-\end{figure*}
+\sphere{Polymorph}
 
+\begin{multicols}{2}
+
+\iftoggle{verbose}{
+	\begin{figure*}[t]
+	\animalStats
+	\end{figure*}
+}{
+	\begin{figure*}[t]
+	\footnotesize
+	\animalStats
+	\end{figure*}
+}
 
 \noindent
 Polymorph spells don't affect their target, but copy them.
@@ -1077,22 +1086,31 @@ The undead are completely immune to the Polymorph sphere.
 
 \spelllevel
 
-\begin{tcolorbox}[title=Animal Abilities]
+\newcommand{\animalAbilities}{
+	\begin{tcolorbox}[title=Animal Abilities]
 
-\begin{itemize}
+	\begin{itemize}
 
-	\item{Claws \& Teeth: +1 Damage}
-	\item{Flight: The creature has wings, and can use them properly.}
-	\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
-	\item{Amphibious}
-	\item{Quadraped: The creature can fully utilize four limbs to run at double the normal speed when spending a full round moving}
-	\item
-	Venom: Once the creature gets a successful hit, the target gains 4 \glspl{fatigue}, then 3 on the next scene, then 2, and so on.
+		\item{Claws \& Teeth: +1 Damage}
+		\item{Flight: The creature has wings, and can use them properly.}
+		\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
+		\item{Amphibious}
+		\item{Quadraped: The creature can fully utilize four limbs to run at double the normal speed when spending a full round moving}
+		\item
+		Venom: Once the creature gets a successful hit, the target gains 4 \glspl{fatigue}, then 3 on the next scene, then 2, and so on.
 
-\end{itemize}
+	\end{itemize}
 
-\end{tcolorbox}
+	\end{tcolorbox}
+}
 
+\iftoggle{verbose}{
+	\animalAbilities
+}{
+	\begin{figure*}[t]
+	\animalAbilities
+	\end{figure*}
+}
 
 \spell{Form-Theft}{Continuous}{Beast Ken}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR.}\\
 
