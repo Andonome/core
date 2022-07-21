@@ -962,7 +962,7 @@ These ghouls have a basic Intelligence and Wits score of 0.
 
 Summoned ghouls with magic spheres can only use the Paths of Alchemy, Runes, or Divinity (\gls{deathgod}).
 
-\iftoggle{verbose}{}{
+\iftoggle{verbose}{
 	\begin{exampletext}
 
 	Sirius attempts to  call a ghoul, with a \textit{Potent, Sentient, Ghoul Calling}.
@@ -1083,14 +1083,41 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
 
 \sphere{Polymorph}
 
+\newcommand{\animalAbilities}{
+	\begin{tcolorbox}[title=Animal Abilities]
+
+	\begin{itemize}
+
+		\item{Claws \& Teeth: +1 Damage}
+		\item{Flight: The creature has wings, and can use them properly.}
+		\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
+		\item{Amphibious}
+		\item{Quadraped: The creature can fully utilize four limbs to run at double the normal speed when spending a full round moving}
+		\item
+		Venom: Once the creature gets a successful hit, the target gains 4 \glspl{fatigue}, then 3 on the next scene, then 2, and so on.
+
+	\end{itemize}
+
+	\end{tcolorbox}
+}
+
 \begin{multicols}{2}
 
 \iftoggle{verbose}{
-	\begin{figure*}[t]
+	\animalAbilities
+}{
+	\begin{figure*}[b!]
+	\footnotesize
+	\animalAbilities
+	\end{figure*}
+}
+
+\iftoggle{verbose}{
+	\begin{figure*}[t!]
 	\animalStats
 	\end{figure*}
 }{
-	\begin{figure*}[t]
+	\begin{figure*}[t!]
 	\footnotesize
 	\animalStats
 	\end{figure*}
@@ -1115,33 +1142,7 @@ The undead are completely immune to the Polymorph sphere.
 
 \spelllevel
 
-\newcommand{\animalAbilities}{
-	\begin{tcolorbox}[title=Animal Abilities]
-
-	\begin{itemize}
-
-		\item{Claws \& Teeth: +1 Damage}
-		\item{Flight: The creature has wings, and can use them properly.}
-		\item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
-		\item{Amphibious}
-		\item{Quadraped: The creature can fully utilize four limbs to run at double the normal speed when spending a full round moving}
-		\item
-		Venom: Once the creature gets a successful hit, the target gains 4 \glspl{fatigue}, then 3 on the next scene, then 2, and so on.
-
-	\end{itemize}
-
-	\end{tcolorbox}
-}
-
-\iftoggle{verbose}{
-	\animalAbilities
-}{
-	\begin{figure*}[t]
-	\animalAbilities
-	\end{figure*}
-}
-
-\spell{Form-Theft}{Continuous}{Beast Ken}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR.}\\
+\spell{Chimaera}{Continuous}{Beast Ken}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR.}\\
 
 \noindent
 A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, and later copy a full species.
@@ -1160,6 +1161,10 @@ The caster gains a Charisma penalty equal to double the spell level being used.
 
 Any changes to Charisma do not affect \glspl{fp}, and additional Wits don't change Mana.
 
+Characters will find their armour no longer works if their Strength Bonus changes.
+Character who became smaller may find their armour slipping off, or inflicting additional \glspl{fatigue}.
+Characters who gain in Strength will find the armour becomes too tight, and will receive 3 \glspl{fatigue} per turn, applied immediately.
+
 \spelllevel
 
 \spell{Beast Form}{Continuous}{Beast Ken}{Transform into an animal. Int + Beast Ken.}\\
@@ -1168,11 +1173,11 @@ The closer an animal is to the caster, physically, the easier they can copy it.
 
 The distance between a target animal and the caster, is determined by the difference between their Strength and Speed.
 \iftoggle{verbose}{%
-An elven caster has Strength -2 and Speed +1.
+Suppose an elven caster has Strength -2 and Speed +1.
 A bird has Strength -5, so that's a different of 3.
 The bird's Speed is +3, so that's a difference of 2, for a total of 5.
 }{}
-The spell can breach a distance equal to twice the spell's Level, plus the caster's Intelligence.
+The spell can breach a `point-distance' equal to twice the spell's Level, plus the caster's Intelligence.
 The caster rolls with Intelligence + Beast Ken, and must reach a \gls{tn} of 7 plus the number of Attribute points required to bridge the gap.
 \iftoggle{verbose}{%
 A caster with Intelligence +2 could bridge up to 6 Attribute points.
@@ -1180,7 +1185,16 @@ Returning to the example above, the \gls{tn} would be 12.
 In general, larger casters find it easier to become bears and warthogs, while smaller casters find it easier to become birds or rats.
 }{}
 
-\spelllevel
+\spell{Chimaera Curse}{Continuous}{Beast Ken}{Give any target animalistic features. Int + Beast Ken.}\\
+
+The target caster gives someone else the abilities of a creature, as per the \textit{Chimaera} spell, above.
+This spell can target both a person and an animal if cast with the \textit{Wide} Enhancement, or can take the animal features from the \textit{Form Ken} spell.
+
+\iftoggle{verbose}{
+
+Malicious casters often use this spell to create hideous beasts out of normal animals, such as deer.
+}{}%
+When normally peaceful animals, such as deer, gain traits from predators, they develop violent and carnivorous tastes to match.
 
 \spell{Form Ken}{Instant}{Beast Ken}{Memorize the form of an animal.}\\
 The caster takes a mental snapshot of the target, forever memorizing its form.
@@ -1190,12 +1204,13 @@ From that point on, the caster can transform into the animal with any other Poly
 The target only counts if the player records it on their character sheet.
 }{}
 
+\spelllevel
+
 \spell{Beast Curse}{Continuous}{Beast Ken}{Transform someone into an animal}\\
 The target becomes any animal which the caster has memorized with \textit{Form Ken}.
 The same rules for \textit{Beast Form} apply, so the target must be with `Attribute range' of the animal they can transform into.
 
 The same requirements for \textit{Beast Form} apply here, so each Attribute-point difference between the target the animal will raise the \gls{tn} above 7, and requires a high enough Level + Intelligence.
-
 
 \end{multicols}
 
