@@ -100,6 +100,10 @@ The spell's Strength Bonus can test if the ice can trap people who are in the wa
 Creatures only frozen up to their waist or ankles can gain a bonus to break out of the ice, and a further bonus if the spell is cast slowly.
 If the caster can extend the range, then the spell can travel any distance, although longer distances can make the spell rather a long-shot, with each area traversed raising the \gls{tn} by 3.
 
+\iftoggle{verbose}{%
+	Elves often use a \textit{Colourful Plantform} to sculpt plants into unnatural forms, or to create temporary statues of other elves.
+}{}
+
 \spell{Wind Blast}{Instant}{Survival}{Push enemies back, lowering their Initiative}\\
 Wind blows from the mage, pushing the target back and distracting them.
 \iftoggle{verbose}{
@@ -737,18 +741,21 @@ While the weapon is next to the caster it can defend the caster using its own st
 If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character.
 A successful grapple means the weapon is too heavy to lift and the spell ends.
 
+A \textit{Sentient Dancing Swords} spell can act alone, withou the mage focussing and using their Initiative points.
+
 \spell{Mage Armour}{Continuous}{Academics}{Create a magical barrier with $6 + Int$ \glsentrylongpl{SP}}\\
 The mage casts a shield of crackling energy around the target to protect from all harm, and most often mages target themselves.
 The barrier can shatter if attacked but can take a serious beating before breaking.
 Each barrier counts as a having a number of \glsentryfullpl{SP}, which are destroyed by Damage like \gls{fp}, but always before \gls{fp} are targeted.
 The target gains a number of \glspl{SP} equal to the level of spell used times 3 plus their Intelligence Bonus.
 
-Those protected by the shield cannot attack others as the shield stops all attacks.
+Those protected by the shield cannot attack others as the shield stops all attacks.%
+\footnote{Or more specifically, the person can attack, but all Damage will go to the \glspl{SP} first.}
 However, casters are able to focus enough to use missile weapons and spells by allowing small breaches in the shield's wall.
 \footnote{Allowing a target to use a missile weapon requies complete focus, and a Wits + Empathy roll, and can be performed as a Quick action, costing 2 Initiative Points.}
 
 The shields cannot `split' into bubbles.
-When cast wide, it can cover a group of people, but the shield will cover all of them or none.
+When cast as a \textit{Wide} spell, it can cover a group of people, but the shield will cover all of them or none.
 
 \textit{For example, Annabel the alchemist has the Force sphere at level 3 and Intelligence +2.
 She's low on \gls{mp} so she casts it at level 2, gaining 8 \gls{SP}.
@@ -759,6 +766,8 @@ Multiple castings do not stack -- only the highest casting it used.
 The shield can be placed on others if need be, not only the mage, but this will limit their ability to attack.
 
 Armour does not block Damage going onto \gls{SP} -- the character simply subtracts \gls{SP} without any \gls{dr}. The Mage Armour is not affected by a Vitals Shot -- it protects all around, counting as Perfect armour, although not quite continuously enough to keep out water or gasses. Multiples of such spells do not stack -- only the highest is used.
+
+A \textit{Sentient Mage Armour} can cut itself at the moment someone attacks, allowing someone to gain protective shielding while in a mêlée.
 
 \spelllevel
 
@@ -820,6 +829,11 @@ The caster creates a shadow, with depth and cohesion.
 Typically, these are used to fool people on dark nights that some person or creature is there.
 A \textit{Wide Aparition} might appear as a giant monster, or a \textit{Massive Aparition} could even suggest a full house has appeared.
 As per \textit{Cloak}, the \textit{Colourful} enhancement can paint colour over the spell, making it look like a real thing.
+
+\textit{Sentient Aparition} spells can move and think independently, and even act like a real person, to a limited degree.
+\iftoggle{verbose}{%
+As always, Sentient spells take the caster's Code, so the illusions will not act like particular people every well.
+}{}
 
 \spell{Silence}{Continuous}{Stealth}{Stop all noise getting to a target}\\
 The target hears nothing, and produces no sound.
@@ -893,12 +907,15 @@ Blast-radius spells such as a \textit{Wide Fireball} can inflict a Vitals Shot o
 The mage focuses on any source of fire, and extinguishes it.
 Larger fires require a \textit{Wide Darkness} spell.
 
-\spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}\\\label{fireball}
+\label{fireball}
+\spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}\\
 The mage throws out a ball of flaming, crackling ball of energy, which strikes and burns the target.
 The Damage is 3 Damage, plus the spell's Level, plus the caster's Intelligence Bonus.
 
 \iftoggle{verbose}{%
 As usual, 4 Damage becomes $1D6$, so a pyromancer with Intelligence +1, casting a \textit{Ranged Fireball}, would deal $1D6+2$ Damage.
+
+\textit{Sentient Fireball} spells can change course as they move, allowing them to hit people round corners.
 }{}
 
 \end{multicols}
