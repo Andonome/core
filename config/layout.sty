@@ -391,6 +391,8 @@ bookmarks=true]%
 
 \tcbset{enhanced,
 ornamented,
+left=3pt,
+right=3pt,
 code={\rowcolors{2}{}{gray!10}},
 before upper={\parindent15pt},
 fonttitle=\bfseries,coltitle=black,attach boxed title to top center=
@@ -633,7 +635,7 @@ Roll & Result \\
 
 \it}{\normalfont\vspace{2em}}
 
-\newtcolorbox{xpchart}[1]{tabularx={l|p{.8\textwidth}},adjusted title=XP Rewards for #1,
+\newtcolorbox{xpchart}[1]{tabularx={l|X},adjusted title=XP Rewards for #1,
 	bottom=10pt,
 	left=3pt,
 	right=3pt,
