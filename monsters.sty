@@ -1472,7 +1472,10 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{age}}% DR
 {\arabic{r2}}% AGGRESSION
 {Academics \arabic{r3}, Ether Lore \arabic{r2}, Stealth 3, Vigilance \arabic{r2}}% SKILLS
-{\ifnumcomp{\value{r12}}{=}{12}{Pet rock}{None}}% EQUIPMENT
+{\ifnumcomp{\value{r12}}{=}{12}%
+	{Pet rock}%
+	{None}
+\perfectArmour}% EQUIPMENT
 {}
 }
 
@@ -1495,7 +1498,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r4}}% AGGRESSION
 {Crafts \arabic{r2}, Deceit \arabic{r3}, Ether Lore 1, }% SKILLS
 {\ifodd\value{r3}None\else\greatsword\fi}% EQUIPMENT
-{}
+{\perfectArmour}
 }
 
 \newcommand{\archmage}[1][\npc{\E}{Archmage}]{

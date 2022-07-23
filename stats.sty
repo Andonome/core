@@ -229,6 +229,10 @@
 
 % ARMOUR
 
+%% For perfect armour, stick \perfectArmour in the additional notes category of a \person (#9).
+
+\newcommand{\perfectArmour}{\gdef\armourtype{(Perfect)}}
+
 \newcommand{\partialelvish}{partial leather armour%
 	\ifnumcomp{\value{dr}}{>}{2}%
 	{\addtocounter{dr}{1}}%
@@ -485,7 +489,17 @@
 	Damage \calculatedamage{\value{str}}\ifnumcomp{\value{str}}{=}{\value{strb}}{}{ (\calculatedamage{\value{strb}})}, 
 	\iftoggle{examplecharacter}{\mbox{Defence \arabic{dex},} }{
 	TN \arabic{dex}%
-	\ifnumcomp{\value{dr}}{>}{0}{\ifnum\pdfstrcmp{\armourtype}{P}=0\addtocounter{dexb}{3} (\arabic{dexb})\fi\ifnum\pdfstrcmp{\armourtype}{C}=0\addtocounter{dexb}{5} (\arabic{dexb})\fi}{}, 
+	\ifnumcomp{\value{dr}}{>}{0}{
+		\ifnum\pdfstrcmp{\armourtype}{P}=0
+			\addtocounter{dexb}{3} (\arabic{dexb})
+		\fi
+		\ifnum\pdfstrcmp{\armourtype}{C}=0
+			\addtocounter{dexb}{5} (\arabic{dexb})
+		\fi
+		\ifnum\pdfstrcmp{\armourtype}{C}=0
+			\addtocounter{dexb}{5} (\arabic{dexb})
+		\fi
+	}{}, 
 	}%
 	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr}~\armourtype, }{}%
 	\ifnum\value{mp}>0%
