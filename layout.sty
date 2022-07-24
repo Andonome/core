@@ -38,6 +38,7 @@
 \RequirePackage{tikz}
 	\usetikzlibrary{calc,mindmap,trees}% calc for fancy borders
 	\usetikzlibrary{intersections}% for very fancy borders with intersecting lines
+	\usetikzlibrary{shapes.misc}% for very fancy \section
 \RequirePackage{pifont}
 \RequirePackage{colortbl}
 \RequirePackage[poster]{tcolorbox}
@@ -464,20 +465,21 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 {\Huge}
 
 
-\titleformat{\section}[frame]
-{\needspace{20em}\normalfont}
-{\filright
-\footnotesize
-\enspace SECTION \thesection\enspace}
-{8pt}
-{\Large\bfseries\filcenter}
+\newcommand\titlebar{%
+\tikz[baseline,trim left=1em,trim right=3cm] {
+    \fill [\pageSideColor] (2.5cm,-1ex) rectangle (\linewidth+1.5em,2.5ex);
+    \node [
+        fill=\pageSideColor,
+        anchor= base east,
+        rounded rectangle,
+        minimum height=3.5ex] at (3cm,0) {
+        \textbf{\arabic{section}}
+    };
+}%
+}
+\titleformat{\section}{\large}{\titlebar}{0.1cm}{\textcolor{chapnumcol}}
+\renewcommand*{\thesection}{\arabic{section}}
 
-\titleformat{\subsection}%
-	{\needspace{13em}\center\large\bfseries}%
-	{}%
-	{1em}%
-	{}%
-	[\rule{.9\linewidth}{.2pt}]
 %
 \titleformat{\subsubsection}
 {\needspace{4em}\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
