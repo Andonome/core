@@ -464,18 +464,15 @@
 \noindent Attack \arabic{att}\ifnumcomp{\value{att}}{=}{\value{attb}}{}{ (\arabic{attb})},
 	Initiative \arabic{spd}\ifnumcomp{\value{spd}}{=}{\value{spdb}}{}{ (\arabic{spdb})},
 	Damage \calculatedamage{\value{str}}\ifnumcomp{\value{str}}{=}{\value{strb}}{}{ (\calculatedamage{\value{strb}})}, 
-	\iftoggle{examplecharacter}{\mbox{Defence \arabic{dex},} }{
+	\iftoggle{examplecharacter}{\mbox{Defence \arabic{dex},} }{%
 	TN \arabic{dex}%
 	\ifnumcomp{\value{dr}}{>}{0}{
-		\ifnum\pdfstrcmp{\armourtype}{P}=0
-			\addtocounter{dexb}{3} (\arabic{dexb})
+		\ifnum\pdfstrcmp{\armourtype}{P}=0%
+			\addtocounter{dexb}{3} (\arabic{dexb})%
 		\fi
-		\ifnum\pdfstrcmp{\armourtype}{C}=0
-			\addtocounter{dexb}{5}~(\arabic{dexb})
-		\fi
-		\ifnum\pdfstrcmp{\armourtype}{C}=0
-			\addtocounter{dexb}{5}~(\arabic{dexb})
-		\fi
+		\ifnum\pdfstrcmp{\armourtype}{C}=0%
+			\addtocounter{dexb}{5}~(\arabic{dexb})%
+		\fi%
 	}{}, 
 	}%
 	\ifnumcomp{\value{dr}}{>}{0}{DR \arabic{dr}~\armourtype, }{}%
