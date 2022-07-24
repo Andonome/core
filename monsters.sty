@@ -5,6 +5,9 @@
 %   |_| |_| |_|\___/|_| |_|___/\__\___|_|  |___/
 %                                               
 
+% This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
+% If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
+
 \newcommand{\auroch}[1][\npc{\A\T}{\arabic{page} Aurochs}]{
 	#1
 \animal{2}% STRENGTH
@@ -611,7 +614,7 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 		{\spear}%
 	\fi%
 \fi, %
-	\partialplate%
+	\partialplate, %
 \ifodd\value{r4}
 	\shield, 
 \fi

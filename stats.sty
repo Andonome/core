@@ -1,91 +1,52 @@
 \ProvidesPackage{config/stats}
 %%%%%%%%%%%%%%%%%%%% Introduction
-% This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
-% If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
 
-%%%%%%%%%%%%%%%%%%%% LOOT %%%%%%%%%%%%%%%%%%%%
 \newtoggle{bestiarychapter}
 \settoggle{bestiarychapter}{false}
 
-\newcommand{\lootSmall}{%
-\iftoggle{bestiarychapter}{%
-\ifodd\value{r2}$3D6$\else$2D6$\fi cp}{
-\randomdozen\arabic{r12} cp}%
-}
-
-\newcommand{\lootMedium}{%
-\iftoggle{bestiarychapter}{%
-\ifodd\value{r2}$3D6$\else$2D6$\fi~sp}{%
-\addtocounter{gold}{\thepage}\divide\value{gold} by \value{r4}%
-\ifnum\value{gold}<4%
-	\setcounter{gold}{7}\fi%
-\arabic{gold}~sp}%
-}
-
-\newcommand{\lootBig}{%
-\iftoggle{bestiarychapter}{%
-\ifodd\thepage $3D6-2$\else$2D6+4$\fi gp}{%
-\randomdozen\addtocounter{r12}{8}\arabic{r12}gp}%
-}
-
-\newcommand{\lootMagic}{%
-	\iftoggle{team}{Mana stone holding 2 MP}%
-	{\iftoggle{bestiarychapter}{}%
-	{\ifnumcomp{\value{r2}}{>}{1}%
-	{\ifodd\value{r3}%
-		\ifodd\value{r4}%
-			\ifodd\value{r3b}%
-				Sorcerer's Eye%
-			\else%
-		Deck of Cards\fi\else Wild Seeds\fi\else\ifodd\value{r2b}Bag of Holding%
-		\else%
-			Defensive Heart%
-		\fi%
-	\fi}%
-	{\ifodd\value{r3}%
-		\ifodd\value{r4}%
-			Portal Scroll%
-		\else%
-			Sleeping Dust%
-		\fi%
-	\else%
-		\ifodd\value{r2b}%
-			\ifnum\value{dr}>0%
-				Ring of Asphyxiation%
-			\else
-				Ghost Shield%
-			\fi%
-		\else%
-			Bag of Tricks%
-		\fi%
-	\fi}%
-}}}
-
-\newcommand{\lootJewellery}{%
-\iftoggle{bestiarychapter}{jewellery worth \ifodd\value{r2}$3D6$sp\else$1D6+2$gp\fi}%
-	{\ifnumcomp{\value{r2}}{>}{1}{\ifodd\value{r3}%
-		\ifodd\value{r4}%
-			golden necklace worth \arabic{r12}~sp\else%
-			golden ring worth \thechapter~sp\fi\else%
-		jewel encrusted dagger worth \thepage~sp\fi}%
-	{\ifodd\value{r3}%
-		\ifodd\value{r4}%
-			ornate silver earrings worth 1 gp\else
-			gem encrusted broach worth \thechapter gp\fi\else%
-		\randomthreeB saphire pendant worth \arabic{r3b}gp\fi}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                           _
-% _ __ ___   ___  _ __  ___| |_ ___ _ __
-%| '_ ` _ \ / _ \| '_ \/ __| __/ _ \ '__|
-%| | | | | | (_) | | | \__ \ ||  __/ |
-%|_| |_| |_|\___/|_| |_|___/\__\___|_|
+%      _        _   
+%  ___| |_ __ _| |_ 
+% / __| __/ _` | __|
+% \__ \ || (_| | |_ 
+% |___/\__\__,_|\__|
+%                   
+% 
+%  _     _            _        
+% | |__ | | ___   ___| | _____ 
+% | '_ \| |/ _ \ / __| |/ / __|
+% | |_) | | (_) | (__|   <\__ \
+% |_.__/|_|\___/ \___|_|\_\___/
+%                              
 %
-%     _        _
-% ___| |_ __ _| |_ ___
-%/ __| __/ _` | __/ __|
-%\__ \ || (_| | |_\__ \
-%|___/\__\__,_|\__|___/
-%
+% This file makes stat blocks for monsters.
+% 
+% The writer feeds in something like this:
+% 
+% \npc{\M}{Patrick the Pyromanacer}
+% 
+% \person{0}% STRENGTH
+% {0}% DEXTERITY 
+% {0}% SPEED
+% {{0}% INTELLIGENCE
+% {0}% WITS
+% {0}}% CHARISMA
+% {0}% DR
+% {0}% COMBAT
+% {}% SKILLS
+% {Nothing}% EQUIPMENT
+% {}
+% 
+% The \person command takes various stats, and
+% inside that 'SKILLS' variable (variable no. 8),
+% we can add additional things, like
+% \knacks{\firststrike}, or
+% \Path{Blood}{\invocation{2}}, which gives your
+% wizzard 'invocation 2'.
+% 
+% Most of the rest of the commands deal with
+% properly calculating derived stats, like the TN
+% to hit the creature.
+
 
 \newtoggle{mind}
 \newtoggle{examplecharacter}
@@ -100,15 +61,24 @@
 \newcommand{\weaponknackone}{}
 \newcommand{\weaponknacktwo}{}
 
+% we calculate damage here because we can't display 1d6+6 damage - it has to turn into 2d6+2 damage.
 \newcommand{\calculatedamage}[1]{%
-	\setcounter{damagebonus}{#1}%
-	\setcounter{numberofdice}{1}%
-\whileboolexpr{
-		test {\ifnumcomp{\value{damagebonus}}{>}{3}}
+		\setcounter{damagebonus}{#1}%
+		\setcounter{numberofdice}{1}%
+	\whileboolexpr{test {\ifnumcomp{\value{damagebonus}}{>}{3}}}{%
+		\addtocounter{damagebonus}%
+		{-4}\addtocounter{numberofdice}{1}
 	}%
-	{\addtocounter{damagebonus}{-4}\addtocounter{numberofdice}{1}}%
-	{$\arabic{numberofdice}D6\ifnumcomp{\value{damagebonus}}{>}{0}{+\arabic{damagebonus}$}{\ifnumcomp{\value{damagebonus}}{<}{0}{\arabic{damagebonus}$}{$}}}%
-	}
+	{$\arabic{numberofdice}D6%
+	\ifnumcomp{\value{damagebonus}}{>}{0}%
+		{+\arabic{damagebonus}$}
+		{%
+		\ifnumcomp{\value{damagebonus}}{<}{0}{%
+		\arabic{damagebonus}$}%
+		{$}%
+		}
+	}%
+}
 
 
 %%%%%%%%%%%%%%%%%%%% Character Generation %%%%%%%%%%%%%%%%%%%%
@@ -300,77 +270,84 @@
 
 %%%%%%%%%%% Person
 %
-\newcommand{\person}[9]{\settoggle{mind}{true}
-\setcounter{str}{#1}
-\setcounter{dex}{#2}
-\setcounter{spd}{#3}
-\mind#4
-\setcounter{dr}{#5}
-\setcounter{att}{#6}
-\renewcommand{\skills}{#7}
-\renewcommand{\equipment}{#8}
-\renewcommand{\mods}{#9}
+\newcommand{\person}[9]{
+	\settoggle{mind}{true}
+	\setcounter{str}{#1}
+	\setcounter{dex}{#2}
+	\setcounter{spd}{#3}
+	\mind#4
+	\setcounter{dr}{#5}
+	\setcounter{att}{#6}
+	\renewcommand{\skills}{#7}
+	\renewcommand{\equipment}{#8}
+	\renewcommand{\mods}{#9}
 
-\clean
+	\clean
 
-\renewcommand{\armourtype}{P}
-\gdef\armourtype{P}
+	\renewcommand{\armourtype}{P}
+	\gdef\armourtype{P}
 
-\begin{tcolorbox}[title={\name}, before upper={\parindent0pt}, halign=flush left, left=2mm, watermark text=\npcsymbol]
+	\begin{tcolorbox}[title={\name},
+		before upper={\parindent0pt},
+		halign=flush left,
+		left=10pt,
+		right=10pt,
+		watermark text=\npcsymbol]
 
-\iftoggle{personality}{
+	\iftoggle{personality}{
 
-\textbf{Archetype:} \archetype
+	\textbf{Archetype:} \archetype
 
-\textbf{Personality:} \personality
+	\textbf{Personality:} \personality
 
-\textbf{Mannerism:} \mannerism
+	\textbf{Mannerism:} \mannerism
 
-\vspace{1em}
+	\vspace{1em}
 
-\settoggle{personality}{false}}%
-{}
-\creaturestats
+	\settoggle{personality}{false}}%
+	{}
+	\creaturestats
 
-\derivedstats
-\end{tcolorbox}
-	\settoggle{debug}{false}
-	\settoggle{examplecharacter}{false}
+	\derivedstats
+	\end{tcolorbox}
+		\settoggle{debug}{false}
+		\settoggle{examplecharacter}{false}
 
 }
 
-\newcommand{\animal}[9]{\settoggle{mind}{false}
-\setcounter{str}{#1}
-\setcounter{dex}{#2}
-\setcounter{spd}{#3}
-\setcounter{wts}{#4}
-\setcounter{dr}{#5}
-\setcounter{att}{#6}
-\renewcommand{\skills}{#7}
-\renewcommand{\abilities}{#8}
-\renewcommand{\mods}{#9}
+\newcommand{\animal}[9]{
+	\settoggle{mind}{false}
+	\setcounter{str}{#1}
+	\setcounter{dex}{#2}
+	\setcounter{spd}{#3}
+	\setcounter{wts}{#4}
+	\setcounter{dr}{#5}
+	\setcounter{att}{#6}
+	\renewcommand{\skills}{#7}
+	\renewcommand{\abilities}{#8}
+	\renewcommand{\mods}{#9}
 
-\clean
+	\clean
 
-\renewcommand{\armourtype}{C}
+	\renewcommand{\armourtype}{C}
 
-\begin{tcolorbox}[title={\name},before upper={\parindent0pt},watermark text=\npcsymbol]
+	\begin{tcolorbox}[title={\name},before upper={\parindent0pt},watermark text=\npcsymbol]
 
-\iftoggle{personality}{
+	\iftoggle{personality}{
 
-\textbf{Personality:} \personality
+	\textbf{Personality:} \personality
 
-\textbf{Mannerism:} \mannerism
+	\textbf{Mannerism:} \mannerism
 
-\vspace{1em}
+	\vspace{1em}
 
-\settoggle{personality}{false}}%
-{}
-\creaturestats
+	\settoggle{personality}{false}}%
+	{}
+	\creaturestats
 
-\derivedstats
+	\derivedstats
 
-\end{tcolorbox}
+	\end{tcolorbox}
 
 }
 
@@ -494,10 +471,10 @@
 			\addtocounter{dexb}{3} (\arabic{dexb})
 		\fi
 		\ifnum\pdfstrcmp{\armourtype}{C}=0
-			\addtocounter{dexb}{5} (\arabic{dexb})
+			\addtocounter{dexb}{5}~(\arabic{dexb})
 		\fi
 		\ifnum\pdfstrcmp{\armourtype}{C}=0
-			\addtocounter{dexb}{5} (\arabic{dexb})
+			\addtocounter{dexb}{5}~(\arabic{dexb})
 		\fi
 	}{}, 
 	}%
@@ -544,7 +521,7 @@
 %%  /  \|  __/ 
 %% /_/\_\_|    
 %%  
-	\newcommand{\calculateXP}{
+\newcommand{\calculateXP}{%
 %% Sanitize: init+5, dam+5, 
 	\addtocounter{spdb}{5}
 	\addtocounter{strb}{5}
@@ -600,7 +577,7 @@
 
 	\vspace{.1cm}
 
-	}
+}
 %
 %%%%%%%%%%%%%%%%%%%% Creature Abilities
 

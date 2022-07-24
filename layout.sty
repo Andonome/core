@@ -574,12 +574,27 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \raggedbottom
 
 \newcommand{\currentsphere}{magic}
-\newcommand{\sphere}[1]{\setcounter{spelllevel}{0}\renewcommand{\currentsphere}{#1}\index{#1}\section{\currentsphere}}
-\newcommand{\spelllevel}{\addtocounter{spelllevel}{1}%
-	\subsection{\currentsphere~ Level \arabic{spelllevel}}}
-\newcommand{\enhancement}[3]{\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}\index{Enhancement!#2}}
-\newcommand{\magicitem}[7]{\vspace{2em}\needspace{4em}\noindent\textbf{#1}
-\index{Magical Item!#1}
+
+\newcommand{\sphere}[1]{%
+	\setcounter{spelllevel}{0}%
+	\renewcommand{\currentsphere}{#1}%
+	\index{#1}%
+	\section{\currentsphere}
+}%
+
+\newcommand{\spelllevel}{%
+	\addtocounter{spelllevel}{1}%
+	\subsection{\currentsphere~ Level \arabic{spelllevel}}%
+}
+
+\newcommand{\enhancement}[3]{%
+	\paragraph[(#1) #2: #3]{(#1) Enhancement -- #2:}%
+	\index{Enhancement!#2}%
+}
+
+\newcommand{\magicitem}[7]{%
+	\vspace{2em}\needspace{4em}\noindent\textbf{#1}%
+	\index{Magical Item!#1}
 
 	\noindent
 	\textit{Spells: #2, }%
@@ -592,18 +607,21 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 	\needspace{2em}%
 }
 
-\newcommand{\manalake}[8]{\subsection{#1 (Level #8)}
+\newcommand{\manalake}[8]{
+	\subsection{#1 (Level #8)}
 
 	\textit{Spells: #2, }\textit{Path: #3, }\textit{Duration: #4, }\textit{Type: #5, }\textit{Potence: #6, }\textit{#7 MP}% Type can be 'pocket spell', 'magical item', or 'artefact'.
 	\index{Mana Lakes!#1}
 	\vspace{.3em}
 }
 
-\newcommand{\spell}[4]{\subsubsection[#1: #4]{#1}
+\newcommand{\spell}[4]{
+	\subsubsection[#1: #4]{#1}
 
-{\it Type: #2, Skill: #3}
+	{\it Type: #2, Skill: #3}
 
-\noindent}
+	\noindent%
+}
 
 % Toggles for knacks
 
@@ -800,7 +818,8 @@ Roll & Result \\
 
 \newcommand{\sqName}{}
 
-\newcommand{\sidequest}[1]{\renewcommand{\sqName}{#1}
+\newcommand{\sidequest}[1]{%
+	\renewcommand{\sqName}{#1}
 	\resumecontents[\sqarea]
 	\subsection{\sqName}
 	\stopcontents[\sqarea]
@@ -822,10 +841,10 @@ Roll & Result \\
 
 }
 
-		\newcommand{\shortline}{\line(1,0){22}}	
-		\newcommand{\weeline}{\line(1,0){30} \hspace{.6cm}}
-		\newcommand{\vlongline}{\line(1,0){100}\hspace{0.8cm}}
-		\newcommand{\writeline}{\line(1,0){59}}
+\newcommand{\shortline}{\line(1,0){22}}	
+\newcommand{\weeline}{\line(1,0){30} \hspace{.6cm}}
+\newcommand{\vlongline}{\line(1,0){100}\hspace{0.8cm}}
+\newcommand{\writeline}{\line(1,0){59}}
 \newcommand{\fiveboxes}{\ding{111}\ding{111}\ding{111}\ding{111}\ding{111}}
 \newcommand{\threeboxes}{\ding{111}\ding{111}\ding{111}}
 \newcommand{\threecircles}{\ding{109}\ding{109}\ding{109}}
