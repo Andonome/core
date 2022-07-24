@@ -5,6 +5,9 @@
 %   |_| |_| |_|\___/|_| |_|___/\__\___|_|  |___/
 %                                               
 
+% This is a list of monster-commands.  You put in the command, like "\dragon", and a dragon will be conjured unto your pdf.
+% If you're unhapy with your dragon, copy-paste the bit where it says \dragon{blah}{bla}, then change those numbers.
+
 \newcommand{\auroch}[1][\npc{\A\T}{\arabic{page} Aurochs}]{
 	#1
 \animal{2}% STRENGTH
@@ -13,7 +16,7 @@
 {1}% WITS
 {2}% DR
 {1}% AGGRESSION
-{Athletics 1}% SKILLS
+{Athletics~1}% SKILLS
 {Stampede}% ABILITIES
 {\addtocounter{xpbonus}{-4}}
 }
@@ -85,7 +88,7 @@
 {2}% WITS
 {0}% DEXTERITY 
 {2}% AGGRESSION
-{Athletics \arabic{enc}, Survival \arabic{r2}\knacks{\charge}}% SKILLS
+{Athletics~\arabic{enc}, Survival~\arabic{r2}\knacks{\charge}}% SKILLS
 {Flight}% ABILITIES
 {}
 }
@@ -101,7 +104,7 @@
 {0}% WITS
 {2}% DR
 {2}% AGGRESSION
-{Stealth \arabic{enc}, Tactics \arabic{r2b}, \knacks{\firststrike , \adrenalinesurge , \perfectsneakattack}}% SKILLS
+{Stealth~\arabic{enc}, Tactics~\arabic{r2b}, \knacks{\firststrike , \adrenalinesurge , \perfectsneakattack}}% SKILLS
 {None}% ABILITIES
 {}
 }
@@ -116,7 +119,7 @@
 {1}% WITS
 {1}% DR
 {\arabic{r2}}% AGGRESSION
-{Athletics 2, Survival \arabic{enc}, Tactics 2}% SKILLS
+{Athletics~2, Survival~\arabic{enc}, Tactics~2}% SKILLS
 {\teeth, \quadraped}% ABILITIES
 {}
 }
@@ -611,7 +614,7 @@ Academics~1, \ifodd\value{page} Crafts~\arabic{r2}, \else \fi Deceit~1, \ifodd\v
 		{\spear}%
 	\fi%
 \fi, %
-	\partialplate%
+	\partialplate, %
 \ifodd\value{r4}
 	\shield, 
 \fi
@@ -1320,7 +1323,7 @@ mana stone holding \arabic{track} MP, \ifodd\thechapter\lootJewellery\fi}% EQUIP
 {-5}}% CHARISMA
 {2}% DR
 {\arabic{r3b}}% COMBAT
-{Aggression 2, \ifodd\thechapter Projectiles \arabic{r3}, \fi Academics 3, \ifodd\value{gold}Crafts \arabic{r3}, \fi Deceit \arabic{r2b}, Medicine \arabic{r2b}, Vigilance \arabic{r3b}
+{Aggression 2, \ifodd\thechapter Projectiles~\arabic{r3}, \fi Academics~3, \ifodd\value{gold}Crafts~\arabic{r3}, \fi Deceit~\arabic{r2b}, Medicine~\arabic{r2b}, Vigilance~\arabic{r3b}
 \Path{Alchemy \& Devotion (Qualm\"e)}{\ifodd\value{page}\aldaron \else \conjuration \arabic{age}, \fate \fi~\arabic{r3}, \enchantment \arabic{r4}, \ifodd\thechapter \invocation \arabic{r2b}, \fi \necromancy 5}}% SKILLS
 {\ifnum\value{r3b}>2%
 	\longsword%
@@ -1353,7 +1356,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r3}}% WITS
 {\arabic{track}}% DR
 {\arabic{r4}}% AGGRESSION
-{\ifnum\value{gold}>0 Athletics \arabic{gold}, Stealth \arabic{gold}\else Projectiles \arabic{r3}\fi, \knacks{\ifnum\value{r4}>3\disarm, \fi \unstoppable}}% SKILLS
+{\ifnum\value{gold}>0 Athletics \arabic{gold}, Stealth~\arabic{gold}\else Projectiles~\arabic{r3}\fi, \knacks{\ifnum\value{r4}>3\disarm, \fi \unstoppable}}% SKILLS
 {Acidic damage, gelatinous (DR does not apply to fire-based attacks)}% ABILITIES
 {}
 }
@@ -1370,7 +1373,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r2}}% WITS
 {\arabic{enc}}% DR
 {2}% AGGRESSION
-{Stealth \arabic{r2}, Survival \arabic{r3}, Vigilance \arabic{r2b}}% SKILLS
+{Stealth~\arabic{r2}, Survival~\arabic{r3}, Vigilance~\arabic{r2b}}% SKILLS
 {}% ABILITIES
 {}
 }
@@ -1385,7 +1388,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r2}}% WITS
 {1}% DR
 {\ifodd\value{r2}1\fi}% AGGRESSION
-{Athletics 2, Survival 1}% SKILLS
+{Athletics~2, Survival~1}% SKILLS
 {\quadraped}% ABILITIES
 {}
 }
@@ -1402,7 +1405,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r2}}% WITS
 {1}% DR
 {\ifodd\value{r2}1\else 2\fi}% AGGRESSION
-{Athletics 2, Survival 1, Vigilance 1}% SKILLS
+{Athletics~2, Survival~1, Vigilance~1}% SKILLS
 {\quadraped}% ABILITIES
 {}
 }
@@ -1418,7 +1421,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {1}% WITS
 {1}% DR
 {1}% AGGRESSION
-{Athletics 2, Survival 1}% SKILLS
+{Athletics~2, Survival~1}% SKILLS
 {\quadraped}% ABILITIES
 {}
 }
@@ -1434,7 +1437,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {3}% WITS
 {0}% DR
 {\arabic{r2}}% AGGRESSION
-{Survival 2, Vigilance 2}% SKILLS
+{Survival~2, Vigilance~2}% SKILLS
 {\quadraped}% ABILITIES
 {}%
 }
@@ -1450,7 +1453,7 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {1}% WITS
 {0}% DR
 {\arabic{r2}}% AGGRESSION
-{Survival 2, Vigilance 2}% SKILLS
+{Survival~2, Vigilance~2}% SKILLS
 {\teeth, \quadraped}% ABILITIES
 {}%
 }
@@ -1471,8 +1474,11 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r3}}}% CHARISMA
 {\arabic{age}}% DR
 {\arabic{r2}}% AGGRESSION
-{Academics \arabic{r3}, Ether Lore \arabic{r2}, Stealth 3, Vigilance \arabic{r2}}% SKILLS
-{\ifnumcomp{\value{r12}}{=}{12}{Pet rock}{None}}% EQUIPMENT
+{Academics~\arabic{r3}, Ether~Lore~\arabic{r2}, Stealth~3, Vigilance~\arabic{r2}}% SKILLS
+{\ifnumcomp{\value{r12}}{=}{12}%
+	{Pet rock}%
+	{None}
+\perfectArmour}% EQUIPMENT
 {}
 }
 
@@ -1493,9 +1499,9 @@ mana stone with \arabic{track} mana, \lootJewellery, \randomtwo\lootJewellery, \
 {\arabic{r2b}}}% CHARISMA
 {\arabic{age}}% DR
 {\arabic{r4}}% AGGRESSION
-{Crafts \arabic{r2}, Deceit \arabic{r3}, Ether Lore 1, }% SKILLS
+{Crafts~\arabic{r2}, Deceit~\arabic{r3}, Ether Lore~1, }% SKILLS
 {\ifodd\value{r3}None\else\greatsword\fi}% EQUIPMENT
-{}
+{\perfectArmour}
 }
 
 \newcommand{\archmage}[1][\npc{\E}{Archmage}]{
