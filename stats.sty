@@ -388,7 +388,9 @@
 % Reference versions (which always are non-verbose) don't
 % have the space for full-sized stats.
 
-\iftoggle{verbose}{}{
+\iftoggle{verbose}{
+	\begin{small}%
+}{%
 	\begin{footnotesize}
 }
 
@@ -443,9 +445,11 @@
 
 \vspace{.1cm}
 
-\iftoggle{verbose}{}{
-	\end{footnotesize}
-}
+\iftoggle{verbose}{%
+	\end{small}%
+}{%
+	\end{footnotesize}%
+}%
 }
 
 %%     _               _        _
