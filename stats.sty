@@ -67,16 +67,16 @@
 		\setcounter{numberofdice}{1}%
 	\whileboolexpr{test {\ifnumcomp{\value{damagebonus}}{>}{3}}}{%
 		\addtocounter{damagebonus}%
-		{-4}\addtocounter{numberofdice}{1}
+		{-4}\addtocounter{numberofdice}{1}%
 	}%
 	{$\arabic{numberofdice}D6%
 	\ifnumcomp{\value{damagebonus}}{>}{0}%
-		{+\arabic{damagebonus}$}
+		{+\arabic{damagebonus}$}%
 		{%
 		\ifnumcomp{\value{damagebonus}}{<}{0}{%
 		\arabic{damagebonus}$}%
 		{$}%
-		}
+		}%
 	}%
 }
 
@@ -291,7 +291,7 @@
 		before upper={\parindent0pt},
 		halign=flush left,
 		left=10pt,
-		right=10pt,
+		right=15pt,
 		watermark text=\npcsymbol]
 
 	\iftoggle{personality}{
@@ -331,7 +331,12 @@
 
 	\renewcommand{\armourtype}{C}
 
-	\begin{tcolorbox}[title={\name},before upper={\parindent0pt},watermark text=\npcsymbol]
+	\begin{tcolorbox}[title={\name},
+		before upper={\parindent0pt},
+		halign=flush left,
+		left=10pt,
+		right=15pt,
+		watermark text=\npcsymbol]
 
 	\iftoggle{personality}{
 
