@@ -247,9 +247,6 @@ Targets receive the \glspl{fatigue} at the end of the round.
 When cast as a normal spell, covering a single square, the spell won't find much use as a target can simply move away.
 It finds practical application once cast as a \textit{Massive Choking Fog}, so targets cannot easily flee.
 
-\paragraph{Web}
-spells turn something into a sticky substance.
-
 \spell{Slime}{Continuous}{Survival}{Make any liquid into a slippery slime}\\
 The caster turns any nearby liquid into a slippery slime.
 Anyone running full speed across the area makes a Dexterity + Athletics roll, \gls{tn} 7 + the caster's Intelligence + Survival.
@@ -289,7 +286,7 @@ Despite the rarity of \glspl{miracleworker}, people rich people often inscribe c
 
 \spelllevel
 
-\spell{Metamorphosis}{Continuous}{Varies}{Transmute anything into anything.}\\
+\spell{Metamorphosis}{Continuous}{Varies}{Summon any item}\\
 The mage finally learns how to create more complex items (like books and weapons), and how to target living creatures.
 
 \iftoggle{verbose}{%
@@ -308,10 +305,16 @@ A rift opens in space, allowing the mage to connect any two locations in range.
 Anyone walking into one portal, comes out the other.
 
 \iftoggle{verbose}{%
-Cast on its own, the spell can form an impenetrable barrier by simply looping a hallway: once a portal blocks the way, nothing can get past it, because hitting the portal does nothing more than throwing fists into the other side.
+When cast as a \textit{Wide} spell, it forms an impenetrable barrier in a hallway or tunnel, by simply looping one place to another: once a portal blocks the way, nothing can get past it, because hitting the portal does nothing more than throwing fists into the other side.
 From the back, such gates look black, but anyone can pass through them harmlessly.
 
 Those rare \glspl{miracleworker} able to cast a \textit{Ranged Gate} can link any two areas in line of sight, allowing anyone to replace a day's walk with a single footstep.
+}{}
+
+When cast as a \textit{Pocket Spell}, a \textit{Ranged Gate} can retain its original location, no matter how far away the scroll travels once activated.
+\iftoggle{verbose}{%
+For example, someone making a magical one-use scroll could cast a \textit{Ranged Gate} spell which goes to their own bedroom.
+Even if they walk to the other side of the world, once the spell starts, it would still target their bedroom.
 }{}
 
 \end{multicols}
