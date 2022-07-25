@@ -427,7 +427,53 @@ When using a bestiary chapter, the stats appear as dice rolls, rather than fixed
 \noindent
 \lipsum
 
+\end{multicols}
+
+\newcommand{\tests}{
+
+\chapter{Another Test}
+
+\section{Test Section}
+
+\begin{multicols}{2}
+
+\lipsum[3]
+
+\humanbard
+
+\lipsum[2]
+
+\subsection{Test subsection}
+
+\elf
+
+\lipsum[3]
+
+\elf
+
+\subsubsection{Test sub-sub-section}
+
+\lipsum[10]
+
+\subsubsection{Test sub-sub-section again}
+
+
+\subsection{Test subsection}
+
+\lipsum[2]
+
+\elf
+
+\lipsum[10]
+
+\section{Last Section}
+
+\lipsum[3]
 
 \end{multicols}
+
+}
+
+\Repeat{4}{\tests}
 
 \end{document}

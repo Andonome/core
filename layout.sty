@@ -469,15 +469,16 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 \tikz[baseline,trim left=1em,trim right=3cm] {
     \fill [\pageSideColor] (2.5cm,-1ex) rectangle (\linewidth+1.5em,2.5ex);
     \node [
-        fill=\pageSideColor,
+        fill=white,
+	text= \pageSideColor,
         anchor= base east,
         rounded rectangle,
-        minimum height=3.5ex] at (3cm,0) {
+        minimum height=3.5ex] at (2.9cm,0) {
         \textbf{\arabic{section}}
     };
 }%
 }
-\titleformat{\section}{\large}{\titlebar}{0.1cm}{\textcolor{chapnumcol}}
+\titleformat{\section}{\large\needspace{8em}}{\titlebar}{0.1cm}{\textcolor{white}}
 \renewcommand*{\thesection}{\arabic{section}}
 
 %
