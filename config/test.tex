@@ -114,7 +114,9 @@ Roll & Result \\\hline
 
 \end{multicols}
 
-\chapter{Humanoids}
+\chapter{Stat Blocks}
+
+\section{Humanoids}
 
 \begin{multicols}{2}
 
@@ -178,7 +180,7 @@ Roll & Result \\\hline
 
 \end{multicols}
 
-\chapter{Forest Critters}
+\section{Forest Critters}
 
 \begin{multicols}{2}
 
@@ -192,7 +194,7 @@ Roll & Result \\\hline
 
 \end{multicols}
 
-\chapter{Undead}
+\section{Undead}
 
 \begin{multicols}{2}
 
@@ -246,6 +248,8 @@ Roll & Result \\\hline
 
 \chapter{Outsiders}
 
+\section{Weird Ones}
+
 \begin{multicols}{2}
 
 \archmage
@@ -255,6 +259,22 @@ Roll & Result \\\hline
 \dragon
 
 \rockman
+
+\lavaman
+
+\end{multicols}
+
+\section{Same}
+
+\begin{multicols}{2}
+
+\rockman
+
+\archmage
+
+\dragon
+
+\archmage
 
 \lavaman
 
@@ -407,7 +427,53 @@ When using a bestiary chapter, the stats appear as dice rolls, rather than fixed
 \noindent
 \lipsum
 
+\end{multicols}
+
+\newcommand{\tests}{
+
+\chapter{Another Test}
+
+\section{Test Section}
+
+\begin{multicols}{2}
+
+\lipsum[3]
+
+\humanbard
+
+\lipsum[2]
+
+\subsection{Test subsection}
+
+\elf
+
+\lipsum[3]
+
+\elf
+
+\subsubsection{Test sub-sub-section}
+
+\lipsum[10]
+
+\subsubsection{Test sub-sub-section again}
+
+
+\subsection{Test subsection}
+
+\lipsum[2]
+
+\elf
+
+\lipsum[10]
+
+\section{Last Section}
+
+\lipsum[3]
 
 \end{multicols}
+
+}
+
+\Repeat{4}{\tests}
 
 \end{document}
