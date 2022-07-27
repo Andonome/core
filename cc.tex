@@ -42,8 +42,8 @@ Otherwise, you fail.
 \index{Race}
 \newcommand{\racechart}{
 
-\begin{tcolorbox}[tabularx={clX},adjusted title=Race,top=10pt,bottom=10pt,left=3pt,right=3pt]
 
+\begin{nametable}[clX]{Race}
 	
 	Roll & Race & Adjustments \\\hline
 
@@ -57,7 +57,7 @@ Otherwise, you fail.
 
 	11-12 & Gnome & \mbox{+1 Intelligence, +1 Dexterity,} \mbox{Strength -2, Speed -1} \\
 
-\end{tcolorbox}
+\end{nametable}
 }
 
 \begin{multicols}{2}
@@ -136,7 +136,8 @@ suffer only half the usual \glspl{fatigue} from travel.
 \noindent
 These are the basic Traits which characters must use over and over again for every roll.
 
-\begin{tcolorbox}[tabularx={XX},top=10pt,bottom=10pt]
+\sidebox[27]{
+\begin{boxtable}[cc]
 
 	Result & Attribute Bonus \\\hline
 
@@ -154,7 +155,8 @@ These are the basic Traits which characters must use over and over again for eve
 
 	12 & +3 \\
 
-\end{tcolorbox}
+\end{boxtable}
+}
 
 \iftoggle{verbose}{
 	\input{story/2-cc.tex}
@@ -295,7 +297,7 @@ All specialist Skills are marked with an asterisk.
 
 \iftoggle{verbose}{
 	\begin{figure*}[b]
-		\begin{tcolorbox}[title=Rolling with Bad Stats]
+		\begin{boxtext}[title=Rolling with Bad Stats]
 
 			If you find you've rolled up a particularly bad character, don't worry too much -- the \glspl{xp} players receive will even out differing character stats before long.
 			If that sounds a little suspicious, just keep your \glspl{xp} to yourself for a while -- remember that players, not characters, keep \glspl{xp}, so you can hold onto what you have earned, then introduce secondary characters with stories (see page \pageref{stories}).
@@ -303,7 +305,7 @@ All specialist Skills are marked with an asterisk.
 			If the poor stats mean your character dies a grizzly death in session 2, then no harm done -- just pull any character that the party has introduced already and add all the \glspl{xp} you've accumulated so far.
 			See page \pageref{pcdeath} for more information on \gls{pc} death.
 
-		\end{tcolorbox}
+		\end{boxtext}
 	\end{figure*}
 
 }{}

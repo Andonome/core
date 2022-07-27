@@ -4,7 +4,7 @@
 
 \newcommand{\initiativechart}{
 
-	\begin{tcolorbox}[title={Initiative Costs},tabularx={XX},bottom=10pt,left=3pt,right=3pt]
+	\begin{nametable}[XX]{Initiative Costs}
 
 	\textbf{Action} & \textbf{Init. Cost} \\\hline
 
@@ -50,7 +50,7 @@
 
 	Use magic item & 8 \\
 
-\end{tcolorbox}
+\end{nametable}
 
 }
 
@@ -176,7 +176,7 @@ It works exactly like the Combat \gls{skill} but only adds to the Strike Factor,
 
 \iftoggle{verbose}{
 	\begin{figure*}[t]
-		\begin{tcolorbox}[title=Dicey Damage]
+		\begin{boxtext}[title=Dicey Damage]
 	
 			If you prefer your Dice in a more old-school format, you can easily give each weapon a different Damage die.
 			Weapons which would normally inflict +1 Damage can instead roll their Damage as 1D8, while weapons with +2 Damage would instead leave players rolling 1D10, leaving weapons of +3 Damage to be replaced with a D12.
@@ -189,7 +189,7 @@ It works exactly like the Combat \gls{skill} but only adds to the Strike Factor,
 			+0 Damage should remain as $1D6$ and anyone with a Strength score of +4 should replace the bonus with a $D6$ as normal.
 			Spells are unaffected.
 	
-		\end{tcolorbox}
+		\end{boxtext}
 	\end{figure*}
 
 }{}
@@ -298,7 +298,8 @@ See Chapter \ref{knacks} for a full list of knacks.
 \end{multicols}
 
 \newcommand{\weaponschart}{
-	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
+
 	\textbf{Light Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
 		Cudgel & +2 & \ 0 & \ 0 & -3 & & Stunning Strike (page~\pageref{stunningstrike}) \\
@@ -319,9 +320,9 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Stick & +1 & +1 & +1 & -2 & & \\
 
-	\end{tcolorbox}
+	\end{boxtable}
 
-	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrX},top=10pt,bottom=10pt,left=3pt,right=3pt]
+	\begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
 
 	\textbf{Medium Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
@@ -355,9 +356,9 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Wood Axe & +2 & \ 0 & +1 & -1/1 & 1 sp & \\
 
-	\end{tcolorbox}
+	\end{boxtable}
 
-	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
 
 	\textbf{Heavy Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
@@ -369,9 +370,9 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Poleax & +3 & +1 & +1 & 5 & 6 sp & First Strike (page~\pageref{firststrike}) \\
 
-	\end{tcolorbox}
+	\end{boxtable}
 
-	\begin{tcolorbox}[tabularx={p{.20\textwidth}p{0.07\textwidth}rrrrX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
 
 	\textbf{Shields} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
 
@@ -381,7 +382,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 	Round Shield & +1 & \ 0 & +2 & 0/2 & 5 sp & Dodger (page~\pageref{dodger}) \\
 
-\end{tcolorbox}}
+\end{boxtable}}
 
 \iftoggle{verbose}{%
 	\weaponschart
@@ -442,7 +443,7 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 
 \newcommand{\armourchart}{
 
-	\begin{tcolorbox}[tabularx={ccccX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{boxtable}[ccccX]
 
 	\textbf{Armour} & \textbf{\glsentrytext{dr}} & \textbf{Weight} & \textbf{Noise} & \textbf{Price} \\\hline
 
@@ -471,7 +472,7 @@ The secondary weapon adds half its Evasion Bonus, rounded up.
 
 	Plate & 5 &  3  & 5 & 36gp \\
 
-	\end{tcolorbox}
+	\end{boxtable}
 }
 
 \section{Armour}
@@ -641,7 +642,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 
 \newcommand{\fatiguechart}{
 
-	\begin{tcolorbox}[title={\gls{fatigue} Chart},tabularx={lX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{nametable}{\gls{fatigue} Chart}
 		\textbf{Action} & \textbf{\Glspl{fatigue}} \\\hline
 
 		Armour & Wearing armour inflicts 1 \gls{fatigue} per \gls{weightrating} of the armour. \\
@@ -659,7 +660,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 		Starving & Each meal skipped inflicts 1 \gls{fatigue} plus half the character's Strength Bonus (rounded up). \\
 
 		Swimming & Each square swum inflicts 1 \gls{fatigue}. \\
-	\end{tcolorbox}
+	\end{nametable}
 
 }
 
@@ -672,7 +673,7 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 	Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
 	Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
-	\begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
+	\begin{boxtable}[lllllllllX]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
@@ -681,13 +682,13 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 	\XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
 	\multicolumn{10}{l}{Penalty: 0} \\
 	
-\end{tcolorbox}
+\end{boxtable}
 
 Below the character's \gls{hp} bar are spaces for \glspl{fatigue} to be gained.
 Once the character has more \glspl{fatigue} than their current \glspl{hp}, they take a -1 penalty for every \gls{fatigue} in excess of their \glspl{hp}.
 
 
-	\begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
+	\begin{boxtable}[lllllllllX]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
@@ -696,13 +697,13 @@ Once the character has more \glspl{fatigue} than their current \glspl{hp}, they 
 	\XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square \\
 	\multicolumn{10}{l}{Penalty: 1} \\
 	
-\end{tcolorbox}
+\end{boxtable}
 
 This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 \glspl{fatigue}, and then gains a -2 penalty to all actions.
 But it might also occur because the character has 4 \glspl{fatigue} and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
 
-	\begin{tcolorbox}[tabularx={llllllllll},bottom=10pt,top=10pt]
+	\begin{boxtable}[lllllllllX]
 
 	\multicolumn{10}{l}{\Glsentrytext{hp}} \\
 	\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
@@ -711,7 +712,7 @@ But it might also occur because the character has 4 \glspl{fatigue} and then Dam
 	\XBox & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square \\
 	\multicolumn{10}{l}{Penalty: 3} \\
 	
-\end{tcolorbox}
+\end{boxtable}
 
 Characters may reach a maximum penalty of -5 due to \glspl{fatigue}, after which they fall unconscious.
 If the character is accruing \glspl{fatigue} from running or wrestling, they would normally simply pass out at this point, but if they are gaining \glspl{fatigue} swimming or bleeding, the character will almost certainly just die.
@@ -1014,7 +1015,7 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 \begin{multicols}{2}
 
 \newcommand{\projectilesChart}{
-\begin{tcolorbox}[tabularx={p{.3\textwidth}XXXr},bottom=10pt,top=10pt,left=3pt,right=3pt]
+\begin{boxtable}[p{.3\textwidth}XXXr]
 
 	\textbf{Projectile} & \textbf{Initiative} & \textbf{Damage} & \textbf{Weight}  & \textbf{Cost} \\\hline
 
@@ -1026,7 +1027,7 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 
 	Throwing knives & +1 & $1D6-1$ & -5/-3 &  {100 cp} \\
 
-\end{tcolorbox}
+\end{boxtable}
 }
 \iftoggle{verbose}{
 	\begin{figure*}[t]
@@ -1093,7 +1094,7 @@ Weapons also receive a -2 penalty to Damage.
 \label{morale}
 \index{Morale}
 \newcommand{\moralechart}{
-	\begin{tcolorbox}[title={Morale Chart},tabularx={cX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{nametable}{Morale Chart}
 		Bonus & Situation \\\hline
 
 		+4 & Monsters outnumber characters 3:1. \\
@@ -1110,7 +1111,7 @@ Weapons also receive a -2 penalty to Damage.
 
 		-1 & Players have displayed awesome magical abilities. \\
 
-			\end{tcolorbox}
+			\end{nametable}
 }
 
 \begin{multicols}{2}
@@ -1140,7 +1141,7 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \newcommand{\chasechart}{
 
-	\begin{tcolorbox}[tabularx={lX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{boxtable}
 
 	Total & Result \\\hline
 
@@ -1158,13 +1159,13 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 	{\textless}5 & The characters are immediately caught. \\
 
-\end{tcolorbox}
+\end{boxtable}
 
 }
 
 \newcommand{\huntchart}{
 
-	\begin{tcolorbox}[tabularx={lX},bottom=10pt,top=10pt,left=3pt,right=3pt]
+	\begin{boxtable}
 
 	Total & Result \\\hline
 
@@ -1184,7 +1185,7 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 	{\textless}3 & The characters immediately lose their quarry. \\
 
-\end{tcolorbox}
+\end{boxtable}
 
 }
 \section{Chases}\index{Chases}
