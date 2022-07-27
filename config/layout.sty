@@ -676,13 +676,32 @@ Roll & Result \\
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
 
-\newtcolorbox{rollchart}{
-	tabularx={p{.25\linewidth}X},
+\newtcolorbox{boxtable}[1][c|X]{
+	tabularx={#1},
 	top=10pt,
 	bottom=10pt,
 	left=3pt,
 	right=3pt,
-	code={\rowcolors{2}{}{gray!10}}
+	code={\rowcolors{2}{}{gray!10}\needspace{2em}}
+	}
+
+\newtcolorbox{nametable}[2][cX]{
+	tabularx={#1},
+	top=10pt,
+	adjusted title=#2,
+	bottom=10pt,
+	left=3pt,
+	right=3pt,
+	code={\rowcolors{2}{}{gray!10}\needspace{1em}}
+	}
+
+\newtcolorbox{rollchart}{
+	tabularx={cX},
+	top=10pt,
+	bottom=10pt,
+	left=3pt,
+	right=3pt,
+	code={\rowcolors{2}{}{gray!10}\needspace{2em}}
 	}
 
 \newtcolorbox{xpbox}[1]{
