@@ -129,6 +129,10 @@ suffer only half the usual \glspl{fatigue} from travel.
 
 \end{multicols}
 
+\iftoggle{verbose}{
+	\pagebreak
+}{}
+
 \section{Attributes}
 
 \begin{multicols}{2}
@@ -136,8 +140,16 @@ suffer only half the usual \glspl{fatigue} from travel.
 \noindent
 These are the basic Traits which characters must use over and over again for every roll.
 
-\sidebox[27]{
-\begin{boxtable}[cc]
+\iftoggle{verbose}{
+	\input{story/2-cc.tex}
+}{}
+
+\subsection{Body Attributes}
+\index{Body Attributes}
+\index{Physical Attributes}
+
+\sidebox[28]{
+\begin{boxtable}
 
 	Result & Attribute Bonus \\\hline
 
@@ -157,14 +169,6 @@ These are the basic Traits which characters must use over and over again for eve
 
 \end{boxtable}
 }
-
-\iftoggle{verbose}{
-	\input{story/2-cc.tex}
-}{}
-
-\subsection{Body Attributes}
-\index{Body Attributes}
-\index{Physical Attributes}
 
 These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
 
