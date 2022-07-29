@@ -64,11 +64,11 @@ Players receive \glspl{xp} only at the end of a session, and only for achievemen
 \subsection{The Code of Acquisition}
 \index{Code!Acquisition}
 
-\begin{figure*}[t!]
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
 
-\iftoggle{verbose}{%
 	\begin{footnotesize}
-}{}
+}
 \begin{xpchart}{Acquisition}
 
 	1 & Buying an expensive item -- worth 1 gp or more. \\
@@ -101,10 +101,10 @@ Players receive \glspl{xp} only at the end of a session, and only for achievemen
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{%
 	\end{footnotesize}
-}{}
-\end{figure*}
+	\end{figure*}
+}
 
 The goal of life is acquisition.
 We all want things, therefore people who get more things are doing better.
@@ -113,11 +113,11 @@ Those on the code of acquisition are often those who can acquire more money -- t
 Underneath the exterior love of wealth, those on the Code of Acquisition primarily desire \emph{respect}.
 They have a deep sense of needing to be important in the eyes of others, and find their acquisitions the most efficient way to achieving that goal.
 
-\begin{figure*}[b!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[b!]
 	\begin{footnotesize}
-}{}
+}
 \begin{xpchart}{\Glsentrytext{joygod}}
 
 	1 & Playing a prank. \\
@@ -151,10 +151,11 @@ They have a deep sense of needing to be important in the eyes of others, and fin
 \end{xpchart}
 
 \iftoggle{verbose}{%
+}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 
 \subsection[\Glsentrytext{joygod} -- Goddess of Joy]{\Glsentrytext{joygod}}
@@ -174,11 +175,12 @@ Their spells appear with a flash of rainbow colours, often accompanied by light,
 \Glsentrytext{joygod}'s magical items can be anything which is a simulacrum of anything else -- a toy dagger, a doll, a statue or a painting are all possible mana stones.
 Their mana stone spells are activated by a command word.
 
-\begin{figure*}[t!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
 	\begin{footnotesize}
-}{}
+}
+
 \begin{xpchart}{\Glsentrytext{knowledgegod}}
 
 	1 & Donating at least 1 gp to the temple. \\
@@ -211,11 +213,11 @@ Their mana stone spells are activated by a command word.
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 
 \subsection{\Glsentrytext{knowledgegod} -- God of Illumination}
@@ -229,11 +231,12 @@ The item in question must be at least as large as a sheet of paper -- commonly a
 His spells appear in a warm glow of light, illuminating an area with a glow the strength of a few candles brighter than the ambient lighting.
 The mana stones of \Gls{knowledgegod} are always activated by a command word.
 
-\begin{figure*}[t!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
 	\begin{footnotesize}
-}{}
+}
+
 \begin{xpchart}{Experience}
 
 	1 & Finding a new type of food or drink. \\
@@ -278,11 +281,11 @@ The mana stones of \Gls{knowledgegod} are always activated by a command word.
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 \subsection{The Code of Experience}
 \index{Code!Experience}
@@ -293,11 +296,12 @@ The world is here to be lived, to be known, to be connected with. You want all t
 \subsection{\Glsentrytext{naturegod} -- Goddess of the Forest}
 \index{Gods!\Glsentrytext{naturegod}}
 
-\begin{figure*}[t!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
 	\begin{footnotesize}
-}{}
+}
+
 \begin{xpchart}{\Glsentrytext{naturegod}}
 
 	1 & Donating at least 1 cp to the temple. \\
@@ -324,11 +328,11 @@ The world is here to be lived, to be known, to be connected with. You want all t
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 \noindent
 \Gls{naturegod} is the mother of all the growing green plants and all the animals.
@@ -348,11 +352,12 @@ Her followers commonly have large dog companions which are able to give blessing
 Plants with a spell are always activated by a command word.
 Animals with a spell implanted always activate the spell at their own behest and rarely at the right time; cats have been known to use implanted spells to hunt prey while a dog which feels threatened might reflexively turn into a rat when scared.
 
-\begin{figure*}[b!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[b!]
 	\begin{footnotesize}
-}{}
+}
+
 \begin{xpchart}{\Gls{wargod}}
 
 	1 & Donating at least 1 gp to the temple. \\
@@ -395,11 +400,11 @@ Animals with a spell implanted always activate the spell at their own behest and
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 
 \subsection{\Glsentrytext{wargod} -- Goddess of War}
@@ -436,11 +441,11 @@ Volcanoes often explode to mark this occasion.
 His temples are few and far between -- a couple of large cities with important people buried, the occasional gnoll hut where a mad shaman of death collects skulls and speaks strange promises about a coming war or a deep, dwarven catacomb where the honoured dead of many a dwarf want to gain the promise of being lead to the halls of the honoured dead.
 
 
-\begin{figure*}[t!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
 	\begin{footnotesize}
-}{}
+}
 \begin{xpchart}{\Glsentrytext{deathgod}}
 
 	1 & Donating at least 1 gp to the temple. \\
@@ -479,11 +484,11 @@ His temples are few and far between -- a couple of large cities with important p
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 \subsubsection{Spheres}
 
@@ -499,11 +504,12 @@ The hand of a man who had 6 \glspl{fp} could store up to 3 \gls{mp}.
 
 Spells implanted in those mana stones are always activated by a command word.
 
-\begin{figure*}[t!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
 	\begin{footnotesize}
-}{}
+}
+
 \begin{xpchart}{the Tribe}
 
 	1 & Helping out a member of the tribe. \\
@@ -537,11 +543,10 @@ Spells implanted in those mana stones are always activated by a command word.
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
-
-\end{figure*}
+	\end{figure*}
+}
 
 
 \subsection{The Code of the Tribe}
@@ -582,11 +587,11 @@ Priests of \Gls{justicegod} often gift their followers with single-use magical p
 If the people who are being used as mana stones are given spells then they can activate those spells at will with a short prayer at an Initiative cost of 8.
 
 
-\begin{figure*}[b!]
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
+	\begin{figure*}[b!]
 	\begin{footnotesize}
-}{}
+}
 
 \begin{xpchart}{\Glsentrytext{justicegod}}
 
@@ -624,10 +629,10 @@ If the people who are being used as mana stones are given spells then they can a
 
 \end{xpchart}
 
-\iftoggle{verbose}{%
+\iftoggle{verbose}{}{
 	\end{footnotesize}
-}{}
+	\end{figure*}
+}
 
-\end{figure*}
 
 \end{multicols}
