@@ -113,10 +113,12 @@ Each character then adds their \textit{Initiative Factor} to get their Initiativ
 The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers.
 If you roll 5 and have a Speed Bonus of 1, your Initiative Score is 6.
 
-\begin{figure*}[t!]
-\footnotesize
-\initiativechart
-\end{figure*}
+\iftoggle{verbose}{}{
+	\begin{figure*}[t!]
+	\footnotesize
+	\initiativechart
+	\end{figure*}
+}
 
 The \gls{gm} then counts downwards from the highest Initiative score.
 When your number comes up, you can act.
@@ -147,6 +149,10 @@ Characters on less than 1 Initiative can continue taking \gls{quickaction}, but 
 For example, you can move, then Keep Edgy, even after you're too disoriented to attack anyone, but that movement will suffer a -1 penalty.
 Meanwhile, Keeping Edgy requires no roll and has no associated numbers, so it does not incur any penalty.
 However, defending oneself after this point would have a -2 penalty, and further \gls{quickaction} would suffer a -3 penalty.
+
+\iftoggle{verbose}{
+	\initiativechart
+}{}
 
 \subsection{Attack}
 \label{attack}
