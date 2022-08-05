@@ -478,11 +478,11 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
     };
 }%
 }
-\titleformat{\section}{\large\needspace{8em}}{\titlebar}{0.1cm}{\textcolor{white}}
+\titleformat{\section}{\large\needspace{10em}}{\titlebar}{0.1cm}{\textcolor{white}}
 \renewcommand*{\thesection}{\arabic{section}}
 
 \titleformat{\subsection}
-{\needspace{4em}\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+{\needspace{7em}\normalfont\large\bfseries}{\thesubsection}{1em}{}
 
 %
 \titleformat{\subsubsection}
@@ -588,6 +588,7 @@ interior code={ \path[tcb fill interior] ([xshift=-2mm]interior.west)
 }%
 
 \newcommand{\spelllevel}{%
+	\needspace{10em}
 	\addtocounter{spelllevel}{1}%
 	\subsection{\currentsphere~ Level \arabic{spelllevel}}%
 }
@@ -679,7 +680,7 @@ Roll & Result \\
 \newcommand{\li}{\addtocounter{enc}{-1}\arabic{enc}&}
 \newcommand{\lii}{\addtocounter{list}{-1}\arabic{list}&}
 
-\newtcolorbox{boxtable}[1][c|X]{
+\newtcolorbox{boxtable}[1][cX]{
 	tabularx={#1},
 	top=10pt,
 	bottom=10pt,
