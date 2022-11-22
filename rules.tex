@@ -526,10 +526,9 @@ Characters can significantly improve their average travel-times with a horse, co
 War horses aren't much faster than regular horses, but they won't become so easily frightened when danger approaches.
 
 \settoggle{examplecharacter}{true}
+\huntingdog[\npc{\A}{Hunting Dog}]
 
 Hunting dogs are mostly useless in warfare, but they make excellent watchmen.
-
-\huntingdog[\npc{\A}{Hunting Dog}]
 
 \subsection{Weight \& Encumbrance}
 \index{Weight}
@@ -561,7 +560,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 \newcommand{\servicesChart}{
 
-\begin{nametable}[XX]
+\begin{tcolorbox}[tabularx={XX},title=Services,bottom=10pt,left=3pt,right=3pt,code={\rowcolors{2}{}{gray!10}}]
 
 	\textbf{Sellsword} & 10sp/ day \\\hline
 
@@ -601,7 +600,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 
 	Fancy Room & 1sp \\
 
-\end{nametable}
+\end{tcolorbox}
 }
 
 \iftoggle{verbose}{
@@ -668,6 +667,7 @@ If a player has an \gls{adventuringequipment} item, they can decided to describe
 \begin{itemize}
 
 \item{Chalk}
+\item{Flour}
 \item{Lock picking set}
 \item{Medical equipment}
 \item{Mirror}
