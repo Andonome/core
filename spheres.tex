@@ -900,10 +900,6 @@ As usual, the illusion is still delicate, and if the person is struck or disturb
 
 \begin{multicols}{2}
 
-\iftoggle{verbose}{
-	\sidepic[33]{Roch_Hercka/conjuration_left}{\label{roch:invocation}}
-}{}
-
 \noindent
 This is the first choice of spheres for any battle-mage.
 It is designed specifically to destroy targets with balls of lightning and fire.
@@ -926,6 +922,9 @@ Larger fires require a \textit{Wide Darkness} spell.
 
 \label{fireball}
 \spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}\\
+\iftoggle{verbose}{
+	\sidepic[40]{Roch_Hercka/conjuration_left}{\label{roch:invocation}}
+}{}
 The mage throws out a ball of flaming, crackling ball of energy, which strikes and burns the target.
 The Damage is 3 Damage, plus the spell's Level, plus the caster's Intelligence Bonus.
 
