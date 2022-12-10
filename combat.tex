@@ -262,6 +262,8 @@ Stronger characters already have more \gls{hp}, which has already kept them fart
 For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
 That makes the \gls{tn} 7 for the Vitality Check.
 
+\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
+
 A failed Vitality check means that the character is dead.%
 \iftoggle{verbose}{%
 \footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
@@ -272,7 +274,11 @@ A successful one means that the character is unconscious for the remainder of th
 At the end of the scene they can make further Vitality Checks to see if they wake up.
 When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
 
-\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
+\iftoggle{verbose}{
+  At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
+  Everyone's \gls{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 7 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
+  \footnotesize{See page \pageref{weightrating} for \nameref{weightrating}.}
+}{}
 
 \end{multicols}
 
