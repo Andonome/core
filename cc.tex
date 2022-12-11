@@ -343,6 +343,23 @@ This covers all manner of fancy movements, from somersaults and rolling to climb
 It might be paired with Dexterity when a character is attempting to roll under then leap over tables or otherwise navigate uneven terrain.
 For flat-out sprinting, the Speed Attribute is always preferred, while Strength is primary when characters want to throw cannon balls.
 
+\subsection{Caving}
+
+Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
+\iftoggle{verbose}{%
+Just as most humans understand some basic Wyldcrafting, almost all dwarves and gnomes know a little of the Caving Skill.
+
+Those with a poor understanding of caves can make foolish mistakes, like taking an open flame into a long, narrow tunnel,%
+\footnote{This can remove so much oxygen from the air, they begin to giggle, hallucinate, and possibly pass out.}
+building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
+
+Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{%
+  mushrooms, but the differences can still trip them up at times.
+}{
+  woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+  }
+}{}
+
 \subsection{Craft}
 
 The Craft Skill allows players to make and fix things, and occasionally break things.
@@ -350,10 +367,6 @@ Designing new equipment requires an Intelligence roll, while making them require
 Strength could even be used to govern making simple things (such as a make-shift shelter) with unyielding materials such as green wood.
 
 Using moulds or other pre-set designing materials allows the character to perform the Craft roll as a \gls{restingaction} (see page \pageref{restingactions}) and may provide a bonus to the roll depending upon the quality of tools available.
-
-\subsection{Beast Ken}
-
-Beast Ken covers training, handling, calming and generally working with animals. It might be paired with Charisma in order to calm down a frightened horse, or with Intelligence in order to guess why a bear is behaving so unusually. Training animals is usually paired with Intelligence, though once the animal is trained, Wits allows a character to effectively give commands.
 
 \subsection{Deceit}
 
@@ -370,7 +383,13 @@ It is used when characters want a price lowered, or are hoping to get someone to
 If, however, the persuasive arguments are not concerned with making someone feel for the character but with the cold hard facts, the Intelligence Attribute is preferred.
 This might be used to convince someone not to go to war with a neighbouring nation or show how farming more land is not in their own best interest.
 
-Commonly, Empathy is used to spot lies when paired with Wits. Humans are famously bad at this, resulting in wildfires of bogus rumours around human communities, while it can be very difficult to lie to elves.
+\iftoggle{verbose}{%
+  Commonly, Empathy is used to spot lies when paired with Wits.
+  Humans are famously bad at this, resulting in wildfires of bogus rumours around human communities, while it can be very difficult to lie to elves.
+  }{}
+
+Calming animals very often requires this kind of insight, although animals have very little care how `friendly', someone seems to other people.
+Empathy rolls to calm or predict animals typically use the Intelligence Attribute.
 
 \subsection{Medicine}
 
