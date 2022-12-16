@@ -18,11 +18,12 @@ The config directory is a subtree, so don't touch it unless you know what you're
 
 -->
 
-|             Downloads          |         Questions             |
-|:-------------------------------|:------------------------------|
-| [Core Book][core download]     | [Wiki][wiki]                  | 
-| [Character Sheet][cs]          | [Email an idea][issuesEmail] |
-| [Reference Version][reference] | [Issues Board][board]         |
+|             Downloads                |         Questions             |
+|:-------------------------------------|:------------------------------|
+| [Core Book][core download]           | [Wiki][wiki]                  | 
+| [Character Sheet][cs]                | [Email an idea][issuesEmail]  |
+| [Reference Version][reference]       | [Issues Board][board]         |
+| [Character Spreadsheet][spreadsheet] |                               |
 
 BIND is a fantasy tabletop RPG.  It's a free-as-in-freedom project, meaning that anyone can grab a copy of the source document and improve the rules, change the wording, add images, and then print it out, just like the original.
 
@@ -217,6 +218,6 @@ If you want to get involved, there are a number of ways to contribute:
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
 [cs]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/resources.pdf?job=compile_pdf
-
+[spreadsheet]: https://gitlab.com/bindrpg/core/uploads/c74bc6dd0e4deb3743a0dc2e2fd54299/bind_cs.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
