@@ -16,6 +16,7 @@ ${filename}.glg: svg-inkscape
 resources: resources.pdf ${filename}.pdf
 resources.pdf: $(wildcard CS/*.tex)
 	pdflatex CS/resources.tex
+	pdflatex CS/resources.tex
 svg-ref:
 	pdflatex  -shell-escape main_ref.tex
 	pdflatex  main_ref.tex
