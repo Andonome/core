@@ -3,256 +3,281 @@
 \begin{tcbposter}[
   coverage = {
       spread,
-      %interior style={bottom color=white},
       watermark text={BIND},
       watermark color=black!25!white,
       watermark opacity=0.4
   },
-  poster   = {showframe=false,columns=30,rows=12},
+  poster   = {
+    showframe=false,
+    columns=30,
+    rows=18
+  },
   boxes    = {
-      enhanced standard jigsaw,sharp corners=downhill,arc=7mm,boxrule=.6mm,
-      colback=white,opacityback=0.7,colframe=black,
-      title style={left color=black,right color=white},
-      fonttitle=\bfseries
+    enhanced standard jigsaw,
+    boxsep=4pt,
+    left=2pt,
+    boxrule=.6mm,
+    colback=white,
+    drop fuzzy shadow,
+    %opacityback=0.7,
    }
 ]
 
 %----
-% try removing 'interior engine'
-\posterbox[blankest,interior engine=path, halign=center,valign=center,colupper=white!25!black,
-	]{name=title,column=1,span=29,below=top}{
-		\vspace{.3cm}
-		\begin{tabular}{llllll}
-			Name: & \vlongline & Player: & \vlongline & Code: & \vlongline \\
-			\\
-			Concept: & \vlongline & Race: & \vlongline & Culture: & \vlongline \\
-		\end{tabular}
-		\vspace{0.3cm}
+  \posterbox[
+    blankest, halign=center,valign=center,
+  ]{name=title,column=1,span=29}{
+    \vspace{.8cm}
+    \begin{tabularx}{\linewidth}{lXlXlX}
+      Name: & \vlongline & Player: & \vlongline & Code: & \vlongline \\
+      \\
+
+      Concept: & \vlongline & Race: & \vlongline & Culture: & \vlongline \\
+    \end{tabularx}
 }
 
 %----
-	\posterbox[adjusted title=Attributes (5 \textbar~10/20/30/50)]{name=attributes,column=1,row=2,span=10,rowspan=2}{\vspace{-.3cm}\begin{tabular}{ll}
-		\hiderowcolors
-		& {\tiny Penalties \hspace{30pt} Bonuses} \\
-		Strength & \attributecircles \\
-		Dexterity & \attributecircles \\
-		Speed & \attributecircles \\
-		Intelligence & \attributecircles \\
-		Wits & \attributecircles \\
-		Charisma & \attributecircles \\
-	\end{tabular}}
+  \posterbox[
+    adjusted title=Attributes (5 | 10/20/30),
+  ]{name=attributes,column=1,row=3,span=10,rowspan=3}{
+  \vspace{-.3cm}
+  \begin{tabular}{ll}
+    \hiderowcolors
+    & {\tiny Penalties \hspace{30pt} Bonuses} \\
+    Strength & \attributecircles \\
+    Dexterity & \attributecircles \\
+    Speed & \attributecircles \\
+    Intelligence & \attributecircles \\
+    Wits & \attributecircles \\
+    Charisma & \attributecircles \\
+  \end{tabular}}
 %----
 
-	\posterbox{name=gumption,column=11,row=2,span=8,rowspan=2}{
 
-	\vspace{.2cm} {\small HP \tiny{(6 + Str)}}
-
-	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-
-		\hiderowcolors
-		\ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\
-		\tenboxes
-	\end{tabular}
-
-	\vspace{.6cm} {\small Fatigue}
-
-	\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-
-	\tenboxes
-		\ding{111} & \ding{111} & \ding{111} & \ding{111} & \ding{111} \\
-		\ding{182} & \ding{183} & \ding{184} & \ding{185} & \ding{186} & \\
-	\end{tabular}
-
-	}
 %----
-	\posterbox{name=mp,column=19,row=2,span=8,rowspan=2}{
 
-		\vspace{.2cm} {\small FP (10/15/20)} \shortline {\tiny $+ Cha$}
+  \posterbox[
+    blankest,interior engine=path, halign=center,valign=center,
+    opacityback=0,
+  ]{name=gumption,column=19,row=3,span=8,rowspan=5}{
+
+  \vspace{.2cm} {\small HP \tiny{(6 + Str)}}
+
+  \begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
+
+    \ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\
+    \tenboxes
+  \end{tabular}
+
+    \vspace{.2cm} {\small FP (10/15/20)} \shortline {\tiny $+ Cha$}
 
 \begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
 
-		\hiderowcolors
-		\tencircles
-		\tenboxes
-		\tencircles
-		\tenboxes
-	\end{tabular}
+    \hiderowcolors
+    \tencircles
+    \tenboxes
+    \tencircles
+    \tenboxes
+  \end{tabular}
 
-		\vspace{.2cm} {\small MP} {\tiny $=3\times spheres +Wts$}
+    \vspace{.2cm} {\small MP} {\tiny $=3\times spheres +Wts$}
 
 \begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
 
-		\hiderowcolors
-		\tencircles
-		\tenboxes
+    \hiderowcolors
+    \tencircles
+    \tenboxes
+    \tencircles
+    \tenboxes
 
-	\end{tabular}
+  \end{tabular}
 
-		}
+    {\small Fatigue}
+    \par
+    \begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
+
+    \tenboxes
+    \fiveBoxesRow & \textbf{Encumbrance} \\
+      \ding{182} & \ding{183} & \ding{184} & \ding{185} & \ding{186} & 
+      \vspace{2mm}\line(1,0){50} \\
+    \end{tabular}
+
+  }
+%----
+
+    \setcounter{track}{18}
+    \posterbox[
+    ]{name=track,column=27,row=3,span=3,rowspan=15.8}{ 
+      {\large
+
+        \Repeat{18}{\tracker}
+      }
+      }
 
 %----
 
-		\setcounter{track}{18}
-		\posterbox{name=track,column=27,row=1,span=3,rowspan=11.8}{ 
-			{\large
+  \posterbox[
+  adjusted title=Armoury,
+  ]{name=armoury,column=1,row=10,span=18,rowspan=4}{
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\linewidth}{p{.2\textwidth}llllX}
+      \setlength{\parskip}{3mm}
+      Weapon & Dam. & Init. & Ev. & Wt. & Knack \\
+      
+      \writeline & \shortline & \shortline & \shortline &\shortline &  \hrulefill \\
+      \writeline & \shortline & \shortline & \shortline &\shortline &  \hrulefill \\
+      \writeline & \shortline & \shortline & \shortline &\shortline &  \hrulefill \\
 
-			\Repeat{18}{\tracker}
+    \end{tabularx}  
 
+    \begin{tabularx}{\linewidth}{XXXXr}
+      Armour & DR & Weight & Type & Encumbrance \\
+      \hrulefill & \shortline & \shortline & \shortline & \hrulefill \\
+    \end{tabularx}
 
-			}
-
-			}
-
+  }
 %----
+  \posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=11,row=8,span=8,rowspan=1.6}{
+    \begin{tabularx}{\linewidth}{Xp{0em}p{0em}p{0em}}
 
-		\posterbox[adjusted title=Damage]{name=track,column=1,row=4,span=4,rowspan=1}{ 
-	\tiny{(Strength)}
+      \skill{Combat}
+      \skill{Projectiles}
+    \end{tabularx}
+  }
+
+%-----
+  \posterbox[
+    blankest,interior engine=path, halign=center,valign=center,
+    opacityback=0,
+  ]
+  {name=Derived,column=1,row=6,span=10,rowspan=4}{
+    \begin{tabular}{cccc}
+
+      Init. & Attack & Damage & Defence \\
+
+      \\
+
+      \shortline & \shortline & \shortline & \shortline \\
+
+    \end{tabular}
+  
+    \begin{multicols}{2}{
+      \footnotesize \begin{tabular}{lc}
+      {\bf Action} & {\bf Cost} \\\hline
+      Draw Weapon & 2 \\
+      Guarding & 2 \\
+      Ram & 3 \\
+      Light Weapon & 4 \\
+      Med. Weapon & 6 \\
+      Use Item & 8 \\
+      Spell & 3+lv. \\
+      
+    \end{tabular}}
+      {\footnotesize \begin{tabular}{lc}
+      {\textbf Quick Actions} & \\\hline
+      Charge & 0 \\
+      Evasion & 2 \\
+      Keep Edgy & 2 \\
+      Move & 2 \\
+      Speak & 2 \\
+      \end{tabular}}
+
+    \end{multicols}
 }
 
-%----
+%-----
+  \posterbox[adjusted title=Skills (5/10/15)]
+  {name=skills,column=11,row=3,span=8,rowspan=5}{
+    \begin{tabularx}{\linewidth}{Xp{0em}p{0em}p{0em}}
 
-	\posterbox[blankest]{name=factors,column=3,row=4}{\begin{tikzpicture}
-  \begin{scope}[blend group = soft light]
-    \fill[gray!11!white,opacity=0.8]   ( 90:1.5) circle (1.2);
-    \fill[gray!12!white,opacity=0.8] (210:1.5) circle (1.2);
-    \fill[gray!13!white,opacity=0.8]  (330:1.5) circle (1.2);
-  \end{scope}
-  \node at ( 90:1.5)    {Initiative \tiny{(Speed)}};
-  \node at ( 210:1.5)   {Strike \tiny{(Combat)}};
-  \node at ( 330:1.5)   {Evasion \tiny{(Dexterity)}};
-  \node [font=\huge] {Combat Factors};
-\end{tikzpicture}}
+      \skill{Academics}
+      \skill{Athletics}
+      \skill{Caving}
+      \skill{Crafts}
+      \skill{Deceit}
+      \skill{Empathy}
+      \skill{Medicine}
+      \skill{Performance}
+      \skill{Larceny}
+      \skill{Seafaring}
+      \skill{Stealth}
+      \skill{Tactics}
+      \skill{Vigilance}
+      \skill{Wyldcrafting}
+      \skill{\line(1,0){70}}
 
-%----
+    \end{tabularx}
+  }
 
-	\posterbox{name=initbox,column=1,row=7,span=8,rowspan=1.1}{\begin{multicols}{2}{\tiny \begin{tabular}{lc}
-		{\bf Action} & {\bf Cost} \\\hline
-		Draw Weapon & 2 \\
-		Guarding & 2 \\
-		Ram & 3 \\
-		Light Weapon & 4 \\
-		Med. Weapon & 6 \\
-		Use Item & 8 \\
-		Spell & 3+lv. \\
-		
-	\end{tabular}}
-		{\tiny \begin{tabular}{lc}
-		{\textbf Quick Actions} & \\\hline
-		Charge & 0 \\
-		Evasion & 2 \\
-		Keep Edgy & 2 \\
-		Move & 2 \\
-		Speak & 2 \\
-		\end{tabular}}
+%-----
+  \posterbox[adjusted title=Spheres (10/15/25)]{name=spheres,column=19,row=8,span=8,rowspan=3}
+  {
+  \setlength{\parskip}{3mm}
+  \vspace{.2cm}
 
-	\end{multicols}
-}
-%----
+  \hrulefill \fiveboxes
 
-	\posterbox[adjusted title=Racial Abilities]{name=racial_abilities,column=12,row=7,rowspan=1,span=15}{}
+  \hrulefill \fiveboxes
+
+  \hrulefill \fiveboxes
+
+  \hrulefill \fiveboxes
+
+  }
 
 %----
-	\posterbox[adjusted title=Armoury]{name=armoury,column=12,row=4,span=15,rowspan=3}{
-		\begin{tabular}{p{.2\textwidth}lllll}
-			Weapon & Dam. & Init. & Ev. & Wt. & Knack \\
-			\\
-			
-			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
-			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
-			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
-			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
-			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
-			\writeline & \shortline & \shortline & \shortline &\shortline &  \writeline \\
-		\end{tabular}	
-		\vspace{.3cm}
+  \posterbox[
+    adjusted title=Equipment (1 per Skill),
+  ]
+  {name=equipment,
+    column=1,
+    row=14,
+    span=26,
+    rowspan=4,
+  }{
 
-		\begin{tabular}{lcccc}
-			Armour & DR & Weight & Type & Encumbrance \\
-			\\
-			\writeline & \shortline & \shortline & \shortline & \shortline \\
-		\end{tabular}
+  \vspace{.4cm}
+  \setlength{\parskip}{3mm}
 
-	}
-%----
-	\posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=19,row=8,span=8,rowspan=1}{
-		\begin{tabular}{lp{0em}p{0em}p{0em}}
+  \hrulefill
 
-			\skill{Combat}
-			\skill{Projectiles}
-			\end{tabular}
-	}
+  \hrulefill
 
-	\posterbox[adjusted title=Skills (5/10/15)]{name=skills,column=19,row=9,span=8,rowspan=3.8}{
-		\begin{tabular}{lp{0em}p{0em}p{0em}}
+  \hrulefill
 
-			\skill{Academics}
-			\skill{Athletics}
-			\skill{Caving}
-			\skill{Crafts}
-			\skill{Deceit}
-			\skill{Empathy}
-			\skill{Medicine}
-			\skill{Performance}
-			\skill{Larceny}
-			\skill{Seafaring}
-			\skill{Stealth}
-			\skill{Tactics}
-			\skill{Vigilance}
-			\skill{Wyldcrafting}
-			\skill{\line(1,0){70}}
+  \hrulefill
 
-		\end{tabular}
-	}
+  \hrulefill
 
-	\posterbox[adjusted title=Spheres (10/15/25)]{name=spheres,column=1,row=8,span=10,rowspan=2}
-	{
-	\vspace{.2cm} \line(1,0){110} \fiveboxes {~\tiny (2MP)}
+  \hrulefill
 
-	\vspace{.2cm} \line(1,0){110} \fiveboxes {~\tiny (4MP)}
+  \vspace{8mm}
+  CP \weeline SP\weeline GP\weeline \hspace{3cm} Total XP \weeline Spent XP \weeline
+  }
 
-	\vspace{.2cm} \line(1,0){110} \fiveboxes {~\tiny (6MP)}
+%---
 
-	\vspace{.2cm} \line(1,0){110} \fiveboxes {~\tiny (8MP)}
+  \posterbox[
+    adjusted title=Knacks (5/10/15)
+  ]
+  {name=knacks,column=19,row=11,span=8,rowspan=3}{
 
-	\vspace{.2cm} \line(1,0){110} \fiveboxes {~\tiny (10MP)}
+  \setlength{\parskip}{3mm}
 
-	}
+    \vspace{.2cm}
 
-%----
+    \hrulefill
 
-	\posterbox[adjusted title=Equipment (1 per Skill)]{name=equipment,column=1,row=10,span=18,rowspan=2.8}{
+    \hrulefill
 
-	\vspace{.4cm}
+    \hrulefill
 
-	\longline	
+    \hrulefill
 
-	\longline	
+  }
 
-	\longline	
+%------
 
-	\longline	
-
-	\longline	
-
-	\longline	
-
-	\longline	
-
-	CP \weeline SP\weeline GP\weeline 
-
-	Total XP \weeline Remaining XP \weeline}
-
-	\posterbox[adjusted title=Knacks (5/10/15)]{name=knacks,column=11,row=8,span=8,rowspan=2}{
-		\vspace{.3cm}
-
-		\Split
-		\Split
-		\Split
-		\Split
-		\Split
-		\Split
-
-	}
 \end{tcbposter}
 
 \pagebreak
@@ -260,32 +285,31 @@
 \begin{tcbposter}[
   coverage = {
       spread,
-      %interior style={bottom color=white},
       watermark text={stories \\ companions \\ notes},
       watermark color=black!25!white,
       watermark opacity=0.4
   },
-  poster   = {showframe=false,columns=30,rows=12},
+  poster   = {
+    columns=30,
+    rows=12
+  },
   boxes    = {
-      enhanced standard jigsaw,sharp corners=downhill,arc=7mm,boxrule=.6mm,
-      colback=white,opacityback=0.7,colframe=black,
-      title style={left color=black,right color=white},
+      enhanced standard jigsaw,
       fonttitle=\bfseries
    }
 ]
 
-	\posterbox[adjusted title=Stories]{name=stories,column=1,row=1,rowspan=11,span=29}{
+  \posterbox[adjusted title=Stories]{name=stories,column=1,row=1,rowspan=11,span=29}{
 
-		{\Huge Story Points}
+    {\Huge Story Points}
 
-		\vspace{0.5cm}
+    \vspace{0.5cm}
 
-	\begin{tabular}{p{1em}p{1em}p{1em}p{1em}p{1em}}
+  \begin{tabular}{p{1em}p{1em}p{1em}p{1em}p{1em}}
 
-		\Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} \\
+    \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} & \Huge\ding{111} \\
 
-	\end{tabular}
+  \end{tabular}
 
-		}
+    }
 \end{tcbposter}
-
