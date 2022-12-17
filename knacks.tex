@@ -37,12 +37,13 @@ The character receives +2 to Strike when making unarmed attacks or grappling.
 \subsubsection{Cutting Swing}
 
 The character can cut through more than one opponent at a time, or slice open multiple skulls with a single arc of metal.
-Any time the character reduces an opponent below 1 \gls{hp}, they can immediately make another attack at no Initiative cost against anyone in range of the weapon; if that attack reduces the opponent below 1 \gls{hp} then further attacks can be made until no further enemies are within range or the character fails to fell an enemy.
-
-This knack can only be used with missile weapons if enemies are standing behind each other.
+Any time the character reduces an opponent to 0 \glspl{hp}, the remaining damage transfers to
 \iftoggle{verbose}{%
-  If Adrenaline Surge is active, it remains active throughout each attack.
-}{}
+  any other opponent in range as the weapon slices across multiple throats, stomachs, and limbs.
+  This process recurs until either no damage or no enemies remain.
+
+}{the next viable target.}
+This knack can only be used with missile weapons if enemies are standing in a direct line.
 
 \subsubsection{Disarm}
 
