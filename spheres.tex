@@ -1209,12 +1209,17 @@ Characters who gain in Strength will find the armour becomes too tight, and will
 The caster targets an animal, and copies it completely.
 The closer an animal is to the caster, physically, the easier they can copy it.
 
-The distance between a target animal and the caster, is determined by the difference between their Strength and Speed.
+The distance between a target animal and the caster, is determined by the difference between the caster's Strength and the target's, added to the difference between their Speed Attributes.
 \iftoggle{verbose}{%
-Suppose an elven caster has Strength -2 and Speed +1.
-A bird has Strength -5, so that's a different of 3.
-The bird's Speed is +3, so that's a difference of 2, for a total of 5.
-}{}
+  Suppose an elven caster has Strength -2 and Speed +1.
+  A bird has Strength -5, so that's a different of 3.
+  The bird's Speed is +3, so that's a difference of 2, for a total of 5.%
+  \footnote{
+    $\gls{tn} = 7 + |Str^C - Str^T| + |Spd^C - Spd^T|$
+  }
+}{
+  $\gls{tn} = 7 + |Str^C - Str^T| + |Spd^C - Spd^T|$
+}
 The spell can breach a `point-distance' equal to twice the spell's Level, plus the caster's Intelligence.
 The caster rolls with Intelligence + Wyldcrafting (or Caving), and must reach a \gls{tn} of 7 plus the number of Attribute points required to bridge the gap.
 \iftoggle{verbose}{%

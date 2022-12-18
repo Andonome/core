@@ -6,11 +6,11 @@
 - pdflatex (loads of packages)
 - git-lfs
 - inkscape (for composing svg images)
-- (optional) pandoc
+- pandoc
 
 # config/
 
-The config directory is a subtree, so don't touch it unless you know what you're doing.
+The config directory is a submodule, so don't touch it unless you know what you're doing.
 
 # compiling
 
