@@ -841,12 +841,6 @@ This won't do much good when someone walks close to an inky patch of darkness, a
 Casting this as a \textit{Colourful Cloak} allows the shadow to take on real colours, so the caster can make something look like just about anything else.
 When only trying to hide, the Stealth Skill is used, but if an illusion is cast to make something look like another, the Skill depends on what it should look like.
 
-\spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}\\
-The mage places a spell on any item or person, so it seems to have more of fewer \glspl{mp} than it really has.
-This circumvents spells such as `Detect Mana'.\footnote{See page \pageref{detectmagic}.}
-
-The caster rolls against a \gls{tn} 7, and if successful, the caster can alter the apparent mana in an item by an amount equal to the spell's Level plus their Intelligence Bonus.
-
 \spell{Aparition}{Continuous}{Varies}{Create a shadow-puppet in the air}\\
 The caster creates a shadow, with depth and cohesion.
 Typically, these are used to fool people on dark nights that some person or creature is there.
@@ -857,6 +851,17 @@ As per \textit{Cloak}, the \textit{Colourful} enhancement can paint colour over 
 \iftoggle{verbose}{%
 As always, Sentient spells take the caster's Code, so the illusions will not act like particular people every well.
 }{}
+
+\spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}\\
+The mage places a spell on any item or person, so it seems to have more of fewer \glspl{mp} than it really has.
+This circumvents spells such as `Detect Mana'.\footnote{See page \pageref{detectmagic}.}
+
+The caster rolls against a \gls{tn} 7, and if successful, the caster can alter the apparent mana in an item by an amount equal to the spell's Level plus their Intelligence Bonus.
+
+\spell{Muffle}{Continuous}{Deceit}{Remove a target's reflection, shadow, and echoes.}\\
+This spell cancels the secondary sensory effects from anyone.
+They can still speak, but their voice does not echo around caverns.
+Anyone can see them, but they cast no reflection, or shadow.
 
 \spell{Silence}{Continuous}{Stealth}{Stop all noise getting to a target}\\
 The target hears nothing, and produces no sound.
@@ -899,6 +904,7 @@ The illusionist finally learns to make less of something, rather than more.  A s
 An empty patch of ground could suddenly appear to break open, showing a great chasm in the ground.
 
 As usual, the illusion is still delicate, and if the person is struck or disturbed in any way, the illusion dissipates.
+The spell only targets the immediate sight of someone, so the target still casts a shadow\iftoggle{verbose}{(though the caster can still remove this with the Muffle spell, above)}{}.
 
 \end{multicols}
 
