@@ -218,6 +218,6 @@ If you want to get involved, there are a number of ways to contribute:
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
 [cs]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/resources.pdf?job=compile_pdf
-[spreadsheet]: https://gitlab.com/bindrpg/core/uploads/62ad8b6e6b60f45713086f9375c8de3a/bind_cs.ods
+[spreadsheet]: https://gitlab.com/bindrpg/core/uploads/a364aeff851c871324e325bbb5741159/bind_cs.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
