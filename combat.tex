@@ -1124,14 +1124,25 @@ Weapons also receive a -2 penalty to Damage.
 
 \noindent
 \iftoggle{verbose}{%
-Unsure if your \glspl{npc} want to fight?  Roll their Combat or Aggression Skill at \gls{tn} 7.
+  Unsure if your \glspl{npc} want to fight?
+  Roll their Combat or Aggression Skill at \gls{tn} 7, plus the modifiers in the Morale Chart.
+  This group roll counts for everyone, so if the group roll a total of \gls{tn} 7, but one member is wounded, that member will fail the roll and flee.
+  Of course on the next round, this may prompt others to flee, as it changes the proportions of creatures to \glspl{pc}.
 
-Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day. At the start of each \gls{round}, the \gls{gm} rolls a morale check for the enemy if they think the enemy have a good reason to flee.
+  Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day.
 
-The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
+  The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
+
+  You don't need to create a separate roll for this check -- just use the standard Initiative roll instead.
+  For example, you might roll $2D6$ at the start of a round, and hit `8'.
+  The monsters gain a +2 bonus for outnumbering the \glspl{pc}, but a -2 penalty because the \glspl{pc} strongest person is stronger than any of them.
+  Overall, the result is `9`, so the enemies pass the morale check, stay to fight, and take this as their Initiative roll.
+  With their Initiative bonus of +3, their use an Initiative score of `11'.
+
 }{%
-Before each round of combat, the \gls{gm} rolls a Morale Check for \glspl{npc} at \gls{tn} 6, using their Combat or Aggression Skill, along with the following modifiers.
-If the \glspl{npc} fail the roll, they attempt to flee, otherwise, they fight.
+  Each \glspl{npc} Initiative roll also counts as a \emph{group} Morale check.
+  The roll checks at \gls{tn} 7, plus the \glspl{npc}'s Combat or Aggression Skill (whichever is higher), plus the modifiers in the Morale chart.
+  If the \glspl{npc} fail the roll, they attempt to flee, otherwise, they fight.
 }
 
 When an enemy flees the scene after a fight has begun, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
