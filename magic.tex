@@ -32,6 +32,7 @@
 
 \begin{multicols}{2}
 
+\noindent
 \Glspl{miracleworker} create spells by taking a basic spell, and adding \textit{Enhancements}.
 A young elf might begin being able to cast the \textit{Mist} spell.
 She focuses for a moment, and a small patch of mist forms where she looks.
@@ -59,154 +60,24 @@ As \glspl{miracleworker} progress, they bind together grander, more complicated 
 
 \begin{multicols}{2}
 
-\noindent
-There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic.
-Any character with the appropriate requirements can learn to cast magic.
+\iftoggle{verbose}{
+  \noindent
+  There are various roads to learning magic -- each allows the mage to invoke different spheres and has a different flavour of magic.
+  Acquiring a new Path only requires purchasing the appropriate Knack.
 
-Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically.
-A priest of war may call divine fire to to destroy enemies where an alchemist uses precise gestures to summon the essential form of fire, but both are just using the Invocation sphere.
+  Each school of magic has its own flavour but different people casting spells from the same spheres of magic will end up with exactly the same results, mechanically.
+  A priest of war may call divine fire to to destroy enemies where an alchemist uses precise gestures to summon the essential form of fire, but both are just using the Invocation sphere.
+}{}
 
 \subsection{Multiple Paths}
 
-People can pick up different Paths of Magic by simply fulfilling different requirements.
+People can pick up different Paths of Magic by purchasing multiple Knacks.
 If someone begins as a Blood mage with Aldaron 2 then later learns Song Magic, they would be able to cast Aldaron through Song magic with only a little practice.
 In gaming terms, the first \gls{downtime} grants full access to all spheres from any secondary Path.
 
 However, the opposite is not true.
 Those on the Path of Song learn spheres easier than others, spending 5 fewer \glspl{xp} to purchase a sphere.
 If a sphere has not been `fully' paid for, then the remaining \glspl{xp} must be spent to use that sphere on a different path.
-
-\subsection{The Path of Alchemy}
-\index{Alchemy}
-
-\noindent\textbf{Spheres}: Conjuration, Invocation, Force, Illusion
-
-\noindent The alchemist learns magic through rote repetition and formulae which are usually be invoked through precise hand-gestures and mystical words which are attuned to the background harmonics of the universe.  Alchemy was invented by the gnomes but has since become popular with various upper-class humans. This is the typical magic of a standard town wizard. Alchemy requires one slot of Academics in order to be learnt.
-
-\subsubsection{Special Considerations}
-
-Alchemists cannot naturally intuit how the next level of any sphere works.
-Instead they must pick up levels slowly and through intense study.
-They only receive new levels during \gls{downtime}.
-
-\subsubsection{Mana Stones}
-\index{Mana Stones!Alchemy}
-
-Alchemical mana stones are always precious items, such as gold, rubies, or diamonds.  A mana stone costs 10 gp per \gls{mp} which can be stored inside it, so a mana stone storing 3 \gls{mp} would cost 30 gp. The exact item might be a simply ruby which stores mana, a diamond-headed wand of ivory which blasts out fireballs or a sword with jewels on the handle which surrounds the warrior with moving illusions of their. Alchemical mana stones with a spell always activate those spells with a command word.
-
-Such mana stones can be reworked to make other items, but can only store fewer \glspl{mp} than the first time they were used.
-
-\subsection{The Path of Blood}
-
-\textbf{Spheres}: Aldaron, Enchantment, Force, Invocation, Polymorph
-
-\iftoggle{verbose}{%
-\noindent Certain races, such as elves and dragons, are naturally magical and can learn forms of innate magic. Some humans with a touch of elven (or even draconic) blood have been known to walk the Path of Blood.
-}{}
-
-\subsubsection{Special Considerations}
-
-\iftoggle{verbose}{%
-  Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
-
-  Blood sorcerers are barred from ritual spells -- spending all day trying to cast a spell will not help in the slightest.
-
-}{
-  Blood sorcerers cannot use ritual spells.
-}
-
-\subsubsection{Mana Stones}
-\index{Mana Stones!Blood}
-
-Those with magic flowing through their own blood can only use themselves as mana stones.
-They can store magic in their heart, their fingers, or eyes, but can never use an external item to store mana.
-
-\subsection{The Path of Devotion}
-
-\textbf{Spheres}: Aldaron, Fate, and two from the deity's schools of choice.
-
-\noindent The character is devoted to a god and studies with priests in how to unlock the magic of the deity. The character's god will determine their additional spheres of magic and their appearance.
-
-To start on the path of devotion, the character requires a level in Academics in order to properly study the teachings of the god.
-
-The appearance of spells and the form of mana stones varies depending upon deity.
-
-\iftoggle{verbose}{%
-This path is most commonly taken by humans and the occasional gnoll. Gnomes don't acknowledge gods, elves think they \emph{are} gods and dwarves tend to view their own rune magic as divine in a very general sense.
-}{}
-
-\subsubsection{Special Considerations}
-
-Casters of devotion cannot use \glspl{hp} to cast once they run out of \glspl{mp}.
-If they do not have the \glspl{mp} to cast a spell, they simply cannot cast.
-
-New levels in spheres may only be bought when the character shows great devotion to the deity.
-Specifically, the character can only raise those spheres at the exact moment they earn \glspl{xp} from following that deity.
-
-A first level sphere requires only earning 1 \gls{xp}, a second level spell requires earning 3 \glspl{xp}, a third level spell requires earning 5 \glspl{xp}, a fourth level spell requires earning 10 \glspl{xp}, and finally, a fifth level spell requires earning 15 \glspl{xp}.
-
-\subsubsection{Mana Stones}
-
-Each type of devotion has its own mana stone.
-See the individual references in chapter \ref{gods_codes}.
-
-\subsection{The Path of Runes}
-
-\index{Runes}
-\textbf{Spheres}: Conjuration, Fate, Force, Illusion, Necromancy
-
-\noindent Dwarves are skilled in the art of summoning magics through carving elaborate runes. Typically they are chiselled, but it is possible to simply `paint a spell' onto a surface.
-
-Their mana stones are always precious metals inscribed with runes such as armour with platinum runes or swords with golden runic inlays.
-Those mana stones which have an imprinted spell can be activated by either a command word or a condition.
-
-\subsubsection{Special Considerations}
-
-Runecasters cannot cast spells in the heat of combat -- inscribing runes just takes far too long for \textit{Fast} spell.
-They cannot use the \textit{Fast} enhancement.
-
-\iftoggle{verbose}{
-  \pic{Roch_Hercka/dwarvish_runes}{\label{roch:runes}}
-}{}
-
-However, in return for this deficit, rune casters can learn their craft far more easily.
-Each level of a sphere they purchase costs 5 \gls{xp} less than it normally would.
-While buying Fate 2 would normally cost 10 for the first level and 15 for the second, rune casters merely need to spend 5 \gls{xp} for the first level and 10 for the second.
-If they ever want to use those same sphere through a different path of magic, they must spend 5 \gls{xp} to `repurchase' each level.
-For example, someone who could cast both alchemical and runic magic might purchase Conjuration at the second level for a total of 15 \gls{xp}.
-They could only use it for runic magics, but later they could spend 5 \gls{xp} to be able to cast the first level with either the alchemy path or the rune casting path.
-
-Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
-
-\subsubsection{Mana Stones}
-\index{Mana Stones!Runes}
-
-Rune casters mana stones are, of course, runic carvings, and can never be painted onto anything.
-Such mana stones can store up to 2 \glspl{mp} per \gls{weightrating}, so an item with a \gls{weightrating} of 3 could store up to 6 \glspl{mp}.
-
-\subsection{The Path of Song}
-
-\label{song}\textbf{Spheres}: Aldaron, Enchantment, Fate, Illusion
-
-The character has learnt the magic of song. They can sing illusions into existence, inspire people with great tales and enchant people with a lute. Any instrument, song or performance suffices for casting a spell so long as it is appropriate -- a flute is not usually a good way to magically make people scared.
-
-In order to learn the Path of Song, the mage must have the second level of the Performance Skill. 
-
-\subsubsection{Special Considerations}
-
-Just as with rune magic, song magic can never be cast in an instant.
-Like those on the Path of Runes, Song mages cannot use the \textit{Fast} Enhancement, but need to spend 5 less \gls{xp} each time they buy a level of some magic sphere.
-
-\subsubsection{Mana Stones}
-\index{Mana Stones!Song}
-
-The mana stones of the Path of Song are actual songs.
-The bard composes a song especially for the purpose; when anyone -- anywhere in the world -- plays the song on the correct instrument the mana can be regained.
-
-If anyone ever pulls mana from the song (either for a spell casting or because they are low on mana) while the song-spell is empty, it is destroyed forever.
-The song will be difficult for anyone to remember and will no longer store any mana until someone remakes the spell.
-
-Rare and powerful spell-songs are swapped as currency among bards -- spells which can protect the singer or enchant a crowd.
 
 \end{multicols}
 
@@ -347,6 +218,68 @@ The spell would then cost 3 \glspl{mp} to cast, and require 3 rounds to cast.
   If an illusion spell fails, the illusion persists -- it simply looks obviously magical, like bad CGI.
   If a fireball spell fails, fire still comes, as the mage's mana has to go \emph{somewhere}, even if nothing hits the intended target.
 }{}
+
+\end{multicols}
+
+\section{Mana Stones}
+
+\begin{multicols}{2}
+
+\noindent
+Every path has its own way of creating magical items.
+These magical items always begin life as a `mana stone' -- i.e. a thing which can store mana, and produce it upon command.
+Alchemists typically use gold, while rune-casters use any surface which can hold a rune upon it.
+
+The mana stones often hold spells, which they can summon on the command of the user (or sometimes, based upon the mana stone's own desires).
+When \glspl{miracleworker} walk multiple Paths of magic, they can create mana stones which combine spells, by creating stones which work with both schools.
+For example, an alchemical rune-caster might carve runes into gold plate in order to complete a spell.
+
+\subsection{The Path of Alchemy}
+\index{Alchemy}
+
+\index{Mana Stones!Alchemy}
+
+Alchemical mana stones are always precious items, such as gold, rubies, or diamonds.
+A mana stone costs 10 gp per \gls{mp} which can be stored inside it, so a mana stone storing 3 \gls{mp} would cost 30 gp.
+The exact item might be a simply ruby which stores mana, a diamond-headed wand of ivory which blasts out fireballs or a sword with jewels on the handle which surrounds the warrior with moving illusions of their.
+Alchemical mana stones with a spell always activate those spells with a command word.
+
+Such mana stones can be reworked to make other items, but can only store fewer \glspl{mp} than the first time they were used.
+
+\subsection{The Path of Blood}
+
+\index{Mana Stones!Blood}
+
+Those with magic flowing through their own blood can only use themselves as mana stones.
+They can store magic in their heart, their fingers, or eyes, but can never use an external item to store mana.
+
+\subsection{The Path of Devotion}
+
+
+Each type of devotion has its own mana stone.
+See the individual references in chapter \ref{gods_codes}.
+
+\subsection{The Path of Runes}
+
+\index{Mana Stones!Runes}
+
+Rune casters' mana stones are, of course, runic carvings, and can never be painted onto anything.
+Such mana stones can store up to 2 \glspl{mp} per \gls{weightrating}, so an item with a \gls{weightrating} of 3 could store up to 6 \glspl{mp}.
+
+\subsection{The Path of Song}
+\label{song}
+\index{Mana Stones!Song}
+
+The mana stones of the Path of Song are actual songs.
+The bard composes a song especially for the purpose; when anyone -- anywhere in the world -- plays the song on the correct instrument the mana can be regained.
+
+If anyone ever pulls mana from the song (either for a spell casting or because they are low on mana) while the song-spell is empty, it is destroyed forever.
+The song will be difficult for anyone to remember and will no longer store any mana until someone remakes the spell.
+
+Rare and powerful spell-songs are swapped as currency among bards -- spells which can protect the singer or enchant a crowd.
+
+
+  
 
 \end{multicols}
 
