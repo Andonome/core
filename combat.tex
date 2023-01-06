@@ -2,103 +2,29 @@
 \index{Combat}
 \label{combat}
 
-\newcommand{\initiativechart}{
-
-  \begin{nametable}[XX]{Initiative Costs}
-
-  \textbf{Action} & \textbf{Init. Cost} \\\hline
-
-  \hspace{3em}\textbf{Striking} & \\\hline
-
-  Drawing weapon & 2 \\
-
-  Guard Someone & 2 \\
-
-  Heavy weapon & 8 \\
-
-  Light weapon & 4 \\
-
-  Medium weapon & 6 \\
-
-  Ram & 3 \\\hline
-
-  \hspace{3em}\textbf{Projectiles} & \\\hline
-
-  Crossbow & 3 \\
-
-  Improvised projectile & 7 \\
-
-  Reloading & 2 \\
-
-  Shortbow & 4 \\
-
-  Thrown weapon & 4 \\\hline
-
-  \hspace{3em}\textbf{\Glspl{quickaction}} & \\\hline
-
-  Defence & 2 \\
-
-  Keeping Edgy & 2 \\
-
-  Moving & 2 \\
-
-  Speaking & 2 \\\hline
-
-  \hspace{3em}\textbf{Magic} & \\\hline
-
-  Cast a spell & 3+level \\
-
-  Use magic item & 8 \\
-
-\end{nametable}
-
-}
-
-\startcontents[Combat]
-
 \iftoggle{verbose}{
-\begin{multicols}{2}
+  \begin{multicols}{2}
 
-\noindent
-These life and death rolls are handled somewhat differently from other tasks.
-Let's start with an overview of the basic features, then cover the details later.
+  \noindent
+  These life and death rolls are handled somewhat differently from other tasks.
+  Let's start with an overview of the basic features, then cover the details later.
 
-\begin{exampletext}
-You enter a cavern.
-You hear goblins sprinting towards you around the bend.
+  A successful fight depends as much on proper pacing and timing as anything else.
 
-One of the players rolls Initiative for the group and gets `5'.
-Your Initiative Factor is +2, so your Initiative will be 7.
+  One player rolls Initiative for the players, and the \gls{gm} rolls Initiative for the monsters.
+  This initiative score forms a pool of points which everyone will use to attack, move, defend, et c.
+  
+  You engage a monster in a series of attacks.
+  When you win the roll, you deal damage, reducing the monster's \gls{hp}; when the monster wins, they deal damage to you.%
+  \footnote{It may at first feel odd not to have `attack and defence' rolls, but it cuts rolls which result in `nothing happens', and lets combat focus only on consequential results.}
 
-The goblins are going at 12.
+  Once everyone's gets low, their actions start to take them into the negative.
+  People end up with -2, or even -4 Initiative, which then gives them a penalty to all actions.
+  Those few left on Initiative 1 have the ability to attack people when they have a serious penalty, and that means they can not only attack, but get a vitals shot, piercing enemies' armour, and monsters' thick hydes.
 
-\paragraph{12:}
-The goblins spend 2 Initiative to run round the corner.
+  Occasionally, \glspl{pc} and \glspl{npc} will cast spells, shoot projectiles, or employ combat maneovres, but mostly the basic dance of numbers -- Initiative, Attack, Damage -- will bring events to a close within a few (real-world) minutes.
 
-\paragraph{10:}
-The goblins stab at everyone at the front of the party.
-Your companion rolls $2D6$ to defend at \gls{tn} 10, without any bonus, and receives a nasty spear-wound.
-
-You decide to defend actively -- you have to spend 2 Initiative, but you can roll $2D6+3$ to defend, and the roll succeeds.
-
-\paragraph{8:}
-Your companion strikes back at a goblin, putting the goblin on Initiative 4.
-
-\paragraph{6:}
-The goblin in front of you strikes at you again. 
-If you defend yourself, you'll lose 2 Initiative, and go down to 3, then attack once, and the round will end.
-
-However, if you take this hit without dodging, you can spend 4 Initiative to hit a goblin with your shield, putting you on Initiative 1.
-At Initiative 1, you could then spend 6 Initiative to attack with your sword.
-
-You decide to trust to fate, the goblin hits you, for 5 Damage, and you mark off 5 \glspl{fp} -- the `plot armour' points which keep you alive.
-
-\end{exampletext}
-
-A successful fight depends as much on proper pacing and timing as anything else.
-Each initiative click brings new decisions to the group with a kind of 1-dimensional chess.
-
-\end{multicols}
+  \end{multicols}
 
 }{}
 \section{Basic Combat}
@@ -108,10 +34,13 @@ Each initiative click brings new decisions to the group with a kind of 1-dimensi
 \subsection{Initiative}
 \label{initiative}
 
-At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative.\footnote{The ``party leader'', here means `whoever rolls the Initiative dice first'.}
-Each character then adds their \textit{Initiative Factor} to get their Initiative Score.
-The Initiative Factor is given by characters' Speed Attribute plus weapon modifiers.
-If you roll 5 and have a Speed Bonus of 1, your Initiative Score is 6.
+At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative.%
+\footnote{The ``party leader'', here means `whoever rolls the Initiative dice first'.}
+Each character then adds their \textit{Initiative Factor} (Speed Bonus + Weapon Bonus) to create a unique Initiative Score for the character.
+\iftoggle{verbose}{
+  If you roll 5 and have a Speed Bonus of 1, your Initiative Score is 6.
+  Another character may have an Initiative Factor of 4, so their Initiative would be 9, because everyone in the group uses the same roll.
+}{}
 
 \iftoggle{verbose}{}{
   \begin{figure*}[t!]
@@ -122,17 +51,66 @@ If you roll 5 and have a Speed Bonus of 1, your Initiative Score is 6.
 
 The \gls{gm} then counts downwards from the highest Initiative score.
 When your number comes up, you can act.
-Each time the character takes an action they pay a cost in Initiative -- once it reaches below 1 that character can no longer act.
-Moving costs only 2 Initiative, while swinging an axe costs 6.
+Each time the character takes an action they pay a cost in Initiative -- once it reaches below 1 that character can no longer take standard actions.
 You can spend as much as you like, and even go down to an Initiative score of -5, but once the Initiative count reaches 0, the round ends.
 
-Medium weapons are generally more effective than Light weapons, but they cost 6 Initiative points to take a swing, while Light weapons cost only 4.
+The negative Initiative score also forms a penalty to all actions.
+Characters at Initiative -2 suffer a -2 penalty to all rolls, movement, or anything else they might attempt.
 
-Medium weapons are those with a \gls{weightrating} of -1 or greater.
-Smaller weapons, those with a \gls{weightrating} of -2 or less, and brawling attacks with fists, all count as light weapons.
+\subsection{Attacking}
+
+When you attack an opponent, you spend the Initiative for the attack, and roll $2D6$ + Dexterity + Combat.
+The basic \gls{tn} is 7, but your opponent may raise this by resisting.
+
+\begin{exampletext}
+  That idiot at the bar has been talking shit about dwarves too long, so you tap him on the shoulder, and plant your fist in his face.
+  You have Dexterity +1 and Combat +2, so you roll $2D6 + 3$, and easily hit the \gls{tn} of 7.
+\end{exampletext}
+
+\subsubsection{Damage}
+
+If you succeed, your weapon strikes against the enemy's body, damaging them.
+You can inflict $1D6$ Damage, plus your Strength Bonus.
+
+\begin{exampletext}
+  Your first makes contact, inflicting $1D6$ Damage.
+  Without any Strength Bonus, you just roll the die, and hit a `4'.
+\end{exampletext}
+
+\subsection{Reactions}
+
+Your opponent can react to an attack in three ways -- ignore it (and take what's dealt to them), block it, or try to \textit{Counter Attack}.
+
+\subsubsection{Ignoring Attacks}
+
+If someone ignores an attack, they do nothing.
+If the opponent hits, they deal Damage as normal.
+
+This costs 0 Initiative.
+
+\subsubsection{Blocking}
+
+When enemies choose to block, they have to spend 2 Initiative, but they can add their Dexterity + Combat to your \gls{tn} to attack.
+So if their Dexterity + Combat score were 3, your \gls{tn} to hit them would be 10, rather than 7.
+
+Actively blocking an attack costs 2 Initiative Points.
+
+\begin{exampletext}
+  The man punches back at you, but you don't want to lose your Initiative points attacking.
+  You spend only 2 to defend yourself, while he goes down to -2, which gives him a -2 penalty to all other actions.
+\end{exampletext}
+
+\subsubsection{Counter Attacks}
 
 \iftoggle{verbose}{
-  The total bonus to Initiative, including bonuses from weapons, is called the \textit{Initiative Factor}.
+  The best defence is a good offence.
+  When you bite someone, they might just bite you back first.
+
+  \begin{exampletext}
+    While the man at the bar has a -2 penalty, you take a swing at him.
+    He has nothing to lose, so he tries to counter.
+    You roll, you miss, and now he has you in a grapple, on the bar's filthy floor.
+  \end{exampletext}
 }{}
 
 \subsubsection{\Glspl{quickaction}}
@@ -141,7 +119,6 @@ Smaller weapons, those with a \gls{weightrating} of -2 or less, and brawling att
 \Glspl{quickaction} can interrupt the usual Initiative priorities.
 Any time someone attempts a \gls{quickaction}, they take their action immediately, even if they have a negative Initiative score.
 If two characters interrupt the Initiative flow with \gls{quickaction} then whoever currently has the highest Initiative Score goes first.
-
 \gls{quickaction} allow characters to guard someone as soon as they see an attack impending upon a friend, to defend against missile attacks, or to shout a few words.
 
 Characters on less than 1 Initiative can continue taking \gls{quickaction}, but suffer a -1 cumulative penalty for each \gls{quickaction} below.
@@ -1348,4 +1325,3 @@ In all cases there is an optimal configuration which will itself depend upon the
 
 }{}
 
-\stopcontents[Combat]
