@@ -50,28 +50,93 @@
 
 }
 
+% Use this 'weapon entry' command to place items in the weapons table, like this:
+%\weaponEntry{Name}%
+%{Bonus}
+%{Dam}
+%{Wt.} + Init
+%{Cost}
+%{Knacks}
+
+\newcounter{initiative}
+\newcounter{damage}
+\newcounter{cost}
+
+\newcommand\weaponEntry[5]{
+  \setcounter{initiative}{#4}
+  \addtocounter{initiative}{3}
+  % If the weight is better than the Damage, use the Weight *as* the Damage, then add 1.
+  \ifnum#3>#4
+    \setcounter{damage}{#3}
+  \else
+    \setcounter{damage}{#4}
+    \addtocounter{damage}{1}
+  \fi
+  \setcounter{cost}{#5}
+
+  #1 &
+  \ifnum#2>0 +\fi
+  #2 &
+  \ifnum#3>0 +\fi\arabic{damage}
+  & \arabic{initiative} &
+  Str. #4 &
+  \ifnum#5<1\else
+    \ifnum#5>200
+      \divide\value{cost} by 100
+      \arabic{cost} sp
+    \else
+      \arabic{cost} sp
+    \fi
+  \fi
+  \\
+}
+
 \newcommand{\weaponschart}{
-  \begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
+  \begin{boxtable}[Xccccc]
 
-  \textbf{Light Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
+  \textbf{Improvised Weapons} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
 
-    Cudgel & +2 & \ 0 & \ 0 & -3 & & Stunning Strike (page~\pageref{stunningstrike}) \\
+  \weaponEntry{Boulder}{-2}{0}{6}{0}
 
-  Dagger & +1 & \ 0 & +1 & -4 & 60cp &  \\
+  \weaponEntry{Cast Iron Skillet}{1}{0}{1}{80}
 
-  Firepoker & +1 & +1 & \ 0 & -2 & & Finishing Blow (page~\pageref{finishingblow}) \\
+  \weaponEntry{Chair}{0}{0}{1}{0}
 
-  Javelin & +1 & +2 & \ 0 & -2 & 50cp & \\
+  \weaponEntry{Club}{1}{0}{2}{0}
 
-  Knife & +1 & 0 & \ 0 & -4 & 40cp & Precise Strike (page~\pageref{precisestrike}) \\
+  \weaponEntry{Cudgel}{0}{0}{1}{0}
 
-  Log & +1 & -1 & \ 0 & -2 & & \\
+  \weaponEntry{Dagger}{1}{1}{0}{0}
 
-  Rapier & +1 & +2 & +1 & -2 & 15sp & \\
+  \weaponEntry{Firepoker}{1}{2}{1}{0}
 
-  Rock & +1 & \ 0 & \ 0 & -5 & & \\
+  \weaponEntry{Javelin}{2}{2}{1}{880}
 
-  Stick & +1 & +1 & +1 & -2 & & \\
+  \weaponEntry{Knife}{0}{2}{-2}{50}
+
+  \weaponEntry{Log}{-1}{0}{0}{0}
+
+  \weaponEntry{Rock}{-1}{0}{1}{0}
+
+  \weaponEntry{Stick}{1}{0}{-1}{0}
+
+  \end{boxtable}
+
+  \begin{boxtable}[XXXXXX]
+
+  \textbf{Standard Weapons} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+
+  \weaponEntry{Great Axe}{2}{1}{3}{1600}
+
+  \weaponEntry{Great Sword}{1}{1}{3}{2200}
+
+  \weaponEntry{Long Sword}{3}{0}{4}{2200}
+
+  \weaponEntry{Maul}{1}{0}{4}{2200}
+
+  \weaponEntry{Rapier}{2}{2}{0}{1500}
+
+  \weaponEntry{Short Sword}{2}{2}{0}{1500}
 
   \end{boxtable}
 
@@ -83,7 +148,7 @@
 
   Cast Iron Skillet & +2 & \ -1 & \ +1 & -1/1 & & Adrenaline Surge (page~\pageref{adrenalinesurge}) \\
 
-  Chair & +1 & +1 & +1 & 1/ 3 & \\
+  Chair & +1 & +1 & +1 & 1/ 3 & & \\
 
   Club & +2 & +1 & +1 & 2/4 &  \\
 
@@ -145,7 +210,7 @@
 
   \textbf{Armour} & \textbf{\glsentrytext{dr}} & \textbf{Weight} & \textbf{Noise} & \textbf{Price} \\\hline
 
-  \textbf{Partial} \\\hline
+  \textbf{Partial} & & & & \\\hline
 
   Elvish & 2 & -2 & 0 & 3gp \\
 
@@ -158,7 +223,7 @@
   Plate & 5 &  2 & 4 & 12gp \\
   \hline
 
-  \textbf{Complete} \\\hline
+  \textbf{Complete} & & & & \\\hline
 
   Elvish & 2 & -1  & 0 & 9gp \\
 
