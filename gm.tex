@@ -717,14 +717,22 @@ If the \glspl{pc} start to lose \glspl{hp} and don't realise how serious this si
 \label{pcdeath}
 \index{Death}
 
-Don't fear \gls{pc} death (or \gls{npc} death for that matter).
+\iftoggle{aif}{
+  Players who want their characters to survive should retire them.
+  After all, few of the active Night Guard survive for long.
+}{
+  Players should see their character's death as normal, and even likely.
+}
 Character creation should be relatively easy, and no main plot-line should rely on a particular character.
 
-If a \gls{pc} dies, the player should be slotted into the adventure at the next available opportunity as a known \gls{npc} from one of the \glspl{storypoint}.
-This character is introduced as per the story \nameref{oldnpc} (see page \pageref{oldnpc}), so they will begin with half the total \glspl{xp} of whichever party member has the highest \glspl{xp} total (minimum 50).
+Once death has come, the player should select a character from the existing pool of \glspl{npc} brought into the world with the story, \nameref{oldnpc} (see page \pageref{oldnpc}).
+Any \gls{npc} should be allowed, just as long as they might plausibly arrive in the current area within a scene or two, and have some plausible motivation to join the party.
+
+This \gls{npc}'s minimum starting \glspl{xp} is equal to half the \glspl{xp} of whichever \gls{pc} has the highest total \glspl{xp}, or 50 \glspl{xp} (whichever is greater).
+The player taking on the new character must spend this additional \glspl{xp} immediately.
 
 If no \glspl{npc} have been established, anyone in the part can establish one immediately.
-If none of the party have any \glspl{storypoint} left, the new character is established for free, with the same rules as if a \gls{storypoint} had been spent.
+If none of the party have any \glspl{storypoint} left, the new character begins with 2 fewer \glspl{storypoint}.
 
 Players, rather than characters, keep their unspent \glspl{xp}, so any time a character dies, any unspent \glspl{xp} should be immediately given to the new character.
 \Glspl{xp} received from spending \glspl{storypoint} do not reset, so if the old character had spent 4 \glspl{storypoint}, the new one would not receive any more \glspl{xp} from \glspl{storypoint} until they had spent 4.

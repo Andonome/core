@@ -253,22 +253,29 @@ Characters do not have many \glspl{hp} so losing even one is a serious matter.
 Characters heal a quarter their \gls{hp} each week, rounded up.
 Once someone receives a serious wound, it's a good time to call for \gls{downtime}.
 
-\subsubsection{Death}
+\subsubsection{Vitality \& Death}
 \index{Death}
 Once a \gls{pc} reaches 0 \gls{hp} they must make a \index{Vitality Check}
 Vitality Check in order to stay alive.
-This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.\iftoggle{verbose}{\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
-Stronger characters already have more \gls{hp}, which has already kept them farther from death.}}{}
-For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
-That makes the \gls{tn} 7 for the Vitality Check.
+This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.
+\iftoggle{verbose}%
+  {\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
+  Stronger characters already have more \gls{hp}, which has already kept them farther from death.}
+  For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
+  That makes the \gls{tn} 7 for the Vitality Check.
+}{}%
 
 \glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
 
 A failed Vitality check means that the character is dead.%
 \iftoggle{verbose}{%
-\footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
+  \footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
 }{%
-  The player must roll up a new character with either 50 \glspl{xp} or half the total \glspl{xp} of whichever party member has the most \glspl{xp}.
+  The player then selects one of the \glspl{npc} introduced through spending \glspl{storypoint} to play.
+  That second character begins with half the \glspl{xp} of whichever \gls{pc} in the group has accumulated the most total \glspl{xp}.
+  The player taking control of the \gls{npc} should spend any additional experience this grants immediately.
+
+  If no such \gls{npc} exists, one should be introduced through \glspl{storypoint} at the next available opportunity.
 }%
 A successful one means that the character is unconscious for the remainder of the scene but alive.
 At the end of the scene they can make further Vitality Checks to see if they wake up.
