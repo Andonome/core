@@ -5,7 +5,6 @@
 
 \usepackage{config/bind}
 \input{glossary.tex}
-
 \hypersetup{pdfinfo={
 Title={BIND},
 Author={Ghost},
@@ -16,6 +15,10 @@ Keywords={TTRPG,RPG,roleplaying}
 \settoggle{verbose}{true}
 
 \externalReferent{aif}
+
+\iftoggle{aif}{
+  \input{../aif/glossary.tex}
+}{}
 
 \begin{document}
 
