@@ -132,11 +132,18 @@ However, if you have never wanted for Craft ability then you could declare that 
 
 \iftoggle{verbose}{
   \begin{itemize}
-  \item You're not one to boss others about, but now you need a plan you may as well pull out the training your brothers taught you about how to set an ambush, and how to wait patiently.
-  You buy the first level of the Tactics Skill.
-  \item Despite your bad manners, you have learnt to read in the thieves' guild some time ago.
-  You used to use this skill to make forgeries, but there's nothing in principle stopping you from reading a book.
-  You buy the first level of the Academics Skill.
+  \item
+  \iftoggle{aif}{
+    While working as one of the \gls{guard} in the Pebbles islands, you got your sea-legs.
+    Swimming through this underground lake shouldn't be a problem.
+  }{
+    You're not one to boss others about, but now you need a plan you may as well pull out the training your brothers taught you about how to set an ambush, and how to wait patiently.
+    You buy the first level of the Tactics Skill.
+    \item
+    Despite your bad manners, you have learnt to read in the thieves' guild some time ago.
+    You used to use this skill to make forgeries, but there's nothing in principle stopping you from reading a book.
+    You buy the first level of the Academics Skill.
+  }
   \item Protecting your siblings from griffin attacks on multiple occasions gave you all the knowledge you need to defend them.
   You reveal you have the Knack `Guardian'.
   \end{itemize}
@@ -162,13 +169,22 @@ The \gls{storypoint} can be spent after a roll has failed.
 
 \iftoggle{verbose}{%
   \begin{itemize}
-  \item The party want to know how the magical item works.
+  \item
+  The party want to know how the magical item works.
   You've failed the roll, but then remember you've seen this magical item in your mother's book collection.
   She had extensive shelves full of bizarre tomes, and all the leafing through those tomes finally paid off.
-  \item While nobody knows where they are, you suddenly remember your uncle's maps.
-  They were always plastered all over the walls, and you used to imagine walking in those locations.
-  \item It was unclear if the noble was telling the truth, but you recognise the dyes on his tunic; they come only from the Shale, which can only mean one thing\ldots
-  \end{itemize}
+  \iftoggle{aif}{
+      \item
+      Once, in the \gls{shatteredcastle}, you overheard two guards talking with each other about a door in the hub.
+      You know it's in Whiteplains somewhere, and their talk of elves gave you a rough idea of the location.
+    \item
+    It was unclear if the noble was telling the truth, but you recognise the dyes on his tunic; they come only from the Shale, which can only mean one thing\ldots
+    \end{itemize}
+  }{
+    \item
+    The party have you idea where they are, but you suddenly remember your uncle's maps.
+    They were always plastered all over the walls, and you used to imagine walking in those distant lands.
+  }
 }{}
 
 \story{1}{The Special Item}
@@ -184,7 +200,7 @@ You may reveal you have any piece of \gls{adventuringequipment} (see page \pager
   \end{itemize}
 }{}
 
-\story{1}{Shared Stories}
+\story{1}{My Brother}
 \label{sharedstories}%
 At the point a new character joins the group you can select one other player and have a shared background with them (or with another, if your character is new).
 You describe how you previously met and possibly adventured together.
@@ -196,15 +212,17 @@ If you are both friends with a skilled armourer, they will only be able to repai
 
 \iftoggle{verbose}{%
   \begin{itemize}
-  \item When the game starts, you pick another character as a cousin.
+  \item
+  When the game starts, you pick another character as a cousin.
   When you declare you know elvish, the other character does as well.
   Soon after, you both decide to return home, and get a royal welcome from the entire village.
-  \item Your character may have died, but the next one can at least be related to the group.
-  One character has spent the entire campaign complaining about his ex-wife, and why he had to leave home to adventure.
-  You decide to return as the ex-wife, who's also been pushed into adventuring due to poverty.
+  \item
+  When a fellow \gls{pc} dies, someone needs to introduce a new character for them to return as.
+  You spend 2 \glspl{storypoint}, as per \nameref{oldFriend}, and declare him your brother.
   \end{itemize}
 }{}
 
+\index{Mana Lakes}
 \story{1}{The Mana Lake}
 You know of a sacred location nearby, perhaps a church, or a shrine or just a sacred cavern where the land is teeming with magic.
 In this sacred area, anyone stepping into it receives 1 \gls{mp} per \gls{round}.
@@ -222,6 +240,7 @@ The place will not necessarily help you hide or defend yourself unless you are a
 }{}
 
 \story{1-3}{The Old Friend}
+\label{oldFriend}
 You know someone in town who has just the skills you are all looking for.
 
 The player can make this character themselves, just like a normal character, however, buying martial abilities.
@@ -274,7 +293,6 @@ The total amount obtained is $2D6 \times 10$ gold pieces.%
 
 \end{multicols}
 
-\iftoggle{verbose}{
 \iftoggle{aif}{
 \section{The Call to Adventure}
 
@@ -285,18 +303,14 @@ Just because characters can begin as blank slates doesn't mean the story can.  A
 
 If the \gls{gm} has no definitive plans laid out for the campaign, players should suggest a good starting point.
 
-\subsection{The Night Guard}
+\subsection{The \Glsentrytext{guard}}
 
-The world of Fenestra doesn't have many wars or diseases, but it never becomes overpopulated.  The reason is simple: monsters.  There are giant arachnids in the forests, basilisks which belch poison and steal cattle, and the occasional dragon.  If someone can't find a useful way to employ themselves, the Night Guard awaits.
+Adventuring may have been outlawed years ago, but you can still join the \gls{guard}!
+This kind of campaign mean taking orders, getting missions, and rising through the ranks.
 
-The majority of the Night Guard have boring, thankless jobs such as guarding cattle, patrolling for goblins, and occasionally clearing an area where suspected monsters guard territory.
-A few go onto more dangerous jobs such as hunting ogres, tracking down criminal gangs, or espionage.
+The party will have to decide how much looted wealth to report to their superiors, and which of their peers they can trust.
 
-Some rare few have been known to strike deals with dragons to leave an area, or assassinate rogue alchemists who are powerful enough to keep themselves free from the reaches of any magical guild.
-
-In general, the more dangerous and skilful the job, the higher the pay, so most of the Night Guard try not to do too well at their job.
-They train in archery well, take a pay cut in return for having more members in their group, and make sure nobody volunteers them for anything interesting.
-Of course, a lot of the jobs one takes depends more upon a captain of the Guard than the grunts.
+Think of the \gls{guard} as the default campaign within Fenestra, and take a look at \autoref{guard} for ideas on the various missions the \glspl{pc} can expect.
 
 \subsection{The Illusionists of the Shale}
 
@@ -330,5 +344,4 @@ By the time they arrive, they will able to pick a side.
 
 \end{multicols}
 
-}{}
 }{}

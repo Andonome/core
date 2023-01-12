@@ -18,6 +18,10 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \externalReferent{aif}
 
+\iftoggle{aif}{
+  \input{../aif/glossary.tex}
+}{}
+
 \begin{document}
 
 \pagenumbering{gobble}
@@ -33,6 +37,10 @@ Keywords={TTRPG,RPG,roleplaying}
 \include{intro.tex}
 
 \mainmatter
+
+\iftoggle{aif}{
+  \include{fenestra.tex}
+}{}
 
 \include{cc.tex}
 

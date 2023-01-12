@@ -563,17 +563,41 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
 
 \begin{tcolorbox}[tabularx={XX},title=Services,bottom=10pt,left=3pt,right=3pt,code={\rowcolors{2}{}{gray!10}}]
 
-  \textbf{Sellsword} & 10sp/ day \\\hline
+  \textbf{Apothacary} & 1sp / level of Intelligence + Medicine \\\hline
 
-  Opponent & \gls{xp}$^3$ sp \\
+  Poison cure & 1sp \\
 
-  Illegal Murder & 10sp \\\hline
+  Poison & 4sp \\\hline
+
+  \textbf{Fence} & \\\hline
+
+  Common item & 20\% of the item's total value \\
+
+  Identifiable valuables & 40\% of the item's total value \\
+
+  Magical item & Varies considerably, 50\% chance the item is refused \\\hline
+
+  \textbf{Boat Trip} & \\\hline
+
+  Popular trading route & $2D6-2$\gls{sp} (reroll each day) \\
+
+  Standard stream & $3D6$\gls{cp} \\\hline
 
   \textbf{Guide} &  150 cp/ day \\\hline
 
   Dangerous area & 1sp \\
 
   Uncharted area & 50cp \\\hline
+
+  \textbf{Hospitality} &  \\\hline
+
+  Public House & 0cp \\
+
+  Barn with breakfast & 10cp \\
+
+  City Inn & 40cp \\
+
+  Fancy Room & 1sp \\\hline
 
   \textbf{Minstrel} &  15 cp/ performance \\\hline
 
@@ -585,21 +609,17 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
 
   Illegal song & 5sp \\\hline
 
+  \textbf{Sellsword} & 10sp/ day \\\hline
+
+  Opponent & \gls{xp}$^3$ sp \\
+
+  Illegal Murder & 10sp \\\hline
+
   \textbf{Tracker} &  5 sp/ day \\\hline
 
   Dangerous area & 2sp \\
 
   Uncharted area & 4sp \\\hline
-
-  \textbf{Hospitality} &  \\\hline
-
-  Public House & 0cp \\
-
-  Barn with breakfast & 3cp \\
-
-  City Inn & 30cp \\
-
-  Fancy Room & 1sp \\
 
 \end{tcolorbox}
 }
@@ -700,11 +720,22 @@ $7\times2\times2 = 28$, so the character starts out with 28 \glspl{sp}.
 }{}
 
 \subsection{Services}
+\label{services}
 
 Money can buy you more than things.  In fact, for the right money in a large city, characters can buy a full entourage.  Villages, however, will not admit of the same opportunities.
 
 The costs above show the starting price for a few services, plus additional fees for the details.
 For example, hiring a guide for an uncharted and dangerous area for 5 days would cost 800 \glspl{cp}.
+
+\iftoggle{aif}{
+  The \gls{guard} regularly form an exception to these service charges, as people expect them to work wherever \gls{king} sends them, so they regularly undercharge or simply refuse to work.
+}{}
+
+Hiring someone generally requires a Wits + Empathy roll, \gls{tn} 7, to determine their capability.
+Failure means that this person is useless.
+Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off.
+
+The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} is encouraged to make the roll in secret.
 
 \end{multicols}
 

@@ -5,13 +5,12 @@
 
 \begin{multicols}{2}
 
-\small
 \noindent
-\iftoggle{verbose}{%
-Over this chapter, you can learn to craft a \gls{pc}.
-Grab $2D6$, roll a random race, and then all six Attributes.
+\iftoggle{verbose}{
+  Over this chapter, you can learn to craft a \gls{pc}.
+  Grab $2D6$, roll a random race, and then all six Attributes.
 
-Once you think you know what kind of character lies on your character sheet, you can spend 50 \glspl{xp} and gain some Skills.
+  Once you think you know what kind of character lies on your character sheet, you can spend 50 \glspl{xp} and gain some Skills.
 }{}%
 Characters are defined by \glspl{trait}, and the two main types are \glspl{attribute} and \glspl{skill}.
 Attributes are innate \glspl{trait}, deeply tied to who the \gls{pc} is.
@@ -327,6 +326,11 @@ This covers all manner of fancy movements, from somersaults and rolling to climb
 It might be paired with Dexterity when a character is attempting to roll under then leap over tables or otherwise navigate uneven terrain.
 For flat-out sprinting, the Speed Attribute is always preferred, while Strength is primary when characters want to throw cannon balls.
 
+\iftoggle{aif}{
+  Many of the longest-surviving \gls{guard} find this Skill invaluable.
+  Of course, nobody can hope to outrun a chitincrawler, but not being the slowest member of your group sorts most issues.
+}{}
+
 \subsection{Caving}
 
 Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
@@ -340,7 +344,9 @@ building a fire inside to stay warm, or simply not inspecting a wall's integrity
 Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{%
   mushrooms, but the differences can still trip them up at times.
 }{
-  woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+    woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+
+    Specialized members of \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
   }
 }{}
 
@@ -389,6 +395,21 @@ To craft an item used with another Skill, the crafter requires at least 1 level 
 }{}
 Using moulds or other pre-set designing materials allows the character to perform the Craft roll as a \gls{restingaction} (see page \pageref{restingactions}) and may provide a bonus to the roll depending upon the quality of tools available.
 
+\iftoggle{verbose}{
+  \begin{figure*}[b]
+    \begin{boxtext}[title=Rolling with Bad Stats]
+
+      If you find you've rolled up a particularly bad character, don't worry too much -- the \glspl{xp} players receive will even out differing character stats before long.
+      If that sounds a little suspicious, just keep your \glspl{xp} to yourself for a while -- remember that players, not characters, keep \glspl{xp}, so you can hold onto what you have earned, then introduce secondary characters with stories (see page \pageref{stories}).
+      If you end up with enough \glspl{xp} to improve your character to the point you're happy, then you can proceed.
+      If the poor stats mean your character dies a grizzly death in session 2, then no harm done -- just pull any character that the party has introduced already and add all the \glspl{xp} you've accumulated so far.
+      See page \pageref{pcdeath} for more information on \gls{pc} death.
+
+    \end{boxtext}
+  \end{figure*}
+
+}{}
+
 \subsection{Deceit}
 
 Someone proficient at deception can make others see white as black by sheer confidence. It is often paired with Charisma when creating such lies. At other times, when a quick excuse is needed after a character has been caught with their hand in someone else's pockets, the Wits Attribute can be used to get out of trouble. Complicated lies, having to do with a long series of events or where a character wants to make someone hopelessly confused about the situation, might use one's Intelligence Bonus.
@@ -425,27 +446,15 @@ This skill covers every type of instrument, poetry and evocative storytelling. W
 
 This will often be paired with Charisma when a performer wants to give off an entertaining performance. More technical pieces might require Dexterity instead. Performers wanting to create new poems, songs or the like add their Intelligence Attribute instead.
 
+\iftoggle{aif}{
+  In recent years, \gls{king} has ensured tight control over public performances, and anyone criticising him faces a charge of treason.
+}{}
+
 \subsection{Larceny}
 
 Larceny is generally mixed with Dexterity for everything for picking pockets to juggling.
 It might also be used with Wits to spot a rich pocket to pick, or with Charisma to dazzle someone with a magic trick.
 Characters attempting to spot slight of hand will use Wits + Vigilance.
-
-\iftoggle{verbose}{
-  \begin{figure*}[b]
-    \begin{boxtext}[title=Rolling with Bad Stats]
-
-      If you find you've rolled up a particularly bad character, don't worry too much -- the \glspl{xp} players receive will even out differing character stats before long.
-      If that sounds a little suspicious, just keep your \glspl{xp} to yourself for a while -- remember that players, not characters, keep \glspl{xp}, so you can hold onto what you have earned, then introduce secondary characters with stories (see page \pageref{stories}).
-      If you end up with enough \glspl{xp} to improve your character to the point you're happy, then you can proceed.
-      If the poor stats mean your character dies a grizzly death in session 2, then no harm done -- just pull any character that the party has introduced already and add all the \glspl{xp} you've accumulated so far.
-      See page \pageref{pcdeath} for more information on \gls{pc} death.
-
-    \end{boxtext}
-  \end{figure*}
-
-}{}
-
 
 \subsection{Seafaring}
 
@@ -469,6 +478,11 @@ The utility quickly fades when battles become drawn-out and unpredictable, but t
 It can be used to understand why people are employing apparently odd battle-tactics, or uses Charisma to impress people concerning one's military ability.
 
 When going into combat, someone who has time to prepare for a battle by running through instructions with receptive troops gains a bonus to their Initiative equal to their Tactics Skill. This bonus only ever counts for the first \gls{round}.
+
+\iftoggle{aif}{
+  Good tactical knowledge can allow one to stay alive often longer than having an extra soldier in the team.
+  The beasts of Fenestra may be fierce, but if one understands how to approach, trap, and corner them properly, battles can become far more reliable than simply charging into battle, axe-swinging.
+}{}
 
 \subsection{Vigilance}
 

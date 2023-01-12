@@ -28,6 +28,10 @@ The character sheets contain a large space in the middle where players can add b
 Coins can even be used to keep track of \gls{fp} and \glspl{fatigue} as they change so often.
 It'll help cut down on wear to the character sheet.
 
+\subsection{Read Two Days Ahead}
+
+Always read two sessions ahead, because you never know when players will throw you a curve-ball and kill the evil baron, or just ignore your plot-hook.
+
 \subsection{Tracking Information}
 
 Print out the \gls{gm} sheet at the end of the book for a little help handling all the information you'll need to keep track of during a campaign.
@@ -81,19 +85,21 @@ So professionals can expect to reliably reach a \gls{tn} of 11 or 12, or more wi
 
 And if the average professional would struggle with a task, throw them a \gls{tn} of 14!
 
-\paragraph{The dice tell the story}, so if you ever start to panic, have the players make a roll, state any \glsentrylong{tn}, and explain the result.
+\paragraph{The dice tell the story,} but only with interpretation.
 A crappy roll to open a door suggests the massive door has wedged properly shut.
 A fantastic roll to talk to the local lord might indicate he has family in that character's home village.
-Explaining results can come easier than making them up.
+Explaining results can come easier than making them up whole-cloth.
 
-If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense.
+If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense; when one \gls{pc} fails to convince the town master to fund their adventure, another steps in to `try their luck'.
+But if the players understand that the town master's raging toothache has put him in a foul mood, the rest should understand that the result (or at least the roll) will remain no matter who tries to speak with him.
+This leaves room for some other \gls{pc}, with better stats, to succeed in the mission (they might succeed on the roll of a `7'), but does not encourage a ring of players rolling dice like a bunch of bored gamblers.
 
 \subsubsection{Let Players `Ruin' the Adventure}
 
 Encounters don't have to play through like you think they will.
-If the players flood a dungeon, cast a fireball at the king, or raise their Aldaron and Wyldcrafting so high that every wild animal encounter turns into a pet in a growing army, take a break, re-examine the situation, and go from there.
+If the players flood a dungeon, cast a fireball at the king, or raise their Aldaron and Wyldcrafting so high that every wild animal encounter turns into a pet in a growing army, take a breath, re-examine the situation, and go from there.
 
-Perhaps the dungeon has a high-point which isn't flooded, or perhaps it's flooded forever, and nobody will see that treasure again.
+Perhaps the dungeon has a high-point inside which isn't flooded, which at least saves that part of the dungeon; or perhaps it's flooded forever, and nobody will see that treasure again.
 Perhaps the party have to become outlaws, and every future adventure has to take this into account.
 And even if all those pets feel enamoured with the caster, they don't need to like each other -- maybe they start to fight, or try to kill the other party members, but only when they fall down, wounded and weak!
 
@@ -101,7 +107,6 @@ And even if all those pets feel enamoured with the caster, they don't need to li
 
 The most interesting \gls{downtime} happens when you skip it, and find out the details later.
 Don't ask the players what their characters want to do, just jump straight to the next scene, a month, or even years later.
-Short \glspl{downtime} should pepper a campaign to allow breathers.
 
 \sidebox{
 \begin{itemize}
@@ -277,6 +282,7 @@ Almost any friendly people travelling in the same direction  as they party will 
 \end{multicols}
 
 \section{Side Quests}\label{sidequests}
+\index{Side Quests}
 
 \begin{multicols}{2}
 
@@ -471,6 +477,10 @@ Or perhaps another part might slot into the town, or forest, involving an alchem
 Breaking things up like this allows different smaller plots to meld into one.
 Perhaps characters go looking for the bandit alchemist immediately, and find some other encounter in the forests.
 And maybe when the bandit spy joins the party, he'll end up in an unrelated encounter where the party find themselves trapped in a giant web, and he takes the opportunity to finish them off.
+
+\iftoggle{aif}{
+  See \textit{Adventures in Fenestra}, \autoref{sideQuestIntro}, for a full campaign, built on weaving Side Quests together.
+}{}
 
 \end{multicols}
 
@@ -708,14 +718,22 @@ If the \glspl{pc} start to lose \glspl{hp} and don't realise how serious this si
 \label{pcdeath}
 \index{Death}
 
-Don't fear \gls{pc} death (or \gls{npc} death for that matter).
+\iftoggle{aif}{
+  Players who want their characters to survive should retire them.
+  After all, few of the active Night Guard survive for long.
+}{
+  Players should see their character's death as normal, and even likely.
+}
 Character creation should be relatively easy, and no main plot-line should rely on a particular character.
 
-If a \gls{pc} dies, the player should be slotted into the adventure at the next available opportunity as a known \gls{npc} from one of the \glspl{storypoint}.
-This character is introduced as per the story \nameref{oldnpc} (see page \pageref{oldnpc}), so they will begin with half the total \glspl{xp} of whichever party member has the highest \glspl{xp} total (minimum 50).
+Once death has come, the player should select a character from the existing pool of \glspl{npc} brought into the world with the story, \nameref{oldnpc} (see page \pageref{oldnpc}).
+Any \gls{npc} should be allowed, just as long as they might plausibly arrive in the current area within a scene or two, and have some plausible motivation to join the party.
+
+This \gls{npc}'s minimum starting \glspl{xp} is equal to half the \glspl{xp} of whichever \gls{pc} has the highest total \glspl{xp}, or 50 \glspl{xp} (whichever is greater).
+The player taking on the new character must spend this additional \glspl{xp} immediately.
 
 If no \glspl{npc} have been established, anyone in the part can establish one immediately.
-If none of the party have any \glspl{storypoint} left, the new character is established for free, with the same rules as if a \gls{storypoint} had been spent.
+If none of the party have any \glspl{storypoint} left, the new character begins with 2 fewer \glspl{storypoint}.
 
 Players, rather than characters, keep their unspent \glspl{xp}, so any time a character dies, any unspent \glspl{xp} should be immediately given to the new character.
 \Glspl{xp} received from spending \glspl{storypoint} do not reset, so if the old character had spent 4 \glspl{storypoint}, the new one would not receive any more \glspl{xp} from \glspl{storypoint} until they had spent 4.
@@ -724,34 +742,6 @@ In this way, the entire group should have a constant maximum number of points th
 \subsubsection{Dismemberment}
 
 If a \gls{pc} is totally out of commission, with 1 \gls{hp} left, 4 \glspl{fatigue} from being bled dry, and an inexplicable curse, consider letting them play an \gls{npc} and letting them keep all \glspl{xp} gained during this time.
-
-\subsection{\Glsentrytext{pc} Creation}
-
-For a slightly more even spread of pluses and minuses across the party, consider rolling Attributes in pairs when making a character.
-
-As you roll up Strength, you might select Intelligence as its opposite, and any gains in one become losses in the other.
-
-  \begin{rollchart}
-
-  Result & Attribute Bonus \\\hline
-
-  2 & Strength -3, Intelligence +3 \\
-
-  3 & Strength -2, Intelligence +2 \\
-
-  4-5 & Strength -1, Intelligence +1 \\
-
-  6-8 & Strength 0, Intelligence 0 \\
-
-  9-10 & Strength +1, Intelligence -1 \\
-
-  11 & Strength +2, Intelligence -2 \\
-
-  12 & Strength +3, Intelligence -3 \\
-
-  \end{rollchart}
-
-For each Attribute you roll, you can select any as its opposite before rolling.
 
 \end{multicols}
 
@@ -819,9 +809,53 @@ It also requires a single level of the Combat Skill.
 
 \paragraph{Creating a weapon mould} -- Intelligence + Crafts, TN equals 7 plus 2 for every Initiative Bonus the weapon grants.
 
+\subsection{Empathy}
+
+\paragraph{Judging services} -- Wits + Empathy, \gls{tn} 9.
+\footnote{See page \pageref{servicse} for more on purchasing services.}
+
+It's never easy knowing whom to hire.
+Every time someone hires someone as part of a service, they should make a roll.
+
+Humans are notoriously bad at this, and are known for hiring the first person they meet in a bar.
+
+Failing the roll means that the \gls{pc} has hired someone useless.
+Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off by taking a guess at the best route and hoping for the best.
+The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} is encouraged to make the roll in secret.
+
+Given the stakes, people mostly try to hire others based on previous experience.
+To automatically succeed and hire someone competent, a player needs only to spend a \gls{storypoint}.
+
+\paragraph{Requesting dangerous jobs} -- Charisma + Empathy.
+
+\sidebox{
+  \begin{boxtable}[lc]
+
+    Location & Base \glsentrytext{tn} \\\hline
+
+    City & 9 \\
+
+    Town & 11 \\
+
+    Village & 14 \\
+
+  \end{boxtable}
+}
+
+Thieves, brigands, and \iftoggle{aif}{illegal}{} adventurers cannot work with just anyone who wanders up to ask for `one poison arrow, my good man'.
+Dangerous jobs require a level of trust.
+Charismatic characters who show care and understanding stand a much better chance of hiring help.
+
+Any attempt to hire services which put someone in danger should require a roll (see page \pageref{services}).
+This includes murder, crafting poisons, selling illegal items, et c.
+
+As above, players can spend \glspl{storypoint} to automatically gain such a contact, and once someone works for the players with one job, they can work in another.
+Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
+
 \subsection{Deceit}
 
 \paragraph{Intimidating someone into backing off} -- Strength + Deceit vs the target's Strength + Empathy.
+\index{Intimidation}
 
 \paragraph{Quick thinking lies} -- Wits + Deceit, TN 10.
 
@@ -830,6 +864,7 @@ It also requires a single level of the Combat Skill.
 \subsection{Medicine}
 
 \paragraph{Crafting a poison} -- Intelligence + Medicine, TN 4.
+\label{poison}\index{Poisons}
 
 Each Margin inflicts 1 \gls{fatigue} on the target by the end of the scene.
 
@@ -860,6 +895,7 @@ Each margin cures 1 \glspl{fatigue} caused by poison by the end of the scene.
 \paragraph{Rap battle} -- Wits + Performance, vs opponent's Wits + Performance.
 
 \subsection{Seafaring}
+\index{Sailing}
 
 \paragraph{Fording a rapid river} -- Strength + Seafaring, \gls{tn} 9.
 
@@ -870,6 +906,7 @@ Each margin cures 1 \glspl{fatigue} caused by poison by the end of the scene.
 \subsection{Stealth}
 
 \paragraph{Ambush} -- Intelligence + Stealth, TN 10 for villages, 12 for a town, and 8 for a forest.
+\index{Ambushes}
 
 \paragraph{Finding a hiding spot} -- Wits + Stealth.
 
@@ -938,8 +975,6 @@ If the roll is an 8, the actual journey would be 18 miles.
 
 \paragraph{Taming a Horse} -- Intelligence + Wyldcrafting vs Horse's Wits + Aggression.
 
-
-
 \end{multicols}
 
 \section{Magic}
@@ -962,12 +997,18 @@ People who exist `in the game', know full well that different paths of magic can
 \subsection{Which Things are Things?}
 
 We know that enchantment spells target people, but others spells don't have such clear boundaries.
-Conjuration spells cannot transform a person's  head without the rest -- whole people only.
-\Glspl{miracleworker} cannot cast an illusion over a window; a spell must target the entire house or nothing.
+Players will inevitably ask if they can turn someone's blood into webbing with Conjuration, or target someone's left foot with a \textit{Sickness} spell.
+
+As a general rule, spells target whole entities only.
+Conjuration spells cannot transform a person's head without the rest -- whole people only.
+Fate spells do not detect just someone's fate with water-related events -- the entire tapestry of someone's future reveals, or nothing.
 
 Whenever boundaries become unclear, think of a word for the largest continuous object.
 Houses make a town, but they have breaks between them.
 A wall, on the other hand, cannot gain the Mage Armour spell unless the entire wall receives it.
+
+Illusion spells may appear to make exceptions to this rule, but in truth all illusions are shadows.
+They do not \emph{target} someone's head, but create a shadow around their head.
 
 \subsection{Magical Items}
 
