@@ -221,10 +221,11 @@ If players prefer, they can design their own characters by simply setting all At
 They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
 
 \iftoggle{verbose}{
-\subsection{No Class}
-
-For those who prefer a class-based system, or just a suggestion for starting characters, check \autoref{class}.
-You'll find some default Traits for `fighters, mages \& rogues', along with notes on equipment.
+  \iftoggle{aif}{}{
+    \subsection{No Class}
+    For those who prefer a class-based system, or just a suggestion for starting characters, check \autoref{class}.
+    You'll find some default Traits for `fighters, mages \& rogues', along with notes on equipment.
+  }
 }{}
 
 \end{multicols}
@@ -327,7 +328,7 @@ It might be paired with Dexterity when a character is attempting to roll under t
 For flat-out sprinting, the Speed Attribute is always preferred, while Strength is primary when characters want to throw cannon balls.
 
 \iftoggle{aif}{
-  Many of the longest-surviving \gls{guard} find this Skill invaluable.
+  Many of the longest-surviving \glspl{guard} find this Skill invaluable.
   Of course, nobody can hope to outrun a chitincrawler, but not being the slowest member of your group sorts most issues.
 }{}
 
@@ -341,12 +342,12 @@ Those with a poor understanding of caves can make foolish mistakes, like taking 
 \footnote{This can remove so much oxygen from the air, they begin to giggle, hallucinate, and possibly pass out.}
 building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
 
-Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{%
-  mushrooms, but the differences can still trip them up at times.
-}{
-    woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{
+woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
 
     Specialized members of \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
+}{
+  mushrooms, but the differences can still trip them up at times.
   }
 }{}
 
