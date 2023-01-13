@@ -287,6 +287,7 @@ See Chapter \ref{knacks} for a full list of knacks.
 
 \end{multicols}
 
+\settoggle{chart}{true}
 
 \iftoggle{verbose}{%
   \weaponschart
@@ -295,6 +296,8 @@ See Chapter \ref{knacks} for a full list of knacks.
   \weaponschart
   \end{footnotesize}
 }
+
+\settoggle{chart}{false}
 
 \label{weaponschart}
 \index{Weapons}
@@ -309,7 +312,6 @@ Light Weapons are those with a \gls{weightrating} of -2 or less. People wield th
 \subsubsection{Medium Weapons}
 \index{Combat!Medium Weapons}
 
-Swords, axes and all the regular weapons of warfare require a full 6 Initiative points to be swung.
 They grant excellent Combat Bonuses, often increasing the effects of all three Attributes.
 These weapons are the standard weapons which most people will be using throughout the campaign -- they cover the \gls{weightrating} from -1 to 4.
 

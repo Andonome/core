@@ -1,3 +1,5 @@
+\settoggle{chart}{true}
+
 \newcommand{\initiativechart}{
 
   \begin{nametable}[XX]{Initiative Costs}
@@ -50,145 +52,76 @@
 
 }
 
-% Use this 'weapon entry' command to place items in the weapons table, like this:
-%\weaponEntry{Name}%
-%{Bonus}
-%{Dam}
-%{Wt.} + Init
-%{Cost}
-%{Knacks}
-
-\newcounter{initiative}
-\newcounter{damage}
-\newcounter{cost}
-
-\newcommand\weaponEntry[5]{
-  \setcounter{initiative}{#4}
-  \addtocounter{initiative}{3}
-  % If the weight is better than the Damage, use the Weight *as* the Damage, then add 1.
-  \ifnum#3>#4
-    \setcounter{damage}{#3}
-  \else
-    \setcounter{damage}{#4}
-    \addtocounter{damage}{1}
-  \fi
-  \setcounter{cost}{#5}
-
-  #1 &
-  \ifnum#2>0 +\fi
-  #2 &
-  \ifnum#3>0 +\fi\arabic{damage}
-  & \arabic{initiative} &
-  Str. #4 &
-  \ifnum#5<1\else
-    \ifnum#5>200
-      \divide\value{cost} by 100
-      \arabic{cost} sp
-    \else
-      \arabic{cost} sp
-    \fi
-  \fi
-  \\
-}
-
 \newcommand{\weaponschart}{
-  \begin{boxtable}[Xccccc]
+  \begin{nametable}[XXXXXX]{Improvised Weapons}
 
-  \textbf{Improvised Weapons} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+  \textbf{Name} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
 
-  \weaponEntry{Boulder}{-2}{0}{6}{0}
+  \boulder
 
-  \weaponEntry{Cast Iron Skillet}{1}{0}{1}{80}
+  \skillet
 
-  \weaponEntry{Chair}{0}{0}{1}{0}
+  \chair
 
-  \weaponEntry{Club}{1}{0}{2}{0}
+  \club
 
-  \weaponEntry{Cudgel}{0}{0}{1}{0}
+  \cudgel
 
-  \weaponEntry{Dagger}{1}{1}{0}{0}
+  \firepoker
 
-  \weaponEntry{Firepoker}{1}{2}{1}{0}
+  \knife
 
-  \weaponEntry{Javelin}{2}{2}{1}{880}
+  \Log
 
-  \weaponEntry{Knife}{0}{2}{-2}{50}
+  \rock
 
-  \weaponEntry{Log}{-1}{0}{0}{0}
+  \stick
 
-  \weaponEntry{Rock}{-1}{0}{1}{0}
+  \woodaxe
 
-  \weaponEntry{Stick}{1}{0}{-1}{0}
+  \end{nametable}
 
-  \end{boxtable}
+  \begin{nametable}[XXXXXX]{M\^{e}l\'{e}e Weapons}
 
-  \begin{boxtable}[XXXXXX]
+  \textbf{Name} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
 
-  \textbf{Standard Weapons} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+  \Dagger
 
-  \weaponEntry{Great Axe}{2}{1}{3}{1600}
+  \greataxe
 
-  \weaponEntry{Great Sword}{1}{1}{3}{2200}
+  \greatsword
 
-  \weaponEntry{Long Sword}{3}{0}{4}{2200}
+  \javelin
 
-  \weaponEntry{Maul}{1}{0}{4}{2200}
+  \longsword
 
-  \weaponEntry{Rapier}{2}{2}{0}{1500}
+  \maul
 
-  \weaponEntry{Short Sword}{2}{2}{0}{1500}
+  \poleaxe
 
-  \end{boxtable}
+  \shortsword
 
-  \begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
+  \spear
 
-  \textbf{Medium Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
+  \quarterstaff
 
-  Boulder & +4 & -1 & \ 0 & 6/8 & & Finishing Blow (page~\pageref{finishingblow}) \\
+  \end{nametable}
 
-  Cast Iron Skillet & +2 & \ -1 & \ +1 & -1/1 & & Adrenaline Surge (page~\pageref{adrenalinesurge}) \\
+  \begin{nametable}[XXXXXX]{Esoteric Weapons}
 
-  Chair & +1 & +1 & +1 & 1/ 3 & & \\
+  \textbf{Name} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
 
-  Club & +2 & +1 & +1 & 2/4 &  \\
+  \greatclub
 
-  Great Axe & +3 & +1 & +1 & 3/5 & 8 sp & \\
+  \giantsword
 
-  Great Sword & +2 & +1 & +2 & 3/5 & 8 sp & \\
+  \rapier
 
-  Maul & +3 & \ 0 & \ 0 & 4/6 & 1 sp & \\
+  \warhammer
 
-  Large Rock & +2 & \ 0 & \ 0 & 4/6 & & \\
+  \whip
 
-  Longsword & +1 & +1 & +3 & 1/3 & 9 sp & \\
-
-  Shortsword & +1 & +1 & +2 & -1/1 & 6 sp & Furious Blows (page~\pageref{furiousblows}) \\
-
-  Spear & +1 & +1 & +2 & 0/2 & 3 sp & First Strike (page~\pageref{firststrike}) \\
-
-  Quarterstaff & \ 0 & +1 & +2 & 0/2 & 2 sp & First Strike (page~\pageref{firststrike}) \\
-
-  Warhammer & +3 & 0 & +1 & 3/5 & 7 sp & Finishing Blow (page~\pageref{finishingblow}) \\
-
-  Whip & \ 0 & +2 & \ 0 & -1/ 1 & 1 cp & First Strike (page~\pageref{firststrike}) \\
-
-  Wood Axe & +2 & \ 0 & +1 & -1/1 & 1 sp & \\
-
-  \end{boxtable}
-
-  \begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
-
-  \textbf{Heavy Weapons} & \textbf{Dam.} & \textbf{Init.} & \textbf{Ev.} & \textbf{Wt.R} & Cost & \textbf{Knacks} \\\hline
-
-  Great Club & +4 & +1 & +1 & 5 & & \\
-
-  Giant Boulder & +5 & 0 & \ -2 & 8 & & Finishing Blow (page~\pageref{finishingblow}) \\
-
-  Giant Sword & +3 & +1 & +2 & 5 & 15 sp &  \\
-
-  Poleax & +3 & +1 & +1 & 5 & 6 sp & First Strike (page~\pageref{firststrike}) \\
-
-  \end{boxtable}
+  \end{nametable}
 
   \begin{boxtable}[p{.20\textwidth}p{0.07\textwidth}rrrrX]
 
@@ -332,3 +265,6 @@
   \end{boxtable}
 
 }
+
+\settoggle{chart}{false}
+
