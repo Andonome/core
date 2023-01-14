@@ -206,18 +206,25 @@ They can each invest \gls{mp} to create \gls{standingspell}, and thereafter any 
 \subsection{Spell Enhancements}
 \label{Enhancements}
 
-Spell enhancements make spells stronger, at the expence of adding to the spell's level, and \gls{tn}.
+Spell enhancements make spells stronger, at the expense of adding to the spell's level, and \gls{tn}.
 These enhancements always take the form of adjectives.
-For example, the first level \textit{Fireball} spell, has the enhancement ``(1) Enhancement -- Raging'', meaning the mage can cast a \textit{Raging Fireball}, which would count as a second level spell.
-The enhancement ``(1) Wide'' can be used on any spell to have it cover a wide area, so while a Fireball spell would normally be level 1, a \textit{Wide, Raging Fireball} would be a level 3 spell, with \gls{tn} 9.
-The spell would then cost 3 \glspl{mp} to cast, and require 3 rounds to cast.
 
 \iftoggle{verbose}{
+  The \textit{Lending Hand} spell allows someone to add a Bonus to an ally's rolls at the cost of 1 \gls{mp}.
+  But anyone with the \textit{Wide} Enhancement can add a level, and cast a \textit{Wide Lending Hand} spell, which boosts multiple allies' rolls as a second level spell (costing 2 \glspl{mp}; or with the \textit{Fast} Enhancement, a \gls{miracleworker} could cast a \textit{Fast Lending Hand} spell.
+
+  The Invocation sphere in particular may seem very limited, where casters can only benefit from a Level 1 \textit{Fireball}.
+  However, anyone with Invocation 3 could spend 3 \glspl{mp} to cast a \textit{Fast, Potent, Fireball}, or a \textit{Fast, Wide, Fireball}, which targets many enemies instantly.
+
+  \Glspl{miracleworker} gain access to Enhancements by raising their Metamagic level (which is always equal to their maximum \glspl{mp}).
+
   \subsection{Spell Failure}
   Spells are always cast, even if the caster does not get the intended result.
   If an illusion spell fails, the illusion persists -- it simply looks obviously magical, like bad CGI.
   If a fireball spell fails, fire still comes, as the mage's mana has to go \emph{somewhere}, even if nothing hits the intended target.
-}{}
+}{
+  Casters gain Enhancements through gaining Metamagic levels.
+}
 
 \end{multicols}
 
@@ -294,25 +301,13 @@ Rare and powerful spell-songs are swapped as currency among bards -- spells whic
 
 \noindent
 The more \glsentrylongpl{mp} a mage has, the more Metamagic they have to change their spells.
-A mage with 2 spheres and an Intelligence Bonus of +1 would have a total Metamagic rating of 5.
+A mage with 2 spheres and an Intelligence Bonus of +1 would have a total Metamagic rating of 7.
 
-Every power level offers the caster new spells or -- more often -- enhancements to existing spells.
-The enhancements drawn from Metamagic can affect all spells the caster has, not simply the spells listed here.
+Every power level offers the caster new spells or Enhancements (which make spells more powerful).
+The Enhancements drawn from Metamagic can affect all spells the caster has, making every one more powerful.
 In this way, spells can be combined for greater effects.
 
-\iftoggle{verbose}{
-For example, early invocationists can cast a \textit{Fireball} spell as a Level 1 spell.
-With sufficient \glsentrylongpl{mp}, the mage can cast a \textit{Wide Fireball} as a level 2 spell, affecting more targets.
-Fireballs can also be enhanced by making them \textit{Raging} when cast at +1 level (which adds +2 to the Damage).
-Finally, combining all these effects, a mage could cast a \textit{Wide, Raging Fireball} as a level 3 spell (assuming the mage had level 3 Invocation).
-This would inflict $1D6 + 2$ Damage, plus the mage's Intelligence Bonus, over a wide area.
-}{}
-
-Anyone who walks any Path of Magic can make use of any of these abilities, even if they haven't bought any spheres.
-These spells are not like the formal spells in magical spheres.
-They require no words, hand movements, or anything else to use.
-However, such spells quickly become expensive.
-A level 8 Metamagic spell requires 8 \glspl{mp} to cast, and requires 11 Initiative points.
+Anyone who has bought any magical Knacks can make use of any of these abilities, even if they haven't bought any spheres.
 
 \spelllevel
 
@@ -557,9 +552,11 @@ Any applicable enhancements, such as \textit{Wide}, affect both spells.
 
 The smaller spell adds a number of levels equal to half its own level.
 
-For example, a priest of \gls{wargod} might cast a \textit{Raging Fireball} at someone, alongside \textit{Curse}.
-The highest level spell there is \textit{Raging Fireball} at level 2, and the other is at level 1 and only costs half the usual \glspl{mp}.
-With the two spells together, the total cost is 3 \glspl{mp}, and the spell takes 7 Initiative points to cast.
+For example, a priest of \gls{wargod} might cast a \textit{Fast Fireball} at someone, alongside a \textit{Curse}.
+The highest level spell there is \textit{Fast Fireball} at level 2, and the other is at level 1 and only costs half the usual \glspl{mp}.
+With the two spells together, the total cost is 3 \glspl{mp},
+\footnote{Always round up.}%
+and the spell takes 7 Initiative points to cast.
 The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ damage from the fireball, and loses $1D6+2$ \glspl{hp} directly.
 
 \spelllevel
