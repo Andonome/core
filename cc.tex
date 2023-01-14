@@ -148,7 +148,7 @@ These are the basic Traits which characters must use over and over again for eve
 \index{Physical Attributes}
 
 \sidebox[27]{
-\begin{boxtable}[Xc]
+\begin{boxtable}[c|c]
 
   Result & Attribute Bonus \\\hline
 
@@ -396,25 +396,6 @@ For flat-out sprinting, the Speed Attribute is always preferred, while Strength 
   Of course, nobody can hope to outrun a chitincrawler, but not being the slowest member of your group sorts most issues.
 }{}
 
-\subsection{Caving}
-
-Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
-\iftoggle{verbose}{%
-Just as most humans understand some basic Wyldcrafting, almost all dwarves and gnomes know a little of the Caving Skill.
-
-Those with a poor understanding of caves can make foolish mistakes, like taking an open flame into a long, narrow tunnel,%
-\footnote{This can remove so much oxygen from the air, they begin to giggle, hallucinate, and possibly pass out.}
-building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
-
-Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{
-woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
-
-    Specialized members of \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
-}{
-  mushrooms, but the differences can still trip them up at times.
-  }
-}{}
-
 \iftoggle{verbose}{%
 
   \begin{figure*}[b!]
@@ -445,6 +426,26 @@ woodspies, although they can behave so differently in the separate environments 
   \end{figure*}
 }{}
 
+
+\subsection{Caving}
+
+Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
+\iftoggle{verbose}{%
+Just as most humans understand some basic Wyldcrafting, almost all dwarves and gnomes know a little of the Caving Skill.
+
+Those with a poor understanding of caves can make foolish mistakes, like taking an open flame into a long, narrow tunnel,%
+\footnote{This can remove so much oxygen from the air, they begin to giggle, hallucinate, and possibly pass out.}
+building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
+
+Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{
+woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+
+    Specialized members of \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
+}{
+  mushrooms, but the differences can still trip them up at times.
+  }
+}{}
+
 \subsection{Craft}
 
 The Craft Skill allows players to make and fix things, and occasionally break things.
@@ -461,7 +462,7 @@ To craft an item used with another Skill, the crafter requires at least 1 level 
 Using moulds or other pre-set designing materials allows the character to perform the Craft roll as a \gls{restingaction} (see page \pageref{restingactions}) and may provide a bonus to the roll depending upon the quality of tools available.
 
 \iftoggle{verbose}{
-  \begin{figure*}[b]
+  \begin{figure*}[b!]
     \begin{boxtext}[title=Rolling with Bad Stats]
 
       If you find you've rolled up a particularly bad character, don't worry too much -- the \glspl{xp} players receive will even out differing character stats before long.
