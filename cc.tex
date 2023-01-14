@@ -148,7 +148,7 @@ These are the basic Traits which characters must use over and over again for eve
 \index{Physical Attributes}
 
 \sidebox[27]{
-\begin{boxtable}[Xc]
+\begin{boxtable}[c|c]
 
   Result & Attribute Bonus \\\hline
 
@@ -220,11 +220,76 @@ Finally, a character's ability to speak with people, make friends, lie convincin
 If players prefer, they can design their own characters by simply setting all Attributes to 0, then applying the racial modifiers.
 They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
 
-\iftoggle{verbose}{
-\subsection{No Class}
+\iftoggle{aif}{}{
+  \iftoggle{verbose}{
+    \subsection{No Class}
+    For those who prefer a class-based system, or just a suggestion for starting characters, check \autoref{class}.
+    You'll find some default Traits for `fighters, mages \& rogues', along with notes on equipment.
+  }{}
+}
 
-For those who prefer a class-based system, or just a suggestion for starting characters, check \autoref{class}.
-You'll find some default Traits for `fighters, mages \& rogues', along with notes on equipment.
+\iftoggle{verbose}{
+
+  \index{Character Concept}
+  \subsection{Concept}
+
+  \iftoggle{aif}{
+    Who is this you have brought to the \gls{guard}?
+
+    Have a look at your character's Attributes and consider what kind of person they are.
+    Strength might indicate working on a farm.
+    A good Charisma may indicate a creative past, such as poetry, or working with the public, trading or selling items.
+    Intelligent characters may have required to plan a lot -- perhaps working as a seneschal for a town master, or planning a safe route for a travelling circus.
+    Low intelligence means never having to think, so they may come from a noble family, or always worked in a stonemason's guild, where someone else could plan their day for them.
+    Dexterous characters could have been an expert weaver, before joining the \gls{guard}; or perhaps they lived in a major city and stole money from others.
+
+    How did you end up in the \gls{guard}?
+    Did you naively sign up for a thrilling adventure, and now regret it?
+    What happened to your farm?
+    Torched by goblins, or did too many men leave the village?
+    Most join simply because they did not inherit their parents' land, so they hope to make some money, and perhaps be rewarded with land.
+    Some stole or robbed from people, and managed to plead to a judge to let them join the \gls{guard} instead of hanging.
+
+    Take your character's history, and condense it into two words.
+
+    \begin{itemize}
+      \item
+      Betrayed Guildsman
+      \item
+      Clairvoyant Herder
+      \item
+      Crypto Zoologist
+      \item
+      Dispossessed Farmer
+      \item
+      Dishonoured Alchemist
+      \item
+      Dauntless Youth
+      \item
+      Failed Priest
+      \item
+      Lazy Thief
+      \item
+      Lost Writer
+      \item
+      Reformed Bandit
+      \item
+      Zealous Guildsman
+    \end{itemize}
+  }{
+    Now is the time to look at your character's base Attributes and think about what they might be good at.
+    The best place to start is your highest Attribute.
+    If you have a positive (or simply not negative) Intelligence score, making a spell caster is a good option.
+    Buy off any Wits penalties and put a magic sphere down on the character sheet.
+    Alternatively, if your highest Trait so far is a Body Attribute perhaps this character is more suited to being a fighter.
+    Don't worry if you have negative Body Attributes -- your starting \gls{xp} can buy all of that up to 0 quite easily.
+
+    Mixed characters are easy to make -- a spell-casting, sword-swinging elf or a dwarf who prays to dark gods and sneaks well through the shadows simply requires a couple of Traits.
+    Think about which way the character is headed and at this point write something down in the character's `Concept' section at the top.
+    It might be something solid and classic, such as `sellsword', `eager paladin', `barbarian poet', `wizzard', or `greedy rogue'.
+    You could also wander off the traditional RPG model, playing a `lost outlander', `unwilling prophet' or `dishonoured noble'.
+  }
+
 }{}
 
 \end{multicols}
@@ -327,32 +392,13 @@ It might be paired with Dexterity when a character is attempting to roll under t
 For flat-out sprinting, the Speed Attribute is always preferred, while Strength is primary when characters want to throw cannon balls.
 
 \iftoggle{aif}{
-  Many of the longest-surviving \gls{guard} find this Skill invaluable.
+  Many of the longest-surviving \glspl{guard} find this Skill invaluable.
   Of course, nobody can hope to outrun a chitincrawler, but not being the slowest member of your group sorts most issues.
 }{}
 
-\subsection{Caving}
-
-Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
-\iftoggle{verbose}{%
-Just as most humans understand some basic Wyldcrafting, almost all dwarves and gnomes know a little of the Caving Skill.
-
-Those with a poor understanding of caves can make foolish mistakes, like taking an open flame into a long, narrow tunnel,%
-\footnote{This can remove so much oxygen from the air, they begin to giggle, hallucinate, and possibly pass out.}
-building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
-
-Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{%
-  mushrooms, but the differences can still trip them up at times.
-}{
-    woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
-
-    Specialized members of \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
-  }
-}{}
-
 \iftoggle{verbose}{%
 
-  \begin{figure*}[t!]
+  \begin{figure*}[b!]
 
     \begin{nametable}[l|X]{Craft Requirements}
 
@@ -380,6 +426,26 @@ Cavers share a certain overlap with survivalists -- both know a lot about \iftog
   \end{figure*}
 }{}
 
+
+\subsection{Caving}
+
+Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
+\iftoggle{verbose}{%
+Just as most humans understand some basic Wyldcrafting, almost all dwarves and gnomes know a little of the Caving Skill.
+
+Those with a poor understanding of caves can make foolish mistakes, like taking an open flame into a long, narrow tunnel,%
+\footnote{This can remove so much oxygen from the air, they begin to giggle, hallucinate, and possibly pass out.}
+building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
+
+Cavers share a certain overlap with survivalists -- both know a lot about \iftoggle{aif}{
+woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+
+    Specialized members of \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
+}{
+  mushrooms, but the differences can still trip them up at times.
+  }
+}{}
+
 \subsection{Craft}
 
 The Craft Skill allows players to make and fix things, and occasionally break things.
@@ -396,7 +462,7 @@ To craft an item used with another Skill, the crafter requires at least 1 level 
 Using moulds or other pre-set designing materials allows the character to perform the Craft roll as a \gls{restingaction} (see page \pageref{restingactions}) and may provide a bonus to the roll depending upon the quality of tools available.
 
 \iftoggle{verbose}{
-  \begin{figure*}[b]
+  \begin{figure*}[b!]
     \begin{boxtext}[title=Rolling with Bad Stats]
 
       If you find you've rolled up a particularly bad character, don't worry too much -- the \glspl{xp} players receive will even out differing character stats before long.

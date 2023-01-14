@@ -157,15 +157,14 @@ Said characters won't necessarily be as useful as they would be if they were bro
 This may include a trader who was previously known to have valuable information about some situation, or a mage the characters had previously met who could cast a useful spell or two.
 
 This \gls{npc} will probably have gained some \glspl{xp} over this time.
-The \gls{npc}'s \glspl{xp} is still equal to half the total \glspl{xp} of whichever party member has the highest \glspl{xp} total.\footnote{Although this cannot make the \glspl{xp} lower than it was.}
-Any additional \glspl{xp} must be spent immediately (spare XP is discarded), with an explanation about what happened to acquire these new Traits.
+The \gls{npc}'s \glspl{xp} is still equal to half the total \glspl{xp} of whichever party member has the highest \glspl{xp} total.
+\footnote{Of course this cannot lower the \gls{npc}'s \glspl{xp}.}%
+Any additional \glspl{xp} must be spent immediately (spare \glspl{xp} are discarded), with an explanation about what happened to acquire these new Traits.
 
 \story{1}{The Random Fact}
 When the \gls{gm} asks you to make a check to gain knowledge, you can spend a \gls{storypoint} and mention how you know this one particular fact about this topic.
 You gain a +6 bonus to a single knowledge check.
 This does not count again for the same domain of expertise -- it is only a bonus to knowing one, single fact about the subject.
-
-The \gls{storypoint} can be spent after a roll has failed.
 
 \iftoggle{verbose}{%
   \begin{itemize}
@@ -179,12 +178,12 @@ The \gls{storypoint} can be spent after a roll has failed.
       You know it's in Whiteplains somewhere, and their talk of elves gave you a rough idea of the location.
     \item
     It was unclear if the noble was telling the truth, but you recognise the dyes on his tunic; they come only from the Shale, which can only mean one thing\ldots
-    \end{itemize}
   }{
     \item
     The party have you idea where they are, but you suddenly remember your uncle's maps.
     They were always plastered all over the walls, and you used to imagine walking in those distant lands.
   }
+  \end{itemize}
 }{}
 
 \story{1}{The Special Item}
@@ -239,26 +238,35 @@ The place will not necessarily help you hide or defend yourself unless you are a
   \end{itemize}
 }{}
 
-\story{1-3}{The Old Friend}
+\story{1}{The Old Friend}
 \label{oldFriend}
 You know someone in town who has just the skills you are all looking for.
 
-The player can make this character themselves, just like a normal character, however, buying martial abilities.
-For the sake of brevity, consider using the rules for player chosen characters (page \pageref{playerchosen}).
-The \gls{npc}'s starting \glspl{xp} is half the current \glspl{xp} total of whichever party member has the highest total \glspl{xp}, so if the highest \glspl{xp} total in the party is 83, that's 42 \glspl{xp} to make this character.
-
-Martial or magical abilities cost an extra \gls{storypoint}, so a character with both would cost 3 \glspl{storypoint}.
+The player can make this character themselves, just like a normal character, but cannot purchase Combat, Projectiles or \glspl{fp}.
+The \gls{npc} begins with either 50 \glspl{xp}, or half the \glspl{xp} of whichever party member has the most (whichever is higher).
+\iftoggle{verbose}{%
+  So if one of the \glspl{pc} has 115 \glspl{xp}, the \gls{npc} would begin with 58 \glspl{xp}.
+}{}
 
 \iftoggle{verbose}{
   This is a particularly important story, as these form the secondary characters which players can use if their first characters die.
 
   \begin{itemize}
   \item Everyone wants to buy expensive chainmail, and your dwarvish friend just so happens to have retired here, selling top-quality armours of all types.
-  \item With no idea how to talk to the local lord, you suddenly find your old military friend guarding the gate.
   \item The party needs an expert tracker, and on the road you meet your brother.
   He never liked people, so once he got out of the military, he began working independently as a bounty hunter.
   \end{itemize}
 }{}
+
+\story{2}{The Ally}
+
+As per \nameref{oldFriend}, but the character can purchase any Trait.
+These martial allies can accompany groups on dangerous missions.
+
+\begin{itemize}
+  \item
+  With no idea how to talk to the local lord, you suddenly find your old military friend guarding the gate.
+\end{itemize}
 
 \story{2}{The Resting Spot}
 You know of a secluded and secret location where you will be safe.

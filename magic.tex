@@ -167,7 +167,7 @@ Some spells are instant -- a ball of fire flashes from the mage and incinerates 
 Continuous spells can be cancelled at will or maintained indefinitely.
 However, while they are being maintained, the \gls{mp} required to cast them remains spent, lowering the mage's maximum \gls{mp}.%
 \iftoggle{verbose}{%
-\footnote{Spell enhancements (see below) do not lock mana in this way.}
+\footnote{Spell Enhancements (see below) do not lock mana in this way.}
 
 For example, Tauron the elven sorcerer casts a spell on himself to appear as a human -- all the better to blend into surrounding society.
 He spends 1 \gls{mp}.
@@ -206,80 +206,25 @@ They can each invest \gls{mp} to create \gls{standingspell}, and thereafter any 
 \subsection{Spell Enhancements}
 \label{Enhancements}
 
-Spell enhancements make spells stronger, at the expence of adding to the spell's level, and \gls{tn}.
-These enhancements always take the form of adjectives.
-For example, the first level \textit{Fireball} spell, has the enhancement ``(1) Enhancement -- Raging'', meaning the mage can cast a \textit{Raging Fireball}, which would count as a second level spell.
-The enhancement ``(1) Wide'' can be used on any spell to have it cover a wide area, so while a Fireball spell would normally be level 1, a \textit{Wide, Raging Fireball} would be a level 3 spell, with \gls{tn} 9.
-The spell would then cost 3 \glspl{mp} to cast, and require 3 rounds to cast.
+Spell Enhancements make spells stronger, at the expense of adding to the spell's level, and \gls{tn}.
+These Enhancements always take the form of adjectives.
 
 \iftoggle{verbose}{
+  The \textit{Lending Hand} spell allows someone to add a Bonus to an ally's rolls at the cost of 1 \gls{mp}.
+  But anyone with the \textit{Wide} Enhancement can add a level, and cast a \textit{Wide Lending Hand} spell, which boosts multiple allies' rolls as a second level spell (costing 2 \glspl{mp}; or with the \textit{Fast} Enhancement, a \gls{miracleworker} could cast a \textit{Fast Lending Hand} spell.
+
+  The Invocation sphere in particular may seem very limited, where casters can only benefit from a Level 1 \textit{Fireball}.
+  However, anyone with Invocation 3 could spend 3 \glspl{mp} to cast a \textit{Fast, Potent, Fireball}, or a \textit{Fast, Wide, Fireball}, which targets many enemies instantly.
+
+  \Glspl{miracleworker} gain access to Enhancements by raising their Metamagic level (which is always equal to their maximum \glspl{mp}).
+
   \subsection{Spell Failure}
   Spells are always cast, even if the caster does not get the intended result.
   If an illusion spell fails, the illusion persists -- it simply looks obviously magical, like bad CGI.
   If a fireball spell fails, fire still comes, as the mage's mana has to go \emph{somewhere}, even if nothing hits the intended target.
-}{}
-
-\end{multicols}
-
-\section{Mana Stones}
-
-\begin{multicols}{2}
-
-\noindent
-Every path has its own way of creating magical items.
-These magical items always begin life as a `mana stone' -- i.e. a thing which can store mana, and produce it upon command.
-Alchemists typically use gold, while rune-casters use any surface which can hold a rune upon it.
-
-The mana stones often hold spells, which they can summon on the command of the user (or sometimes, based upon the mana stone's own desires).
-When \glspl{miracleworker} walk multiple Paths of magic, they can create mana stones which combine spells, by creating stones which work with both schools.
-For example, an alchemical rune-caster might carve runes into gold plate in order to complete a spell.
-
-\subsection{The Path of Alchemy}
-\index{Alchemy}
-
-\index{Mana Stones!Alchemy}
-
-Alchemical mana stones are always precious items, such as gold, rubies, or diamonds.
-A mana stone costs 10 gp per \gls{mp} which can be stored inside it, so a mana stone storing 3 \gls{mp} would cost 30 gp.
-The exact item might be a simply ruby which stores mana, a diamond-headed wand of ivory which blasts out fireballs or a sword with jewels on the handle which surrounds the warrior with moving illusions of their.
-Alchemical mana stones with a spell always activate those spells with a command word.
-
-Such mana stones can be reworked to make other items, but can only store fewer \glspl{mp} than the first time they were used.
-
-\subsection{The Path of Blood}
-
-\index{Mana Stones!Blood}
-
-Those with magic flowing through their own blood can only use themselves as mana stones.
-They can store magic in their heart, their fingers, or eyes, but can never use an external item to store mana.
-
-\subsection{The Path of Devotion}
-
-
-Each type of devotion has its own mana stone.
-See the individual references in chapter \ref{gods_codes}.
-
-\subsection{The Path of Runes}
-
-\index{Mana Stones!Runes}
-
-Rune casters' mana stones are, of course, runic carvings, and can never be painted onto anything.
-Such mana stones can store up to 2 \glspl{mp} per \gls{weightrating}, so an item with a \gls{weightrating} of 3 could store up to 6 \glspl{mp}.
-
-\subsection{The Path of Song}
-\label{song}
-\index{Mana Stones!Song}
-
-The mana stones of the Path of Song are actual songs.
-The bard composes a song especially for the purpose; when anyone -- anywhere in the world -- plays the song on the correct instrument the mana can be regained.
-
-If anyone ever pulls mana from the song (either for a spell casting or because they are low on mana) while the song-spell is empty, it is destroyed forever.
-The song will be difficult for anyone to remember and will no longer store any mana until someone remakes the spell.
-
-Rare and powerful spell-songs are swapped as currency among bards -- spells which can protect the singer or enchant a crowd.
-
-
-  
+}{
+  Casters gain Enhancements through gaining Metamagic levels.
+}
 
 \end{multicols}
 
@@ -294,25 +239,13 @@ Rare and powerful spell-songs are swapped as currency among bards -- spells whic
 
 \noindent
 The more \glsentrylongpl{mp} a mage has, the more Metamagic they have to change their spells.
-A mage with 2 spheres and an Intelligence Bonus of +1 would have a total Metamagic rating of 5.
+A mage with 2 spheres and an Intelligence Bonus of +1 would have a total Metamagic rating of 7.
 
-Every power level offers the caster new spells or -- more often -- enhancements to existing spells.
-The enhancements drawn from Metamagic can affect all spells the caster has, not simply the spells listed here.
+Every power level offers the caster new spells or Enhancements (which make spells more powerful).
+The Enhancements drawn from Metamagic can affect all spells the caster has, making every one more powerful.
 In this way, spells can be combined for greater effects.
 
-\iftoggle{verbose}{
-For example, early invocationists can cast a \textit{Fireball} spell as a Level 1 spell.
-With sufficient \glsentrylongpl{mp}, the mage can cast a \textit{Wide Fireball} as a level 2 spell, affecting more targets.
-Fireballs can also be enhanced by making them \textit{Raging} when cast at +1 level (which adds +2 to the Damage).
-Finally, combining all these effects, a mage could cast a \textit{Wide, Raging Fireball} as a level 3 spell (assuming the mage had level 3 Invocation).
-This would inflict $1D6 + 2$ Damage, plus the mage's Intelligence Bonus, over a wide area.
-}{}
-
-Anyone who walks any Path of Magic can make use of any of these abilities, even if they haven't bought any spheres.
-These spells are not like the formal spells in magical spheres.
-They require no words, hand movements, or anything else to use.
-However, such spells quickly become expensive.
-A level 8 Metamagic spell requires 8 \glspl{mp} to cast, and requires 11 Initiative points.
+Anyone who has bought any magical Knacks can make use of any of these abilities, even if they haven't bought any spheres.
 
 \spelllevel
 
@@ -367,7 +300,7 @@ The mage casts the spell on any person or item and finds out how many \glsentryl
 
 \enhancement{1}{Fast}{Make a spell cast instantly}\label{fast}
 \iftoggle{verbose}{%
-This enhancement alone allows \glspl{miracleworker} to  cast effectively on the battlefield.
+This Enhancement alone allows \glspl{miracleworker} to  cast effectively on the battlefield.
 With this Enhancement, a spell no longer requires one round per level to cast, but can be cast with 3 Initiative plus the spell's level.
 
 While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit{Fast Oath}, cast at level 3, requires only 6 Initiative.
@@ -379,7 +312,7 @@ While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit
 
 \enhancement{1}{Colourful}{Change a spell's appearance}
 
-This enhancement allows a \gls{miracleworker} to alter the appearance of any spell.
+This Enhancement allows a \gls{miracleworker} to alter the appearance of any spell.
 The changes are purely cosmetic.
 \iftoggle{verbose}{%
 This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
@@ -557,9 +490,11 @@ Any applicable enhancements, such as \textit{Wide}, affect both spells.
 
 The smaller spell adds a number of levels equal to half its own level.
 
-For example, a priest of \gls{wargod} might cast a \textit{Raging Fireball} at someone, alongside \textit{Curse}.
-The highest level spell there is \textit{Raging Fireball} at level 2, and the other is at level 1 and only costs half the usual \glspl{mp}.
-With the two spells together, the total cost is 3 \glspl{mp}, and the spell takes 7 Initiative points to cast.
+For example, a priest of \gls{wargod} might cast a \textit{Fast Fireball} at someone, alongside a \textit{Curse}.
+The highest level spell there is \textit{Fast Fireball} at level 2, and the other is at level 1 and only costs half the usual \glspl{mp}.
+With the two spells together, the total cost is 3 \glspl{mp},
+\footnote{Always round up.}%
+and the spell takes 7 Initiative points to cast.
 The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ damage from the fireball, and loses $1D6+2$ \glspl{hp} directly.
 
 \spelllevel
@@ -584,6 +519,66 @@ Mana Stones, Talismans, and Artefacts cast with this enhancement can store 3 \gl
 They also regenerate 3 \glspl{mp} per scene.
 
 \stopcontents[magic]
+
+\end{multicols}
+
+\section{Mana Stones}
+
+\begin{multicols}{2}
+
+\noindent
+Every Path has its own way of creating magical items.
+These magical items always begin life as a `mana stone' -- i.e. a thing which can store mana, and produce it upon command.
+Alchemists typically use gold, while rune-casters use any surface which can hold a rune upon it.
+
+The mana stones often hold spells, which they can summon on the command of the user (or sometimes, based upon the mana stone's own desires).
+When \glspl{miracleworker} walk multiple Paths of magic, they can create mana stones which combine spells, by creating stones which work with both schools.
+For example, an alchemical rune-caster might carve runes into gold plate in order to complete a spell.
+
+\subsection{The Path of Alchemy}
+\index{Alchemy}
+
+\index{Mana Stones!Alchemy}
+
+Alchemical mana stones are always precious items, such as gold, rubies, or diamonds.
+A mana stone costs 10 gp per \gls{mp} which can be stored inside it, so a mana stone storing 3 \gls{mp} would cost 30 gp.
+The exact item might be a simply ruby which stores mana, a diamond-headed wand of ivory which blasts out fireballs or a sword with jewels on the handle which surrounds the warrior with moving illusions of their.
+Alchemical mana stones with a spell always activate those spells with a command word.
+
+Such mana stones can be reworked to make other items, but can only store fewer \glspl{mp} than the first time they were used.
+
+\subsection{The Path of Blood}
+
+\index{Mana Stones!Blood}
+
+Those with magic flowing through their own blood can only use themselves as mana stones.
+They can store magic in their heart, their fingers, or eyes, but can never use an external item to store mana.
+
+\subsection{The Path of Devotion}
+
+
+Each type of devotion has its own mana stone.
+See the individual references in chapter \ref{gods_codes}.
+
+\subsection{The Path of Runes}
+
+\index{Mana Stones!Runes}
+
+Rune casters' mana stones are, of course, runic carvings, and can never be painted onto anything.
+Such mana stones can store up to 2 \glspl{mp} per \gls{weightrating}, so an item with a \gls{weightrating} of 3 could store up to 6 \glspl{mp}.
+
+\subsection{The Path of Song}
+\label{song}
+\index{Mana Stones!Song}
+
+The mana stones of the Path of Song are actual songs.
+The bard composes a song especially for the purpose; when anyone -- anywhere in the world -- plays the song on the correct instrument the mana can be regained.
+
+If anyone ever pulls mana from the song (either for a spell casting or because they are low on mana) while the song-spell is empty, it is destroyed forever.
+The song will be difficult for anyone to remember and will no longer store any mana until someone remakes the spell.
+
+Rare and powerful spell-songs are swapped as currency among bards -- spells which can protect the singer or enchant a crowd.
+
 
 \end{multicols}
 
