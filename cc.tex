@@ -221,9 +221,11 @@ If players prefer, they can design their own characters by simply setting all At
 They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
 
 \iftoggle{aif}{}{
-  \subsection{No Class}
-  For those who prefer a class-based system, or just a suggestion for starting characters, check \autoref{class}.
-  You'll find some default Traits for `fighters, mages \& rogues', along with notes on equipment.
+  \iftoggle{verbose}{
+    \subsection{No Class}
+    For those who prefer a class-based system, or just a suggestion for starting characters, check \autoref{class}.
+    You'll find some default Traits for `fighters, mages \& rogues', along with notes on equipment.
+  }{}
 }
 
 \iftoggle{verbose}{
