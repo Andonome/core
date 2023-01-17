@@ -2,6 +2,7 @@
 \index{Combat}
 \label{combat}
 
+
 \iftoggle{verbose}{
   \begin{multicols}{2}
 
@@ -9,144 +10,99 @@
   These life and death rolls are handled somewhat differently from other tasks.
   Let's start with an overview of the basic features, then cover the details later.
 
-  A successful fight depends as much on proper pacing and timing as anything else.
+  You move to strike a bandit in the head with your axe.
+  Of course, when you attack him, that means he can attack you, so you make a resisted roll of Dexterity + Combat.
+  If you win, your axe tears into him; if you lose, his sword pierces your gut.
 
-  One player rolls Initiative for the players, and the \gls{gm} rolls Initiative for the monsters.
-  This initiative score forms a pool of points which everyone will use to attack, move, defend, et c.
-  
-  You engage a monster in a series of attacks.
-  When you win the roll, you deal damage, reducing the monster's \gls{hp}; when the monster wins, they deal damage to you.%
-  \footnote{It may at first feel odd not to have `attack and defence' rolls, but it cuts rolls which result in `nothing happens', and lets combat focus only on consequential results.}
+  You spend 3 \glspl{ap} to swing your hefty axe, while he spends only 2 \glspl{ap} to use his sword.
 
-  Once everyone's gets low, their actions start to take them into the negative.
-  People end up with -2, or even -4 Initiative, which then gives them a penalty to all actions.
-  Those few left on Initiative 1 have the ability to attack people when they have a serious penalty, and that means they can not only attack, but get a vitals shot, piercing enemies' armour, and monsters' thick hydes.
-
-  Occasionally, \glspl{pc} and \glspl{npc} will cast spells, shoot projectiles, or employ combat maneovres, but mostly the basic dance of numbers -- Initiative, Attack, Damage -- will bring events to a close within a few (real-world) minutes.
+  You have only 1 \gls{ap} left, while the bandit has 3.
+  He attacks, and once you spend 3 \glspl{ap} to engage him, you find yourself with a total of -2 \glspl{ap}!
+  This gives you a -2 penalty to all actions, so his next attack will have you at a serious disadvantage.
+  \emph{However}, your companion interrupts the flow of combat to move in front of you, and defend you -- all the bandit's attacks must now go through you.
+  This costs your team mate 1 \gls{ap}, putting him on 0.
 
   \end{multicols}
 
 }{}
+
 \section{Basic Combat}
 
 \begin{multicols}{2}
 
-\subsection{Initiative}
-\label{initiative}
-
-At the start of each \gls{round} the leader of each group rolls $2D6$ and the result is the group's Initiative.%
-\footnote{The ``party leader'', here means `whoever rolls the Initiative dice first'.}
-Each character then adds their \textit{Initiative Factor} (Speed Bonus + Weapon Bonus) to create a unique Initiative Score for the character.
-\iftoggle{verbose}{
-  If you roll 5 and have a Speed Bonus of 1, your Initiative Score is 6.
-  Another character may have an Initiative Factor of 4, so their Initiative would be 9, because everyone in the group uses the same roll.
-}{}
-
-\iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-  \footnotesize
-  \initiativechart
-  \end{figure*}
-}
-
-The \gls{gm} then counts downwards from the highest Initiative score.
-When your number comes up, you can act.
-Each time the character takes an action they pay a cost in Initiative -- once it reaches below 1 that character can no longer take standard actions.
-You can spend as much as you like, and even go down to an Initiative score of -5, but once the Initiative count reaches 0, the round ends.
-
-The negative Initiative score also forms a penalty to all actions.
-Characters at Initiative -2 suffer a -2 penalty to all rolls, movement, or anything else they might attempt.
-
 \subsection{Attacking}
 
-When you attack an opponent, you spend the Initiative for the attack, and roll $2D6$ + Dexterity + Combat.
-The basic \gls{tn} is 7, but your opponent may raise this by resisting.
-
-\begin{exampletext}
-  That idiot at the bar has been talking shit about dwarves too long, so you tap him on the shoulder, and plant your fist in his face.
-  You have Dexterity +1 and Combat +2, so you roll $2D6 + 3$, and easily hit the \gls{tn} of 7.
-\end{exampletext}
-
-\subsubsection{Damage}
-
-If you succeed, your weapon strikes against the enemy's body, damaging them.
-You can inflict $1D6$ Damage, plus your Strength Bonus.
-
-\begin{exampletext}
-  Your first makes contact, inflicting $1D6$ Damage.
-  Without any Strength Bonus, you just roll the die, and hit a `4'.
-\end{exampletext}
-
-\subsection{Reactions}
-
-Your opponent can react to an attack in three ways -- ignore it (and take what's dealt to them), block it, or try to \textit{Counter Attack}.
-
-\subsubsection{Ignoring Attacks}
-
-If someone ignores an attack, they do nothing.
-If the opponent hits, they deal Damage as normal.
-
-This costs 0 Initiative.
-
-\subsubsection{Blocking}
-
-When enemies choose to block, they have to spend 2 Initiative, but they can add their Dexterity + Combat to your \gls{tn} to attack.
-So if their Dexterity + Combat score were 3, your \gls{tn} to hit them would be 10, rather than 7.
-
-Actively blocking an attack costs 2 Initiative Points.
-
-\begin{exampletext}
-  The man punches back at you, but you don't want to lose your Initiative points attacking.
-  You spend only 2 to defend yourself, while he goes down to -2, which gives him a -2 penalty to all other actions.
-\end{exampletext}
-
-\subsubsection{Counter Attacks}
-
 \iftoggle{verbose}{
-  The best defence is a good offence.
-  When you bite someone, they might just bite you back first.
+  When combat begins, roll your Dexterity + Combat against \gls{tn} 7, plus the enemy's Dexterity + Combat.
+  Whoever wins deals damage, so it does not matter a lot who started it, only who ends it still standing.
 
-  \begin{exampletext}
-    While the man at the bar has a -2 penalty, you take a swing at him.
-    He has nothing to lose, so he tries to counter.
-    You roll, you miss, and now he has you in a grapple, on the bar's filthy floor.
-  \end{exampletext}
-}{}
-
-\subsubsection{\Glspl{quickaction}}
-\label{quickaction}
-
-\Glspl{quickaction} can interrupt the usual Initiative priorities.
-Any time someone attempts a \gls{quickaction}, they take their action immediately, even if they have a negative Initiative score.
-If two characters interrupt the Initiative flow with \gls{quickaction} then whoever currently has the highest Initiative Score goes first.
-\gls{quickaction} allow characters to guard someone as soon as they see an attack impending upon a friend, to defend against missile attacks, or to shout a few words.
-
-Characters on less than 1 Initiative can continue taking \gls{quickaction}, but suffer a -1 cumulative penalty for each \gls{quickaction} below.
-
-For example, you can move, then Keep Edgy, even after you're too disoriented to attack anyone, but that movement will suffer a -1 penalty.
-Meanwhile, Keeping Edgy requires no roll and has no associated numbers, so it does not incur any penalty.
-However, defending oneself after this point would have a -2 penalty, and further \gls{quickaction} would suffer a -3 penalty.
-
-\iftoggle{verbose}{
-  \initiativechart
-}{}
-
-\subsection{Attack}
-\label{attack}
-
-To attack an opponent, you roll $2D6$ as usual, but only add your Combat \gls{skill}.
-The \gls{tn} is 7 plus your opponent's Dexterity.
-
-\iftoggle{verbose}{
-  Your total bonus to attack (usually just your Combat Bonus), is known as the \textit{Strike Factor}.
-}{}
+  Of course, that \glsentryfull{tn} of 7 helps a lot, so attacking someone gives you a better chance of success than being attacked.
+  Getting the attack in first equates to a +1 bonus on the roll.
+}{
+  Attacks are resisted rolls of Dexterity + Combat.
+}
 
 \subsubsection{Aggression}
 \label{aggression}
 \index{Aggression} 
 
 Animals use a \gls{skill} called Aggression.
-It works exactly like the Combat \gls{skill} but only adds to the Strike Factor, and never to Initiative or Evasion.
+It works exactly like the Combat \gls{skill} but only for unarmed attacks.
+
+\subsection{\Glsfmtlongpl{ap} \& Initiative}
+
+Everyone begins combat with 3 \glsentryfullpl{ap} plus their Speed Bonus.
+Every action requires spending some number of \glspl{ap}.
+
+Once someone reaches 0 \glspl{ap}, they cannot take normal actions -- only \glspl{quickaction}.
+Anyone on \emph{negative} \glspl{ap} receives a penalty to all actions equal to their penalty.
+
+\iftoggle{verbose}{
+  If someone on 0 \glspl{ap} has to engage in combat and spend 3 \glspl{ap}, that puts them on -3 \glspl{ap}.
+  The next time they engage in an attack, they receive a -3 penalty to the roll, and go down to -6 \glspl{ap}, then -9 \glspl{ap}.
+}{}
+
+\subsubsection{Initiative \& Interruptions}
+
+Once combat starts, anyone can attack, move, or do whatever they want in any order\ldots at first.
+However, if two characters both wish to act first, we resolve who goes first in the following order:
+
+\begin{enumerate}
+
+  \item
+  Whoever currently has the most \glspl{ap}.
+  \item
+  Whoever has the highest Speed Bonus.
+  \item
+  Whoever has the highest Wits Bonus.
+  \item
+  Dice roll! ($1D6$ each)
+\end{enumerate}
+
+\subsubsection{\Glspl{quickaction}}
+
+\Glspl{quickaction} can interrupt all other actions.
+They include speaking, moving, and defence (because even characters without any \glspl{ap} left will have to engage in Attack rolls).
+
+Disagreements about who goes first resolve with the usual Initiative rules.
+
+\Glspl{quickaction} cost 1 \gls{ap} unless otherwise stated.
+
+\paragraph{Guarding}
+allows any character to move up to 1 \gls{square}, position themselves in front of another player, and receive all attacks from their front.
+Anyone attacking a guarded character must first make a standard combat roll against the guardian, and if that attack succeeds then deal no Damage, but have the option to make a second attack, as a \gls{quickaction}, against the guarded character.
+
+\paragraph{Moving}
+lets the character travel up to 3 squares plus their Athletics Skill.
+
+\paragraph{Speaking}
+requires the usual 1 \gls{ap} expenditure.
+\iftoggle{verbose}{
+  If any player tells another to act, stop, or guard them, they lose 1 \gls{ap}.
+  During combat, everyone should focus on the task at hand, and communicate sparingly, only when they need to say something vital.
+}{
+  This includes any time a player communicates during combat.
+}
 
 \subsection{Damage}
 \index{Damage}
@@ -184,36 +140,12 @@ This applies to all Damage, including magical Damage. It continues through all D
 
 This also applies to lower Damage, so `2 Damage', would be $1D6-2$ damage.
 
-\subsection{Defence}
-\label{defence}
-\index{Active Defence}
-\index{Passive Defence}
-
-When the enemy attempts to hit you, roll $2D6$ against \gls{tn} 8 plus your enemy's Strike Factor (this is generally their Combat score).
-If you want to have an \gls{activeDefence}, you can spend 2 Initiative as a \gls{quickaction} to add your Dexterity Bonus, and any bonus from weapons.
-Otherwise, a \gls{passiveDefence} means you just roll the dice, and hope for a good result.
-
-Characters on 0 initiative or below suffer a -1 cumulative penalty to defence for each additional defence action.
-
-Characters with a negative Evasion Factor must add it, even if they do not have an active defence.
-
-The total bonus to defence, including any bonuses from weapons, is called the \textit{Evasion Factor}.
-
-\iftoggle{verbose}{
-
-  Passive defence is a perfectly valid tactic -- you can rely on armour and luck (i.e. \glspl{fp}) for a while if you don't want to spend your Initiative.
-
-}{}
-
 \subsection{Movement}
 \index{Movement}
 \label{movement}
 
-By spending two Initiative, characters can run as a \gls{quickaction}, acting before all other actions.
-Characters can run 3 squares plus their Speed Bonus during this time.
-This movement can be chopped up into any number of pieces -- once the Initiative is spent, a character with Speed +1 might run only one square, then 2 more, then 1 more square later.
-
-Characters who spend the entire turn running can move 10 squares plus their Speed Bonus plus their Athletics \gls{skill} Bonus; so someone with Speed +1 and Athletics +1 would move 12 squares per turn of flat-out running.
+By spending 1 \glspl{ap}, characters can run as a \gls{quickaction}, acting before all other actions.
+Characters can move up to 3 squares plus their Athletics Skill during this time.
 
 \subsection{Hit Points}
 
