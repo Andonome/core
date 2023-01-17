@@ -2,6 +2,35 @@
 \index{Combat}
 \label{combat}
 
+%  Intro
+%    Example
+%  Basics
+%    Attack
+%      Defence
+%    AP
+%      Interruptions
+%    Damage
+%    Common Actions
+%      Moving
+%      Speaking
+%  Equipment
+%    Weapons
+%    Armour
+%    Shields
+%    Weight (link from Strength)
+%    Ranged Weapons
+%      Shortbow
+%      Longbow
+%      Crossbow
+%  Advanced Combat
+%    Complications
+%      Falling
+%    Manoeuvres
+%  Fear and Fleeing
+%    Morale
+%    Chases
+%  Fatigue
+
 
 \iftoggle{verbose}{
   \begin{multicols}{2}
@@ -62,13 +91,12 @@ Anyone on \emph{negative} \glspl{ap} receives a penalty to all actions equal to 
   The next time they engage in an attack, they receive a -3 penalty to the roll, and go down to -6 \glspl{ap}, then -9 \glspl{ap}.
 }{}
 
-\subsubsection{Initiative \& Interruptions}
+\subsubsection{Initiative Order \& Interruptions}
 
 Once combat starts, anyone can attack, move, or do whatever they want in any order\ldots at first.
 However, if two characters both wish to act first, we resolve who goes first in the following order:
 
 \begin{enumerate}
-
   \item
   Whoever currently has the most \glspl{ap}.
   \item
@@ -84,7 +112,7 @@ However, if two characters both wish to act first, we resolve who goes first in 
 \Glspl{quickaction} can interrupt all other actions.
 They include speaking, moving, and defence (because even characters without any \glspl{ap} left will have to engage in Attack rolls).
 
-Disagreements about who goes first resolve with the usual Initiative rules.
+Disagreements about which \gls{quickaction} goes first resolve with the usual Initiative rules.
 
 \Glspl{quickaction} cost 1 \gls{ap} unless otherwise stated.
 
@@ -140,14 +168,7 @@ This applies to all Damage, including magical Damage. It continues through all D
 
 This also applies to lower Damage, so `2 Damage', would be $1D6-2$ damage.
 
-\subsection{Movement}
-\index{Movement}
-\label{movement}
-
-By spending 1 \glspl{ap}, characters can run as a \gls{quickaction}, acting before all other actions.
-Characters can move up to 3 squares plus their Athletics Skill during this time.
-
-\subsection{Hit Points}
+\subsubsection{Hit Points}
 
 \index{Hit Points}
 Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
@@ -174,7 +195,7 @@ This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.
   That makes the \gls{tn} 7 for the Vitality Check.
 }{}%
 
-\glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
+\Glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
 
 A failed Vitality check means that the character is dead.%
 \iftoggle{verbose}{%
@@ -186,40 +207,50 @@ A failed Vitality check means that the character is dead.%
 
   If no such \gls{npc} exists, one should be introduced through \glspl{storypoint} at the next available opportunity.
 }%
-A successful one means that the character is unconscious for the remainder of the scene but alive.
+A successful check means that the character is unconscious for the remainder of the scene but alive.
 At the end of the scene they can make further Vitality Checks to see if they wake up.
 When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
 
 \iftoggle{verbose}{
   At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
-  Everyone's \gls{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 7 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
+  Everyone's \gls{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 8 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
   \footnotesize{See page \pageref{weightrating} for \nameref{weightrating}.}
 }{}
 
 \end{multicols}
 
-\section{Weapons}
+\section{Equipment}
 
 \begin{multicols}{2}
 
-\iftoggle{verbose}{%
-\noindent
-Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself. Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about. Longer weapons also grant a bonus to Initiative, representing the fighter's ability to hit opponents before they hit them due to the weapon's length.
+\subsection{Weapons}
+
+\iftoggle{verbose}{
+  \noindent
+  Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself.
+  Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about.
+  Longer weapons grant an Attack Bonus, allowing someone to hit the enemy before the enemy hits them, and heavy weapons tend to deal more Damage.
+  However, both of these come at the cost of extra \emph{heft}; they take more time to swing, and so cost more \glspl{ap} to use.
 }{}
 
-Each weapons is rated for `Dam' (the Damage bonus), `Init' (the bonus to Initiative, generally through reach) and `Ev' (the weapon's Evasion bonus).
+Each weapon has the following properties:
 
-Each weapon has a \gls{weightrating}, just like any item.
-For every point a weapon's \gls{weightrating} exceeds its wielder's Strength Bonus, the wielder gains 1 Encumbrance, which subtracts from the character's Effective Speed as they move slower and swings the weapon slower.
-Weapons held in only one hand add +2 to their \gls{weightrating}.
+\begin{itemize}
 
-Finally, some weapons also have an in-built `knack' -- a special ability they allow the wielder to use.
-These weapon knacks are not counted towards the character's total knacks, except for the purposes of the weapon's knack.
-See Chapter \ref{knacks} for a full list of knacks.
+  \item
+  \textbf{(Attack) Bonus:} adds to the Attack roll),
+  \item
+  \textbf{Damage Bonus:} adds to the Damage of a successful Attack roll,
+  \item
+  \textbf{\Gls{ap} requirement:} how many \glspl{ap} the player spends after engaging in an Attack roll (whether attacking or being attacked),
+  \item
+  \textbf{The \gls{weightrating}:} shows the minimum Strength Bonus a character requires to use the weapon, if they don't want to gain encumbrance.
+  \item
+  \textbf{Cost:} The standard cost of the weapon in larger cities (which can easily be higher wherever the weapon is rare).
+
+\end{itemize}
 
 \end{multicols}
-
-\settoggle{chart}{true}
 
 \iftoggle{verbose}{%
   \weaponschart
@@ -229,39 +260,10 @@ See Chapter \ref{knacks} for a full list of knacks.
   \end{footnotesize}
 }
 
-\settoggle{chart}{false}
-
 \label{weaponschart}
 \index{Weapons}
 
 \begin{multicols}{2}
-
-\subsubsection{Light Weapons}
-\index{Light Weapons}
-
-Light Weapons are those with a \gls{weightrating} of -2 or less. People wield them in one hand only, without problem, and can slash or stab with them in flurries of blows, quickly. They require only 4 Initiative points to attack with, so while an axe is far more damaging than a dagger, a dagger can unleash a flurry of blows before a single axe swing has taken place.
-
-\subsubsection{Medium Weapons}
-\index{Combat!Medium Weapons}
-
-They grant excellent Combat Bonuses, often increasing the effects of all three Attributes.
-These weapons are the standard weapons which most people will be using throughout the campaign -- they cover the \gls{weightrating} from -1 to 4.
-
-Medium weapons are usually wielded in both hands.
-However, characters can try to hold one with only one hand, but the weapon's \gls{weightrating} increases by 2.
-For example, a great sword can certainly be held up by one hand alone, but it will move from a \gls{weightrating} of 4 to 6, meaning that a normal human, with Strength +1, would suffer a -5 penalty to their Speed Bonus, and therefore Initiative.
-While this is a steep penalty to Initiative, the price can be worth the wielding of a shield with a weapon.
-
-Anyone wielding a medium (or indeed heavy) weapon with a \gls{weightrating} equal or greater than their racial maximum has an unwieldy weapon indeed, and suffers a -3 penalty to their Initiative.
-
-\subsubsection{Heavy Weapons}
-\index{Combat!Heavy Weapons}
-
-Giants, monsters and a few extremely strong humans have the ability to heft weapons so large that they can only be used with both hands together -- all have a \gls{weightrating} of 4 or more.
-They grant excellent Bonuses, but require 8 Initiative points to attack.
-
-Anyone insane enough to attempt to use a large weapon one handed must suffer through a +4 increase in the weapon's \gls{weightrating}, which would make such weapons prohibitively heavy for most people.
-
 
 \subsection{Shields}
 \index{Shields}
@@ -274,12 +276,8 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \gls{weightrating}
 
 \shieldchart
 
-\end{multicols}
-
-\section{Armour}
+\subsection{Armour}
 \index{Armour}
-
-\begin{multicols}{2}
 
 \iftoggle{verbose}{%
   \armourchart
@@ -291,7 +289,8 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \gls{weightrating}
 }
 
 \noindent
-Armour defends characters by lowering incoming Damage. In game terms, armours have a \gls{dr} rating which subtracts from Damage.
+Armour defends characters by lowering incoming Damage.
+In game terms, armours have a \gls{dr} rating which subtracts from Damage.
 
 Armour can cover more or less of a character, and therefore comes with three ratings -- Partial, Complete and very rare Perfect armour.
 
@@ -305,28 +304,23 @@ Complete armour, whether leather or plate, will come with a helmet, a neck-guard
 Complete armour adds +1 to the \gls{weightrating} and multiplies the price by 3.
 
 \paragraph{Perfect armour}
-is a rating used for certain creatures which have natural armour without weak spots (such as stone giants).
+is a rating used for certain creatures which have natural armour without weak spots (such as stone giants), or magical armour.
 
-\subsection{Vitals Shots}
+\subsubsection{Vitals Shots}
 \label{vitals}
 \index{Combat!Vitals Shots}
 
-When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates. To get a Vitals Shot, one simply needs to roll high enough over the creature's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
+When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates.
+To get a Vitals Shot, one simply needs to roll high enough over the target's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
 
 For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{tn}) ignores the \gls{dr} from the armour. If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals Shot. Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a Strike would require a total of 15 to bypass the armour. Perfect armour cannot be bypassed by a sufficiently high roll.
 
-\iftoggle{verbose}{%
-\pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
-}{}
-
-Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage. Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
-
 \iftoggle{verbose}{
-
-Vitals Shots provide an incentive for people to push their Strike Factor as high as possible, even at the expense of their own defence.
-Various knacks and manoeuvres, such as charge (see page \pageref{charge}), can change the various combat factors.
-
+  \pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
 }{}
+
+Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage.
+Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
 \subsection{Stacking Armour}
 \label{stackingarmour}
@@ -352,33 +346,17 @@ Similarly, different types of natural \gls{dr} do not stack, and nobody becomes 
 \subsection{Weight}
 \index{Weight}
 
-All armour has a \gls{weightrating}, just like any other item.
-The \gls{weightrating} above are for Partial Armour.
-If anyone wears Complete armour the Weight is increased by 1, so Complete chain armour which comes past the knees, has a helmet and uses arm-guards, would have a \gls{weightrating} of 2.
+\iftoggle{verbose}{
+  All equipment has a \gls{weightrating} to show what Strength Bonus someone needs to have to use the item unencumbered.
+  For every point of the \gls{weightrating} over the charcter's Strength Bonus, they lose 1 \gls{ap} at the start of each round, and gain 1 \gls{fatigue} at the end.
 
-Armour also inflicts \glspl{fatigue} quickly, as mentioned above.
-Wearing armour in battle is a great idea, but characters attempting to sprint in full plate will find themselves unable to run before long.
-
-\subsubsection{Stacking}
-
-Adding extra weight works with same as adding armour -- just count the heaviest item, and half of the second, a quarter of the next, and so on.
-Lifting a gnome with a \gls{weightrating} of 4, and a club with a \gls{weightrating} of 3 would have a total \gls{weightrating} of 6.
-
-\subsection{Noise}
-
-\iftoggle{verbose}{%
-  Some armours make noise when walking around, which alerts everyone around, and typically stops sneaking attempts.
-  The `Noise' rating shows the added difficulty to any Stealth rolls which involve moving silently.
-  While sufficient padding can make Partial Armour silent, no amount of padding can remove the penalty from Complete.
+  We call these additional penalties \textit{encumbrance} (you'll find a space on the character sheet for your total, so you can add penalties from multiple items together).
+  Having extra encumbrance isn't necessarily a bad move.
+  A lot of armour and weapons are worth the loss of speed and \glspl{ap}.
 }{
-  The `Noise' rating shows the penalty to moving silently while wearing Complete armour of this type.
+  Characters carrying an item with a \gls{weightrating} above their Strength Bonus gain one point of \textit{encumbrance} per point of difference.
+  Each point of encumbrance reduces the character's \glspl{ap} by 1 at the start of each round.
 }
-
-\subsection{Perfect Strikes}
-
-\index{Combat!Perfect Strikes}
-Rolling a \gls{natural} `12' in combat, i.e. rolling two 6's, means the roll was a Perfect Strike.
-A Perfect Strike is guaranteed to hit even if it doesn't reach the opponent's \gls{tn}, it ignores both Partial and Complete armour (covered below) and it grants +2 Damage.
 
 \end{multicols}
 
@@ -404,21 +382,6 @@ As a result, most \glspl{npc} effectively have 0 \gls{fp}.
 The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} \glspl{hp}.
 
 \subsection{Regaining \glsentrylongpl{fp}}
-
-\newcommand{\FPRegen}{
-
-  \begin{xpbox}{C}
-    Base \glsentrytext{fp} & Regeneration \\\hline
-
-    5 & 2 per scene \\
-
-    10 & 4 per scene \\
-
-    15 & 6 per scene \\
-
-    20 & 8 per scene \\
-  \end{xpbox}
-}
 
 \sidebox[25]{
   \FPRegen

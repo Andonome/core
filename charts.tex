@@ -1,30 +1,22 @@
-\settoggle{chart}{true}
-
 \newcommand{\initiativechart}{
 
   \begin{nametable}[XX]{Initiative Costs}
 
-  \textbf{Action} & \textbf{Init. Cost} \\\hline
+  \textbf{Standard Actions} & \textbf{\Glsentrytext{ap}} \\\hline
 
-  \hspace{3em}\textbf{Striking} & \\\hline
+  Attacking      & (by Weapon) \\
 
-  Drawing weapon & 2 \\
+  Drawing weapon & 1 \\
 
-  Guard Someone & 2 \\
+  Guard Someone & 1 \\
 
-  Heavy weapon & 8 \\
-
-  Light weapon & 4 \\
-
-  Medium weapon & 6 \\
-
-  Ram & 3 \\\hline
+  Ram & 2 \\\hline
 
   \hspace{3em}\textbf{Projectiles} & \\\hline
 
-  Crossbow & 3 \\
+  Crossbow & 1 \\
 
-  Improvised projectile & 7 \\
+  Improvised projectile & 2 \\
 
   Reloading & 2 \\
 
@@ -55,7 +47,7 @@
 \newcommand{\weaponschart}{
   \begin{nametable}[XXXXXX]{Improvised Weapons}
 
-  \textbf{Name} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+  \textbf{Name} & \textbf{Bonus} & \textbf{Damage} & \textbf{\Glsfmtshort{ap}} & \textbf{\Glsentrytext{weightrating}} & Cost \\\hline
 
   \boulder
 
@@ -83,7 +75,7 @@
 
   \begin{nametable}[XXXXXX]{M\^{e}l\'{e}e Weapons}
 
-  \textbf{Name} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+  \textbf{Name} & \textbf{Bonus} & \textbf{Damage} & \textbf{\Glsfmtshort{ap}} & \textbf{\Glsentrytext{weightrating}} & Cost \\\hline
 
   \Dagger
 
@@ -109,7 +101,7 @@
 
   \begin{nametable}[XXXXXX]{Esoteric Weapons}
 
-  \textbf{Name} & \textbf{Bonus} & \textbf{Dam.} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+  \textbf{Name} & \textbf{Bonus} & \textbf{Damage} & \textbf{\Glsfmtshort{ap}} & \textbf{\Glsentrytext{weightrating}} & Cost \\\hline
 
   \greatclub
 
@@ -127,7 +119,7 @@
 \newcommand{\shieldchart}{
   \begin{nametable}[XXXXX]{Shields}
 
-  \textbf{Name} & \textbf{Bonus} & \textbf{Initiative} & \textbf{Min. Str.} & Cost \\\hline
+  \textbf{Name} & \textbf{Bonus} & \textbf{\Glsfmtshortpl{ap}} & \textbf{Weight} & Cost \\\hline
 
   \bucklar
   \roundshield
@@ -265,5 +257,19 @@
 
 }
 
-\settoggle{chart}{false}
+
+\newcommand{\FPRegen}{
+
+  \begin{xpbox}{C}
+    Base \glsentrytext{fp} & Regeneration \\\hline
+
+    5 & 2 per scene \\
+
+    10 & 4 per scene \\
+
+    15 & 6 per scene \\
+
+    20 & 8 per scene \\
+  \end{xpbox}
+}
 
