@@ -322,7 +322,18 @@ For partial armour, anyone rolling a Margin of 3 (i.e. 3 points above the \gls{t
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage.
 Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
-\subsection{Stacking Armour}
+\iftoggle{verbose}{
+  \begin{figure*}[t!]
+  \projectilesChart
+  \end{figure*}
+}{
+  \begin{figure*}[t]
+  \footnotesize
+  \projectilesChart
+  \end{figure*}
+}
+
+\subsubsection{Stacking Armour}
 \label{stackingarmour}
 
 Some creatures have a natural \gls{dr}, which would then stack with their armour.
@@ -342,6 +353,74 @@ Stacked armour can consist of both partial and complete layers, meaning a roll c
 Standard armour cannot be stacked in this way.
 We assume plate, chain, and some leather-based armours already have padded armour underneath.
 Similarly, different types of natural \gls{dr} do not stack, and nobody becomes undead in different ways.
+
+\subsection{Ranged Combat}\index{Ranged Combat}
+
+\noindent
+Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
+Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
+The \gls{tn} is always 6 plus one for every five squares away the target is.
+\iftoggle{verbose}{
+  Targets 14 squares away would have a \gls{tn} of 8 to hit.
+}{}%
+
+Moving targets add their Speed Bonus to the \gls{tn}, and stationary targets with a shield can add their shield's Bonus to the \gls{tn} as long as they were Keeping Edgy (see page \pageref{edgy}.)
+
+Just as with weapon combat, a high enough roll can be a Vitals Shot, ignoring all \gls{dr}.
+
+\subsubsection{The Long Bow}\index{Projectiles!Bow}\index{Bows}
+
+\iftoggle{verbose}{
+  Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough.
+  Each bow has its own Strength rating and anyone without at least that much Strength cannot use the bow; the bows deal $1D6$ +Strength Rating.
+  So if a bow has a Strength rating of 2 then it deals $1D6+2$ Damage but requires a Strength of 2, at least, to operate.
+  Having a Strength of 3 will not increase the Damage, but it can decrease the firing time.
+}{
+  Longbows each have a rating from 1-5.
+  The rating is equal to the bow's Damage, and the minimum Strength required to use it.
+  They require 4 \glspl{ap} to use, but every point of the character's Strength Bonus in excess of the bow's rating reduces the \gls{ap} requirement by 1.
+}
+
+To pull back the heavy load on a long bow requires 4 \gls{ap}, minus any excess Strength the character has over the bow's rating.
+Someone with a Strength of 3, using a longbow with +1 Damage, would only have to spend 2 \glspl{ap} to pull the bow taught.
+
+Long bows can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim rather than the bow.
+
+\subsubsection{The Short Bow}
+\index{Projectiles!Short Bow}
+\index{Short Bow}
+
+A short bow, or `trick bow', is a smaller, lighter thing which can be used by anyone.
+What it lacks in punch it makes up for in quick draw time.
+As usual, for every five squares beyond the first two the archer suffers a -1 penalty to hit.
+The bow takes 2 \gls{ap} points to fire, so many shots can be fired in a \gls{round}.
+
+Short bows have a maximum range of 20 squares and deal $1D6-1$ Damage. They often bring down prey by multiple arrows rather than the one.
+
+Reloading a short bow takes only 1 \gls{ap}.
+
+\subsubsection{The Crossbow}\index{Projectiles!Crossbow}
+\label{crossbow}
+Crossbows can be powerful, but are not easy to reload.
+They have a standard Damage of $2D6$, though different crossbows vary in quality.
+Crossbows requires only 1 \gls{ap} to fire, but require 5 rounds, minus the user's Strength Bonus, to reload.
+
+\subsubsection{Thrown Weapons}\index{Projectiles!Thrown Weapons}
+
+Thrown weapons such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
+They work just as short bows, but their Damage is the normal weapon Damage -2.
+\iftoggle{verbose}{
+  Someone with Strength +2 throwing a dagger would deal $1D6$ Damage.
+}{}
+
+\subsubsection{Impromptu Weapons}
+\index{Projectiles!Impromptu}
+
+Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 squares distance from the target, and a -2 penalty to Damage.
+
+\iftoggle{verbose}{
+  \input{story/12-advanced.tex}
+}{}
 
 \subsection{Weight}
 \index{Weight}
@@ -749,86 +828,6 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 
 \stopcontents[Manoeuvres]
 
-\section{Ranged Combat}\index{Ranged Combat}
-
-\begin{multicols}{2}
-
-\newcommand{\projectilesChart}{
-\begin{boxtable}[p{.3\textwidth}XXXr]
-
-  \textbf{Projectile} & \textbf{Initiative} & \textbf{Damage} & \textbf{Weight}  & \textbf{Cost} \\\hline
-
-  Crossbow &  3 & $2D6$ & 1/3 &  {20 sp} \\
-
-  Longbow &  0 & varies & -4/-2 &  {10 sp} \\
-
-  Shortbow &  +2 & $1D6-1$ & -5/-3 &  {5 sp} \\
-
-  Throwing knives & +1 & $1D6-1$ & -5/-3 &  {100 cp} \\
-
-\end{boxtable}
-}
-\iftoggle{verbose}{
-  \begin{figure*}[t]
-  \projectilesChart
-  \end{figure*}
-}{
-  \begin{figure*}[t]
-  \footnotesize
-  \projectilesChart
-  \end{figure*}
-}
-
-
-\noindent Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
-Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
-The \gls{tn} is always 6 plus one for every five full squares away the target is.
-Targets 14 squares away would have a \gls{tn} of 8 to hit.
-Most targets cannot use any weapons to add to their Evasion Factor (except shields) but can use the Speed Bonus to evade missile attacks if they are on the run or Keeping Edgy.\footnote{See page \pageref{edgy}.}
-
-Just as with weapon combat, a high enough roll can be a Vitals Shot, ignoring all \gls{dr}.
-
-When someone with a bow is attacked, they can use their Combat Skill and Dexterity to Evade as per usual.
-
-\subsection{The Long Bow}\index{Projectiles!Bow}\index{Bows}
-
-Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough.
-To pull back the heavy load on a long bow takes 1 \gls{round}, and the arrow flies at the very end of the round.
-Each bow has its own Strength rating and anyone without at least that much Strength cannot use the bow; the bows deal $1D6$ +Strength Rating.
-So if a bow has a Strength rating of 2 then it deals $1D6+2$ Damage but requires a Strength of 2, at least, to operate.
-Having a Strength of 3 will not increase the Damage.
-
-Long bows can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim than by the range of the bow.
-
-\subsection{The Short Bow}\index{Projectiles!Short Bow}\index{Short Bow}
-
-A short bow, or `trick bow', is a smaller, lighter thing which can be used by anyone. What it lacks in punch it makes up for in quick draw time. As usual, for every five squares beyond the first two the archer suffers a -1 penalty to hit. The bow takes 4 Initiative points to fire so many shots can be fired in a \gls{round}.
-
-Short bows have a maximum range of 20 squares and deal $1D6-1$ Damage. They often bring down prey by multiple arrows rather than the one.
-
-Firing a short bow requires 4 Initiative points but reloading takes another 2.
-
-\subsection{The Crossbow}\index{Projectiles!Crossbow}
-\label{crossbow}
-Crossbows can be powerful, but are not easy to reload. They have a basic Damage of $2D6$ though different crossbows vary in quality. Crossbows take a number of \glspl{round} to reload equal to 6 minus the character's Strength score (minimum of 1).
-Firing a crossbow takes only 3 Initiative points.
-
-\subsection{Thrown Weapons}\index{Projectiles!Thrown Weapons}
-
-Thrown weapons such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them. They work just as shortbows, but their Damage is the normal weapon Damage -2. Someone with Strength +1 throwing a dagger would deal $1D6$ Damage, while someone with Strength -1 would deal $1D6-2$ Damage.
-
-\subsection{Impromptu Weapons}\index{Projectiles!Impromptu}
-
-Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -4 penalty to hit for every five squares distance from the target.
-Weapons also receive a -2 penalty to Damage.
-
-\iftoggle{verbose}{
-
-  \input{story/12-advanced.tex}
-}{}
-
-\end{multicols}
-
 \section{Morale}
 \label{morale}
 \index{Morale}
@@ -854,13 +853,12 @@ Weapons also receive a -2 penalty to Damage.
 }{%
   Each \glspl{npc} Initiative roll also counts as a \emph{group} Morale check.
   The roll checks at \gls{tn} 7, plus the \glspl{npc}'s Combat or Aggression Skill (whichever is higher), plus the modifiers in the Morale chart.
-  If the \glspl{npc} fail the roll, they attempt to flee, otherwise, they fight.
+  If the \glspl{npc} fail the roll, they flee.
 }
 
 When an enemy flees the scene after a fight has begun, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
 
 \iftoggle{verbose}{
-
   \input{story/13-morale.tex}
 }{}
 
@@ -868,9 +866,8 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \moralechart
 
-
-
-\section{Chases}\index{Chases}
+\section{Chases}
+\index{Chases}
 \label{chases}
 
 \begin{multicols}{2}
