@@ -301,11 +301,11 @@ The mage casts the spell on any person or item and finds out how many \glsentryl
 \enhancement{1}{Fast}{Make a spell cast instantly}\label{fast}
 \iftoggle{verbose}{%
 This Enhancement alone allows \glspl{miracleworker} to  cast effectively on the battlefield.
-With this Enhancement, a spell no longer requires one round per level to cast, but can be cast with 3 Initiative plus the spell's level.
+With this Enhancement, a spell no longer requires one round per level to cast, but can be cast with 1 \gls{ap}, plus the spell's level, minus the caster's Wits Bonus (minimum of 1).
 
-While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit{Fast Oath}, cast at level 3, requires only 6 Initiative.
+While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit{Fast Oath}, cast at level 3, requires only 4 \glspl{ap} to cast.
 }{
-\textit{Fast} spells can be cast instantly, and require only 3 Initiative, plus the spell's level.
+\textit{Fast} spells can be cast instantly, and require only 1 \gls{ap}, plus the spell's level, minus the caster's Wits Bonus.
 }
 
 \spelllevel
@@ -315,7 +315,7 @@ While a standard \textit{Oath} spell requires 2 \glspl{round} to cast, a \textit
 This Enhancement allows a \gls{miracleworker} to alter the appearance of any spell.
 The changes are purely cosmetic.
 \iftoggle{verbose}{%
-This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
+  This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
 }{}
 
 \enhancement{1}{Wide}{Widen the spell to hit $Level + Wits$ targets}
