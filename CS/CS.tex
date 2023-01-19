@@ -105,11 +105,12 @@
   }
 %----
 
-    \setcounter{track}{18}
+    \setcounter{track}{7}
     \posterbox[
-    ]{name=track,column=27,row=3,span=3,rowspan=15.8}{ 
+    ]{name=track,column=27,row=3,span=2.8,rowspan=15.8}{ 
       {\large
 
+        \vspace{1em}
         \Repeat{18}{\tracker}
       }
       }
@@ -120,21 +121,20 @@
   adjusted title=Armoury,
   ]{name=armoury,column=1,row=10,span=18,rowspan=4}{
     \renewcommand{\arraystretch}{1.5}
-    \begin{tabularx}{\linewidth}{p{.2\textwidth}llllX}
+    \begin{tabularx}{\linewidth}{p{.3\textwidth}XXXX}
       \hiderowcolors
       \setlength{\parskip}{3mm}
-      Weapon & Dam. & Init. & Ev. & Wt. & Knack \\
+      Weapon & Bonus & Damage & AP & Weight \\
       
-      \writeline & \shortline & \shortline & \shortline &\shortline &  \hrulefill \\
-      \writeline & \shortline & \shortline & \shortline &\shortline &  \hrulefill \\
-      \writeline & \shortline & \shortline & \shortline &\shortline &  \hrulefill \\
-
+      \Repeat{4}{
+        \writeline \Repeat{4}{& \writeline} \\
+      }
     \end{tabularx}  
 
-    \begin{tabularx}{\linewidth}{XXXXr}
+    \begin{tabularx}{\linewidth}{p{.3\textwidth}XXX}
       \hiderowcolors
-      Armour & DR & Weight & Type \\
-      \hrulefill & \shortline & \shortline & \shortline & \hrulefill \\
+      Armour & DR & Type & Weight \\
+      \writeline \Repeat{3}{& \writeline} \\
     \end{tabularx}
 
   }
@@ -154,38 +154,29 @@
     opacityback=0,
   ]
   {name=Derived,column=1,row=6,span=10,rowspan=4}{
-    \begin{tabular}{cccc}
-
+    \begin{tabular}{ccc}
       \hiderowcolors
-      Init. & Attack & Damage & Defence \\
-
+      Attack & Damage & AP \\
       \\
-
-      \shortline & \shortline & \shortline & \line(1,0){10}/\line(1,0){10} \\
-
+      \shortline \Repeat{2}{& \shortline} \\
     \end{tabular}
   
     \begin{multicols}{2}{
       \footnotesize \begin{tabular}{lc}
       \hiderowcolors
-      {\bf Action} & {\bf Cost} \\\hline
-      Draw Weapon & 2 \\
-      Guarding & 2 \\
-      Ram & 3 \\
-      Light Weapon & 4 \\
-      Med. Weapon & 6 \\
-      Use Item & 8 \\
-      Spell & 3+lv. \\
+      {\bf Action} & {\bf AP} \\\hline
+      Draw Weapon & 1 \\
+      Guarding & 1 \\
+      Use Item & 3 \\
+      Spell & $2+L-W$. \\
       
     \end{tabular}}
       {\footnotesize \begin{tabular}{lc}
       \hiderowcolors
-      {\textbf Quick Actions} & \\\hline
-      Charge & 0 \\
-      Evasion & 2 \\
-      Keep Edgy & 2 \\
-      Move & 2 \\
-      Speak & 2 \\
+      {\textbf Quick Actions} & {\textbf AP} \\\hline
+      Keep Edgy & 1 \\
+      Move & 1 \\
+      Speak & 1 \\
       \end{tabular}}
 
     \end{multicols}
