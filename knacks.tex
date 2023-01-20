@@ -17,16 +17,15 @@ Most people can pick up a couple of Knacks easily but further Knacks become prog
 \subsubsection{Adrenaline Surge}
 \label{adrenalinesurge}
 
-The player can declare that super-human effort is being thrown into an action, and gain +1 Strength for a single Initiative click.
-This can increase damage, but cannot increase Initiative after a \gls{round} has begun.
+The player can declare that super-human effort is being thrown into an action, and gain +1 Strength for a single action.
 
 Adrenaline surge can be used once each scene for each knack the character has, and no more than once a \gls{round}.
 
 \subsubsection{Berserker}
 
 You enter a bloodthirsty rage when in battle.
-After the first round, you gain a +1 bonus to Speed.
-After the second round, you gain a +1 bonus to Strength.
+On the second round, you gain a +1 bonus to Speed.
+On the third round, you gain a +1 bonus to Strength.
 
 You lose the bonuses if you spend a round without attacking.
 
@@ -49,99 +48,41 @@ This knack can only be used with missile weapons if enemies are standing in a di
 
 \subsubsection{Disarm}
 
-With a flick of your sword into an opponent's wrist or by trapping the hilt you can throw an opponent's sword away. This manoeuvre takes the normal amount of Initiative for using your weapon. You and your opponent make a \textit{resisted} Dexterity + Combat Action, \gls{tn} 7. If the disarm attempt is successful, the weapon is thrown $1D3$ squares in a random direction.
-
-\subsubsection{Defender}
-
-For each Knack the character has, they can defend against one close-range attack per round at the cost of 1 Initiative, rather than 2.
+With a flick of your sword into an opponent's wrist or by trapping the hilt you can throw an opponent's sword away.
+When making a standard attack roll, with more \glspl{ap} than an opponent, you can take a -1 penalty to your roll to use this manoeuvre.
+If the disarm attempt is successful, the weapon is thrown $1D3$ squares in a random direction.
 
 \subsubsection{Dodger}
 \label{dodger}
 
-The character is an expert at dodging long-ranged attacks.
-They need to spend only 1 Initiative point in order to Keep Edgy (see page \pageref{edgy}) and can thereafter dodge all incoming missile attacks with their Speed +2.
-If this knack is taken multiple times, it adds +1 to the roll each time.
+The character is an expert at dodging long-ranged attacks and gains a +1 Bonus for each knack they have at all times.
 
 This Knack grants immunity to all Sneak Attacks from Ranged weapons, such as bows or throwing knives, just as long as the user is Keeping Edgy.
 
-This knack is automatically granted by using a medium sized shield, so anyone who both has the Knack and a shield could spend 1 Initiative point at the start of the \gls{round} to be able to dodge all incoming missile attacks. If their Speed were +1, they would gain a +4 bonus to dodging, or anyone attacking them would raise the \gls{tn} to hit this character by 4.
-
 \subsubsection{Fast Charge}
 
-If you spend a \gls{round} moving at your maximum speed in order to engage with the enemy, then on the next round you gain a bonus to your Damage, Initiative and Strike, equal to half the number of Knacks you have (rounded up), for the first attack of the round.
+If you spend a \gls{round} moving at your maximum speed in order to engage with the enemy, then on the next round you gain a bonus to your Strength, Dexterity, and Speed, equal to half the number of Knacks you have (rounded up), for the first attack of the round.
 
 \subsubsection{Finishing Blow}\label{finishingblow}
 
 Any attack the character makes of 12 Damage or more gains a number of additional Damage equal to the number of Knacks they have.
 
-Purchasing this Knack multiple times only adds +1 to the additional Damage dealt.
-Many weapons, such as warhammers, come with this Knack in-built, so anyone with the Knack: Finishing Blow, who also wields a warhammer, would trigger +2 Damage any time they dealt 12 or more Damage, or more if they had further Knacks.
-Other Knacks from weapons do not count towards the total.
-
-\subsubsection{First Strike}\label{firststrike}
-
-\iftoggle{verbose}{%
-  The character is well practised at getting the first hit in, and receives a +2 Initiative Bonus on the first round of combat if they are not surprised.
-
-  This Knack can be taken any number of times, with all secondary uses granting an additional +1 Initiative.
-  For example, while using a spear (which has the Knack: First Strike, in-built), and the Knack, a character would gain +3 Initiative on the first \gls{round} if attacking with the spear.
-}{
-  The character gains a +2 Initiative Bonus on the first round of Combat if not surprised, and an additional +1 Initiative Bonus for each First Strike knack.
-}
-
-First Strike can only be used at the start of the round -- picking up a spear half way through a round does not grant an Initiative Bonus.
-
-The knack resets if the character ever spends a full round of combat moving.
-
-\subsubsection{Flashing Blades}
-
-The character is an expert with light weapons and only needs to spend 3 Initiative to attack with them.
-\iftoggle{verbose}{%
-This counts for unarmed attacks, such as kicks and grapples.
-}{}
-
-\subsubsection{Fox Hop}
-The character is particularly good at defending themself by jumping about. They receive a bonus to Defence equal to half the number of Knacks they have, rounded up. This bonus does not stack with weapon bonuses.
-
-When charging this bonus goes into the Strike Factor instead of the Evasion Factor, as per usual.
-See page \pageref{charge} for the Charge Manoeuvre.
-
-Any time you dodge, you can move one square in any direction, without provoking a Passing Attack from the movement.
-
-\subsubsection{Furious Blows}\label{furiousblows}
-
-You can wield large weapons exceptionally fast.
-Medium weapons (those with a \gls{weightrating} of -1 to 4) cost 1 less Initiative to make an attack with just so long as you have no Encumbrance penalty to wielding it.
-Using this Knack, an attack with a longsword would cost only 5 Initiative.
-Buying this Knack multiple times has no effect.
-
-\subsubsection{Furious Rage}
-
-You gain +1 to Strike when using the \textit{Charge} manoeuvre (see page \pageref{charge}).
-
 \subsubsection{Guardian}
 
-The character receives a +2 bonus to their Evasion score for the purposes of defending people and can defend a number of people equal to the number of knacks they have.
-Guarding someone costs only 1 Initiative.
-Those being guarded must be close beside or behind them, as usual.
-When the character is defending themself they use their normal Evasion Bonus.
+You can defend others at a cost of 0 \glspl{ap}, and gain a +1 bonus when defending someone from attack (but only when someone attempts to hit them -- not when they try to hit \emph{you}).
 
-You are also particularly difficult to flank.
-So long as you are not surrounded on all four sides you receive no penalty for being Flanked.
-See page \pageref{flank} for rules on flanking.
+Those being guarded must be close beside or behind them, as usual.
 
 \subsubsection{Last Stand}
 
-Any time the character loses \glspl{hp} they immediately gain +5 Initiative points plus one per Knack the character has.
-The Initiative Count goes back up to the highest Initiative to let you act (presumably) alone.
+Any time the character loses \glspl{hp} they immediately gain +2 \glspl{ap} plus one per Knack the character has.
 
 The character also gains a number of \gls{mp} equal to the number of Knacks they have.
 
 \subsubsection{Mighty Draw}
 
-You can draw back a hunting bow in a single action, rather than a full round
-You pay 8 Initiative for the action, minus half the number of Knacks you have (rounded up, minimum of 2).
-For example, someone with 3 Knacks would pay only 6 Initiative for the attack.
+You can pull back a longbow at lightning speed.
+Reduce the \gls{ap} cost by a number equal to half the Knacks you have (rounded up).
 
 Those with a crossbow can reload it one round faster than normal, but the minimum is 1 round.%
 \footnote{This would normally be 6 rounds minus the character's Strength score. See page \pageref{crossbow} for more.}
@@ -153,42 +94,21 @@ Normally, Sneak Attacks inflict +2 Damage, so someone with 3 Knacks would inflic
 
 \subsubsection{Precise Strike}\label{precisestrike}
 
-You require 1 less to achieve a Vitals Shot.
-For example, when targeting an opponent with a Evasion score of +2 and Partial armour, they would normally require a score of 9 to hit and a score of 12 to make a Vitals Shot which ignores all armour.
-With this Knack they still require a score of 9 to hit but only a score of 11 to make a Vitals Shot.
-People with this Knack can also bypass Perfect armour by rolling 6 points above the target's \gls{tn}.
-
-Multiple purchases of this Knack allow you to bypass armour at an increasingly low \gls{tn}.
-
-\subsubsection{Quick Shot}
-
+You require 1 less to achieve a Vitals Shot (see page \pageref{vitals}).
 \iftoggle{verbose}{
-All long-range weapons take one less Initiative to use, such as throwing knives, crossbows, or chairs (if you happen to be throwing the chair).
-}{
-You can use any long-range weapon by paying 1 less Initiative.
-}
-
-Additionally you can make an Sneak Attack with a bow by paying an additional 4 Initiative instead of spending a \gls{round} aiming.
-If you are interrupted after the aim, but before the shot, you lose all bonuses for a Sneak Attack.
+  For example, when targeting an opponent with a Evasion score of +2 and Partial armour, they would normally require a score of 9 to hit and a score of 12 to make a Vitals Shot which ignores all armour.
+  With this Knack they still require a score of 9 to hit but only a score of 11 to make a Vitals Shot.
+}{}
+People with this Knack can also bypass Perfect armour by rolling 6 points above the target's \gls{tn}.
 
 \subsubsection{Snap Shot}
 
-You pay 0 Initiative to reload an arrow onto your bow, as opposed to the regular Initiative cost of 2.
-
-\subsubsection{Solid Defence}\label{soliddefence}
-
-The character can hold their actions, persistently defending themself rather than attacking. They gain +2 to their Evasion Factor during this time. At any time they can give up the protection just as if they had held their action normally; this allows their to act at 1 higher Initiative than the current Initiative Count.
-
-Each time you take this Knack, you gain an additional +1 Bonus to your Evasion Factor.
+You pay 0 \glspl{ap} to reload an arrow onto your bow.
 
 \subsubsection{Stunning Strike}\label{stunningstrike}
 
 You can declare that you are attempting to stun opponents.
-You then take a -1 penalty to Strike but if you successfully hit an opponent, all Damage dealt reduces their current Initiative.
-The target is also unable to make Quick Actions until their current Initiative allows them to act.
-Multiple uses of this Knack add 1 each to the Initiative loss.
-
-For example, if someone were using a cudgel (which comes with the in-built Knack: Stunning Strike), and also had the Knack, then they smacked someone for 4 Damage, the opponent would immediately lose 5 from their current Initiative Score, even if all of the Damage was mitigated by \gls{dr} and \gls{fp}.
+You then take a -1 penalty to Attack, but if you successfully hit an opponent, they lose a number of \gls{ap} equal to half the Damage dealt (not \glspl{hp} lost).
 
 \subsubsection{Unstoppable}
 
@@ -196,7 +116,7 @@ The character does not fall incapacitated when falling below 1 \gls{hp} they mak
 Once combat ends, they fall unconscious.
 Each time they suffer further Damage a new Vitality Check is made.
 
-Additionally, the character receives a bonus to all Vitality Checks equal to half the number of Knacks they have, rounded up.
+Additionally, the character receives a bonus to all Vitality Checks equal to half their number of Knacks they have, rounded up.
 
 Finally, the character gains +2 \glspl{hp}.
 
@@ -207,10 +127,11 @@ Your battle cries and demeanour are particularly fearsome. Enemies receive a -2 
 \subsubsection{Weapon Master}
 
 \iftoggle{verbose}{
-  The character has trained long and hard with a particular weapon, such as a longsword, spear, shortbow, or rocks.
+  You have trained long and hard with a particular weapon, such as a longsword, spear, shortbow, or rocks.
+  Gain +1 to your Combat or Projectiles Bonus when using that weapon.
   
 }{
-  Gain +1 to the Combat score when using a specialized weapon.
+  Gain +1 to the Combat or Projectiles score when using a specialized weapon.
 }%
   The character can specialize in a number of weapons equal to half the number of knacks they have.
 
@@ -318,15 +239,8 @@ All ritual spells cast with this focus grant a bonus to the caster's Intelligenc
 
 \iftoggle{verbose}{
   The character is particularly adept at casting spells quickly, and therefore in Combat.
-  \Glspl{miracleworker} with this knack spend only 2 Initiative + the spell's level when casting \textit{Fast} spells.
-}{
-  \textit{Fast} spells cost 2 + their level in Initiative to cast.
-}
-Standard spell casting can be completed in one round less than usual.
-\iftoggle{verbose}{%
-  So a third level spell can be cast in only two \glspl{round}.
-}{}%
-First level spells still require a full round to cast.
+}{}
+\Glspl{miracleworker} with this knack spend 1 less \gls{ap} when casting \textit{Fast} spells.
 
 \subsubsection{Song Caster}
 \paragraph{Spheres:} Aldaron, Enchantment, Fate, Illusion
@@ -369,7 +283,6 @@ The Knack might also be used when a member of the party has died, or when someon
 
 The character has a burning hatred for a particular type of creature.
 The character gains a -2 penalty when interacting socially with such creatures and a +1 when performing actions such as tracking them, attacking them or intimidating them.
-The only combat bonus gained is for the Strike Factor, not Initiative or Evasion.
 
 For each Knack the player has, they may select a new chosen enemy, so those with a total of 3 Knacks may select 3 chosen enemies. Those enemies may be chosen at any time, including long after a new Knack as been bought.
 
