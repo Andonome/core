@@ -3,9 +3,9 @@
 \begin{tcbposter}[
   coverage = {
       spread,
-      watermark text={BIND},
-      watermark color=black!25!white,
-      watermark opacity=0.4
+      %watermark text={BIND},
+      %watermark color=black!25!white,
+      %watermark opacity=0.4
   },
   poster   = {
     showframe=false,
@@ -153,33 +153,15 @@
     blankest,interior engine=path, halign=center,valign=center,
     opacityback=0,
   ]
-  {name=Derived,column=1,row=6,span=10,rowspan=4}{
+  {name=Derived,column=1,row=5,span=10,rowspan=4}{
     \begin{tabular}{ccc}
       \hiderowcolors
       Attack & Damage & AP \\
       \\
       \shortline \Repeat{2}{& \shortline} \\
+      \tiny Dexterity + Combat & \tiny Strength & \tiny Speed \\
     \end{tabular}
   
-    \begin{multicols}{2}{
-      \footnotesize \begin{tabular}{lc}
-      \hiderowcolors
-      {\bf Action} & {\bf AP} \\\hline
-      Draw Weapon & 1 \\
-      Guarding & 1 \\
-      Use Item & 3 \\
-      Spell & $2+L-W$. \\
-      
-    \end{tabular}}
-      {\footnotesize \begin{tabular}{lc}
-      \hiderowcolors
-      {\textbf Quick Actions} & {\textbf AP} \\\hline
-      Keep Edgy & 1 \\
-      Move & 1 \\
-      Speak & 1 \\
-      \end{tabular}}
-
-    \end{multicols}
 }
 
 %-----

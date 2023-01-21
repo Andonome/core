@@ -19,43 +19,24 @@
    }
 ]
 
-\newcommand{\initblock}[2]{
-      \posterbox[blankest]{name=factors,column=#1,row=#2,span=0,rowspan=0}{\begin{tikzpicture}
-      \begin{scope}[blend group = soft light]
-        \fill[gray!11!white]   ( 90:1.5) circle (2);
-        \fill[gray!12!white] (210:1.5) circle (2);
-        \fill[gray!13!white]  (330:1.5) circle (2);
-      \end{scope}
-      \node at ( 90:2)    {Initiative};
-      \node at ( 210:2)   {Strike};
-      \node at ( 330:2)   {Evasion};
-      \node [font=\huge] {Combat Factors};
-    \end{tikzpicture}}
+%----
+
+\newcommand\initcounter[1][6]{
+    \setcounter{track}{7}
+    \posterbox{name=track,column=#1,row=2,span=1,rowspan=10}{ 
+      {\large\Repeat{15}{\tracker}}
+    }
 }
-%----
 
-    \setcounter{track}{18}
-    \posterbox{name=track,column=6,row=1,span=1,rowspan=12}{ 
-      {\large
+\initcounter[2]
 
-      \Repeat{18}{\tracker
-      }
+\initcounter[4]
 
+\initcounter[6]
 
-      }
+\initcounter[8]
 
-      }
-
-
-%----
-
-\initblock{2}{2}
-
-\initblock{2}{8}
-
-\initblock{7}{2}
-
-\initblock{7}{8}
+\initcounter[10]
 
 %----
 
