@@ -247,7 +247,7 @@ Shield allow attacks to be blocked with ease.
 They grant a much higher bonus to Combat rolls than most weapons, the user can shift them about much faster than a weapon, leaving them with enough initiative to respond quickly.
 
 Shields can also be used like weapons.
-Their Attack Bonus is 0, their Damage Bonus is equal to their \gls{weightrating}, and their Initiative cost is 3 higher than what they need to defend.
+Their Attack Bonus is 0, their Damage Bonus is equal to their \gls{weightrating}, and their \gls{ap} cost is 2 higher than normal.
 
 \shieldchart
 
@@ -585,76 +585,69 @@ When the party take any part of the day to rest, they can heal a number of \glsp
 
 \subsection{Complications}
 
-\subsubsection[Blindness: -8 penalty + Wits + Vigilance (maximum -6). Rolling equal to allies means hitting an ally]{Blindness}
+\subsubsection[Blindness: Roll at -6 penalty, + (Wits + Vigilance)/ 2]{Blindness}
 \index{Combat!Blindness}
 
 Fighting while blind is no fun -- your opponent can see you coming, and you can't see them.
-Blinded opponents suffer a penalty equal to -8 plus their Wits and Vigilance Bonuses with a maximum penalty of -6.
-\iftoggle{verbose}{%
-For example, a character with with a Wits + Vigilance total of -1 would receive a -9 penalty to attack, except that the maximum penalty is -6.
-Someone with Wits +1 and Vigilance +3 \ would suffer a -4 penalty to attack because both reduce the basic penalty of -8.
+Blinded suffer a -6 penalty, but can offset this with half their Wits + Vigilance total.
+  \iftoggle{verbose}{%
+  For example, a character with with a Wits + Vigilance total of -1 would receive a -7 penalty to attack, while their companion with a total Bonus of +3 would suffer only a -4 penalty.
 }{}
 
 This penalty only counts when one side of a fight is blind. When both sides are blind, we use the Darkness Fighting rules below.
 
-While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on the character's side side (including themself) then they hit a companion.
-If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2.
-If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion.
-Companions who are are accidentally hit can attempt an Evasion roll by rolling with their current Evasion Factor against \gls{tn} 10; failure implies normal Damage from that attack.
-It is quite possible to kill a companion while fighting blind.
+While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on the character's side side (including themself) then they hit a companion while also being hit.
+\iftoggle{verbose}{
+  If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2.
+  If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion.
+  Companions who are are accidentally hit can evade by simply spending 1 \gls{ap}.
+  It is quite possible to kill a companion while fighting blind.
+}{}
 
 \subsubsection[Darkness: Penalty equals difference between combatants' Wits + Vigilance]{Darkness}
 \label{darkness}
 \index{Darkness}
 \index{Combat!Darkness}
 
-Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
-Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent.
-However, when both sides suffer from the darkness, the battle changes very little.
-Neither side can hit very accurately, but then neither side can dodge or parry very well either.
+\iftoggle{verbose}{
+  Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
+  Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent.
+  However, when both sides suffer from the darkness, the battle changes very little.
+  Neither side can hit very accurately, but then neither side can dodge or parry very well either.
+}{}
 
-When fighting in the dark, each side receives a penalty to attacking the other equal to the difference between their respective Wits + Vigilance totals, up to a maximum of -6.
+\paragraph*{When fighting in total darkness}
+whoever has the lowest Wits + Vigilance receives a penalty equal to the difference.
 
-For example, a human guard has caught a room full of elves with stolen goods. Thinking quickly, one of the elves douses the room's only lantern. The human has a Wits Bonus of -1 and no Vigilance Skill. The elves have a minimum Wits of +1 and many also have the Vigilance Skill; that means the elves will receive a +2 bonus to striking the guard and those with the Vigilance Skill will receive a higher bonus.
+\iftoggle{verbose}{
+  For example, a human guard has caught a room full of elves with stolen goods.
+  Thinking quickly, one of the elves douses the room's only lantern.
+  The human has a Wits Bonus of -1 and no Vigilance Skill.
+  The elves have a Wits Bonus of +1, so the guard receives a -2 penalty to all attacks.
+}{}
 
-Deep darkness can provide a maximum penalty of -6, while twilight is limited to a penalty of -3.
+\paragraph*{Fighting in minimal light}
+(such as a moonless night)
+follows the same rules, but the penalty is halved.
 
-\subsubsection[Enclosed Spaces: Penalty equals difference between Initiative cost to attack and Enclosure Rating]{Enclosed Spaces}
+\subsubsection[Enclosed Spaces: Penalty equals weapons \glsentrytext{weightrating}]{Enclosed Spaces}
 \label{enclosedcombat}
 \index{Enclosed Spaces}
 \index{Combat!Enclosure Rating}
 
-Enclosed spaces cause serious problems for people wielding longswords, battle axes, and other large weapons.
-Daggers and rapiers often have an easier time in these locations.
-Each location has an \gls{enclosurerating}; the smaller the number, the more narrow the space.
+\iftoggle{verbose}{
+  Enclosed spaces cause serious problems for people wielding longswords, battle axes, and other large weapons.
+  Daggers and rapiers often have an easier time in these locations.
+  Each location has an \gls{enclosurerating}; the smaller the number, the more narrow the space.
+}{}
 
-The amount of space required for a weapon is determined by the Initiative \textit{the character} spends to wield it.
-Small hallways may have a maximum initiative of 5, meaning someone could wield a shortsword without penalty, but a longsword, spear, or kite shield would have problems, because they all require 6 Initiative to attack with.
-For every initiative point that a weapon is over the maximum room space, the character gains a -1 penalty to attack.
-Characters with Knacks like \textit{Flashing Blades} are better at getting in short, sharp, thrusts, so they suffer less of a penalty to attack.
-
-The penalty to attack counts for all other actions, such as spell casting.
-Higher level spells, which require a lot of Initiative points, also require space to move and create the grand gestures which bring forth the magic.
-If the enclosure rating goes down to 3, then someone casting a 1st level spell, at 4 Initiative, would gain a -1 penalty to casting, while someone casting a 3rd level spell at 6 Initiative would gain a -3 penalty to casting.
+When a character has no space to swing a weapon -- either vertically or horizontally -- their Attack gains a penalty equal to the weapon's \gls{weightrating}.
 
 \subsubsection[Passing Attacks: When passing someone, they can make a normal attack as a Quick Action]{Passing Attacks}\index{Combat!Passing Attacks}
 
 If you try to run past an opponent during combat, they may make an attack against you as a \gls{quickaction}.
 
 This might happen when someone is surrounded, but wants to run away.
-
-\subsubsection[Spell Casting: take a -2 penalty to the spell.]{Switching Actions}
-\index{Combat!Spell Casting}
-\label{combatcasting}
-
-Someone casting spells and swinging their swords cannot use an Initiative bonus of one for the other.
-\iftoggle{verbose}{%
-  For example, if Toria has Speed +2 and a sword, her total Initiative Factor would be +3 when attacking with the sword.
-  The group rolls a `4' for Initiative, so at Initiative step 7 she decides to cast a \textit{Fast} spell.
-  However, her +1 Wits means she cannot cast a spell until Initiative step 5.
-}{}
-
-Simply put, every character calculates their Initiative based on the action they're doing, and must have at least that amount of Initiative to proceed.
 
 \subsubsection[Trapped/ Entangled: All attacks against the character count as a Sneak Attack, but they can still defend with full Dexterity Bonus as usual]{Trapped or Entangled}
 
@@ -667,8 +660,7 @@ Despite the Sneak Attack Bonus, such characters can defend as normal, with their
 \label{prone}
 
 Characters who fall over lose their ability to defend themselves, as above.
-However, they can get up at the cost of 2 Initiative by using up their movement action.
-If they've already moved this \gls{round}, they have to wait until the next \gls{round}.
+However, they can get up as by spending 1 \gls{ap}.
 
 \subsection{Manoeuvres}
 
@@ -676,38 +668,22 @@ If they've already moved this \gls{round}, they have to wait until the next \gls
 \index{Combat!Brawling}
 \index{Brawling}
 
-Punches and kicks all use the Combat bonus. Such attacks inflict \glspl{fatigue}. Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative). This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6. However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1. An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all. Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
+Punches and kicks all use the Combat bonus.
+Such attacks inflict \glspl{fatigue}.
+Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative).
+This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6.
+However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1.
+An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all.
+Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
 
-\subsubsection[Blind Rage: You can mitigate an enemy's weapon bonus to Evasion, but they can make an attack against you as a Quick Action]{Blind Rage}\label{blindrage}
+\subsubsection[Drawing Weapon -- Cost: 1 \glsentrytext{ap}]{Drawing Weapons}
 
-\index{Blind Rage}Weapons can grant a bonus to the wielder's Evasion Factor because the wielder is keeping people at bay with it -- a spear might be waved in an opponent's face in a threatening manner or a sword might be on the ready to attack if someone gets within its range.
-However, this marvellous defence only works against people who care about being hit.
-Anyone can choose to attack someone while ignoring their opponent's weapon's bonus to Evasion; the penalty is simply that the opponent can choose to make a single Sneak Attack immediately.
+Drawing a weapon costs 1 \gls{ap} if it is placed in an easy place to draw, like a scabbard on the side of a belt.
+If a character holds weapons on the back or in a bag, they have to rummage for an entire round or more.
 
-\subsubsection[Charge: Swap your Strike and Evasion. Cost: 0 Initiative]{Charge}
-\label{charge}
-\index{Charge}
+\subsubsection[Dropping Weapon -- Cost: 0 \gls{ap}]{Dropping Weapons}
 
-The character smashes into opponents recklessly, foregoing most of their usual defence.
-The character's Strike and Evasion factors swap place until their next standard action (Quick actions do not count).
-
-\iftoggle{verbose}{
-  A character with Combat +2, Dexterity +1 and a longsword would normally have a Strike of +2, and an Evasion of +4 (because the longsword adds +3 to the Evasion).
-  However, while using \textit{Fast Charge} manoeuvre, the character's Strike would be +4, and their Evasion +2.
-
-This manoeuvre can be extremely effective at penetrating an enemy's defences, but also dangerous, as one's defences are lowered.
-
-The charge manoeuvre does not require movement -- it can be used to attack enemies standing right next to the character.
-
-}{}
-
-\subsubsection[Drawing Weapon: Cost: 2 Initiative]{Drawing Weapons}
-
-\index{Combat!Drawing Weapons}Drawing a weapon costs 2 Initiative if it is placed in an easy place to draw, like a scabbard on the side of a belt. If a character holds weapons on the back or in a bag, it costs 8 Initiative to remove them. If a knife's stuffed inside a pack, the \gls{gm} may stipulate a number of \glspl{round} required to draw the weapon.
-
-\subsubsection[Dropping Weapon: Cost: 0 Initiative]{Dropping Weapons}
-
-Dropping a weapon is free, but if the character has not made an attack then the weapon's Initiative Bonus is lost.
+Dropping a weapon costs no \glspl{ap}, though they will be defenceless unless they do this while picking up another weapon.
 
 \subsubsection[Flanking: Gain +2 to attack]{Flanking}\label{flank}
 
@@ -717,91 +693,81 @@ Up to 6 opponents can attack a lone character, and any available walls can reduc
 \subsubsection{Grabbing \& Grappling}\index{Combat!Grappling}
 \label{grappling}
 
-\paragraph[Grabs: Make an attack without any weapon bonus. Both combatants are \textit{Entangled}. Cost: 4 Initiative]{Grabs:}
-
-A grapple always starts with a grab.  A grab is a normal roll, made without any benefits from weapons.  If successful, the character has grabbed an opponent.
-
-Once two people are grappling, neither can move and so both can be struck as per a Sneak Attack by anyone nearby.
+\paragraph[Grabs: Make an attack without any weapon bonus. Both combatants are \textit{Entangled}. Cost: 1 \gls{ap}]{Grabbing:}
+requires a standard attack roll, without a weapon.
+Both combatants then count as \textit{Entangled}, as neither can move properly to defend themselves.
 
 No weapons can be used while grappling if they have a \gls{weightrating} above -2.
 
-\paragraph[Grapple: Make an opposted roll of Strength x 2 + Combat.  Success means the combatant can either break free or inflict Damage.  Cost: 4 Initiative]{Grapples:}
+\paragraph[Grapple: Make an opposted roll of Strength + Combat.  Success means the combatant can either break free or inflict Damage.  Cost: 3 \gls{ap}]{Grappling:}
+allows someone to deal Damage, or break free of a Grab.
+Both combatants engage in a resisted Strength + Combat roll.
+If the winner decides to deal Damage, they inflict 1D6 + Strength.
+Otherwise, they break free, but are still lying prone until they get up.
 
-Once two people are caught in the grapple, either can make a grappling roll at the cost of 4 Initiative.  They can then roll with double their Strength, plus their Strike factor, against 7 plus the enemy's Evasion score.
+\subsubsection[Guard: Someone must successfully hit you before they are allowed to hit whomever you are guarding. Cost: 1 \gls{ap}]{Guarding}
+\index{Guarding}
 
-A successful roll implies the character can break the grapple and move freely, or can inflict $1D6$ plus their Strength Bonus in Damage.
+If you guard someone by standing in front of them then all attacks have to go through you first.%
+\footnote{This includes missile attacks only if you could otherwise evade them.}
+Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no \glspl{ap}) at their real target.
 
-\paragraph[Weapon Grab: Make a normal grab attack, ignoring the opponent's weapon bonus to Evasion.]{Weapon Grab}
-
-This works exactly like a normal grab, except for two key differences.
-The first is that the defending player cannot use the weapon's Dexterity Bonus to defend -- a sword which grants a +3 bonus to defend does not help when the sword itself is being grabbed.
-The second difference is that a grappled target can simply drop the weapon at any point in order to ignore the grapple.
-If a fighter's shield has been grabbed, they can just let it go, and the same with any sword.
-
-\subsubsection[Guard: Someone must successfully hit you before they are allowed to hit whomever you are guarding. Cost: 2 Initiative]{Guarding}\index{Guarding}
-
-If you guard someone by standing in front of them then all attacks have to go through you first.\footnote{This includes missile attacks only if you could otherwise evade them.}
-Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no Initiative) at their real target.
-
-Guarding costs 2 Initiative, and after than any defence incurs the usual Initiative cost.
+Guarding costs 1 \gls{ap}, and after that engaging in attacks costs the usual amount.
 If either character moves away from the other, the guarding stops.
 
-\subsubsection[Half Swording: Add your sword's Speed Bonus to its Damage. Cost: 2 Initiative]{Half Swording}
+\subsubsection[Half Swording: Swords can take a -2 penalty to Attack in return for +1 Damage. Cost: 1 \gls{ap}]{Half Swording}
 \index{Combat!Half Swording}
 
-It is possible to hold a sword by the blade and use the guard to bludgeon one's opponent. This manoeuvre allows the weapon's Speed Bonus to be added to its Damage instead. It takes 2 Initiative points to change how one holds the sword.
+It is possible to hold a sword by the blade and use the guard to bludgeon one's opponent.
+This reduces your Attack by -2, but grants +1 Damage.
 
-\subsubsection[Hold Off: Just don't take your turn. Gain 1 Initiative when you decide to step in]{Holding Off}
-\index{Combat!Holding Off}
-
-Anyone can wait to see what the battle brings -- the character simply lowers their Initiative and can jump in at any point, acting at one Initiative higher than a declared action.
-
-For example, someone might hold off their action at Initiative 5. They wait for the enemy to attack at Initiative 3 and notices that one of them is attempting to use a magical item. Immediately they retroactively performs an action at Initiative 4.
-
-\subsubsection[Keep Edgy: Look out for missiles (allows you to defend against them with Speed Bonus). Cost: 2 Initiative]{Keeping Edgy}
+\subsubsection[Keep Edgy: Look out for missiles (allows you to defend against them with Speed Bonus). Cost: 1 \gls{ap}]{Keeping Edgy}
 \label{edgy}
 \index{Combat!Keeping Edgy}
 
-The character can take a moment to note their \index{Dodge!Long-range}long-range surroundings, including archers and potential spell casters.
-This takes only 2 Initiative points and for the rest of the \gls{round}, any time the character is being fired upon in combat they can use their basic Speed Bonus in a resisted action to leap out of the way of an incoming missile or targeted spell, such as a fireball.
-Spells which simply target people by gaze or magical effects such as Polymorphing are unaffected.
+The character can take a moment to note their long-range surroundings, including archers and potential spell casters.
+This takes only 1 \gls{ap} and for the rest of the round, any time the character is being fired upon in combat they can use their basic Speed Bonus in a resisted action to leap out of the way of an incoming missile or targeted spell, such as a fireball.
+Spells which simply target people by gaze or magical effects such as polymorphing are unaffected.
 
-\subsubsection[Ram: Push the enemy back 2 squares plus the difference between your Strength Bonuses. Resisting costs 3 Initiative, and requires a resisted Strength + Combat roll. Cost: 3 Initiative]{Ram}
+\subsubsection[Ram: Push the enemy back 2 squares plus the difference between your Strength Bonuses. Resisting costs 2 \glspl{ap}, and requires a resisted Strength + Combat roll. Cost: 2 \glspl{ap}]{Ram}
 \index{Combat!Ram}
 \label{ram}
 
 In combat, it is possible to scare, push and stab at someone to force them to move backwards.
-The attacker spends 3 Initiative points.
-The defender can either attempt to resist, or can simply acquiesce and move back.
+The attacker spends 3 \glspl{ap} points to rush forward.
+The defender can either spend 3 \glspl{ap} and attempt to resist, or can simply acquiesce with a normal movement action, spending 1 \gls{ap}.
+
+Resisting means engaging in a Strength + Combat roll.
 When moving back, targets are pushed back 2 squares; the attacker's Strength adds to this and the opponent's Strength decreases it.
-Characters can sacrifice the use of 1 point of Strength to push back an additional person.
+Strong characters might also can sacrifice the use of 1 point of Strength to push back an additional person.
 
-Those who resist must also sacrifice 3 Initiative. A resisted Strength + Combat Skill check is made. Successful resistance means that the defender is not pushed back.
-
-A \textit{Ram} action must employ normal movement, and cannot move any character farther than their normal movement.  Characters who have been rammed but are unable to move far enough back fall \textit{prone}.\footnote{See page \pageref{prone} for details on falling prone.}
+Characters who have been rammed must be able to move far back enough as part of their normal movement action, otherwise they fall \textit{Prone}.
 
 \iftoggle{verbose}{
   \input{story/11-ram.tex}
 }{}
 
-\subsubsection[Sneak Attack: +4 to attack and +2 Damage. Surprised enemies cannot use their Evasion Bonus. Weapon's \glsentrytext{weightrating} creates a penalty to attack]{Sneak Attacks}
+\subsubsection[Sneak Attack: +2 to attack and +2 Damage. Surprised enemies cannot resist.]{Sneak Attacks}
 \label{sneakattack}
 \index{Combat!Sneak Attack}
 
-When taking someone by surprise, the attacker gains a +4 bonus to the attack and a +2 bonus to Damage. Opponents cannot use any Evasion bonuses from Dexterity, weapon Bonuses or the Combat Skill.
+When taking someone by surprise, the attacker gains a +2 bonus to Attack and Damage rolls.
+The opponents cannot resist with their own Bonuses.
 
-Sneak Attacks also gain a penalty equal to the weapon's \gls{weightrating} (if positive).
+Sneak Attacks gain a penalty equal to the weapon's \gls{weightrating} (if positive).
 Warhammers are not the best choice for assassination weapons, while daggers and hand axes do much better.
 
-\subsubsection[Two Weapons: both weapons count as having +2 \glsentrytext{weightrating} when used in one hand, but either weapon can be used at any time, and the weapons Evasion Bonuses stack (the second counts for only half)]{Two Weapon Combat}\index{Combat!Two Weapons}
+\subsubsection[Dual Wielding: Both weapons count has having +1 \glsentrytext{weightrating}]{Dual Wielding}
+\index{Combat!Dual Wielding}
 
-A character using two weapons -- perhaps a shield in one hand and a sword in the other -- can use either weapon to attack, or gain Initiative.
-The Evasion bonuses from the weapons stack, so the second weapon adds \textit{half} its Evasion bonus.
-Each weapon will have to be held in one hand, increasing its \gls{weightrating} by 2.
+A character using two weapons -- perhaps a shield in one hand and a sword in the other -- can use either weapon at any point.
+However, both count as having +1 \gls{weightrating}.
 
-\end{multicols}
+Shields can be strapped to the arm, without requiring any kind of dual-wielding.
 
 \stopcontents[Manoeuvres]
+
+\end{multicols}
 
 \section{Morale}
 \label{morale}
@@ -811,24 +777,24 @@ Each weapon will have to be held in one hand, increasing its \gls{weightrating} 
 \noindent
 \iftoggle{verbose}{%
   Unsure if your \glspl{npc} want to fight?
-  Roll their Combat or Aggression Skill at \gls{tn} 7, plus the modifiers in the Morale Chart.
+  Roll their Combat or Aggression Skill at \gls{tn} 7, plus the modifiers in the Morale Chart, before combat starts.
   This group roll counts for everyone, so if the group roll a total of \gls{tn} 7, but one member is wounded, that member will fail the roll and flee.
   Of course on the next round, this may prompt others to flee, as it changes the proportions of creatures to \glspl{pc}.
 
+  You can use a single roll for an entire combat -- the \gls{gm} simply keeps that roll hidden.
+  If the enemy rolls a `12', all of them will probably fight until they die.
+  If they roll a `7', they may start to flee once wounded, and then more will flee once only half remain (but they continue to recheck only at the start of a round).
+
   Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day.
 
-  The players do not take morale checks -- they decide when it's time to run away by the look of the situation. Usually a good time is when all the \gls{fp} have run out.\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
-
-  You don't need to create a separate roll for this check -- just use the standard Initiative roll instead.
-  For example, you might roll $2D6$ at the start of a round, and hit `8'.
-  The monsters gain a +2 bonus for outnumbering the \glspl{pc}, but a -2 penalty because the \glspl{pc} strongest person is stronger than any of them.
-  Overall, the result is `9`, so the enemies pass the morale check, stay to fight, and take this as their Initiative roll.
-  With their Initiative bonus of +3, their use an Initiative score of `11'.
+  The players do not take morale checks -- they decide when it's time to run away by the look of the situation.
+  Usually a good time is when all the \gls{fp} have run out.
+  \footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
 
 }{%
-  Each \glspl{npc} Initiative roll also counts as a \emph{group} Morale check.
-  The roll checks at \gls{tn} 7, plus the \glspl{npc}'s Combat or Aggression Skill (whichever is higher), plus the modifiers in the Morale chart.
-  If the \glspl{npc} fail the roll, they flee.
+  \Glspl{npc} roll for Morale before combat starts, and keep the same roll throughout.
+  The \gls{tn} is 7, plus the \glspl{npc}'s Combat or Aggression Skill (whichever is higher), plus the modifiers in the Morale chart.
+  If any \gls{npc} fails the roll, they flee.
 }
 
 When an enemy flees the scene after a fight has begun, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
@@ -921,67 +887,3 @@ The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
 }{}
 
 \end{multicols}
-
-\section{Advanced Combat}
-\label{divide_combat}
-
-\begin{multicols}{2}
-
-\noindent
-\iftoggle{verbose}{%
-  Characters can focus on different parts of combat -- perhaps attempting to strike quickly, to hit the enemy, or to keep themself safe.
-
-}{}
-
-The Combat Skill can be added piece by piece to any of the Combat Factors.
-Those with Combat +1 can put it on Strike, Evasion or Initiative.
-Those with Combat +2 allows you to place +1 on Strike and +1 on Evasion, or +2 on Initiative, or any other combination.
-
-The character sheet has a space for coins on top of the Combat Factors so you can place your Dexterity Bonus and the Combat Skill on top to remember what you have.
-
-At the end of the round, the Combat Factors reset, and everyone chooses what they want to do again.
-
-\iftoggle{verbose}{
-
-In all cases there is an optimal configuration which will itself depend upon the enemy's placement of resources.\footnote{Players and \glsentrylongpl{gm} are free to cover their coins with their hand until everyone has placed their resources for the round.}
-
-}{}
-
-\iftoggle{verbose}{
-  \toppic{Roch_Hercka/stances}{\label{roch:stances}}
-}{}
-
-\end{multicols}
-
-\iftoggle{verbose}{
-
-\pagebreak
-
-\section{Combat Summary}\index{Combat Summary}
-
-\begin{multicols}{2}
-
-\begin{enumerate}
-  \item{The \gls{gm} rolls for enemy Morale if appropriate.}
-  \item{If using advanced rules, each character divides the Combat score (if any) between Initiative, Strike and Evasion. Page \pageref{divide_combat}.}
-  \item{One Initiative score is rolled for \glspl{pc} and \glspl{npc}. Page \pageref{initiative}.}
-  \begin{itemize}
-
-    \item{Each player adds their \gls{pc}'s own Initiative Bonus to make their own Initiative score.}
-  \end{itemize}
-  \item{Actions are resolved in order of Initiative, each reducing the Initiative score.}
-  \begin{itemize}
-    \item{Attacking with a medium weapon costs 6 Initiative.}
-    \item{Attacking with a small weapon costs 4 Initiative.}
-    \item{Defence costs 2 Initiative.}
-    \item{Guarding another character costs 2 Initiative.}
-    \item{Movement costs 2 Initiative.}
-    \item{Speaking costs 2 Initiative.}
-    \item{Ramming into someone costs 3 Initiative.}
-  \end{itemize}
-\end{enumerate}
-
-\end{multicols}
-
-}{}
-
