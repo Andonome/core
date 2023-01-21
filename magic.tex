@@ -183,7 +183,7 @@ Others typically operate with \gls{standingspell} alone, casting everything they
 
 \iftoggle{verbose}{
   Your standard spell takes a while to cast -- specifically a number of rounds equal to half the spell's level.
-  A first level spell takes a full \gls{round} to cast, and activates at Initiative 0, while a third level spell requires 2 \glspl{round} to cast.
+  A first level spell takes a full \gls{round} to cast, and activates at the end of a round, while a third level spell requires 2 \glspl{round} to cast.
   When casting spells in combat, a \gls{miracleworker} will generally use the \textit{Fast} Enhancement (page \pageref{fast}).
 }{
   Spells require a number of full \glspl{round} to cast equal to half the spell's level.
@@ -261,7 +261,7 @@ The mage would be left with only 2 \glspl{mp} to use, but the stone would have 6
 
 Anyone on the same Path of Magic can retrieve the mana from the stone by simply touching it and concentrating.
 The spell is always permanent -- no additional mana must be kept aside so that the spell remains active.
-Retrieving the mana takes the normal amount of time to use an item -- 8 Initiative points.
+Retrieving the mana takes the normal amount of time to use an item -- 4 \glspl{ap}.
 
 The mana in mana stones cannot be used to create more mana stones and mages cannot enter their own temporary \gls{mp} into the mana stone.
 
@@ -394,7 +394,7 @@ If the item changes hands while the spell is active, `the caster' changes too.
   If a magical item allows `the caster', to enchant people, then whoever holds the item at that moment counts as `the caster', even if the item changes hands several times.
 }{}
 
-Pocket spells require 8 Initiative to cast, just like using any other item.
+Pocket spells require 4 \glspl{ap} to cast, just like using any other item.
 
 These items always use the caster's Intelligence Bonus, but have no relation to Skills, so they do not gain any Bonus from anyone's Skills.
 \iftoggle{verbose}{%
@@ -448,7 +448,7 @@ However, \textit{Wide, Sentient} spells do not gain multiple consciences -- they
 A \textit{Wide, Sentient, Dancing Swords} spell which levitated 4 daggers would not be able to make 4 attacks per round.
 }{}
 
-Sentient spells take the Mental Attributes of their caster, so they can enter combat with their own Initiative score, at the same time as the caster.
+Sentient spells take the Mental Attributes of their caster, so they can enter combat using their own \glspl{ap}, without bothering the caster.
 They also take their caster's Code, so a mage devoted to \gls{justicegod} would create spells which seek to enforce the local laws.
 
 \iftoggle{verbose}{%
@@ -486,16 +486,17 @@ If an \textit{Eternal Talisman} or other item allows the caster to control undea
 
 A secondary spell can be combined to throw at the same target.
 The combined spells have a single target.
-Any applicable enhancements, such as \textit{Wide}, affect both spells.
 
-The smaller spell adds a number of levels equal to half its own level.
+The smaller spell adds a number of effective levels equal to half its own level, and the total is used to check \gls{mp} and \gls{ap} cost.
+As long as all spells could be cast normally, the maximum level is determined by the mana score.
 
-For example, a priest of \gls{wargod} might cast a \textit{Fast Fireball} at someone, alongside a \textit{Curse}.
-The highest level spell there is \textit{Fast Fireball} at level 2, and the other is at level 1 and only costs half the usual \glspl{mp}.
-With the two spells together, the total cost is 3 \glspl{mp},
-\footnote{Always round up.}%
-and the spell takes 7 Initiative points to cast.
-The caster has an Intelligence score of +3, so the target is hit with $2D6+1$ damage from the fireball, and loses $1D6+2$ \glspl{hp} directly.
+\iftoggle{verbose}{
+  For example, a sorcerer with elven heritage attempts to cast a \textit{Wide Air Bubble} alongside \textit{Wide Mage Armour}, on all of her companions.
+  The highest level used is \textit{Mage Armour}, at level 3.
+  \textit{Wide Air Bubble} is level 2, so half of that is 1.
+
+  The effective level is 4 (even though she only has Aldaron at level 3), so the spell costs 6 \glspl{ap} to cast, minus her +1 Wits Bonus.
+}{}
 
 \spelllevel
 
