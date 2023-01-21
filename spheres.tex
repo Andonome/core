@@ -104,19 +104,19 @@ If the caster can extend the range, then the spell can travel any distance, alth
   Elves often use a \textit{Colourful Plantform} to sculpt plants into unnatural forms, or to create temporary statues of other elves.
 }{}
 
-\spell{Wind Blast}{Instant}{Seafaring}{Push enemies back, lowering their Initiative}
+\spell{Wind Blast}{Instant}{Seafaring}{Push enemies back, lowering their \glspl{ap}}
 Wind blows from the mage, pushing the target back and distracting them.
 \iftoggle{verbose}{
   The larger a target is, the harder it is to affect them.
 }{}%
 \label{windblast}
 The spell's total power is equal to its level plus the caster's Intelligence Bonus, minus the target's Strength.
-Each point pushes the target back by 1 square and subtracts 1 from their Initiative.
+Each point pushes the target back by 1 square and subtracts 1 from their \glspl{ap}.
 \iftoggle{verbose}{%
   For example, a mage casts a \textit{Wide Wind Blast} spell at two goblins (with Strength -1) and an ogre (with Strength +4).
   Since it's a \textit{Wide} spell, it's cast at level 2, and the +1 Intelligence Bonus makes the total spell-potency 3.%
   \footnote{See page \pageref{wide_enhancement} for casting big spells.}
-  The two goblins are pushed back 4 squares and lose 4 Initiative.%
+  The two goblins are pushed back 4 squares and lose 4 \glspl{ap}.%
   \footnote{($3 - -1 = 4$)}
   The ogre, however, ignores the spell entirely.
 }{}
@@ -392,14 +392,9 @@ If cast as a \gls{standingspell}, the caster can telepathically send messages fo
 If the enchanter does not have any languages in common with the target then the \gls{tn} is 9 rather than 7.
 This communication is one-way only.
 
-\spell{Twitch}{Continuous}{Performance}{Gain Init bonus to spell casting equal to 1 plus Int}
-
-The target's mind sharpens, and they gain a bonus to Initiative for all spell casting.
-The bonus is equal to the spell's level plus the caster's Intelligence Bonus.
-
 \spelllevel
 
-\spell{Confusion}{Continuous}{Deceit}{Remove a target's actions for the round, then give an Initiative penalty of the caster's Wits + 2.}
+\spell{Confusion}{Continuous}{Deceit}{Remove a target's actions for the round, then give an \gls{ap} penalty of 2 + Int.}
 
 The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
 They have trouble articulating exactly what's wrong, but will remain confused for as long as the spell continues.
@@ -410,10 +405,7 @@ The spell is sometimes initiated by eye contact, sometimes by song -- any number
 }{}
 
 A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Academics.
-If the target loses the roll they immediately loses all remaining actions for the turn but can still defend themself; the target's Initiative score instantly reduces to 0.
-
-Each subsequent turn the target makes a resisted roll of Wits + Academics against the mage's Intelligence + Deceit.
-Failure indicates that they suffer an Initiative penalty equal to the spell's level plus the caster's Intelligence Bonus.
+On success, target gains an \gls{ap} penalty equal to the spell's level plus the caster's Intelligence Bonus.
 
 The target suffers the same penalty to their Mental Attributes Attributes, which can seriously impact any \gls{miracleworker}'s total \glspl{mp}, and casting ability.
 
@@ -421,10 +413,10 @@ At the end of the scene, targets make one final resisted roll against the enchan
 Failure indicates that the target has forgotten the previous scene entirely, including some moments before when the spell began.
 
 \iftoggle{verbose}{
-If an \gls{npc} enchanter intends to cast this on a \gls{pc} during a scene, the \gls{gm} is encouraged to simply make the resisted roll for the spell.
-If the player fails the roll then the \gls{gm} can infer what probably would have happened had the scene played out and skip to the next scene, telling the player that something important might have happened, but that they cannot remember any of it.
+  If an \gls{npc} enchanter intends to cast this on a \gls{pc} during a scene, the \gls{gm} is encouraged to simply make the resisted roll for the spell.
+  If the player fails the roll then the \gls{gm} can infer what probably would have happened had the scene played out and skip to the next scene, telling the player that something important might have happened, but that they cannot remember any of it.
 
-When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought.
+  When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought.
 
 }{}
 
@@ -441,10 +433,10 @@ Targets can stop once their original action has become obviously impossible or i
   Enchanters cannot usually force someone into a situation where they cannot defend themselves.
   If someone attacks, they continue attacking.
   If the target already engaged in conversation, they will continue, but if the caster stops to attack then the conversation will have ended, and the  target can attack freely.
-  Even if a conversation does not end, the target would simply need to spend 2 Initiative points to speak a little while fighting.
+  Even if a conversation does not end, the target would simply need to spend 1 \gls{ap} to speak a little while fighting.
 }{}
 
-Targets enchanted to continue dancing, sewing, or anything else, can make a second roll to break free of the enchantment as a Quick Action, costing 2 Initiative.
+Targets enchanted to continue dancing, sewing, or anything else, can make a second roll to break free of the enchantment as a Quick Action, costing 1 \glspl{ap}.
 If the roll succeeds, the spell has been broken, but even if the roll fails, they can still take any regular action before returning to their task.
 
 \spell{Oath}{Continuous}{Academics}{Force a target to fulfill any promise}
@@ -515,7 +507,7 @@ If the enchanter maintains the spell then the target can re-roll at the beginnin
 \begin{multicols}{2}
 
 \noindent
-Giving a command can take some time, so in combat, Enchanters have to spend the usual 2 Initiative to speak in order to actually make a target do something, once the spell has been cast.
+Giving a command can take some time, so in combat, Enchanters have to spend the usual 1 \glspl{ap} to speak in order to actually make a target do something, once the spell has been cast.
 
 Some commands are easier to resist than others. Particularly repugnant commands allow the target to reroll to break the spell with a bonus.
 
@@ -784,21 +776,19 @@ This spell cannot be cast on others -- the target is what is being felt.
 The force mage can make a weapon levitate with the power of their mind. It can float nearby to defend them and even float off to stab at enemies who will be hard pushed to counterattack the wielder when they're standing some distance away.
 
 The caster rolls Intelligence + Combat to levitate the weapon at a \gls{tn} equal to 7 plus the weapon's Weight.
-The weapon has effective Strength, Dexterity, and Speed Bonuses equal to the level of the spell being employed minus 1, so using the third level of the Force sphere with a longsword would mean the sword could attack as if it were a person who dealt $1D6+3$ damage, with an Initiative Factor of +3.
-It would travel 4 squares in a turn using the mage's movement action.
+The weapon has effective Strength, Dexterity, and Speed Bonuses equal to the level of the spell being employed minus 1, so using the third level of the Force sphere with a longsword would mean the sword could attack as if it were a person who dealt $1D6+3$ damage, with 3 \glspl{ap} per round.
 
-To use the weapon to attack or defend, the mage must focus, so casting spells in the same round would incur the usual panalties.%
-\footnote{See page \pageref{combatcasting} for casting spells while fighting.}
+To use the weapon to attack or defend, the mage must focus, so casting spells in the same round would incur the usual penalties.
 
 The spell's effective Strength Bonus must be sufficient to lift the weapon without encumbrance, so a mage casting the second level of the Force sphere would have an effective Strength Bonus of 1 and could wield a longsword.
 To wield an axe a mage would have to use the fourth level of the Force sphere, gaining an effective Strength Bonus of +3.
 
 While the weapon is next to the caster it can defend the caster using its own stats by using an action to Guard.
 
-If someone wants to grab one of the floating weapons they must roll with their Strike Factor just as when making a grab against any character.
+If someone wants to grab one of the floating weapons they must roll with their Attack Bonus just as when making a grab against any character.
 A successful grapple means the weapon is too heavy to lift and the spell ends.
 
-A \textit{Sentient Dancing Swords} spell can act alone, withou the mage focussing and using their Initiative points.
+A \textit{Sentient Dancing Swords} spell can act alone, without the mage focussing and using their own \glspl{ap}.
 
 \spell{Mage Armour}{Continuous}{Academics}{Create a magical barrier with $6 + Int$ \glsentrylongpl{SP}}
 
@@ -810,7 +800,7 @@ The target gains a number of \glspl{SP} equal to the level of spell used times 3
 Those protected by the shield cannot attack others as the shield stops all attacks.%
 \footnote{Or more specifically, the person can attack, but all Damage will go to the \glspl{SP} first.}
 However, casters are able to focus enough to use missile weapons and spells by allowing small breaches in the shield's wall.
-\footnote{Allowing a target to use a missile weapon requies complete focus, and a Wits + Empathy roll, and can be performed as a Quick action, costing 2 Initiative Points.}
+\footnote{Allowing a target to use a missile weapon requires complete focus, and a Wits + Empathy roll, and can be performed as a Quick action, costing 1 \glspl{ap} Points.}
 
 The shields cannot `split' into bubbles.
 When cast as a \textit{Wide} spell, it can cover a group of people, but the shield will cover all of them or none.
@@ -831,15 +821,13 @@ A \textit{Sentient Mage Armour} can cut itself at the moment someone attacks, al
 
 \spell{Telekinetic Grasp}{Continuous}{Combat}{Wrestle a target down with psychic force}
 
-Force mages can wrestle with people from afar using telekinesis. One major advantage with this sort of wrestling is that the mage does not risk being hit back as they can cast the spell from afar. As per the Grappling rules, the mage first makes a roll to capture the target; they roll Intelligence and Combat while the target resists with their current Evasion Factor. Targets can literally feel the force of the mage's mind around them, often described as a hundred tiny, invisible hands or the feeling of an invisible wave. This force can be parried and pushed back like any normal weapon, so targets can use their full Evasion Factor, including bonuses from using a weapon.
+Force mages can wrestle with people from afar using telekinesis.
+One major advantage with this sort of wrestling is that the mage does not risk being hit back as they can cast the spell from afar.
+They can make normal grappling attacks, using Wits instead of Dexterity, and Intelligence instead of Strength.
+Targets can literally feel the force of the mage's mind around them, often described as a hundred tiny, invisible hands or the feeling of an invisible wave.
+This force can be parried and pushed back like any normal weapon, so targets can resist with their normal Attack Bonus, including bonuses from using a weapon.
 
 If the spell is successful, it inflicts no Damage nor \glspl{fatigue}, but the target counts as carrying an item with a \gls{weightrating} equal to the level of the Force sphere being used.
-
-For example, a mage using Force level 2, with Intelligence +1 and a Combat Skill of +1, could cast Telekinetic Grasp on a gnome.
-The gnome adds their Evasion Factor to the basic \gls{tn} of 7 and then the mage resists this with their Intelligence Bonus plus Combat Skill.
-If successful, the gnome would count as carrying an item with a \gls{weightrating} of 2.
-Assuming this gnome has the usual Strength Bonus of -2, they would then receive a -4 penalty to their effective Speed Bonus.
-Their Initiative Score would suffer and they would accrue additional \glspl{fatigue} each time they attempted to run or fight due to the added \gls{weightrating}.
 
 When cast over a full area, all are effected, and movement becomes extremely difficult.
 
@@ -965,7 +953,7 @@ All Invocation spells are rolled as Projectiles, using the mage's Intelligence B
 The basic \gls{tn} is 7 and the difficulty raises by +1 for every 5 squares away the opponent is, just as with normal missile weapons.
 As usual, opponents who are keeping edgy (see page \pageref{edgy}) can use their Speed to resist the attack, adding it to the \gls{tn}.
 Alternatively, if a player is keeping edgy, it is they who can attempt to dodge the incoming attack, rolling their Speed at \gls{tn} 7 plus the pyromancer's Intelligence and Projectiles Skill.
-Shields' Evasion Bonus can add to the roll to resist such spells.
+Shields' Bonus can add to the roll to resist such spells.
 
 Just like any other long-range spell, Fireballs and other Invocation spells can succeed in Vitals Shot, bypassing armour, if they strike precisely enough (see page \pageref{vitals}).
 Blast-radius spells such as a \textit{Wide Fireball} can inflict a Vitals Shot on multiple people.
