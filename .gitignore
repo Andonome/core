@@ -32,3 +32,6 @@ old
 *.tiff
 *.xcf
 *.xmpi
+*.slg
+*.slo
+*.sls
