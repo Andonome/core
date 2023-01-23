@@ -288,3 +288,53 @@
   \end{xpbox}
 }
 
+\newcommand{\animalStats}{
+  \begin{boxtable}[lccX]
+
+  \textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} & \textbf{Realistic Enhancements (Optional)} \\\hline
+
+  Badger & -4 & -3 & \quadraped \\
+
+\iftoggle{aif}{
+  Basilisk & +5 & +8 & DR 4-6, \quadraped \\
+}{}
+
+  Bear & +4 & +5 & DR 2, \quadraped \\
+
+  Beaver & -5 & -4 & \quadraped \\
+
+  Bird/ Bat & -5 & 4 & \flight \\
+
+  Cat & -5 & -5 & \quadraped \\
+
+  Cow & 0 & +4 & \quadraped \\
+
+\iftoggle{aif}{
+  Chitincrawler & +3 & +5 & DR 4 \\
+}{}
+  Deer & 0 & +2 & \quadraped \\
+
+  Donkey & 0 & +3 \\
+
+  Frog & -5 & -5 & \amphibious \\
+
+  Goat & -1 & +2 & DR 2, \quadraped \\
+
+\iftoggle{aif}{
+  Griffin & -1 & +2 & \flight \\
+}{}
+
+  Horse & +1 & +4 & \quadraped \\
+
+  Large Cat & +1 & +3 & \quadraped \\
+
+  Pig & 0 & +3 & DR 2, \quadraped \\
+
+  Rat & -5 & -5 & \quadraped \\
+
+  Wolf & -2 & +2 & \quadraped \\
+
+  \end{boxtable}
+}
+
+

@@ -1111,92 +1111,8 @@ The spell inflicts 1 Damage, plus the caster's Intelligence Bonus.
 As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence +2, casting a \textit{Potent Sickness}, would inflict $1D6-1$ Damage.
 }{}
 
-\end{multicols}
-
-\newcommand{\animalStats}{
-  \begin{boxtable}[lccX]
-
-  \textbf{Animal} & \textbf{Min Str.} & \textbf{Max Str.} & \textbf{Realistic Enhancements (Optional)} \\\hline
-
-  Badger & -4 & -3 & Quadraped \\
-
-\iftoggle{aif}{
-  Basilisk & +5 & +8 & DR 4-6, Quadraped \\
-}{}
-
-  Bear & +4 & +5 & DR 2, Quadraped \\
-
-  Beaver & -5 & -4 & Quadraped \\
-
-  Bird/ Bat & -5 & 4 & Flight \\
-
-  Cat & -5 & -5 & Quadraped \\
-
-  Cow & 0 & +4 & Quadraped \\
-
-\iftoggle{aif}{
-  Chitincrawler & +3 & +5 & DR 4 \\
-}{}
-  Deer & 0 & +2 & Quadraped \\
-
-  Donkey & 0 & +3 \\
-
-  Frog & -5 & -5 & Amphibious \\
-
-  Goat & -1 & +2 & DR 2, Quadraped \\
-
-\iftoggle{aif}{
-  Griffin & -1 & +2 & Flight \\
-}{}
-
-  Horse & +1 & +4 & Quadraped \\
-
-  Large Cat & +1 & +3 & Quadraped \\
-
-  Pig & 0 & +3 & DR 2, Quadraped \\
-
-  Rat & -5 & -5 & Quadraped \\
-
-  Wolf & -2 & +2 & Quadraped \\
-
-  \end{boxtable}
-}
-
-\sphere{Polymorph}
-
-\newcommand{\animalAbilities}{
-  \begin{boxtext}[title={Animal Abilities}]
-
-  \begin{itemize}
-
-    \item{Claws \& Teeth: +1 Damage}
-    \item{Flight: The creature has wings, and can use them properly.}
-    \item{Thick Hide: The animal's thick skin grants \gls{dr} 2.}
-    \item{Amphibious}
-    \item{Quadraped: The creature can fully utilize four limbs to run at double the normal speed when spending a full round moving}
-    \item
-    Venom: Once the creature gets a successful hit, the target gains 4 \glspl{fatigue}, then 3 on the next scene, then 2, and so on.
-
-  \end{itemize}
-
-  \end{boxtext}
-}
-
-\begin{multicols}{2}
-
 \iftoggle{verbose}{
   \begin{figure*}[b!]
-    \animalAbilities
-  \end{figure*}
-}{
-  \begin{figure*}[b!]
-    \footnotesize
-    \animalAbilities
-  \end{figure*}
-}
-
-\iftoggle{verbose}{
-  \begin{figure*}[t!]
   \animalStats
   \end{figure*}
 }{
@@ -1205,6 +1121,12 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
   \animalStats
   \end{figure*}
 }
+
+\end{multicols}
+
+\sphere{Polymorph}
+
+\begin{multicols}{2}
 
 \noindent
 Polymorph spells don't affect their target, but copy them.
