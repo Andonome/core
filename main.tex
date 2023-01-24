@@ -18,6 +18,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \input{glossary.tex}
 \iftoggle{aif}{
+  \input{../aif/seasons.tex}
   \input{../aif/glossary.tex}
 }{}
 
@@ -38,7 +39,7 @@ Keywords={TTRPG,RPG,roleplaying}
 \mainmatter
 
 \iftoggle{aif}{
-  \include{fenestra.tex}
+  \input{../aif/fenintro.tex}
 }{}
 
 \include{cc.tex}
