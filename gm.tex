@@ -201,6 +201,33 @@ If you have a campaign book such as \textit{Adventures in Fenestra}, you'll find
 
 \subsection{Running Encounters}
 
+\subsubsection{Statblocks}
+
+Statblocks describe monsters at a glance.
+
+\ifodd\value{r4}
+  \humanthief
+\else
+  \humansoldier
+\fi
+
+The top line -- ``\name'' -- shows the name and some symbols describing the creature.
+The top part of the stat block has all the basic stats, and the bottom has the derived stats.
+
+The Strength is \arabic{str}, but after we add the weapon, the total damage is `\arabic{damage}', which means rolling \calculatedamage{\value{damage}}.
+Some derived stats display in brackets, showing alternatives for when knacks are in use.
+
+Instead of showing the attack score as `+\arabic{dex}', we show the \gls{tn} the players need to roll to attack the target -- `\arabic{att}'.
+And when a \gls{pc} has to defend, just add 1 to this number, so they would successfully counter-attack on the roll of
+\stepcounter{att}`\arabic{att}' in this case.
+
+The first `\glsentrytext{ap}' written shows the number of \glsentrylongpl{ap} at the start of a round, while the \glsentrytext{ap} in brackets shows the number of \glspl{ap} required to use the weapon.
+
+The boxes provided next to \glspl{hp} and other depletable stats are provided to cross them out, to record the loss, like this: 
+
+\glsentrytext{hp} \arabic{hp}:\addtocounter{hp}{-3}
+\Repeat{3}{\sqr}\Repeat{\value{hp}}{\sqn}
+
 \subsubsection{Direction}
 
 Anyone the party meet on a road either comes in front of them, or behind.
