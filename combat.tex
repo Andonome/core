@@ -74,11 +74,13 @@ Everyone begins combat with 3 \glsentryfullpl{ap} plus their Speed Bonus.
 Every action requires spending some number of \glspl{ap}.
 
 Once someone reaches 0 \glspl{ap}, they cannot take normal actions -- only \glspl{quickaction}.
-Anyone on \emph{negative} \glspl{ap} receives a penalty to all actions equal to their penalty.
+Anyone overspending \glspl{ap} enters \emph{negative} \glspl{ap}, and receives a penalty to all actions equal to their negative score.
 
 \iftoggle{verbose}{
-  If someone on 0 \glspl{ap} has to engage in combat and spend 3 \glspl{ap}, that puts them on -3 \glspl{ap}.
-  The next time they engage in an attack, they receive a -3 penalty to the roll, and go down to -6 \glspl{ap}, then -9 \glspl{ap}.
+  A character on 2 \glspl{ap} who attacks with a greatsword (which costs 4 \glspl{ap}) would then go to -2 \glspl{ap}.
+  If someone attacked them, they would have to respond with a -2 penalty to their action, then reduce to -6 \glspl{ap}.
+
+  Using big weapons gives big bonuses, but they bring their own dangers!
 }{}
 
 \subsubsection{Initiative \& Interruptions}
