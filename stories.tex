@@ -287,21 +287,45 @@ If your safe space is ever invaded due to events outside your control, you recei
   \end{itemize}
 }{}
 
-\story{3}{The Treasure}
-You have access to large funds now that you have returned to this area.
-The total amount obtained is $2D6 \times 10$ gold pieces.%
-\footnote{Those following the Code of Acquisition gain no \gls{xp} for gaining gold through \glspl{storypoint}.}
+\iftoggle{aif}
+{
+  \story{1}{Guild Spy}
+  You declare yourself to be a guild spy for a guild from another area, and immediately gain the rank of `associate'.%
+  \footnote{See Fenestra's \autoref{ngAssociate}, page \pageref{ngAssociate}.}
+  Of course your \glsentrytext{guard} duties will not end with this revelation -- in fact you must continue.
 
-\iftoggle{verbose}{%
+  Whatever your missions may be (and you must -- at the very least -- run it past the \gls{gm}), if it ever ends you will simply gain a new one from the guild, or just a message to `sit tight where you are'.
+
+  Once your mission completes, your guild demands you remain for another (or goes silent\ldots).
+
   \begin{itemize}
-  \item When you were back in the military, you and the platoon raided a rich person's house, stole a lot of items, then buried the valuables.
-  You all swore not to return to the treasure for five years, but you need the money badly.
-  \item The local noble is your father, and it's time to ask for a big favour; gold.
-  While there, you spend 2 more \glspl{storypoint} to get a tracker, as you ask your father for a skilled warrior to help you track down the local bandits.
-  \item You found the local noble was hoarding illegal magical items, and you agreed to keep quiet for money.
-  It's time to ask for a little more hush money.
+
+    \item
+    The Justice Guild of the Shale want to know more about why \glsentrytext{king} is sending so many of the \gls{guard} to your area, and not theirs.
+    \item
+    The Paper Guild wants to understand more about \gls{shatteredcastle}, and has sent a number of men out to listen quietly to what they might hear in the guard.
+    \item
+    Somewhere in the forest, the Final Guild know, rests a lost temple, cut off from civilization, but they will not tell you what lies there.
+
   \end{itemize}
-}{}
+}
+{
+  \story{3}{The Treasure}
+  You have access to large funds now that you have returned to this area.
+  The total amount obtained is $2D6 \times 10$ gold pieces.%
+  \footnote{Those following the Code of Acquisition gain no \gls{xp} for gaining gold through \glspl{storypoint}.}
+
+  \iftoggle{verbose}{%
+    \begin{itemize}
+    \item When you were back in the military, you and the platoon raided a rich person's house, stole a lot of items, then buried the valuables.
+    You all swore not to return to the treasure for five years, but you need the money badly.
+    \item The local noble is your father, and it's time to ask for a big favour; gold.
+    While there, you spend 2 more \glspl{storypoint} to get a tracker, as you ask your father for a skilled warrior to help you track down the local bandits.
+    \item You found the local noble was hoarding illegal magical items, and you agreed to keep quiet for money.
+    It's time to ask for a little more hush money.
+    \end{itemize}
+  }{}
+}
 
 \end{multicols}
 
@@ -322,7 +346,7 @@ This kind of campaign mean taking orders, getting missions, and rising through t
 
 The party will have to decide how much looted wealth to report to their superiors, and which of their peers they can trust.
 
-Think of the \gls{guard} as the default campaign within Fenestra, and take a look at \autoref{guard} for ideas on the various missions the \glspl{pc} can expect.
+Think of the \gls{guard} as the default campaign within Fenestra, and take a look at Fenestra's \autoref{guard} for ideas on the various missions the \glspl{pc} can expect.
 
 \subsection{The Illusionists of the Shale}
 
