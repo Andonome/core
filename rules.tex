@@ -193,6 +193,8 @@ Actions cannot be attempted multiple times with rerolls unless the situation has
 \label{xp}
 \index{Experience Points}
 
+\XPchart
+
 \begin{multicols}{2}
 
 \noindent
@@ -282,98 +284,6 @@ Knacks work similarly, where the first Knack costs only 5 \gls{xp}, but the seco
 Attributes have a standard maximum of +3 and minimum of -3. This is adjusted by race, so for instance elves have a +1 bonus to Wits but -1 to Strength, so their maximum Strength score would be 2 and the minimum -4, while the maximum Wits is +4 and the minimum -2.
 
 Buying off a negative level increases it by 1 and always costs 5 \gls{xp}, so taking a character from -4 Strength to 0 would cost 20 \gls{xp}.
-
-    \setcounter{xp}{10}
-    \newcounter{bon}\setcounter{bon}{1}
-
-% On the ref version, we the page is small, so we end multicols here.
-% On the full version, the multicol ending comes below.
-
-\iftoggle{verbose}{}{
-\end{multicols}
-}
-
-\begin{multicols}{2}
-
-\begin{xpbox}{A}
-    Attribute Level & Cost \\\hline
-
-    Negative & 5 \\
-
-    +\arabic{bon} & \arabic{xp} \addtocounter{xp}{\value{bon}}\addtocounter{bon}{1} \\ 
-
-    +2 & 20 \\
-
-    +3 & 30 \\
-
-    +4 & 50 \\
-\end{xpbox}
-
-\begin{xpbox}{A}
-
-    FP Base & Cost \\\hline
-
-    10 & 10 \\
-
-    15 & 15 \\
-
-    20 & 25 \\
-
-    25 & 45 \\
-
-    30 & 85 \\
-
-\end{xpbox} 
-
-\end{multicols}
-
-\begin{multicols}{2}
-
-\begin{xpbox}{B}
-
-    Magic Sphere & Cost \\\hline
-
-    1st & 10 \\
-
-    2nd & 15 \\
-
-    3rd & 25 \\
-
-    4th & 45 \\
-
-    5th & 85 \\
-
-\end{xpbox}
-
-\begin{xpbox}{C}
-
-    Skill Level & Cost \\\hline
-
-    +1 & 5 \\
-
-    +2 & 10 \\
-
-    +3 & 15 \\
-
-\end{xpbox}
-
-\begin{xpbox}{C}
-
-    Combat/Proj. & Cost \\\hline
-
-    +1 & 10 \\
-
-    +2 & 20 \\
-
-    +3 & 40 \\
-
-\end{xpbox}
-
-\iftoggle{verbose}{
-
-\end{multicols}
-
-}{}
 
 \end{multicols}
 

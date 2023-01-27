@@ -14,7 +14,8 @@
 
 \chapter{Character Creation}\label{charactercreation}\index{Character Creation}
 
-\racechart
+
+\XPchart
 
 \begin{multicols}{2}
 
@@ -53,41 +54,20 @@ Okay, so you know how to make a character by now.  But just for reference, let's
   Spend \glspl{storypoint} at every opportunity.
 \end{enumerate}
 
-\columnbreak
-
-\begin{xpbox}{B}
-
-  Result & Attribute Bonus \\\hline
-
-  2 & -3 \\
-
-  3 & -2 \\
-
-  4-5 & -1 \\
-
-  6-8 & 0 \\
-
-  9-10 & +1 \\
-
-  11 & +2 \\
-
-  12 & +3 \\
-
-  \end{xpbox}
-
-\begin{xpbox}{B}
-
-  Trait & Cost \\\hline
-  Attributes & $5 \times 2^n + 10$ \\
-  Skills & $5 \times (n + 1)$ \\
-  Combat/ Projectiles & $10 \times 2^n$ \\
-  FP Base & $5 \times 2^n + 5$ \\
-  Magic Sphere & $5 \times 2^n + 5$ \\
-  Knack & $5 \times (n + 1)$ \\
-
-\end{xpbox}
-
 \end{multicols}
+
+\vfill\null
+
+\iftoggle{verbose}{
+  \begin{multicols}{2}
+    \racechart
+    \attributeChart
+  \end{multicols}
+}{
+  \racechart
+
+  \attributeChart
+}
 
 \chapter{Combat}
 \label{combatAppendix}
