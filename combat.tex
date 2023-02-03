@@ -278,6 +278,34 @@ Complete armour adds +1 to the \gls{weightrating} and multiplies the price by 3.
 \paragraph{Perfect armour}
 is a rating used for certain creatures which have natural armour without weak spots (such as stone giants), or magical armour.
 
+\iftoggle{verbose}{%
+  \boxPair{
+    \paragraph{A combat roll involving armour}
+    might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a white knight, with \textit{complete} plate armour.
+    If the \gls{pc} fails their roll by 4 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
+    And if the \gls{pc} hits the knight and rolls 6 points above the \gls{tn} then they bypass the knight's \gls{dr}.
+
+    Assuming the player's total \gls{tn} is `7', the possible results will look like this:
+
+    \begin{boxtable}
+      \textbf{Roll} & \textbf{Result} \\
+      \hline
+        <4 & \Glsentrytext{pc} is hit, no \gls{dr} \\
+        4 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
+        5 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
+        6 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
+        7 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+        8 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+        9 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+        10 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+        11 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+        >11 & \Glsentrytext{npc} is hit, no \gls{dr} applies \\
+    \end{boxtable}
+  }{
+    \pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
+  }
+}{}
+
 \subsubsection{Vitals Shots}
 \label{vitals}
 \index{Combat!Vitals Shots}
@@ -291,12 +319,9 @@ If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a Vitals S
 Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a hit would require a total of 15 to bypass the armour.
 Perfect armour cannot be bypassed by a sufficiently high roll.
 
-\iftoggle{verbose}{
-  \pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
-}{}
-
 Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage.
 Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
+
 
 \iftoggle{verbose}{
   \begin{figure*}[t!]
@@ -317,24 +342,10 @@ The primary armour counts for its full value, and the lower \gls{dr} score count
 Any tertiary armour counts for a quarter, and so on.
 Once you have a total, round up anything over half.
 Stacked armour can consist of both partial and complete layers, meaning a roll could bypass one set of armour by rolling 3 over the creature's \gls{tn}, but bypass all armour with a roll of 5 over the \gls{tn}.
+
 \iftoggle{verbose}{
 
-  \sidebox{
-    \begin{boxtable}
-      \textbf{Roll} & \textbf{Effect} \\
-        3 & \Glsentrytext{pc} hit, no \gls{dr} \\
-        4 & \Glsentrytext{pc} hit, but \gls{dr} applies \\
-        7 & \Glsentrytext{npc} hit, but \gls{dr} applies \\
-        12 & \Glsentrytext{npc} hit, no \gls{dr} applies \\
-    \end{boxtable}
-  }
-  For a basic example, a \gls{pc} with \textit{partial} leather armour faces off against a white knight, with \textit{complete} plate armour.
-  If the \gls{pc} fails their roll by 4 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
-  And if the \gls{pc} hits the knight and rolls 6 points above the \gls{tn} then they bypass the knight's \gls{dr}.
-
-  Assuming the player's total \gls{tn} is `7', the possible results will look like this:
-
-  Now for a convoluted example -- a basilisk with \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
+    Consider this convoluted example: a basilisk with \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
   The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
   If the mage were crazy enough to add plate armour to the basilisk, the total \gls{dr} would be $5 + \frac{4}{2} + \frac{2}{4} = 7.5$, or `8'.
 
