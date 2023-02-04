@@ -1,4 +1,3 @@
-\pagestyle{empty}
 
 \begin{tcbposter}[
   coverage = {
@@ -18,16 +17,20 @@
     interior style={pattern=gridspecks},
    },
 ]
-  \posterbox[adjusted title=Campaign,interior style={}]{name=campaign,column=1,row=1,span=10,rowspan=2,}{
+  \posterbox[adjusted title=Campaign,interior style={}]{name=campaign,below=top,column=1,row=1,span=10,rowspan=2,}{
       
 
     \large
     Premise:
 
-    Season: 
-
     Area:
     
+    Season: 
+
+    Day:
+
+    \iftoggle{aif}{Nura Rating:}{}
+
     }
 
   \posterbox[adjusted title=Situation,interior style={}]{name=situation,column=11,row=1,span=16,rowspan=2}{}
@@ -35,7 +38,7 @@
 %---
 
 
-  \posterbox[adjusted title=Player Characters]{name=pcs,column=1,row=3,span=26,rowspan=2}{
+  \posterbox[adjusted title=Player Characters]{name=pcs,below=campaign,column=1,span=26,rowspan=4}{
 
     \begin{tabular}{l|l|l|l}
     \hiderowcolors
@@ -47,13 +50,13 @@
 
 %---
 
-  \posterbox[adjusted title=Encounters]{name=encounters,column=1,row=5,span=15,rowspan=4}{}
+  \posterbox[adjusted title=Encounters]{name=encounters,below=pcs,row=7,span=15,rowspan=4}{\vspace{3em}\vrule}
 
 %---
 
-  \posterbox[adjusted title=Non Players Characters]{name=npcs,column=16,row=5,span=11,rowspan=4}{}
+  \posterbox[adjusted title=Non Players Characters]{name=npcs,column=16,row=7,span=11,rowspan=4}{}
 
-  \posterbox[adjusted title=Notes]{name=notes,column=1,row=9,span=26,rowspan=3}{}
+  \posterbox[adjusted title=Notes]{name=notes,column=1,below=encounters,span=26,rowspan=1.5}{}
 
   %----
     \setcounter{track}{7}
