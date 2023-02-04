@@ -3,9 +3,6 @@
 \begin{tcbposter}[
   coverage = {
       spread,
-      %watermark text={BIND},
-      %watermark color=black!25!white,
-      %watermark opacity=0.4
   },
   poster   = {
     showframe=false,
@@ -19,7 +16,6 @@
     boxrule=.6mm,
     colback=white,
     drop fuzzy shadow,
-    %opacityback=0.7,
    }
 ]
 
@@ -107,11 +103,12 @@
 
     \setcounter{track}{7}
     \posterbox[
+    blankest,
     ]{name=track,column=27,row=3,span=2.8,rowspan=15.8}{ 
       {\large
 
         \vspace{1em}
-        \Repeat{18}{\tracker}
+        \Repeat{15}{\tracker}
       }
       }
 
@@ -261,6 +258,8 @@
 \end{tcbposter}
 
 \pagebreak
+
+\pagenumbering{gobble}
 
 \chapter*{Story Points~\Repeat{5}{\Huge\sqn}}
 
