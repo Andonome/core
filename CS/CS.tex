@@ -135,7 +135,7 @@
   }
 %----
   \posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=11,row=8,span=8,rowspan=1.6}{
-    \begin{tabularx}{\linewidth}{Xp{0em}p{0em}p{0em}}
+    \begin{tabularx}{\linewidth}{Xr@{}}
 
       \hiderowcolors
       \skill{Combat}
@@ -162,7 +162,7 @@
 %-----
   \posterbox[adjusted title=Skills (5/10/15)]
   {name=skills,column=11,row=3,span=8,rowspan=5}{
-    \begin{tabularx}{\linewidth}{Xp{0em}p{0em}p{0em}}
+    \begin{tabularx}{\linewidth}{Xr@{}}
 
       \hiderowcolors
       \skill{Academics}
@@ -179,7 +179,7 @@
       \skill{Tactics}
       \skill{Vigilance}
       \skill{Wyldcrafting}
-      \skill{\line(1,0){70}}
+      \skill{}
 
     \end{tabularx}
   }
@@ -190,13 +190,14 @@
   \setlength{\parskip}{3mm}
   \vspace{.2cm}
 
-  \hrulefill \fiveboxes
+  \dotfill \Repeat{5}{\ding{109}}
 
-  \hrulefill \fiveboxes
+  \dotfill \Repeat{5}{\ding{109}}
 
-  \hrulefill \fiveboxes
+  \dotfill \Repeat{5}{\ding{109}}
 
-  \hrulefill \fiveboxes
+  \dotfill \Repeat{5}{\ding{109}}
+
 
   }
 
