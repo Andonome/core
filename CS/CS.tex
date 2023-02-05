@@ -122,17 +122,16 @@
       \setlength{\parskip}{3mm}
       Weapon & Bonus & Damage & AP & Weight \\
       
-      \Repeat{4}{
-        \writeline \Repeat{4}{& \writeline} \\
-      }
     \end{tabularx}  
+
+    \lineDots[3]
 
     \begin{tabularx}{\linewidth}{p{.3\textwidth}XXX}
       \hiderowcolors
       Armour & DR & Type & Weight \\
-      \writeline \Repeat{3}{& \writeline} \\
     \end{tabularx}
 
+    \lineDots
   }
 %----
   \posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=11,row=8,span=8,rowspan=1.6}{
@@ -209,23 +208,10 @@
     column=1,
     row=14,
     span=26,
-    rowspan=4,
+    rowspan=3.8,
   }{
 
-  \vspace{.4cm}
-  \setlength{\parskip}{3mm}
-
-  \hrulefill
-
-  \hrulefill
-
-  \hrulefill
-
-  \hrulefill
-
-  \hrulefill
-
-  \hrulefill
+  \lineDots[5]
 
   \vspace{8mm}
   CP \weeline SP\weeline GP\weeline \hspace{3cm} Total XP \weeline Spent XP \weeline
@@ -240,15 +226,7 @@
 
   \setlength{\parskip}{3mm}
 
-    \vspace{.2cm}
-
-    \hrulefill
-
-    \hrulefill
-
-    \hrulefill
-
-    \hrulefill
+    \lineDots[4]
 
   }
 
@@ -260,7 +238,9 @@
 
 \pagenumbering{gobble}
 
-\chapter*{Story Points~\Repeat{5}{\Huge\sqn}}
+{\Huge Story Points~\Repeat{5}{\sqn}}
+
+\lineDots[32]
 
 \pagebreak
 

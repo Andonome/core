@@ -14,10 +14,9 @@
     boxrule=.6mm,
     colback=white,
     drop fuzzy shadow,
-    interior style={pattern=gridspecks},
    },
 ]
-  \posterbox[adjusted title=Campaign,interior style={}]{name=campaign,below=top,column=1,row=1,span=10,rowspan=2,}{
+  \posterbox[adjusted title=Campaign,]{name=campaign,below=top,column=1,row=1,span=10,rowspan=2,}{
       
 
     \large
@@ -33,7 +32,9 @@
 
     }
 
-  \posterbox[adjusted title=Situation,interior style={}]{name=situation,column=11,row=1,span=16,rowspan=2}{}
+  \posterbox[adjusted title=Situation,]{name=situation,column=11,row=1,span=16,rowspan=2}{
+    \lineDots[4]
+  }
 
 %---
 
@@ -46,17 +47,25 @@
       Player & Character & Concept & Notes \\\hline
 
     \end{tabular}
+    
+    \lineDots[9]
     }
 
 %---
 
-  \posterbox[adjusted title=Encounters]{name=encounters,below=pcs,row=7,span=15,rowspan=4}{\vspace{3em}\vrule}
+  \posterbox[adjusted title=Encounters]{name=encounters,below=pcs,row=7,span=13,rowspan=4}{
+    \lineDots[10]
+  }
 
 %---
 
-  \posterbox[adjusted title=Non Players Characters]{name=npcs,column=16,row=7,span=11,rowspan=4}{}
+  \posterbox[adjusted title=Non Players Characters]{name=npcs,column=14,row=7,span=13,rowspan=4}{
+    \lineDots[10]
+  }
 
-  \posterbox[adjusted title=Notes]{name=notes,column=1,below=encounters,span=26,rowspan=1.5}{}
+  \posterbox[adjusted title=Notes]{name=notes,column=1,below=encounters,span=26,rowspan=1.5}{
+    \lineDots[2]
+  }
 
   %----
     \setcounter{track}{7}
