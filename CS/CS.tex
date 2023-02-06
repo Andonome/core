@@ -53,50 +53,38 @@
 %----
 
   \posterbox[
-    blankest,interior engine=path, halign=center,valign=center,
+    blankest,interior engine=path,valign=center,
   ]{name=gumption,column=19,row=3,span=8,rowspan=5}{
 
-  \vspace{.2cm} {\small HP \tiny{(6 + Str)}}
+    {\small Place coins in the circles to keep track of the current score.}
+    \vspace{1em}
 
-  \begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-    \hiderowcolors
-    \ding{108} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109} & \ding{109}  \\
-    \tenboxes
-  \end{tabular}
+    \begin{tikzpicture}[
+circle label/.style = {
+        postaction={
+            decoration={
+                text along path,
+                text = {#1},
+                text align=center,
+                reverse path,
+            },
+        decorate,
+    }
+    }
+    ]
+     \path[circle label={HP = 6 + Strength}] (-1,-1.1) arc (-90:360-90:1.1);
+      \draw[dotted] (-1,0) circle (1);
+     \path[circle label={Fatigue Points}] (1.8,-1.1) arc (-90:360-90:1.1);
+      \draw[dotted] (1.8,0) circle (1);
+     \path[circle label={FP = Base + Charisma}] (-1,-4.1) arc (-90:360-90:1.1);
+      \draw[dotted] (-1,-3) circle (1) node [align=left,text width=3.5em] {};
+     \path[circle label={MP = 3 x spheres + Intelligence}] (1.8,-4.1) arc (-90:315-45:1.1);
+      \draw[dotted] (1.8,-3) circle (1) node [align=left] {};
+    \end{tikzpicture}
 
-    {\small Fatigue}
-    \par
-    \begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-    \hiderowcolors
-    \tenboxes
-    \fiveBoxesRow & \textbf{Encumbrance} \\
-      \ding{182} & \ding{183} & \ding{184} & \ding{185} & \ding{186} & 
-      \vspace{2mm}\line(1,0){50} \\
-    \end{tabular}
-
-    \vspace{.2cm} {\small FP (10/15/20)} \shortline {\tiny $+ Cha$}
-
-\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-
-    \hiderowcolors
-    \tencircles
-    \tenboxes
-    \tencircles
-    \tenboxes
-  \end{tabular}
-
-    \vspace{.2cm} {\small MP} {\tiny $=3\times spheres +Wts$}
-
-\begin{tabular}{p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}p{0em}}
-
-    \hiderowcolors
-    \tencircles
-    \tenboxes
-    \tencircles
-    \tenboxes
-
-  \end{tabular}
-
+    \vspace{1em}
+    FP Base: \rule{2em}{0.5pt}
+    \footnotesize (10/15/20)
   }
 %----
 
