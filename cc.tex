@@ -90,11 +90,6 @@ Grab a pair of D6's and compare the result to the following chart.
 
 I've just rolled a `7', so I'm playing a human.  Being the tallest of the races they get +1 Strength.  However, they're also a little slow on the uptake, so they get -1 Wits.
 
-Next up, time to roll the Attributes -- Strength, Dexterity, et c.
-Roll $2D6$ for each of them, comparing your result to the chart, below.
-Continue rolling until all 6 Attributes have a value.
-Your race will give you modifiers to these results, so if you find yourself an elf, and roll a `5' for Strength, you would get a basic Strength of -1, then another -1 for being an elf, for a final result of `Strength -2'.
-
 }{
 
 Roll $2D6$ on the chart to produce a random race.
@@ -135,8 +130,18 @@ suffer only half the usual \glspl{fatigue} from travel.
 
 \begin{multicols}{2}
 
+\sidebox[18]{
+  \attributeChart
+}
 \noindent
-These are the basic Traits which characters must use over and over again for every roll.
+Roll $2D6$ six times -- once for each Attribute -- and write down your result on the character sheet.
+\iftoggle{verbose}{%
+  If you roll `3, 8, 9', then you have `Strength -2, Dexterity +0, Speed +1'.
+  Roll the dice thrice more for the Mental Attributes.
+
+  Finally, add your racial modifiers.
+  A human with this result will gain `+1 Strength', for a final modifier of `-1', while a gnome would gain a further `-2' penalty, for a final result of `-4' -- that's not great, but we can adjust this result later with \glspl{xp}.
+}{}
 
 \iftoggle{verbose}{
   \input{story/2-cc.tex}
@@ -146,15 +151,21 @@ These are the basic Traits which characters must use over and over again for eve
 \index{Body Attributes}
 \index{Physical Attributes}
 
-\sidebox[27]{
-  \attributeChart
-}
-
-These are the Attributes determined wholly by the character's body. Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures. Monsters, beasts and stranger creatures are all described with these three Body Attributes.
+These are the Attributes determined wholly by the character's body.
+Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures.
+Monsters, beasts and stranger creatures are all described with these three Body~Attributes.
 
 \subsubsection{Strength}
 
 Strength represents a character's muscles -- their ability to endure, to take damage, lift heavy objects, march for long distances and to wield heavy weapons without penalty.
+
+\subsubsection{Dexterity}
+
+Dexterity represents someone's hand-eye coordination and natural grace.
+It's used to dodge, parry, block and also to aim projectile weapons.
+\iftoggle{verbose}{%
+It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
+}{}
 
 \subsubsection{Speed}
 
@@ -163,14 +174,6 @@ Speed represents a character's movement, how fast they attack, how often they ca
 Since it allows characters to flee dangerous situations, a group can be held back by its slowest member.
 A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat.
 Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
-}{}
-
-\subsubsection{Dexterity}
-
-Dexterity represents someone's hand-eye coordination and natural grace.
-It's used to dodge, parry, block and also to aim projectile weapons.
-\iftoggle{verbose}{%
-It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
 }{}
 
 \subsection{Mind Attributes}
