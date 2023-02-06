@@ -456,7 +456,7 @@ Every time someone would lose \glspl{hp}, the character marks off \gls{fp} inste
 
 Everyone in the world begins with 5 base \gls{fp}.
 This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
-The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full allotment of \gls{fp} at the beginning of each adventure.
+The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full allotment of \gls{fp} at the beginning of each \gls{adventure}.
 \Glspl{npc} start with none, but regain \gls{fp} at the end of each scene as usual.
 As a result, most \glspl{npc} effectively have 0 \gls{fp}.
 The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} \glspl{hp}.
@@ -861,7 +861,11 @@ When an enemy flees the scene after a fight has begun, characters still gain ful
 
 \subsection{Fleeing}
 
-Chases form some of the most dramatic scenes in an adventure. When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent.  But when running through marshes, down alleys, climbing up cliffs, or otherwise finding a reason to change direction, \glspl{pc} must roll.
+\iftoggle{verbose}{
+Chases form some of the most dramatic scenes in any \glsentrytext{adventure}.
+When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent.
+But when running through marshes, down alleys, climbing up cliffs, or otherwise finding a reason to change direction, \glspl{pc} must roll.
+}{}
 
 The system is simple -- one player rolls $2D6$ for the group. Each person then modifies this group score. Since the party will probably run at different paces, they have the option of abandoning slower members or slowing down to the pace of the slowest member.
 
