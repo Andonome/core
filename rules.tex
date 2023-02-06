@@ -360,18 +360,17 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
 \end{boxtable}
 
+\index{Food}\index{Rations}
 \begin{boxtable}[XcX]
 
   \textbf{Professional Tools} & \textbf{Weight} & \textbf{Cost} \\\hline
 
-  Cart & 11 & 10 gp \\
-
   Grappling hook &  -2 &  1 sp \\
 
-  Ink bottle &  &  5 cp \\
+  Ink bottle &  &  2 sp \\
 
   Iron rations &  -2 &  10 cp \\
-  \index{Food}\index{Rations}
+  
 
   Lantern &  -2 &  3 sp \\
 
@@ -383,7 +382,7 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
   Quill &   &  4 cp \\
 
-  Rope, 50' &  -1 &  50 cp \\
+  Rope, 50' &  -1 &  2 sp \\
 
   Rope, silk, 50' &  -4 &  3 sp \\
 
@@ -394,19 +393,9 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
   \textbf{Travel} & & \textbf{Cost} \\\hline
 
-  Ale & &  1 cp \\
-
   Cart & &  1 gp \\
 
-  Camping equipment & & {1 sp} \\
-
-  One meal & & 2 cp \\
-
-  Barn for the night & & 2 cp \\
-
-  Basic room for the night & & 30 cp \\
-
-  Fancy room for the night & & 3 sp \\
+  Camping equipment & & {3 sp} \\
 
 \end{boxtable}
 
@@ -455,7 +444,6 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
 }{} 
 
 \iftoggle{verbose}{
-
   \input{story/encumbrance.tex}
 }{}
 
@@ -481,17 +469,25 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
 
   Popular trading route & $2D6-2$\gls{sp} (reroll each day) \\
 
-  Standard stream & $3D6$\gls{cp} \\\hline
+  Standard stream & $3D6$ \gls{cp} \\\hline
 
   \textbf{Guide} &  150 cp/ day \\\hline
 
-  Dangerous area & 1sp \\
+  \iftoggle{aif}{
+    Inner villages & 50\gls{cp} \\
+    Near the \gls{edge} & 5\gls{sp} \\
+    Beyond the \gls{edge} & 15\gls{sp} \\
+  }{
+    Dangerous area & 1sp \\
 
-  Uncharted area & 50cp \\\hline
-
+    Uncharted area & 50cp \\
+  }
+  \hline
   \textbf{Hospitality} &  \\\hline
 
   Public House & 0cp \\
+
+  Meal & 5cp \\
 
   Barn with breakfast & 10cp \\
 
@@ -517,9 +513,15 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
 
   \textbf{Tracker} &  5 sp/ day \\\hline
 
-  Dangerous area & 2sp \\
+  \iftoggle{aif}{
+    Inner villages & 1\gls{sp} \\
+    Near the \gls{edge} & 10\gls{sp} \\
+    Beyond the \gls{edge} & 20\gls{sp} \\
+  }{
+    Dangerous area & 2sp \\
 
-  Uncharted area & 4sp \\\hline
+    Uncharted area & 4sp \\
+  }\hline
 
 \end{tcolorbox}
 }
