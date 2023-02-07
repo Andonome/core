@@ -128,7 +128,7 @@ circle label/.style = {
 %----
   \posterbox[adjusted title=Melee (10/20/40),
   remember,
-  ]{name=Melee,column=11,row=8,span=8,rowspan=1.6}{
+  ]{name=melee,column=11,row=8,span=8,rowspan=1.6}{
     \begin{tabularx}{\linewidth}{Xr@{}}
 
       \hiderowcolors
@@ -234,16 +234,19 @@ circle label/.style = {
 %------
 
 \iftoggle{examplecharacter}{
-  \commentary{[xshift=10,yshift=-3em]TCBPOSTER@title.north}{-1em,-1em}{1: Write down your name and roll a random race (\autopageref{raceRoll})}
+  \commentary{[xshift=10,yshift=-3em]TCBPOSTER@title.north}{-1em,-1em}{\ref{sumCCrace}: Write down your name and roll a random race (\autopageref{raceRoll})}
 
-  \commentary{[xshift=5em,yshift=-3em]TCBPOSTER@attributes.south west}{0em,2em}{2: Roll to determine each of your Attributes, then apply the racial modifier (\autopageref{randomAttributes})}
+  \commentary{[xshift=5em,yshift=-3em]TCBPOSTER@attributes.south west}{0em,2em}{\ref{sumCCconcept}: Roll to determine each of your Attributes, then apply the racial modifier (\autopageref{randomAttributes})}
 
-  \commentary{[xshift=13em,yshift=-6em]TCBPOSTER@title.west}{-2em,2em}{3: Concept and Name: write two words to summarize the character, and write down a name}
+  \commentary{[xshift=13em,yshift=-6em]TCBPOSTER@title.west}{-2em,2em}{\ref{sumCCxp}: Concept and Name: write two words to summarize the character, and write down a name}
 
   \commentary{[xshift=4em,yshift=0em]TCBPOSTER@gumption.west}{-20em,0em}{}
-  \commentary{[xshift=4em,yshift=0em]TCBPOSTER@gumption.west}{-3em,2em}{4: Spend 50 XP to raise the character's Attributes and Skills (\autopageref{xp}).}
+  \commentary{[xshift=4em,yshift=0em]TCBPOSTER@gumption.west}{2em,-30em}{}
+  \commentary{[xshift=4em,yshift=0em]TCBPOSTER@gumption.west}{-3em,2em}{\ref{sumCCequip}: Spend 50 \glspl{xp} to raise the character's Attributes and Skills (\autopageref{xp}).}
 
-  \commentary{[xshift=-7em,yshift=-5em]TCBPOSTER@title.east}{-3em,2em}{5: Select a Code (\autopageref{gods_codes}) and write down a culture.}
+  \commentary{[xshift=-7em,yshift=-5em]TCBPOSTER@title.east}{-3em,2em}{\ref{sumCCcode}: Select a Code (\autopageref{gods_codes}) and write down a culture.}
+
+  \commentary{[xshift=-1em,yshift=-3em]TCBPOSTER@melee.south west}{4em,6em}{\small The \gls{xp} cost for the first three levels are shown above each box}
 
   \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{4em,-23em}{}
   \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{-1em,-3em}{6: Take a number of pieces of equipment equal to all Skill levels added together (\autopageref{goods}).}
