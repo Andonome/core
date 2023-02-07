@@ -281,13 +281,6 @@ is a rating used for certain creatures which have natural armour without weak sp
 
 \iftoggle{verbose}{%
   \boxPair{
-    \paragraph{A combat roll involving armour}
-    might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a white knight, with \textit{complete} plate armour.
-    If the \gls{pc} fails their roll by 4 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
-    And if the \gls{pc} hits the knight and rolls 6 points above the \gls{tn} then they bypass the knight's \gls{dr}.
-
-    Assuming the player's total \gls{tn} is `7', the possible results will look like this:
-
     \begin{boxtable}
       \textbf{Roll} & \textbf{Result} \\
       \hline
@@ -302,6 +295,14 @@ is a rating used for certain creatures which have natural armour without weak sp
         11 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
         >11 & \Glsentrytext{npc} is hit, no \gls{dr} applies \\
     \end{boxtable}
+
+    \paragraph{A combat roll involving armour}
+    might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a white knight, with \textit{complete} plate armour.
+    If the \gls{pc} fails their roll by 4 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
+    And if the \gls{pc} hits the knight and rolls 6 points above the \gls{tn} then they bypass the knight's \gls{dr}.
+
+    Assuming the player's total \gls{tn} is `7', the possible results will look like this:
+
   }{
     \pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
   }
