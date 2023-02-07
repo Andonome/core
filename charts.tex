@@ -1,6 +1,12 @@
 % for CS line dots mostly
 \newcommand{\lineDots}[1][1]{\vspace{1.5em}\Repeat{#1}{\hbox to \textwidth{\leaders\hbox to 30pt{\hss . \hss}\hfil}\vspace{1em}}}
 
+% for CS callout boxes
+
+\newcommand\commentary[3]{
+  \node[text=white, overlay, rectangle callout, callout relative pointer={(#2)}, fill=black,] (randomNode) at (#1) [text width=4cm]{#3};
+}
+
 \newcommand\attributeChart{
   \begin{boxtable}[YY]
 

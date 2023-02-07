@@ -10,7 +10,7 @@
   },
   boxes    = {
     enhanced standard jigsaw,
-    boxsep=4pt,
+    boxsep=2pt,
     left=1pt,
     right=1pt,
     boxrule=.6mm,
@@ -21,7 +21,7 @@
 
 %----
   \posterbox[
-    blankest, halign=center,valign=center,
+    remember, blankest, halign=center,valign=center,
   ]{name=title,column=1,span=29}{
     \vspace{.8cm}
     \begin{tabularx}{\linewidth}{lXlXlX}
@@ -36,6 +36,7 @@
 %----
   \posterbox[
     adjusted title=Attributes (5 | 10/20/30),
+    remember,
   ]{name=attributes,column=1,row=3,span=10,rowspan=3}{
   \vspace{-.3cm}
   \begin{tabular}{ll}
@@ -54,10 +55,10 @@
 %----
 
   \posterbox[
-    blankest,interior engine=path,valign=center,
+    remember, blankest,interior engine=path,valign=center,
   ]{name=gumption,column=19,row=3,span=8,rowspan=5}{
 
-    {\footnotesize Place coins in the circles to keep track of the current score.}
+    {\footnotesize Place coins in the circles to keep track of the current score.} 
     \vspace{1.5em}
 
     \begin{tikzpicture}[
@@ -92,6 +93,7 @@ circle label/.style = {
     \setcounter{track}{7}
     \posterbox[
     blankest,
+    remember,
     ]{name=track,column=27,row=3,span=2.8,rowspan=15.8}{ 
       {\large
 
@@ -104,6 +106,7 @@ circle label/.style = {
 
   \posterbox[
   adjusted title=Armoury,
+  remember,
   ]{name=armoury,column=1,row=10,span=18,rowspan=4}{
     \renewcommand{\arraystretch}{1.5}
     \begin{tabularx}{\linewidth}{p{.3\textwidth}XXXX}
@@ -123,7 +126,9 @@ circle label/.style = {
     \lineDots
   }
 %----
-  \posterbox[adjusted title=Melee (10/20/40)]{name=Melee,column=11,row=8,span=8,rowspan=1.6}{
+  \posterbox[adjusted title=Melee (10/20/40),
+  remember,
+  ]{name=Melee,column=11,row=8,span=8,rowspan=1.6}{
     \begin{tabularx}{\linewidth}{Xr@{}}
 
       \hiderowcolors
@@ -136,6 +141,7 @@ circle label/.style = {
   \posterbox[
     blankest,interior engine=path, halign=center,valign=center,
     opacityback=0,
+    remember,
   ]
   {name=Derived,column=1,row=5,span=10,rowspan=4}{
     \begin{tabular}{ccc}
@@ -149,7 +155,10 @@ circle label/.style = {
 }
 
 %-----
-  \posterbox[adjusted title=Skills (5/10/15)]
+  \posterbox[
+  adjusted title=Skills (5/10/15),
+  remember,
+  ]
   {name=skills,column=11,row=3,span=8,rowspan=5}{
     \begin{tabularx}{\linewidth}{Xr@{}}
 
@@ -193,12 +202,13 @@ circle label/.style = {
 %----
   \posterbox[
     adjusted title=Equipment (1 per Skill),
+    remember,
   ]
   {name=equipment,
     column=1,
     row=14,
     span=26,
-    rowspan=3.8,
+    rowspan=3.5,
   }{
 
   \lineDots[5]
@@ -210,11 +220,12 @@ circle label/.style = {
 %---
 
   \posterbox[
-    adjusted title=Knacks (5/10/15)
+    adjusted title=Knacks (5/10/15),
+    remember,
   ]
   {name=knacks,column=19,row=11,span=8,rowspan=3}{
 
-  \setlength{\parskip}{3mm}
+  \setlength{\parskip}{0mm}
 
     \lineDots[4]
 
@@ -222,15 +233,21 @@ circle label/.style = {
 
 %------
 
+\iftoggle{examplecharacter}{
+  \commentary{[xshift=10,yshift=-3em]TCBPOSTER@title.north}{-1em,-1em}{1: Write down your name and roll a random race (\autopageref{raceRoll})}
+
+  \commentary{[xshift=5em,yshift=-3em]TCBPOSTER@attributes.south west}{0em,2em}{2: Roll to determine each of your Attributes, then apply the racial modifier}
+
+  \commentary{[xshift=13em,yshift=-6em]TCBPOSTER@title.west}{-2em,2em}{3: Concept and Name: write two words to summarize the character, and write down a name}
+
+  \commentary{[xshift=4em,yshift=0em]TCBPOSTER@gumption.west}{-20em,0em}{}
+  \commentary{[xshift=4em,yshift=0em]TCBPOSTER@gumption.west}{-3em,2em}{4: Spend 50 XP to raise the character's Attributes and Skills (\autopageref{xp}).}
+
+  \commentary{[xshift=-7em,yshift=-5em]TCBPOSTER@title.east}{-3em,2em}{5: Select a Code (\autopageref{codes}) and write down a culture.}
+
+  \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{4em,-23em}{}
+  \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{-1em,-3em}{6: Take a number of pieces of equipment equal to all Skill levels added together (\autopageref{goods}).}
+
+}{}
 \end{tcbposter}
-
-\pagebreak
-
-\pagenumbering{gobble}
-
-{\Huge Story Points~\Repeat{5}{\sqn}}
-
-\lineDots[32]
-
-\pagebreak
 
