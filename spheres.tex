@@ -861,10 +861,6 @@ Turning someone into a person uses the Empathy Skill, while making a door look l
 By wrapping the target in shadows, they gain a bonus to hiding equal to the spell's Level plus the caster's Intelligence Bonus.
 This won't do much good when someone walks close to an inky patch of darkness, and can be actively harmful when a patch of blackness is wandering across a Sunny street.
 
-\iftoggle{verbose}{
-  \sidepic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
-}{}
-
 Casting this as a \textit{Colourful Cloak} allows the shadow to take on real colours, so the caster can make something look like just about anything else.
 When only trying to hide, the Stealth Skill is used, but if an illusion is cast to make something look like another, the Skill depends on what it should look like.
 
@@ -1115,6 +1111,10 @@ The spell inflicts 1 Damage, plus the caster's Intelligence Bonus.
 As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence +2, casting a \textit{Potent Sickness}, would inflict $1D6-1$ Damage.
 }{}
 
+\end{multicols}
+
+\sphere{Polymorph}
+
 \iftoggle{verbose}{
   \begin{figure*}[b!]
   \animalStats
@@ -1126,107 +1126,137 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
   \end{figure*}
 }
 
-\end{multicols}
-
-\sphere{Polymorph}
-
 \begin{multicols}{2}
 
 \noindent
-Polymorph spells don't affect their target, but copy them.
-The mage pulls some feature from an animal into themselves, gaining additional speed, or strength, then finally transforming entirely into an animal.
 
-Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of.
-Many conjecture that the face is a facet of one's soul showing in the world.
-A ginger person transformed into a cat would become a ginger cat.
-A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
+\noindent
+Polymorph spells alter someone's physiology, pulling them across a different branch in the great tree of life.
+The initial spells focus on surface qualities, adding skin-deep, or rudimentary alterations.
+Later spells fundamentally affect a target's body, adding or reducing muscle, or granting grand, new, abilities.
 
-Spotting someone who has been transformed requires a Wits + Empathy roll, with a \gls{tn} of 7 plus the level of the Polymorph sphere being employed;
-e.g. if an elf used the first level to look more deer-like, the \gls{tn} would be 8, but using Level 4 to combine forms like some chimaera would demand \gls{tn} 11 to recognize the elf.
+All Polymorph spells are cast at a \gls{tn} of 7 plus half the target's maximum \glspl{hp}.
+\iftoggle{verbose}{
+  Targeting a bird or gnome might require \gls{tn} 8 or 9, while a human warrior or basilisk could required \gls{tn} 13 or 14.
+  For this reason, a great many Polymorph spells are cast as a ritual.
+}{}
 
-Standard animal examples on the table are provided for reference, but animal stats can vary.
+\iftoggle{verbose}{
+  Throughout all these forms people maintain a universal `face' -- a kind of likeness which they simply cannot get rid of.
+  Many conjecture that the face is a facet of one's soul showing in the world.
+  A ginger person transformed into a cat would become a ginger cat.
+  A skinny person with short hair who transforms into a sheep will become a skinny, short-haired sheep.
+}{}
 
-Unwilling targets who are to be transformed with Polymorph can spend 5 \glspl{fp} in order to retroactively stipulate that the spell fails.
+Spotting someone who has been transformed by a polymorph spell requires a Wits + Empathy roll, with a \gls{tn} of 7 plus the level of the Polymorph sphere being employed%
+\iftoggle{verbose}%
+  {; e.g. if an elf used the first level to look more deer-like, the \gls{tn} would be 8, but using Level 4 to combine forms like some chimaera would demand \gls{tn} 11 to recognize the elf.}
+  {.}
+
+Unwilling targets who are to be transformed with Polymorph can spend 5 \glspl{fp} in order to immediately declare that the spell fails.
+
 The undead are completely immune to the Polymorph sphere.
 
 \spelllevel
 
-\spell{Chimaera}{Continuous}{Wyldcrafting/ Caving}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR.}
-
-A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, and later copy a full species.
-Once the target animal lies in range, the mage casts the spell, and gains a number of points equal to the spell's Level in Strength, Speed, Wits, or \gls{dr}.
-The mage cannot copy more than an animal has.
-Copying a bear with Strength +5 can only allow a mage to gain up to Strength +5.
-
-Each feature taken from an animal radically alters the caster's appearance.
-Taking a bull's \gls{dr} will make the caster's skin tough and furry.
-Taking its Strength may have the caster grow small horns in addition to the extra muscle.
-
-In lieu of an Attribute point, the caster can take on a feature of the animal, such as amphibiousness, or claws.
-
-Taking on the strange form comes with a subtle change in thinking.
-The caster gains a Charisma penalty equal to double the spell level being used.
-
-Any changes to Charisma do not affect \glspl{fp}, and additional Wits don't change Mana.
-
-Characters will find their armour no longer works if their Strength Bonus changes.
-Those who became smaller may find their armour slipping off, or inflicting additional \glspl{fatigue}.
-Those who gain in Strength will find the armour becomes too tight, and will receive 3 \glspl{fatigue} per turn, applied immediately, until they remove the armour or cancel the spell.
-
-\spelllevel
-
-\spell{Beast Form}{Continuous}{Wyldcrafting/ Caving}{Transform into an animal. Int + Wyldcrafting.}
-
-The caster targets an animal, and copies it completely.
-The closer an animal is to the caster, physically, the easier they can copy it.
-
-The distance between a target animal and the caster, is determined by the difference between the caster's Strength and the target's, added to the difference between their Speed Attributes.
-\iftoggle{verbose}{%
-  Suppose an elven caster has Strength -2 and Speed +1.
-  A bird has Strength -5, so that's a different of 3.
-  The bird's Speed is +3, so that's a difference of 2, for a total of 5.%
-  \footnote{
-    $\gls{tn} = 7 + |Str^C - Str^T| + |Spd^C - Spd^T|$
-  }
-}{
-  $\gls{tn} = 7 + |Str^C - Str^T| + |Spd^C - Spd^T|$
-}
-The spell can breach a `point-distance' equal to twice the spell's Level, plus the caster's Intelligence.
-The caster rolls with Intelligence + Wyldcrafting (or Caving), and must reach a \gls{tn} of 7 plus the number of Attribute points required to bridge the gap.
-\iftoggle{verbose}{%
-A caster with Intelligence +2 could bridge up to 6 Attribute points.
-Returning to the example above, the \gls{tn} would be 12.
-In general, larger casters find it easier to become bears and warthogs, while smaller casters find it easier to become birds or rats.
-}{}
-
-\spell{Chimaera Curse}{Continuous}{Wyldcrafting/ Caving}{Give any target animalistic features. Int + Wyldcrafting.}
-
-The target caster gives someone else the abilities of a creature, as per the \textit{Chimaera} spell, above.
-This spell can target both a person and an animal if cast with the \textit{Wide} Enhancement, or can take the animal features from the \textit{Form Ken} spell.
+\spell{Race Swap}{Continuous}{Empathy}{The target appears to change race, but no stats are affected}
 
 \iftoggle{verbose}{
-
-Malicious casters often use this spell to create hideous beasts out of normal animals, such as deer.
-}{}%
-When normally peaceful animals, such as deer, gain traits from predators, they develop violent and carnivorous tastes to match.
-
-\spell{Form Ken}{Instant}{Medicine}{Memorize the form of an animal.}
-
-The caster takes a mental snapshot of the target, forever memorizing its form.
-From that point on, the caster can transform into the animal with any other Polymorph spell, or transform others into that animal.
-
-\iftoggle{verbose}{%
-The target only counts if the player records it on their character sheet.
+  \sidepic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
 }{}
+
+This spell changes someone's appearance to that of a different race, as long as their Physical Attributes lie within the allowed bands of that race.
+A fighter with a Strength Bonus of +2 might change to look like a particularly strong elf, but someone with a +3 Strength Bonus cannot be changed into an elf, as the maximum Strength Bonus an elf could have is +2.
+\footnote{Every race has a maximum and minimum bonus of 3, plus their racial adjustments.
+See \autopageref{raceRoll}.}
+
+\iftoggle{verbose}{
+  The transformation is surface-level only, granting no new abilities, or alterations.
+  But it can easily fool those not paying attention into ignoring a known criminal.
+}{}
+
+\spell{Chimaera}{Continuous}{Caving/ Seafaring/ Wyldcrafting}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR.}
+
+A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, or a tadpole's gills, and throw that animalistic pattern onto any target.
+The caster must be able to name some creature they are familiar with which has that feature.
+If they name a sea-creature, they must use the Seafaring Skill, and if they name a cave-dwelling creature, they use the Caving Skill, and so on for Wyldcrafting.
+
+Of course, most of these modifications comes with their own problems.
+
+\paragraph{Gaining \gls{dr}}
+implies thick skin, which can really get in the way of fine finger-control.
+The target gains \gls{dr} equal to the spell's level, but loses the same number of points in Dexterity as they struggle to move properly.
+
+\paragraph{Gaining gills}
+is great for breathing underwater, but the target breathes normal air less readily, and heals \glspl{fatigue} at half the normal rate when out of water.
+
+\paragraph{Gaining teeth}
+allows the target to grapple and damage with a single attack.
+See \autopageref{teeth}. 
+
+\paragraph{Gaining whiskers}
+reduces darkness penalties by 1.
+
+\paragraph{Gaining a web-pouch}
+will do very little for the first week.
+Webbing requires a lot of time to develop, but after a week of continuously keeping this spell going, the target can create a thick web from their mouth.
+Anyone becoming entangled in the web must make a Strength + Athletics roll to break free (the \gls{tn} equals 7 plus the spinner's Strength).
+
+\label{hibernation}
+\paragraph{Hibernation}
+requires a full week of gorging all the target can eat.
+After this period, they can sleep for as long as they like, gaining only 1 \gls{fatigue} every 10 days of slumber.
 
 \spelllevel
 
-\spell{Beast Curse}{Continuous}{Wyldcrafting/ Caving}{Transform someone into an animal}
+\spell{Beast Form}{Continuous}{Wyldcrafting/ Caving}{Transform a target into an animal. Int + Wyldcrafting/ Caving.}
 
-The target becomes any animal which the caster has memorized with \textit{Form Ken}.
-The same rules for \textit{Beast Form} apply, so the target must be with `Attribute range' of the animal they can transform into.
+\noindent
+The caster transforms the target into something completely inhuman, raising or depleting their Strength or Speed Bonuses, or adding new features.
 
-The same requirements for \textit{Beast Form} apply here, so each Attribute-point difference between the target the animal will raise the \gls{tn} above 7, and requires a high enough Level + Intelligence.
+Transforming targets always gain other features, and begin to look inhuman.
+Those with the correct range of Strength and the correct Animal Feature transform entirely into some animal.
+See the Animal Features table for the requirements of various animals.
+
+Targets of any Bestial Form spell lose a number of Charisma points equal to the caster's Intelligence Bonus.
+
+\paragraph{Gaining Strength}
+allows the target to reach a total Strength Bonus or penalty equal to the mage's Intelligence Bonus.
+
+Of course, the extra muscle mages the target taller and wider, so targets in large armour will become constrained (or strangled).
+Anyone whose Strength Bonus increases gains a number of \gls{fatigue} equal to double the number of Strength gained.
+\iftoggle{verbose}{
+  Therefore, a target with Strength +1, who increases to Strength +3 will gain 4 \glspl{fatigue} immediately, if they are wearing armour.
+}{}
+
+If the spell does not increase the target's Strength Bonus, it fails.
+
+\paragraph{Gaining Speed}
+works the same way, but without the armour problems -- this kind of muscle redistribute throughout the body easily.
+
+\paragraph{Losing Strength or Speed}
+allows the caster to reduce the target's Strength or Speed Bonus to by a number equal to their Intelligence Bonus.
+\iftoggle{verbose}{%
+  A \gls{miracleworker} with an Intelligence Bonus of +1, casting with the \textit{Potent} Enhancement, could reduce any target's Strength by -2.
+}{}
+
+Anyone wearing armour at the time counts as \textit{Prone}, and must spend the standard \gls{ap} to shuffle out of their armour.
+Those still wearing the armour gain the usual \gls{ap} penalty.
+
+\paragraph{Claws}
+work like teeth, except that any creature with claws cannot handle weapons properly (and gains a -2 penalty).
+
+\paragraph{Quadrupedal forms}
+mean the target cannot stand upright normally, and certainly cannot handle weapons or other tools properly (they gain a -2 penalty).
+However, they can run at double their normal movement rate.
+
+\paragraph{Wings}
+are easy to conjure, if you want those wings to be only for show.
+However, using them requires that the target's Speed Bonus be at least 3 points greater than their Strength Bonus for the wings to allow the target to glide, and at least 5 points greater to allow them to fly.
+\iftoggle{verbose}{%
+  So someone with Strength 0, and Speed 0 would need to use other spells to lower their Strength to -3, or raise their Speed to +3 to glide.
+  For full flight, they would need to lower their Strength to -5, or raise their Speed Bonus to +5.
+}{}
 
 \end{multicols}
 
