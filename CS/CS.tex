@@ -26,10 +26,10 @@
     \vspace{.8cm}
     \begin{tabularx}{\linewidth}{lXlXlX}
       \hiderowcolors
-      Name: & \vlongline & Player: & \vlongline & Code: & \vlongline \\
+      Name: & \hrulefill & Player: & \hrulefill & Code: & \hrulefill \\
       \\
 
-      Concept: & \vlongline & Race: & \vlongline & Culture: & \vlongline \\
+      Concept: & \hrulefill & Race: & \hrulefill & Culture: & \hrulefill \\
     \end{tabularx}
 }
 
@@ -144,13 +144,13 @@ circle label/.style = {
     remember,
   ]
   {name=Derived,column=1,row=5,span=10,rowspan=4}{
-    \begin{tabular}{ccc}
+    \begin{tabularx}{.7\linewidth}{YYY}
       \hiderowcolors
       Attack & Damage & AP \\
       \\
-      \shortline \Repeat{2}{& \shortline} \\
+      \line(1,0){22} \Repeat{2}{& \line(1,0){22}} \\
       \tiny Dexterity + Combat & \tiny Strength & \tiny Speed \\
-    \end{tabular}
+    \end{tabularx}
   
 }
 
