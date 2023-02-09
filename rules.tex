@@ -1,4 +1,5 @@
 \chapter{The Rules}
+\label{coreRules}
 
 \settoggle{bestiarychapter}{true}
 
@@ -357,7 +358,7 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 
   Lavish clothes &  -5 &  3 gp \\
 
-  Travelling clothes &  -3 &  5
+  Travelling clothes &  -3 &  5 \\
 
 \end{boxtable}
 
@@ -393,6 +394,8 @@ Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \
 \begin{boxtable}[XcX]
 
   \textbf{Travel} & & \textbf{Cost} \\\hline
+
+  Alcohol lantern & & {4 \glsentrytext{sp}} \\
 
   Cart & &  1 gp \\
 
@@ -537,54 +540,6 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
   \servicesChart
   \end{figure*}
 }
-
-\subsection{Starting Equipment}
-\label{start_equipment}
-
-\index{Starting Equipment}
-\label{adventuringequipment}
-\index{\Glsentrytext{adventure} equipment}
-
-Characters begin with money, items, and \gls{adventure} equipment.
-Characters each start with one items per Skill level, and each item can be worth 10 \glspl{sp} or less.
-This might include a sword, dagger, a donkey, or anything else worth 10 \gls{sp} or less.
-
-The player can decide to replace any of these items with a generic item called \gls{adventure} equipment, and decide exactly what it is later in the game.
-\Gls{adventure} equipment cannot be given away or acted upon in any way without stipulating exactly what it is.
-
-\Gls{adventure} equipment can include any of the following items:
-
-\begin{multicols}{2}
-\begin{itemize}
-
-\item{Chalk}
-\item{Flour}
-\item{Lock picking set}
-\item{Medical equipment}
-\item{Mirror}
-\item{Rations for a day}
-\index{Food}\index{Rations}
-\item{Rope}
-\item{Tinder box}
-\item{Torch}
-\item{Wine}
-\item{Writing equipment}
-
-\end{itemize}
-
-\end{multicols}
-
-\iftoggle{verbose}{
-  \input{story/9-rations.tex}
-}{}
-
-\subsubsection{Starting Money}
-
-The amount of bare money a character starts out with depends upon their Skills.
-Starting money is $3D6-5$\gls{cp}, which doubles for every level the characters has in a Skill.
-
-For example, a character with Empathy 1 and Tactics 1 might roll a total of 7.
-$7\times2\times2 = 28$, so the character starts out with 28 \glspl{cp}.
 
 \iftoggle{verbose}{
   \input{story/equipment.tex}
