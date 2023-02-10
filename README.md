@@ -5,7 +5,6 @@
 | [Core Book][core download]           | [Wiki][wiki]                  | 
 | [Character Sheet][cs]                | [Email an idea][issuesEmail]  |
 | [Reference Version][reference]       | [Issues Board][board]         |
-| [Character Spreadsheet][spreadsheet] |                               |
 
 BIND is a fantasy tabletop RPG core ruleset.
 
@@ -67,6 +66,5 @@ If you want to get involved, there are a number of ways to contribute:
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
 [cs]: https://gitlab.com/bindrpg/core/-/blob/ods/calc_cs/bind_cs.ods
-[spreadsheet]: https://gitlab.com/bindrpg/core/uploads/a364aeff851c871324e325bbb5741159/bind_cs.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
