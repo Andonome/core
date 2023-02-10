@@ -560,9 +560,11 @@ Weld rafters can track people and prey throughout any standard above-ground terr
 
 \begin{multicols}{2}
 
-\noindent
-Have look overleaf at the example character sheet.
-You can fill out the rest throughout the next few chapters.
+\iftoggle{verbose}{
+  \noindent
+  Have look overleaf at the example character sheet.
+  You can fill out the rest throughout the next few chapters.
+}{}
 
 \subsection{\nameref{gods_codes} \& Background}
 
@@ -637,7 +639,9 @@ See \autoref{stories} for some suggested stories to spend the points on.
 
 \end{multicols}
 
-\settoggle{examplecharacter}{true}
-\input{CS/CS.tex}
-\settoggle{examplecharacter}{false}
+\iftoggle{verbose}{
+  \settoggle{examplecharacter}{true}
+  \input{CS/CS.tex}
+  \settoggle{examplecharacter}{false}
+}{}
 
