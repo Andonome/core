@@ -7,6 +7,25 @@
   \node[text=white, overlay, rectangle callout, callout relative pointer={(#2)}, fill=black,] (randomNode) at (#1) [text width=4cm]{#3};
 }
 
+\newcommand{\racechart}{
+
+\begin{nametable}[clX]{Race}
+  
+  \textbf{Roll} & \textbf{Race} & \textbf{Adjustments} \\\hline
+
+  2-3 & Gnoll & \mbox{+1 Strength, +1 Speed,} \mbox{-1 Intelligence, -2 Charisma} \\
+
+  4-5 & Dwarf & +1 Dexterity, -1 Speed \\
+
+  6-8 & Human & +1 Strength, -1 Wits \\
+
+  9-10 & Elf & +1 Wits, -1 Strength \\
+
+  11-12 & Gnome & \mbox{+1 Intelligence, +1 Dexterity,} \mbox{Strength -2, Speed -1} \\
+
+\end{nametable}
+}
+
 \newcommand\attributeChart{
   \begin{boxtable}[YY]
 
@@ -94,7 +113,7 @@
 \newcommand{\weaponschart}{
   \begin{nametable}[XXXXXX]{Improvised Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & Cost \\\hline
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & \textbf{Cost} \\\hline
 
   \boulder
 
@@ -122,7 +141,7 @@
 
   \begin{nametable}[XXXXXX]{M\^{e}l\'{e}e Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & Cost \\\hline
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & \textbf{Cost} \\\hline
 
   \Dagger
 
@@ -148,7 +167,7 @@
 
   \begin{nametable}[XXXXXX]{Esoteric Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & Cost \\\hline
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & \textbf{Cost} \\\hline
 
   \greatclub
 

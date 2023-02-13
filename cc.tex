@@ -10,29 +10,32 @@
   Over this chapter, you can learn to craft a \gls{pc}.
   Grab $2D6$, roll a random race, and then all six Attributes.
 
-  Once you think you know what kind of character lies on your character sheet, you can spend 50 \glspl{xp} and gain some Skills.
 }{}%
 Characters are defined by \glspl{trait}, and the two main types are \glspl{attribute} and \glspl{skill}.
 Attributes are innate \glspl{trait}, deeply tied to who the \gls{pc} is.
 The Physical \glspl{attribute} used here are \textit{Strength, Dexterity, and Speed}, and the Mental \glspl{attribute} are \textit{Intelligence, Wits, and Charisma}.
 \glspl{skill}, meanwhile, are things the character learns.
 
-Typically, players take actions by rolling two six-sided dice (``$2D6$'') and adding a \gls{trait} and a \gls{skill} to the result.
-If you roll high enough, you succeed.
-Otherwise, you fail.
-
 \iftoggle{verbose}{
-\subsection{Summary}
 
-\begin{enumerate}
+  They vary from around +0 to +3, so characters can usually accrue up to a +6 bonus, plus environmental variables.
 
-\item{Roll to get a random race (`Human', `Dwarf', `Elf', et c.)}
-\item{Roll dice get a random Strength, Dexterity, and the other Attributes.}
-\item{Spend 50 \glspl{xp} on Attributes and Skills. You might also buy \glspl{fp}, Knacks or Magic. (Page \pageref{xp})}
-\item{Grab some adventuring items and weapons. (Page \pageref{start_equipment})}
-\item{Select a god or code to follow, which grants you \glspl{xp}. (Page \pageref{gods_codes})}
+  \subsection{Summary}
 
-\end{enumerate}
+  \begin{enumerate}
+
+  \item
+  Roll to get a random race (`Human', `Dwarf', `Elf', et c.)
+  \item
+  Roll dice get a random Strength, Dexterity, and the other Attributes.
+  \item
+  Spend 50 \glspl{xp} on Attributes and Skills. You might also buy \glspl{fp}, Knacks or Magic. (Page \pageref{xp})
+  \item
+  Grab some adventuring items and weapons. (Page \pageref{start_equipment})
+  \item
+  Select a god or code to follow, which grants you \glspl{xp}. (Page \pageref{gods_codes})
+
+  \end{enumerate}
 }{}
 
 \end{multicols}
@@ -40,24 +43,6 @@ Otherwise, you fail.
 \section{Races}
 \index{Race}
 \label{raceRoll}
-\newcommand{\racechart}{
-
-\begin{nametable}[clX]{Race}
-  
-  Roll & Race & Adjustments \\\hline
-
-  2-3 & Gnoll & \mbox{+1 Strength, +1 Speed,} \mbox{-1 Intelligence, -2 Charisma} \\
-
-  4-5 & Dwarf & +1 Dexterity, -1 Speed \\
-
-  6-8 & Human & +1 Strength, -1 Wits \\
-
-  9-10 & Elf & +1 Wits, -1 Strength \\
-
-  11-12 & Gnome & \mbox{+1 Intelligence, +1 Dexterity,} \mbox{Strength -2, Speed -1} \\
-
-\end{nametable}
-}
 
 \begin{multicols}{2}
 
@@ -77,7 +62,7 @@ Character creation is random by default -- it helps new players get started quic
 
 \iftoggle{verbose}{
 It's been a while since I saw any humans so I'm going to go and look up the race section detailing humans.
-Whichever race you've landed on, go and have a look at chapter \ref{races}.
+Whichever race you've landed on, go and have a look at \autoref{races}.
 You will also find suggestions on why someone of that race might be adventuring.
 
 Either print out a character sheet or make some paper notes as we go.
@@ -142,6 +127,11 @@ Roll $2D6$ six times -- once for each Attribute -- and write down your result on
 
   Finally, add your racial modifiers.
   A human with this result will gain `+1 Strength', for a final modifier of `-1', while a gnome would gain a further `-2' penalty, for a final result of `-4' -- that's not great, but we can adjust this result later with \glspl{xp}.
+
+  These scores represent the potential ranges of the race, so Dexterity -3 represents about the clumsiest person around, while Dexterity +3 represents someone with the best control over their own balance and fine motor-control that one could imagine.
+
+  These ranges vary by race.
+  Humans have an extra +1 Strength Bonus, so their Strength Bonus range is -2 to +4; meanwhile gnomes have a Strength bonus of -5 to +1, with an average of -2, so an average gnome has about the muscle-power of a sickly human, and the strongest of gnomes could only hope to reach the strength of the average human.
 }{}
 
 \iftoggle{verbose}{
@@ -163,7 +153,7 @@ Strength represents a character's muscles -- their ability to endure, to take da
 \subsubsection{Dexterity}
 
 Dexterity represents someone's hand-eye coordination and natural grace.
-It's used to dodge, parry, block and also to aim projectile weapons.
+It's used to attack, parry, block and also to aim projectile weapons.
 \iftoggle{verbose}{%
 It is slightly less visible than the other Body Attributes, but can still be seen as people are moving, especially when movement becomes difficult, as when hopping across challenging and changeable terrain.
 }{}
@@ -173,6 +163,7 @@ It is slightly less visible than the other Body Attributes, but can still be see
 Speed represents a character's movement, how fast they attack, how often they can attack and how quickly they can run.
 \iftoggle{verbose}{%
 Since it allows characters to flee dangerous situations, a group can be held back by its slowest member.
+
 A low Speed Bonus in a weak person might simply represent small muscles, while a low Speed Bonus in someone with an excellent Strength Bonus might mean the character is particularly fat.
 Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
 }{}
@@ -184,7 +175,9 @@ Mind Attributes determine the character's personality and how adept they are wit
 
 \subsubsection{Intelligence}
 
-Intelligent characters understand ideas, remember well and always come prepared. They find their own way home and pick up new languages fluidly. Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
+Intelligent characters understand ideas, remember, well and always come prepared.
+They find their own way home and pick up new languages fluidly.
+Intelligence also covers artistic endeavours and a multitude of craftsmanship, whether composing songs or forging armour, picturing the finished product ahead of time will take brains.
 
 \subsubsection{Wits}
 
@@ -197,13 +190,16 @@ Wits is the only Mind Attribute available to animals.
 
 \subsubsection{Charisma}
 
-Finally, a character's ability to speak with people, make friends, lie convincingly, lead a group or barter for cheaper goods are all covered under Charisma. Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
+Finally, a character's ability to speak with people, make friends, speak convincingly, lead a group or barter for cheaper goods are all covered under Charisma.
+Charisma also covers characters' luck, and therefore some measure of their ability to avoid being damaged, because the gods seem to love a chancer.
 
-\subsection{Player Chosen Characters}
+\begin{boxtext}[title={Player Chosen Characters}]
 \label{playerchosen}
 
 If players prefer, they can design their own characters by simply setting all Attributes to 0, then applying the racial modifiers.
 They can choose to take a single -1 penalty to any Attribute of their choice in return for an additional 5 \gls{xp}.
+
+\end{boxtext}
 
 \iftoggle{aif}{}{
   \iftoggle{verbose}{
@@ -397,7 +393,7 @@ For flat-out sprinting, the Speed Attribute is always preferred, while Strength 
 
 \iftoggle{aif}{
   Many of the longest-surviving \glspl{guard} find this Skill invaluable.
-  Of course, nobody can hope to outrun a chitincrawler, but not being the slowest member of your group sorts most issues.
+  Of course, nobody can hope to outrun a giant arachnid, but not being the slowest member of your group sorts most issues.
 }{}
 
 \iftoggle{verbose}{%
