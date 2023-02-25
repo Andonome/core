@@ -141,12 +141,12 @@ circle label/.style = {
     remember,
   ]
   {name=Derived,column=1,row=5,span=10,rowspan=4}{
-    \begin{tabularx}{.7\linewidth}{YYY}
+    \begin{tabularx}{\linewidth}{YYY}
       \hiderowcolors
       Attack & Damage & AP \\
       \\
-      \line(1,0){22} \Repeat{2}{& \line(1,0){22}} \\
-      \tiny Dexterity + Combat & \tiny Strength & \tiny Speed \\
+      \footnotesize 2D6+ \underline{\hspace{2em}} & \footnotesize \underline{\hspace{1em}} D6+\underline{\hspace{2em}} & \footnotesize \underline{\hspace{2em}} \\
+      \tiny Dexterity + Combat + Weapon Bonus & \tiny Strength + Weapon & \tiny 3 + Speed \\
     \end{tabularx}
   
 }
