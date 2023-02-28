@@ -35,13 +35,14 @@
 
 %----
   \posterbox[
-    adjusted title=Attributes (5 | 10/20/30),
+    adjusted title=Attributes \hint{ 5 | 10 / 20 / 30 },
     remember,
   ]{name=attributes,column=1,row=3,span=10,rowspan=3}{
   \vspace{-.3cm}
+  \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{ll}
     \hiderowcolors
-    & {\tiny Penalties \hspace{30pt} Bonuses} \\
+    & {\tiny Penalty \hspace{65pt} Bonus} \\
     Strength & \attributecircles \\
     Dexterity & \attributecircles \\
     Speed & \attributecircles \\
@@ -123,7 +124,7 @@ circle label/.style = {
     \lineDots
   }
 %----
-  \posterbox[adjusted title=Melee (10/20/40),
+  \posterbox[adjusted title={M\^{e}l\'ee \hint{ 10 / 20 / 40 }},
   remember,
   ]{name=melee,column=11,row=8,span=8,rowspan=1.6}{
     \begin{tabularx}{\linewidth}{Xr@{}}
@@ -153,7 +154,7 @@ circle label/.style = {
 
 %-----
   \posterbox[
-  adjusted title=Skills (5/10/15),
+  adjusted title={Skills \hint{ 5 / 10 / 15}},
   remember,
   ]
   {name=skills,column=11,row=3,span=8,rowspan=5}{
@@ -180,7 +181,7 @@ circle label/.style = {
   }
 
 %-----
-  \posterbox[adjusted title=Spheres (10/15/25)]{name=spheres,column=19,row=8,span=8,rowspan=3}
+  \posterbox[adjusted title=Spheres \hint{ 10 / 15 / 25 }]{name=spheres,column=19,row=8,span=8,rowspan=3}
   {
   \setlength{\parskip}{3mm}
   \vspace{.2cm}
@@ -198,7 +199,7 @@ circle label/.style = {
 
 %----
   \posterbox[
-    adjusted title=Equipment (1 per Skill),
+    adjusted title=Equipment \hint{1 per Skill},
     remember,
   ]
   {name=equipment,
@@ -217,7 +218,7 @@ circle label/.style = {
 %---
 
   \posterbox[
-    adjusted title=Knacks (5/10/15),
+    adjusted title=Knacks \hint{ 5 / 10 / 15 },
     remember,
   ]
   {name=knacks,column=19,row=11,span=8,rowspan=3}{
