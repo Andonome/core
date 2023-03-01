@@ -39,16 +39,15 @@
     remember,
   ]{name=attributes,column=1,row=3,span=10,rowspan=3}{
   \vspace{-.3cm}
-  \renewcommand{\arraystretch}{1.2}
-  \begin{tabular}{ll}
-    \hiderowcolors
-    & {\tiny Penalty \hspace{65pt} Bonus} \\
-    Strength & \attributecircles \\
-    Dexterity & \attributecircles \\
-    Speed & \attributecircles \\
-    Intelligence & \attributecircles \\
-    Wits & \attributecircles \\
-    Charisma & \attributecircles \\
+  \renewcommand{\arraystretch}{1.5}
+  \addtolength{\tabcolsep}{-0.5em}
+  \begin{tabular}{@{}Xlcccccccccccr}
+  \attributeDisplay{Strength}{str}
+  \attributeDisplay{Dexterity}{dex}
+  \attributeDisplay{Speed}{spd}
+  \attributeDisplay{Intelligence}{int}
+  \attributeDisplay{Wits}{wts}
+  \attributeDisplay{Charisma}{cha}
   \end{tabular}}
 %----
 
