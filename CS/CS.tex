@@ -26,10 +26,15 @@
     \vspace{.8cm}
     \begin{tabularx}{\linewidth}{lXlXlX}
       \hiderowcolors
-      Name: & \hrulefill & Player: & \hrulefill & Code: & \hrulefill \\
+      \textbf{Name:} & \iftoggle{examplecharacter}{\name}{\hrulefill} &
+      \textbf{Player:} & \hrulefill &
+      \textbf{Code:} & \iftoggle{examplecharacter}{\code}{\hrulefill}
+      \\
       \\
 
-      Concept: & \hrulefill & Race: & \hrulefill & Culture: & \hrulefill \\
+      \textbf{Concept:} & \iftoggle{examplecharacter}{\concept}{\hrulefill} &
+      \textbf{Race:} & \iftoggle{examplecharacter}{\race}{\hrulefill} &
+      \textbf{Culture:} & \iftoggle{examplecharacter}{\culture}{\hrulefill} \\
     \end{tabularx}
 }
 
@@ -86,6 +91,92 @@ circle label/.style = {
     \footnotesize (10/15/20)
   }
 %----
+  \posterbox[adjusted title={M\^{e}l\'ee \hint{ 10 / 20 / 40 }},
+  remember,
+  ]{name=melee,column=11,row=8,span=8,rowspan=1.6}{
+    \begin{tabularx}{\linewidth}{Xr@{}}
+
+      \hiderowcolors
+      \skill{Combat}
+      \skill{Projectiles}
+    \end{tabularx}
+  }
+
+%----
+
+  \posterbox[
+  adjusted title=Armoury,
+  remember,
+  ]{name=armoury,column=1,row=10,span=18,rowspan=4}{
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabularx}{\linewidth}{p{.3\textwidth}YYYY}
+      \hiderowcolors
+      \setlength{\parskip}{3mm}
+      \textbf{Weapon} & \textbf{Bonus} & \textbf{Damage} & \textbf{AP Cost} & \textbf{Weight} \\
+      
+    \iftoggle{examplecharacter}{
+      \hline
+      \characterWeapons
+      \\
+      \\
+    }{}
+    \end{tabularx}
+
+    \iftoggle{examplecharacter}{}{
+      \lineDots[3]
+    }
+
+    \begin{tabularx}{\linewidth}{p{.3\textwidth}YYY}
+      \hiderowcolors
+      \textbf{Armour} & \textbf{DR} & \textbf{Type} & \textbf{Weight} \\
+      \iftoggle{examplecharacter}{
+        \hline
+        \characterArmour
+      }{}
+    \end{tabularx}
+
+    \iftoggle{examplecharacter}{}{\lineDots}
+  }
+
+%-----
+  \posterbox[
+    blankest,interior engine=path, halign=center,valign=center,
+    opacityback=0,
+    remember,
+  ]
+  {name=Derived,column=1,row=5,span=10,rowspan=4}{
+    \begin{tabularx}{\linewidth}{YYY}
+      \hiderowcolors
+      \textbf{Bonus} & \textbf{Damage} & \textbf{AP} \\
+      \\
+      2D6+%
+      \iftoggle{examplecharacter}% Bonus
+      {%
+      \addtocounter{Combat}{\value{dex}}%
+      \addtocounter{Combat}{\value{weaponBonus}}%
+      \arabic{Combat}
+      }%
+      {\underline{\hspace{2em}}} &
+      \iftoggle{examplecharacter}% Damage
+      {
+        \addtocounter{damage}{\value{str}}
+        \calculatedamage{damage}}%
+      {
+        \underline{\hspace{1em}} D6+\underline{\hspace{1.5em}}
+      } &
+      \iftoggle{examplecharacter}%
+      {%
+        \addtocounter{spd}{3}%
+        \arabic{spd}%
+      }%
+      {\underline{\hspace{2em}}}
+      \\
+      \tiny Dexterity + Combat + Weapon Bonus & \tiny Strength + Weapon & \tiny 3 + Speed \\
+    \end{tabularx}
+  
+}
+
+%----
 
     \setcounter{track}{7}
     \posterbox[
@@ -99,61 +190,10 @@ circle label/.style = {
       }
       }
 
-%----
-
-  \posterbox[
-  adjusted title=Armoury,
-  remember,
-  ]{name=armoury,column=1,row=10,span=18,rowspan=4}{
-    \renewcommand{\arraystretch}{1.5}
-    \begin{tabularx}{\linewidth}{p{.3\textwidth}XXXX}
-      \hiderowcolors
-      \setlength{\parskip}{3mm}
-      Weapon & Bonus & Damage & AP Cost & Weight \\
-      
-    \end{tabularx}  
-
-    \lineDots[3]
-
-    \begin{tabularx}{\linewidth}{p{.3\textwidth}XXX}
-      \hiderowcolors
-      Armour & DR & Type & Weight \\
-    \end{tabularx}
-
-    \lineDots
-  }
-%----
-  \posterbox[adjusted title={M\^{e}l\'ee \hint{ 10 / 20 / 40 }},
-  remember,
-  ]{name=melee,column=11,row=8,span=8,rowspan=1.6}{
-    \begin{tabularx}{\linewidth}{Xr@{}}
-
-      \hiderowcolors
-      \skill{Combat}
-      \skill{Projectiles}
-    \end{tabularx}
-  }
 
 %-----
   \posterbox[
-    blankest,interior engine=path, halign=center,valign=center,
-    opacityback=0,
-    remember,
-  ]
-  {name=Derived,column=1,row=5,span=10,rowspan=4}{
-    \begin{tabularx}{\linewidth}{YYY}
-      \hiderowcolors
-      Attack & Damage & AP \\
-      \\
-      \footnotesize 2D6+ \underline{\hspace{2em}} & \footnotesize \underline{\hspace{1em}} D6+\underline{\hspace{2em}} & \footnotesize \underline{\hspace{2em}} \\
-      \tiny Dexterity + Combat + Weapon Bonus & \tiny Strength + Weapon & \tiny 3 + Speed \\
-    \end{tabularx}
-  
-}
-
-%-----
-  \posterbox[
-  adjusted title={Skills \hint{ 5 / 10 / 15}},
+  adjusted title={Skills \hint{ 5 / 10 / 15 }},
   remember,
   ]
   {name=skills,column=11,row=3,span=8,rowspan=5}{
@@ -174,7 +214,6 @@ circle label/.style = {
       \skill{Tactics}
       \skill{Vigilance}
       \skill{Wyldcrafting}
-      \skill{}
 
     \end{tabularx}
   }
@@ -185,14 +224,25 @@ circle label/.style = {
   \setlength{\parskip}{3mm}
   \vspace{.2cm}
 
-  \dotfill \Repeat{5}{\ding{109}}
+  \iftoggle{examplecharacter}{
+    \sphereOne
 
-  \dotfill \Repeat{5}{\ding{109}}
+    \sphereTwo
 
-  \dotfill \Repeat{5}{\ding{109}}
+    \sphereSkill{}{0}
 
-  \dotfill \Repeat{5}{\ding{109}}
+    \sphereSkill{}{0}
 
+  }{
+    \sphereSkill{}{0}
+
+    \sphereSkill{}{0}
+
+    \sphereSkill{}{0}
+
+    \sphereSkill{}{0}
+
+  }
 
   }
 
@@ -208,9 +258,9 @@ circle label/.style = {
     rowspan=3.5,
   }{
 
-  \lineDots[5]
+  \iftoggle{examplecharacter}{\characterEquipment\vspace{13em}}{\lineDots[5]\vspace{8mm}}
 
-  \vspace{8mm}
+  
   CP \weeline SP\weeline GP\weeline \hspace{3cm} Total XP \weeline Spent XP \weeline
   }
 
@@ -224,13 +274,18 @@ circle label/.style = {
 
   \setlength{\parskip}{0mm}
 
-    \lineDots[4]
+    \iftoggle{examplecharacter}{
+      \knackOne
 
+      \knackTwo
+    }{
+      \lineDots[4]
+    }
   }
 
 %------
 
-\iftoggle{examplecharacter}{
+\iftoggle{bestiarychapter}{
   \commentary{[xshift=10,yshift=-7em]TCBPOSTER@title.north}{-2em,2em}{{\huge\ref{sumCCrace}}: Write down your name and roll a random race (\autopageref{raceRoll}).}
 
   \commentary{[xshift=5em,yshift=-3em]TCBPOSTER@attributes.south west}{0em,2em}{{\huge\ref{sumCCatt}:} Roll to determine each of your Attributes, then apply the racial modifier (\autopageref{randomAttributes}).}
