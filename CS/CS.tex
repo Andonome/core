@@ -87,8 +87,9 @@ circle label/.style = {
     \end{tikzpicture}
 
     \vspace{1em}
-    FP Base: \rule{2em}{0.5pt}
-    \footnotesize (10/15/20)
+    \textbf{\Glsentrytext{fp} Base:}
+    \iftoggle{examplecharacter}{\arabic{fp}}{\rule{2em}{0.5pt}}
+    \hint{ 10/15/20 }
   }
 %----
   \posterbox[adjusted title={M\^{e}l\'ee \hint{ 10 / 20 / 40 }},
