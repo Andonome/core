@@ -979,30 +979,46 @@ See \autoref{stories} for some suggested stories to spend the points on.
 \end{multicols}
 
 \iftoggle{verbose}{
-  \setcounter{str}{0}
+  \setcounter{str}{1}
   \setcounter{dex}{0}
   \setcounter{spd}{0}
   \setcounter{int}{0}
-  \setcounter{wts}{0}
-  \setcounter{cha}{0}
-  \setcounter{Academics}{0}
+  \setcounter{wts}{-1}
+  \setcounter{cha}{1}
+
+  \renewcommand\concept{Knightly Poet}
+  \renewcommand\race{Human}
+  \renewcommand\culture{Quennome}
+  \renewcommand\name{Sean}
+  \renewcommand\code{Experience}
+
+  \setcounter{Academics}{1}
   \setcounter{Athletics}{0}
   \setcounter{Caving}{0}
   \setcounter{Crafts}{0}
   \setcounter{Deceit}{0}
-  \setcounter{Empathy}{0}
+  \setcounter{Empathy}{1}
   \setcounter{Medicine}{0}
-  \setcounter{Performance}{0}
+  \setcounter{Performance}{1}
   \setcounter{Larceny}{0}
   \setcounter{Seafaring}{0}
   \setcounter{Stealth}{0}
   \setcounter{Tactics}{0}
   \setcounter{Vigilance}{0}
   \setcounter{Wyldcrafting}{0}
-  \setcounter{Combat}{0}
+  \setcounter{Combat}{2}
   \setcounter{Projectiles}{0}
+
+  \setcounter{fp}{5}
+
+  \renewcommand\characterWeapons{\longsword}
+  \renewcommand\characterArmour{Chain & 4 & P & 1}
+  \renewcommand\characterEquipment{\Gls{adventure} Equipment \Repeat{3}{{\Large\sqn} }}
+
+  \settoggle{examplecharacter}{true}
   \settoggle{bestiarychapter}{true}
   \input{CS/CS.tex}
   \settoggle{bestiarychapter}{false}
+  \settoggle{examplecharacter}{false}
 }{}
 
