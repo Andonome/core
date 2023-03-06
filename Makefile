@@ -6,7 +6,7 @@ svg-inkscape: config/bind.sty
 	pdflatex -shell-escape ${filename}.tex
 config/bind.sty:
 	git submodule update --init
-${filename}.ind: svg-inkscape ${filename}.idx $(wildcard *.tex)
+${filename}.ind: svg-inkscape ${filename}.idx $(wildcard *.tex) $(wildcard CS/*.tex)
 	pdflatex ${filename}.tex
 	makeindex ${filename}.idx
 ${filename}.glg: svg-inkscape
