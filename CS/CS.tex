@@ -262,7 +262,7 @@ circle label/.style = {
   \iftoggle{examplecharacter}{\characterEquipment\vspace{13em}}{\lineDots[5]\vspace{8mm}}
 
   
-  CP \weeline SP\weeline GP\weeline \hspace{3cm} Total XP \weeline Spent XP \weeline
+  CP \iftoggle{bestiarychapter}{\arabic{gold} }{\weeline} SP\weeline GP\weeline \hspace{3cm} Total XP \weeline Spent XP \weeline
   }
 
 %---
