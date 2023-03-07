@@ -19,6 +19,11 @@
    }
 ]
 
+% reset damage so it calculates properly
+\setcounter{damage}{0}
+\setcounter{weaponBonus}{0}
+\setcounter{knacks}{0}
+
 %----
   \posterbox[
     remember, blankest, halign=center,valign=center,
@@ -150,11 +155,12 @@ circle label/.style = {
       \hiderowcolors
       \textbf{Bonus} & \textbf{Damage} & \textbf{AP} \\
       \\
-      2D6+%
+      2D6%
       \iftoggle{examplecharacter}% Bonus
       {%
       \addtocounter{Combat}{\value{dex}}%
       \addtocounter{Combat}{\value{weaponBonus}}%
+      \ifnum\value{Combat}>-1+\else-\fi%
       \arabic{Combat}
       }%
       {\underline{\hspace{2em}}} &
@@ -259,7 +265,7 @@ circle label/.style = {
     rowspan=3.5,
   }{
 
-  \iftoggle{examplecharacter}{\characterEquipment\vspace{13em}}{\lineDots[5]\vspace{8mm}}
+  \iftoggle{examplecharacter}{\characterEquipment\vspace{14em}}{\lineDots[5]\vspace{8mm}}
 
   
   CP \iftoggle{bestiarychapter}{\arabic{gold} }{\weeline} SP\weeline GP\weeline \hspace{3cm} Total XP \weeline Spent XP \weeline
