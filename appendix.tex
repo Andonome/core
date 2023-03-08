@@ -97,7 +97,11 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \weaponschart
 
-\section*{Complications \& Manoeuvres}
+% This sideTab toggle is evil. Let it too close to an index, and it'll force your index to spit out cryptic and misleading error messages.
+
+\settoggle{sideTab}{false}
+
+\subsection{Complications \& Manoeuvres}
 
 \printcontents[Manoeuvres]{l}{2}{\setcounter{tocdepth}{4}}
 
@@ -110,4 +114,11 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 \indexprologue{The following spell summaries are simplified for reference, and do not take into account spells cast at a higher level than normal.}
 \printindex[spells]
 
+\printglossary[type=symbols]
+
+\printglossary[type=\acronymtype,style=mcolindex, title=Abbreviations, nonumberlist]
+
+\printglossary[style=mcolindex]
+
+\printindex
 
