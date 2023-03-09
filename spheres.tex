@@ -876,7 +876,11 @@ When cast over a full area, all are effected, and movement becomes extremely dif
 \begin{multicols}{2}
 
 \iftoggle{verbose}{
-  \widePic{Roch_Hercka/illusion_trogdor}
+  \widePic{Roch_Hercka/flashing_light}
+}{}
+
+\iftoggle{verbose}{
+  \widePic[t]{Roch_Hercka/illusion_trogdor}
 }{}
 
 \noindent
@@ -940,11 +944,6 @@ When cast as a \textit{Wide} spell, a full group can lose the ability to communi
 \spell{Light}{Continuous}{Academics}{Blind enemies and light the way}
 \label{light}
 
-\iftoggle{verbose}{
-
-  \widePic{Roch_Hercka/flashing_light}
-}{}
-
 \noindent
 The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
 This light can blind an opponents in the darkness by casting it directly in their face.
@@ -980,6 +979,9 @@ The spell only targets the immediate sight of someone, so the target still casts
 
 \begin{multicols}{2}
 
+\iftoggle{verbose}{
+  \sidepic[40]{Roch_Hercka/conjuration_left}{\label{roch:invocation}}
+}{}
 \noindent
 This is the first choice of spheres for any battle-mage.
 It is designed specifically to destroy targets with balls of lightning and fire.
@@ -1004,9 +1006,6 @@ Larger fires require a \textit{Wide Extinguish} spell.
 \label{fireball}
 \spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}
 
-\iftoggle{verbose}{
-  \sidepic[40]{Roch_Hercka/conjuration_left}{\label{roch:invocation}}
-}{}
 The mage throws out a ball of flaming, crackling ball of energy, which strikes and burns the target.
 The Damage is 3 Damage, plus the spell's Level, plus the caster's Intelligence Bonus.
 

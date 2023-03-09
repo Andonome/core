@@ -447,94 +447,7 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 They can, however, drag items with up to a \gls{weightrating} of up to 10 points above their Strength Attribute (rough surfaces can increase the requirement substantially).
 
 \iftoggle{verbose}{
-  \pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
-}{} 
-
-\iftoggle{verbose}{
-  \input{story/encumbrance.tex}
-}{}
-
-\newcommand{\servicesChart}{
-
-\begin{tcolorbox}[tabularx={XX},title=Services,bottom=10pt,left=3pt,right=3pt,code={\rowcolors{2}{}{gray!10}}]
-
-  \textbf{Apothacary} & 1 \gls{sp} / level of Intelligence + Medicine \\\hline
-
-  Poison cure & 1 \gls{sp} \\
-
-  Poison & 4 \gls{sp} \\\hline
-
-  \textbf{Fence} & \\\hline
-
-  Common item & 20\% of the item's total value \\
-
-  Identifiable valuables & 40\% of the item's total value \\
-
-  Magical item & Varies considerably, 50\% chance the item is refused \\\hline
-
-  \textbf{Boat Trip} & \\\hline
-
-  Popular trading route & $2D6-2$ \gls{sp} (reroll each day) \\
-
-  Standard stream & $3D6$ \gls{cp} \\\hline
-
-  \textbf{Guide} &  150 \gls{cp}/ day \\\hline
-
-  \iftoggle{aif}{
-    Inner villages & 50 \gls{cp} \\
-    Near the \gls{edge} & 5 \gls{sp} \\
-    Beyond the \gls{edge} & 15 \gls{sp} \\
-  }{
-    Dangerous area & 1 \gls{sp} \\
-
-    Uncharted area & 50 \gls{cp} \\
-  }
-  \hline
-  \textbf{Hospitality} &  \\\hline
-
-  Public House & 0 \gls{cp} \\
-
-  Meal & 5 \gls{cp} \\
-
-  Barn with breakfast & 10 \gls{cp} \\
-
-  City Inn & 40 \gls{cp} \\
-
-  Fancy Room & 1 \gls{sp} \\\hline
-
-  \textbf{Minstrel} &  15 \gls{cp}/ performance \\\hline
-
-  Large audience & 500 \gls{cp} \\
-
-  Massive audience & 1 \gls{gp} \\
-
-  Creating a new song & 2 \gls{sp} \\
-
-  Illegal song & 5 \gls{sp} \\\hline
-
-  \textbf{Sellsword} & 10 \gls{sp}/ day \\\hline
-
-  Opponent & \gls{xp}$^3$ \gls{sp} \\
-
-  Illegal Murder & 10 \gls{sp} \\\hline
-
-  \textbf{Tracker} &  5 \glsentrytext{sp} / day \\\hline
-
-  \iftoggle{aif}{
-    Inner villages & 1 \gls{sp} \\
-    Near the \gls{edge} & 10 \gls{sp} \\
-    Beyond the \gls{edge} & 20\gls{sp} \\
-  }{
-    Dangerous area & 2 \gls{sp} \\
-
-    Uncharted area & 4 \gls{sp} \\
-  }\hline
-
-\end{tcolorbox}
-}
-
-\iftoggle{verbose}{
-  \begin{figure*}[t!]
+  \begin{figure*}[b!]
   \servicesChart
   \end{figure*}
 }{
@@ -543,6 +456,14 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
   \servicesChart
   \end{figure*}
 }
+
+\iftoggle{verbose}{
+  \pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
+}{} 
+
+\iftoggle{verbose}{
+  \input{story/encumbrance.tex}
+}{}
 
 \iftoggle{verbose}{
   \input{story/equipment.tex}
@@ -570,6 +491,8 @@ The Failure Margin should indicate just how bad the henchman is, so the \gls{gm}
 \subsection{Cultures \& Exchange Rates}
 \index{Exchange Rates}
 
+Different cultures have different exchange rates -- the elven versions of standard equipment are always artistically engraved and in high demand; the elves also value the coinage and materials of outsiders very little, so they will not part with their items for human or dwarvish gold easily.
+As a result, their -- and other -- culture's items are more expensive than human items.
 \sidebox{
   \begin{rollchart}
     Race & Multiplier \\\hline
@@ -584,8 +507,6 @@ The Failure Margin should indicate just how bad the henchman is, so the \gls{gm}
   \end{rollchart}
 }
 
-Different cultures have different exchange rates -- the elven versions of standard equipment are always artistically engraved and in high demand; the elves also value the coinage and materials of outsiders very little, so they will not part with their items for human or dwarvish gold easily.
-As a result, their -- and other -- culture's items are more expensive than human items.
 
 The costs of the items here are based on the most common race -- humans.
 Other races have a multiplier effect based on how expensive their equipment is.

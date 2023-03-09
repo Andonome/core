@@ -588,6 +588,17 @@ The \gls{tn} to stop the bleeding is always 6 plus the number of \glspl{fatigue}
 \paragraph{Starvation} is another special case.
 \glspl{fatigue} inflicted from starvation are marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
+\subsection{Healing Fatigue}
+\index{Resting}
+
+When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{fatigue} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
+\footnote{The day is divided into four parts. See page \pageref{time}.}
+
+\iftoggle{verbose}{
+  In most cases, \glspl{fatigue} will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
+  However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
+}{}
+
 \iftoggle{verbose}{%
   \fatiguechart
 }{
@@ -596,20 +607,6 @@ The \gls{tn} to stop the bleeding is always 6 plus the number of \glspl{fatigue}
   \fatiguechart
   \end{figure*}
 }
-
-\subsection{Healing Fatigue}
-\index{Resting}
-
-When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{fatigue} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
-\footnote{The day is divided into four parts. See page \pageref{time}.}
-
-\iftoggle{verbose}{
-
-  In most cases, \glspl{fatigue} will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
-  However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
-
-
-}{}
 
 \end{multicols}
 
