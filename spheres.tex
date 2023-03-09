@@ -86,7 +86,8 @@ The caster has various options for how the spell grows the plants:
 They might grow into the form of a chair, or even a house if the spell is large enough.
 Anything is plausible if a plant could be carved into the right space.
 
-\spell{Freezing Touch}{Continuous}{Caving/ Wyldcrafting}{Turn water to ice or freeze someone's body}
+\spell{Freezing Touch}{Continuous}{Caving/ Wyldcrafting}{Turn water to ice or freeze someone's body, inflicting Lv + Int Fatigue Points}
+\label{spellFreeze}
 
 The mage can freeze solid any body of water, or even damage people by cooling their body.
 
@@ -105,7 +106,8 @@ If the caster can extend the range, then the spell can travel any distance, alth
   Elves often use a \textit{Colourful Plantform} to sculpt plants into unnatural forms, or to create temporary statues of other elves.
 }{}
 
-\spell{Wind Blast}{Instant}{Seafaring}{Push enemies back, lowering their \glspl{ap}}
+\spell{Wind Blast}{Instant}{Seafaring}{Push enemies back, lowering their \glspl{ap} by $Lv + Int - Str$}
+\label{spellWind}
 
 Wind blows from the mage, pushing the target back and distracting them.
 \iftoggle{verbose}{
@@ -377,7 +379,8 @@ Once they receive damage without having further \glspl{mp} to sacrifice, they wa
 
 A \textit{Wide Dream Walk} spell pulls targets into a single dream space.
 
-\spell{Imbue Soul}{Continuous}{Empathy}{An object gains a small soul, which can be useful for fooling the undead}
+\spell{Imbue Soul}{Continuous}{Empathy}{An object gains a tiny soul, which undead chase as if it were food}
+\label{spellImbueSoul}
 
 The caster pours a little life-essence into an object, animal, or anything else.
 When used on animals, the creature slowly becomes smarter, though this can take some days to have any real effect.
@@ -387,11 +390,13 @@ Any undead in the area will follow the target, just as if it were a person.
 With mindless undead, this works without failure, though intelligent undead can plainly understand that the item is not a person if they can see it properly.
 
 \spell{Fear}{Continuous}{Deceit}{The target suffers a morale penalty of 1 plus caster's Int}
+\label{spellFear}
 
 \Glspl{npc} hit by this spell suffer a Morale penalty equal to the spell's level plus the caster's Intelligence Bonus.
 \Glspl{pc} hit by this spell are not allowed to know their current \gls{fp} total -- the \gls{gm} tracks it instead.
 
 \spell{Reading the Ripples}{Instant}{Vigilance}{Find out the target's Mind Attributes and Code}
+\label{spellReading}
 
 The enchanter can read any target's Mind Attributes, see which Code or God they follow (if any) and sees all of their Knacks.\footnote{See page \pageref{gods_codes}.}
 This will not grant any information about what the target is thinking, merely how capable that mind is and its priorities.
@@ -399,6 +404,7 @@ This will not grant any information about what the target is thinking, merely ho
 Unwilling targets resist this spell with their Wits + Deceit.
 
 \spell{Sending}{Continuous}{Performance}{Send a psychic message to someone}
+\label{spellSending}
 
 The enchanter telepathically sends a short message to the target within normal range.
 If cast as a \gls{standingspell}, the caster can telepathically send messages for as long as they are within range of the target.
@@ -409,6 +415,7 @@ This communication is one-way only.
 \spelllevel
 
 \spell{Confusion}{Continuous}{Deceit}{Remove a target's actions for the round, then give an \gls{ap} penalty of 2 + Int}
+\label{spellConfusion}
 
 The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
 They have trouble articulating exactly what's wrong, but will remain confused for as long as the spell continues.
@@ -435,6 +442,7 @@ Failure indicates that the target has forgotten the previous scene entirely, inc
 }{}
 
 \spell{Focus}{Continuous}{Empathy}{Force a target to repeat whatever they're doing}
+\label{spellFocus}
 
 The target holds the last action performed and repeats it, again and again.
 If they were attacking, they will continue attacking until there are no targets left, and then go and look for more.
@@ -453,7 +461,8 @@ Targets can stop once their original action has become obviously impossible or i
 Targets enchanted to continue dancing, sewing, or anything else, can make a second roll to break free of the enchantment at the cost of 2 \glspl{ap}.
 If the roll succeeds, the spell has been broken, but even if the roll fails, they can still take any regular action before returning to their task.
 
-\spell{Oath}{Continuous}{Academics}{Force a target to fulfill any promise}
+\spell{Oath}{Continuous}{Academics}{Force a target to fulfill any promise they just made}
+\label{spellOath}
 
 The target repeats and emphasises an oath while the caster completes the spell.
 For as long as the spell endures, the target cannot break their oath.
@@ -584,6 +593,7 @@ Once the spell is cast, the priest knows the current \gls{fp} of the target.
 When cast on oneself, this spell grants total immunity to the Enchantment spell, \textit{Fear}.
 
 \spell{Lending Hand}{Continuous}{Empathy}{Bless a target with +1 to any skill so long as you have a higher Skill level than the target}
+\label{spellLendingHand}
 
 The priest blesses a target with a +1 Bonus to any Skill, so long as the priest has a higher level in that Skill than the target.
 
@@ -594,6 +604,7 @@ The priest blesses a target with a +1 Bonus to any Skill, so long as the priest 
 \spelllevel
 
 \spell{Auguary}{Instant}{Tactics}{The \glsentrytext{gm} tells you about an upcoming encounter}
+\label{spellAuguary}
 
 The character requests guidance about the future and receives a cryptic message from their deity, from dreams, or simply the shape of nearby clouds.
 
@@ -613,12 +624,14 @@ Nobody with this power ever says ``you cannot change your fate''.  Changing your
 
 \index{Fate Points}
 \spell{Blessing}{Instant}{Empathy}{Target regains $1D6 + Int$ \glspl{fp}}
+\label{spellBlessing}
 
 The priest blesses the target with the favour of the gods. The target `heals' or regenerates $1D6$ \gls{fp} plus the priest's Intelligence Bonus. This cannot take the target above their maximum \gls{fp} score.
 
 \spelllevel
 
 \spell{Fortune}{Continuous}{Empathy}{Add +1 to any Skill}
+\label{spellFortune}
 
 The priest blesses a target, who then receives a +1 to any Skill.
 This does not stack with any other Fate spells.
@@ -708,6 +721,7 @@ The mage can shape pure energy, pushing and pulling at the world with the power 
 \spelllevel
 
 \spell{Cage}{Continuous}{Combat}{Levitate a target, so they cannot move. \gls{tn} 7 plus the target's \gls{weightrating}}
+\label{spellCage}
 
 The mage levitates and traps a target, forcing them to remain where they are, or move as the caster desires.
 While powerful, the spell is particularly challenging to cast, as it has a \gls{tn} equal to 7 plus the target's \gls{weightrating}.%
@@ -724,6 +738,7 @@ The spell has an effective Speed Bonus equal to its level plus the caster's Inte
 As usual, the target cannot be moved outside of the normal spell range.
 
 \spell{Levitation}{Continuous}{Craft}{Levitate anything with effective Strength of $1 + Int$}
+\label{spellLevitation}
 
 The mage focuses on lifting something into the air with pure magical energy.
 The spell cannot lift moving, wriggling matter, such as live people or animals.
@@ -739,7 +754,7 @@ If cast as a \textit{Wide} spell on a single target, each additional square affe
 }{}
 
 \spell{Lock}{Continuous}{Craft}{Bind a door shut}
-\label{lockSpell}
+\label{spellLock}
 
 The mage can erect a magical force field, similar to mage armour, over a doorway to make it more difficult to break through.
 The \gls{tn} to break through the door increases by an amount equal to double the level of the Force sphere being employed plus the mage's Intelligence Bonus.
@@ -749,6 +764,7 @@ Mages can also create barriers of pure force to block passageways without a door
 The blockade has a number of \glspl{SP} equal to triple the level of Force sphere being employed, plus the mage's Intelligence Bonus and must be battered through with repeated blows to get through the portal.
 
 \spell{Shunt}{Instant}{Combat}{Push someone back, as per \textit{Wind}}
+\label{spellShunt}
 
 The caster pushes over objects, or pushes back people.
 This spell functions exactly like \textit{Wind Blast}, page \pageref{windblast}.
@@ -768,12 +784,14 @@ For the purposes of these attacks, the caster counts as having a Strength Bonus 
 For example, someone employing the third level of the Force sphere with Intelligence +3 would count as having +6 Strength, and would inflict $2D6+2$ Damage with unarmed attacks.
 
 \spell{Telekinetic Retreat}{Continuous}{Athletics}{Run away fast, with a bonus of $\arabic{spelllevel} + Int$}
+\label{spellRetreat}
 
 Mages can add their mental ability to move things to aid their movement.
 Any attempts to move, whether fleeing or just flitting around a room, gain a bonus equal to the level of the Force sphere being employed plus their Intelligence Bonus.
 The mage can cast the spell on others and it will automatically push them onwards in whichever direction they are running.
 
 \spell{Clairvoyance}{Continuous}{Vigilance}{Sense the world from afar}
+\label{spellClairvoyance}
 
 The mage can `feel' by delicately touching things with mental movement rather than actually seeing them. They can see in complete darkness whether underwater or on land.
 
