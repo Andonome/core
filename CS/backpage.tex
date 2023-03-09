@@ -4,7 +4,13 @@
 
 {\Huge Story Points~\Repeat{5}{\sqn}}
 
-\lineDots[32]
+\iftoggle{examplecharacter}{
+  \charSpellList
+  \lineDots[22]
+  \renewcommand\charSpellList{}
+}{
+  \lineDots[32]
+}
 
 \pagebreak
 
