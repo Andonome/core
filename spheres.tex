@@ -896,7 +896,7 @@ Turning someone into a person uses the Empathy Skill, while making a door look l
 
 \spelllevel
 
-\spell{Cloak}{Continuous}{Varies}{Create shadows}
+\spell{Cloak}{Continuous}{Varies}{Make a shadow to cloak something in blackness}
 \label{cloakSpell}
 
 By wrapping the target in shadows, they gain a bonus to hiding equal to the spell's Level plus the caster's Intelligence Bonus.
@@ -918,8 +918,8 @@ As per \textit{Cloak}, the \textit{Colourful} enhancement can paint colour over 
 As always, Sentient spells take the caster's Code, so the illusions will not act like particular people every well.
 }{}
 
-\label{manaTrick}
 \spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}
+\label{manaTrick}
 
 The mage places a spell on any item or person, so it seems to have more of fewer \glspl{mp} than it really has.
 This circumvents spells such as `Detect Mana'.\footnote{See page \pageref{detectmagic}.}
@@ -927,12 +927,14 @@ This circumvents spells such as `Detect Mana'.\footnote{See page \pageref{detect
 The caster rolls against a \gls{tn} 7, and if successful, the caster can alter the apparent mana in an item by an amount equal to the spell's Level plus their Intelligence Bonus.
 
 \spell{Muffle}{Continuous}{Deceit}{Remove a target's reflection, shadow, and echoes}
+\label{spellMuffle}
 
 This spell cancels the secondary sensory effects from anyone.
 They can still speak, but their voice does not echo around caverns.
 Anyone can see them, but they cast no reflection, or shadow.
 
 \spell{Silence}{Continuous}{Stealth}{Stop all noise getting to a target}
+\label{spellSilence}
 
 The target hears nothing, and produces no sound.
 \iftoggle{verbose}{%
@@ -941,8 +943,9 @@ When cast as a \textit{Wide} spell, a full group can lose the ability to communi
 
 \spelllevel
 
-\spell{Light}{Continuous}{Academics}{Blind enemies and light the way}
+\spell{Light}{Continuous}{Academics}{Create a shining light}
 \label{light}
+\label{spellLight}
 
 \noindent
 The mage casts a dim light, about the strength of a torch, which floats around a single point (but never very steadily).
@@ -999,12 +1002,13 @@ Blast-radius spells such as a \textit{Wide Fireball} can inflict a Vitals Shot o
 \spelllevel
 
 \spell{Extinguish}{Instant}{Wyldcrafting}{Put out any light source}
+\label{spellExtinguish}
 
 The mage focuses on any source of fire, and extinguishes it.
 Larger fires require a \textit{Wide Extinguish} spell.
 
-\label{fireball}
 \spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}
+\label{fireball}
 
 The mage throws out a ball of flaming, crackling ball of energy, which strikes and burns the target.
 The Damage is 3 Damage, plus the spell's Level, plus the caster's Intelligence Bonus.
@@ -1169,7 +1173,6 @@ As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence
 
 \noindent
 
-\noindent
 Polymorph spells alter someone's physiology, pulling them across a different branch in the great tree of life.
 The initial spells focus on surface qualities, adding skin-deep, or rudimentary alterations.
 Later spells fundamentally affect a target's body, adding or reducing muscle, or granting grand, new, abilities.
@@ -1199,6 +1202,7 @@ The undead are completely immune to the Polymorph sphere.
 \spelllevel
 
 \spell{Race Swap}{Continuous}{Empathy}{The target appears to change race, but no stats are affected}
+\label{spellSwap}
 
 \iftoggle{verbose}{
   \sidepic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
@@ -1215,6 +1219,7 @@ See \autopageref{raceRoll}.}
 }{}
 
 \spell{Chimaera}{Continuous}{Caving/ Seafaring/ Wyldcrafting}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR}
+\label{spellChimaera}
 
 A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, or a tadpole's gills, and throw that animalistic pattern onto any target.
 The caster must be able to name some creature they are familiar with which has that feature.
