@@ -104,24 +104,24 @@
 }
 
 \newcommand\XPchart{
-  \begin{nametable}[XYYYYYY,float*=b]{\Glsentrytext{xp} Chart}
-    \textbf{Level} &  \textbf{Attributes}  &  \textbf{Skill}  & \textbf{Combat/ \mbox{Projectiles}}  & \textbf{\Glsentrytext{fp} Base} &  \textbf{Knacks} & \textbf{Sphere}  \\
+  \begin{nametable}[XYYYYYY,float*=b]{\Gls{xp} Chart}
+    \textbf{Level} &  \textbf{Attributes}  &  \textbf{Skill}  & \textbf{Combat/ \mbox{Projectiles}}  & \textbf{\Gls{fp} Base} &  \textbf{Knacks} & \textbf{Sphere}  \\
     \hline
-    <1                &   5        &         &                      &         0 (5 \glsentrytext{fp})  &      & \\
-    1st               &   10       &   5     &        10            &        10 (10 \glsentrytext{fp}) &   5  &    10  \\
-    2nd               &   20       &   10    &        20            &        15 (15 \glsentrytext{fp}) &  10  &    15  \\
-    3rd               &   30       &   15    &        40            &        25 (15 \glsentrytext{fp}) &  15  &    25  \\
-    4th               &   50       &         &                      &        45 (15 \glsentrytext{fp}) &  20  &    45  \\
-    5th               &            &         &                      &        85 (15 \glsentrytext{fp}) &  25  &    85  \\
+    <1                &   5        &         &                      &         0 (5 \glspl{fp})  &      & \\
+    1st               &   10       &   5     &        10            &        10 (10 \glspl{fp}) &   5  &    10  \\
+    2nd               &   20       &   10    &        20            &        15 (15 \glspl{fp}) &  10  &    15  \\
+    3rd               &   30       &   15    &        40            &        25 (15 \glspl{fp}) &  15  &    25  \\
+    4th               &   50       &         &                      &        45 (15 \glspl{fp}) &  20  &    45  \\
+    5th               &            &         &                      &        85 (15 \glspl{fp}) &  25  &    85  \\
 
   \end{nametable}
 }
 
 \newcommand{\initiativechart}{
 
-  \begin{nametable}[Xc]{\Glsentrytext{ap} Costs}
+  \begin{nametable}[Xc]{\Gls{ap} Costs}
 
-  \textbf{Standard Actions} & \textbf{\Glsentrytext{ap}} \\
+  \textbf{Standard Actions} & \textbf{\Gls{ap}} \\
   \hline
 
   Attacking      & by weapon \\
@@ -167,7 +167,7 @@
 \newcommand{\weaponschart}{
   \begin{nametable}[XXXXXX]{Improvised Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & \textbf{Cost} \\\hline
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Gls{weightrating}} & \textbf{Cost} \\\hline
 
   \boulder
 
@@ -195,7 +195,7 @@
 
   \begin{nametable}[XXXXXX]{M\^{e}l\'{e}e Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & \textbf{Cost} \\\hline
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Gls{weightrating}} & \textbf{Cost} \\\hline
 
   \Dagger
 
@@ -221,7 +221,7 @@
 
   \begin{nametable}[XXXXXX]{Esoteric Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Glsentrytext{weightrating}} & \textbf{Cost} \\\hline
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Gls{weightrating}} & \textbf{Cost} \\\hline
 
   \greatclub
 
@@ -252,7 +252,7 @@
 
   \begin{boxtable}[ccccX]
 
-  \textbf{Armour} & \textbf{\glsentrytext{dr}} & \textbf{Weight} & \textbf{Noise} & \textbf{Price} \\\hline
+  \textbf{Armour} & \textbf{\Gls{dr}} & \textbf{Weight} & \textbf{Noise} & \textbf{Price} \\\hline
 
   \textbf{Partial} & & & & \\\hline
 
@@ -382,7 +382,7 @@
 \newcommand{\projectilesChart}{
 \begin{boxtable}[XXXXXl]
 
-  \textbf{Projectile} & \textbf{\Glsentrytext{ap}} & \textbf{Damage} & \textbf{Weight}  & \textbf{Reload Time} & \textbf{Cost} \\\hline
+  \textbf{Projectile} & \textbf{\Gls{ap}} & \textbf{Damage} & \textbf{Weight}  & \textbf{Reload Time} & \textbf{Cost} \\\hline
 
   Crossbow &  1 & $2D6$ & 1 & 5 - Str \glspl{round}  & {20 sp} \\
 
@@ -398,7 +398,7 @@
 \newcommand{\FPRegen}{
 
   \begin{boxtable}
-    Base \glsentrytext{fp} & Regeneration \\\hline
+    Base \glspl{fp} & Regeneration \\\hline
 
     5 & 2 per scene \\
 
@@ -486,7 +486,7 @@
   \textbf{Guide} &  150 \gls{cp}/ day \\\hline
 
   \iftoggle{aif}{
-    Inner villages & 50 \gls{cp} \\
+      Inner villages & 50 \gls{cp} \\
     Near the \gls{edge} & 5 \gls{sp} \\
     Beyond the \gls{edge} & 15 \gls{sp} \\
   }{
@@ -523,7 +523,7 @@
 
   Illegal Murder & 10 \gls{sp} \\\hline
 
-  \textbf{Tracker} &  5 \glsentrytext{sp} / day \\\hline
+  \textbf{Tracker} &  5 \glspl{sp} / day \\\hline
 
   \iftoggle{aif}{
     Inner villages & 1 \gls{sp} \\
