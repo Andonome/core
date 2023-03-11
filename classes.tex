@@ -1,6 +1,7 @@
 \chapter{Classes}
 
 \settoggle{bestiarychapter}{true}
+\settoggle{allyCharacter}{true}
 
 \label{class}
 \index{Classes}
@@ -35,7 +36,6 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 
 \npc{\E}{50 \glsentrytext{xp} Alchemist}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -45,7 +45,7 @@ They worship \glsentrytext{knowledgegod}.\footnote{See page \pageref{gods_codes}
 {0}% DR
 {0}% COMBAT
 {Academics~1,
-\Path{Alchemy}{\invocation~2, \illusion~1}}% SKILLS
+\Path{\invocation~2, \illusion~1}}% SKILLS
 {\Dagger, 1 x \glsentrytext{adventure} equipment}% EQUIPMENT
 {}
 
@@ -69,7 +69,6 @@ The Craft and Empathy skills means the illusionist is best at making illusions o
 
 \npc{\E}{150 \glsentrytext{xp} Illusionist}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -79,7 +78,7 @@ The Craft and Empathy skills means the illusionist is best at making illusions o
 {0}% DR
 {0}% COMBAT
 {Academics~2, Empathy~1, Crafts~1
-\Path{Alchemy}{\force~1, \invocation~2, \illusion~3}}% SKILLS
+\Path{\force~1, \invocation~2, \illusion~3}}% SKILLS
 {\Dagger, \completeleather, 2 x \glsentrytext{adventuring}}% EQUIPMENT
 {}
 
@@ -102,7 +101,6 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 
 \npc{\E}{50 \glsentrytext{xp} Druid}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -112,7 +110,7 @@ Their starting equipment includes partial leather armour, camping equipment, a s
 {0}% DR
 {1}% COMBAT
 {Academics~1, Athletics~1, Caving 1, Wyldcrafting 1
-\Path{Divinity}{\aldaron~1, \polymorph~1}}% SKILLS
+\Path{\aldaron~1, \polymorph~1}}% SKILLS
 {\spear, \partialleather, dagger}% EQUIPMENT
 {}
 
@@ -129,7 +127,6 @@ Water can be turned to slime or webbing, webs could be turned to water, and the 
 \npc{\E}{150 \glsentrytext{xp} Arch Druid}
 \index{Druid}
 
-\settoggle{examplecharacter}{true}
 \person{1}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -139,7 +136,7 @@ Water can be turned to slime or webbing, webs could be turned to water, and the 
 {0}% DR
 {1}% COMBAT
 {Academics~1, Empathy~1, Wyldcrafting~1
-\Path{Divinity (\gls{naturegod})}{\aldaron~2, \conjuration~1, \polymorph~3}}% SKILLS
+\Path{\aldaron~2, \conjuration~1, \polymorph~3}}% SKILLS
 {\spear, \partialleather, dagger, 1 x \glsentrytext{adventure} equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
@@ -156,7 +153,6 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 
 \npc{\E}{50 \glsentrytext{xp} Priest of \Glsentrytext{justicegod}}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -166,7 +162,7 @@ After gaining \gls{xp}, some adventuring clerics focus upon martial abilities, w
 {0}% DR
 {0}% COMBAT
 {Academics~1, Empathy~1, Medicine~1
-\Path{Divinity}{\fate~2}}% SKILLS
+\Path{\fate~2}}% SKILLS
 {\quarterstaff, \partialleather}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
@@ -189,7 +185,6 @@ Those fighting could be forced to continue until they die from a sword or drop d
 
 \npc{\E}{150 \glsentrytext{xp} Cleric of \Glsentrytext{justicegod}}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -199,8 +194,8 @@ Those fighting could be forced to continue until they die from a sword or drop d
 {0}% DR
 {1}% COMBAT
 {Academics~1, Empathy~1, Deceit~1, Medicine~1
-\knacks{\combatcaster}
-\Path{Divinity}{\enchantment~3, \fate~2}}% SKILLS
+\knacks{\divineCaster}
+\Path{\enchantment~3, \fate~2}}% SKILLS
 {\quarterstaff, \partialchain, medical equipment, 2 x adventuring equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
@@ -217,7 +212,6 @@ They follow the Code of Acquisition.
 
 \npc{\E}{50 \glsentrytext{xp} Rogue}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {1}% DEXTERITY
 {0}% SPEED
@@ -248,11 +242,12 @@ Alternatively, rogues may go the route of a singing socialite, and even learn to
 {1}% COMBAT
 {Academics~1, Empathy~1, Deceit~2, Performance~2, Vigilance~1
 \knacks{\perfectsneakattack}
-\Path{Song}{\fate~1, \enchantment~2}
+\Path{\fate~1, \enchantment~2}
 }% SKILLS
 {\longsword, \partialleather, dagger, lantern, camping equipment, writing equipment, 2 x \glsentrytext{adventure} equipment.
 }% EQUIPMENT
 {\addtocounter{fp}{5}}
+\settoggle{examplecharacter}{false}
 
 \subsection{Warrior}
 \index{Warrior}
@@ -266,7 +261,6 @@ They follow the goddess \gls{wargod}.
 
 \npc{\E}{50 \glsentrytext{xp} Soldier}
 
-\settoggle{examplecharacter}{true}
 \person{0}% STRENGTH
 {0}% DEXTERITY
 {0}% SPEED
@@ -285,7 +279,6 @@ Those focussed narrowly on advancing in martial abilities can become deadly.
 
 \npc{\E}{150 \glsentrytext{xp} Warrior}
 
-\settoggle{examplecharacter}{true}
 \person{2}% STRENGTH
 {2}% DEXTERITY
 {1}% SPEED
@@ -305,7 +298,6 @@ After progressing, particularly pious fighters can gain a level or two in Fate, 
 
 \npc{\E}{150 \glsentrytext{xp} Paladin}
 
-\settoggle{examplecharacter}{true}
 \person{2}% STRENGTH
 {1}% DEXTERITY
 {1}% SPEED
@@ -315,7 +307,7 @@ After progressing, particularly pious fighters can gain a level or two in Fate, 
 {0}% DR
 {2}% COMBAT
 {Academics~1, Deceit~1, Tactics~1
-\Path{Divinity}{\fate~2}\knacks{\adrenalinesurge, \charge}}% SKILLS
+\Path{\fate~2}\knacks{\adrenalinesurge, \charge}}% SKILLS
 {\greatsword, \partialchain, \bucklar, 2 x \glsentrytext{adventure} equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
@@ -327,7 +319,6 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 
 \npc{\E}{150 \glsentrytext{xp} Ranger}
 
-\settoggle{examplecharacter}{true}
 \person{2}% STRENGTH
 {1}% DEXTERITY
 {0}% SPEED
@@ -337,7 +328,7 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 {0}% DR
 {2}% COMBAT
 {Projectiles~1, Wyldcrafting~1, Seafaring 1, Tactics~1
-\Path{Blood}{\aldaron~2}\knacks{\mightydraw, \charge}}% SKILLS
+\Path{\aldaron~2}\knacks{\mightydraw, \charge}}% SKILLS
 {\longsword, \partialchain, \bucklar, bow, 2 x \glsentrytext{adventure} equipment}% EQUIPMENT
 {\addtocounter{fp}{5}}
 
@@ -346,4 +337,4 @@ Whether this comes through prayer or inborn abilities which develop over time, a
 \end{multicols}
 
 \settoggle{bestiarychapter}{false}
-
+\settoggle{allyCharacter}{false}
