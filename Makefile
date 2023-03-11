@@ -1,32 +1,37 @@
-filename=main
-branch := $(shell git rev-parse --abbrev-ref HEAD)
-output: ${filename}.pdf
-${filename}.pdf: ${filename}.ind ${filename}.glg
-svg-inkscape: config/bind.sty
-	pdflatex -shell-escape ${filename}.tex
+output: BIND.pdf
+
+BIND.pdf: main.aux
+	mv main.pdf BIND.pdf
+main.pdf: main.aux
+	pdflatex main.tex
+main.aux: svg-inkscape/logo_svg-tex.pdf main.glo
+	makeglossaries main
+	pdflatex main.tex
+main.glo: svg-inkscape/logo_svg-tex.pdf
+svg-inkscape/logo_svg-tex.pdf: config/bind.sty images/
+	pdflatex -shell-escape main.tex
+	pdflatex main.tex
+	pdflatex main.tex
+
 config/bind.sty:
 	git submodule update --init
-${filename}.ind: svg-inkscape ${filename}.idx $(wildcard *.tex) $(wildcard CS/*.tex)
-	pdflatex ${filename}.tex
-	makeindex ${filename}.idx
-${filename}.glg: svg-inkscape
-	pdflatex ${filename}.tex
-	makeglossaries ${filename}
-	pdflatex ${filename}.tex
-resources: resources.pdf ${filename}.pdf
-resources.pdf: $(wildcard CS/*.tex)
+
+ref: BIND_ref.pdf
+BIND_ref.pdf: $(wildcard *tex) story BIND_ref.aux
+	makeglossaries BIND_ref
+	pdflatex BIND_ref.tex
+BIND_ref.aux: svg-inkscape
+	pdflatex BIND_ref.tex
+	pdflatex BIND_ref.tex
+svg-inkscape:
+	pdflatex -shell-escape BIND_ref.tex
+	pdflatex BIND_ref.tex
+
+resources: resources.pdf
+resources.pdf: main.aux $(wildcard CS/*tex)
 	pdflatex CS/resources.tex
-	pdflatex CS/resources.tex
-svg-ref:
-	pdflatex  -shell-escape main_ref.tex
-	pdflatex  main_ref.tex
-	makeglossaries main_ref
-	makeindex main_ref.idx
-	pdflatex  main_ref.tex
-ref: svg-ref
-	pdflatex main_ref.tex
-creds:
-	cd images && pandoc artists.md -o ../art.pdf
-all: ref ${filename}.pdf resources.pdf creds
+
+all: BIND.pdf resources ref
+
 clean:
-	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf .ref svg-inkscape
+	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape CS/*aux

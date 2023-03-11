@@ -5,16 +5,12 @@ compile_pdf:
     - apt-get install -y inkscape make git-lfs
     - git submodule update --init
     - git submodule foreach git lfs pull
-    - make
-    - make resources
-    - make ref
-    - mv main.pdf bind.pdf
-    - mv main_ref.pdf bind_ref.pdf
+    - make all
   only:
     - master
     - run
   artifacts:
     paths:
-      - bind.pdf
+      - BIND.pdf
       - resources.pdf
-      - bind_ref.pdf
+      - BIND_ref.pdf
