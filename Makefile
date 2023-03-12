@@ -4,7 +4,7 @@ BIND.pdf: main.aux
 	mv main.pdf BIND.pdf
 main.pdf: main.aux
 	pdflatex main.tex
-main.aux: svg-inkscape/logo_svg-tex.pdf main.glo
+main.aux: svg-inkscape/logo_svg-tex.pdf main.glo $(wildcard *tex)
 	makeglossaries main
 	pdflatex main.tex
 main.glo: svg-inkscape/logo_svg-tex.pdf
