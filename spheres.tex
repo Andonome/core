@@ -809,24 +809,45 @@ This spell cannot be cast on others -- the target is what is being felt.
 
 \spelllevel
 
-\spell{Dancing Swords}{Continuous}{Combat}{Levitate a weapon with effective Physical Attributes equal to 2}
+\spell{Dancing Swords}{Continuous}{Combat}{Levitate a weapon with effective Physical Attributes equal to Int. Spend standard weapon \glspl{ap} to attack, plus the caster's Combat Bonus}
 
 The force mage can make a weapon levitate with the power of their mind. It can float nearby to defend them and even float off to stab at enemies who will be hard pushed to counterattack the wielder when they're standing some distance away.
 
 The caster rolls Intelligence + Combat to levitate the weapon at a \gls{tn} equal to 7 plus the weapon's Weight.
-The weapon has effective Strength, Dexterity, and Speed Bonuses equal to the level of the spell being employed minus 1, so using the third level of the Force sphere with a longsword would mean the sword could attack as if it were a person who dealt $1D6+3$ damage, with 3 \glspl{ap} per round.
+The weapon has effective Strength, Dexterity, and Speed Bonuses equal to the caster's Intelligence Bonus.
+The caster's Combat Bonus and weapon's Attack Bonus adds to any attack rolls it makes%
+\iftoggle{verbose}{, so caster's with Intelligence +2 and Combat +1, casting a \textit{Potent Dancing Swords} could animate a longsword to fight with Strength +2, Dexterity +2, and Speed +2, giving it a total of +5 to attack, and dealing $2D6$ Damage.
 
-To use the weapon to attack or defend, the mage must focus, so casting spells in the same round would incur the usual penalties.
+\Glspl{miracleworker} typically cast this spell before combat, and leave it as a \gls{standingspell}.
+}{.}
 
-The spell's effective Strength Bonus must be sufficient to lift the weapon without encumbrance, so a mage casting the second level of the Force sphere would have an effective Strength Bonus of 1 and could wield a longsword.
-To wield an axe a mage would have to use the fourth level of the Force sphere, gaining an effective Strength Bonus of +3.
+Using the spell to attack or defend requires just the same \glspl{ap} as using the weapon%
+\iftoggle{verbose}{, so a longsword would require 2, while a dagger would require 1.}{.}
+
+The spell's effective Strength Bonus must be sufficient to lift the weapon without encumbrance%
+\iftoggle{verbose}{so the caster requires an effective Intelligence Bonus of +1 to use a longsword, and +3 to use a greatsword.
 
 While the weapon is next to the caster it can defend the caster using its own stats by using an action to Guard.
+}{.}.
 
-If someone wants to grab one of the floating weapons they must roll with their Attack Bonus just as when making a grab against any character.
-A successful grapple means the weapon is too heavy to lift and the spell ends.
+If the weapon attacks someone and misses, the enemy has nobody to damage, \emph{however}, if their Attack Bonus (ignoring their weapon) is good enough to grab the weapon, they can do so.
 
-A \textit{Sentient Dancing Swords} spell can act alone, without the mage focussing and using their own \glspl{ap}.
+\begin{exampletext}
+
+  If an animated weapon attacks someone with Dexterity 0, Combat +2 and a longsword (with a +2 Bonus), the \gls{tn} to hit them would be 11.
+  However, without the weapon they would have only \gls{tn} 9, so if the weapon hit less than \gls{tn} 9 then the enemy could grab the longsword.
+
+  From the players' point of view, if a levitating longsword were about to hit them with an Attack Bonus of +4, then they would avoid the attack at \gls{tn} 11.
+  However, if they could hit \gls{tn} 11 with only their Dexterity + Combat (and now weapon bonus), then they could grab the weapon.
+
+\end{exampletext}
+
+Once the weapon has been grabbed, the caster loses all control over it!
+
+A \textit{Sentient Dancing Swords} spell can act alone, without the mage focussing or using their own \glspl{ap}.
+The sword can use its own \glspl{ap} to attack, but does not have any Combat score.
+
+A \textit{Wide, Sentient, Dancing Swords} spell might animate many swords, but only has one consciousness, so it must spend \glspl{ap} for each attack -- it does not gain a separate pool of \glspl{ap} for each weapon.
 
 \spell{Mage Armour}{Continuous}{Academics}{Create a magical barrier with $6 + Int$ \glsentrylongpl{SP}}
 
