@@ -1,3 +1,6 @@
 [submodule "config"]
 	path = config
 	url = https://gitlab.com/bindrpg/config.git
+[submodule "cs"]
+	path = cs
+	url = https://gitlab.com/bindrpg/cs.git
