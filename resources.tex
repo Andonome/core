@@ -2,30 +2,28 @@
 
 \usepackage{config/bind}
 
+\settoggle{verbose}{true}
 \externalReferent{core}
 \externalReferent{aif}
 
-\settoggle{verbose}{true}
-
 \input{glossary.tex}
-
-\input{charts.tex}
 
 \begin{document}
 
 \pagestyle{empty}
 
-\input{CS/reset_cs.tex}
+\input{cs/commands.tex}
+\input{cs/reset_cs.tex}
 
-\input{CS/overview.tex}
+\input{overview.tex}
 
 \shipout\null
 
 \Repeat{9}{
-  \input{CS/CS.tex}
-  \input{CS/backpage.tex}
+  \input{cs/CS.tex}
+  \input{cs/backpage.tex}
 }
 
-\input{CS/GS.tex}
+\input{cs/GS.tex}
 
 \end{document}

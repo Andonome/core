@@ -29,7 +29,7 @@ svg-inkscape:
 
 resources: resources.pdf
 resources.pdf: main.aux $(wildcard CS/*tex)
-	pdflatex CS/resources.tex
+	pdflatex resources.tex
 
 all: BIND.pdf resources ref
 
