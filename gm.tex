@@ -216,7 +216,16 @@ Removing the monster slaying focus should initially demand players spend \glspl{
   \textbf{4} & \Hu\ Villager Funeral & \Hu\ $1D6+3$ Paper Guild Nomads selling books & Storm & \A\ Bear & \A\ $1D6+2$ Wolves & \A\ \iftoggle{aif}{Mouthdigger}{Cockatrice} & \A\ Basilisk & \A\ Basilisk \\
   \textbf{3} & \Hu\ $1D6+2$ Villagers selling wool & \Hu\ $1D6+3$ \iftoggle{aif}{\glspl{guard}}{Soldiers} & \Hu\ $1D6$ \iftoggle{aif}{\gls{guard} Scouts}{Adventurers} & \Hu\ $1D6$ \iftoggle{aif}{Refugees from destroyed village}{Henchmen leaving a dead adventuring party} & \Hu\ $1D6+4$ Brigands & \Nl\ $1D6+2$ Gnolls & \Hu\ $1D6+4$ Brigands & \El\ $1D6$ Wanderers \\
   \hline
-  \textbf{2} & \Hu\ $2D6$ Pilgrims & \Hu\ Priest of \gls{naturegod} & Breeze & \Hu $1D6+6$ Bandits & \A\ \iftoggle{aif}{Mouthdigger}{Owlbear} & \A\ $1D6$ Griffins & \A Boar & \A\ $1D6$ Griffins \\
+  \textbf{2}
+    & \Hu\ $2D6$ Pilgrims
+    & \Hu\ Priest of \gls{naturegod}
+    & Storm
+    & \Hu $1D6+6$ Bandits
+    & \A\ \iftoggle{aif}{Mouthdigger}{Owlbear}
+    & \A\ $1D6$ Griffins
+    & \A Boar
+    & \A\ $1D6$ Griffins
+    \\
   \hline
   \textbf{1} & \Hu\ Travelling Bard & \Hu\ $3D6$ Paper Guild Nomads & \Dw\ $3D6$ \iftoggle{aif}{Sword Guild Nomads}{Soldiers} & \A\ Griffin & \Hu\ $1D6+6$ Bandits & \A\ $1D6$ Griffins & \A\ Deer & \A\ Aurochs \\
   \hline
@@ -411,6 +420,43 @@ When on the road, almost everyone is travelling in the opposite direction to the
 Therefore, groups often cannot band together for safety very often, unless one is travelling exceptionally fast or slow.
 However, if two groups meet at night, they will generally expect to spend the night together.
 There is safety in numbers, and everyone likes to hear new stories by the fireside.
+
+\subsection{The Weather}
+
+Weather provides an adverse condition which can affect everyone equally -- both \glspl{pc} and \glspl{npc}.
+
+Broadly speaking, unfavourable weather brings Fatigue, especially to those without the right clothing.
+Freezing snow and hailstorms can add complications to any \gls{adventure}, obscuring vision, inflicting \glspl{fatigue} every section of the day,
+\footnote{See \autopageref{daytimes} for the day's quadrants.}
+and even limiting movement.
+
+Each weather condition should be given some rating for the \glspl{fatigue} and other conditions.
+
+Weather-appropriate clothing generally reduces the \glspl{fatigue} suffered by 2.%
+\footnote{Characters can purchase this clothing -- see \autopageref{warmClothes}.}
+
+For example:
+
+\begin{itemize}
+
+  \item
+  Snowstorm (3):
+  Characters suffer 3 \glspl{fatigue} every quarter of the day (or 2 with warm clothing), and suffer a -4 penalty to spotting anything in the distance.
+
+  Every day, travelling distances are reduced by 3 miles (but inflict the same amount of \glspl{fatigue} as ever).
+  Therefore, a troupe marching 6 miles would normally suffer 6 \glspl{fatigue}, but in this case they would only manage to walk 3 miles.
+  Of course the snowstorm add an additional 3 \glspl{fatigue}, making 9 in total.
+  \item
+  Extreme Heatwave (4):
+  Characters suffer 4 \glspl{fatigue} in the morning and afternoon, or just 2 with cooler clothes.
+  Anyone wearing armour is \emph{not} wearing weather-appropriate clothing.
+
+  Of course, this means someone standing around from morning to evening would suffer serious sunburn, doled out as 8 \glspl{fatigue}.
+  \item
+  Hailstorm (2):
+  Everyone suffers 2 \glspl{fatigue} without weather-appropriate clothing, lasts only one scene.
+
+\end{itemize}
 
 \end{multicols}
 
