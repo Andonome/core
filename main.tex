@@ -13,9 +13,15 @@ Subject={TTRPG},
 Keywords={TTRPG,RPG,roleplaying}
 }}
 
-\settoggle{verbose}{true}
+\ifStrSame{\jobname}{BIND_ref}%
+  {\settoggle{verbose}{false}}
+  {\settoggle{verbose}{true}}
 
 \externalReferent{aif}
+
+\iftoggle{verbose}{}{
+  \geometry{a5paper}
+}
 
 \input{glossary.tex}
 \iftoggle{aif}{
@@ -34,7 +40,9 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \frontmatter
 
-\include{intro.tex}
+\iftoggle{verbose}{
+  \include{intro.tex}
+}{}
 
 \iftoggle{aif}{
   \section*{Monsters \& Malthus}
@@ -61,16 +69,20 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{spheres.tex}
 
-\include{races.tex}
+\iftoggle{verbose}{
+  \include{races.tex}
 
-\include{gm.tex}
+  \include{gm.tex}
+}{}
 
 \input{appendix.tex}
 
-\include{cs/reset_cs.tex}
+\iftoggle{verbose}{
+  \include{cs/reset_cs.tex}
 
-\include{cs/GS.tex}
+  \include{cs/GS.tex}
 
-\include{cs/CS.tex}
+  \include{cs/CS.tex}
+}{}
 
 \end{document}

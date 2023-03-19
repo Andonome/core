@@ -12,20 +12,19 @@ svg-inkscape/logo_svg-tex.pdf: config/bind.sty images/
 	pdflatex -shell-escape main.tex
 	pdflatex main.tex
 	pdflatex main.tex
-
 config/bind.sty:
 	git submodule update --init
 
 ref: BIND_ref.pdf
-BIND_ref.pdf: $(wildcard *tex) story BIND_ref.aux
+BIND_ref.pdf: $(wildcard *tex) BIND_ref.aux
 	makeglossaries BIND_ref
-	pdflatex BIND_ref.tex
+	pdflatex -jobname BIND_ref main.tex
 BIND_ref.aux: svg-inkscape
-	pdflatex BIND_ref.tex
-	pdflatex BIND_ref.tex
+	pdflatex -jobname BIND_ref main.tex
+	pdflatex -jobname BIND_ref main.tex
 svg-inkscape:
-	pdflatex -shell-escape BIND_ref.tex
-	pdflatex BIND_ref.tex
+	pdflatex -shell-escape -jobname BIND_ref main.tex
+	pdflatex -jobname BIND_ref main.tex
 
 resources: resources.pdf
 resources.pdf: main.aux $(wildcard CS/*tex)
