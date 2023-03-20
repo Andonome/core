@@ -27,10 +27,10 @@ svg-inkscape:
 	pdflatex -jobname BIND_ref main.tex
 
 resources: resources.pdf
-resources.pdf: main.aux $(wildcard CS/*tex)
+resources.pdf: main.aux cs
 	pdflatex resources.tex
 
 all: BIND.pdf resources ref
 
 clean:
-	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape CS/*aux
+	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape cs/*aux
