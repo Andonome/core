@@ -1,5 +1,6 @@
 \chapter{Spheres}
 
+\phantom{\gls{lv}}
 \iftoggle{verbose}{
 
 \begin{multicols}{2}
@@ -152,7 +153,7 @@ The result depends upon the caster's Intelligence Bonus.
 
 \begin{boxtable}[ccL]
 
-  Margin & Ageing & Effects \\\hline
+  Intelligence & Ageing & Effects \\\hline
 
   0 & 1 Year & Food Spoils. \\
 
@@ -404,7 +405,7 @@ This communication is one-way only.
 
 \spelllevel
 
-\spell{Confusion}{Continuous}{Deceit}{Remove a target's actions for the round, then give an \gls{ap} penalty of 2 + Int}
+\spell{Confusion}{Continuous}{Deceit}{Remove a target's actions for the round, then give an \gls{ap} equal to \glsentryshort{lv}}
 \label{spellConfusion}
 
 The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
@@ -416,7 +417,7 @@ The spell is sometimes initiated by eye contact, sometimes by song -- any number
 }{}
 
 A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Academics.
-On success, target gains an \gls{ap} penalty equal to the spell's level plus the caster's Intelligence Bonus.
+On success, target gains an \gls{ap} penalty equal to the spell's level.
 
 The target suffers the same penalty to their Mental Attributes Attributes, which can seriously impact any \gls{miracleworker}'s total \glspl{mp}, and casting ability.
 
@@ -430,6 +431,11 @@ Failure indicates that the target has forgotten the previous scene entirely, inc
   When this spell hits someone out of combat, perhaps during a conversation, targets tend to flap their mouths open and shut like a confused fish as they try to recapture their train of thought.
 
 }{}
+
+A \textit{Sentient Confusion} spell can become exceedingly dangerous, as the spell attempts to reprogram the victim's thoughts directly.
+Any time the character moves to act, they must make another resisted roll against the spell.
+Failure means that the spell can redirect the action.
+Attacks suddenly target allies, when they flee they do so in the wrong direction, and if they try to explain their bad manners to someone their words turn to the topic of Gnomish socks.
 
 \spell{Focus}{Continuous}{Empathy}{Force a target to repeat whatever they're doing}
 \label{spellFocus}
@@ -849,13 +855,13 @@ The barrier can shatter if attacked but can take a serious beating before breaki
 Each barrier counts as a having a number of \glsentryfullpl{SP}, which are destroyed by Damage.
 The target gains a number of \glspl{SP} equal to the spell's level plus the caster's Intelligence Bonus.
 
-Those protected by the shield cannot attack others as the shield stops all attacks.%
-\footnote{Or more specifically, the person can attack, but all Damage will go to the \glspl{SP} first.}
-However, casters are able to focus enough to use missile weapons and spells by allowing small breaches in the shield's wall.
-\footnote{Allowing a target to use a missile weapon requires complete focus, and a Wits + Empathy roll, and costs 1 \glspl{ap}.}
+Casters can instinctively move with the shield, allowing them to attack and cast spells, but as usual, any time they attack, that target (and no other) may deal them damage.
 
-The shields cannot `split' into bubbles.
-When cast as a \textit{Wide} spell, it can cover a group of people, but the shield will cover all of them or none.
+Those with a Force shield cast on them cannot attack anyone as the shield stops all attacks, both from within, and without.
+However, casters are able to consciously adjust the shield cast on others to allow them to make an attack.
+They need only spend 1 \gls{ap}.
+
+When cast as a \textit{Wide} spell, it can cover a group of people, but the shield will cover all of them or none -- it has no `sections' inside.
 
 \begin{exampletext}
   For example, Annabel the alchemist has the Force sphere at level 3 and Intelligence +2.
@@ -909,33 +915,37 @@ Turning someone into a person uses the Empathy Skill, while making a door look l
 
 \spelllevel
 
-\spell{Cloak}{Continuous}{Varies}{Make a shadow to cloak something in blackness}
+\spell{Cloak}{Continuous}{Varies}{Make a shadow to cloak something in blackness, add + \glsentryshort{lv} to a roll}
 \label{cloakSpell}
 
-By wrapping the target in shadows, they gain a bonus to hiding equal to the spell's Level plus the caster's Intelligence Bonus.
+By wrapping the target in shadows, they gain a bonus to hiding equal to the caster's Intelligence Bonus.
 This won't do much good when someone walks close to an inky patch of darkness, and can be actively harmful when a patch of blackness is wandering across a Sunny street.
 
-Casting this as a \textit{Colourful Cloak} allows the shadow to take on real colours, so the caster can make something look like just about anything else.
-When only trying to hide, the Stealth Skill is used, but if an illusion is cast to make something look like another, the Skill depends on what it should look like.
+Casting \textit{Cloak} to hide a target in the darkness uses the Stealth Skill, while casting one to make oneself appear like some terrifying monster would use Deceit.
+
+In all cases, a successful spell adds a bonus to other rolls equal to the spell's level.
+
+Casting a \textit{Colourful Cloak} allows the shadow to take on detailed colours, so the caster can make something look like just about anything else.
+They could make a person look like another by adding Empathy, or make someone appear to be a forest animala with Wyldcrafting.
 
 \spell{Aparition}{Continuous}{Varies}{Create a shadow-puppet in the air}
 \label{aparitionSpell}
 
 The caster creates a shadow, with depth and cohesion.
 Typically, these are used to fool people on dark nights that some person or creature is there.
-A \textit{Wide Aparition} might appear as a giant monster, or a \textit{Massive Aparition} could even suggest a full house has appeared.
+A \textit{Wide Aparition} might appear as a giant monster made of darkness, and a \textit{Massive Aparition} could even suggest a full house has appeared.
 As per \textit{Cloak}, the \textit{Colourful} enhancement can paint colour over the spell, making it look like a real thing.
 
 \textit{Sentient Aparition} spells can move and think independently, and even act like a real person, to a limited degree.
 \iftoggle{verbose}{%
-As always, Sentient spells take the caster's Code, so the illusions will not act like particular people every well.
+  As always, Sentient spells take the caster's Code, so the illusions will not act like particular people every well.
 }{}
 
 \spell{Mana Trick}{Continuous}{Deceit}{Make the target seem like it has more or less mana than it does}
 \label{manaTrick}
 
 The mage places a spell on any item or person, so it seems to have more of fewer \glspl{mp} than it really has.
-This circumvents spells such as `Detect Mana'.\footnote{See page \pageref{detectmagic}.}
+This fools spells such as `Detect Mana'.\footnote{See page \pageref{detectmagic}.}
 
 The caster rolls against a \gls{tn} 7, and if successful, the caster can alter the apparent mana in an item by an amount equal to the spell's Level plus their Intelligence Bonus.
 
@@ -946,13 +956,18 @@ This spell cancels the secondary sensory effects from anyone.
 They can still speak, but their voice does not echo around caverns.
 Anyone can see them, but they cast no reflection, or shadow.
 
+When moving through an area with a lot of echoes or reflections, this would normally increase the \gls{tn} to sneak about.
+This spell reduces those penalties by a number equal to the spell's level, plus the cater's Intelligence Bonus.
+
 \spell{Silence}{Continuous}{Stealth}{Stop all noise getting to a target}
 \label{spellSilence}
 
 The target hears nothing, and produces no sound.
 \iftoggle{verbose}{%
-When cast as a \textit{Wide} spell, a full group can lose the ability to communicate.
+  When cast as a \textit{Wide} spell, a full group can lose the ability to communicate.
 }{}
+
+When cast on an area, the area remains silent, but the people occupying the area can still speak freely.
 
 \spelllevel
 
@@ -971,16 +986,20 @@ becomes blinded for a number of rounds equal to the spell's level minus their Wi
 Undead are terrified of this light.
 Those affected by the spell make a Wits + Aggression roll, \gls{tn} 7 plus the caster's Intelligence + Academics.
 
-\spell{Tendril}{Continuous}{Varies}{The caster summons a solid shadow}
+\spell{Tendril}{Continuous}{Varies}{The caster summons a solid shadow, with physical stats equal to \glsentryshort{lv} + Int}
 
 The shadow summoned gain some limited solidity.
 Despite the name, the shadow doesn't have to form a grabbing arm -- it can take any form, just like the other illusion shadow-tricks.
-They each have Strength, Dexterity and Speed of -5 (and therefore 1 \gls{hp}).
-The mage can add a number of points to these Traits  equal to the spell's Level plus the mage's IntelligenceThe mage can add a number of points to these Traits  equal to the Spell's Bonus.
+They each have Strength, Dexterity and Speed of -5 plus the Spell Level +the caster's Intelligence Bonus.
 
 The tendrils require focus to move, unless made \textit{Sentient}, otherwise they stand like smoke on a windless day.
 
 When made \textit{Colourful}, the tendrils form exceptionally convincing illusions.
+
+\iftoggle{verbose}{%
+  For example, if \pgls{miracleworker} with Intelligence +2 and Wits +1 cast \textit{Wide, Sentient, Tendrils}, the \gls{tn} would be 9, and 4 shadow-creatures spawn.
+  Each tendril would have a Strength, Speed, and Dexterity of 0, meaning they each have 6 \glspl{hp}.
+}{}
 
 \spell{Invisibility}{Continuous}{Stealth}{The target becomes invisible}
 
@@ -988,7 +1007,7 @@ The illusionist finally learns to make less of something, rather than more.  A s
 An empty patch of ground could suddenly appear to break open, showing a great chasm in the ground.
 
 As usual, the illusion is still delicate, and if the person is struck or disturbed in any way, the illusion dissipates.
-The spell only targets the immediate sight of someone, so the target still casts a shadow\iftoggle{verbose}{(though the caster can still remove this with the Muffle spell, above)}{}.
+he spell only targets the immediate sight of someone, so the target still casts a shadow\iftoggle{verbose}{(though the caster can still remove this with the Muffle spell, above)}{}.
 
 \end{multicols}
 
@@ -1060,14 +1079,18 @@ To execute the spell, the mage rolls with Intelligence and their Academics score
 
 This spell replicates the fourth level of the Enchantment sphere, except that it targets the undead.
 
-\spell{Ghoul Calling}{Instant}{Medicine}{Summon a hungry spirit into a corpse, creating a ghoul. Maximum Str of $3 + Lv. + Int$ \glspl{hp}}
+\spell{Ghoul Calling}{Instant}{Medicine}{Summon a hungry spirit into a corpse, creating a ghoul. Maximum $\glspl{hp} \le \glsentryshort{lv} + Int \times 2$}
 
-The mage can create their own ghouls from easily accessible realms of malicious spirits.
-\iftoggle{verbose}{%
-Small animals such as cats or frogs are easy, while larger creatures such as humans or basilisks are extremely difficult.
-}{}%
-The spell is cast on a corpse and the corpse is imbued with one such malicious spirit.
+The spell is cast on a corpse and the corpse is imbued with a malicious spirit.
 It retains the Strength score (and therefore \gls{hp}) it had in life.
+\iftoggle{verbose}{%
+The mage can create their own ghouls from easily accessible realms of malicious spirits.
+Small animals such as cats or frogs are easy, while larger creatures such as humans or basilisks are extremely difficult.
+}{
+  The \gls{miracleworker} reanimates a corpse, where that creature's $\glspl{hp} \le \gls{lv}, + Int \times 2$.
+  The corpse remains animated, without any need to maintain a \gls{standingspell}.
+}
+
 The corpse has Dexterity, Speed and Wits scores of -2 -- it can run, but not terribly quickly.
 It also gains an Aggression score of +2.%
 \footnote{See page \autoref{aggression} for Aggression.}
@@ -1076,40 +1099,41 @@ Most will attack all living things on sight.
 
 The mage rolls their Intelligence + Medicine at \gls{tn} 7 to cast the spell.
 
-Targets can have a maximum of 3 \glspl{hp}, plus the spell's Level, plus the mage's Intelligence Bonus.
 \iftoggle{verbose}{%
-A mage with Intelligence +1 could cast this spell at level 1 to raise anything with up to 4 \glspl{hp}.
-Cast a \textit{Potent Ghoul} at level 2 with Intelligence +2, the mage could raise a human soldier with Strength +2, and 8 \glspl{hp}.
 
-Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
+  The corpse's maximum \glspl{hp} is equal to double the spell's level, plus the caster's Intelligence.
+  A mage with Intelligence +1 could cast this spell at level 1 to raise anything with up to 4 \glspl{hp}.
+  Cast a \textit{Potent Ghoul Calling} at level 2 with Intelligence +2, the mage could raise a human soldier with Strength +2, and 10 \glspl{hp}.
+
+  Once the spell has been cast, it need not be maintained -- once a soul has inhabited a body it remains there like the permanent resident of a house.
 }{}
 
 \paragraph{Sentient Ghoul Calling}
 spells summon sentient undead, typically referred to as `ghasts'.
-
-The ghast gains a number of additional points equal to the spell's level, plus the caster's Intelligence Bonus.
-For each margin on the roll, the caster assigns 1 point to any Attribute, Skill, or magic sphere.
-The \gls{gm} then assigns the rest.
+\index{Ghasts}
+\label{ghastSpell}
 
 These ghouls have a basic Intelligence and Wits score of 0.
 
+The ghast gains a number of additional points equal to the spell's level, plus the caster's Intelligence Bonus.
+For each margin on the roll, the caster assigns 1 point to any Attribute, Skill, Knack, or magic sphere.
+The \gls{gm} then assigns the rest.
+
 Summoned ghouls with magic spheres can only use the Paths of Alchemy, Runes, or Divinity (\gls{deathgod}).
 
-\iftoggle{verbose}{
-  \begin{exampletext}
+\begin{exampletext}
 
   Sirius attempts to  call a ghoul, with a \textit{Potent, Sentient, Ghoul Calling}.
   With his +2 Intelligence Bonus, the ghast will have 6 points.
 
-  Initially, Sirius plans to summon a ghast to cast spells for him, so he plans to spend those 6 points on Academics (so he can summon someone on the Path of Alchemy), and 5 points in Invocation.
+  Initially, Sirius plans to summon a ghast to cast spells for him, so he plans to spend those 6 points on Academics, and Alchemy Spheres.
 
   Unfortunately, he rolls a `10', which is precisely the \gls{tn}, leaving him with only 1 point to assign.
-  He goes for `Combat 1' instead, and the crafty \gls{gm} spends the rest of the points on the ghast's Wits and Academics.
+  He decides to switch to just giving the ghoul `Combat 1' instead, and the crafty \gls{gm} spends the rest of the points on the ghast's Wits and Academics.
 
   With Wits +2 and Academics +3, the ghouls will not succumb to Sirius' \textit{Command the Dead} spell so easily, as it requires \gls{tn} `12' to control.
 
-  \end{exampletext}
-}{}
+\end{exampletext}
 
 \iftoggle{verbose}{
   \pic{Studio_DA/fire_form}{\label{da:fire}}
@@ -1128,14 +1152,19 @@ They're not sustained in perfect condition forever, but never quite reach an ent
 
 The target enters an altered state of semi-death.
 They ignore all \gls{fatigue} penalties (but can still become suddenly unconscious if the \gls{fatigue} penalty ever reaches -5).
-They gain a natural \gls{dr} of 1.
-While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them.
-While this spell is active, the target suffers a -2 penalty to all Charisma checks, though this does not affect \glspl{fp}.
+However, they also lose the ability to heal, or lose \glspl{fatigue}.
+\iftoggle{verbose}{%
 
-This caster rolls Intelligence + Medicine at \gls{tn} 7 to activate this spell.
-While the spell is in effect they suffer no ill effects from \glspl{fatigue} but cannot heal either \glspl{fatigue} or \glspl{hp}.
-Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to \gls{fatigue} penalties.
-The caster faces a real danger of death if ever they gain enough \glspl{fatigue} to push them over a -5 penalty; they may not gain the penalty but must make a Vitality Check to avoid death and then make another roll each time they gain \glspl{fatigue}.
+  Once the spell is over, the mage often comes crashing down, collapsing from the weight of the awful things they have done to their body while immune to \gls{fatigue} penalties.
+  The caster faces a real danger of death if ever they gain enough \glspl{fatigue} to push them over a -5 penalty; they may not gain the penalty but must make a Vitality Check to avoid death and then make another roll each time they gain \glspl{fatigue}.
+}{
+  Once a -5 penalty from Fatigue has been reached, the caster makes a Vitality Check or dies.
+}
+
+They gain a natural \gls{dr} of 1.%
+\footnote{This usually adds +1 to existing armour. See \autopageref{stackingarmour}.}
+While this spell is active, no undead will be able to feed from them and most will therefore not wish to attack them.
+However, the target also suffers a -2 penalty to all Charisma checks, though this does not affect \glspl{fp}.
 
 \spelllevel
 
@@ -1147,25 +1176,24 @@ They can now see all living things, even in the darkness.
 Additionally, the target's \gls{dr} raises to 2 as the target stops feeling pain altogether.
 They can even hold their breath for one minute per spell level, plus the caster's Intelligence Bonus.
 
-Targets who die while this spell is in effect raise from the dead as an undead creature.\footnote{This spell cannot raise someone as undead if the necromancer's spell level would not normally allow them to raise a creature of that spell level.}
+Targets who die while this spell is in effect raise from the dead as an undead creature, as per Ghoul Calling.%
+\footnote{A \textit{Sentient Soul Sight} spell functions just like a \textit{Sentient Ghoul Calling} once the target dies.}
 
 These abilities come with weaknesses.
 Bright lights, including the \textit{Light} spell irritate the target.
 The Charisma penalty for the spell raises to -4, as they seem permanently distracted and unable to focus upon the same world that everyone else does.
 
-\spell{Sickness}{Instant}{Medicine}{The target loses $1D6 - 2 + Int$ \glspl{hp}}
+\spell{Sickness}{Instant}{Medicine}{The target loses \glspl{hp} equal to caster's Int}
+\label{necroticSickness}
 
 \iftoggle{verbose}{%
-Powerful Necromancers have the terrifying ability to pull someone's soul out with a simple spell.
-Even those who survive suffer a nasty sickness, often accompanied by pale, necrotic lines racing across their skin.
-
+  Powerful Necromancers have the terrifying ability to pull someone's soul out with a simple spell.
+  Even those who survive suffer a nasty sickness, often accompanied by pale, necrotic lines racing across their skin.
 }{}%
-\label{necroticSickness}
-The spell inflicts Damage directly to the target's \glspl{hp}.
-\Glsentrylongpl{fp} and \glsentrylongpl{SP} can be bypassed entirely.
+The spell inflicts Damage equal to the caster's Intelligence, ignoring both \glspl{fp} and \glsentrylongpl{SP}.
 The spell inflicts 1 Damage, plus the caster's Intelligence Bonus.
 \iftoggle{verbose}{%
-As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence +2, casting a \textit{Potent Sickness}, would inflict $1D6-1$ Damage.
+  As usual, replace 4 Damage with a $D6$, so a necromancer with basic Intelligence +2, casting a \textit{Potent Sickness}, would inflict $1D6-1$ Damage.
 }{}
 
 \end{multicols}
@@ -1232,7 +1260,7 @@ See \autopageref{raceRoll}.}
   But it can easily fool those not paying attention into ignoring a known criminal.
 }{}
 
-\spell{Chimaera}{Continuous}{Caving/ Seafaring/ Wyldcrafting}{The caster copies stats from an animal, gaining Lv points in Str, Spd, Wts or DR}
+\spell{Chimaera}{Continuous}{Caving/ Seafaring/ Wyldcrafting}{The caster copies stats from an animal, gaining teeth, whiskers, gills, or \gls{dr} 2}
 \label{spellChimaera}
 
 A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, or a tadpole's gills, and throw that animalistic pattern onto any target.
@@ -1267,7 +1295,7 @@ After this period, they can sleep for as long as they like, gaining only 1 \gls{
 
 \spelllevel
 
-\spell{Beast Form}{Continuous}{Wyldcrafting/ Caving}{Transform a target into an animal. Int + Wyldcrafting/ Caving}
+\spell{Beast Form}{Continuous}{Wyldcrafting/ Caving}{Transform a target into an animal. Int + Wyldcrafting/ Caving. Target gains Str or Spd penalty equal to Int, or sets Str or Sped equal to Int}
 
 \noindent
 The caster transforms the target into something completely inhuman, raising or depleting their Strength or Speed Bonuses, or adding new features.
@@ -1317,4 +1345,3 @@ However, using them requires that the target's Speed Bonus be at least 3 points 
 }{}
 
 \end{multicols}
-

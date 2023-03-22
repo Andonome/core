@@ -282,13 +282,14 @@ If items are tied, roll a die to see which regenerates \glspl{mp} first.
 
 \spell{Imbuing}{Instant}{Empathy}{Add \glspl{mp} to a mana stone}
 
-The mage spills any number of mana points into a mana stone created through the same path of magic the mage walks.
+The mage spills a number of \glsentrylongpl{mp} into a mana stone created through the same path of magic the mage walks.
+The maximum number recharged in a single spell is equal to the caster's Intelligence Bonus.
 If cast as a \textit{Wide} spell, the mage can spend \glspl{mp} to spread between multiple items, but can only Imbue total \glspl{mp} equal to what is spent.
 
 \spelllevel
 
-\label{detectmagic}
 \spell{Identify Mana}{Instant}{Empathy}{Find out which path of magic made an item}
+\label{detectmagic}
 
 The caster identifies which Path of magic someone is walking, or which Path was used to create an item which holds \glsentrylongpl{mp}.
 
@@ -318,7 +319,7 @@ The changes are purely cosmetic.
   This can let a \textit{fireball} take the shape of a bird, or add colour to shadows, turning them into complete illusions.
 }{}
 
-\enhancement{1}{Wide}{Widen the spell to hit $Level + Wits$ targets}
+\enhancement{1}{Wide}{Widen the spell to hit \glsentrylong{lv} + Wits targets}
 \label{wide_enhancement}
 The spell extends to cover a wide area -- a total area equal to the spell's level, plus the caster's Wits Bonus.
 The squares are always continuous, so a spell targeting four squares could form a $2\times 2$ area, or four continuous squares.
@@ -447,7 +448,7 @@ These spells are never fully-fledged people, but simple, often mute, stereotypes
 Sentient Force spells, such as levitation, allow a spell to independently decide where an item will be lifted, or even attack with Dancing Swords.
 However, \textit{Wide, Sentient} spells do not gain multiple consciences -- they can only focus on one thing at a time, just like a normal person.
 \iftoggle{verbose}{%
-A \textit{Wide, Sentient, Dancing Swords} spell which levitated 4 daggers would not be able to make 4 attacks per round.
+  A \textit{Wide, Sentient, Dancing Swords} spell which levitated 4 daggers would not be able to make 4 attacks per round.
 }{}
 
 Sentient spells take the Mental Attributes of their caster, so they can enter combat using their own \glspl{ap}, without bothering the caster.
@@ -462,7 +463,7 @@ They also take their caster's Code, so a mage devoted to \gls{justicegod} would 
 
 \spelllevel
 
-\enhancement{2}{Massive}{Increase the target area until it's the size of $level + Wits$ areas}
+\enhancement{2}{Massive}{Increase the target area until it's the size of \glsentryshort{lv} + Wits areas}
 \label{Massive}
 
 The spell spreads across a massive space -- indoors this could be multiple rooms, outdoors it could be a field, or a massive segment of a forest.
@@ -510,8 +511,8 @@ Each sphere (but not each level) reduces the item's \gls{mp} by 1, just as with 
 The item's user simply focusses on what they want, and the spell casts.
 
 \iftoggle{verbose}{
-Once the spell Artefact spell is cast, the spell's level must be cast into it as part of the same spell.
-Therefore, a mage creating an item with the 3rd level of Necromancy must first spend \arabic{spelllevel} \glspl{mp}, followed by 3 \glspl{mp} to place the necromancy sphere into the item.
+  Once the spell Artefact spell is cast, the spell's level must be cast into it as part of the same spell.
+  Therefore, a mage creating an item with the 3rd level of Necromancy must first spend \arabic{spelllevel} \glspl{mp}, followed by 3 \glspl{mp} to place the necromancy sphere into the item.
 }{}
 
 \spelllevel
