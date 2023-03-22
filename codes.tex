@@ -3,9 +3,7 @@
 \index{Gods}
 \index{Codes of Belief}
 
-
 \begin{multicols}{2}
-
 \noindent
 Players can receive additional \gls{xp} for following their beliefs.
 While anyone is free to give offerings to any of the gods, most people have a primary god they worship, suggested by their birth but decided in adulthood based on shared values.
@@ -60,8 +58,20 @@ Players receive \glspl{xp} only at the end of a session, and only for achievemen
 
 \begin{multicols}{2}
 
+\iftoggle{verbose}{}{
+  \boxPair{
+    \acquisitionXP
+  }{
+    \joyXP
+  }
+}
+
 \subsection{The Code of Acquisition}
 \index{Code!Acquisition}
+
+\iftoggle{verbose}{
+    \acquisitionXP
+}{}
 
 The goal of life is acquisition.
 We all want things, therefore people who get more things are doing better.
@@ -71,99 +81,16 @@ Underneath the exterior love of wealth, those on the Code of Acquisition primari
 They have a deep sense of needing to be important in the eyes of others, and find their acquisitions the most efficient way to achieving that goal.
 
 
-\iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-
-  \begin{footnotesize}
-}
-\begin{xpchart}{Acquisition}
-
-  1 & Buying an expensive item -- worth 1 \gls{gp} or more. \\
-
-  1 & Being greeted deferentially by a stranger. \\
-
-  1 & Confirming you are the richest person in a new region. \\
-
-  1 & Hiring a new servant. \\
-
-  1 & Meeting a famous person. \\
-
-  3 & Buying a very expensive item -- at least 10 \gls{gp} in value. \\
-
-  3 & Disarming a potential conflict. \\
-
-  5 & Starting a new business. \\
-
-  5 & Finding a magical item. \\
-
-  5 & Gaining a new title such as a guild master or townmaster. \\
-
-  5 & Buying an extremely expensive item -- at least 20 \gls{gp} in value. \\
-
-  10 & Marrying into a prestigious family. \\
-
-  10 & Acquiring a horde of new wealth -- at least 100\% of the character's maximum lifetime total, and at least 1 gp. \\
-
-  10 & Buying an expensive new home -- at least 200 \gls{gp} in value. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{%
-  \end{footnotesize}
-  \end{figure*}
-}
-
 \subsection[\Glsentrytext{joygod} -- Goddess of Joy]{\Glsentrytext{joygod}}
 \index{Gods!\Glsentrytext{joygod}}
+
+\iftoggle{verbose}{
+    \joyXP
+}{}
 
 \noindent The goddess of joy delights in pranks and fun of all kinds. Her holy day is in the third season of the first cycle -- a cold time when people are in need of cheering up from the cold winds, when her followers stuff snow down people's back or balance ice-plates on the tops of doors to watch them fall on friends' heads. An eclipse marks the actual day every three cycles.
 
 Her temples are always full of home-brewed beer served by attractive men and women. Often such temples replace regular taverns.
-
-\iftoggle{verbose}{}{
-  \begin{figure*}[b!]
-  \begin{footnotesize}
-}
-\begin{xpchart}{\Glsentrytext{joygod}}
-
-  1 & Playing a prank. \\
-
-  1 & Donating at least 1 \gls{gp} to the church. \\
-
-  1 & Drinking and eating to excess. \\
-
-  1 & Making a particularly bad pun. \\
-
-  1 & Giving food or shelter to the needy. \\
-
-  1 & Reminding another player about something in their Code to get them \glspl{xp}. \\
-
-  3 & Winning a drinking competition. \\
-
-  3 & Lifting the spirits of the downtrodden. \\
-
-  3 & Creating a funny song. Requires at least a full night and an Intelligence + Performance action, \gls{tn} 12. \\
-
-  3 & Playing a prank set up last session. \\
-
-  5 & Hosting a feast for a village. \\
-
-  5 & Creating a new type of alcohol. \\
-
-  5 & Saving someone's life. \\
-
-  10 & Saving a village or larger populated area from destruction. \\
-
-  15 & Playing a prank set more than two sessions ago at the start of the campaign. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{%
-}{
-  \end{footnotesize}
-  \end{figure*}
-}
-
 
 \subsubsection{Spheres}
 
@@ -175,9 +102,20 @@ Their spells appear with a flash of rainbow colours, often accompanied by light,
 \Glsentrytext{joygod}'s magical items can be anything which is a simulacrum of anything else -- a toy dagger, a doll, a statue or a painting are all possible mana stones.
 Their mana stone spells are activated by a command word.
 
+\iftoggle{verbose}{}{
+  \boxPair{
+    \knowledgeXP
+  }{
+    \experienceXP
+  }
+}
 
 \subsection{\Glsentrytext{knowledgegod} -- God of Illumination}
 \index{Gods!\Glsentrytext{knowledgegod}}
+
+\iftoggle{verbose}{
+  \knowledgeXP
+}{}
 
 \noindent The god of light is popular among all the land, especially with scholars, as he is a god of knowledge.
 
@@ -188,52 +126,12 @@ His spells appear in a warm glow of light, illuminating an area with a glow the 
 The mana stones of \Gls{knowledgegod} are always activated by a command word.
 
 
-\iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-  \begin{footnotesize}
-}
-
-\begin{xpchart}{\Glsentrytext{knowledgegod}}
-
-  1 & Donating at least 1 \gls{gp} to the temple. \\
-
-  1 & Learning a new secret. \\
-
-  1 & Correcting someone on world-lore. \\
-
-  1 & Gaining a new level in Academics or any sphere in the Path of Alchemy. \\
-
-  1 & Remembering an \gls{npc}'s name. \\
-
-  1 & Crafting a new magical item. \\
-
-  1 & Drawing a map for the current session. \\
-
-  1 & Overcoming a tricky situation. \\
-
-  3 & Solving a complicated puzzle. \\
-
-  5 & Donating at least 10 \gls{gp} to the temple. \\
-
-  5 & Uncovering a conspiracy. \\
-
-  5 & Writing an informative book on some topic. Intelligence + Academics is rolled at \gls{tn} 16 during downtime, and requires at least a month. \\
-
-  10 & Donating at least 100 \gls{gp} to the temple. \\
-
-  10 & Finding and preserving important knowledge that would otherwise have been destroyed forever. \\
-
-  15 & Solving a legendary puzzle. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
-
 \subsection{The Code of Experience}
 \index{Code!Experience}
+
+\iftoggle{verbose}{
+  \experienceXP
+}{}
 
 The world is here to be lived, to be known, to be connected with.
 You want all the experiences -- unique experiences, sacred experiences, horrible experiences; the only real evil is boring repetition.
@@ -244,65 +142,12 @@ You also value giving life and meaning to the old and abandoned, to experiencing
 Those with the Code of Experience tend to explore, to lead troupes into new areas, to try different approaches, and test new solutions to entrenched problems.
 They tend to create, but this does not necessarily require the Crafts or Performance skills -- someone could equally design some new use for magic, or perfect a new type of knot.
 
-\iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-  \begin{footnotesize}
-}
-
-\begin{xpchart}{Experience}
-
-  1 & Finding a new type of food or drink. \\
-
-  1 & Witnessing a flower open. \\
-
-  1 & Seeing a change in Season. \\
-
-  1 & Greeting a new type of humanoid. \\
-
-  1 & Entering a new area, days away from anything seen before. \\
-
-  1 & Hearing a new language. \\
-
-  1 & Learning a new type of creative skill, such as Crafts or Performance. \\
-
-  3 & Experiencing any emotion to heights never reached before. \\
-
-  3 & Learning a Skill or sphere to a level above any other Skill or sphere you have. \\
-
-  3 & Making a new friend. \\
-
-  3 & Returning home after a longer period away than ever before. \\
-
-  3 & Finding a mana lake. \\
-
-  3 & Seeing a new magical item activate. \\
-
-  5 & Experiencing deep tragedy. \\
-
-  5 & Taking \gls{hp} Damage for the first time. \\
-
-  5 & Falling in love. \\
-
-  5 & Creating a masterpiece of some kind at \gls{tn} 14.
-  Each Skill can only be used to gain \gls{xp} once. \\
-
-  5 & Discovering a lost piece of art or literature. \\
-
-  10 & Finding an area lost to all contact for more than a century. \\
-
-  15 & Finding an area never before visited by people. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
-
-
-
 \subsection{\Glsentrytext{naturegod} -- Goddess of the Forest}
 \index{Gods!\Glsentrytext{naturegod}}
+
+\iftoggle{verbose}{
+  \natureXP
+}{}
 
 \noindent
 \Gls{naturegod} is the mother of all the growing green plants and all the animals.
@@ -323,43 +168,16 @@ Plants with a spell are always activated by a command word.
 Animals with a spell implanted always activate the spell at their own behest and rarely at the right time; cats have been known to use implanted spells to hunt prey while a dog which feels threatened might reflexively turn into a rat when scared.
 
 \iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-  \begin{footnotesize}
+  \boxPair{
+    \natureXP
+  }{
+    \warXP
+  }
 }
 
-\begin{xpchart}{\Glsentrytext{naturegod}}
-
-  1 & Donating at least 1 \gls{cp} to the temple. \\
-
-  1 & Hunting one's own food and dedicating it to \glsentrytext{naturegod}. \\
-
-  1 & Gaining a new level in the Caving, Seafaring, or Wyldcrafting Skills. \\
-
-  3 & Building a shrine -- requires 3 days work and an Intelligence + Crafts action, \gls{tn} 8. \\
-
-  3 & Donating all of one's money to the temple. \\
-
-  3 & Freeing a wild animal from captivity. \\
-
-  3 & Destroying an `unnatural' creature such as the undead\iftoggle{aif}{, or nura}{}. \\
-
-  5 & Composing a song to \gls{naturegod} -- requires an Intelligence + Performance action, \gls{tn} 15. \\
-
-  5 & Seeing a new type of creature. \\
-
-  10 & Establishing a new temple. \\
-
-  15 & Saving some miles of land from being despoiled. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
-
-
-
+\iftoggle{verbose}{
+  \warXP
+}{}
 
 \subsection{\Glsentrytext{wargod} -- Goddess of War}
 \index{Gods!\Glsentrytext{wargod}}
@@ -385,56 +203,16 @@ Weapons can only store 2 MP per point of Damage they inflict.
 Hunting trophies can hold up to 1 MP for every \glspl{hp} of the beast killed.
 
 \iftoggle{verbose}{}{
-  \begin{figure*}[b!]
-  \begin{footnotesize}
+  \boxPair{
+    \deathXP
+  }{
+    \tribeXP
+  }
 }
 
-\begin{xpchart}{\Gls{wargod}}
-
-  1 & Donating at least 1 \gls{gp} to the temple. \\
-
-  1 & Finding an interesting battle trophy. \\
-
-  1 & Finishing a battle with 0 \gls{fp}. \\
-
-  1 & Finishing a round with -10 \glspl{ap} or less. \\
-
-  1 & Fighting a new type of creature. \\
-
-  1 & Gaining a new level of the Combat Skill. \\
-
-  1 & Surviving a skirmish while outnumbered. \\
-
-  1 & Going first in the party when entering a dangerous situation. \\
-
-  3 & Answering a one on one challenge. \\
-
-  3 & Killing three opponents single handedly in one battle. \\
-
-  3 & Killing a more dangerous opponent than ever before (danger is measured in \gls{xp}). \\
-
-  3 & Surviving a large scale battle while outnumbered. \\
-
-  5 & Donating at least 10 \gls{gp} to the temple. \\
-
-  5 & Killing five or more opponents single handedly in battle. \\
-
-  5 & Killing a dangerous opponent (16+ \gls{xp}) single handedly. \\
-
-  10 & Killing a dangerous opponent (10+ \gls{xp}) without wearing armour. \\
-
-  10 & Donating at least 100 \gls{gp} to the temple. \\
-
-  10 & Defeating a previously victorious opponent. \\
-
-  15 & Starting a war. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
+\iftoggle{verbose}{
+  \deathXP
+}{}
 
 \subsection{\Glsentrytext{deathgod} -- God of the Grave}
 \index{Gods!\Glsentrytext{deathgod}}
@@ -444,55 +222,6 @@ He teaches us to remember our own dead fondly and to desecrate the graves of our
 His feast day is during the great storms of the first season of the first cycle.
 Volcanoes often explode to mark this occasion.
 His temples are few and far between -- a couple of large cities with important people buried, the occasional gnoll hut where a mad shaman of death collects skulls and speaks strange promises about a coming war or a deep, dwarven catacomb where the honoured dead of many a dwarf want to gain the promise of being lead to the halls of the honoured dead.
-
-
-
-\iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-  \begin{footnotesize}
-}
-\begin{xpchart}{\Glsentrytext{deathgod}}
-
-  1 & Donating at least 1 \gls{gp} to the temple. \\
-
-  1 & Cursing a dying enemy, to prevent them from achieving a proper afterlife. \\
-
-  1 & Gaining a new level in the Necromancy sphere. \\
-
-  1 & Giving someone blessings upon their death bed. \\
-
-  1 & Losing \glspl{hp}. \\
-
-  1 & Toasting to absent friends. \\
-
-  3 & Performing an outlandish burial, with sacrifices and words appropriate for the deceased. \\
-
-  3 & Easing the last moments of a dying person. \\
-
-  3 & Erecting a shrine to the dead. Requires an Int + Craft action, \gls{tn} 9, at at least 10 gp. \\
-
-  3 & Learning the history of a new area. \\
-
-  3 & Protecting the graves of the honoured dead. \\
-
-  5 & Donating at least 10 \gls{gp} to the temple of \gls{deathgod}. \\
-
-  5 & Falling below 0 \gls{hp}. \\
-
-  5 & Retrieving a dead body for a proper burial. \\
-
-  10 & Building or funding a grand mausoleum. Takes a year and requires at least 100 gp. \\
-
-  10 & Falling below -3 \glspl{hp}. \\
-
-  15 & Falling below -5 \glspl{hp}. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
 
 
 \subsubsection{Spheres}
@@ -509,53 +238,12 @@ The hand of a man who had 6 \glspl{fp} could store up to 3 \gls{mp}.
 
 Spells implanted in those mana stones are always activated by a command word.
 
-
-\iftoggle{verbose}{}{
-  \begin{figure*}[t!]
-  \begin{footnotesize}
-}
-
-\begin{xpchart}{the Tribe}
-
-  1 & Helping out a member of the tribe. \\
-
-  1 & Greeting a member of the tribe during a long time away. \\
-
-  1 & Welcoming a friend into the tribe. \\
-
-  1 & Testing a potential new member of the tribe. \\
-
-  1 & Defending your tribe's honour. \\
-
-  3 & Spreading the honourable name of the tribe to outsiders. \\
-
-  3 & Entering battle simply for the sake of the tribe. \\
-
-  5 & Forming an alliance for the tribe. \\
-
-  5 & Returning home after an extended trip away. \\
-
-  5 & Acquiring a new home for your family. \\
-
-  5 & Saving a member of the tribe from some terrible situation. \\
-
-  5 & Fulfilling the final wishes of an ancestor.
-  The ancestor's wish can be specified only while spending \glspl{storypoint}, and the \gls{xp} can only be collected if the mission is completed in a later Story. \\
-
-  10 & Starting a family. \\
-
-  15 & Saving one's entire tribe from destruction. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
-
-
 \subsection{The Code of the Tribe}
 \index{Code!Tribe}
+
+\iftoggle{verbose}{
+  \tribeXP
+}{}
 
 What's important is you and yours.
 Your children, the memory of your grandparents, the honour of the tribe.
@@ -569,6 +257,10 @@ Travelling companions do not automatically count as members of your tribe, but t
 
 \subsection{\Glsentrytext{justicegod} -- God of Justice}
 \index{Gods!\Glsentrytext{justicegod}}
+
+\iftoggle{verbose}{
+  \justiceXP
+}{}
 
 \noindent Warden to all oaths, lord of ten thousand holy warriors, leader of armies, the giver of vengeance and punishments -- \gls{justicegod} is a popular god.
 He is invoked during wedding vows and business deals.
@@ -590,53 +282,5 @@ Their spells appear in a shimmer of gold and the sound of a gong.
 Those believers alone can activate any spells which are stored inside them.
 Priests of \Gls{justicegod} often gift their followers with single-use magical powers, such as the ability to call upon a blessing or the ability to protect themselves with armour.
 If the people who are being used as mana stones are given spells then they can activate those spells at will with a short prayer by spending 4 \glspl{ap}.
-
-
-\iftoggle{verbose}{}{
-  \begin{figure*}[b!]
-  \begin{footnotesize}
-}
-
-\begin{xpchart}{\Glsentrytext{justicegod}}
-
-  1 & Donating at least 1 \gls{gp} to the temple. \\
-
-  1 & Enforcing a law. \\
-
-  1 & Feeding the poor. \\
-
-  1 & Hosting guests. \\
-
-  1 & Punishing law breakers. \\
-
-  1 & Returning someone's valuables to them. \\
-
-  1 & Enduring a troubling oath. \\
-
-  3 & Enforcing a major law or imposing the law on a group. \\
-
-  3 & Donating at least 10 \gls{gp} to the temple. \\
-
-  3 & Returning from a dangerous mission with all allies unharmed. \\
-
-  5 & Completing a quest you swore to complete over one session ago. \\
-
-  5 & Correcting the local law. \\
-
-  5 & Creating a peace treaty between factions in danger of fighting. \\
-
-  10 & Creating a peace treaty between warring factions. \\
-
-  10 & Donating at least 100 \gls{gp} to the temple. \\
-
-  15 & Deposing a tyrant. \\
-
-\end{xpchart}
-
-\iftoggle{verbose}{}{
-  \end{footnotesize}
-  \end{figure*}
-}
-
 
 \end{multicols}

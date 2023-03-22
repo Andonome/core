@@ -151,6 +151,12 @@ Seeds grow into plants and blossom, plants grow tall, and older plants whither a
 
 The result depends upon the caster's Intelligence Bonus.
 
+The spell must target a complete `thing', and never a piece of a thing.
+A basic spell can target a spear, therefore destroying its shaft with age, but could not target `the side of the inn' -- the entire building would have to be targeted, or the spell would not work.
+Spells massive enough to target a building might affect the exterior, but would to nothing to the interior unless it could target every room within as each room counts as its own area.
+
+\end{multicols}
+
 \begin{boxtable}[ccL]
 
   Intelligence & Ageing & Effects \\\hline
@@ -168,12 +174,6 @@ The result depends upon the caster's Intelligence Bonus.
   5 & 2 Centuries & Wooden structures turn to dust. \\
 
 \end{boxtable}
-
-The spell must target a complete `thing', and never a piece of a thing.
-A basic spell can target a spear, therefore destroying its shaft with age, but could not target `the side of the inn' -- the entire building would have to be targeted, or the spell would not work.
-Spells massive enough to target a building might affect the exterior, but would to nothing to the interior unless it could target every room within as each room counts as its own area.
-
-\end{multicols}
 
 \sphere{Conjuration}
 
@@ -403,6 +403,10 @@ If cast as a \gls{standingspell}, the caster can telepathically send messages fo
 If the enchanter does not have any languages in common with the target then the \gls{tn} is 9 rather than 7.
 This communication is one-way only.
 
+\iftoggle{verbose}{
+  \pic{Roch_Hercka/elvish_enchanter}
+}{}
+
 \spelllevel
 
 \spell{Confusion}{Continuous}{Deceit}{Remove a target's actions for the round, then give an \gls{ap} equal to \glsentryshort{lv}}
@@ -411,10 +415,6 @@ This communication is one-way only.
 The enchanter gives someone a particularly off-putting look and they immediately stops what they were doing and loses their train of thought.
 They have trouble articulating exactly what's wrong, but will remain confused for as long as the spell continues.
 The spell is sometimes initiated by eye contact, sometimes by song -- any number of social interactions can suffice for transferring the spell's effects.
-
-\iftoggle{verbose}{
-  \pic{Roch_Hercka/elvish_enchanter}
-}{}
 
 A resisted roll is made -- the enchanter uses their Intelligence + Deceit Skill while the target uses Wits + Academics.
 On success, target gains an \gls{ap} penalty equal to the spell's level.

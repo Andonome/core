@@ -35,7 +35,7 @@ resources: resources.pdf
 resources.pdf: main.gls global
 	pdflatex resources.tex
 
-all: ref book resources 
+all: ref resources book 
 
 clean:
 	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape cs/*aux

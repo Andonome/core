@@ -692,7 +692,7 @@ Damage Bonuses cannot extend forever. If the Damage bonus ever exceeds +3 then 4
 
 This applies to all Damage, including magical Damage.
 It continues through all Damage Bonuses, so $1D6+9$ Damage would be simply $3D6+1$ Damage after conversion.%
-\footnote{\stackingDamageChart}
+\iftoggle{verbose}{\footnote{\stackingDamageChart}}{}
 This also applies to lower Damage, so `2 Damage', would be $1D6-2$ damage.
 
 \subsubsection[Trapped/ Entangled: Character cannot use their Dexterity Bonus, and takes -2 Attack penalty]{Trapped or Entangled}
@@ -921,12 +921,6 @@ Such is life.
 
 \huntchart
 
-\begin{multicols}{2}
-\iftoggle{verbose}{
-    \input{story/15-fatigue.tex}
-}{}
-\end{multicols}
-
 \section{Further Dangers}
 
 \begin{multicols}{2}
@@ -960,5 +954,9 @@ It works exactly like the Combat \gls{skill} but only for unarmed attacks.
 Both teeth and \emph{long} claws allow animals to grapple and damage with the same attack.
 So when an attack is successful, the target both receives Damage and counts as \textit{grappled}.%
 \footnote{See above, \autopageref{grappling}.}
+
+\iftoggle{verbose}{
+    \input{story/15-fatigue.tex}
+}{}
 
 \end{multicols}

@@ -428,6 +428,10 @@ War horses aren't much faster than regular horses, but they won't become so easi
 
 Hunting dogs are mostly useless in warfare, but they make excellent watchmen.
 
+\iftoggle{verbose}{
+  \pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
+}{} 
+
 \subsection{Weight \& Encumbrance}
 \index{Weight}
 \index{Encumbrance}
@@ -459,10 +463,6 @@ They can, however, drag items with up to a \gls{weightrating} of up to 10 points
   \servicesChart
   \end{figure*}
 }
-
-\iftoggle{verbose}{
-  \pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
-}{} 
 
 \iftoggle{verbose}{
   \input{story/encumbrance.tex}
