@@ -1013,9 +1013,6 @@ he spell only targets the immediate sight of someone, so the target still casts 
 
 \begin{multicols}{2}
 
-\iftoggle{verbose}{
-  \sidepic[40]{Roch_Hercka/conjuration_left}{\label{roch:invocation}}
-}{}
 \noindent
 This is the first choice of spheres for any battle-mage.
 It is designed specifically to destroy targets with balls of lightning and fire.
@@ -1038,9 +1035,14 @@ Blast-radius spells such as a \textit{Wide Fireball} can inflict a Vitals Shot o
 The mage focuses on any source of fire, and extinguishes it.
 Larger fires require a \textit{Wide Extinguish} spell.
 
+\columnbreak
+
 \spell{Fireball}{Instant}{Projectiles}{Burn an enemy for $3 + Lv + Int$ Damage}
 \label{fireball}
 
+\iftoggle{verbose}{
+  \sidepic[40]{Roch_Hercka/conjuration_left}{\label{roch:invocation}}
+}{}
 The mage throws out a ball of flaming, crackling ball of energy, which strikes and burns the target.
 The Damage is 3 Damage, plus the spell's Level, plus the caster's Intelligence Bonus.
 
@@ -1244,10 +1246,6 @@ The undead are completely immune to the Polymorph sphere.
 \spell{Race Swap}{Continuous}{Empathy}{The target appears to change race, but no stats are affected}
 \label{spellSwap}
 
-\iftoggle{verbose}{
-  \sidepic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
-}{}
-
 This spell changes someone's appearance to that of a different race, as long as their Physical Attributes lie within the allowed bands of that race.
 A fighter with a Strength Bonus of +2 might change to look like a particularly strong elf, but someone with a +3 Strength Bonus cannot be changed into an elf, as the maximum Strength Bonus an elf could have is +2.
 \footnote{Every race has a maximum and minimum bonus of 3, plus their racial adjustments.
@@ -1260,6 +1258,10 @@ See \autopageref{raceRoll}.}
 
 \spell{Chimaera}{Continuous}{Caving/ Seafaring/ Wyldcrafting}{The caster copies stats from an animal, gaining teeth, whiskers, gills, or \gls{dr} 2}
 \label{spellChimaera}
+
+\iftoggle{verbose}{
+  \sidepic{Roch_Hercka/polymorph}{\label{roch:polymorph}}
+}{}
 
 A polymorphing mage can copy the whiskers from a mouse, a bull's thick skin, or a tadpole's gills, and throw that animalistic pattern onto any target.
 The caster must be able to name some creature they are familiar with which has that feature.
