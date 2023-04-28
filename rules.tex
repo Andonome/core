@@ -47,6 +47,32 @@
 }
 
 \noindent
+When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states the \gls{tn}, and the players try to beat it by rolling $2D6$ plus any bonuses.
+
+\begin{itemize}
+
+  \item
+  If the player rolls above the \gls{tn}, they succeed!
+  \item
+  If they roll below, they fail, and the danger occurs.
+  \item
+  If they roll equal to the \gls{tn}, the \gls{gm} can give them the choice to succeed, as long as they accept the danger.
+
+\end{itemize}
+
+\begin{exampletext}
+  Hugi listens carefully at the keyhole, trying to figure out what the elves on the other side are plotting.
+  The \gls{tn} is 10, and he matches it exactly.
+
+  ``One of the elves sounds like he's wandering closer to the door, but you think you almost heard a familiar word'', the \gls{gm} says.
+
+  ``I'll stay and listen'', Hugi's player says.
+
+  ``They use your name, though you can't understand the elvish -- just your name -- then one opens the door, saying `well here he sits, or stands, I can never tell with dwarves'.
+  The other elves stand up quickly.''
+
+\end{exampletext}
+
 A basic action is performed by rolling $2D6$ equal or higher than the \gls{tn} for the action.
 The more difficult the action, the higher the \gls{tn}.
 Players add their character's Attribute and \gls{skill} to the roll.
@@ -61,56 +87,77 @@ Don't ask -- just roll!
 
 }{}
 
-\subsection{Group Rolls}
-\label{grouproll}
-\index{Group Rolls}
+\subsection{One Roll Only}
+
+Players only make one roll per action.
+
+If the player wants to attempt to re-try an action, the result remains the same unless circumstances change.
+
+When many characters are trying to do the same task, a single roll is made, and they all consult the same results.
+
+\begin{exampletext}
+\begin{itemize}
+  \item
+  Everyone wants to kick in the door, the \gls{tn} is 10, and the roll uses Strength + Crafts.
+    \begin{itemize}
+    \item
+    Alicia's player rolls the dice. Her Strength + Crafts Bonus is 0, so she fails.
+    \item
+    Snowstorm's Strength + Crafts total is +2, so his total is 9, and he also fails.
+    \item
+    Chatrik's Strength + Crafts total is +4, so her total is 11 -- she succeeds.
+    \end{itemize}
+  \item
+  These look like the famous Catacombs from the national anthem, but how do the words go?
+  Did the hero take two lefts and a right, or two rights and a left?
+    \begin{itemize}
+    \item
+    Water is filling the area, so time will be lost if they get muddled.
+    \item
+    Everyone rolls, and the highest result is Kraal's -- but he only equals the \gls{tn}.
+    \item
+    Kraal's player decides to guess left, rather let his companions think about the song for another moment.
+    They fail, but avoid wasting time.
+    \end{itemize}
+\end{itemize}
+
+\end{exampletext}
 
 If the party are all attempting the same action, then they only make one roll, while adding different attributes to obtain their individual result.
-\iftoggle{verbose}{%
-If the party want to cross a raging river, then the roll of Strength + Athletics is made.
-Let's say the party's lead warrior has a total bonus of +5, the next has +2, and the party's alchemist has a total of -1.
-They roll the dice, and come up with `8'.
-That gives the first character 13, the second 10, and the mage gets 7.
-
-Broadly, if everyone acts upon the same thing, the group only makes one roll.
-
-\needspace{4em}
-Example Group rolls include:
-
-\begin{itemize}
-
-  \item{Busting open a door}
-  \item{Recalling an obscure political fact}
-  \item{Sneaking past guards}
-
-\end{itemize}
-}{}
-
 
 \subsection{\glsentrytext{restingaction}}\label{restingactions}
 
-The basic system assumes that actions are taken while the player is being hurried.
-When taking one's time is possible, things become much easier.
-Exactly how much time is required is up to the \gls{gm}, but it can easily be several nights.
-Sneaking into a house is a challenge, but much easier when one can take one's time, looking at it night after night to see if there is any breach in security.
-Getting the latest gossip from a new village in a night is a normal action, but staying for a week and drinking every night with a different local is a \gls{restingaction}.
+Difficult, but safe actions allow players to repeat the same task until they get it right or give up.
+In these cases, the player sets one die to a `6', and rolls only one die.
 
-When taking a \gls{restingaction}, one die is presumed to have rolled a 6 and the player simply rolls the other die to obtain a result.
-
-\iftoggle{verbose}{
-
-  Example \glspl{restingaction} include:
-
+\begin{exampletext}
+\begin{itemize}
+  \item
+  The group want to sneak into a noble's house, and have plenty of time to plan the heist.
+  The \gls{gm} says they can wander past without suspicion, but it will take many nights to plan and gather all the information they need, the Bonuses are Intelligence plus Stealth, and the \gls{tn} is 12.
+    \begin{itemize}
+    \item
+    The players accept, and roll a single die, achieving a `4'.
+    \item
+    With the other die automatically on `6', their roll is `10', and the total is `13' -- a narrow success.
+    \end{itemize}
+  \item
+  When the group find a powerful, but mysterious artefact.
   \begin{itemize}
-
-  \item Studying a magical artefact for a month.
-  \item Repeatedly attempting to gain an audience with a local noble.
-  \item Bashing away at a door for a month, using different tools.
+    \item
+    Without any danger reading, the \gls{gm} lets them study it for a month as a \gls{restingaction}.
+  \end{itemize}
+  \item
+  A local noble has little time for the troupe, but they really need to make a proposal he can't refuse.
+  \begin{itemize}
+    \item
+    Unfortunately, the \gls{gm} disallows this as a resting action.
+    \item
+    After the first failure, the noble tells his servants not to pay them any more attention -- they can no longer succeed via the official channels.
   \end{itemize}
 
-  \input{story/5-resting.tex}
-
-}{}
+\end{itemize}
+\end{exampletext}
 
 \subsection{Teamwork}
 \label{teamwork}
@@ -124,8 +171,8 @@ When acting as a group provides no benefit, one player rolls the dice and the sa
 If, on the other hand, working together can benefit a situation, one character takes the lead, and up to three other characters can add up to half their bonus (rounded up).
 Two companions with a +3 bonus would add a total of a +2 bonus.
 
-\iftoggle{verbose}{
 
+\begin{exampletext}
   Example Team Actions include:
 
   \begin{itemize}
@@ -135,7 +182,9 @@ Two companions with a +3 bonus would add a total of a +2 bonus.
   \item Spotting danger in the wild.
 
   \end{itemize}
+\end{exampletext}
 
+\iftoggle{verbose}{
   \input{story/6-team.tex}
 }{}
 
@@ -147,16 +196,32 @@ In general, whenever you want to see how something stacks, add the second lot as
 If two people are pushing with Strength +2, they count as having a total Strength of +3.
 If others want to join, add any third items as worth a quarter, then an eighth, and so on.
 
+\begin{exampletext}
+
+Convincing the townsfolk that they need to rebel against the baron, and could easily succeed, the troupe work together on a Charisma + Tactics roll.
+
+\end{exampletext}
+
+\iftoggle{verbose}{
+\noindent%
+\begin{footnotesize}%
+\begin{tabularx}{\linewidth}{Y |cccc}
+                      & Alicia & Snowstorm & Chatrik & Drake \\
+  \hline
+  Charisma + Tactics: & +3     & $+\frac{3}{2}$      & $+\frac{2}{4}$      & $+\frac{1}{8}$    \\
+  Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
+  \hline
+  Total:      &          +6 & & &\\
+\end{tabularx}
+\end{footnotesize}
+}{}
+
 \subsection{Resisted Actions}
 \index{Resisted Actions}
 \label{resistedactions}
 
-When \glspl{pc} come into disagreements with \glspl{npc}, the \glspl{pc} pick up the dice, and roll.  The \gls{npc}'s Traits add to the \gls{tn}.
+When \glspl{npc} resist the players actions, one side rolls as normal, while the other adds their ability to the \gls{tn}.
 
-For example, if a player attempts to pick someone's pocket, the \gls{npc} never rolls Wits + Vigilance.
-Instead, if an \gls{npc} has a Wits + Vigilance total of +4, the \gls{tn} for the roll is $7 + 4 = 11$.
-The player then rolls against that \gls{tn}.
-The results are exactly the same, but having Players roll for everything helps emphasize agency and can speed up the game.
 
 \iftoggle{verbose}{
   \input{story/7-resisted.tex}
