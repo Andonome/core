@@ -528,10 +528,11 @@
 
     \commentary{[xshift=-7em,yshift=-4em]TCBPOSTER@title.east}{-2em,1em}{{\huge\ref{sumCCcode}:} Select a Code (\autopageref{gods_codes}) and write down a culture.}
 
-    \commentary{[xshift=-8em,yshift=4em]TCBPOSTER@equipment.south}{-7em,-3em}{\small {\huge\ref{sumCCcoin}:} Roll $3D6 - 5$ \gls{cp} starting money, a multiply it by 2 for every Skill-dot you have.}
-
+    \iftoggle{aif}{}{
+      \commentary{[xshift=-8em,yshift=4em]TCBPOSTER@equipment.south}{-7em,-3em}{\small {\huge\ref{sumCCcoin}:} Roll $3D6 - 5$ \gls{cp} starting money, a multiply it by 2 for every Skill-dot you have.}
+    }
     \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{4em,-25em}{}
-    \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{-1em,-2.5em}{{\huge\ref{sumCCequip}:} Take a number of pieces of equipment equal to all Skill levels added together (\autopageref{goods}).}
+    \commentary{[xshift=5em,yshift=5em]TCBPOSTER@armoury.north west}{-1em,-2.5em}{{\huge\ref{sumCCequip}:} \iftoggle{aif}{Check your reaons for enlisting, and take your starting equipment (\autopageref{enlistment_equipment}).}{Take a number of pieces of equipment equal to all Skill levels added together (\autopageref{goods}).}}
 }
 
 

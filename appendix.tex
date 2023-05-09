@@ -16,6 +16,11 @@ Okay, so you know how to make a character by now.  But just for reference, let's
   \item\label{sumCCatt}
   Roll $2D6$ six times to determine your Attributes.
   Page \pageref{randomAttributes}.
+  \iftoggle{aif}{
+  \item\label{sumCCequip}
+  Check why you enlisted then add the starting equipment listed.
+  \autopageref{enlistment_equipment}
+  }{}
   \item\label{sumCCconcept}
   Write down a concept and background culture from your campaign.
   \item\label{sumCCcode}
@@ -23,8 +28,10 @@ Okay, so you know how to make a character by now.  But just for reference, let's
   \item\label{sumCCxp}
   Spend 50 \gls{xp} on Attributes, Skills, Knacks, et c., with the Trait charts below, taking $n$ as the current level of of the Trait (or the number of Knacks, or the level of \gls{fp}).
   Page \pageref{xp}.
+  \iftoggle{aif}{}{
   \item\label{sumCCequip}
   Take 1 item per Skill level your character has, worth up to 10 \glspl{sp} each.  Page \pageref{start_equipment}.
+  }
   \item\label{sumCCcoin}
   Starting money is $(3D6-5)\times 2^S$\gls{cp}, where S = combined levels in all Skills.
   \item
