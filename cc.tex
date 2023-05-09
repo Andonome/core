@@ -922,6 +922,7 @@ Wyldcrafters can track people and prey throughout any standard above-ground terr
 
 \begin{multicols}{2}
 
+\noindent
 Unsure why your character joined the \gls{guard}?
 Check your lowest Attribute to see your failure, then look under your highest Attribute.
 If multiple Attributes compete for lowest or highest, stop at the first.
@@ -1071,6 +1072,51 @@ If multiple Attributes compete for lowest or highest, stop at the first.
 
 \end{itemize}
 
+\paragraph{Intelligence Failure}
+
+\begin{itemize}
+
+  \item
+  \textbf{Strength:}
+  Thug!
+  Actions have consequences, \emph{plural}, but you could never count past `one'.
+  Luckily, we have a place where someone will put that muscle to good use.
+
+  Begin play with a greatsword, partial chain armour, and disgust for the weak.
+  \item
+  \textbf{Dexterity:}
+  Cretin!
+  You worked well enough, even with the most delicate materials, but lacked the vision to get ahead in life.
+  Now the \gls{guard} can do your planning for you\ldots
+
+  Begin play with a short sword, and a list of three obvious things you don't understand about the world.
+
+  \item
+  \textbf{Speed:}
+  Barbarian!
+  You strike first and ask questions later, even when cooking soup.
+  There's a special home for people who run about without thinking about anything.
+
+  Begin play with a longsword, partial chain armour, and a reason you don't need to listen to people who think they're clever.
+
+  \item
+  \textbf{Wits:}
+  Faker!
+  You say you `get it', and you just want to `get on with it', but you never really understand a single task given to you.
+  We're all tired of trying to explain simple ideas over your incessant babbling.
+
+  Begin play with nothing -- packing is stressful, you can find what you need along the way.
+  \item
+  \textbf{Charisma:}
+  Brother!
+  Everyone loved your stories the other night, and we're glad you could join us in the \gls{guard}.
+  Now you can tell stories with us on watch.
+  It's going to be a riot!
+
+  Begin play with a short sword, 80 \glspl{cp}, and a joke for the captain.
+
+\end{itemize}
+
 \end{multicols}
 
 \section{And the Rest}
@@ -1139,6 +1185,15 @@ Then select some items from \autoref{goods}.
   \iftoggle{verbose}{
     \input{story/9-rations.tex}
   }{}
+
+  \subsubsection{Starting Money}
+
+  The amount of bare money a character starts out with depends upon their Skills.
+  Starting money is $3D6-5$ \glspl{cp}, which doubles for every level the characters has in a Skill.
+
+  For example, a character with Empathy 1 and Tactics 1 might roll a total of 7.
+  $7\times2\times2 = 28$, so the character starts out with 28 \glspl{cp}.
+
 }
 
 \subsubsection{Starting Money}
