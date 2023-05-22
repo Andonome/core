@@ -358,7 +358,7 @@ People around the mage can still sometimes spot a spell being cast. They use the
 
 This spell permanently reduces the \glspl{mp} in a mana stone by 1, and allows the mana stone to permanently use a single spell which the mage casts immediately after this spell.
 
-Once the mana stone is a pocket spell, it can activate once, and then the mana stone becomes useless, and can never contain \glspl{mp} again.
+Once the mana stone is a Pocket Spell, it can activate once, and then the mana stone becomes useless, and can never contain \glspl{mp} again.
 Some alchemists create scrolls which become useless once read.
 Some priests of \gls{naturegod} enchant animals with a single spell, just to see how the animal will use it.
 The only limitation is that the mana stone must have enough \gls{mp} to cast the spell once.
@@ -366,21 +366,10 @@ The only limitation is that the mana stone must have enough \gls{mp} to cast the
 \iftoggle{verbose}{
 The pocket spell always produces a single effect.
 A scroll of illusion might cast an illusion of a griffin, but cannot cast `just whatever the user desires'.
-Any continuous effects last for a number of scenes equal to the mage's Intelligence Bonus.
 }{}
 
 These magical items are activated by a `command word'.
 Command words do not necessarily have to be actual words -- they could be entire phrases, gestures, or even thought-patterns.
-
-Whoever activated the item counts as `the caster', for the purpose of casting a spell.
-\iftoggle{verbose}{%
-  For example, a spell which allows `the caster' to detect what is happening far away, could be placed into an alchemical scroll.
-  Whoever uses the scroll would then be able to detect the area.
-}{}%
-If the item changes hands while the spell is active, `the caster' changes too.
-\iftoggle{verbose}{%
-  If a magical item allows `the caster', to enchant people, then whoever holds the item at that moment counts as `the caster', even if the item changes hands several times.
-}{}
 
 Pocket spells require 4 \glspl{ap} to cast, just like using any other item.
 
@@ -393,7 +382,19 @@ The item's effective Wits Bonus is also equal to the caster's Intelligence, so a
 This is known as the item's `\textit{Potency}'.
 \index{Potency (for magical items)}
 
-All Pocket Spells last a number of scenes equal to the caster's Intelligence Bonus at the time of casting.
+All Pocket Spells last a number of scenes equal to the caster's Intelligence Bonus at he time of casting, after which they become useless, as if the spell within was spent.
+
+Any continuous spell effects produced by a Pocket Spell last for a number of scenes equal to item's Potency.
+
+For all the purposes of controlling the spell, whoever holds the item is in control, as if they cast the spell.
+\iftoggle{verbose}{%
+  For example, a spell which allows the caster to detect what is happening far away, could be placed into an alchemical scroll.
+  Whoever uses the scroll would then be able to detect the area.
+}{}%
+If the item changes hands while the spell is active, control of the spell transfers to the new holder.
+\iftoggle{verbose}{%
+  If a magical item allows someone to control undead, then whoever holds the item at the moment has control over affected undead, even if the item changes hands several times.
+}{}
 
 \spelllevel
 
