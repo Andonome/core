@@ -245,7 +245,9 @@ For every member of the party, that many points are deducted from one monster's 
 If the party has two members, the first two monsters have 2 \gls{xp} deducted from their total value.
 If the party has five members, the first five monsters have 5 \gls{xp} deducted from their total.
 
-\sidepic{Roch_Hercka/xp-1}{\label{roch:xp1}}
+\iftoggle{verbose}{
+  \sidepic{Roch_Hercka/xp-1}
+}{}
 
 If a single warrior defeats a dragon worth 22 \gls{xp}, then the warrior receives 21 \gls{xp}, because 1 \gls{xp} is removed from the total.
 If he fights 10 ghouls worth 2 \gls{xp} each, then he receives 1 for the first, and 2 for the rest, for a total of 19 \gls{xp}.
@@ -273,7 +275,7 @@ If players need to discount multiple adversaries, they are counted from highest 
 
 \subsection{Spending \gls{xp}}
 
-\sidepic{Roch_Hercka/xp-2}{\label{roch:xp2}}
+\sidepic{Roch_Hercka/xp-2}
 
 At the end of each session, players can spend their \glspl{xp} to improve their characters.
 Spending \glspl{xp} suddenly can only be done by spending a \gls{storypoint}.%
@@ -427,7 +429,7 @@ War horses aren't much faster than regular horses, but they won't become so easi
 Hunting dogs are mostly useless in warfare, but they make excellent watchmen.
 
 \iftoggle{verbose}{
-  \pic{Roch_Hercka/dwarf_encumbrance}{\label{roch:dwarf}}
+  \pic{Roch_Hercka/dwarf_encumbrance}
 }{} 
 
 \iftoggle{verbose}{
