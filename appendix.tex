@@ -1,16 +1,4 @@
-\appendix
-
-\titleformat{\chapter}[display]
-{\bfseries}
-{\begin{tikzpicture}
-\node[minimum width=\textwidth, text=black!25, fill=black!25, inner sep=1, outer sep=0, anchor=south] (rectinit) {\huge CHAPTER};
-\node[minimum width=.8\textwidth, text=white, inner sep=1, outer sep=0, anchor=south west, text width=.8\textwidth, align=right] at (rectinit.south west) (chapname) {\huge APPENDIX~~};
-\node[minimum width=.2\textwidth, inner sep=0, outer sep=0, anchor=south west, text width=.2\textwidth, align=left] at (chapname.south east) {\chapnumfont\textcolor{chapnumcol}{\thechapter}};
-\end{tikzpicture}}
-{0pt}
-{\Huge}
-
-\addappheadtotoc
+\startappendix
 
 \chapter{Character Creation}\label{charactercreation}\index{Character Creation}
 
