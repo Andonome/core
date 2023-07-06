@@ -6,7 +6,7 @@
 | [Character Sheet][cs]                | [Email an idea][issuesEmail]  |
 | [Reference Version][reference]       | [Issues Board][board]         |
 
-BIND is a fantasy tabletop RPG core ruleset.
+BIND is a grunge-fantasy tabletop RPG core ruleset.
 
 # Rules
 
