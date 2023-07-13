@@ -160,13 +160,13 @@ Similarly, if someone moves towards you, you can move away from them as a \gls{q
 Disagreements about which \gls{quickaction} of many goes first resolve with the usual Initiative rules.
 
 \paragraph{Guarding}
-allows any character to move up to 1 \gls{square}, position themselves in front of another player, and receive all attacks from their front.
+allows any character to move up to 1 \gls{step}, position themselves in front of another player, and receive all attacks from their front.
 Anyone attacking a guarded character must first make a standard combat roll against the guardian, and if that attack succeeds they deal no Damage, but have the option to make a second attack, as a \gls{quickaction}, against the guarded character.
 
 If a guarded character moves, they lose the benefits of their guardian.
 
 \paragraph{Moving}
-lets the character travel up to 3 squares plus their Athletics Skill.
+lets the character travel up to 3 steps plus their Athletics Skill.
 
 \paragraph{Speaking}
 requires the usual 1 \gls{ap} expenditure.
@@ -371,9 +371,9 @@ Similarly, different types of natural \gls{dr} do not stack, and nobody becomes 
 \noindent
 Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
 Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
-The \gls{tn} is always 6 plus one for every five squares away the target is.
+The \gls{tn} is always 6 plus one for every five steps away the target is.
 \iftoggle{verbose}{
-  Targets 14 squares away would have a \gls{tn} of 8 to hit.
+  Targets 14 steps away would have a \gls{tn} of 8 to hit.
 }{}%
 
 Moving targets add their Speed + Vigilance Bonus to the \gls{tn}, and stationary targets with a shield can add their shield's Bonus to the \gls{tn} as long as they were Keeping Edgy (see page \pageref{edgy}.)
@@ -408,10 +408,10 @@ Long bows can be fired for hundreds of yards -- the maximum range is generally m
 
 A short bow, or `trick bow', is a smaller, lighter thing which can be used by anyone.
 What it lacks in punch it makes up for in quick draw time.
-As usual, for every five squares beyond the first two the archer suffers a -1 penalty to hit.
+As usual, for every five steps beyond the first two the archer suffers a -1 penalty to hit.
 The bow takes 2 \gls{ap} points to fire, so many shots can be fired in a \gls{round}.
 
-Shortbows have a maximum range of 20 squares and deal $1D6-1$ Damage.
+Shortbows have a maximum range of 20 steps and deal $1D6-1$ Damage.
 They often bring down prey by multiple arrows rather than the one.
 
 Reloading a short bow takes only 1 \gls{ap}.
@@ -433,7 +433,7 @@ They work just as short bows, but their Damage is the normal weapon Damage -2.
 \subsubsection{Impromptu Weapons}
 \index{Projectiles!Impromptu}
 
-Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 squares distance from the target, and a -2 penalty to Damage.
+Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 steps distance from the target, and a -2 penalty to Damage.
 
 \subsection{Weight}
 \index{Weight}
@@ -786,7 +786,7 @@ The character can take a moment to note their long-range surroundings, including
 This takes only 1 \gls{ap} and for the rest of the round, any time the character is being fired upon in combat they can use their Speed + Vigilance Bonus in a resisted action to leap out of the way of an incoming missile or targeted spell, such as a fireball.
 Spells which simply target people by gaze or magical effects such as polymorphing are unaffected (these spells are also resisted, but differently).
 
-\subsubsection[Ram: Push the enemy back 2 squares plus the difference between your Strength Bonuses. Resisting costs 2 \glspl{ap}, and requires a resisted Strength + Combat roll. Cost: 3 \glspl{ap}]{Ram}
+\subsubsection[Ram: Push the enemy back 2 steps plus the difference between your Strength Bonuses. Resisting costs 2 \glspl{ap}, and requires a resisted Strength + Combat roll. Cost: 3 \glspl{ap}]{Ram}
 \index{Combat!Ram}
 \label{ram}
 
@@ -795,7 +795,7 @@ The attacker spends 3 \glspl{ap} points to rush forward.
 The defender can either spend 3 \glspl{ap} and attempt to resist, or can simply acquiesce with a normal movement action, spending 1 \gls{ap}.
 
 Resisting means engaging in a Strength + Combat roll.
-When moving back, targets are pushed back 2 squares; the attacker's Strength adds to this and the opponent's Strength decreases it.
+When moving back, targets are pushed back 2 steps; the attacker's Strength adds to this and the opponent's Strength decreases it.
 Strong characters might also can sacrifice the use of 1 point of Strength to push back an additional person.
 
 Characters who have been rammed must be able to move far back enough as part of their normal movement action, otherwise they fall \textit{Prone}.
@@ -930,7 +930,7 @@ Such is life.
 \subsection[Falling Damage]{Falling Damage}
 
 \index{Falling}
-Characters who fall from a height suffer 2 Damage per square the character fell.
+Characters who fall from a height suffer 2 Damage per `step' the character fell.
 2 Damage alone converts to $1D6-2$ Damage, while 4 Damage would simply be $1D6$ and so on.
 Characters falling straight downward can attempt to mitigate 4 Damage by rolling Dexterity + Athletics at \gls{tn} 9.
 Those falling forward and down in an arc can try to roll along the ground to mitigate the Damage; they roll Dexterity + Athletics at \gls{tn} 7 and a successful roll indicates that they reduce incoming Damage by 4.
