@@ -10,17 +10,15 @@
   These life and death rolls are handled somewhat differently from other tasks.
   Let's start with an overview of the basic features, then cover the details later.
 
-  You move to strike a bandit in the head with your axe.
-  Of course, when you attack him, that means he can attack you, so you make a resisted roll of Dexterity + Combat.
-  If you win, your axe tears into him; if you lose, his sword pierces your gut.
+  \begin{exampletext}
+    You move to engage the bandits in combat.
+    Whenever someone declares an attack, they roll -- success means they deal a wound, and a failure means they gain one.
+    A couple of players gamble their \glsentryfullpl{ap} on other moves, like guarding companions, or jumping back to safety.
+    Within a couple of rolls, everyone has spent their \glspl{ap}, and further attacks start gaining penalties.
+    Success means you strike, and failure means he strikes you.
 
-  You spend 3 \glspl{ap} to swing your hefty axe, while he spends only 2 \glspl{ap} to use his sword.
-
-  You have only 1 \gls{ap} left, while the bandit has 3.
-  He attacks, and once you spend 3 \glspl{ap} to engage him, you find yourself with a total of -2 \glspl{ap}!
-  This gives you a -2 penalty to all actions, so his next attack will have you at a serious disadvantage.
-  \emph{However}, your companion interrupts the flow of combat to move in front of you, and defend you -- all the bandit's attacks must now go through you.
-  This costs your team mate 1 \gls{ap}, putting him on 0.
+    Once everyone has spent their \glspl{ap}, their attacks gain penalties.
+  \end{exampletext}
 
   \end{multicols}
 
@@ -35,12 +33,15 @@
 
 \iftoggle{verbose}{
   When combat begins, roll your Dexterity + Combat against \gls{tn} 7, plus the enemy's Dexterity + Combat.
-  Whoever wins deals damage, so it does not matter a lot who started it, only who ends it still standing.
+  If you win, roll to see how much Damage you deal to the opponent.
+  If your opponent wins, the \gls{gm} rolls to see how much Damage your opponent deals you.
+  Finally, on a tie, you can decide to both take \emph{and} deal Damage, or neither.
+  In the former case, you and your opponent hit each other at the same time.
+  In the latter, blades clash but nobody gets hurt.
 
-  Of course, that \glsentryfull{tn} of 7 helps a lot, so attacking someone gives you a better chance of success than being attacked.
-  Getting the attack in first equates to a +1 bonus on the roll.
 }{
   Attacks are resisted rolls of Dexterity + Combat.
+  On a tie, players decide to both accept and deal damage, or neither.
 }
 
 \iftoggle{verbose}{
@@ -59,6 +60,60 @@
   
     \end{boxtext}
 
+}{}
+
+\subsection{Damage}
+\index{Damage}
+
+If you hit, roll $1D6$ plus your Strength Bonus to determine Damage.
+The Damage is then taken off the enemy's \gls{hp}.
+Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
+
+\iftoggle{verbose}{
+  \subsubsection{\Glsfmtlongpl{hp}}
+
+  Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
+  Small gnomes typically have 4 \glspl{hp} while big, strong humans typically have 7.
+  Losing even a single \gls{hp} means the character has suffered serious Damage.
+  A long fall might have broken the character's bone.
+  A dagger could have slashed open several veins.
+  Characters do not have many \glspl{hp} so losing even one is a serious matter.
+}{
+  Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
+}
+
+\subsubsection{Vitality \& Death}
+\index{Death}
+Once a \gls{pc} reaches 0 \gls{hp} they must make a \index{Vitality Check}
+Vitality Check in order to stay alive.
+This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.
+\iftoggle{verbose}%
+  {\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
+  Stronger characters already have more \gls{hp}, which has already kept them farther from death.}
+  For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
+  That makes the \gls{tn} 7 for the Vitality Check.
+}{}%
+
+\Glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
+
+A failed Vitality check means that the character is dead.%
+\iftoggle{verbose}{%
+  \footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
+}{%
+  The player then selects one of the \glspl{npc} introduced through spending \glspl{storypoint} to play.
+  That second character begins with half the \glspl{xp} of whichever \gls{pc} in the group has accumulated the most total \glspl{xp}.
+  The player taking control of the \gls{npc} should spend any additional experience this grants immediately.
+
+  If no such \gls{npc} exists, one should be introduced through \glspl{storypoint} at the next available opportunity.
+}%
+A successful check means that the character is unconscious for the remainder of the scene but alive.
+At the end of the scene they can make further Vitality Checks to see if they wake up.
+When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
+
+\iftoggle{verbose}{
+  At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
+  Everyone's \glsentryname{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 8 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
+  \footnote{See page \pageref{weightrating} for \nameref{weightrating}.}
 }{}
 
 \subsection{\Glsfmtlongpl{ap} \& Initiative}
@@ -105,13 +160,13 @@ Similarly, if someone moves towards you, you can move away from them as a \gls{q
 Disagreements about which \gls{quickaction} of many goes first resolve with the usual Initiative rules.
 
 \paragraph{Guarding}
-allows any character to move up to 1 \gls{square}, position themselves in front of another player, and receive all attacks from their front.
+allows any character to move up to 1 \gls{step}, position themselves in front of another player, and receive all attacks from their front.
 Anyone attacking a guarded character must first make a standard combat roll against the guardian, and if that attack succeeds they deal no Damage, but have the option to make a second attack, as a \gls{quickaction}, against the guarded character.
 
 If a guarded character moves, they lose the benefits of their guardian.
 
 \paragraph{Moving}
-lets the character travel up to 3 squares plus their Athletics Skill.
+lets the character travel up to 3 steps plus their Athletics Skill.
 
 \paragraph{Speaking}
 requires the usual 1 \gls{ap} expenditure.
@@ -121,61 +176,6 @@ requires the usual 1 \gls{ap} expenditure.
 }{
   This includes any time a player communicates during combat.
 }
-
-\subsection{Damage}
-\index{Damage}
-
-If you hit, roll $1D6$ plus your Strength Bonus to determine Damage.
-The Damage is then taken off the enemy's \gls{hp}.
-Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
-
-\subsubsection{\Glsfmtlongpl{hp}}
-
-Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
-Small gnomes typically have 4 \glspl{hp} while big, strong humans typically have 7.
-Losing even a single \gls{hp} means the character has suffered serious Damage.
-A long fall might have broken the character's bone.
-A dagger could have slashed open several veins.
-Characters do not have many \glspl{hp} so losing even one is a serious matter.
-
-\subsubsection{Healing}
-\index{Healing}
-Characters heal a quarter their \gls{hp} each week, rounded up.
-Once someone receives a serious wound, it's a good time to call for \gls{downtime}.
-
-\subsubsection{Vitality \& Death}
-\index{Death}
-Once a \gls{pc} reaches 0 \gls{hp} they must make a \index{Vitality Check}
-Vitality Check in order to stay alive.
-This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.
-\iftoggle{verbose}%
-  {\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
-  Stronger characters already have more \gls{hp}, which has already kept them farther from death.}
-  For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
-  That makes the \gls{tn} 7 for the Vitality Check.
-}{}%
-
-\Glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
-
-A failed Vitality check means that the character is dead.%
-\iftoggle{verbose}{%
-  \footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
-}{%
-  The player then selects one of the \glspl{npc} introduced through spending \glspl{storypoint} to play.
-  That second character begins with half the \glspl{xp} of whichever \gls{pc} in the group has accumulated the most total \glspl{xp}.
-  The player taking control of the \gls{npc} should spend any additional experience this grants immediately.
-
-  If no such \gls{npc} exists, one should be introduced through \glspl{storypoint} at the next available opportunity.
-}%
-A successful check means that the character is unconscious for the remainder of the scene but alive.
-At the end of the scene they can make further Vitality Checks to see if they wake up.
-When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
-
-\iftoggle{verbose}{
-  At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
-  Everyone's \glsentryname{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 8 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
-  \footnote{See page \pageref{weightrating} for \nameref{weightrating}.}
-}{}
 
 \end{multicols}
 
@@ -371,15 +371,17 @@ Similarly, different types of natural \gls{dr} do not stack, and nobody becomes 
 \noindent
 Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
 Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
-The \gls{tn} is always 6 plus one for every five squares away the target is.
+The \gls{tn} is always 6 plus one for every five steps away the target is.
 \iftoggle{verbose}{
-  Targets 14 squares away would have a \gls{tn} of 8 to hit.
+  Targets 14 steps away would have a \gls{tn} of 8 to hit.
 }{}%
 
 Moving targets add their Speed + Vigilance Bonus to the \gls{tn}, and stationary targets with a shield can add their shield's Bonus to the \gls{tn} as long as they were Keeping Edgy (see page \pageref{edgy}.)
 
 Just as with weapon combat, a high enough roll can be a Vitals Shot, ignoring all \gls{dr}.
 \footnote{See \autopageref{vitals}.}
+
+When a Projectiles roll hits the \gls{tn} exactly, the archer misses their target, but hits any plausible target behind them.
 
 \subsubsection{The Long Bow}\index{Projectiles!Bow}\index{Bows}
 \label{longbow}
@@ -406,10 +408,10 @@ Long bows can be fired for hundreds of yards -- the maximum range is generally m
 
 A short bow, or `trick bow', is a smaller, lighter thing which can be used by anyone.
 What it lacks in punch it makes up for in quick draw time.
-As usual, for every five squares beyond the first two the archer suffers a -1 penalty to hit.
+As usual, for every five steps beyond the first two the archer suffers a -1 penalty to hit.
 The bow takes 2 \gls{ap} points to fire, so many shots can be fired in a \gls{round}.
 
-Shortbows have a maximum range of 20 squares and deal $1D6-1$ Damage.
+Shortbows have a maximum range of 20 steps and deal $1D6-1$ Damage.
 They often bring down prey by multiple arrows rather than the one.
 
 Reloading a short bow takes only 1 \gls{ap}.
@@ -431,7 +433,7 @@ They work just as short bows, but their Damage is the normal weapon Damage -2.
 \subsubsection{Impromptu Weapons}
 \index{Projectiles!Impromptu}
 
-Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 squares distance from the target, and a -2 penalty to Damage.
+Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 steps distance from the target, and a -2 penalty to Damage.
 
 \subsection{Weight}
 \index{Weight}
@@ -784,7 +786,7 @@ The character can take a moment to note their long-range surroundings, including
 This takes only 1 \gls{ap} and for the rest of the round, any time the character is being fired upon in combat they can use their Speed + Vigilance Bonus in a resisted action to leap out of the way of an incoming missile or targeted spell, such as a fireball.
 Spells which simply target people by gaze or magical effects such as polymorphing are unaffected (these spells are also resisted, but differently).
 
-\subsubsection[Ram: Push the enemy back 2 squares plus the difference between your Strength Bonuses. Resisting costs 2 \glspl{ap}, and requires a resisted Strength + Combat roll. Cost: 3 \glspl{ap}]{Ram}
+\subsubsection[Ram: Push the enemy back 2 steps plus the difference between your Strength Bonuses. Resisting costs 2 \glspl{ap}, and requires a resisted Strength + Combat roll. Cost: 3 \glspl{ap}]{Ram}
 \index{Combat!Ram}
 \label{ram}
 
@@ -793,7 +795,7 @@ The attacker spends 3 \glspl{ap} points to rush forward.
 The defender can either spend 3 \glspl{ap} and attempt to resist, or can simply acquiesce with a normal movement action, spending 1 \gls{ap}.
 
 Resisting means engaging in a Strength + Combat roll.
-When moving back, targets are pushed back 2 squares; the attacker's Strength adds to this and the opponent's Strength decreases it.
+When moving back, targets are pushed back 2 steps; the attacker's Strength adds to this and the opponent's Strength decreases it.
 Strong characters might also can sacrifice the use of 1 point of Strength to push back an additional person.
 
 Characters who have been rammed must be able to move far back enough as part of their normal movement action, otherwise they fall \textit{Prone}.
@@ -849,6 +851,8 @@ Shields can be strapped to the arm, without requiring any kind of dual-wielding.
 }
 
 When an enemy flees the scene after a fight has begun, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
+
+On a tie, the \gls{gm} finally gets to decide what should happen.
 
 \end{multicols}
 
@@ -926,7 +930,7 @@ Such is life.
 \subsection[Falling Damage]{Falling Damage}
 
 \index{Falling}
-Characters who fall from a height suffer 2 Damage per square the character fell.
+Characters who fall from a height suffer 2 Damage per `step' the character fell.
 2 Damage alone converts to $1D6-2$ Damage, while 4 Damage would simply be $1D6$ and so on.
 Characters falling straight downward can attempt to mitigate 4 Damage by rolling Dexterity + Athletics at \gls{tn} 9.
 Those falling forward and down in an arc can try to roll along the ground to mitigate the Damage; they roll Dexterity + Athletics at \gls{tn} 7 and a successful roll indicates that they reduce incoming Damage by 4.
