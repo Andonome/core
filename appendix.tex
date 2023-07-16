@@ -61,23 +61,15 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \vfill\null
 
-\iftoggle{verbose}{
-  \begin{multicols}{2}
-    \racechart
-    \attributeChart
-  \end{multicols}
-}{
+\begin{multicols}{2}
   \racechart
-
   \attributeChart
-}
+\end{multicols}
 
 \chapter{Combat}
 \label{combatAppendix}
 
-\iftoggle{verbose}{
-  \begin{multicols}{2}
-}{}
+\begin{multicols}{2}
 
 \initiativechart
 
@@ -87,9 +79,7 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \fatiguechart
 
-\iftoggle{verbose}{
 \end{multicols}
-}{}
 
 \chasechart
 
@@ -101,12 +91,6 @@ Okay, so you know how to make a character by now.  But just for reference, let's
 
 \printcontents[Manoeuvres]{l}{2}{\setcounter{tocdepth}{4}}
 
-\iftoggle{verbose}{
-  \iftoggle{aif}{}{
-    \input{classes.tex}
-  }
-}{}
-
 \indexprologue{The following spell summaries are simplified for reference, and do not take into account spells cast at a higher level than normal.}
 \printindex[spells]
 
@@ -117,9 +101,7 @@ Okay, so you know how to make a character by now.  But just for reference, let's
     nonumberlist,
     ]
 
-  \iftoggle{verbose}{
-    \printglossary[type=symbols]
-  }{}
+  \printglossary[type=symbols]
 \end{minipage}
 
 \printglossary
