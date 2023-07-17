@@ -3,10 +3,11 @@
 |             Downloads                |         Questions             |
 |:-------------------------------------|:------------------------------|
 | [Core Book][core download]           | [Wiki][wiki]                  | 
-| [Character Sheet][cs]                | [Email an idea][issuesEmail]  |
+| [Character Sheets][resources]        | [Email an idea][issuesEmail]  |
 | [Reference Version][reference]       | [Issues Board][board]         |
+| [Character Spread Sheet][cs]         | [ Your ad here $5 ]           |
 
-BIND is a fantasy tabletop RPG core ruleset.
+BIND is a grunge-fantasy tabletop RPG core ruleset.
 
 # Rules
 
@@ -36,6 +37,7 @@ Make your own, or print a copy of [Adventures in Fenestra](https://gitlab.com/bi
 The dependencies are
 
 - `texlive-full` (or `texlive-most` on some distributions)
+- `git`
 - `git-lfs`
 - `inkscape`
 - `make`
@@ -44,21 +46,18 @@ To make the document, simply enter the directory, and type `make`.
 
 Finally, take the pdf to your local, friendly, printing store, and have them make you a nice hardback copy.
 
+For other operating systems, or more details, see the wiki on [setting up](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
+
 # Get Involved
 
 The book is under an open source licence, so whoever plays it decides how it gets to work.
 If you want to get involved, there are a number of ways to contribute:
 
 - Emailing ideas [here][issuesEmail].
-
 - Posting ideas on the [board][board].
-
 - Playtesting.
-
 - Contributing art.
-
-- Fork the project, and start fixing issues.
-
+- Join the project, and start fixing issues.
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
 [core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/BIND.pdf?job=compile_pdf

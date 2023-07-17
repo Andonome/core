@@ -95,6 +95,30 @@ A good rule of thumb is to make as few decisions as possible, and let yourself f
 Noticing patterns in the rules can help you to remember them.
 Make the following principles a habit, and you'll find your role becomes a lot easier.
 
+And speaking of rolls, let's start with dice stats, and why `7' is the magic number.
+
+\vspace{10pt}
+\noindent
+\begin{scriptsize}%
+\begin{tabularx}{\linewidth}{clXX}
+
+  \hline
+  \textbf{Roll} & \textbf{Combinations} & \textbf{Chance} & \textbf{or Greater} \\\hline
+  2  & \epsdice{1}\epsdice{1} & 2.78\% & 100\% \\
+  3  & \epsdice{1}\epsdice{2} \epsdice{2}\epsdice{1} & 5.56\% & 97.22\% \\
+  4  & \epsdice{1}\epsdice{3} \epsdice{3}\epsdice{1} \epsdice{2}\epsdice{2} & 8.33\% & 91.67\% \\
+  5  & \epsdice{1}\epsdice{4} \epsdice{4}\epsdice{1} \epsdice{2}\epsdice{3} \epsdice{3}\epsdice{2}  & 11.11\% & 83.33\% \\
+  6  & \epsdice{1}\epsdice{5} \epsdice{5}\epsdice{1} \epsdice{2}\epsdice{4} \epsdice{4}\epsdice{2} \epsdice{3}\epsdice{3} & 13.89\% & 72.22\% \\
+  7  & \epsdice{1}\epsdice{6} \epsdice{6}\epsdice{1} \epsdice{2}\epsdice{5} \epsdice{5}\epsdice{2} \epsdice{3}\epsdice{4} \epsdice{4}\epsdice{3} & 16.67\% & 58.33\% \\
+  8  & \epsdice{2}\epsdice{6} \epsdice{6}\epsdice{2} \epsdice{3}\epsdice{5} \epsdice{5}\epsdice{3} \epsdice{4}\epsdice{4} & 13.89\% & 41.67\% \\
+  9  & \epsdice{3}\epsdice{6} \epsdice{6}\epsdice{3} \epsdice{4}\epsdice{5} \epsdice{5}\epsdice{4} & 11.11\% & 27.78\% \\
+  10 & \epsdice{4}\epsdice{6} \epsdice{6}\epsdice{4} \epsdice{5}\epsdice{5} & 8.33\% & 16.67\% \\
+  11 & \epsdice{5}\epsdice{6} \epsdice{6}\epsdice{5} & 5.56\% & 8.33\% \\
+  12 & \epsdice{6}\epsdice{6} & 2.78\% & 2.78\% \\
+
+\end{tabularx}
+\end{scriptsize}
+
 \paragraph{Always round up} -- whether someone is helping another character with half their score, or combat calls for half damage, or just any time someone divides a number, they round up at 0.5.
 One quarter of a +1 bonus is still 0, but half of a +3 bonus is always +2.
 
@@ -106,12 +130,13 @@ Always round up.
 When team mates add their scores together, the second grants half, and the third grants half again.
 When many people want to combine their Strength scores to lift something, the highest score counts as usual, the second counts at half, then a quarter, an eighth, and so on\ldots
 
-\paragraph{Resting actions allow failure,}
+\paragraph{Only resting actions allow failure,}
 so if someone has to get this spell just right the first time, or judge the chances of a cave-in and commit to a particular tunnel, they do not get a resting action, even if they have a couple of moments to spare.
 
 If a task must succeed first time, it's not a resting action!
 
-\paragraph{It's only a Team Roll if an expert would want help,} so if the group ask to make a team roll to craft a fantastic statue, reply `no'.
+\paragraph{It's only a Team Roll when experts can work together,}
+so if the group ask to make a team roll to craft a fantastic statue, reply `no'.
 Master carvers don't ask for help chiselling their statues, so the roll has to be a Group Roll, i.e. the lowest score can drag everyone down.
 Conversely, anyone building a basic raft would welcome all the help they can get.
 This shows that the group should make a Team Roll.
@@ -124,16 +149,16 @@ granting a +2 bonus.
 If the standard professional has at least a +5 bonus, they will succeed on professional tasks at \gls{tn} 12 every time (assuming they take a resting action).
 This means a \gls{tn} of 12 isn't monstrously high -- it represents a starting figure for basic professionals.
 
-And if the average professional would struggle with a task, throw them a \gls{tn} of 14 or more!
+And if the \emph{average} professional would struggle with a task, throw them a \gls{tn} of 14 or more!
 
 \paragraph{The dice tell the story,} but only with interpretation.
 A crappy roll to open a door suggests the massive door has wedged properly shut.
 A fantastic roll to talk to the local lord might indicate he has family in that character's home village.
-Explaining results can come easier than making up a situation whole-cloth.
+Explaining dice results can come easier than making up a situation whole-cloth.
 
-If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense; when one \gls{pc} fails to convince a \iftoggle{aif}{town master}{baron} to fund their \gls{adventure}, another might step in to `try their luck' (with the dice).
+If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense; when one \gls{pc} `just fails' to convince a \iftoggle{aif}{town master}{baron} to fund their \gls{adventure}, another might step in to `try their luck' (with the dice).
 But if the first player to roll understands that the \iftoggle{aif}{town master}{baron}'s raging toothache has put him in a foul mood, the rest should understand that the result (or at least the roll) will remain no matter who tries to speak with him.
-This leaves room for some other \gls{pc}, with better stats, to succeed in the endeavour (they might succeed on the roll of a `7'), but does not encourage a ring of players rolling dice like a bunch of bored gamblers.
+This leaves room for some other \gls{pc}, with better stats, to succeed in the endeavour (by using the same roll), but does not encourage a ring of players rolling dice like a bunch of bored gamblers.
 
 \subsubsection{Let Players `Ruin' the \Glsentrytext{adventure}}
 
@@ -711,10 +736,6 @@ Or perhaps another part might slot into the town, or forest, involving an alchem
 Breaking things up like this allows different smaller plots to meld into one.
 Perhaps characters go looking for the bandit alchemist immediately, and find some other encounter in the forests.
 And maybe when the bandit spy joins the party, he'll end up in an unrelated encounter where the party find themselves trapped in a giant web, and he takes the opportunity to finish them off.
-
-\iftoggle{aif}{
-  See \textit{Adventures in Fenestra}, \autoref{sideQuestIntro}, for a full campaign, built on weaving Side Quests together.
-}{}
 
 \end{multicols}
 
