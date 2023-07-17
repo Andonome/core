@@ -13,4 +13,3 @@ compile_pdf:
     paths:
       - BIND.pdf
       - resources.pdf
-      - BIND_ref.pdf

@@ -7,10 +7,8 @@ global: config/bind.sty .switch-gls
 	touch -r Makefile .switch-gls
 config/bind.sty:
 	git submodule update --init
-cs/CS.tex:
-	git submodule update --init
 
-main.pdf: main.gls config cs $(wildcard *tex)
+main.pdf: main.gls config $(wildcard *tex)
 	pdflatex main.tex
 main.gls: svg-inkscape/logo_svg-tex.pdf
 	makeglossaries main
@@ -20,22 +18,15 @@ svg-inkscape/logo_svg-tex.pdf: images/ global
 	pdflatex main.tex
 	pdflatex main.tex
 
-ref: BIND_ref.pdf
-BIND_ref.pdf: $(wildcard *tex) BIND_ref.gls
-	pdflatex -jobname BIND_ref main.tex
-BIND_ref.gls: svg-inkscape
-	pdflatex -shell-escape -jobname BIND_ref main.tex
-	makeglossaries BIND_ref
-	pdflatex -jobname BIND_ref main.tex
 svg-inkscape: global
-	pdflatex -shell-escape -jobname BIND_ref main.tex
-	pdflatex -jobname BIND_ref main.tex
+	pdflatex -shell-escape -jobname main.tex
+	pdflatex -jobname main.tex
 
 resources: resources.pdf
 resources.pdf: main.gls global
 	pdflatex resources.tex
 
-all: ref resources book 
+all: resources book 
 
 clean:
-	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape cs/*aux
+	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape
