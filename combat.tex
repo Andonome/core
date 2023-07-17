@@ -3,26 +3,24 @@
 \label{combat}
 
 
-\iftoggle{verbose}{
-  \begin{multicols}{2}
+\begin{multicols}{2}
 
-  \noindent
-  These life and death rolls are handled somewhat differently from other tasks.
-  Let's start with an overview of the basic features, then cover the details later.
+\noindent
+These life and death rolls are handled somewhat differently from other tasks.
+Let's start with an overview of the basic features, then cover the details later.
 
-  \begin{exampletext}
-    You move to engage the bandits in combat.
-    Whenever someone declares an attack, they roll -- success means they deal a wound, and a failure means they gain one.
-    A couple of players gamble their \glsentryfullpl{ap} on other moves, like guarding companions, or jumping back to safety.
-    Within a couple of rolls, everyone has spent their \glspl{ap}, and further attacks start gaining penalties.
-    Success means you strike, and failure means he strikes you.
+\begin{exampletext}
+  You move to engage the bandits in combat.
+  Whenever someone declares an attack, they roll -- success means they deal a wound, and a failure means they gain one.
+  A couple of players gamble their \glsentryfullpl{ap} on other moves, like guarding companions, or jumping back to safety.
+  Within a couple of rolls, everyone has spent their \glspl{ap}, and further attacks start gaining penalties.
+  Success means you strike, and failure means he strikes you.
 
-    Once everyone has spent their \glspl{ap}, their attacks gain penalties.
-  \end{exampletext}
+  Once everyone has spent their \glspl{ap}, their attacks gain penalties.
+\end{exampletext}
 
-  \end{multicols}
+\end{multicols}
 
-}{}
 
 \section{Basic Combat}
 
@@ -31,36 +29,27 @@
 \subsection{Attacking}
 \label{attack}
 
-\iftoggle{verbose}{
-  When combat begins, roll your Dexterity + Combat against \gls{tn} 7, plus the enemy's Dexterity + Combat.
-  If you win, roll to see how much Damage you deal to the opponent.
-  If your opponent wins, the \gls{gm} rolls to see how much Damage your opponent deals you.
-  Finally, on a tie, you can decide to both take \emph{and} deal Damage, or neither.
-  In the former case, you and your opponent hit each other at the same time.
-  In the latter, blades clash but nobody gets hurt.
+When combat begins, roll your Dexterity + Combat against \gls{tn} 7, plus the enemy's Dexterity + Combat.
+If you win, roll to see how much Damage you deal to the opponent.
+If your opponent wins, the \gls{gm} rolls to see how much Damage your opponent deals you.
+Finally, on a tie, you can decide to both take \emph{and} deal Damage, or neither.
+In the former case, you and your opponent hit each other at the same time.
+In the latter, blades clash but nobody gets hurt.
 
-}{
-  Attacks are resisted rolls of Dexterity + Combat.
-  On a tie, players decide to both accept and deal damage, or neither.
-}
+\begin{boxtext}[title=Dicey Damage,float*=b,width=\textwidth]
 
-\iftoggle{verbose}{
-    \begin{boxtext}[title=Dicey Damage,float*=b,width=\textwidth]
+  If you prefer your Dice in a more old-school format, you can easily give each weapon a different Damage die.
+  Weapons which would normally inflict +1 Damage can instead roll their Damage as 1D8, while weapons with +2 Damage would instead leave players rolling 1D10, leaving weapons of +3 Damage to be replaced with a D12.
   
-      If you prefer your Dice in a more old-school format, you can easily give each weapon a different Damage die.
-      Weapons which would normally inflict +1 Damage can instead roll their Damage as 1D8, while weapons with +2 Damage would instead leave players rolling 1D10, leaving weapons of +3 Damage to be replaced with a D12.
-      
-      Whether the players are rolling $1D6+1$ for a dagger or $1D8$, both have the same average of 4.5, so this system will not change things significantly.
-      However, Stacking Damage occurs less often, and the die rolls will tend to swing more wildly to the highs and lows.
-      
-      If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
-      
-      +0 Damage should remain as $1D6$ and anyone with a Strength score of +4 should replace the bonus with a $D6$ as normal.
-      Spells are unaffected.
+  Whether the players are rolling $1D6+1$ for a dagger or $1D8$, both have the same average of 4.5, so this system will not change things significantly.
+  However, Stacking Damage occurs less often, and the die rolls will tend to swing more wildly to the highs and lows.
   
-    \end{boxtext}
+  If you don't own a D14, then simply add +1 Damage to all Damage totals above +3.
+  
+  +0 Damage should remain as $1D6$ and anyone with a Strength score of +4 should replace the bonus with a $D6$ as normal.
+  Spells are unaffected.
 
-}{}
+\end{boxtext}
 
 \subsection{Damage}
 \index{Damage}
@@ -69,52 +58,36 @@ If you hit, roll $1D6$ plus your Strength Bonus to determine Damage.
 The Damage is then taken off the enemy's \gls{hp}.
 Everyone has a number of \gls{hp} to withstand Damage. When your opponent is reduced to 0 \gls{hp}, they are defeated.
 
-\iftoggle{verbose}{
-  \subsubsection{\Glsfmtlongpl{hp}}
+\subsubsection{\Glsfmtlongpl{hp}}
 
-  Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
-  Small gnomes typically have 4 \glspl{hp} while big, strong humans typically have 7.
-  Losing even a single \gls{hp} means the character has suffered serious Damage.
-  A long fall might have broken the character's bone.
-  A dagger could have slashed open several veins.
-  Characters do not have many \glspl{hp} so losing even one is a serious matter.
-}{
-  Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
-}
+Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
+Small gnomes typically have 4 \glspl{hp} while big, strong humans typically have 7.
+Losing even a single \gls{hp} means the character has suffered serious Damage.
+A long fall might have broken the character's bone.
+A dagger could have slashed open several veins.
+Characters do not have many \glspl{hp} so losing even one is a serious matter.
 
 \subsubsection{Vitality \& Death}
 \index{Death}
 Once a \gls{pc} reaches 0 \gls{hp} they must make a \index{Vitality Check}
 Vitality Check in order to stay alive.
 This is rolled at \gls{tn} 4 plus one for every negative \gls{hp} level.
-\iftoggle{verbose}%
-  {\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
-  Stronger characters already have more \gls{hp}, which has already kept them farther from death.}
-  For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
-  That makes the \gls{tn} 7 for the Vitality Check.
-}{}%
+\ignorespaces\footnote{Traits such as Strength do not affect the Vitality check because in a way, they already have.
+Stronger characters already have more \gls{hp}, which has already kept them farther from death.}
+For example, if someone with 3 \glspl{hp} left were to take a further 6 Damage, this would put them at -3 \glspl{hp}.
+That makes the \gls{tn} 7 for the Vitality Check.
 
 \Glspl{npc} roll Vitality checks at a basic \gls{tn} of 7 instead of 4.
 
-A failed Vitality check means that the character is dead.%
-\iftoggle{verbose}{%
-  \footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}%
-}{%
-  The player then selects one of the \glspl{npc} introduced through spending \glspl{storypoint} to play.
-  That second character begins with half the \glspl{xp} of whichever \gls{pc} in the group has accumulated the most total \glspl{xp}.
-  The player taking control of the \gls{npc} should spend any additional experience this grants immediately.
-
-  If no such \gls{npc} exists, one should be introduced through \glspl{storypoint} at the next available opportunity.
-}%
+A failed Vitality check means that the character is dead.
+\ignorespaces\footnote{See page \pageref{pcdeath} on what to do once a \gls{pc} dies.}
 A successful check means that the character is unconscious for the remainder of the scene but alive.
 At the end of the scene they can make further Vitality Checks to see if they wake up.
 When waking up, all actions relying on movement take a penalty equal to the number of \gls{hp} beyond 0 the character has lost.
 
-\iftoggle{verbose}{
-  At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
-  Everyone's \glsentryname{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 8 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
-  \footnote{See page \pageref{weightrating} for \nameref{weightrating}.}
-}{}
+At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
+Everyone's \glsentryname{weightrating} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 8 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
+\footnote{See page \pageref{weightrating} for \nameref{weightrating}.}
 
 \subsection{\Glsfmtlongpl{ap} \& Initiative}
 
@@ -125,12 +98,10 @@ Every action requires spending some number of \glspl{ap}.
 Once someone reaches 0 \glspl{ap}, they cannot take normal actions -- only \glspl{quickaction}.
 Anyone overspending \glspl{ap} enters \emph{negative} \glspl{ap}, and receives a penalty to all actions equal to their negative score.
 
-\iftoggle{verbose}{
-  A character on 2 \glspl{ap} who attacks with a greatsword (which costs 4 \glspl{ap}) would then go to -2 \glspl{ap}.
-  If someone attacked them, they would have to respond with a -2 penalty to their action, then reduce to -6 \glspl{ap}.
+A character on 2 \glspl{ap} who attacks with a greatsword (which costs 4 \glspl{ap}) would then go to -2 \glspl{ap}.
+If someone attacked them, they would have to respond with a -2 penalty to their action, then reduce to -6 \glspl{ap}.
 
-  Using big weapons gives big bonuses, but they bring their own dangers!
-}{}
+Using big weapons gives big bonuses, but they bring their own dangers!
 
 \subsubsection{Initiative \& Interruptions}
 \index{Initiative}
@@ -170,12 +141,8 @@ lets the character travel up to 3 steps plus their Athletics Skill.
 
 \paragraph{Speaking}
 requires the usual 1 \gls{ap} expenditure.
-\iftoggle{verbose}{
-  If any player tells another to act, stop, or guard them, they lose 1 \gls{ap}.
-  During combat, everyone should focus on the task at hand, and communicate sparingly, only when they need to say something vital.
-}{
-  This includes any time a player communicates during combat.
-}
+If any player tells another to act, stop, or guard them, they lose 1 \gls{ap}.
+During combat, everyone should focus on the task at hand, and communicate sparingly, only when they need to say something vital.
 
 \end{multicols}
 
@@ -185,13 +152,11 @@ requires the usual 1 \gls{ap} expenditure.
 
 \subsection{Weapons}
 
-\iftoggle{verbose}{
-  \noindent
-  Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself.
-  Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about.
-  Longer weapons grant an Attack Bonus, allowing someone to hit the enemy before the enemy hits them, and heavy weapons tend to deal more Damage.
-  However, both of these come at the cost of extra \emph{heft}; they take more time to swing, and so cost more \glspl{ap} to use.
-}{}
+\noindent
+Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself.
+Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about.
+Longer weapons grant an Attack Bonus, allowing someone to hit the enemy before the enemy hits them, and heavy weapons tend to deal more Damage.
+However, both of these come at the cost of extra \emph{heft}; they take more time to swing, and so cost more \glspl{ap} to use.
 
 Each weapon has the following properties:
 
@@ -214,13 +179,7 @@ Each weapon has the following properties:
 
 \end{multicols}
 
-\iftoggle{verbose}{%
-  \weaponsChart
-}{
-  \begin{footnotesize}
-  \weaponsChart
-  \end{footnotesize}
-}
+\weaponsChart
 
 \label{weaponschart}
 \index{Weapons}
@@ -233,9 +192,7 @@ Each weapon has the following properties:
 Shield allow attacks to be blocked with ease.
 Characters with a shield may use it in lieu of their weapon in order to defend against an Attack, but a successful roll only indicates that they have received no Damage, and do not deal Damage.
 
-\iftoggle{verbose}{
-  Characters typically use shields when overwhelmed, allowing them to defend against attacks with a lower \gls{ap} cost than most weapons.
-}{}
+Characters typically use shields when overwhelmed, allowing them to defend against attacks with a lower \gls{ap} cost than most weapons.
 
 Shields can also be used like weapons.
 Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weightrating}, and their \gls{ap} cost is 1 higher than normal.
@@ -245,14 +202,7 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weig
 \subsection{Armour}
 \index{Armour}
 
-\iftoggle{verbose}{%
-  \armourchart
-}{
-  \begin{figure*}[t!]
-  \footnotesize
-  \armourchart
-  \end{figure*}
-}
+\armourchart
 
 \noindent
 Armour defends characters by lowering incoming Damage.
@@ -287,34 +237,32 @@ Complete armour adds +1 to the \glsentryname{weightrating} and multiplies the pr
 \paragraph{Perfect armour}
 is a rating used for certain creatures which have natural armour without weak spots (such as stone giants), or magical armour.
 
-\iftoggle{verbose}{%
-  \boxPair{
-    \begin{boxtable}
-      \textbf{Roll} & \textbf{Result} \\
-      \hline
-        <4 & \Glsentrytext{pc} is hit, no \gls{dr} \\
-        4 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
-        5 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
-        6 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
-        7 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-        8 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-        9 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-        10 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-        11 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-        >11 & \Glsentrytext{npc} is hit, no \gls{dr} applies \\
-    \end{boxtable}
+\boxPair{
+  \begin{boxtable}
+    \textbf{Roll} & \textbf{Result} \\
+    \hline
+      <4 & \Glsentrytext{pc} is hit, no \gls{dr} \\
+      4 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
+      5 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
+      6 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
+      7 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+      8 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+      9 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+      10 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+      11 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
+      >11 & \Glsentrytext{npc} is hit, no \gls{dr} applies \\
+  \end{boxtable}
 
-    \paragraph{A combat roll involving armour}
-    might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a white knight, with \textit{complete} plate armour.
-    If the \gls{pc} fails their roll by 4 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
-    And if the \gls{pc} hits the knight and rolls 6 points above the \gls{tn} then they bypass the knight's \gls{dr}.
+  \paragraph{A combat roll involving armour}
+  might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a white knight, with \textit{complete} plate armour.
+  If the \gls{pc} fails their roll by 4 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
+  And if the \gls{pc} hits the knight and rolls 6 points above the \gls{tn} then they bypass the knight's \gls{dr}.
 
-    Assuming the player's total \gls{tn} is `7', the possible results will look like this:
+  Assuming the player's total \gls{tn} is `7', the possible results will look like this:
 
-  }{
-    \pic{Roch_Hercka/vitals_shot}
-  }
-}{}
+}{
+  \pic{Roch_Hercka/vitals_shot}{\label{roch:vitals}}
+}
 
 \subsubsection{Vitals Shots}
 \label{vitals}
@@ -333,16 +281,9 @@ Many creatures have a \gls{dr} from natural armour, representing especially thic
 Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
 
 
-\iftoggle{verbose}{
-  \begin{figure*}[t!]
-  \projectilesChart
-  \end{figure*}
-}{
-  \begin{figure*}[t]
-  \footnotesize
-  \projectilesChart
-  \end{figure*}
-}
+\begin{figure*}[t!]
+\projectilesChart
+\end{figure*}
 
 \subsubsection{Stacking Armour}
 \label{stackingarmour}
@@ -353,14 +294,12 @@ Any tertiary armour counts for a quarter, and so on.
 Once you have a total, round up anything over half.
 Stacked armour can consist of both partial and complete layers, meaning a roll could bypass one set of armour by rolling 3 over the creature's \gls{tn}, but bypass all armour with a roll of 5 over the \gls{tn}.
 
-\iftoggle{verbose}{
 
-    Consider this convoluted example: a basilisk with \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
-  The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
-  If the mage were crazy enough to add plate armour to the basilisk, the total \gls{dr} would be $5 + \frac{4}{2} + \frac{2}{4} = 7.5$, or `8'.
+Consider this convoluted example: a basilisk with \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
+The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
+If the mage were crazy enough to add plate armour to the basilisk, the total \gls{dr} would be $5 + \frac{4}{2} + \frac{2}{4} = 7.5$, or `8'.
 
-  Of course if this were \textit{partial} plate armour, any roll which gets 3 over the basilisk's \gls{tn} would only get the \gls{dr} of 5.
-}{}
+Of course if this were \textit{partial} plate armour, any roll which gets 3 over the basilisk's \gls{tn} would only get the \gls{dr} of 5.
 
 Standard armour cannot be stacked in this way.
 We assume plate, chain, and some leather-based armours already have padded armour underneath.
@@ -372,9 +311,7 @@ Similarly, different types of natural \gls{dr} do not stack, and nobody becomes 
 Projectiles have their own \gls{skill} which is bought just like the Combat Skill.
 Archers roll to hit with Dexterity + Projectiles, then roll for Damage, just as with Combat.
 The \gls{tn} is always 6 plus one for every five steps away the target is.
-\iftoggle{verbose}{
-  Targets 14 steps away would have a \gls{tn} of 8 to hit.
-}{}%
+Targets 14 steps away would have a \gls{tn} of 8 to hit.
 
 Moving targets add their Speed + Vigilance Bonus to the \gls{tn}, and stationary targets with a shield can add their shield's Bonus to the \gls{tn} as long as they were Keeping Edgy (see page \pageref{edgy}.)
 
@@ -386,16 +323,10 @@ When a Projectiles roll hits the \gls{tn} exactly, the archer misses their targe
 \subsubsection{The Long Bow}\index{Projectiles!Bow}\index{Bows}
 \label{longbow}
 
-\iftoggle{verbose}{
-  Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough.
-  Each bow has its own Strength rating and anyone without at least that much Strength cannot use the bow; the bows deal $1D6$ +Strength Rating.
-  So if a bow has a Strength rating of 2 then it deals $1D6+2$ Damage but requires a Strength of 2, at least, to operate.
-  Having a Strength of 3 will not increase the Damage, but it can decrease the firing time.
-}{
-  Longbows each have a rating from 1-5.
-  The rating is equal to the bow's Damage, and the minimum Strength required to use it.
-  They require 4 \glspl{ap} to use, but every point of the character's Strength Bonus in excess of the bow's rating reduces the \gls{ap} requirement by 1.
-}
+Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough.
+Each bow has its own Strength rating and anyone without at least that much Strength cannot use the bow; the bows deal $1D6$ +Strength Rating.
+So if a bow has a Strength rating of 2 then it deals $1D6+2$ Damage but requires a Strength of 2, at least, to operate.
+Having a Strength of 3 will not increase the Damage, but it can decrease the firing time.
 
 To pull back the heavy load on a long bow requires 4 \gls{ap}, minus any excess Strength the character has over the bow's rating.
 Someone with a Strength of 3, using a longbow with +1 Damage, would only have to spend 2 \glspl{ap} to pull the bow taught.
@@ -426,9 +357,7 @@ Crossbows requires only 1 \gls{ap} to fire, but require 5 rounds, minus the user
 
 Thrown weapons such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
 They work just as short bows, but their Damage is the normal weapon Damage -2.
-\iftoggle{verbose}{
-  Someone with Strength +2 throwing a dagger would deal $1D6$ Damage.
-}{}
+Someone with Strength +2 throwing a dagger would deal $1D6$ Damage.
 
 \subsubsection{Impromptu Weapons}
 \index{Projectiles!Impromptu}
@@ -438,17 +367,12 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 \subsection{Weight}
 \index{Weight}
 
-\iftoggle{verbose}{
-  All equipment has a \glsentryname{weightrating} to show what Strength Bonus someone needs to have to use the item unencumbered.
-  For every point the \gls{weightrating} exceeds the charcter's Strength Bonus, they lose 1 \gls{ap} at the start of each round, and gain 1 \gls{fatigue}.
+All equipment has a \glsentryname{weightrating} to show what Strength Bonus someone needs to have to use the item unencumbered.
+For every point the \gls{weightrating} exceeds the charcter's Strength Bonus, they lose 1 \gls{ap} at the start of each round, and gain 1 \gls{fatigue}.
 
-  We call these additional penalties \textit{encumbrance} (you'll find a space on the character sheet for your total, so you can add penalties from multiple items together).
-  Having extra encumbrance isn't necessarily a bad move.
-  A lot of armour and weapons are worth the loss of speed and \glspl{ap}.
-}{
-  Characters carrying an item with a \glsentryname{weightrating} above their Strength Bonus gain one point of \textit{encumbrance} per point of difference.
-  Each point of encumbrance reduces the character's \glspl{ap} by 1 at the start of each round.
-}
+We call these additional penalties \textit{encumbrance} (you'll find a space on the character sheet for your total, so you can add penalties from multiple items together).
+Having extra encumbrance isn't necessarily a bad move.
+A lot of armour and weapons are worth the loss of speed and \glspl{ap}.
 
 \end{multicols}
 
@@ -457,14 +381,11 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 \begin{multicols}{2}
 
 \noindent
-\iftoggle{verbose}{%
+
 At this point you might be wondering how anyone is going to survive past their first battle.
 6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
 The mechanism which saves the plot-important character is \glsentryfullpl{fp}.
 Every time someone would lose \glspl{hp}, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
-}{
-  If a character would lose \glspl{hp}, they can mark off \glspl{fp} instead.
-}
 
 Everyone in the world begins with 5 base \gls{fp}.
 This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
@@ -488,9 +409,7 @@ In this way, an \gls{npc} might accumulate quite a number of \gls{fp}, and when 
 One exception here is creatures without a Charisma Attribute.
 Animals, undead and other creatures without any Charisma Bonus can never store \gls{fp} except through the use of Magic.
 
-\iftoggle{verbose}{
-  \input{story/10-combat.tex}
-}{}
+\input{story/10-combat.tex}
 
 \end{multicols}
 
@@ -500,49 +419,49 @@ Animals, undead and other creatures without any Charisma Bonus can never store \
 
 \label{fatigue}
 \index{Fatigue}
-\iftoggle{verbose}{%
+
 \noindent
-  Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
-  Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
+Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
+Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
-  \begin{boxtable}[lllllllllX]
+\begin{boxtable}[lllllllllX]
 
-  \multicolumn{10}{l}{\Glsentrytext{hp}} \\
-  \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
-  \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
-  \multicolumn{10}{l}{\glspl{fatigue}} \\
-  \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
-  \multicolumn{10}{l}{Penalty: 0} \\
-  
+\multicolumn{10}{l}{\Glsentrytext{hp}} \\
+\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
+\Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
+\multicolumn{10}{l}{\glspl{fatigue}} \\
+\XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
+\multicolumn{10}{l}{Penalty: 0} \\
+
 \end{boxtable}
 
 Below the character's \gls{hp} bar are spaces for \glspl{fatigue} to be gained.
 Once the character has more \glspl{fatigue} than their current \glspl{hp}, they take a -1 penalty for every \gls{fatigue} in excess of their \glspl{hp}.
 
 
-  \begin{boxtable}[lllllllllX]
+\begin{boxtable}[lllllllllX]
 
-  \multicolumn{10}{l}{\Glsentrytext{hp}} \\
-  \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
-  \Square & \Square & \Square & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
-  \multicolumn{10}{l}{\glspl{fatigue}} \\
-  \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square \\
-  \multicolumn{10}{l}{Penalty: 1} \\
-  
+\multicolumn{10}{l}{\Glsentrytext{hp}} \\
+\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
+\Square & \Square & \Square & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
+\multicolumn{10}{l}{\glspl{fatigue}} \\
+\XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square \\
+\multicolumn{10}{l}{Penalty: 1} \\
+
 \end{boxtable}
 
 This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 \glspl{fatigue}, and then gains a -2 penalty to all actions.
 But it might also occur because the character has 4 \glspl{fatigue} and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
-  \begin{boxtable}[lllllllllX]
+\begin{boxtable}[lllllllllX]
 
-  \multicolumn{10}{l}{\Glsentrytext{hp}} \\
-  \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
-  \Square & \Square & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
-  \multicolumn{10}{l}{\glspl{fatigue}} \\
-  \XBox & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square \\
-  \multicolumn{10}{l}{Penalty: 3} \\
-  
+\multicolumn{10}{l}{\Glsentrytext{hp}} \\
+\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
+\Square & \Square & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
+\multicolumn{10}{l}{\glspl{fatigue}} \\
+\XBox & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square \\
+\multicolumn{10}{l}{Penalty: 3} \\
+
 \end{boxtable}
 
 Characters may reach a maximum penalty of -5 due to \glspl{fatigue}, after which they fall unconscious.
@@ -551,22 +470,15 @@ If the character is accruing \glspl{fatigue} from running or wrestling, they wou
 \Glspl{fatigue} cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
 
 \subsection{Gaining Fatigue}
-}{}
 
 \noindent
 Each round running, climbing, in combat, or otherwise exerting oneself inflicts a \gls{fatigue}.
 Armour also inflicts a number of \glspl{fatigue} equal to its \glsentryname{weightrating} at the end of each scene.
 
-\iftoggle{verbose}{%
-
-  \Glspl{fatigue} gained extremely quickly, for all manner of reasons.
-  However, it is only applied at the end of the scene.
-  Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
-  The real danger in \glspl{fatigue} is persistent action, when characters have no chance to recover from a previous battle.
-
-}{
-  \Glspl{fatigue} can only be gained at the end of a scene.
-}
+\Glspl{fatigue} pile up extremely quickly, for all manner of reasons.
+However, players only apply them at the end of the scene.
+Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
+The real danger in \glspl{fatigue} is persistent action, when characters have no chance to recover from a previous battle.
 
 \subsubsection{The Skill Discount}
 
@@ -596,19 +508,10 @@ The \gls{tn} to stop the bleeding is always 6 plus the number of \glspl{fatigue}
 When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{fatigue} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
 \footnote{The day is divided into four parts. See page \pageref{time}.}
 
-\iftoggle{verbose}{
-  In most cases, \glspl{fatigue} will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
-  However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
-}{}
+In most cases, \glspl{fatigue} will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
+However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
 
-\iftoggle{verbose}{%
-  \fatiguechart
-}{
-  \begin{figure*}[t!]
-  \footnotesize
-  \fatiguechart
-  \end{figure*}
-}
+\fatiguechart
 
 \end{multicols}
 
@@ -628,41 +531,33 @@ You can refer back to them when necessary with the list in \autoref{combatAppend
 
 Fighting while blind is no fun -- your opponent can see you coming, and you can't see them.
 Blinded suffer a -6 penalty, but can offset this with half their Wits + Vigilance total.
-  \iftoggle{verbose}{%
-  For example, a character with with a Wits + Vigilance total of -1 would receive a -7 penalty to attack, while their companion with a total Bonus of +3 would suffer only a -4 penalty.
-}{}
+For example, a character with with a Wits + Vigilance total of -1 would receive a -7 penalty to attack, while their companion with a total Bonus of +3 would suffer only a -4 penalty.
 
 This penalty only counts when one side of a fight is blind. When both sides are blind, we use the Darkness Fighting rules below.
 
 While fighting blind, if the dice make a \gls{natural} roll equal to the number of people on the character's side side (including themself) then they hit a companion while also being hit.
-\iftoggle{verbose}{
-  If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2.
-  If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion.
-  Companions who are are accidentally hit can evade by simply spending 1 \gls{ap}.
-  It is quite possible to kill a companion while fighting blind.
-}{}
+If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2.
+If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion.
+Companions who are are accidentally hit can evade by simply spending 1 \gls{ap}.
+It is quite possible to kill a companion while fighting blind.
 
 \subsubsection[Darkness: Penalty equals difference between combatants' Wits + Vigilance]{Darkness}
 \label{darkness}
 \index{Darkness}
 \index{Combat!Darkness}
 
-\iftoggle{verbose}{
-  Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
-  Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent.
-  However, when both sides suffer from the darkness, the battle changes very little.
-  Neither side can hit very accurately, but then neither side can dodge or parry very well either.
-}{}
+Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
+Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent.
+However, when both sides suffer from the darkness, the battle changes very little.
+Neither side can hit very accurately, but then neither side can dodge or parry very well either.
 
 \paragraph*{When fighting in total darkness}
 whoever has the lowest Wits + Vigilance receives a penalty equal to the difference.
 
-\iftoggle{verbose}{
-  For example, a human guard has caught a room full of elves with stolen goods.
-  Thinking quickly, one of the elves douses the room's only lantern.
-  The human has a Wits Bonus of -1 and no Vigilance Skill.
-  The elves have a Wits Bonus of +1, so the guard receives a -2 penalty to all attacks.
-}{}
+For example, a human guard has caught a room full of elves with stolen goods.
+Thinking quickly, one of the elves douses the room's only lantern.
+The human has a Wits Bonus of -1 and no Vigilance Skill.
+The elves have a Wits Bonus of +1, so the guard receives a -2 penalty to all attacks.
 
 \paragraph*{Fighting in minimal light}
 (such as a moonless night)
@@ -672,10 +567,8 @@ follows the same rules, but the penalty is halved.
 \label{enclosedcombat}
 \index{Enclosed Spaces}
 
-\iftoggle{verbose}{
-  Enclosed spaces cause serious problems for people wielding longswords, battle axes, and other large weapons.
-  Daggers and shortswords often have an easier time in these locations.
-}{}
+Enclosed spaces cause serious problems for people wielding longswords, battle axes, and other large weapons.
+Daggers and shortswords often have an easier time in these locations.
 
 When a character has no space to swing a weapon -- either vertically or horizontally -- their Attack gains a penalty equal to the weapon's \gls{ap} cost.
 
@@ -686,18 +579,15 @@ Damage Bonuses cannot extend forever. If the Damage bonus ever exceeds +3 then 4
 
 This applies to all Damage, including magical Damage.
 It continues through all Damage Bonuses, so $1D6+9$ Damage would be simply $3D6+1$ Damage after conversion.%
-\iftoggle{verbose}{\footnote{\stackingDamageChart}}{}
+\footnote{\stackingDamageChart}
 This also applies to lower Damage, so `2 Damage', would be $1D6-2$ damage.
 
 \subsubsection[Trapped/ Entangled: Character cannot use their Dexterity Bonus, and takes -2 Attack penalty]{Trapped or Entangled}
 \label{trapped}
 \label{entangled}
 
-\iftoggle{verbose}{
 Characters caught in mud, who slip over, or get shackled to a spot cannot move or dodge nearly as well as they could.
-They%
-}{Trapped characters}
-cannot use their Dexterity Bonus in Combat (penalties still apply), and take a -2 penalty to attacks.
+They cannot use their Dexterity Bonus in Combat (penalties still apply), and take a -2 penalty to attacks.
 
 \subsubsection[Falling Prone: -2 penalty when on the ground]{Falling Prone}
 \index{Prone}
@@ -722,10 +612,8 @@ Anyone can use them at any point, if they use the right weapons.
 \index{Brawling}
 
 Anyone can go for a brawling manoeuvre, even while using a weapon.
-\iftoggle{verbose}{%
-  Swinging an axe can place one in a vulnerable position -- on negative \glspl{ap}!
-  But since these attacks cost only 1 \gls{ap}, they won't deplete \glspl{ap} to fast.
-}{}
+Swinging an axe can place one in a vulnerable position -- on negative \glspl{ap}!
+But since these attacks cost only 1 \gls{ap}, they won't deplete \glspl{ap} to fast.
 
 Punches and kicks all use the Combat bonus.
 Such attacks inflict \glspl{fatigue}.
@@ -828,27 +716,20 @@ Shields can be strapped to the arm, without requiring any kind of dual-wielding.
 \begin{multicols}{2}
 
 \noindent
-\iftoggle{verbose}{%
-  Unsure if your \glspl{npc} want to fight?
-  Roll their Combat or Aggression Skill at \gls{tn} 7, plus the modifiers in the Morale Chart, before combat starts.
-  This group roll counts for everyone, so if the group roll a total of \gls{tn} 7, but one member is wounded, that member will fail the roll and flee.
-  Of course on the next round, this may prompt others to flee, as it changes the proportions of creatures to \glspl{pc}.
+Unsure if your \glspl{npc} want to fight?
+Roll their Combat or Aggression Skill at \gls{tn} 7, plus the modifiers in the Morale Chart, before combat starts.
+This group roll counts for everyone, so if the group roll a total of \gls{tn} 7, but one member is wounded, that member will fail the roll and flee.
+Of course on the next round, this may prompt others to flee, as it changes the proportions of creatures to \glspl{pc}.
 
-  You can use a single roll for an entire combat -- the \gls{gm} simply keeps that roll hidden.
-  If the enemy rolls a `12', all of them will probably fight until they die.
-  If they roll a `7', they may start to flee once wounded, and then more will flee once only half remain (but they continue to recheck only at the start of a round).
+You can use a single roll for an entire combat -- the \gls{gm} simply keeps that roll hidden.
+If the enemy rolls a `12', all of them will probably fight until they die.
+If they roll a `7', they may start to flee once wounded, and then more will flee once only half remain (but they continue to recheck only at the start of a round).
 
-  Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day.
+Most combats will end with one side or the other running away -- few troops want to fight to the last man when they could potentially be safe at home by the end of the day.
 
-  The players do not take morale checks -- they decide when it's time to run away by the look of the situation.
-  Usually a good time is when all the \gls{fp} have run out.
-  \footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
-
-}{%
-  \Glspl{npc} roll for Morale before combat starts, and keep the same roll throughout.
-  The \gls{tn} is 7, plus the \glspl{npc}'s Combat or Aggression Skill (whichever is higher), plus the modifiers in the Morale chart.
-  If any \gls{npc} fails the roll, they flee.
-}
+The players do not take morale checks -- they decide when it's time to run away by the look of the situation.
+Usually a good time is when all the \gls{fp} have run out.
+\footnote{The \glsentrytext{gm} may also wish to cut all Morale checks for any \glspl{npc} with remaining \glsentrytext{fp}.}
 
 When an enemy flees the scene after a fight has begun, characters still gain full \gls{xp} for the fight, since they still `defeated' the enemy.
 
@@ -864,24 +745,15 @@ On a tie, the \gls{gm} finally gets to decide what should happen.
 
 \begin{multicols}{2}
 
-\iftoggle{verbose}{
-  \begin{figure*}[t]
-  \chasechart
-  \end{figure*}
-}{
-  \begin{figure*}[t]
-  \footnotesize
-  \chasechart
-  \end{figure*}
-}
+\begin{figure*}[t]
+\chasechart
+\end{figure*}
 
 \subsection{Fleeing}
 
-\iftoggle{verbose}{
 Chases form some of the most dramatic scenes in any \glsentrytext{adventure}.
 When running on an open field without any barriers, everyone simply runs at full speed -- whoever has the highest Speed + Athletics total succeeds in running away or catching up with an opponent.
 But when running through marshes, down alleys, climbing up cliffs, or otherwise finding a reason to change direction, \glspl{pc} must roll.
-}{}
 
 The system is simple -- one player rolls $2D6$ for the group. Each person then modifies this group score. Since the party will probably run at different paces, they have the option of abandoning slower members or slowing down to the pace of the slowest member.
 
@@ -906,9 +778,7 @@ These \glspl{fatigue} are applied after every roll rather than waiting until the
 
 Players are encouraged to suggest Skills which might help. While running away from a band of guards, a character could use the Stealth Skill, quickly dipping into an alleyway to hide. When jumping around a busy area of town, the character might leap over a moving cart to gain some headway. Characters can, with \gls{gm} permission, use their Skills to aid an entire group. The Stealth Skill, in particular, might be used to aid the entire party to hide by finding the right spot. The Empathy Skill might be used to quickly convince farmers to hide the characters.
 
-\iftoggle{verbose}{
-  \input{story/14-run.tex}
-}{}
+\input{story/14-run.tex}
 
 \subsection{Hunting}
 
@@ -945,9 +815,7 @@ The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
 
 Animals use a \gls{skill} called Aggression.
 It works exactly like the Combat \gls{skill} but only for unarmed attacks.
-\iftoggle{verbose}{
-  Aggression measures an instinct and drive to harm and kill, so non-sentient undead will often use this Trait, just like any animal.
-}{}
+Aggression measures an instinct and drive to harm and kill, so non-sentient undead will often use this Trait, just like any animal.
 
 \subsubsection{Teeth and Claws}
 \label{teeth}
@@ -957,8 +825,6 @@ Both teeth and \emph{long} claws allow animals to grapple and damage with the sa
 So when an attack is successful, the target both receives Damage and counts as \textit{grappled}.%
 \footnote{See above, \autopageref{grappling}.}
 
-\iftoggle{verbose}{
-    \input{story/15-fatigue.tex}
-}{}
+  \input{story/15-fatigue.tex}
 
 \end{multicols}

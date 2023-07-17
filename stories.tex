@@ -2,9 +2,7 @@
 \label{stories}
 \index{Stories}
 
-\iftoggle{verbose}{
-  \widePic{Vladimir_Arabadzhi/escape}
-}{}
+\widePic{Vladimir_Arabadzhi/escape}
 
 \begin{multicols}{2}
 
@@ -13,7 +11,6 @@ Players `write' most of their backstory during play rather than before it.
 \Glspl{pc} can start off as blank slates with no history, but the history comes out of the woodwork soon after as players can spend 5 \glspl{storypoint} to bring their history into the current \gls{adventure}.
 Let's look at an example:
 
-\iftoggle{verbose}{
 \paragraph{Session 1} has the characters running from the local law.
 Jane's player spends 2 \gls{storypoint} and declares \textit{``Luckily, Jane has connections with the local thieves' guild, so she nips into an alley in the slums where the party can lay low for a while''}.
 
@@ -47,7 +44,6 @@ Additionally, Sindon's brother can join them, along with his bow.
 
 The various help here costs Sindon all of his 5 \glspl{storypoint}, but the result seems worth the cost.
 
-}{}
 \end{multicols}
 
 \section{\glsentrytext{storypoint} Rules}
@@ -63,24 +59,17 @@ The \gls{gm} is, of course, free to veto any Story suggestions without explanati
 
 All stories should be noted down on the back of the character sheet, including any stats from companions, just in case they enter during a later \gls{adventure}.
 
-\iftoggle{verbose}{
-  The \gls{gm} may wish to award a couple of additional \glspl{storypoint} over a very long \gls{downtime}.
-}{}
+The \gls{gm} may wish to award a couple of additional \glspl{storypoint} over a very long \gls{downtime}.
 
 \subsection{Experience Points}
 \label{storyXP}
 
 Each time a player spends a \gls{storypoint}, the character earns a number of \glspl{xp} equal to the number of \glspl{storypoint} they've spent so far.
-\iftoggle{verbose}{%
-  The first \gls{storypoint} grants 1 \glspl{xp}, the second grants 2, and so on.
-  If a character spends 3 \glspl{storypoint} to stipulate that their blacksmith uncle likes wandering around the depths of the forest, and lives in a small fort, then the player would receive ($1+2+3$) 6 \glspl{xp}.
+The first \gls{storypoint} grants 1 \glspl{xp}, the second grants 2, and so on.
+If a character spends 3 \glspl{storypoint} to stipulate that their blacksmith uncle likes wandering around the depths of the forest, and lives in a small fort, then the player would receive ($1+2+3$) 6 \glspl{xp}.
 
-  }%
-  {}
 This number remains fixed, even after character death, so if a \gls{pc} dies, the next character can only gain \glspl{xp} from spending \glspl{storypoint} once they have spent the same number as the last character.
-\iftoggle{verbose}{%
-  If the character above died, they would gain nothing from the first three \glspl{storypoint}, but would then receive 4 \glspl{xp} once they spent the fourth \gls{storypoint}.
-}{}
+If the character above died, they would gain nothing from the first three \glspl{storypoint}, but would then receive 4 \glspl{xp} once they spent the fourth \gls{storypoint}.
 
 \subsection{Combining Stories}
 
@@ -106,13 +95,11 @@ The players are strongly encouraged to suggest more to the \gls{gm} who will eit
 You have spent a significant amount of time in another culture. You know their language and enough of their background to transfer over basic Skill knowledge. If you have the Performance Skill and are familiar with elvish culture then you also know some Elvish songs.
 If you are familiar with gnoll culture and have the Empathy Skill then you know a range of details about gnoll etiquette and lineage.
 
-\iftoggle{verbose}{%
-  \begin{itemize}
-  \item While the dwarves think they're sneakily planning to stab you in plain sight, you actually learnt dwarvish from a blacksmith dwarf who decided to live among humans.
-  \item Back in the circus, the gnomes could never figure out your `elvish arrow trick'.
-  You eventually convinced them to teach you how they communicate through whistles in return for teaching them the trick.
-  \end{itemize}
-}{}
+\begin{itemize}
+\item While the dwarves think they're sneakily planning to stab you in plain sight, you actually learnt dwarvish from a blacksmith dwarf who decided to live among humans.
+\item Back in the circus, the gnomes could never figure out your `elvish arrow trick'.
+You eventually convinced them to teach you how they communicate through whistles in return for teaching them the trick.
+\end{itemize}
 
 \story{1}{The Surprise Skill}
 \label{surpriseSkill}
@@ -121,28 +108,26 @@ As you tell this story, you can buy a Skill level so long as you have the requis
 This cannot be a Skill which you have clearly lacked in the past, e.g. if your character has so far been illiterate then you cannot suddenly learn a level of Academics.
 However, if you have never wanted for Craft ability then you could declare that you have always known how to forge iron, or that you have the Seafaring Skill.
 
-\iftoggle{verbose}{
-  \begin{itemize}
+\begin{itemize}
+\item
+\iftoggle{aif}{
+  While working as one of the \gls{guard} in the Pebbles islands, you got your sea-legs.
+  Swimming through this underground lake shouldn't be a problem.
+  You immediately buy two levels of the Seafaring Skill.
   \item
-  \iftoggle{aif}{
-    While working as one of the \gls{guard} in the Pebbles islands, you got your sea-legs.
-    Swimming through this underground lake shouldn't be a problem.
-    You immediately buy two levels of the Seafaring Skill.
-    \item
-    You lost a younger sibling to a chitincrawler, and now that your troupe has finally come across one, your burning hatred kicks in as you rush forward.
-    You purchase the Knack `Chosen Enemy'.
-  }{
-    You're not one to boss others about, but now you need a plan you may as well pull out the training your brothers taught you about how to set an ambush, and how to wait patiently.
-    You buy the first level of the Tactics Skill.
-    \item
-    Despite your bad manners, you have learnt to read in the thieves' guild some time ago.
-    You used to use this skill to make forgeries, but there's nothing in principle stopping you from reading a book.
-    You buy the first level of the Academics Skill.
-  }
-  \item Protecting your siblings from griffin attacks on multiple occasions gave you all the knowledge you need to defend them.
-  You reveal you have the Knack `Guardian'.
-  \end{itemize}
-}{}
+  You lost a younger sibling to a chitincrawler, and now that your troupe has finally come across one, your burning hatred kicks in as you rush forward.
+  You purchase the Knack `Chosen Enemy'.
+}{
+  You're not one to boss others about, but now you need a plan you may as well pull out the training your brothers taught you about how to set an ambush, and how to wait patiently.
+  You buy the first level of the Tactics Skill.
+  \item
+  Despite your bad manners, you have learnt to read in the thieves' guild some time ago.
+  You used to use this skill to make forgeries, but there's nothing in principle stopping you from reading a book.
+  You buy the first level of the Academics Skill.
+}
+\item Protecting your siblings from griffin attacks on multiple occasions gave you all the knowledge you need to defend them.
+You reveal you have the Knack `Guardian'.
+\end{itemize}
 
 \story{1}{The Return}
 \label{oldnpc}
@@ -161,38 +146,34 @@ When the \gls{gm} asks you to make a check to gain knowledge, you can spend a \g
 You gain a +6 bonus to a single knowledge check.
 This does not count again for the same domain of expertise -- it is only a bonus to knowing one, single fact about the subject.
 
-\iftoggle{verbose}{%
-  \begin{itemize}
+\begin{itemize}
+\item
+The party want to know how the magical item works.
+You've failed the roll, but then remember you've seen this magical item in your mother's book collection.
+She had extensive shelves full of bizarre tomes, and all the leafing through those tomes finally paid off.
+\iftoggle{aif}{
+    \item
+    Once, in the \gls{shatteredcastle}, you overheard two guards talking with each other about a door in the hub.
+    You know it's in Whiteplains somewhere, and their talk of elves gave you a rough idea of the location.
   \item
-  The party want to know how the magical item works.
-  You've failed the roll, but then remember you've seen this magical item in your mother's book collection.
-  She had extensive shelves full of bizarre tomes, and all the leafing through those tomes finally paid off.
-  \iftoggle{aif}{
-      \item
-      Once, in the \gls{shatteredcastle}, you overheard two guards talking with each other about a door in the hub.
-      You know it's in Whiteplains somewhere, and their talk of elves gave you a rough idea of the location.
-    \item
-    It was unclear if the noble was telling the truth, but you recognise the dyes on his tunic; they come only from the Shale, which can only mean one thing\ldots
-  }{
-    \item
-    The party have you idea where they are, but you suddenly remember your uncle's maps.
-    They were always plastered all over the walls, and you used to imagine walking in those distant lands.
-  }
-  \end{itemize}
-}{}
+  It was unclear if the noble was telling the truth, but you recognise the dyes on his tunic; they come only from the Shale, which can only mean one thing\ldots
+}{
+  \item
+  The party have you idea where they are, but you suddenly remember your uncle's maps.
+  They were always plastered all over the walls, and you used to imagine walking in those distant lands.
+}
+\end{itemize}
 
 \story{1}{The Special Item}
 You may reveal you have any piece of \gls{adventure} equipment (see page \pageref{adventuringequipment}) or any item worth 10 \gls{sp} or less.
-\iftoggle{verbose}{%
-  Perhaps you have a flask of wine, kept from a special celebration, or a piece of chalk you kept after getting lost in a maze.
+Perhaps you have a flask of wine, kept from a special celebration, or a piece of chalk you kept after getting lost in a maze.
 
-  \begin{itemize}
-  \item The dungeon paths seem infinite, but you've come prepared.
-  After getting trapped in the king's endless prison rooms, you've always carried a piece of chalk to mark your route when there are no other markings.
-  \item The guards don't fancy letting some random wanderers through the door, but you've been saving a small bottle of dwarvish spirits for a special occasion, gifted by your family's dwarvish friend.
-  With a bit of water, it should be strong enough for all four of them.
-  \end{itemize}
-}{}
+\begin{itemize}
+\item The dungeon paths seem infinite, but you've come prepared.
+After getting trapped in the king's endless prison rooms, you've always carried a piece of chalk to mark your route when there are no other markings.
+\item The guards don't fancy letting some random wanderers through the door, but you've been saving a small bottle of dwarvish spirits for a special occasion, gifted by your family's dwarvish friend.
+With a bit of water, it should be strong enough for all four of them.
+\end{itemize}
 
 \story{1}{Old Friend}
 \label{sharedstories}%
@@ -204,17 +185,15 @@ If you are both of noble heritage, any money you get must be divided between you
 If you are both friends with a skilled armourer, they will only be able to repair one piece of armour at a time.%
 \footnote{This Story is transitive and symmetrical, so if player A shares a background with player B and player B shares a background with player C then player C also shares a background with player A.}
 
-\iftoggle{verbose}{%
-  \begin{itemize}
-  \item
-  When the game starts, you pick another character as a cousin.
-  When you declare you know elvish, the other character does as well.
-  Soon after, you both decide to return home, and get a royal welcome from the entire village.
-  \item
-  When a fellow \gls{pc} dies, someone needs to introduce a new character for them to return as.
-  You spend 2 \glspl{storypoint}, as per \nameref{oldFriend}, and declare him your brother.
-  \end{itemize}
-}{}
+\begin{itemize}
+\item
+When the game starts, you pick another character as a cousin.
+When you declare you know elvish, the other character does as well.
+Soon after, you both decide to return home, and get a royal welcome from the entire village.
+\item
+When a fellow \gls{pc} dies, someone needs to introduce a new character for them to return as.
+You spend 2 \glspl{storypoint}, as per \nameref{oldFriend}, and declare him your brother.
+\end{itemize}
 
 \index{Mana Lakes}
 \story{1}{The Mana Lake}
@@ -224,14 +203,12 @@ If the spot has a guardian then they are friendly to you.
 The place will not necessarily help you hide or defend yourself unless you are also spending \glspl{storypoint} to make it a place to rest.
 \footnote{Those following the Code of Experience gain no \glsentrytext{xp} for finding this location.}
 
-\iftoggle{verbose}{%
-  \begin{itemize}
-  \item After the battle, nobody has a drip of mana left, but you recall a nearby grove of elves, centred around a mana well.
-  They helped you out last time you had to run away from the law, and you're hoping they'll help you again.
-  \item You have the perfect idea for an artefact to help the town, but it will need a constant supply of mana.
-  You remember the local temple has a mana font, and the local priest of war -- Lucretius -- owes you a favour from that time you defended the temple from a drunken rabble trying to steal weapons.
-  \end{itemize}
-}{}
+\begin{itemize}
+\item After the battle, nobody has a drip of mana left, but you recall a nearby grove of elves, centred around a mana well.
+They helped you out last time you had to run away from the law, and you're hoping they'll help you again.
+\item You have the perfect idea for an artefact to help the town, but it will need a constant supply of mana.
+You remember the local temple has a mana font, and the local priest of war -- Lucretius -- owes you a favour from that time you defended the temple from a drunken rabble trying to steal weapons.
+\end{itemize}
 
 \story{1}{The Old Friend}
 \label{oldFriend}
@@ -239,19 +216,15 @@ You know someone in town who has just the skills you are all looking for.
 
 The player can make this character themselves, just like a normal character, but cannot purchase Combat, Projectiles or \glspl{fp}.
 The \gls{npc} begins with either 50 \glspl{xp}, or half the \glspl{xp} of whichever party member has the most (whichever is higher).
-\iftoggle{verbose}{%
-  So if one of the \glspl{pc} has 115 \glspl{xp}, the \gls{npc} would begin with 58 \glspl{xp}.
-}{}
+So if one of the \glspl{pc} has 115 \glspl{xp}, the \gls{npc} would begin with 58 \glspl{xp}.
 
-\iftoggle{verbose}{
-  This is a particularly important story, as these form the secondary characters which players can use if their first characters die.
+This is a particularly important story, as these form the secondary characters which players can use if their first characters die.
 
-  \begin{itemize}
-  \item Everyone wants to buy expensive chainmail, and your dwarvish friend just so happens to have retired here, selling top-quality armours of all types.
-  \item The party needs an expert tracker, and on the road you meet your brother.
-  He never liked people, so once he got out of the military, he began working independently as a bounty hunter.
-  \end{itemize}
-}{}
+\begin{itemize}
+\item Everyone wants to buy expensive chainmail, and your dwarvish friend just so happens to have retired here, selling top-quality armours of all types.
+\item The party needs an expert tracker, and on the road you meet your brother.
+He never liked people, so once he got out of the military, he began working independently as a bounty hunter.
+\end{itemize}
 
 \story{2}{The Ally}
 
@@ -267,16 +240,14 @@ These martial allies can accompany groups on dangerous missions.
 You know of a secluded and secret location where you will be safe.
 If your safe space is ever invaded due to events outside your control, you receive both Story points back if it is within the same session or 1 Story point back if it during a later session where the same place is used again.
 
-\iftoggle{verbose}{%
-  \begin{itemize}
-  \item The guards may be chasing after you, but the Mincing Pig is nearby.  It's famous for some nasty customers and a deep cellar where even the town guard don't want to enter.
-  It's been your regular bar since you were twelve years old, and you're sure they'll put you up.
-  \item The goblins have found your tracks, and they'll catch up soon.
-  However, you recall a nearby cave in the forest where you slept the last time you came through here on a mission with the other guards.
-  \item The bandits are catching up soon, but you recall a walled village nearby.
-  Your grandfather was the chief noble before he died, and you're hoping the guards remember you, despite your new beard.
-  \end{itemize}
-}{}
+\begin{itemize}
+\item The guards may be chasing after you, but the Mincing Pig is nearby.  It's famous for some nasty customers and a deep cellar where even the town guard don't want to enter.
+It's been your regular bar since you were twelve years old, and you're sure they'll put you up.
+\item The goblins have found your tracks, and they'll catch up soon.
+However, you recall a nearby cave in the forest where you slept the last time you came through here on a mission with the other guards.
+\item The bandits are catching up soon, but you recall a walled village nearby.
+Your grandfather was the chief noble before he died, and you're hoping the guards remember you, despite your new beard.
+\end{itemize}
 
 \iftoggle{aif}
 {
@@ -306,7 +277,6 @@ If your safe space is ever invaded due to events outside your control, you recei
   The total amount obtained is $2D6 \times 10$ gold pieces.%
   \footnote{Those following the Code of Acquisition gain no \gls{xp} for gaining gold through \glspl{storypoint}.}
 
-  \iftoggle{verbose}{%
     \begin{itemize}
     \item When you were back in the military, you and the platoon raided a rich person's house, stole a lot of items, then buried the valuables.
     You all swore not to return to the treasure for five years, but you need the money badly.
@@ -315,7 +285,6 @@ If your safe space is ever invaded due to events outside your control, you recei
     \item You found the local noble was hoarding illegal magical items, and you agreed to keep quiet for money.
     It's time to ask for a little more hush money.
     \end{itemize}
-  }{}
 }
 
 \end{multicols}

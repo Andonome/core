@@ -37,12 +37,9 @@ When used in conjunction with an Aggression score, it adds only +1.
 \subsubsection{Cutting Swing}
 
 The character can cut through more than one opponent at a time, or slice open multiple skulls with a single arc of metal.
-Any time the character reduces an opponent to 0 \glspl{hp}, the remaining damage transfers to
-\iftoggle{verbose}{%
-  any other opponent in range as the weapon slices across multiple throats, stomachs, and limbs.
-  This process recurs until either no damage or no enemies remain.
+Any time the character reduces an opponent to 0 \glspl{hp}, the remaining damage transfers to any other opponent in range as the weapon slices across multiple throats, stomachs, and limbs.
+This process recurs until either no damage or no enemies remain.
 
-}{the next viable target.}
 The same attack roll can be recycled for the secondary target, so if a character rolls `11' to attack, then the next opponent receives this strike only if the roll of `11' would hit them.
 
 This knack can only be used with missile weapons if enemies are standing in a direct line.
@@ -96,10 +93,8 @@ Normally, Sneak Attacks inflict +2 Damage, so someone with 3 Knacks would inflic
 \subsubsection{Precise Strike}\label{precisestrike}
 
 The character requires 1 less to achieve a Vitals Shot (see page \pageref{vitals}).
-\iftoggle{verbose}{
-  For example, when targeting an opponent with an Attack score of +2 and Partial armour, someone would normally require a score of 9 to hit and a score of 12 to make a Vitals Shot which ignores all armour.
-  With this Knack they still require a score of 9 to hit but only a score of 11 to make a Vitals Shot.
-}{}
+For example, when targeting an opponent with an Attack score of +2 and Partial armour, someone would normally require a score of 9 to hit and a score of 12 to make a Vitals Shot which ignores all armour.
+With this Knack they still require a score of 9 to hit but only a score of 11 to make a Vitals Shot.
 People with this Knack can also bypass Perfect armour by rolling 6 points above the target's \gls{tn}.
 
 \subsubsection{Snap Shot}
@@ -130,14 +125,10 @@ Enemies receive a -2 penalty when taking Morale Checks.
 
 \subsubsection{Weapon Master}
 
-\iftoggle{verbose}{
-  The character has trained long and hard with a particular weapon, such as a longsword, spear, shortbow, or rocks.
-  They gain +1 to your Combat or Projectiles Bonus when using that weapon.
-  
-}{
-  The character gains +1 to the Combat or Projectiles score when using a specialized weapon.
-}%
-  The character can specialize in a number of weapons equal to half the number of knacks they have (rounded up).
+The character has trained long and hard with a particular weapon, such as a longsword, spear, shortbow, or rocks.
+They gain +1 to your Combat or Projectiles Bonus when using that weapon.
+
+The character can specialize in a number of weapons equal to half the number of knacks they have (rounded up).
 
 \end{multicols}
 
@@ -161,20 +152,15 @@ They only receive new levels during \gls{downtime}.
 
 \textbf{Spheres:} Aldaron, Enchantment, Force, Invocation, Polymorph
 
-\iftoggle{verbose}{%
 \noindent Certain races, such as elves and dragons, are naturally magical and can learn forms of innate magic. Some humans with a touch of elven (or even draconic) blood have been known to walk the Path of Blood.
-}{}
+
 
 \paragraph{Special Considerations}
 
-\iftoggle{verbose}{%
-  Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
+Most elves look down upon people who learn magic through rote facts and dusty tomes, seeing their innate connection to the magic of the world as a higher and purer form of magical ability.
 
-  Blood sorcerers are barred from ritual spells -- spending all day trying to cast a spell will not help in the slightest.
+Blood sorcerers are barred from ritual spells -- spending all day trying to cast a spell will not help in the slightest.
 
-}{
-  Blood sorcerers cannot use ritual spells.
-}
 
 \subsubsection{Divine Caster}
 
@@ -187,9 +173,7 @@ To start on the path of devotion, the character requires a level in Academics in
 
 The appearance of spells and the form of mana stones varies depending upon deity.
 
-\iftoggle{verbose}{%
 This path is most commonly taken by humans and the occasional gnoll. Gnomes don't acknowledge gods, elves think they \emph{are} gods and dwarves tend to view their own rune magic as divine in a very general sense.
-}{}
 
 \paragraph{Special Considerations}
 
@@ -226,9 +210,7 @@ They could only use it for runic magics, but later they could spend 5 \gls{xp} t
 
 Runes can never be cast in a subtle way. All castings will be entirely obvious. Ritual castings are a particularly long affair, often taking an entire day's work and always require runes to be dented or impressed into something rather than just written out.
 
-\iftoggle{verbose}{
-  \pic{Roch_Hercka/dwarvish_runes}
-}{}
+\pic{Roch_Hercka/dwarvish_runes}
 
 \subsubsection{Extreme Focus}
 
@@ -238,9 +220,7 @@ All ritual spells cast with this focus grant a bonus to the caster's Intelligenc
 
 \subsubsection{Snap Caster}
 
-\iftoggle{verbose}{
-  The character is particularly adept at casting spells quickly, and therefore in Combat.
-}{}
+The character is particularly adept at casting spells quickly, and therefore in Combat.
 \Glspl{miracleworker} with this knack spend 1 less \gls{ap} when casting \textit{Fast} spells.
 
 \subsubsection{Song Caster}
@@ -261,10 +241,8 @@ The caster's magic is fuelled by hatred and tenacity.
 If the character has 0 \gls{fp} and loses a single \gls{hp} then they gain +2 to their effective Intelligence Bonus until the end of the scene.
 If they have lost half their \gls{hp} then they gain an additional bonus equal to the number of Knacks they have.
 
-\iftoggle{verbose}{
 For example, a caster with just this knack might lose 2 \glspl{hp} then gain an effective +2 bonus to casting Fireball spells and a +2 bonus to the Damage inflicted by such spells.
 When they are later struck again and go down to 1 \gls{hp} then they gain a +3 bonus to such spells and a +3 bonus to Damage.
-}{}
 
 This Knack can only be used when there is a legitimate grievance.
 The mage does not gain the bonus when they have harmed themself.
@@ -307,17 +285,12 @@ Any scene which they end with a rest allows them to heal 2 additional \glspl{fat
 \index{Specialisation}
 
 A specialist has exceptional abilities within a fairly narrow environment or domain, and gains a +2 bonus on relevant rolls.
-\iftoggle{verbose}{%
-  This general Knack allows Academics to specialize in history, for craftsmen to devote themselves to metallurgy, and for performers to achieve exceptional performances with their favoured instrument.
+This general Knack allows Academics to specialize in history, for craftsmen to devote themselves to metallurgy, and for performers to achieve exceptional performances with their favoured instrument.
 
-  These specializations cannot include combat skills, but can add to rolls for casting spells.
-  Even if a particular skill inspired a specialization, it still applies to any skill.
-  Someone with a specialization in aurochs can use that bonus for tracking them (with Wyldcrafting), using their hide to make armour (assuming they can make armour), and healing them (if they have the Medicine Skill).
+These specializations cannot include combat skills, but can add to rolls for casting spells.
+Even if a particular skill inspired a specialization, it still applies to any skill.
+Someone with a specialization in aurochs can use that bonus for tracking them (with Wyldcrafting), using their hide to make armour (assuming they can make armour), and healing them (if they have the Medicine Skill).
 
-  A good deal of professionals have this specialization -- in fact you can almost assume that any blacksmith has Crafts, but knows metallurgy better than anything else, and that any academic will have some `special interest'.
-}{
-  Specializations include tracking, navigation, horses, open-fields, dockyards, vegetables, or any other sufficiently narrow, non-combat area of interest.
-  The bonus applies to all rolls.
-}
+A good deal of professionals have this specialization -- in fact you can almost assume that any blacksmith has Crafts, but knows metallurgy better than anything else, and that any academic will have some `special interest'.
 
 \end{multicols}

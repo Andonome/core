@@ -13,15 +13,7 @@ Subject={TTRPG},
 Keywords={TTRPG,RPG,roleplaying}
 }}
 
-\ifStrSame{\jobname}{BIND_ref}%
-  {\settoggle{verbose}{false}}
-  {\settoggle{verbose}{true}}
-
 \externalReferent{aif}
-
-\iftoggle{verbose}{}{
-  \geometry{a5paper}
-}
 
 \input{glossary.tex}
 \iftoggle{aif}{
@@ -40,11 +32,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \tableofcontents
 
-\iftoggle{verbose}{
-  \include{intro.tex}
-}{
-  \fontsize{8}{7}\selectfont
-}
+\include{intro.tex}
 
 \iftoggle{aif}{
   \chapter*{Monsters \& Malthus}
@@ -71,20 +59,16 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{spheres.tex}
 
-\iftoggle{verbose}{
-  \include{races.tex}
+\include{races.tex}
 
-  \include{gm.tex}
-}{}
+\include{gm.tex}
 
 \input{appendix.tex}
 
-\iftoggle{verbose}{
-  \include{cs/reset_cs.tex}
+\include{cs/reset_cs.tex}
 
-  \include{cs/GS.tex}
+\include{cs/GS.tex}
 
-  \include{cs/CS.tex}
-}{}
+\include{cs/CS.tex}
 
 \end{document}

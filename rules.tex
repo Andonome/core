@@ -38,11 +38,7 @@
 
 }
 
-\iftoggle{verbose}{%
-  \sidebox{
-  \TNChart
-  }
-}{
+\sidebox{
   \TNChart
 }
 
@@ -80,12 +76,10 @@ Attributes and \glspl{skill} usually go as high as +3, so a +6 bonus is possible
 
 Poor Attributes give a penalty, rather than a bonus.
 
-\iftoggle{verbose}{All actions are assumed to have a \gls{tn} of 7 unless your \gls{gm} states otherwise.
+All actions are assumed to have a \gls{tn} of 7 unless your \gls{gm} states otherwise.
 Don't ask -- just roll!
 
 \input{story/4-rolls.tex}
-
-}{}
 
 \subsection{One Roll Only}
 
@@ -184,9 +178,7 @@ Two companions with a +3 bonus would add a total of a +2 bonus.
   \end{itemize}
 \end{exampletext}
 
-\iftoggle{verbose}{
-  \input{story/6-team.tex}
-}{}
+\input{story/6-team.tex}
 
 \subsubsection{Stacking}
 \index{Stacking}
@@ -202,19 +194,17 @@ Convincing the townsfolk that they need to rebel against the baron, and could ea
 
 \end{exampletext}
 
-\iftoggle{verbose}{
 \noindent%
 \begin{footnotesize}%
 \begin{tabularx}{\linewidth}{Y |cccc}
-                      & Alicia & Snowstorm & Chatrik & Drake \\
-  \hline
-  Charisma + Tactics: & +3     & $+\frac{3}{2}$      & $+\frac{2}{4}$      & $+\frac{1}{8}$    \\
-  Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
-  \hline
-  Total:      &          +6 & & &\\
+                    & Alicia & Snowstorm & Chatrik & Drake \\
+\hline
+Charisma + Tactics: & +3     & $+\frac{3}{2}$      & $+\frac{2}{4}$      & $+\frac{1}{8}$    \\
+Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
+\hline
+Total:      &          +6 & & &\\
 \end{tabularx}
 \end{footnotesize}
-}{}
 
 \subsection{Resisted Actions}
 \index{Resisted Actions}
@@ -223,9 +213,7 @@ Convincing the townsfolk that they need to rebel against the baron, and could ea
 When \glspl{npc} resist the players actions, one side rolls as normal, while the other adds their ability to the \gls{tn}.
 
 
-\iftoggle{verbose}{
-  \input{story/7-resisted.tex}
-}{}
+\input{story/7-resisted.tex}
 
 \subsection{Margins}
 \index{Margins}
@@ -239,20 +227,13 @@ The \gls{gm} might use a Margin for some variable, for example a bard attempting
 Margins might also be used to gain bonuses on later rolls.
 Someone attempting to impress a noble court might roll Charisma with the Tactics Skill; the bigger the Margin the more troops they will be trusted with.
 
-\iftoggle{verbose}{
-  \input{story/8-hiding.tex}
-}{}
+\input{story/8-hiding.tex}
 
-\iftoggle{verbose}{
 \subsection{What the Dice Mean}
 
 You might think of the dice as representing random chance in the environment. Just how irritated is that person you're trying to question, and how creative is that craftsman feeling today? Dice are never re-rolled for different results on the same action because once the dice have told you what the situation is, the situation stays put.
 
 Such a do-over still suggests initial failure; it just means that the character is trying over and over again until a better result is obtained.
-}{
-\subsection{No Rerolls}
-Characters attempting to change a Standard Action into a \gls{restingaction} do not reroll but rather keep the same roll and turn one die up to show a 6.
-}%
 Actions cannot be attempted multiple times with rerolls unless the situation has changed notably.
 
 \end{multicols}
@@ -279,20 +260,15 @@ The suggested starting \glspl{xp} is 50, with up to 150 \glspl{xp} for more adva
 
 Players receive \gls{xp} from the \gls{gm} for killing monsters, fulfilling their codes, and completing missions.
 Larger and more dangerous monsters garner more \gls{xp}, as do grander missions.
-\iftoggle{verbose}{%
 The personal goals and piety of a character are denoted by different codes of belief and gods.
 See page \pageref{gods_codes} for details on the gods and personal codes of honour.
 
-\iftoggle{verbose}{
   Players also gain \glspl{xp} for spending \glspl{storypoint} (see page \pageref{storyXP}).
-}
-{}
 
 \subsubsection{Training Time}
 
 The \gls{gm} may wish to only award \gls{xp} at the end of a session, and may restrict when it can be spent.
 Each Trait should increase by no more than a single level during the course of one \gls{adventure} -- you might be lucky enough to get enough \gls{xp} to raise your Strength from -2 to +1 in a single session, but nobody can accrue that kind of muscle mass in such a short period of time.
-}{}
 
 \subsubsection{What Counts?}
 
@@ -300,8 +276,6 @@ Enemies don't have to be killed for the \gls{xp}, merely defeated.
 Any enemies fleeing count for half their \gls{xp} value so long as they engaged in one round of combat.
 
 \subsection{Experience Points \& the Discount}
-
-\iftoggle{verbose}{
 
 Standing alone against a towering ogre is a nightmare, but three warriors standing against three ogres can be much easier.
 A battle against thirty goblins can really take its toll, but three different battles against ten goblins can be child's play.
@@ -311,9 +285,7 @@ For every member of the party, that many points are deducted from one monster's 
 If the party has two members, the first two monsters have 2 \gls{xp} deducted from their total value.
 If the party has five members, the first five monsters have 5 \gls{xp} deducted from their total.
 
-\iftoggle{verbose}{
-  \sidepic{Roch_Hercka/xp-1}
-}{}
+\sidepic{Roch_Hercka/xp-1}
 
 If a single warrior defeats a dragon worth 22 \gls{xp}, then the warrior receives 21 \gls{xp}, because 1 \gls{xp} is removed from the total.
 If he fights 10 ghouls worth 2 \gls{xp} each, then he receives 1 for the first, and 2 for the rest, for a total of 19 \gls{xp}.
@@ -322,22 +294,16 @@ However, if five characters are fighting the 10 ghouls together, they each deduc
 The first five ghouls are worth nothing, because each net ($2 - 5 = $) 0 \gls{xp}.
 Only the last 5 ghouls count, bringing 10 \gls{xp} in total.  Dividing this among 5 players, each receives 2 \gls{xp} at the end.
 
-}{}
 
 If players need to discount multiple adversaries, they are counted from highest to lowest \gls{xp} value.
 
 \subsubsection{Mass-Damage Discount}
 \label{xpCreatureMax}
 
-\iftoggle{verbose}{%
-  Sufficiently powerful characters can take out entire armies with a single spell.
-  However, only the first 10 enemies killed by a single action give \glspl{xp}.
-  Any further enemies give no \glspl{xp}.
-  Killing 80 goblins with a \textit{Massive Fireball} grants the same \glspl{xp} as killing 10.
-}{
-  Players may receive \glspl{xp} for killing up to 10 creatures within a single action.
-  The highest \gls{xp} total is taken first, then the second highest, and then the third.
-}
+Sufficiently powerful characters can take out entire armies with a single spell.
+However, only the first 10 enemies killed by a single action give \glspl{xp}.
+Any further enemies give no \glspl{xp}.
+Killing 80 goblins with a \textit{Massive Fireball} grants the same \glspl{xp} as killing 10.
 
 \subsection{Spending \gls{xp}}
 
@@ -494,16 +460,12 @@ War horses aren't much faster than regular horses, but they won't become so easi
 
 Hunting dogs are mostly useless in warfare, but they make excellent watchmen.
 
-\iftoggle{verbose}{
-  \pic{Roch_Hercka/dwarf_encumbrance}
-}{} 
+\pic{Roch_Hercka/dwarf_encumbrance}
 
-\iftoggle{verbose}{
 \begin{figure*}[t!]
   \settoggle{examplecharacter}{false}
   \weaponsChart
 \end{figure*}
-}{}
 
 \subsection{Weight \& Encumbrance}
 \index{Weight}
@@ -526,25 +488,14 @@ Items carried in only one hand count as having +2 to the \gls{weightrating}, so 
 Characters cannot carry any item which gives them a -5 Encumbrance rating or higher.
 They can, however, drag items with up to a \gls{weightrating} of up to 10 points above their Strength Attribute (rough surfaces can increase the requirement substantially).
 
-\iftoggle{verbose}{
-  \begin{figure*}[t!]
-  \servicesChart
-  \end{figure*}
-}{
-  \begin{figure*}[t!]
-  \footnotesize
-  \servicesChart
-  \end{figure*}
-}
+\begin{figure*}[t!]
+\servicesChart
+\end{figure*}
 
-\iftoggle{verbose}{
-  \input{story/encumbrance.tex}
-}{}
+\input{story/encumbrance.tex}
 
-\iftoggle{verbose}{
-  \input{story/equipment.tex}
-  \input{story/cc.tex}
-}{}
+\input{story/equipment.tex}
+\input{story/cc.tex}
 
 \subsection{Services}
 \label{services}
@@ -641,14 +592,10 @@ At the end of every \gls{adventure}, \gls{downtime} should be called, and all ch
 \subsubsection{\glsentrytext{downtime}}
 
 \Gls{downtime} is when the current stories come to a close and the \glspl{pc} take a rest.
-\iftoggle{verbose}{%
-  This non-\gls{adventure} period allows the \glspl{pc} to heal, and advance Traits.
-  It can be weeks, years, or even decades.
-  The party can declare \gls{downtime} at any point once the \glspl{pc} have reached a safe area, although the \gls{gm} is free to interrupt that \gls{downtime} with events.
-  Likewise, the \gls{gm} can declare a \gls{downtime} at any point, but the players can interrupt this with personal missions.
-}{
-  After downtime, \glspl{pc} receive an amount of \glspl{storypoint} equal to the square root of the number of years spent.
-}
+This non-\gls{adventure} period allows the \glspl{pc} to heal, and advance Traits.
+It can be weeks, years, or even decades.
+The party can declare \gls{downtime} at any point once the \glspl{pc} have reached a safe area, although the \gls{gm} is free to interrupt that \gls{downtime} with events.
+Likewise, the \gls{gm} can declare a \gls{downtime} at any point, but the players can interrupt this with personal missions.
 
 \subsubsection{Healing}
 \label{healing}
@@ -677,9 +624,7 @@ When gallivanting through open plains one \gls{area} might be a copse of trees, 
 
 Regions encompasses a full forest, a town, or a collection of villages.
 Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.%
-\iftoggle{verbose}{%
 \footnote{If all this looks like a repugnant abstraction, just set a step to a yard, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
-}{}
 
 \end{multicols}
 
