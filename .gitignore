@@ -36,3 +36,5 @@ old
 *.slo
 *.sls
 .switch-*
+*.fls
+*latexmk

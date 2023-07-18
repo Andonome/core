@@ -1,32 +1,26 @@
-output: main.pdf
-book: main.pdf
-	mv main.pdf BIND.pdf
+BOOK = $(shell basename "$$(pwd)")
+
+output: $(BOOK).pdf
 
 global: config/bind.sty .switch-gls
 .switch-gls:
-	touch -r Makefile .switch-gls
+	@touch -r Makefile .switch-gls
 config/bind.sty:
-	git submodule update --init
+	@git submodule update --init
 
-main.pdf: main.gls config $(wildcard *tex)
-	pdflatex main.tex
-main.gls: svg-inkscape/logo_svg-tex.pdf
-	makeglossaries main
-	pdflatex main.tex
-svg-inkscape/logo_svg-tex.pdf: images/ global
-	pdflatex -shell-escape main.tex
-	pdflatex main.tex
-	pdflatex main.tex
+svg-inkscape: | config/bind.sty
+	@pdflatex -shell-escape -jobname $(BOOK) main.tex
+$(BOOK).glo: | svg-inkscape
+	@pdflatex -jobname $(BOOK) main.tex
+$(BOOK).sls: | $(BOOK).glo
+	@makeglossaries $(BOOK)
+$(BOOK).pdf: $(BOOK).sls
+	@pdflatex -jobname $(BOOK) main.tex
 
-svg-inkscape: global
-	pdflatex -shell-escape -jobname main.tex
-	pdflatex -jobname main.tex
-
-resources: resources.pdf
-resources.pdf: main.gls global
-	pdflatex resources.tex
-
-all: resources book 
+all: $(BOOK).pdf 
+	latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
 
 clean:
 	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape
+
+.PHONY: clean all

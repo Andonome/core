@@ -11,5 +11,4 @@ compile_pdf:
     - run
   artifacts:
     paths:
-      - BIND.pdf
-      - resources.pdf
+      - core.pdf
