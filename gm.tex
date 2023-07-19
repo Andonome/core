@@ -33,11 +33,10 @@ Of course, the \gls{gm} sheet has a spot open at the top for the date.
 Exactly how much time passes between sessions does not matter, almost every downtime should match.
 Characters might rest up between sessions for a week, or even a month.
 Longer \glspl{downtime} will allow players to stipulate what their characters have been doing during that time, while shorter \glspl{downtime} will leave the alchemists very little room to study anything.
-\iftoggle{aif}{%
+
   Of course Fenestra has its own complications, given the strange seasons,%
   \footnote{See Fenestra's \autoref{seasons} for more on the seasons.}
   but they lend themselves well to longer breaks; with one season passing every session, \glspl{pc} in the \gls{guard} can take breaks from adventuring in the town, and every session will bring dramatic new weather.
-}{}
 
 Of course, if a troupe can't make it back in time, they will have problems.
 If the same people arrive next week -- no problem!
@@ -156,8 +155,8 @@ A crappy roll to open a door suggests the massive door has wedged properly shut.
 A fantastic roll to talk to the local lord might indicate he has family in that character's home village.
 Explaining dice results can come easier than making up a situation whole-cloth.
 
-If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense; when one \gls{pc} `just fails' to convince a \iftoggle{aif}{town master}{baron} to fund their \gls{adventure}, another might step in to `try their luck' (with the dice).
-But if the first player to roll understands that the \iftoggle{aif}{town master}{baron}'s raging toothache has put him in a foul mood, the rest should understand that the result (or at least the roll) will remain no matter who tries to speak with him.
+If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense; when one \gls{pc} `just fails' to convince a town master to fund their \gls{adventure}, another might step in to `try their luck' (with the dice).
+But if the first player to roll understands that the town master's raging toothache has put him in a foul mood, the rest should understand that the result (or at least the roll) will remain no matter who tries to speak with him.
 This leaves room for some other \gls{pc}, with better stats, to succeed in the endeavour (by using the same roll), but does not encourage a ring of players rolling dice like a bunch of bored gamblers.
 
 \subsubsection{Let Players `Ruin' the \Glsentrytext{adventure}}
@@ -254,39 +253,38 @@ Removing the monster slaying focus should initially demand players spend \glspl{
 \end{multicols}
 
   \begin{figure*}[t!]
-  \begin{nametable}[c||L|L|LLLL|L|L,fontupper=\footnotesize,]{Encounter in \iftoggle{aif}{Mt Arthur}{Crawling Valley}}
+  \begin{nametable}[c||L|L|LLLL|L|L,fontupper=\footnotesize,]{Encounter in The Crawling Valley}
 
     & \textbf{Villages} & \textbf{Villages, Edge} & \textbf{Villages, Edge, Forest} & \textbf{Villages, Edge, Forest}  & \textbf{Villages, Edge, Forest} & \textbf{Villages, Edge, Forest} & \textbf{Edge, Forest} & \textbf{Forest} \\
   \hline
   \textbf{Rolls} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} \\
   \hline
   \hline
-  \iftoggle{aif}{
     \textbf{8} & Villagers celebrating a local festival & Sulphur Winds & Lightning Storm & Earthquake & Hurricane & \A\ Mouthdigger & \E\ $1D6+1$ Woodspies mating & Forest Fire \\
     \hline
-  }{}
-  \textbf{7} & Flood & Heatwave & \A\ \iftoggle{aif}{Mouthdigger}{Owlbear} & Rain & \A\ \iftoggle{aif}{Chitincrawler}{$3D6$ Stirges} & \E\ \iftoggle{aif}{Woodspy}{Giant Snake} & \A\ \iftoggle{aif}{Chitincrawler}{Giant Spider} Eggsack & \A\ Basilisk \\
+
+  \textbf{7} & Flood & Heatwave & \A\ Mouthdigger & Rain & \A\ Chitincrawler & \E\ Woodspy & \A\ Chitincrawler Eggsack & \A\ Basilisk \\
   \hline
-  \textbf{6} & \Hu\ Noble Caravan & \Hu\ $1D6+4$ \iftoggle{aif}{\glspl{guard}}{Adventurers} & \E\ \iftoggle{aif}{Woodspy}{Giant Spider} & \El\ $1D6$ Tourists & Rain & \A\ Bear & \E\ \iftoggle{aif}{Woodspy}{Giant Spider} & \A\ \iftoggle{aif}{Chitincrawler}{$1D6+5$ Wargs} \\
+  \textbf{6} & \Hu\ Noble Caravan & \Hu\ $1D6+4$ Adventurers & \E\ Woodspy & \El\ $1D6$ Tourists & Rain & \A\ Bear & \E\ Woodspy & \A\ Chitincrawler \\
   \hline
-  \textbf{5} & \Hu\ $1D6$ \iftoggle{aif}{\glspl{guard}}{Adventurers} & \Hu\ $1D6+8$ Ale Guild Nomads selling flour & \Hu\ $1D6+4$ Bandits & \A\ $1D6+6$ Wolves & Lightning Storm & \A\ \iftoggle{aif}{Chitincrawler}{Owlbear} & \A\ Deer & Mana Lake \\
-  \textbf{4} & \Hu\ Villager Funeral & \Hu\ $1D6+3$ Paper Guild Nomads selling books & Storm & \A\ Bear & \A\ $1D6+2$ Wolves & \A\ \iftoggle{aif}{Mouthdigger}{Cockatrice} & \A\ Basilisk & \A\ Basilisk \\
-  \textbf{3} & \Hu\ $1D6+2$ Villagers selling wool & \Hu\ $1D6+3$ \iftoggle{aif}{\glspl{guard}}{Soldiers} & \Hu\ $1D6$ \iftoggle{aif}{\gls{guard} Scouts}{Adventurers} & \Hu\ $1D6$ \iftoggle{aif}{Refugees from destroyed village}{Henchmen leaving a dead adventuring party} & \Hu\ $1D6+4$ Brigands & \Nl\ $1D6+2$ Gnolls & \Hu\ $1D6+4$ Brigands & \El\ $1D6$ Wanderers \\
+  \textbf{5} & \Hu\ $1D6$ \glspl{guard} & \Hu\ $1D6+8$ Ale Guild Nomads selling flour & \Hu\ $1D6+4$ Bandits & \A\ $1D6+6$ Wolves & Lightning Storm & \A\ Chitincrawler & \A\ Deer & Mana Lake \\
+  \textbf{4} & \Hu\ Villager Funeral & \Hu\ $1D6+3$ Paper Guild Nomads selling books & Storm & \A\ Bear & \A\ $1D6+2$ Wolves & \A\ Mouthdigger & \A\ Basilisk & \A\ Basilisk \\
+  \textbf{3} & \Hu\ $1D6+2$ Villagers selling wool & \Hu\ $1D6+3$ \glspl{guard} & \Hu\ $1D6$ \gls{guard} Scouts & \Hu\ $1D6$ Refugees from destroyed village & \Hu\ $1D6+4$ Brigands & \Nl\ $1D6+2$ Gnolls & \Hu\ $1D6+4$ Brigands & \El\ $1D6$ Wanderers \\
   \hline
   \textbf{2}
     & \Hu\ $2D6$ Pilgrims
     & \Hu\ Priest of \gls{naturegod}
     & Storm
     & \Hu $1D6+6$ Bandits
-    & \A\ \iftoggle{aif}{Mouthdigger}{Owlbear}
+    & \A\ Mouthdigger
     & \A\ $1D6$ Griffins
     & \A Boar
     & \A\ $1D6$ Griffins
     \\
   \hline
-  \textbf{1} & \Hu\ Travelling Bard & \Hu\ $3D6$ Paper Guild Nomads & \Dw\ $3D6$ \iftoggle{aif}{Sword Guild Nomads}{Soldiers} & \A\ Griffin & \Hu\ $1D6+6$ Bandits & \A\ $1D6$ Griffins & \A\ Deer & \A\ Aurochs \\
+  \textbf{1} & \Hu\ Travelling Bard & \Hu\ $3D6$ Paper Guild Nomads & \Dw\ $3D6$ Sword Guild Nomads & \A\ Griffin & \Hu\ $1D6+6$ Bandits & \A\ $1D6$ Griffins & \A\ Deer & \A\ Aurochs \\
   \hline
-  \textbf{0} & \Hu\ $1D6$ Begging Villagers & \Hu\ $1D6+8$ Bandits & Snowfall & Hailstorm & \A\ $1D6+5$ Hungry Wolves & Snowstorm & \A\ Boar & \A\ $1D6$ Hibernating \iftoggle{aif}{Chitincrawler}{Bear} \\
+  \textbf{0} & \Hu\ $1D6$ Begging Villagers & \Hu\ $1D6+8$ Bandits & Snowfall & Hailstorm & \A\ $1D6+5$ Hungry Wolves & Snowstorm & \A\ Boar & \A\ $1D6$ Hibernating Chitincrawler \\
   \end{nametable}
   \end{figure*}
 
@@ -299,14 +297,10 @@ Removing the monster slaying focus should initially demand players spend \glspl{
 
 \subsection{Creating Encounters}
 
-\iftoggle{aif}{%
-  Random Encounters have shaped Fenestra into a dangerous, untamed land.
-  They ensure every village on the \gls{edge} has a tall wall, and push everyone without their own land or function into the \gls{guard}.
-}{
-  Each area in your world should have its own encounter table, giving it a unique feel, and showing the players what kinds of creatures, weather patterns, and people live there.
-}
+Random Encounters have shaped Fenestra into a dangerous, untamed land.
+They ensure every village on the \gls{edge} has a tall wall, and push everyone without their own land or function into the \gls{guard}.
 
-Check the following encounter table for the \iftoggle{aif}{Mt Arthur}{Crawling Valley} region.
+Check the following encounter table for the Mt Arthur region.
 If we roll $2D6$, we can call the first dice `the left hand die', and the second `the right hand die'.
 If the left hand die lands on a `6', and the right on a `4', then the troupe have encountered $1D6+2$ Wolves.
 Note the `animal' symbol (\A), indicating an encounter with a non-sentient species.
@@ -335,21 +329,16 @@ Areas with starkly different terrain-types might add `+2' to a roll with nothing
 Cold seasons bring freezing winds, but many of the more dangerous predators can also go into hibernation.
 Warmer seasons have their own challenges, including floods in some colder regions, or heatwaves in warmer regions.
 
-\iftoggle{aif}{
-  Fenestra has an additional season type -- `Stormy'.
-  During these times, lightning cracks, the ground quakes, and wind rages.
-  These add +2 to the right hand die.
+Fenestra has an additional season type -- `Stormy'.
+During these times, lightning cracks, the ground quakes, and wind rages.
+These add +2 to the right hand die.
 
-  So if the troupe travel through the villages and the encounter roll is `3/6', a stormy season would bring a Lightning Storm.
-  Later in the forest, the same roll would bring a hurricane.
-}{
-  If the area has seasons (and not all do) then Winter should subtract 1 from the right hand die, while Summer should add +1.
-  During Winter, column `4' loses the travelling elves, replacing them with a hailstorm; and column `6' replaces the bear with a Snowstorm.
-}
+So if the troupe travel through the villages and the encounter roll is `3/6', a stormy season would bring a Lightning Storm.
+Later in the forest, the same roll would bring a hurricane.
+If the area has seasons (and not all do) then Winter should subtract 1 from the right hand die, while Summer should add +1.
+During Winter, column `4' loses the travelling elves, replacing them with a hailstorm; and column `6' replaces the bear with a Snowstorm.
 
-\iftoggle{aif}{
-  Check out the other encounter tables in \textit{Adventures in Fenestra}, \autopageref{regionEncounters}.
-}{}
+Check out the other encounter tables in \textit{Adventures in Fenestra}, \autopageref{regionEncounters}.
 
 \subsubsection{Encounter Tempo}
 \index{Encounter Tempo}
@@ -400,7 +389,7 @@ Rolling ahead of time like this can help keep sessions fluid, and for some extra
 
 If you can't immediately tell if an encounter should be aggressive, roll the creature's morale (\autopageref{morale}).
 They can retain this roll throughout combat.
-For example, if a \iftoggle{aif}{Chitincrawler}{giant spider} gets an `8' on the morale check, it attacks, but after becoming wounded, it may flee, because the wound brings it down to `6'.
+For example, if a chitincrawler gets an `8' on the morale check, it attacks, but after becoming wounded, it may flee, because the wound brings it down to `6'.
 
 Intelligent creatures may not flee, but act friendly if they roll a low morale result.
 Bandits encountered on the road might pretend to be villagers or soldiers, and tag along with the party.
@@ -467,8 +456,7 @@ Peaceful encounters can give the party a lot of information about the world arou
 
 Even dangerous creatures which don't fight can still make themselves known to the \glspl{pc}.
 If the party encounter a bear who fails its morale check, they may simply find bear foot-prints or droppings, which tells them to remain weary of bears in the area.
-\iftoggle{aif}{Chitincrawler}{Giant spiders}
-can leave their mark through degraded webbing at the side of the road, and anyone can recognize a basilisk's stench.
+Chitincrawlers can leave their mark through degraded webbing at the side of the road, and anyone can recognize a basilisk's stench.
 
 Peaceful encounters with sentient races can yield a lot of information.
 Traders might tell the troupe about other dangerous encounters by telling them about encountering some dangerous creature, and perhaps about how one of their number was eaten the day before by some awful monster.
@@ -620,11 +608,7 @@ In addition to story-based Side Quests, it's good to give each area a bunch of e
   \item{(Forest) A dragon flies overhead.}
 
   \item
-  \iftoggle{aif}{
-  (Forest) A dead mage lies on the road. His books are valuable but should by law be returned to the \gls{alchemists}.
-  }{
-  A priest of \gls{naturegod} wishes to travel with the party until their next destination.
-  }
+  (Forest) A dead mage lies on the road. His books are valuable but should by law be returned to the alchemists.
 
 \end{list}
 
@@ -705,7 +689,7 @@ Now let's expand with some foreshadowing:
   An alchemist asks the characters to find the items bandits stole from him.
 \end{enumerate}
 
-Now let's add a decoy -- the bandits must know \iftoggle{aif}{\glsentrytext{guard}}{adventurers} often come after them, so they can send someone to lead the party into a trap.
+Now let's add a decoy -- the bandits must know \glsentrytext{guard} often come after them, so they can send someone to lead the party into a trap.
 And finally, we might add another lead to make things interesting.
 Perhaps the bandit leader began as an alchemist who left his circle because they began practising Necromancy, and they want him dead so he doesn't spill the beans.
 
@@ -987,12 +971,8 @@ If the \glspl{pc} start to lose \glspl{hp} and don't realise how serious this si
 \label{pcdeath}
 \index{Death}
 
-\iftoggle{aif}{
-  Players who want their characters to survive should retire them.
-  After all, few of the active Night Guard survive for long.
-}{
-  Players should see their character's death as normal, and even likely.
-}
+Players who want their characters to survive should retire them.
+After all, few of the active Night Guard survive for long.
 Character creation should be relatively easy, and no main plot-line should rely on a particular character.
 
 Once death has come, the player should select a character from the existing pool of \glspl{npc} brought into the world with the story, \nameref{oldnpc} (see page \pageref{oldnpc}).
@@ -1151,7 +1131,7 @@ A tie generally indicates noticing a serious problem with purchased services\ldo
   \end{boxtable}
 }
 
-Thieves, brigands, and \iftoggle{aif}{illegal}{} adventurers cannot work with just anyone who wanders up to ask for `one poison arrow, my good man'.
+Thieves, brigands, and illegal adventurers cannot work with just anyone who wanders up to ask for `one poison arrow, my good man'.
 Dangerous jobs require a level of trust.
 Charismatic characters who show care and understanding stand a much better chance of hiring help.
 

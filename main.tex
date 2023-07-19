@@ -16,9 +16,6 @@ Keywords={TTRPG,RPG,roleplaying}
 \externalReferent{aif}
 
 \input{glossary.tex}
-\iftoggle{aif}{
-  \input{../aif/glossary.tex}
-}{}
 
 \begin{document}
 
@@ -34,13 +31,6 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{intro.tex}
 
-\iftoggle{aif}{
-  \chapter*{Monsters \& Malthus}
-  \widePic{../../aif/images/Roch_Hercka/cave_fight}
-  \widePic{../../aif/images/Leonard/next_day}
-  \input{../aif/fenintro.tex}
-}{}
-
 \mainmatter
 
 \include{rules.tex}
@@ -50,6 +40,8 @@ Keywords={TTRPG,RPG,roleplaying}
 \include{knacks.tex}
 
 \include{gm.tex}
+
+\backmatter
 
 \input{appendix.tex}
 
