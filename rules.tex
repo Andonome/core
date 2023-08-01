@@ -10,7 +10,7 @@
 
 \newcommand{\TNChart}{
 
-  \begin{rollchart}
+  \begin{tabularx}{\linewidth}{cY}
 
     \textbf{\glsentrytext{tn}} & \textbf{Task} \\\hline
 
@@ -34,16 +34,11 @@
 
     20 & Implausible \\
 
-  \end{rollchart}
+  \end{tabularx}
 
 }
 
-\sidebox{
-  \TNChart
-}
-
-\noindent
-
+\subsubsection{Basic Actions}
 When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states the \gls{tn}, and the players try to beat it by rolling $2D6$ plus any bonuses.
 
 \begin{itemize}
@@ -69,6 +64,10 @@ When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states t
   The other elves stand up quickly.''
 
 \end{exampletext}
+
+\sidebox{
+  \TNChart
+}
 
 A basic action is performed by rolling $2D6$ equal or higher than the \gls{tn} for the action.
 The more difficult the action, the higher the \gls{tn}.
@@ -231,155 +230,12 @@ Actions cannot be attempted multiple times with rerolls unless the situation has
 
 \end{multicols}
 
-\section{Gold \& Goods}
-\label{goods}
-\index{Equipment}
-
-\begin{multicols}{2}
-
-\subsection{Money}
-\index{Money}
-
-An open ended list of equipment is provided to give a basic idea of costs.
-The basic coinage covered here is human coinage, but each culture will use their own currency and exchange rates.
-A hundred \glsentryfullpl{cp} is worth 1 \gls{sp}.
-10 \glspl{sp} is worth 1 \gls{gp}.
-
-An average villager will make little spare money -- perhaps 10 \glspl{sp} in a year if they bother to save.
-Sellswords can expect to make upwards to 10 gold per year if they are hired by a villagemaster.
-The average free trader -- a blacksmith or cloth dyer -- can expect to make 5 \gls{sp} in a month.
-
-Prices for weapons are placed next to the weapon in chapter \ref{combat}, page \pageref{weaponschart}.
-
-\begin{boxtable}[Xcc]
-
-  \textbf{Animal} & & \textbf{Cost} \\\hline
-
-  Dog & & 2 \gls{sp} \\
-
-  Donkey &   &  2 \gls{sp} \\
-
-  Horse &   &  50 \gls{sp} \\
-
-  War Horse &   &  80 \gls{sp} \\
-
-  Leather Barding &   &  10 \gls{sp} \\
-
-  Chain Barding &   &  20 \gls{sp} \\
-
-  Plate Barding &   &  150 \gls{sp} \\
-
-\end{boxtable}
-
-\begin{boxtable}[Xcc]
-
-  \textbf{Buildings} & & \textbf{Cost} \\\hline
-
-  Cottage & &  20 \gls{gp} \\
-
-  Keep & &  1,000 \gls{gp} \\
-
-  Small Castle & &  4,000 \gls{gp} \\
-
-  Medium Castle & &  10,000 \gls{gp} \\
-
-  Large Castle & &  30,000 \gls{gp} \\
-
-\end{boxtable}
-
-\begin{boxtable}[Xcc]
-  \index{Clothes}
-
-  \textbf{Clothing} & \textbf{Weight} & \textbf{Cost} \\\hline
-
-  Peasant clothes &  -3 &  50 \gls{cp} \\
-
-  Noble clothes &  -4 &  10 \gls{sp} \\
-
-  Lavish clothes &  -5 &  30 \gls{sp} \\
-
-  \label{warmClothes}
-  Warm clothes &  -2 &  5 \gls{sp} \\
-
-\end{boxtable}
-
-\begin{boxtable}[Xcc]
-
-  \textbf{Professional Tools} & \textbf{Weight} & \textbf{Cost} \\\hline
-
-  Bandages & -5 & 2 \gls{cp} \\
-
-  Grappling hook &  -2 &  1 \gls{sp} \\
-
-  Ink bottle &  &  2 \gls{sp} \\
-
-  Lantern &  -2 &  3 \gls{sp} \\
-
-  Lock pick set &   &  10 \gls{sp} \\
-
-  Metallurgy set &  6 &  40 \gls{sp} \\
-
-  Parchment sheet &   &  1 \gls{cp} \\
-
-  Quill &   &  4 \gls{cp} \\
-
-  Rope, 50' &  -1 &  2 \gls{sp} \\
-
-  Rope, silk, 50' &  -4 &  3 \gls{sp} \\
-
-\end{boxtable}
-
-\index{Camping Equipment}
-\index{Food}
-\index{Rations}
-
-\begin{boxtable}[Xcc]
-
-  \textbf{Travel} & \textbf{Weight} & \textbf{Cost} \\\hline
-
-  Alcohol lantern & -5 & {4 \gls{sp}} \\
-
-  Cart & 10 &  10 \gls{sp} \\
-
-  Camping equipment & 1 & {3 sp} \\
-
-  Iron rations &  -2 &  10 \gls{cp} \\
-
-  Torch & -4 & {8 \gls{cp}} \\
-
-\end{boxtable}
-
-\subsection{Working Beasts}
-
-Animal stats vary, but you can use the below as a go-to standard for working animals.
-Quadrupeds can run at double the standard speed when going full pace, so horses can allow a party to travel at far higher speeds than normal.
-
-\settoggle{examplecharacter}{true}
-\horse
-
-Characters can significantly improve their average travel-times with a horse, covering 25 miles per day without tiring.
-
-\settoggle{examplecharacter}{true}
-\warhorse
-
-War horses aren't much faster than regular horses, but they won't become so easily frightened when danger approaches.
-
-\settoggle{examplecharacter}{true}
-\huntingdog[\npc{\A}{Hunting Dog}]
-
-Hunting dogs are mostly useless in warfare, but they make excellent watchmen.
-
-\pic{Roch_Hercka/dwarf_encumbrance}
-
-\begin{figure*}[t!]
-  \settoggle{examplecharacter}{false}
-  \weaponsChart
-\end{figure*}
-
 \subsection{Weight \& Encumbrance}
 \index{Weight}
 \index{Encumbrance}
 \label{weightrating}
+
+\begin{multicols}{2}
 
 We measure weight in broad terms.
 Characters have a \glsentryname{weightrating} equal to their \glspl{hp}, so elves tend to have 5, while humans tend to have a \gls{weightrating} of 7.
