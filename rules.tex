@@ -387,7 +387,7 @@ Items work similarly, with \gls{weightrating} between -4 (for very light items),
 
 If an item's \glsentryname{weightrating} is equal or below your character's Strength, you can lift it easily.
 However, if the items has a greater \gls{weightrating} than your Strength Bonus, you gain a point of Encumbrance for every increment that item is above your Strength Bonus.
-Encumbrance slows you down and makes you tired, detracting from your Speed Bonus, and adding to your \glspl{fatigue} each Scene.
+Encumbrance slows you down and makes you tired, detracting from your Speed Bonus, and adding to your \glspl{fatigue} every interval.
 
 Characters can carry items with a maximum \glsentryname{weightrating} of their Strength Bonus plus 6, so a man with 7 \gls{hp} could only be carried with a Strength Bonus of +1 or greater.
 Depending upon the circumstances, the \gls{gm} may allow heavier objects to be dragged or rolled.
@@ -423,11 +423,7 @@ The Failure Margin should indicate just how bad the henchman is, so the \gls{gm}
 
 \begin{multicols}{2}
 
-\noindent
-This game uses the entirely abstract measurements of the `scene' and `step' for time and space.
-They are more compliant to narrative than physics, and form the basis of all movement and actions whenever people start tracking how long something takes and where everyone is.
-
-\subsection{Time as Scenes}
+\subsection{Time}
 \label{time}
 
 \subsubsection{Rounds}
@@ -437,23 +433,9 @@ This period of time is used almost exclusively while tracking combat.
 The \gls{round} itself can then be further divided into \glspl{ap} if you want real detail, but that's covered later.
 All that matters is that a \gls{round} is a period of time in which people attempt to hit each other, then another \gls{round} occurs.
 
-\subsubsection{Scenes}
+\subsubsection{Intervals}
 
-Most of the time, actions will not occur through \glspl{round} but rather scenes. A scene is just any unit of time in which the \glspl{pc} take on a task or two, usually within a single area. We track scenes only because a few game effects occur at the end of each scene -- mostly these are narrative effects such as regaining \glspl{fp}\footnote{See page \pageref{fate_points}.} in order to regain plot-immunity from Damage. The scene lasts until the \gls{gm} says that it's over.
-
-\subsubsection{Day}
-\label{daytimes}
-
-We divide days into four parts -- morning, afternoon, evening and night.
-These areas are broadly there for rests -- anyone resting for one of these periods can heal \glspl{fatigue}.%
-\footnote{\Glspl{fatigue} are covered on page \pageref{fatigue}.}
-
-\paragraph{Travel}
-\index{Marching}
-\index{Travel}
-happens just as fast as players like.
-If they want to march 10 miles in a morning, they can -- they have no hard limit.
-Of course after 10 miles, they will have 10 \glspl{fatigue} (except humans, who will have 5), and have to stop for a rest.
+\input{config/rules/interval.tex}
 
 \subsubsection{The Mission}
 
@@ -474,7 +456,7 @@ Likewise, the \gls{gm} can declare a \gls{downtime} at any point, but the player
 Characters heal a quarter their \gls{hp} each week, rounded up.
 Once someone receives a serious wound, it's a good time to call for \gls{downtime}.
 
-\subsection{Space as Steps}
+\subsection{Space}
 \index{Space}
 \index{Steps}
 \label{space}
@@ -497,8 +479,7 @@ When gallivanting through open plains one \gls{area} might be a copse of trees, 
 \subsubsection{Region}
 
 Regions encompasses a full forest, a town, or a collection of villages.
-Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.%
-\footnote{If all this looks like a repugnant abstraction, just set a step to a yard, an area to one mile, a \gls{round} to six seconds and a scene to one hour.}
+Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.
 
 \end{multicols}
 
