@@ -21,6 +21,10 @@ all: $(BOOK).pdf
 	latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
 
 clean:
-	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf sq/*aux svg-inkscape
+	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg \
+	*.pdf \
+	svg-inkscape \
+	*.fdb_latexmk \
+	*.fls
 
 .PHONY: clean all
