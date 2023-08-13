@@ -208,41 +208,6 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weig
 \subsection{Armour}
 \index{Armour}
 
-\armourchart
-
-\noindent
-Armour defends characters by lowering incoming Damage.
-In game terms, armours have a \gls{dr} rating which subtracts from Damage.
-
-Armour can cover more or less of a character, and therefore comes with three ratings -- Partial, Complete and very rare Perfect armour.
-
-\subsubsection{Armour Types}
-
-\paragraph{Leather}
-armour is made by boiling or cooking leather for a low period, at which point the leather becomes extremely tough.
-
-\paragraph{Chain mail}
-is a covering of chain links, placed over some other protection.
-It might be placed over hardened leather, or just some thick padding.
-The chain itself only protects against a weapon's blade, not the weight, while the under-layer protects against heavy weapons, such as hammers or mauls.
-
-\paragraph{Plate armour}
-involves adding multiple layers (perhaps all of the above), covered with a layer of metal.
-
-\subsubsection{Coverings}
-
-\paragraph{Partial armour}
-covers the basics -- the character's chest and probably head, perhaps a basic arm-guard on top of that.
-
-\paragraph{Complete armour}
-covers the full character -- almost.
-Complete armour, whether leather or plate, will come with a helmet, a neck-guard, gauntlets, shin guards, foot coverings and will overlap to protect the joints.
-
-Complete armour adds +1 to the \glsentryname{weight} and multiplies the price by 3.
-
-\paragraph{Perfect armour}
-is a rating used for certain creatures which have natural armour without weak spots (such as stone giants), or magical armour.
-
 \boxPair{
   \paragraph{A combat roll involving armour}
   might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a soldier, with \textit{complete} plate armour.
@@ -251,23 +216,79 @@ is a rating used for certain creatures which have natural armour without weak sp
 
   Assuming the player's total \gls{tn} is `7', the possible results will look like this:
 
-  \begin{boxtable}
-    \textbf{Roll} & \textbf{Result} \\
+  \begin{boxtable}[cLc]
+    \textbf{Roll} & \textbf{Result} & \textbf{Margin} \\
     \hline
-      $< 5$ & \Glsentrytext{pc} is hit, no \gls{dr} \\
-      5 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
-      6 & \Glsentrytext{pc} is hit, but \gls{dr} applies \\
-      7 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-      8 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-      9 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-      10 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-      11 & \Glsentrytext{npc} is hit, but \gls{dr} applies \\
-      $> 11$ & \Glsentrytext{npc} is hit, no \gls{dr} applies \\
+      $\leq 3$ & \Glsentrytext{pc} is hit, \underline{no \gls{dr}} & \textit{4} \\
+      4 & \Glsentrytext{pc} is hit, but \gls{dr} applies & \textbf{3} \\
+      5 & \Glsentrytext{pc} is hit, but \gls{dr} applies & \textbf{2} \\
+      6 & \Glsentrytext{pc} is hit, but \gls{dr} applies & \textbf{1} \\
+      7 & \emph{Draw!} If both hit, armour applies & 0 \\
+      8 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{1} \\
+      9 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{2} \\
+      10 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{3} \\
+      11 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{4} \\
+      12 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{5} \\
+      $\geq 13$ & \Glsentrytext{npc} is hit, \underline{no \gls{dr} applies} & \textit{6} \\
   \end{boxtable}
 
 }{
-  \pic{Roch_Hercka/vitals_shot}
+
+  \begin{tikzpicture}
+      \node[anchor=south west,inner sep=0] (image) at (0,0) {\pic{Roch_Hercka/vitals_shot}};
+      \begin{scope}[
+          x={(image.south east)},
+          y={(image.north west)}
+      ]
+          \foreach \mNum/\mX/\mY in {%
+            10/54/20,
+            11/30/63,
+            12/37/45,
+            13/52/63,
+            14/31/70,
+            {\huge 15!}/41/36,
+          }{
+            \mapLegend{\outline{\mNum}}{\mX}{\mY}{\large}
+          }
+      \end{scope}
+  \end{tikzpicture}
 }
+
+\noindent
+Just as real armour covers parts of the body, armour in BIND covers numbers on the dice.
+An armour with Covering 2 can protect characters from a little Damage whenever they miss an Attack roll by 1 or 2.
+But if they roll lower than this, the armour does nothing, as the attack strikes flesh.
+
+\armourchart
+
+\noindent
+When armour works, its \gls{dr} reduces incoming Damage.
+This occurs before Damage applies to \glspl{fp}, so anyone going beyond the \gls{edge} should consider wearing armour until they return.
+
+\subsubsection{Armour Types}
+
+\paragraph{Padded}
+if you tie enough wool, dishcloths, old shoes and sticks together, you can make some passable armour.
+Of course it stinks, and weighs a tonne, so best leave it until the most desperate of times.
+
+\ifnum\value{r4}=3
+  \paragraph{Elvish Ceramic}
+  has very little strength on a piece-by-piece basic, but once worn in the correct arrangement, it gains surprising strength.
+  It also sells well to nobles hoping to armour their children for long road trips. 
+\fi
+
+\paragraph{Leather}
+armour is made by boiling leather for a long time, until it becomes extremely tough.
+While anyone can pick up leather cheaply, very few have the skill to make this armour.
+
+\paragraph{Chain mail}
+is a covering of chain links, placed over some other protection.
+It might be placed over hardened leather, or just some thick padding.
+The chain itself only protects against a weapon's blade, not the weight, while the under-layer protects against heavy weapons, such as hammers or mauls.
+
+\paragraph{Plate armour}
+involves adding all of the above into one armour, with sheets of metal on top.
+Allowing someone to move within this pile of metal requires rare artisans.
 
 \subsubsection{\Glsfmtplural{vitalShot}}
 \label{vitals}

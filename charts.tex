@@ -148,36 +148,30 @@
 
 \newcommand{\armourchart}{
 
-  \begin{boxtable}[LYYYY]
+  \begin{boxtable}[Lccc]
 
-  \textbf{Armour} & \textbf{\Gls{dr}} & \textbf{Weight} & \textbf{Noise} \\\hline
+  \textbf{Armour} & \textbf{\Glsentrytext{dr}} & \textbf{Covering} & \textbf{Weight} \\\hline
 
-  \textbf{Partial} & & & \\\hline
+  \ifnum\value{r4}=3
+    \armour[\addtocounter{weight}{-1}]{Elvish Ceramic}{2}{2} & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
+  \fi
 
-  Elvish & 2 & -2 & 0 \\
+  \armour[\addtocounter{weight}{1}]{Padded Armour}{2}{2} & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
-  Padded & 2 & 0 & 0 \\
+  \armour{Partial Leather}{3}{2} & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
-  Leather & 3 & 0 & 0 \\
+  \armour{Complete Leather}{3}{4}  & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
-  Chain & 4 &  1 & 1 \\
+  \armour{Partial Chain}{4}{2}  & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
-  Plate & 5 &  2 & 4 \\
-  \hline
+  \armour{Complete Chain}{4}{4}  & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
-  \textbf{Complete} & & & \\\hline
+  \armour{Partial Plate}{5}{2}  & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
-  Elvish & 2 & -1  & 0 \\
-
-  Padded & 2 & 1  & 0 \\
-
-  Leather & 3 & 1  \\
-
-  Chain & 4 &  2  & 2 \\
-
-  Plate & 5 &  3  & 5 \\
+  \armour{Complete Plate}{5}{4}  & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
 
   \end{boxtable}
+
 }
 
 \newcommand{\chasechart}{
