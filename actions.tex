@@ -1,390 +1,332 @@
-\chapter{Advanced Mechanisms}
+\chapter[Induction]{Rules}
+\label{coreRules}
 
-\label{skill_uses}
+\settoggle{bestiarychapter}{true}
 
-\section{Small Systems}
+\section{Basic Actions}
+\label{basicaction}
 
 \begin{multicols}{2}
 
-Below are some examples of using skills.
-None of them should be considered rules -- just ideas for \glspl{gm} to make rulings.
+\newcommand{\TNChart}{
 
-\subsection{Academics}
+  \noindent
+  \begin{tabularx}{\linewidth}{cY}
 
-\paragraph{Area knowledge } -- Intelligence + Academics.
-The character recalls local information about important sites.
-Cities are TN 6, Towns are 8, and villages are 12.
+    \textbf{\glsentrytext{tn}} & \textbf{Task} \\\hline
 
-\paragraph{Forgery} -- Dexterity + Academics, TN 8 for a signature (vs the interpreter's Wits + Academics).
+    2 & Automatic \\
 
-\label{magicidentification}
-\paragraph{Identifying Items} -- Intelligence + Academics, TN 10 (for Pocket Spells), 12 (for Talismans), or 14 (for Artefacts).
-Magical items which do not come with instructions often remain enigmas.
+    4 & Trivial \\
 
-A successful rolls allows someone to identify how to activate an item, but the roll requires a Margin of 2 to understand its effects.
-Therefore, rolling a 13 when trying to understand a talisman means one understands how to activate it, but not what the talisman will do.
+    6 & Easy \\
 
-\paragraph{Letter sealing} -- Dexterity + Academics, \gls{tn} 9.
-\label{letterSealing}
-Proper seals have more than a blob of wax to keep them safe.
-Ultra secret letters have parts of the paper cut, then pierce the middle, and loop back around the outside.
-While anyone can open these letters, opening them without breaking the seal (so the letter does not appear to have been read) is nearly impossible.
-Failure indicates that the letter's seal breaks moments later, as the paper has been cut too thin.
-A tie indicates nothing special -- but of course opening the letter won't be quite the challenge it could be.
+    8 & Serious \\
 
-Opening such a letter and resealing it properly requires an Intelligence + Academics roll, at \gls{tn} 14, plus the margin of whoever sealed the letter originally.
+    10 & Professional \\
 
-\paragraph{Storytelling} -- Charisma + Academics.
+    12 & Specialist \\
 
-\subsection{Athletics}
+    14 & Extreme \\
 
-\paragraph{Climbing} -- Speed + Athletics.
+    16 & Epic \\
 
-\paragraph{Planning the best climb up a mountain} -- Intelligence + Athletics.
-A successful roll can lower the TN for others scaling a mountain equal to a third of the roll's Margin.
+    18 & Legendary \\
 
-\subsection{Caving}
+    20 & Implausible \\
 
-\paragraph{Excavation} -- Strength + Caving.
-The \gls{tn} varies greatly, depending upon the type of rock.
+  \end{tabularx}
 
-\paragraph{Black-Walking} -- Dexterity + Caving, \gls{tn} 8.
-Despite every caver insisting on good supplies, even if they have a good store of alcohol to light smoke-free lamps, even the experts will wind up in the dark sometimes.
-Those who know their environment have a knack for crawling efficiently, feeling the surroundings through their fingertips and beards, and remembering every passage they took in the light simply through the sounds of their own breathing echoing uniquely in every cavern-segment.
-
-\paragraph{Detect sloping passages} -- Wits + Caving.
-Understanding what altitude one has reached immediately indicates whether there might be running water, what type of rocks and minerals compose the surroundings (and therefore the chance of a cave-in), and how far one has to go to the surface.
-
-Despite gradual gradients, or sharp ups and downs, a good caver knows exactly how far they sit from the surface at all times.
-
-Rolling a tie might indicate knowing that one has descended or ascended, but with no idea how much.
-
-\paragraph{Detecting Weakness} -- Intelligence + Caving, \gls{tn} 9.
-Nobody survives long underground unless they can tell if the ceiling might collapse from heavy footfall.
-
-\paragraph{Placing Fires} -- Intelligence + Caving, \gls{tn} 8.
-A fire in the wrong place underground can easily choke everyone around to death, or at least until they can't think properly.
-Of course, this provides an excellent weapon of war if one can do it properly.
-Light the wrong type of fire, and heavy smoke will fall down a tunnel instead of rising.
-
-\subsection{Crafts}
-
-\paragraph{Breaking in a door} -- Strength + Crafts, \gls{tn} 10.
-
-A tie could indicate that the door has a massive hole in the middle, and a broken lock, allowing a sufficiently small person to squeeze through.
-
-\paragraph{Crafting a sword} -- Strength + Crafts, TN 11.
-This requires equipment, such as moulds, and a long night.
-It also requires a single level of the Combat Skill.
-
-A tie could indicate a completed sword, with a shattered mould.
-
-\paragraph{Creating a weapon mould} -- Intelligence + Crafts, TN equals 7 plus 1 for each of the weapon's bonuses.
-
-Anything with a cost of less than 10 \gls{cp} can be fashioned in less than a day, with only basic woodworking tools.
-
-\paragraph{Creating quiet, full plate armour} -- Intelligence + Crafts, TN 15.
-Moulding silent plate requires planning from the outset -- existing armour cannot be properly modified.
-The parts cost an additional 50\%, and the crafter must have both the Combat and Stealth Skills.
-
-Every margin on the roll reduces the armour's penalty by 1, to a minimum of -1.
-
-\begin{figure*}[b!]
-  \begin{nametable}[YYYl]{Larceny Roll}
-    \textbf{Village} & \textbf{Town} & \textbf{City} & \textbf{Result} \\
-    \hline
-     17 & 15 & 14 & $2D6 \times 20$ \gls{cp} from a noble's servant. \\
-     16 & 14 & 13 & $2D6 \times 15$ \gls{cp} from a traveller. \\
-     15 & 13 & 12 & $2D6 \times 10$ \gls{cp} from a trader. \\
-     14 & 12 & 11 & $2D6 \times 5$ \gls{cp} from an old lady. \\
-     13 & 11 & 10 & No good targets found \\
-     12 & 10 & 9 & Caught red handed! -- roll a `snatch and run'. \\
-     11 & 9 & 8 & Caught red handed and surrounded! \\
-  \end{nametable}
-\end{figure*}
-
-\subsection{Empathy}
-
-\paragraph{Judging services} -- Wits + Empathy, \gls{tn} 9.
-
-It's never easy knowing whom to hire.
-Every time someone hires someone as part of a service, they should make a roll.
-
-Humans are notoriously bad at this, and are known for hiring the first person they meet in a bar.
-
-Failing the roll means that the \gls{pc} has hired someone useless.
-Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off by taking a guess at the best route and hoping for the best.
-The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} is encouraged to make the roll in secret.
-
-Given the stakes, people mostly try to hire others based on previous experience.
-To automatically succeed and hire someone competent, a player needs only to spend a \gls{storypoint}.
-
-A tie generally indicates noticing a serious problem with purchased services\ldots just after the purchase completes.
-
-\paragraph{Requesting dangerous jobs} -- Charisma + Empathy.
-
-\sidebox{
-  \begin{boxtable}[lc]
-
-    Location & Base \glsentrytext{tn} \\\hline
-
-    City & 9 \\
-
-    Town & 11 \\
-
-    Village & 14 \\
-
-  \end{boxtable}
 }
 
-Thieves, brigands, and illegal adventurers cannot work with just anyone who wanders up to ask for `one poison arrow, my good man'.
-Dangerous jobs require a level of trust.
-Charismatic characters who show care and understanding stand a much better chance of hiring help.
+\subsubsection{Basic Actions}
+When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states the \gls{tn}, and the players try to beat it by rolling $2D6$ plus any bonuses.
 
-Any attempt to hire services which put someone in danger should require a roll.
-This includes murder, crafting poisons, selling illegal items, et c.
-
-As above, players can spend \glspl{storypoint} to automatically gain such a contact, and once someone works for the players with one job, they can work in another.
-Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
-
-\subsection{Deceit}
-
-\paragraph{Intimidating someone into backing off} -- Strength + Deceit vs the target's Strength + Empathy.
-\index{Intimidation}
-
-\paragraph{Quick thinking lies} -- Wits + Deceit, TN 10.
-Success indicates the lie sounds plausible.
-A tie indicates the lie only sounds plausible until one thinks about it.
-
-\paragraph{Well planned lie} -- Intelligence + Deceit, TN 7.
-A tie might indicate that the lie has become too convoluted, and the character has become trapped in additional premises.
-
-\subsection{Medicine}
-
-\paragraph{Crafting a poison} -- Intelligence + Medicine, TN 4.
-\label{poison}\index{Poisons}
-
-Each Margin inflicts 1 \gls{fatigue} on the target by the end of the interval.
-
-\paragraph{Bandaging a wound} -- Wits + Medicine to stop someone bleeding, TN 7 plus the Damage which caused the bleeding.
-Each Margin stops 1 point.
-For example, someone stabs a man, inflicting 4 Damage, which then starts to bleed.
-This could cause 4 \glspl{fatigue} in bleeding, and is TN ($7 + 4 = $) 11 to stop.
-A healer rolls a grand total of 12, which stops one point of bleeding, so the man only gains 3 \glspl{fatigue}.
-
-\paragraph{Curing a poison} -- Wits + Medicine, TN 10.
-
-Each margin cures 1 \glspl{fatigue} caused by poison by the end of the interval.
-Of course if the roll fails, each failure margin \emph{inflicts} a \gls{fatigue}.
-
-\subsection{Larceny}
-
-\paragraph{Picking a lock} -- Intelligence + Larceny.
-The TN varies from 10 to 18, depending upon the lock's complexity.
-\index{Lockpicking}
-A tie usually indicates that the lock breaks in an obvious manner.
-
-\paragraph{Picking a pocket} -- Dexterity + Larceny, TN 12 plus the target's Wits + Vigilance.
-\index{Pickpocketing}
-
-Stealing in larger, more populated areas, affords many more opportunities, while small villages, where everyone is aware of everyone in their personal space, and rarely carry larger sums of money, raise the \gls{tn} significantly.
-
-A tie means the character gets the item, but the victim immediately notices the crime.
-
-\paragraph{Snatch and run} -- Speed + Larceny TN 7, vs the target's Speed + Vigilance.
-
-\subsection{Performance}
-
-\paragraph{Complex recital} -- Dexterity + Performance.
-
-\paragraph{Creating a new piece} -- Intelligence + Performance, TN 8.
-
-\paragraph{Slow recital} -- Charisma + Performance, TN 11.
-
-\paragraph{Rap battle} -- Wits + Performance, vs opponent's Wits + Performance.
-
-\subsection{Seafaring}
-\index{Sailing}
-
-\paragraph{Fording a rapid river} -- Strength + Seafaring, \gls{tn} 9.
-
-\paragraph{Mending a sail} -- Dexterity + Seafaring.
-
-\paragraph{Navigation by starlight} -- Intelligence + Seafaring, \gls{tn} 10.
-
-\subsection{Stealth}
-
-\paragraph{Ambush} -- Intelligence + Stealth, TN 10 for villages, 12 for a town, and 8 for a forest.
-\index{Ambushes}
-
-\paragraph{Finding a hiding spot} -- Wits + Stealth.
-
-\paragraph{Planning a hidden route into a castle} -- Intelligence + Stealth.
-
-\begin{figure*}[t]
-
-  \begin{nametable}[ccX]{Gathering Table}
-    Tundra & Forest & Result \\\hline
-    11  & 10+ & Food for one, +1 per margin. \\
-    10  & 9 & Nothing found. \\
-    8-9 & 8 & Lost: make a navigation roll (below), or wander in the wrong direction. \\
-    7   & 6-7 & Accidental foxglove: gain 3 \glspl{fatigue} due to vomiting. \\
-    6   & 5 & Creature encounter -- the DM rolls $2D6 + 6$ on the local encounter table. \\
-    5   & & Snake bite: gain $1D6+4$ \glspl{fatigue}. \\
-    4   & 4 & Wrong mushroom: gain 3 \glspl{fatigue} at the end of the interval. \\
-        & 3 & Snake bite: gain $1D6+2$ \glspl{fatigue}. \\
-    < 4 & < 3 & Slowburn ivy: gain 2 \glspl{fatigue} each interval until you find a cure (Intelligence + Medicine, \gls{tn} 8). \\
-  \end{nametable}
-
-\end{figure*}
-
-\subsection{Tactics}
-
-\paragraph{Planning an open battle} -- Intelligence + Tactics, TN 7 vs opponent's Wits + Tactics.
-
-Success adds a number of AP equal to the tactician's Tactics Skill, to everyone on the tactician's side on the first round.
-A tie adds the AP, but on the second round (the plan takes a moment to get started).
-
-\subsection{Vigilance}
-
-\paragraph{Keeping watch over the camp through the night} -- Strength + Vigilance, TN 7.
-
-\paragraph{Finding a small opening in the dark} -- Dexterity + Vigilance.
-
-\paragraph{Scouting the forest for an enemy camp nearby} -- Speed + Vigilance, TN 9.
-
-\paragraph{Finding a hidden message in a book} -- Intelligence + Vigilance TN 7, vs opponent's Intelligence + Academics.
-
-\subsection{Wyldcrafting}
-
-\paragraph{Building a shelter} -- Intelligence + Wyldcrafting, TN 11.
-Each point on the Margin allows an additional person to sleep inside the shelter.
-
-A tie indicates that the shelter holds for a few hours, then collapses.
-
-\paragraph{Calm an animal} -- Intelligence + Wyldcrafting vs animal's Wits + Brawl.
-
-\index{Gathering Food}\index{Food}
-\paragraph{Gathering Food} -- Wits + Wyldcrafting.
-Groups can forage while on the road, but taking a resting action requires devoting a full segment of the day to focussing on foraging (see page \pageref{daytimes}).
-Of course, these fast excursions from the path, to check out anything that happens to catch their eye, can lead to quick decisions, or even to encounters with wandering beasts.
-
-\paragraph{Navigation} -- Intelligence + Wyldcrafting.
-\index{Navigation}
-\index{Marching}
-\label{marching}
+\begin{multicols}{2}
 \begin{itemize}
 
   \item
-    Mountains are \gls{tn} 9.
+  If the player rolls above the \gls{tn}, they succeed!
   \item
-    Forests are \gls{tn} 12.
+  If they roll below, they fail, and the danger occurs.
   \item
-    Marshes are \gls{tn} 13.
+  If they roll equal to the \gls{tn}, the \gls{gm} can give them the choice to succeed, as long as they accept the danger.
 
 \end{itemize}
 
-Each failure margin adds 2 Miles to the journey time, so when trying to find a particular house somewhere in a forest, 10 miles away, the \gls{tn} would be 12.
-If the roll is an 8, the actual journey would be 18 miles.
+\columnbreak
 
-\paragraph{Taming a Horse} -- Intelligence + Wyldcrafting vs Horse's Wits + Brawl.
-
-\end{multicols}
-
-\section{Standards}
-
-\begin{multicols}{2}
-
-\subsection{Patterns in the Rules}
-
-Noticing patterns in the rules can help you to remember them.
-Make the following principles a habit, and you'll find your role becomes a lot easier.
-
-And speaking of rolls, let's start with dice stats, and why `7' is the magic number.
-
-\vspace{10pt}
 \noindent
-\begin{scriptsize}%
-\begin{tabularx}{\linewidth}{clXX}
-
-  \hline
-  \textbf{Roll} & \textbf{Combinations} & \textbf{Chance} & \textbf{or Greater} \\\hline
-  2  & \epsdice{1}\epsdice{1} & 2.78\% & 100\% \\
-  3  & \epsdice{1}\epsdice{2} \epsdice{2}\epsdice{1} & 5.56\% & 97.22\% \\
-  4  & \epsdice{1}\epsdice{3} \epsdice{3}\epsdice{1} \epsdice{2}\epsdice{2} & 8.33\% & 91.67\% \\
-  5  & \epsdice{1}\epsdice{4} \epsdice{4}\epsdice{1} \epsdice{2}\epsdice{3} \epsdice{3}\epsdice{2}  & 11.11\% & 83.33\% \\
-  6  & \epsdice{1}\epsdice{5} \epsdice{5}\epsdice{1} \epsdice{2}\epsdice{4} \epsdice{4}\epsdice{2} \epsdice{3}\epsdice{3} & 13.89\% & 72.22\% \\
-  7  & \epsdice{1}\epsdice{6} \epsdice{6}\epsdice{1} \epsdice{2}\epsdice{5} \epsdice{5}\epsdice{2} \epsdice{3}\epsdice{4} \epsdice{4}\epsdice{3} & 16.67\% & 58.33\% \\
-  8  & \epsdice{2}\epsdice{6} \epsdice{6}\epsdice{2} \epsdice{3}\epsdice{5} \epsdice{5}\epsdice{3} \epsdice{4}\epsdice{4} & 13.89\% & 41.67\% \\
-  9  & \epsdice{3}\epsdice{6} \epsdice{6}\epsdice{3} \epsdice{4}\epsdice{5} \epsdice{5}\epsdice{4} & 11.11\% & 27.78\% \\
-  10 & \epsdice{4}\epsdice{6} \epsdice{6}\epsdice{4} \epsdice{5}\epsdice{5} & 8.33\% & 16.67\% \\
-  11 & \epsdice{5}\epsdice{6} \epsdice{6}\epsdice{5} & 5.56\% & 8.33\% \\
-  12 & \epsdice{6}\epsdice{6} & 2.78\% & 2.78\% \\
-
-\end{tabularx}
-\end{scriptsize}
-
-\paragraph{Always round up} -- whether someone is helping another character with half their score, or combat calls for half damage, or just any time someone divides a number, they round up at 0.5.
-One quarter of a +1 bonus is still 0, but half of a +3 bonus is always +2.
-
-Every rule in the book keeps to this pattern, so you will never have to wonder about which rules round up, and which down.
-
-Always round up.
-
-\paragraph{Additions half every step} with every rule.
-When team mates add their scores together, the second grants half, and the third grants half again.
-When many people want to combine their Strength scores to lift something, the highest score counts as usual, the second counts at half, then a quarter, an eighth, and so on\ldots
-
-\paragraph{Only resting actions allow failure,}
-so if someone has to get this spell just right the first time, or judge the chances of a cave-in and commit to a particular tunnel, they do not get a resting action, even if they have a couple of moments to spare.
-
-If a task must succeed first time, it's not a resting action!
-
-\paragraph{It's only a Team Roll when experts can work together,}
-so if the group ask to make a team roll to craft a fantastic statue, reply `no'.
-Master carvers don't ask for help chiselling their statues, so the roll has to be a Group Roll, i.e. the lowest score can drag everyone down.
-Conversely, anyone building a basic raft would welcome all the help they can get.
-This shows that the group should make a Team Roll.
-
-\paragraph{When in doubt, set the \glsentrytext{tn} high!}
-The standard \gls{tn} of `7' seems like an average, but it functions more like a basic number to add to.
-A professional \gls{npc} would normally have a Skill at +2, and some relevant Attribute at +1 (at least), along with the Specialist Knack,%
-\footnote{See page \pageref{specialist}.}
-granting a +2 bonus.
-If the standard professional has at least a +5 bonus, they will succeed on professional tasks at \gls{tn} 12 every time (assuming they take a resting action).
-This means a \gls{tn} of 12 isn't monstrously high -- it represents a starting figure for basic professionals.
-
-And if the \emph{average} professional would struggle with a task, throw them a \gls{tn} of 14 or more!
-
-\paragraph{The dice tell the story,} but only with interpretation.
-A crappy roll to open a door suggests the massive door has wedged properly shut.
-A fantastic roll to talk to the local lord might indicate he has family in that character's home village.
-Explaining dice results can come easier than making up a situation whole-cloth.
-
-If you interpret the dice rolls as just how well a character has performed that day, a lot of the system will stop making sense; when one \gls{pc} `just fails' to convince a town master to fund their mission, another might step in to `try their luck' (with the dice).
-But if the first player to roll understands that the town master's raging toothache has put him in a foul mood, the rest should understand that the result (or at least the roll) will remain no matter who tries to speak with him.
-This leaves room for some other \gls{pc}, with better stats, to succeed in the endeavour (by using the same roll), but does not encourage a ring of players rolling dice like a bunch of bored gamblers.
+\TNChart
 
 \end{multicols}
 
-\section[Social Rolls]{Roll Before You Roleplay}
+\begin{exampletext}
+  Hugi listens carefully at the keyhole, trying to figure out what the elves on the other side are plotting.
+  The \gls{tn} is 10, and he matches it exactly.
+
+  ``One of the elves sounds like he's wandering closer to the door, but you think you almost heard a familiar word'', the \gls{gm} says.
+
+  ``I'll stay and listen'', Hugi's player says.
+
+  ``They use your name, though you can't understand the elvish -- just your name -- then one opens the door, saying `well here he sits, or stands, I can never tell with dwarves'.
+  The other elves stand up quickly.''
+
+\end{exampletext}
+
+A basic action is performed by rolling $2D6$ equal or higher than the \gls{tn} for the action.
+The more difficult the action, the higher the \gls{tn}.
+Players add their character's Attribute and \gls{skill} to the roll.
+Attributes and \glspl{skill} usually go as high as +3, so a +6 bonus is possible, and higher bonuses are possible with knacks other bonuses.
+
+Poor Attributes give a penalty, rather than a bonus.
+
+All actions are assumed to have a \gls{tn} of 7 unless your \gls{gm} states otherwise.
+Don't ask -- just roll!
+
+\subsection{One Roll Only}
+
+Players only make one roll per action.
+
+If the player wants to attempt to re-try an action, the result remains the same unless circumstances change.
+
+When many characters are trying to do the same task, a single roll is made, and they all consult the same results.
+
+\begin{exampletext}
+\begin{itemize}
+  \item
+  Everyone wants to kick in the door, the \gls{tn} is 10, and the roll uses Strength + Crafts.
+    \begin{itemize}
+    \item
+    Alicia's player rolls the dice. Her Strength + Crafts Bonus is 0, so she fails.
+    \item
+    Snowstorm's Strength + Crafts total is +2, so his total is 9, and he also fails.
+    \item
+    Chatrik's Strength + Crafts total is +4, so her total is 11 -- she succeeds.
+    \end{itemize}
+  \item
+  These look like the famous Catacombs from the national anthem, but how do the words go?
+  Did the hero take two lefts and a right, or two rights and a left?
+    \begin{itemize}
+    \item
+    Water is filling the area, so time will be lost if they get muddled.
+    \item
+    Everyone rolls, and the highest result is Kraal's -- but he only equals the \gls{tn}.
+    \item
+    Kraal's player decides to guess left, rather let his companions think about the song for another moment.
+    They fail, but avoid wasting time.
+    \end{itemize}
+\end{itemize}
+
+\end{exampletext}
+
+If the party are all attempting the same action, then they only make one roll, while adding different attributes to obtain their individual result.
+
+\subsection{\glsentrytext{restingaction}}\label{restingactions}
+
+Difficult, but safe actions allow players to repeat the same task until they get it right or give up.
+In these cases, the player sets one die to a `6', and rolls only one die.
+
+\begin{exampletext}
+\begin{itemize}
+  \item
+  The group want to sneak into a noble's house, and have plenty of time to plan the heist.
+  The \gls{gm} says they can wander past without suspicion, but it will take many nights to plan and gather all the information they need, the Bonuses are Intelligence plus Stealth, and the \gls{tn} is 12.
+    \begin{itemize}
+    \item
+    The players accept, and roll a single die, achieving a `4'.
+    \item
+    With the other die automatically on `6', their roll is `10', and the total is `13' -- a narrow success.
+    \end{itemize}
+  \item
+  When the group find a powerful, but mysterious artefact.
+  \begin{itemize}
+    \item
+    Without any danger reading, the \gls{gm} lets them study it for a month as a \gls{restingaction}.
+  \end{itemize}
+  \item
+  A local noble has little time for the troupe, but they really need to make a proposal he can't refuse.
+  \begin{itemize}
+    \item
+    Unfortunately, the \gls{gm} disallows this as a resting action.
+    \item
+    After the first failure, the noble tells his servants not to pay them any more attention -- they can no longer succeed via the official channels.
+  \end{itemize}
+
+\end{itemize}
+\end{exampletext}
+
+\subsection{Teamwork}
+\label{teamwork}
+\index{Teamwork}
+\index{Group actions}
+
+Some tasks lend themselves to working with others. Others can be difficult or impossible to do with companions. Some tasks, such as fleeing or sneaking, do not benefit at all from having a load of friends right behind you.
+
+When acting as a group provides no benefit, one player rolls the dice and the same result counts for everyone.  If that player rolls a 9, then everyone's score is 9 and they add their own bonuses and penalties.
+
+If, on the other hand, working together can benefit a situation, one character takes the lead, and up to three other characters can add up to half their bonus (rounded up).
+Two companions with a +3 bonus would add a total of a +2 bonus.
+
+
+\begin{exampletext}
+  Example Team Actions include:
+
+  \begin{itemize}
+
+  \item Getting a broken cart down a hill without damaging it.
+  \item Tracking down a local thief in a large city.
+  \item Spotting danger in the wild.
+
+  \end{itemize}
+\end{exampletext}
+
+\subsubsection{Stacking}
+\index{Stacking}
+\label{stacking}
+
+In general, whenever you want to see how something stacks, add the second lot as half its usual value.
+If two people are pushing with Strength +2, they count as having a total Strength of +3.
+If others want to join, add any third items as worth a quarter, then an eighth, and so on.
+
+\begin{exampletext}
+
+Convincing the townsfolk that they need to rebel against the baron, and could easily succeed, the troupe work together on a Charisma + Tactics roll.
+
+\end{exampletext}
+
+\noindent%
+\begin{footnotesize}%
+\begin{tabularx}{\linewidth}{Y |cccc}
+                    & Alicia & Snowstorm & Chatrik & Drake \\
+\hline
+Charisma + Tactics: & +3     & $+\frac{3}{2}$      & $+\frac{2}{4}$      & $+\frac{1}{8}$    \\
+Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
+\hline
+Total:      &          +6 & & &\\
+\end{tabularx}
+\end{footnotesize}
+
+\subsection{Resisted Actions}
+\index{Resisted Actions}
+\label{resistedactions}
+
+When \glspl{npc} resist the players actions, one side rolls as normal, while the other adds their ability to the \gls{tn}.
+\footnote{In general, only players roll.}
+
+\subsection{Margins}
+\index{Margins}
+\index{Failure Margin}
+\label{margin}
+
+If you ever need detail on how well an action went, look at how many points above the \gls{tn} the dice show.
+With a \gls{tn} of 12, rolling 14 means a margin of 2.
+
+The \gls{gm} might use a Margin for some variable, for example a bard attempting to charm a crowd into giving him money might gain $2D6$ copper pieces plus the Margin, so if the Margin is 3 then he would get $2D6+3$ copper pieces.
+Margins might also be used to gain bonuses on later rolls.
+Someone attempting to impress a noble court might roll Charisma with the Tactics Skill; the bigger the Margin the more troops they will be trusted with.
+
+\subsection{What the Dice Mean}
+
+You might think of the dice as representing random chance in the environment. Just how irritated is that person you're trying to question, and how creative is that craftsman feeling today? Dice are never re-rolled for different results on the same action because once the dice have told you what the situation is, the situation stays put.
+
+Such a do-over still suggests initial failure; it just means that the character is trying over and over again until a better result is obtained.
+Actions cannot be attempted multiple times with rerolls unless the situation has changed notably.
+
+\end{multicols}
+
+\subsection{Weight \& Encumbrance}
+\index{Weight}
+\index{Encumbrance}
+\label{weight}
 
 \begin{multicols}{2}
 
-It's hard to play `the social character'.
-You put all your \gls{xp} into a high Charisma score because you want to build alliances and understand people, then the \gls{gm} asks you to roleplay such an encounter and your natural stutter and slow wit replace the social graces your character should have.
+We measure weight in broad terms, just in case characters need to lift a wounded companion (or corpse), or try to put thirty shortswords in the backpack.
 
-It's also hard playing a non-social character.
-You have been lumped with a character with a Charisma Penalty of -4 and by all the gods you intend to roleplay it, so it's time to ask the town master which lady he stole his robe from and then wipe your mouth with the tablecloth.
-But the other players are not impressed; all they can see is someone intentionally ruining the encounter rather than the fun-loving, amazing improviser that you are.
+\input{config/rules/weight.tex}
 
-Consider the following solution: tell the players that if they wish to speak, they must roll Charisma plus Empathy or Wits plus Whatever, then set the \gls{tn} for the encounter.
-Getting information from the drunken patron of a Temple of Ale might be \gls{tn} 4 while getting a noble to stop and help might be \gls{tn} 10.
-The player should not declare the result but make a mental note of the roll's Margin.
-If the Margin is high, they should confidently roleplay someone saying just what the situation appears to demand.
-On the other hand, if the roll was not only a failure but had a high Failure Margin, they should attempt to roleplay the worst kinds of insults -- perhaps because the character is genuinely mean-spirited, perhaps because they are making persistent, accidental faux-pas.
+Items work similarly, with \gls{weight} between -4 (for very light items), through 11 (for wardrobes, carts, and boulders), and so on.
+Depending upon the circumstances, the \gls{gm} may allow heavier objects to be dragged or rolled.
 
-This method of players rolling before roleplaying to indicate their roll gives value to the social characters' Traits and legitimacy to the antics of more socially clumsy players saying all the wrong things.
-The roll of the dice also acts as a way of saying `I am about to speak', so people can pace conversation without interruption.
+Items carried in only one hand count as having +2 to the \gls{weight}, so hefting a battle axe in only one hand would mean it has an effective \gls{weight} of 4.
+
+\subsubsection{Encumbrance}
+\index{Encumbrance}
+happens whenever characters pick up something with a \gls{weight} greater than their Strength.
+It inflicts a penalty to Speed, which means slower movement when running, and fewer \glspl{ap} in combat.
+Characters also receive one \gls{fatigue} at the end of each \gls{interval} for each level of Encumbrance.
+
+Characters cannot carry any item which gives them a -5 Encumbrance rating or higher.
+They can, however, drag items with up to a \gls{weight} of up to 6 points above their Strength Attribute (rough surfaces can increase the requirement substantially).
 
 \end{multicols}
+
+
+
+\section{Time \& Space}
+
+\begin{multicols}{2}
+
+\subsection{Time}
+\label{time}
+
+\subsubsection{Rounds}
+
+When everyone wants to talk and act at the same time, time is tracked in \glspl{round}.
+This period of time is used almost exclusively while tracking combat.
+The \gls{round} itself can then be further divided into \glspl{ap} if you want real detail, but that's covered later.
+All that matters is that a \gls{round} is a period of time in which people attempt to hit each other, then another \gls{round} occurs.
+
+\subsubsection{Intervals}
+
+\input{config/rules/interval.tex}
+
+\subsubsection{The Mission}
+
+The mission lasts until the current plot-thread is resolved, or some period of `sandboxing' through a world until a proper use of one's time can be found.
+At the end of every mission, \gls{downtime} should be called, and all characters should heal all \glspl{hp}, \glspl{mp}, \glspl{fp}, and \glspl{fatigue}.
+
+\subsubsection{\glsentrytext{downtime}}
+
+\Gls{downtime} is when the current stories come to a close and the \glspl{pc} take a rest.
+This non-mission period allows the \glspl{pc} to heal, and advance Traits.
+It can be weeks, years, or even decades.
+The party can declare \gls{downtime} at any point once the \glspl{pc} have reached a safe area, although the \gls{gm} is free to interrupt that \gls{downtime} with events.
+Likewise, the \gls{gm} can declare a \gls{downtime} at any point, but the players can interrupt this with personal missions.
+
+\subsubsection{Healing}
+\label{healing}
+\index{Healing}
+Characters heal a quarter their \gls{hp} each week, rounded up.
+Once someone receives a serious wound, it's a good time to call for \gls{downtime}.
+
+\subsection{Space}
+\label{space}
+\index{Space}
+
+\subsubsection{Steps}
+\index{Steps}
+
+Space is tracked through \glspl{step}.
+A \gls{step} is just any unit of space within the battlefield.
+If you are using a battlemap which has squares or hexagons marked out on it, then those tiles are the size of a step.
+A step might be ten metres wide as each one covers an entire house when the battlefield is a large town, or it might be just two yards wide when moving through a detailed map of a dungeon.
+The precise distances represented do not matter, just so long as they consistently balance one character's ability to run away with another's ability to hit someone with a projectile.
+
+\subsubsection{Areas}
+\index{Areas}
+
+An \gls{area} is just any place which looks different from another.
+While traipsing through a small dungeon, each room and cavern entered might be thought of as an \gls{area}.
+When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area a village.
+
+\subsubsection{Region}
+\index{Regions}
+
+Regions encompasses a full forest, a town, or a collection of villages.
+Each region has its own set of likely encounters, such as tradesmen in the villages, cut-throats in town, and elves in the forest.
+
+\end{multicols}
+
+\settoggle{bestiarychapter}{false}
