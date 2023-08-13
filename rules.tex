@@ -3,16 +3,6 @@
 
 \settoggle{bestiarychapter}{true}
 
-\section{Traits}
-
-\begin{multicols}{2}
-
-\input{config/rules/attributes.tex}
-
-\input{config/rules/skills.tex}
-
-\end{multicols}
-
 \section{Basic Actions}
 \label{basicaction}
 
@@ -20,6 +10,7 @@
 
 \newcommand{\TNChart}{
 
+  \noindent
   \begin{tabularx}{\linewidth}{cY}
 
     \textbf{\glsentrytext{tn}} & \textbf{Task} \\\hline
@@ -51,6 +42,7 @@
 \subsubsection{Basic Actions}
 When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states the \gls{tn}, and the players try to beat it by rolling $2D6$ plus any bonuses.
 
+\begin{multicols}{2}
 \begin{itemize}
 
   \item
@@ -61,6 +53,13 @@ When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states t
   If they roll equal to the \gls{tn}, the \gls{gm} can give them the choice to succeed, as long as they accept the danger.
 
 \end{itemize}
+
+\columnbreak
+
+\noindent
+\TNChart
+
+\end{multicols}
 
 \begin{exampletext}
   Hugi listens carefully at the keyhole, trying to figure out what the elves on the other side are plotting.
@@ -74,10 +73,6 @@ When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states t
   The other elves stand up quickly.''
 
 \end{exampletext}
-
-\sidebox{
-  \TNChart
-}
 
 A basic action is performed by rolling $2D6$ equal or higher than the \gls{tn} for the action.
 The more difficult the action, the higher the \gls{tn}.
@@ -247,19 +242,17 @@ Actions cannot be attempted multiple times with rerolls unless the situation has
 
 \begin{multicols}{2}
 
+We measure weight in broad terms, just in case characters need to lift a wounded companion (or corpse), or try to put thirty shortswords in the backpack.
+
 \input{config/rules/weight.tex}
 
-We measure weight in broad terms.
-Characters have a \glsentryname{weight} equal to their \glspl{hp}, so elves tend to have 5, while humans tend to have a \gls{weight} of 7.
 Items work similarly, with \gls{weight} between -4 (for very light items), through 11 (for wardrobes, carts, and boulders), and so on.
-
-Characters can carry items with a maximum \glsentryname{weight} of their Strength Bonus plus 6, so a man with 7 \gls{hp} could only be carried with a Strength Bonus of +1 or greater.
 Depending upon the circumstances, the \gls{gm} may allow heavier objects to be dragged or rolled.
 
 Items carried in only one hand count as having +2 to the \gls{weight}, so hefting a battle axe in only one hand would mean it has an effective \gls{weight} of 4.
 
+\subsubsection{Encumbrance}
 \index{Encumbrance}
-\paragraph{Encumbrance}
 happens whenever characters pick up something with a \gls{weight} greater than their Strength.
 It inflicts a penalty to Speed, which means slower movement when running, and fewer \glspl{ap} in combat.
 Characters also receive one \gls{fatigue} at the end of each \gls{interval} for each level of Encumbrance.
@@ -268,6 +261,8 @@ Characters cannot carry any item which gives them a -5 Encumbrance rating or hig
 They can, however, drag items with up to a \gls{weight} of up to 6 points above their Strength Attribute (rough surfaces can increase the requirement substantially).
 
 \end{multicols}
+
+
 
 \section{Time \& Space}
 
