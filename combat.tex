@@ -390,23 +390,29 @@ Weapons which were never made to be thrown, such as swords, axes, or most knives
 
 \end{multicols}
 
-\section{\glsentrylongpl{fp}}\label{fate_points}\index{Fate Points}
+\section{\glsentrylongpl{fp}}
+\label{fate_points}
+\index{Fate Points}
 
 \begin{multicols}{2}
 
 \noindent
-
 At this point you might be wondering how anyone is going to survive past their first battle.
 6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
-The mechanism which saves the plot-important character is \glsentryfullpl{fp}.
-Every time someone would lose \glspl{hp}, the character marks off \gls{fp} instead and it is stipulated that the attack in fact misses, because the gods have fated this person to live another day.
+\Glsentryfullpl{fp} provide a small safety-net to \glspl{pc}, at least for a little while.
 
-Everyone in the world begins with 5 base \gls{fp}.
-This is then modified by their Charisma Bonus, so someone with Charisma -2 starts with 3 \gls{fp}.
-The difference between the \glspl{pc} and the \glspl{npc} is that \glspl{pc} start play with a full allotment of \gls{fp} at the beginning of each mission.
-\Glspl{npc} start with none, but regain \glspl{fp} at the end of each interval as usual.
-As a result, most \glspl{npc} effectively have 0 \gls{fp}.
-The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied directly to \gls{npc} \glspl{hp}.
+\input{config/rules/fate.tex}
+
+Being fated by the gods, the \glspl{pc} have some extra chances to live another day, so they begin each mission with their full allotment of \glspl{fp}.
+And since the gods love some more than others, the Charisma Bonus modifies the total.
+
+\Glspl{npc} can also store \glspl{fp}, but (unlike the \glspl{pc}), they start with none.
+However, if \pgls{npc} returns for another scene, they gain $1D6$ \glspl{fp} each time.%
+
+\Glsentrylongpl{fp} create a flow throughout the game's Damage, as \glspl{pc} can lose \glspl{fp} and \glspl{hp}, then regenerate their \glspl{fp}, and continue fighting with most of their effective `hit points' still available.
+For example, someone with 7 \glspl{hp} and 7 \glspl{fp} would have a total of 14.
+After a taxing battle, they might lose all \glspl{fp} and 4 \glspl{hp}.
+But after some \glspl{interval} of rest, they regain all \glspl{fp}, leaving them with 7 again; this places the \gls{pc} 10 Damage away from defeat.
 
 \end{multicols}
 
@@ -421,48 +427,40 @@ The \gls{gm} can mostly ignore \gls{npc} \gls{fp} and Damage will be applied dir
 Fighting, running and swimming can really take it out of you, especially when wearing heavy armour.
 Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too many then they will quickly start to become ineffective.
 
-\begin{boxtable}[lllllllllX]
+\input{config/rules/fatigue.tex}
 
-\multicolumn{10}{l}{\Glsentrytext{hp}} \\
-\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
-\Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
-\multicolumn{10}{l}{\glspl{fatigue}} \\
-\XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square & \Square & \Square \\
-\multicolumn{10}{l}{Penalty: 0} \\
-
-\end{boxtable}
-
-Below the character's \gls{hp} bar are spaces for \glspl{fatigue} to be gained.
-Once the character has more \glspl{fatigue} than their current \glspl{hp}, they take a -1 penalty for every \gls{fatigue} in excess of their \glspl{hp}.
-
+\Glspl{fp} might inflict penalties because the character has 6 \glspl{hp} but gains a total of 8 \glspl{fatigue}, which results in a -2 penalty to all actions.
 
 \begin{boxtable}[lllllllllX]
 
-\multicolumn{10}{l}{\Glsentrytext{hp}} \\
-\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
-\Square & \Square & \Square & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
-\multicolumn{10}{l}{\glspl{fatigue}} \\
-\XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square & \Square \\
-\multicolumn{10}{l}{Penalty: 1} \\
+  \multicolumn{10}{l}{6/6 \Glsentrytext{hp}} \\
+  \Repeat{6}{\statDot & } \Repeat{3}{\statCircle & } \statCircle
+  \\
+  \Repeat{9}{\Square &} \Square
+  \\
+  \multicolumn{10}{l}{\glspl{fatigue}} \\
+  \Repeat{8}{\XBox &} \Square & \Square \\
+  \multicolumn{10}{l}{Penalty: 2} \\
 
 \end{boxtable}
 
-This might happen because the character has, say, 6 \glspl{hp} but gains a total of 8 \glspl{fatigue}, and then gains a -2 penalty to all actions.
 But it might also occur because the character has 4 \glspl{fatigue} and then Damage reduces them to only 2 \glspl{hp}, leaving them with a -2 penalty to all actions yet again.
 
 \begin{boxtable}[lllllllllX]
 
-\multicolumn{10}{l}{\Glsentrytext{hp}} \\
-\CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \CIRCLE & \Circle & \Circle & \Circle & \Circle \\
-\Square & \Square & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square \\
-\multicolumn{10}{l}{\glspl{fatigue}} \\
-\XBox & \XBox & \XBox & \XBox & \XBox & \Square & \Square & \Square & \Square & \Square \\
-\multicolumn{10}{l}{Penalty: 3} \\
+  \multicolumn{10}{l}{2/6 \Glsentrytext{hp}} \\
+  \Repeat{6}{\statDot & } \Repeat{3}{\statCircle & } \statCircle
+  \\
+  \Repeat{2}{\Square &} \Repeat{4}{\XBox &} \Repeat{3}{\Square &} \Square
+  \\
+  \multicolumn{10}{l}{\glspl{fatigue}} \\
+  \Repeat{4}{\XBox &} \Repeat{5}{\Square &} \Square \\
+  \multicolumn{10}{l}{Penalty: 2} \\
 
 \end{boxtable}
 
 Characters may reach a maximum penalty of -5 due to \glspl{fatigue}, after which they fall unconscious.
-If the character is accruing \glspl{fatigue} from running or wrestling, they would normally simply pass out at this point, but if they are gaining \glspl{fatigue} swimming or bleeding, the character will almost certainly just die.
+If the character is accruing \glspl{fatigue} from running or wrestling, they would normally simply pass out at this point, but if they are gaining \glspl{fatigue} swimming or climbing a cliff, the character will almost certainly just die.
 
 \Glspl{fatigue} cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
 
@@ -477,32 +475,14 @@ However, players only apply them at the end of the interval.
 Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
 The real danger in \glspl{fatigue} is persistent action, when characters have no chance to recover from a previous battle.
 
-\subsubsection{The Skill Discount}
-
-Characters can use skills as a sort of `\gls{dr}' against \glspl{fatigue}.
-3 \glspl{round} of combat inflicts 3 \glspl{fatigue}, but someone with Combat 1 can ignore 1 \gls{fatigue} which comes from fighting in the first round of combat.%
-\footnote{Skills never help \glspl{fatigue} gained due to carrying heavy items.}
-Athletics curbs \glspl{fatigue} accumulated through running, Wyldcrafting or Caving curbs \glspl{fatigue} gained through marching (depending upon the environment), and so on.
-
 \subsubsection{Special Categories}
 
-\Glspl{fatigue} can represent all manner of problems a character has -- not just tiredness.
+\Glspl{fatigue} can represent all manner of problems a character has -- not just tiredness -- and some remain for longer than others.
 
 \paragraph{Poison} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to return home.
 
 \paragraph{Starvation} is another special case.
 \glspl{fatigue} inflicted from starvation are marked with an `$S$', and each of these points only heal once the character has had a full meal.
-
-\subsection{Healing Fatigue}
-\index{Resting}
-
-When the party take any part of the day to rest, they can heal a number of \glspl{fatigue} equal to half their \textit{current} \glspl{hp}; so someone with 4 out of 8 \glspl{hp} would be able to recoup 2 \glspl{fatigue} by resting, either for a full night, or by taking some chunk of the afternoon to sit quietly.%
-\footnote{The day is divided into four parts. See page \pageref{time}.}
-
-In most cases, \glspl{fatigue} will heal faster than they accumulate, so tiredness can be safely ignored while are in ideal circumstances.
-However, persistent battles, sprints, and poisons can quickly incapacitate the most seasoned warriors.
-
-\fatiguechart
 
 \end{multicols}
 
