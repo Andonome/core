@@ -205,32 +205,27 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weig
 
 \shieldchart
 
-\subsection{Armour}
-\index{Armour}
-
 \boxPair{
-  \paragraph{A combat roll involving armour}
-  might look like this: a \gls{pc} with \textit{partial} leather armour faces off against a soldier, with \textit{complete} plate armour.
-  If the \gls{pc} fails their roll by 3 or more points below the \gls{tn} then the knight hits them, and bypasses their leather armour's \glsentrylong{dr}.
-  And if the \gls{pc} hits the knight and rolls 5 points above the \gls{tn} then they bypass the knight's \gls{dr}.
+  \subsubsection*{Example}
+  An armoured knight stands with a flail.
+  His basic Attack Score is 10, so rolling 10 means a draw.
+  His full plate armour has a Covering of 4,
+  so to hit him, a \gls{pc} will need to roll past this number, getting 5 over the basic \gls{tn}.
 
-  Assuming the player's total \gls{tn} is `7', the possible results will look like this:
+  Rolling 9 or less means the \gls{pc} is hit, and since he has no armour, that won't go well!
 
   \begin{boxtable}[cLc]
     \textbf{Roll} & \textbf{Result} & \textbf{Margin} \\
     \hline
-      $\leq 3$ & \Glsentrytext{pc} is hit, \underline{no \gls{dr}} & \textit{4} \\
-      4 & \Glsentrytext{pc} is hit, but \gls{dr} applies & \textbf{3} \\
-      5 & \Glsentrytext{pc} is hit, but \gls{dr} applies & \textbf{2} \\
-      6 & \Glsentrytext{pc} is hit, but \gls{dr} applies & \textbf{1} \\
-      7 & \emph{Draw!} If both hit, armour applies & 0 \\
-      8 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{1} \\
-      9 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{2} \\
-      10 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{3} \\
-      11 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{4} \\
-      12 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{5} \\
-      $\geq 13$ & \Glsentrytext{npc} is hit, \underline{no \gls{dr} applies} & \textit{6} \\
+      10 & \emph{Draw!} & 0 \\
+      11 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{1} \\
+      12 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{2} \\
+      13 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{3} \\
+      14 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{4} \\
+      $\geq 15$ & \Glsentrytext{npc} is hit, \underline{no \gls{dr} applies} & \textit{5!} \\
   \end{boxtable}
+
+  In this case, the \gls{pc} rolls a 15, so he hits for 6 Damage, and the knight loses 6 \glspl{hp}.
 
 }{
 
@@ -241,12 +236,13 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weig
           y={(image.north west)}
       ]
           \foreach \mNum/\mX/\mY in {%
+            {\huge$\leq 9$!}/22/25,
             10/54/20,
             11/30/63,
             12/37/45,
             13/52/63,
             14/31/70,
-            {\huge 15!}/41/36,
+            {\huge 15!}/42/38,
           }{
             \mapLegend{\outline{\mNum}}{\mX}{\mY}{\large}
           }
@@ -254,17 +250,27 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weig
   \end{tikzpicture}
 }
 
-\noindent
+\subsection{Armour}
+\index{Armour}
+
+\input{config/rules/armour.tex}
+
+When armour works, its \gls{dr} reduces incoming Damage.
+This occurs before Damage applies to \glspl{fp}, so \gls{dr} and \glspl{fp} make a powerful and steady combination.
+
+\subsubsection{\Glsfmtplural{vitalShot}}
+\label{vitals}
+\index{Combat!\Glstext{vitalShot}}
 Just as real armour covers parts of the body, armour in BIND covers numbers on the dice.
 An armour with Covering 2 can protect characters from a little Damage whenever they miss an Attack roll by 1 or 2.
 But if they roll lower than this, the armour does nothing, as the attack strikes flesh.
+We call this a `\gls{vitalShot}'.
+
+When trying to hit, \glspl{pc} will need to roll 3 over the creature's \gls{tn} (or more, for opponents with more Covering).
 
 \armourchart
 
 \noindent
-When armour works, its \gls{dr} reduces incoming Damage.
-This occurs before Damage applies to \glspl{fp}, so anyone going beyond the \gls{edge} should consider wearing armour until they return.
-
 \subsubsection{Armour Types}
 
 \paragraph{Padded}
@@ -274,7 +280,7 @@ Of course it stinks, and weighs a tonne, so best leave it until the most despera
 \ifnum\value{r4}=3
   \paragraph{Elvish Ceramic}
   has very little strength on a piece-by-piece basic, but once worn in the correct arrangement, it gains surprising strength.
-  It also sells well to nobles hoping to armour their children for long road trips. 
+  It also sells well to human nobles who want to armour their children for long road trips. 
 \fi
 
 \paragraph{Leather}
@@ -290,22 +296,10 @@ The chain itself only protects against a weapon's blade, not the weight, while t
 involves adding all of the above into one armour, with sheets of metal on top.
 Allowing someone to move within this pile of metal requires rare artisans.
 
-\subsubsection{\Glsfmtplural{vitalShot}}
-\label{vitals}
-\index{Combat!\Glstext{vitalShot}}
 
-When attacking an opponent in armour, it is possible to make a shot so precise as to get a gap in a helmet, strike an opponent in the eye or slide a blade between overlapping plates.
-To get a \gls{vitalShot}, one simply needs to roll high enough over the target's regular \gls{tn} and all armour (meaning \gls{dr}) can be ignored.
-
-For partial armour, anyone rolling a Margin of 3 (i.e.
-3 points above the \gls{tn}) ignores the \gls{dr} from the armour.
-If the regular \gls{tn} is 8 then any roll of 11 or greater counts as a \gls{vitalShot}.
-Complete armour requires a Margin of 5 to ignore the armour, so if the \gls{tn} were 10 then a hit would require a total of 15 to bypass the armour.
-Perfect armour cannot be bypassed by a sufficiently high roll.
-
-Many creatures have a \gls{dr} from natural armour, representing especially thick skin or some other immunity to Damage.
-Natural armour always counts as Complete armour unless otherwise specified, because it covers almost all of the body, but often leaves weak spots open such as the eyes or the kneecaps.
-
+\paragraph{Natural Armour}
+means tough skin (or scales, or chitin\ldots) thick enough to push back blades.
+Natural armour always has a Covering of 4 unless otherwise specified, because it covers almost all of the body, but still leaves weak spots open such as the eyes or the kneecaps.
 
 \begin{figure*}[t!]
 \projectilesChart
@@ -318,10 +312,9 @@ Some creatures have a natural \gls{dr}, which would then stack with their armour
 The primary armour counts for its full value, and the lower \gls{dr} score counts for half.
 Any tertiary armour counts for a quarter, and so on.
 Once you have a total, round up anything over half.
-Stacked armour can consist of both partial and complete layers, meaning a roll could bypass one set of armour by rolling 3 over the creature's \gls{tn}, but bypass all armour with a roll of 5 over the \gls{tn}.
+Stacked armour can consist of different levels of Covering, meaning a roll could bypass one set of armour by rolling 3 over the creature's \gls{tn}, while another type of armour (with a Covering of 4) still applies.
 
-
-Consider this convoluted example: a basilisk with \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
+Consider this convoluted example: a basilisk with natural \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
 The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
 If the mage were crazy enough to add plate armour to the basilisk, the total \gls{dr} would be\ldots
 
@@ -333,11 +326,13 @@ If the mage were crazy enough to add plate armour to the basilisk, the total \gl
 
 \ldots or `8' (after rounding up).
 
-Of course if this were \textit{partial} plate armour, any roll which gets 3 over the basilisk's \gls{tn} would only get the \gls{dr} of 5.
+If the plat armour had a covering of only 2 then rolling 3 over the creature's \gls{tn} would leave it with a \gls{dr} of only 5.
 
 Standard armour cannot be stacked in this way.
 We assume plate, chain, and some leather-based armours already have padded armour underneath.
 Similarly, different types of natural \gls{dr} do not stack, and nobody becomes undead in different ways.
+
+The only different \emph{kinds} of armour can stack up in this manner, so players will almost never see it in a game.
 
 \end{multicols}
 
