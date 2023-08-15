@@ -217,12 +217,13 @@ Their Attack Bonus is 0, their Damage Bonus is equal to their \glsentryname{weig
   \begin{boxtable}[cLc]
     \textbf{Roll} & \textbf{Result} & \textbf{Margin} \\
     \hline
-      10 & \emph{Draw!} & 0 \\
+       $\leq 9$ & \gls{pc} is hit, taking full Damage! & -1! \\
+      10 & \emph{Draw} & 0 \\
       11 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{1} \\
       12 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{2} \\
       13 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{3} \\
       14 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{4} \\
-      $\geq 15$ & \Glsentrytext{npc} is hit, \underline{no \gls{dr} applies} & \textit{5!} \\
+      $\geq 15$ & \emph{\Gls{vitalShot}!} -- full Damage to \gls{npc} & \textit{5!} \\
   \end{boxtable}
 
   In this case, the \gls{pc} rolls a 15, so he hits for 6 Damage, and the knight loses 6 \glspl{hp}.
