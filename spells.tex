@@ -1,0 +1,75 @@
+\chapter[Chamber of Magic]{Magic}
+
+\section{First Level Spells}
+
+\begin{multicols}{2}
+
+\subsection{Fate}
+
+\spell{Blessing}% Name
+  {Fate}% Spheres
+  {Wax}% Action
+  {}% Enhancements
+  {Empathy}% Skill
+  {gain \arabic{spelllevel} \glspl{fp}}% Description
+
+\spell{Curse}% Name
+  {Fate}% Spheres
+  {Wane}% Action
+  {}% Enhancements
+  {Deceit}% Skill
+  {lose \arabic{spelllevel} \glspl{fp}}% Description
+
+\subsection{Air}
+
+\spell{Wind Chill}% Name
+  {\mAir}% Spheres
+  {Wax}% Action
+  {}% Enhancements
+  {Seafaring}% Skill
+  {lose \arabic{spelllevel} \gls{ap}}% Description
+
+The mage blasts the target with chilled wind, draining them of \arabic{spelllevel} \gls{ap}.
+In close-range combat, the spell nullifies an enemy's attack against the caster.
+
+\end{multicols}
+
+\section{Second Level Spells}
+
+\begin{multicols}{2}
+
+\subsection{Fate}
+
+\spell{Mass Blessing}% Name
+  {Fate}% Spheres
+  {Wax}% Action
+  {\duplicated}% Enhancements
+  {Empathy}% Skill
+  {gain \arabic{spelllevel} \glspl{fp}}% Description
+
+\spell{Mass Curse}% Name
+  {Fate}% Spheres
+  {Wane}% Action
+  {\duplicated}% Enhancements
+  {Deceit}% Skill
+  {lose \arabic{spelllevel} \glspl{fp}}% Description
+
+\spell{Hateful Cry}% Name
+  {Fate}% Spheres
+  {Wane}% Action
+  {\distant}% Enhancements
+  {Deceit}% Skill
+  {loses \arabic{spelllevel} \glspl{fp}}% Description
+
+One target at \spellRange{} loses \dmg{spelllevel}~\glspl{fp}.
+
+\subsection{Air}
+
+\spell{Wind Blast}% Name
+  {\mAir}% Spheres
+  {Wax}% Action
+  {\duplicated}% Enhancements
+  {Seafaring}% Skill
+  {lose \arabic{spelllevel} \gls{ap}}% Description
+
+\end{multicols}
