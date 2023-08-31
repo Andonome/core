@@ -4,8 +4,7 @@
 |:-------------------------------------|:------------------------------|
 | [Core Book][core download]           | [Wiki][wiki]                  | 
 | [Character Sheets][resources]        | [Email an idea][issuesEmail]  |
-| [Reference Version][reference]       | [Issues Board][board]         |
-| [Character Spread Sheet][cs]         | [ Your ad here $5 ]           |
+| [Character Spread Sheet][cs]         | [Issues Board][board]         |
 
 BIND is a grunge-fantasy tabletop RPG core ruleset.
 
@@ -60,8 +59,7 @@ If you want to get involved, there are a number of ways to contribute:
 - Join the project, and start fixing issues.
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/BIND.pdf?job=compile_pdf
-[reference]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/BIND_ref.pdf?job=compile_pdf
+[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=compile_pdf
 [resources]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/resources.pdf?job=compile_pdf
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif

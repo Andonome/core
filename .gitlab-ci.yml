@@ -11,4 +11,4 @@ compile_pdf:
     - run
   artifacts:
     paths:
-      - core.pdf
+      - "*.pdf"

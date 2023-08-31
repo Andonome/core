@@ -2,6 +2,8 @@ BOOK = $(shell basename "$$(pwd)")
 
 output: $(BOOK).pdf
 
+.PHONY: clean all
+
 global: config/bind.sty .switch-gls
 .switch-gls:
 	@touch -r Makefile .switch-gls
@@ -17,8 +19,13 @@ $(BOOK).sls: | $(BOOK).glo
 $(BOOK).pdf: $(BOOK).sls $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
-all: $(BOOK).pdf 
-	latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
+config/resources.pdf: config/bind.sty
+	@make -C config resources.pdf
+resources.pdf: config/resources.pdf
+	@cp config/resources.pdf .
+
+all: $(BOOK).pdf resources.pdf
+	@latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
 
 clean:
 	rm -fr *.aux *.sls *.slo *.slg *.toc *.acn *.log *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg \
@@ -30,4 +37,3 @@ clean:
 	*.fdb_latexmk \
 	*.fls
 
-.PHONY: clean all
