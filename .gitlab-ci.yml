@@ -1,10 +1,11 @@
-compile_pdf:
-  image: ctornau/latex
+---
+variables:
+  LATEX_IMAGE: andonome/texbind
+
+build:
+  image: $LATEX_IMAGE
   script:
-    - apt-get update -y
-    - apt-get install -y inkscape make git-lfs
-    - git submodule update --init
-    - git submodule foreach git lfs pull
+    - git lfs pull
     - make all
   only:
     - master

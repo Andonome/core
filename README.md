@@ -59,8 +59,8 @@ If you want to get involved, there are a number of ways to contribute:
 - Join the project, and start fixing issues.
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=compile_pdf
-[resources]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/resources.pdf?job=compile_pdf
+[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build
+[resources]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/resources.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
 [cs]: https://gitlab.com/bindrpg/core/-/blob/ods/calc_cs/bind_cs.ods
