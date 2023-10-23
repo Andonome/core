@@ -24,7 +24,6 @@ Humans have an extra +1 Strength Bonus, so their Strength Bonus range is -2 to +
 \index{Physical Attributes}
 
 These are the Attributes determined wholly by the character's body.
-Humans and gnolls tend to excel here, where elves and gnomes are smaller, more delicate creatures.
 Monsters, beasts and stranger creatures are all described with these three Body~Attributes.
 
 \settoggle{examplecharacter}{false}
@@ -101,20 +100,66 @@ Wyldcrafting & Wrestling a~boar & Untying a~horse's bridle & Fleeing a stampede 
 \end{figure*}
 
 \noindent
-Skills define what a character does with most of their time -- what they are practised in.
-They are always paired with an Attribute to give a bonus to rolls.
-We'll go over how which Skills are available below.
-For now, just jot down a few of the Skills you think your character should have so you can see how they work with the basic actions in the next chapter.
-A basic Skill grants a +1 bonus to actions where it is used.
-This is the level of a very basic worker in that field -- those just finishing an apprenticeship in Crafts would have the basic Skill level.
-Advanced Skills are those with a +2 bonus, indicating an established member of the field.
-Vigilance +2 might indicate a very shifty and paranoid person, while Athletics +2 would mean the character is persistently practising new athletic feats.
-Finally, experts with a score of +3 are very rare.
-A +3 bonus to Stealth indicates someone who has rare insights and keen instincts when it comes to going unnoticed, while someone with mastery of the Empathy Skill could talk a beggar into giving their hat away.
+A characters Skills tell you what they do with most of their time.
+A lot of Wyldcrafting means that someone can farm plants, and probably hunts, and a high Academics score means they read a lot, and communicate with other Academics.
 
-For examples of skill use, take a look at the Skill Matrix overleaf.  Notice that each Skill represents very different abilities when paired with different Attributes.
-We use Vigilance for both investigation and to remain watchful throughout a long night.
-An elf with Intelligence +2 would have a total bonus of +4 when investigating a crime scene, but if the same elf had Strength -2, their total bonus for remaining watchful throughout a long night would be 0.
+\noindent
+\begin{boxtable}[cL]
+
+  \hline
+  \textbf{Dots} & \textbf{Meaning} \\\hline
+
+  1 & A novice, who makes occasional use of the Skill \\
+
+  2 & A trained professional, who has spent many years in these activities. \\
+
+  3 & A master of the art, who spends weeks focussing on the minutiae of every aspect of the Skill. \\
+
+\end{boxtable}
+
+Each Skill pairs up with different Attributes to show different overall ability levels.
+A craftsman with great Dexterity may create beautiful and intricate items, but won't always craft with Speed, and if their Intelligence is poor, they may not be able to create new moulds well.
+
+Have a look at this talented soldier:
+
+\person{1}% STRENGTH
+  {2}% DEXTERITY
+  {-1}% SPEED
+  {{-2}% INTELLIGENCE
+  {2}% WITS
+  {1}}% CHARISMA
+  {0}% DR
+  {1}% COMBAT
+  {Deceit~3, Empathy~1, Larceny~2}% SKILLS
+  {\longsword, dagger, brooch of the Poison Guild.}% EQUIPMENT
+  {}
+
+With only a few Skills, we can see a wealth of abilities.
+
+\begin{description}
+  \item[\roll{Strength}{Deceit}]
+    allows her to intimidate with +4 to the roll.
+  \item[\roll{Dexterity}{Empathy}]
+    gives her +3 to dancing.
+  \item[\roll{Dexterity}{Larceny}]
+    gives her +4 to picking pockets.
+  \item[\roll{Speed}{Larceny}]
+    shows +1 to snatch-and-run attempts.
+  \item[\roll{Intelligence}{Deceit}]
+    gives +1 to planning a plausible lie.
+  \item[\roll{Intelligence}{Empathy}]
+    means a -1 penalty to negotiations.
+  \item[\roll{Intelligence}{Larceny}]
+    has her at +0 to plan a heist.
+  \item[\roll{Wits}{Deceit}]
+    gives her +5 to pull out a plausible lie on the spot.
+  \item[\roll{Wits}{Empathy}]
+    gives her +3 to see when someone lies to her.
+  \item[\roll{Charisma}{Deceit}]
+    gives her +4 to confidently sell someone on an idea.
+  \item[\roll{Charisma}{Empathy}]
+    gives her +2 when ingratiating herself with a new crowd.
+\end{description}
 
 Many pairings of an Attribute plus Skill will not come up very often, but you should think of each likely pairing as an individual talent.
 For example, a character with a bonus to Academics and Vigilance has individual bonuses for \textit{forgery}, \textit{recall}, \textit{resisting enchantments}, \textit{storytelling}, \textit{keeping watch}, \textit{investigation}, and \textit{spotting illusions}.
