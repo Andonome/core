@@ -165,10 +165,8 @@ Many pairings of an Attribute plus Skill will not come up very often, but you sh
 For example, a character with a bonus to Academics and Vigilance has individual bonuses for \textit{forgery}, \textit{recall}, \textit{resisting enchantments}, \textit{storytelling}, \textit{keeping watch}, \textit{investigation}, and \textit{spotting illusions}.
 It's only two Skills on the sheet, but that's seven different ratings the character has.
 
-For more detailed examples, see page \pageref{skill_uses}.
-
-\label{skills}
 \subsection{The List}
+\label{skills}
 
 Most Skills allow people to perform a range of functions depending upon which Attribute it is paired with. A few examples are given with the list below.
 
@@ -202,10 +200,26 @@ This `study of study', can involve reading, mnemonics, and teaching.
 
 }
 
-Characters without any levels in Academics are always illiterate, but those \emph{with} some Academics Skill could also be illiterate.
-Various shamans practice memorizing long texts and generally consider books to be a dimwit's crutch.
 
-Academics might be mixed with Charisma for storytelling, Wits to pull out just the right information, Intelligence to write well, or even Strength for a loud speech.
+\begin{description}
+  \item[\roll{Strength}{Academics}]
+    covers oration, as speaking to a large crowd requires strong lungs.
+
+    Forest clearings might grant a +1 bonus, while a full auditorium can grant +2.
+  \item[\roll{Dexterity}{Academics}]
+    covers forgery, as the work needs a steady hand, along with an excellent understanding of the meaning of every material and symbol upon coins, signet rings, and letters.
+
+    To perform well, forgers need a large variety of materials, in order to select something which precisely mimics their target.
+  \item[\roll{Intelligence}{Academics}]
+    lets characters recall facts about an area's history.
+
+    Libraries grant a bonus to the roll.
+  \item[\roll{Charisma}{Academics}]
+    covers storytelling.
+
+    Travelling a little can grant a bonus, as people always like hearing new stories.
+    Travelling a lot gives a penalty, as anyone too far removed from the storyteller struggles to understand the people, places, and even the values the story rests on.
+\end{description}
 
 \begin{exampletext}
 
@@ -229,11 +243,28 @@ Academics might be mixed with Charisma for storytelling, Wits to pull out just t
 \subsection{Athletics}
 
 This covers all manner of fancy movements, from somersaults and rolling to climbing and circus skills.
-It might be paired with Dexterity when a character is attempting to roll under then leap over tables or otherwise navigate uneven terrain.
-For flat-out sprinting, the Speed Attribute is always preferred, while Strength is primary when characters want to throw cannon balls.
 
-Many of the longest-surviving \glspl{guard} find this Skill invaluable.
-Of course, nobody can hope to outrun a giant arachnid, but not being the slowest member of your group sorts most issues.
+
+\begin{description}
+  \item[\roll{Strength}{Athletics}]
+    covers lifting and throwing heavy objects.
+
+    Rope will help with some items, as does a good place to grab onto something.
+  \item[\roll{Dexterity}{Athletics}]
+    covers climbing.
+    Rope is sometimes a requirement, but that does not make it a bonus.
+
+    Climbers can gain a bonus from a solid plan -- many mountain faces are simply impossible without knowing the best route up.
+  \item[\roll{Speed}{Athletics}]
+    covers sprinting.
+    Almost all of the \gls{guard} can sprint well, as the slowest members of any group tend to become something's lunch.
+
+    Open roads may help someone fleeing pursuit, but only when the pursuer does not run on the same road (otherwise both have a bonus, and they cancel each other out).
+  \item[\roll{Intelligence}{Athletics}]
+    lets someone identify the best climbing route before they begin, which lets gain a bonus to actually climbing later.
+  \item[\roll{Charisma}{Athletics}]
+    covers stage tumbling and circus acrobatics.
+\end{description}
 
 \begin{figure*}[b!]
 
@@ -283,17 +314,29 @@ Of course, nobody can hope to outrun a giant arachnid, but not being the slowest
   After that, everyone would follow up the rope without issue.
 \end{exampletext}
 
-
 \subsection{Caving}
 
 Caving includes navigation, foraging, building basic structures, and some understanding of the typical plants and beast found within caves.
 Just as most humans understand some basic Wyldcrafting, almost all dwarves and gnomes know a little of the Caving Skill.
 
-Those with a poor understanding of caves can make foolish mistakes, like building a fire inside to stay warm, or simply not inspecting a wall's integrity before starting a journey.
 
-Cavers share a certain overlap with survivalists -- both know a lot about woodspies, although they can behave so differently in the separate environments that they sometimes seem like different creatures.
+\begin{description}
+  \item[\roll{Strength}{Caving}]
+    covers throwing stone out of the way to form a path.
+    With a good pickaxe, cavers can mine out new paths.
 
-Specialized members of the \gls{guard} often take this Skill, especially in the Shale, where so many nasty creatures retreat into caverns after stealing sheep.
+    Of course, mining out paths becomes easier with the right kind of fire-starting equipment.
+    Sufficiently hot rock-faces may become weak, or even shatter.
+  \item[\roll{Dexterity}{Caving}]
+    covers climbing across caverns, or navigating dangerous routes.
+  \item[\roll{Intelligence}{Caving}]
+    covers remembering all the twists and turns on a long journey, and remembering to bring the right supplies.
+    It also helps one avoid foolish mistakes, such as lighting a fire underground.
+
+    Of course, one can always coordinate easier with a map, or at least something to takes notes on.
+  \item[\roll{Wits}{Caving}]
+    covers spotting dangerous areas, or keeping track of one's altitude.
+\end{description}
 
 \begin{exampletext}
 
@@ -328,23 +371,48 @@ Specialized members of the \gls{guard} often take this Skill, especially in the 
 
 \subsection{Craft}
 
-The Craft Skill allows players to make and fix things, and occasionally break things.
-Designing new equipment requires an Intelligence roll, while making them requires Dexterity.
-Strength could even be used to govern making simple things (such as a make-shift shelter) with unyielding materials such as green wood.
+The Craft Skill allows \glspl{pc} to make and fix things, and occasionally break things.
 
-To craft an item used with another Skill, the crafter requires at least 1 level in that Skill.
-The level of the Skill does not matter.
-Knowing how to bind a book only requires someone to roughly know how a book functions, they do not need to also write great literature.
+\begin{description}
+  \item[\roll{Strength}{Crafts}]
+    lets characters kick down a door.
+    Muscle can help, but it won't help that much when kicking the wrong spot on the door.
 
-Similarly, someone who cannot wield a sword properly cannot craft a functional weapon, but if they have even a single level in the Combat Skill, they can craft any weapon they have seen.
-Using moulds or other pre-set designing materials allows the character to perform the Craft roll as a Resting Action (see page \pageref{restingactions}) and may provide a bonus to the roll depending upon the quality of tools available.
+    And of course, a heavy-duty battering ram can grant a +2 bonus.
+  \item[\roll{Dexterity}{Crafts}]
+    covers making any item the character can use.
+    The character must have at least one level in the Skill they want to use for crafting.
+    Crafting arrows requires Projectiles, and making backpacks requires Wyldcrafting.
+
+    All craftsmen require tools to work.
+    Better tools, good schematics, and quality moulds can grant bonuses, while shoddy equipment can inflict penalties.
+  \item[\roll{Intelligence}{Crafts}]
+    lets characters make good moulds and plans, for themselves or others.
+\end{description}
 
 \subsection{Deceit}
 
-Someone proficient at deception can make others see white as black by sheer confidence. It is often paired with Charisma when creating such lies. At other times, when a quick excuse is needed after a character has been caught with their hand in someone else's pockets, the Wits Attribute can be used to get out of trouble. Complicated lies, having to do with a long series of events or where a character wants to make someone hopelessly confused about the situation, might use one's Intelligence Bonus.
+Someone proficient at deception can make others see white as black by sheer confidence.
 
-The Deceit Skill does not necessarily have to convey lies -- it deals with situations that hinge on emphasis without care for truth.
-The Strength Bonus might also be used to intimidate people, whether the character's intentions are in fact vicious or not.
+\begin{description}
+  \item[\roll{Strength}{Deceit}]
+    covers intimidation.
+
+    Weapons can help with this endeavour just as well as they do with M\^{e}l\'ee, so an axe which grants +3 to hit in combat will also give +3 to intimidation attempts.
+  \item[\roll{Dexterity}{Deceit}]
+    covers fake spell-casting.
+    People fear fake curses just as much as real ones!
+  \item[\roll{Intelligence}{Deceit}]
+    covers elaborate lies and ruses.
+  \item[\roll{Wits}{Deceit}]
+    covers on-the-spot lies, for when you just need to explain your presence in a rush.
+  \item[\roll{Charisma}{Deceit}]
+    means selling something -- an idea, a plan, an item, or a road.
+    With enough confidence and gravitas, characters can sell anything.
+
+    Of course having quality ideas and goods helps a lot, so they can add a bonus (or penalty) to the roll.
+\end{description}
+
 
 \begin{exampletext}
   Sindon and Marley listened with horror as the guards crashed into the first room in the hallway.
