@@ -470,16 +470,19 @@ Someone proficient at deception can make others see white as black by sheer conf
 \subsection{Empathy}
 
 The art of understanding people is practised by kind souls as well as malicious.
-When paired with Charisma it forms a means of getting people to want things -- or stop wanting them; most often this takes the form of asking someone for help.
-It is used when characters want a price lowered, or are hoping to get someone to keep the bar open.
-If, however, the persuasive arguments are not concerned with making someone feel for the character but with the cold hard facts, the Intelligence Attribute is preferred.
-This might be used to convince someone not to go to war with a neighbouring nation or show how farming more land is not in their own best interest.
 
-Commonly, Empathy is used to spot lies when paired with Wits.
-Humans are famously bad at this, resulting in wildfires of bogus rumours around human communities, while it can be very difficult to lie to elves.
+\begin{description}
+  \item[\roll{Dexterity}{Empathy}]
+    covers dancing, and the minstrels add a bonus or penalty.
+  \item[\roll{Intelligence}{Empathy}]
+    covers negotiating skills and puzzling out someone's likely motivations.
 
-Calming animals very often requires this kind of insight, although animals have very little care how `friendly', someone seems to other people.
-Empathy rolls to calm or predict animals typically use the Intelligence Attribute.
+    Bonuses and penalties depend on leverage and information.
+  \item[\roll{Wits}{Empathy}]
+    helps spotting lies and judging someone's abilities.
+  \item[\roll{Charisma}{Empathy}]
+    covers making new allies.
+\end{description}
 
 \begin{exampletext}
   Nine or ten young men.
@@ -500,9 +503,20 @@ Empathy rolls to calm or predict animals typically use the Intelligence Attribut
 
 \subsection{Larceny}
 
-Larceny is generally mixed with Dexterity for picking pockets and juggling, or Intelligence to pick a lock.
-It might also be used with Wits to spot a rich pocket to pick, or with Charisma to dazzle someone with a magic trick.
-Characters attempting to spot slight of hand will use Wits + Vigilance.
+Theft, looting and arson all benefit from experience.
+
+\begin{description}
+  \item[\roll{Dexterity}{Larceny}]
+    covers picking pockets.
+  \item[\roll{Speed}{Larceny}]
+    covers snatch-and-run jobs, which is what usually happens to a failed attempt to pick someone's pockets.
+  \item[\roll{Intelligence}{Larceny}]
+    covers picking locks, as someone has to understand the mechanism, without seeing it.
+
+    Picking locks always requires equipment, but someone can always attempt to make materials out of items they have to-hand, if they don't mind a sharp penalty to the roll.
+  \item[\roll{Charisma}{Larceny}]
+    helps to create a distraction.
+\end{description}
 
 \begin{exampletext}
   ``I don't want to get swindled'', she said.
@@ -538,11 +552,19 @@ Characters attempting to spot slight of hand will use Wits + Vigilance.
 \subsection{Medicine}
 
 Medicine is a primitive but effective art, regrettably full of nonsense and superstition, but mandatory when it comes to keeping someone with a serious wound alive.
-The Wits Attribute will allow someone to quickly patch up a bleeding wound, cutting or reducing the number of \glspl{fatigue} the bleeding character would otherwise have received.%
-\footnote{We cover \glspl{fatigue} later, on page \pageref{fatigue}.}
-Intelligence is used for creating poisons, or healing the effects of a bad meal.
 
-A sufficiently bad roll can easily inflict damage on a patient.
+\begin{description}
+  \item[\roll{Strength}{Medicine}]
+    lets someone fix a twisted bone or nose.
+    If someone has only 1 \gls{hp} of Damage, the medicus can heal it, leaving them with only 1 \gls{fatigue} instead.
+    A failed roll inflicts an additional \gls{hp} instead.
+  \item[\roll{Intelligence}{Medicine}]
+    covers making poisons, and figuring out which poison has affected someone.
+    See \autopageref{poison} for details.
+  \item[\roll{Wits}{Medicine}]
+    covers stopping someone bleeding out.
+    See \autopageref{bleeding} for more on this.
+\end{description}
 
 \begin{exampletext}
   ``Blood-letting doesn't work on elves'', he protested.
@@ -554,9 +576,22 @@ A sufficiently bad roll can easily inflict damage on a patient.
 
 \subsection{Performance}
 
-This skill covers every type of instrument, poetry and evocative storytelling. While academics might tell detailed stories which serve to persuade people of things, they are not nearly so entertaining as the dramatic stories told by a true performer. Performance covers dramatic acting, though Deceit still covers any real-world performances.
+This skill covers acting, instruments, and crowd control.
+Those with performance will pick up at least one instrument per level.
 
-This will often be paired with Charisma when a performer wants to give off an entertaining performance. More technical pieces might require Dexterity instead. Performers wanting to create new poems, songs or the like add their Intelligence Attribute instead.
+\begin{description}
+  \item[\roll{Strength}{Performance}]
+    covers long sessions performing.
+    Minstrels with limited stamina never last long.
+
+    The bonus depends on the quality of the instruments, with a standard range of -1 to +1.
+  \item[\roll{Dexterity}{Performance}]
+    covers lively performances, playing challenging pieces with a string-instrument, mime-acting and being understood by a whole crowd.
+  \item[\roll{Intelligence}{Performance}]
+    covers crafting new creations, such as plays or songs.
+
+    Creators can gain a bonus if they have an unlimited supply of paper, ink and candles.
+\end{description}
 
 \begin{exampletext}
   The elf looked sad.
