@@ -823,22 +823,20 @@ Wyldcrafters can track people and prey throughout any standard above-ground terr
 \begin{multicols}{2}
 
 \noindent
-At this point you might be wondering how anyone is going to survive past their first battle.
-6 or 7 \glspl{hp} is not a lot when the Damage is often $2D6$ or higher.
-\Glsentryfullpl{fp} provide a small safety-net to \glspl{pc}, at least for a little while.
+Each of the \glspl{pc}, and some of the \glspl{npc} have a destiny.
+However, destiny has a limite supply, so \glspl{pc} had best not rely on it.
 
 \input{config/rules/fate.tex}
 
-Being fated by the gods, the \glspl{pc} have some extra chances to live another day, so they begin each mission with their full allotment of \glspl{fp}.
-And since the gods love some more than others, the Charisma Bonus modifies the total.
+\Glspl{fp} provide much of the game's narrative flow, as \glspl{pc} encounter near-misses, then damage, and decide to run away as they're completely `out of luck'.
+Soon after, they remain wounded, but their `luck as returned', and they can press-on, despite retaining a serious injury.
 
-\Glspl{npc} can also store \glspl{fp}, but (unlike the \glspl{pc}), they start with none.
-However, if \pgls{npc} returns for another scene, they gain $1D6$ \glspl{fp} each time.%
+Losing \glspl{fp} can mean any number of things.
+\Pgls{pc} might stumble slip and catch themselves just in time, causing an arrow to narrowly miss their head; or the enemy might swing their sword and strike a stray tree-branch.
 
-\Glsentrylongpl{fp} create a flow throughout the game's Damage, as \glspl{pc} can lose \glspl{fp} and \glspl{hp}, then regenerate their \glspl{fp}, and continue fighting with most of their effective `hit points' still available.
-For example, someone with 7 \glspl{hp} and 7 \glspl{fp} would have a total of 14.
-After a taxing battle, they might lose all \glspl{fp} and 4 \glspl{hp}.
-But after some \glspl{interval} of rest, they regain all \glspl{fp}, leaving them with 7 again; this places the \gls{pc} 10 Damage away from defeat.
+\Glspl{pc} begin with a full alotment of \glspl{fp}, while \glspl{npc} start with none.
+However, everyone (including \glspl{npc} present in the scene) regains $1D6$ \glspl{fp} at the end of each \gls{interval}.%
+\footnote{See \autopageref{interval} for more on \glspl{interval}.}
 
 \end{multicols}
 
@@ -890,26 +888,26 @@ If the character is accruing \glspl{fatigue} from running or wrestling, they wou
 
 \Glspl{fatigue} cannot be mitigated with \gls{fp}. Characters who can luck their way out of being shot by arrows and roasted by dragons can quite easily be punched and dragged away, or collapse after a long run.
 
-\subsection{Gaining Fatigue}
-
-\noindent
-Each round running, climbing, in combat, or otherwise exerting oneself inflicts a \gls{fatigue}.
-Armour also inflicts a number of \glspl{fatigue} equal to its \glsentryname{weight} at the end of each interval.
-
-\Glspl{fatigue} pile up extremely quickly, for all manner of reasons.
-However, players only apply them at the end of the interval.
-Running, fighting, and jumping generate a lot of adrenaline, which keeps any tiredness at bay while the action is on.
-The real danger in \glspl{fatigue} is persistent action, when characters have no chance to recover from a previous battle.
-
 \subsubsection{Special Categories}
 
 \Glspl{fatigue} can represent all manner of problems a character has -- not just tiredness -- and some remain for longer than others.
 
-\paragraph{Poison} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to return home.
+\paragraph{Marching} inflicts \pglspl{fatigue} each mile of rough terrain, and half that when walking on a road (meaning 1 \gls{fatigue} every 2 miles).
+Since characters recover half their \glspl{fatigue} over \pgls{interval} of rest, a character with 8 \glspl{hp} could march 4 miles in the morning, recover 4 \glspl{hp} over an afternoon's rest, and repeat that over the evening and night.
+That leaves characters marching a number of miles equal to their \glspl{hp} each day, without acruing \glspl{fatigue}, or double their \glspl{hp} when walking on a road.
+
+Of course, characters can push themselves as much as they want, and cover as much ground as they want, until the \gls{fatigue} penalties stop them walking.
+
+\paragraph{Poison} can become a nasty drag on a character, and a serious poisoning can prompt even the strongest fighter to go find a cure, before he vomits any more blood.
 
 \paragraph{Starvation} is another special case.
 \glspl{fatigue} inflicted from starvation are marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
+\subsubsection{\Glsfmtplural{npc}}
+
+\Glspl{npc} should acrue \glspl{fatigue}, just like the \glspl{pc} do.
+The \gls{gm} might assume \glspl{npc} have a number of \glspl{fatigue} equal to half their \glspl{hp} at any time, unless the situation suggests otherwise.
+
+Players should be able to use this to their advantage, just as their \glspl{pc}' tired bodies work to their disadvantage.
+
 \end{multicols}
-
-
