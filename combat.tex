@@ -2,24 +2,13 @@
 \index{Combat}
 \label{combat}
 
+Don't roll for initiative!
+Instead, each character's \textit{Speed} determines how many \glsentrylongpl{ap} they start with. 
+Characters attack with any number of Resisted rolls, but generally use their \textit{Dexterity} and a M\^{e}l\'ee Skill.
+With a standard attack, the winner of the Resisted roll then uses their \textit{Strength} to deal Damage.%
+\footnote{Having one roll for a `clash' saves a lot of time.  Instead of rolling for `initiative, attack, dodge, attack, damage', players can just spend \pgls{ap} and attack.}
 
-\begin{multicols}{2}
-
-\noindent
-These life and death rolls are handled somewhat differently from other tasks.
-Let's start with an overview of the basic features, then cover the details later.
-
-\begin{exampletext}
-  You move to engage the bandits in combat.
-  Whenever someone declares an attack, they roll -- success means they deal a wound, and a failure means they gain one.
-  A couple of players gamble their \glsentryfullpl{ap} on other moves, like guarding companions, or jumping back to safety.
-  Within a couple of rolls, everyone has spent their \glspl{ap}, and further attacks start gaining penalties.
-  Success means you strike, and failure means he strikes you.
-
-  Once everyone has spent their \glspl{ap}, their attacks gain penalties.
-\end{exampletext}
-
-\end{multicols}
+Combat will generally only last a couple of `rounds', during which the \glspl{pc} could take one action, or six, or even more, depending on circumstances and their Traits and equipment.
 
 \section{Basic Combat}
 
@@ -28,7 +17,37 @@ Let's start with an overview of the basic features, then cover the details later
 \subsection{Attacking}
 \label{attack}
 
-When combat begins, roll your Dexterity + Combat against \gls{tn} 7, plus the enemy's Dexterity + Combat.
+Characters generally fight with a Resisted \roll{Dexterity}{Combat} roll, but any kind of Resisted roll works, as long as it makes sense.
+In fact, a round of combat could easily go like this:
+
+
+\begin{exampletext}
+  Cleftrank characters towards the elven enchanter as the enchanter points behind Cleftrank, and asks `what is that thing, crawling over your shoulder?'.
+  The player insists his character would ignore this and keep on charging, so the \gls{gm} allows him to resist with a charge, as he already began the assault.
+
+  \small{(The \gls{gm} adds the enchanter's \roll{Charisma}{Mind} to the \gls{tn}, for a total \gls{tn} of 12; Cleftrank's player resists with his \roll{Speed}{Athletics}, and wins the roll)}
+
+  My character swings his axe through the elf's jaw to shut him up.
+
+  \small{(The elf continues attempting the enchantment spell, so the player rolls at \gls{tn} 12 again, but this time he uses \roll{Dexterity}{Combat}, and the axe costs 3 \glspl{ap} to use)}
+
+  `Cleftrank looks behind himself for a moment, then checks his other behind, and somewhere in his confusion he spots the enchanter beside him, taking out a dagger.'
+
+  \small{(Cleftrank loses the roll, so the enchantment spell strips him of 2 \glspl{ap}, which puts him at -1 \glspl{ap}; he cannot run away)}
+
+  The enchanter drives the dagger down!
+
+  \small{(If Cleftrank defends with the axe, it will cost him 3 more \glspl{ap}, putting him down to -4.
+  He cannot deal with a -4 penalty, so he decides to use the Brawl Skill instead)}
+
+  (The enchanter's \roll{Dexterity}{Combat} puts the \gls{tn} to 10.
+  Cleftrank rolls his \roll{Dexterity}{Brawl} with a -1 penalty\ldots and wins)
+
+  \small{(The elf buckles in pain from the kick, then turns to run)}
+
+\end{exampletext}
+
+When combat begins, roll your \roll{Dexterity}{Combat} against \tn[7], plus the enemy's \roll{Dexterity}{Combat}.
 If you win, roll to see how much Damage you deal to the opponent.
 If your opponent wins, the \gls{gm} rolls to see how much Damage your opponent deals you.
 Finally, on a tie, you can decide to both take \emph{and} deal Damage, or neither.
