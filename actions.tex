@@ -155,6 +155,26 @@ In these cases, the player sets one die to a `6', and rolls only the other die.
 \end{itemize}
 \end{exampletext}
 
+\subsection{Resisted Actions}
+\index{Resisted Actions}
+\label{resistedactions}
+
+When \pgls{pc} and \pgls{npc} act in opposition to each other, the player add their characters Attribute + Skill bonuses as usual, and rolls against \tn[7] plus the opponent's Trait-pair.%
+\footnote{In general, only players roll.}
+
+\begin{itemize}
+  \item
+    A villain wants to sneak up on a \gls{pc} while they go shopping for armour, and corner them alone.
+    Her \roll{Intelligence}{Stealth} gives a +3 Bonus, so the \gls{gm} asks for a \roll{Wits}{Vigilance} roll at \tn[10].
+  \item
+    The troupe need to convince the local villagers not to trust a particular psychotic, lying, bastard.
+    Despite him not being present, the \gls{gm} notes that he his \roll{Charisma}{Empathy} grants a +5 Bonus, so he states the \gls{tn} is 12.
+  \item
+    A witch begins a curse against a member of the \gls{guard}, so he decies to stab her.
+    If the witches spell works, he will fumble his attack, and lose some \glspl{fp}, so her \roll{Charisma}{Fate} adds to the roll, making a \gls{tn} of 9.
+    The guard will have to use his \roll{Dexterity}{Combat} to resist the curse, but if he wins, he will inflict Damage (covered in \autoref{combat}).
+\end{itemize}
+
 \subsection{Teamwork}
 \label{teamwork}
 \index{Teamwork}
@@ -196,22 +216,16 @@ Convincing the townsfolk that they need to rebel against the baron, and could ea
 
 \noindent%
 \begin{footnotesize}%
-\begin{tabularx}{\linewidth}{Y |cccc}
-                    & Alicia & Snowstorm & Chatrik & Drake \\
-\hline
-Charisma + Tactics: & +3     & $+\frac{3}{2}$      & $+\frac{2}{4}$      & $+\frac{1}{8}$    \\
-Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
-\hline
-Total:      &          +6 & & &\\
-\end{tabularx}
+  \begin{tabularx}{\linewidth}{Y |cccc}
+                      & Alicia & Snowstorm & Chatrik & Drake \\
+  \hline
+  Charisma + Tactics: &  +3     & $+\frac{3}{2}$      & $+\frac{2}{4}$      & $+\frac{1}{8}$    \\
+  Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
+  \hline
+  Running Total:      &  +3     &     +5              &  +6     & +6    \\
+    \multicolumn{4}{l}{\textbf{6}} \\
+  \end{tabularx}
 \end{footnotesize}
-
-\subsection{Resisted Actions}
-\index{Resisted Actions}
-\label{resistedactions}
-
-When \glspl{npc} resist the players actions, one side rolls as normal, while the other adds their ability to the \gls{tn}.
-\footnote{In general, only players roll.}
 
 \subsection{Margins}
 \index{Margins}
@@ -317,8 +331,8 @@ The precise distances represented do not matter, just so long as they consistent
 \subsubsection{Areas}
 \index{Areas}
 
-An \gls{area} is just any place which looks different from another.
-While traipsing through a small dungeon, each room and cavern entered might be thought of as an \gls{area}.
+\Pgls{area} is just any place which looks different from another.
+While traipsing through a small dungeon, each room and cavern entered might be thought of as \pgls{area}.
 When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area a village.
 
 \subsubsection{Region}
