@@ -450,7 +450,7 @@ If they are part of a group of 5 people, any roll of 5 or under means they have 
 Companions who are are accidentally hit can evade by simply spending 1 \gls{ap}.
 It is quite possible to kill a companion while fighting blind.
 
-\subsubsection[Darkness: Penalty equals difference between combatants' Wits + Vigilance]{Darkness}
+\subsubsection[Darkness: Roll Bonus cannot exceed Wits + Vigilance]{Darkness}
 \label{darkness}
 \index{Darkness}
 \index{Combat!Darkness}
@@ -461,18 +461,20 @@ However, when both sides suffer from the darkness, the battle changes very littl
 Neither side can hit very accurately, but then neither side can dodge or parry very well either.
 
 \paragraph*{When fighting in total darkness}
-whoever has the lowest Wits + Vigilance receives a penalty equal to the difference.
+characters Attribute bonuses cannot go beyond the character's \roll{Wits}{Vigilance}.
 
-For example, a human guard has caught a room full of elves with stolen goods.
-Thinking quickly, one of the elves douses the room's only lantern.
-The human has a Wits Bonus of -1 and no Vigilance Skill.
-The elves have a Wits Bonus of +1, so the guard receives a -2 penalty to all attacks.
+\begin{exampletext}
+  For example, a human guard has caught a room full of elves with stolen goods.
+  Thinking quickly, one of the elves douses the room's only lantern.
+  The human has a Wits Bonus of -1 and no Vigilance Skill, so his maximum roll has a -1 penalty.
+  The elves have a total \roll{Wits}{Vigilance} of +3, so their \roll{Dexterity}{Combat} has only a +3 cap.
+\end{exampletext}
 
 \paragraph*{Fighting in minimal light}
 (such as a moonless night)
-follows the same rules, but the penalty is halved.
+only gives a -1 penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
 
-\subsubsection[Enclosed Spaces: Penalty equals weapon's AP cost]{Enclosed Spaces}
+\subsubsection[Enclosed Spaces: Penalty equals weapon's \glsentrytext{ap} cost]{Enclosed Spaces}
 \label{enclosedcombat}
 \index{Enclosed Spaces}
 
