@@ -8,75 +8,82 @@
 
 \subsection{Breaking Things}
 
-\paragraph{Breaking in a door} -- Strength + Crafts, \tn[10].
+\paragraph{Breaking in a door} -- \roll{Strength}{Crafts}, \tn[10].
 A tie could indicate that the door has a massive hole in the middle, and a broken lock, allowing a sufficiently small person to squeeze through.
 
-\paragraph{Excavation} -- Strength + Caving.
+\paragraph{Excavation} -- \roll{Strength}{Caving}.
 The \gls{tn} varies greatly, depending upon the type of rock.
 
 \subsection{Downtime Activities}
 
-\paragraph{Crafting a poison} -- Intelligence + Medicine, \tn[4].
+\paragraph{Brewing a poison} -- \roll{Intelligence}{Medicine}, \tn[4].
 \label{poison}\index{Poisons}
 
 Basic poisons inflict 2 \glspl{fatigue} over the course of \pgls{interval}, then stop.
-People can notice a poison by smell or taste before they drink it, by rolling Wits + Vigilance at \tn[7].
+People can notice a poison by smell or taste before they drink it, by rolling \roll{Wits}{Vigilance} (\tn[7]).
+Poisons lose their potence over time -- the \gls{fatigue} loss suffered reduces by to half of what it was each week.
 
-For each point above the \gls{tn}, the poisoner can do any of the following:
+The standard roll begins at \tn[7].
+The caster can add any of the following boons to the poison.
+However, each boon increases the \gls{tn} by 1.
 
 \begin{itemize}
   \item
-  Inflict 1 \gls{fatigue} on the target over \pgls{interval}.
+  Inflict 1 more \gls{fatigue} on the target over \pgls{interval}.
   \item
   Increase the number of \glspl{interval} the poison will work for.
   \item
   Increase the \gls{tn} to notice the poison.
+  \item
+  Increase the shelf-life of the poison by a week.
 \end{itemize}
 
-\paragraph{Crafting a sword} -- Strength + Crafts, \tn[12] plus the weapon's \gls{weight}.
+A poison might inflict 4 \glspl{fatigue} each \gls{interval}, for 3 \glspl{interval}, and require a \roll{Wits}{Vigilance} roll at \tn[10] but this would raise the \gls{tn} from 7 to 14.
+
+\paragraph{Crafting a sword} -- \roll{Strength}{Crafts}, \tn[12] plus the weapon's \gls{weight}.
 This requires equipment, such as moulds, and a long night.
 It also requires a single level of the Combat Skill.
 
 A tie could indicate a completed sword, with a shattered mould.
 
-\paragraph{Creating a weapon mould} -- Intelligence + Crafts, \tn[7] plus the weapon's total bonuses.
+\paragraph{Creating a weapon mould} -- \roll{Intelligence}{Crafts}, \tn[7] plus the weapon's total bonuses.
 
 Anything with a cost of less than 10 \gls{cp} can be fashioned in less than a day, with only basic woodworking tools.
 
-\paragraph{Creating quiet, full plate armour} -- Intelligence + Crafts, \tn[15].
+\paragraph{Creating quiet, full plate armour} -- \roll{Intelligence}{Crafts}, \tn[15].
 Moulding silent plate requires planning from the outset -- existing armour cannot be properly modified.
 The parts cost an additional 50\%, and the crafter must have both the Combat and Stealth Skills at level 1.
 
 Every margin on the roll reduces the armour's penalty by 1, to a minimum of -1.
 
-\paragraph{Composing a new song} -- Intelligence + Performance, \tn[10].
+\paragraph{Composing a new song} -- \roll{Intelligence}{Performance}, \tn[10].
 
-\paragraph{Taming a Horse} -- Intelligence + Wyldcrafting vs Horse's Wits + Brawl.
+\paragraph{Taming a Horse} -- \roll{Intelligence}{Wyldcrafting} vs Horse's \roll{Wits}{Brawl}.
 
 \subsection{News \& Information}
 
-\paragraph{Finding rumours} -- Charisma + Empathy, \tn[3].
+\paragraph{Finding rumours} -- \roll{Charisma}{Empathy}, \tn[3].
 
 \label{magicidentification}
-\paragraph{Identifying magical items} -- Intelligence + Academics, \tn[10] (for Pocket Spells), 12 (for Talismans), or 14 (for Artefacts).
+\paragraph{Identifying magical items} -- \roll{Intelligence}{Academics}, \tn[10] (for Pocket Spells), 12 (for Talismans), or 14 (for Artefacts).
 Magical items which do not come with instructions often remain enigmas.
 
 A successful rolls allows someone to identify how to activate an item, but the roll requires a Margin of 2 to understand its effects.
 Therefore, rolling a 13 when trying to understand a talisman means one understands how to activate it, but not what the talisman will do.
 
-\paragraph{Investigating a rumour} -- Charisma + Vigilance, \tn[14].
+\paragraph{Investigating a rumour} -- \roll{Charisma}{Vigilance}, \tn[14].
 
-\paragraph{Storytelling} -- Charisma + Academics, \tn[10].
+\paragraph{Storytelling} -- \roll{Charisma}{Academics}, \tn[10].
 
 \subsection{Schemes \& Plots}
 
-\paragraph{Finding a hidden message in a book} -- Intelligence + Vigilance \tn[7], vs opponent's Intelligence + Academics.
+\paragraph{Finding a hidden message in a book} -- \roll{Intelligence}{Vigilance} \tn[7], vs opponent's \roll{Intelligence}{Academics}.
 
-\paragraph{Forgery} -- Dexterity + Academics, \tn[8] for a signature (vs the interpreter's Wits + Academics).
+\paragraph{Forgery} -- \roll{Dexterity}{Academics}, \tn[8] for a signature (vs the interpreter's \roll{Wits}{Academics}).
 
-\paragraph{Hide fast!} -- Wits + Stealth.
+\paragraph{Hide fast!} -- \roll{Wits}{Stealth}.
 
-\paragraph{Letter sealing} -- Dexterity + Academics, \tn[9].
+\paragraph{Letter sealing} -- \roll{Dexterity}{Academics}, \tn[9].
 \label{letterSealing}
 Proper seals have more than a blob of wax to keep them safe.
 Ultra secret letters have parts of the paper cut, then pierce the middle, and loop back around the outside.
@@ -84,23 +91,23 @@ While anyone can open these letters, opening them without breaking the seal (so 
 Failure indicates that the letter's seal breaks moments later, as the paper has been cut too thin.
 A tie indicates nothing special -- but of course opening the letter won't be quite the challenge it could be.
 
-Opening such a letter and resealing it properly requires an Intelligence + Academics roll, at \tn[14], plus the margin of whoever sealed the letter originally.
+Opening such a letter and resealing it properly requires an \roll{Intelligence}{Academics} roll, at \tn[14], plus the margin of whoever sealed the letter originally.
 
-\paragraph{Picking a lock} -- Intelligence + Larceny.
+\paragraph{Picking a lock} -- \roll{Intelligence}{Larceny}.
 The \gls{tn} varies from 10 to 18, depending upon the lock's complexity.
 \index{Lockpicking}
 A tie usually indicates that the lock breaks in an obvious manner.
 
-\paragraph{Quick thinking lies} -- Wits + Deceit, \tn[10].
+\paragraph{Quick thinking lies} -- \roll{Wits}{Deceit}, \tn[10].
 Success indicates the lie sounds plausible.
 A tie indicates the lie only sounds plausible until one thinks about it.
 
-\paragraph{Well planned lie} -- Intelligence + Deceit, \tn[7].
+\paragraph{Well planned lie} -- \roll{Intelligence}{Deceit}, \tn[7].
 A tie might indicate that the lie has become too convoluted, and the character has become trapped in additional premises.
 
 \subsection{Survival}
 
-\paragraph{Bandaging a wound} -- Wits + Medicine to stop someone bleeding, \tn[7] plus the Damage which caused the bleeding.
+\paragraph{Bandaging a wound} -- \roll{Wits}{Medicine} to stop someone bleeding, \tn[7] plus the Damage which caused the bleeding.
 \index{Bandages}%
 \index{Bleeding}%
 \label{bleeding}
@@ -109,16 +116,16 @@ For example, someone stabs a man, inflicting 4 Damage, which then starts to blee
 This could cause 4 \glspl{fatigue} in bleeding, and is \gls{tn} ($7 + 4 = $) 11 to stop.
 A healer rolls a grand total of 12, which stops one point of bleeding, so the man only gains 3 \glspl{fatigue}.
 
-\paragraph{Black-Walking} -- Dexterity + Caving, \tn[8].
+\paragraph{Black-Walking} -- \roll{Dexterity}{Caving}, \tn[8].
 Despite every caver insisting on good supplies, even if they have a good store of alcohol to light smoke-free lamps, even the experts will wind up in the dark sometimes.
 Those who know their environment have a knack for crawling efficiently, feeling the surroundings through their fingertips and beards, and remembering every passage they took in the light simply through the sounds of their own breathing echoing uniquely in every cavern-segment.
 
-\paragraph{Building a shelter} -- Intelligence + Wyldcrafting, \tn[11].
+\paragraph{Building a shelter} -- \roll{Intelligence}{Wyldcrafting}, \tn[11].
 Each point on the Margin allows an additional person to sleep inside the shelter.
 
 A tie indicates that the shelter holds for a few hours, then collapses.
 
-\paragraph{Curing a poison} -- Wits + Medicine, \tn[10].
+\paragraph{Curing a poison} -- \roll{Wits}{Medicine}, \tn[10].
 
 Each margin cures 1 \glspl{fatigue} caused by poison by the end of the interval.
 Of course if the roll fails, each failure margin \emph{inflicts} a \gls{fatigue}.
@@ -126,7 +133,7 @@ Of course if the roll fails, each failure margin \emph{inflicts} a \gls{fatigue}
 
 \subsection{Town Activities}
 
-\paragraph{Judging services} -- Wits + Empathy, \tn[9].
+\paragraph{Judging services} -- \roll{Wits}{Empathy}, \tn[9].
 
 It's never easy knowing whom to hire.
 Every time someone hires someone as part of a service, they should make a roll.
@@ -141,7 +148,7 @@ Given the stakes, people mostly try to hire others based on previous experience.
 
 A tie generally indicates noticing a serious problem with purchased services\ldots just after the purchase completes.
 
-\paragraph{Picking a pocket} -- Dexterity + Larceny, \tn[12] plus the target's Wits + Vigilance.
+\paragraph{Picking a pocket} -- \roll{Dexterity}{Larceny}, \tn[12] plus the target's \roll{Wits}{Vigilance}.
 \index{Pickpocketing}
 
 Stealing in larger, more populated areas, affords many more opportunities, while small villages, where everyone is aware of everyone in their personal space, and rarely carry larger sums of money, raise the \gls{tn} significantly.
@@ -150,7 +157,7 @@ A tie means the character gets the item, but the victim immediately notices the 
 
 \larcenyChart
 
-\paragraph{Requesting dangerous jobs} -- Charisma + Empathy.
+\paragraph{Requesting dangerous jobs} -- \roll{Charisma}{Empathy}.
 
 \sidebox{
   \begin{boxtable}[lc]
@@ -175,49 +182,49 @@ This includes murder, crafting poisons, selling illegal items, et c.
 
 Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
 
-\paragraph{Snatch and run} -- Speed + Larceny \tn[7], vs the target's Speed + Vigilance.
+\paragraph{Snatch and run} -- \roll{Speed}{Larceny} \tn[7], vs the target's \roll{Speed}{Vigilance}.
 
 \subsection{Travel}
 
-\paragraph{Area knowledge } -- Intelligence + Academics.
+\paragraph{Area knowledge } -- \roll{Intelligence}{Academics}.
 The character recalls local information about important sites.
 Cities are \tn[7], Towns are 9, and villages are 13.
 
-\paragraph{Fording a rapid river} -- Strength + Seafaring, \tn[9].
+\paragraph{Fording a rapid river} -- \roll{Strength}{Seafaring}, \tn[9].
 
 \index{Gathering Food}\index{Food}
-\paragraph{Gathering Food} -- Wits + Wyldcrafting.
+\paragraph{Gathering Food} -- \roll{Wits}{Wyldcrafting}.
 Groups can forage while on the road, but taking a resting action requires devoting a full segment of the day to focussing on foraging (see \autopageref{intervals}).
 Of course, these fast excursions from the path, to check out anything that happens to catch their eye, can lead to quick decisions, or even to encounters with wandering beasts.
 
 \gatheringChart
 
-\paragraph{Keeping watch over the camp through the night} -- Strength + Vigilance, \tn[7].
+\paragraph{Keeping watch over the camp through the night} -- \roll{Strength}{Vigilance}, \tn[7].
 Success inflicts 2 \glspl{fatigue} on the person keeping watch.
 
 Staying up all night inflicts 3 \glspl{fatigue}, so a troupe can divide this into the first watch receiving 2 \glspl{fatigue} and the second receiving 1, or any other combination.
 
 Travelling characters make a single group roll to keep watch.
 
-\paragraph{Climbing} -- Speed + Athletics.
+\paragraph{Climbing} -- \roll{Speed}{Athletics}.
 
-\paragraph{Detect sloping passages} -- Wits + Caving.
+\paragraph{Detect sloping passages} -- \roll{Wits}{Caving}.
 Understanding what altitude one has reached immediately indicates whether there might be running water, what type of rocks and minerals compose the surroundings (and therefore the chance of a cave-in), and how far one has to go to the surface.
 
 Despite gradual gradients, or sharp ups and downs, a good caver knows exactly how far they sit from the surface at all times.
 
 Rolling a tie might indicate knowing that one has descended or ascended, but with no idea how much.
 
-\paragraph{Detecting tunnel weaknesses} -- Intelligence + Caving, \tn[9].
+\paragraph{Detecting tunnel weaknesses} -- \roll{Intelligence}{Caving}, \tn[9].
 Nobody survives long underground unless they can tell if the ceiling might collapse from heavy footfall.
 
-\paragraph{Mending a sail} -- Dexterity + Seafaring.
+\paragraph{Mending a sail} -- \roll{Dexterity}{Seafaring}.
 
-\paragraph{Navigation open oceans} -- Intelligence + Seafaring, \tn[10].
+\paragraph{Navigation open oceans} -- \roll{Intelligence}{Seafaring}, \tn[10].
 \index{Navigation}
 \index{Sailing}
 
-\paragraph{Navigating on land} -- Intelligence + Wyldcrafting.
+\paragraph{Navigating on land} -- \roll{Intelligence}{Wyldcrafting}.
 \index{Navigation}
 \index{Marching}
 \label{marching}
@@ -236,34 +243,34 @@ Each failure margin adds 2 Miles to the journey time, so when trying to find a p
 If the roll is an 8, the actual journey would be 18 miles.
 
 
-\paragraph{Placing fires} -- Intelligence + Caving, \tn[8].
+\paragraph{Placing fires} -- \roll{Intelligence}{Caving}, \tn[8].
 A fire in the wrong place underground can easily choke everyone around to death, or at least until they can't think properly.
 Of course, this provides an excellent weapon of war if one can do it properly.
 Light the wrong type of fire, and heavy smoke will fall down a tunnel instead of rising.
 
-\paragraph{Planning the best climb up a mountain} -- Intelligence + Athletics.
+\paragraph{Planning the best climb up a mountain} -- \roll{Intelligence}{Athletics}.
 A successful roll can lower the \gls{tn} for others scaling a mountain equal to a third of the roll's Margin.
 
 \subsection{War \& Battery}
 
 \index{Ambushes}
-\paragraph{Planning an ambush} -- Intelligence + Stealth, \tn[10] for villages, 12 for a town, and 8 for a forest.
+\paragraph{Planning an ambush} -- \roll{Intelligence}{Stealth}, \tn[10] for villages, 12 for a town, and 8 for a forest.
 Success indicates that everyone in the party can make a `Sneak Attack' roll.%
 \footnote{\nameref{sneakattack}, \autopageref{sneakattack}.}
 
-\paragraph{Calm an animal} -- Intelligence + Wyldcrafting vs animal's Wits + Brawl.
+\paragraph{Calm an animal} -- \roll{Intelligence}{Wyldcrafting} vs animal's \roll{Wits}{Brawl}.
 
-\paragraph{Intimidating someone into backing off} -- Strength + Deceit vs the target's Strength + Empathy.
+\paragraph{Intimidating someone into backing off} -- \roll{Strength}{Deceit} vs the target's \roll{Strength}{Empathy}.
 \index{Intimidation}
 
-\paragraph{Planning an open battle} -- Intelligence + Tactics, \tn[7] vs opponent's Wits + Tactics.
+\paragraph{Planning an open battle} -- \roll{Intelligence}{Tactics}, \tn[7] vs opponent's \roll{Wits}{Tactics}.
 
 Success adds a number of \glspl{ap} equal to the tactician's Tactics Skill, to everyone on the tactician's side on the first round.
 A tie adds the \glspl{ap} to both sides.
 
-\paragraph{Planning a hidden route into a castle} -- Intelligence + Stealth.
+\paragraph{Planning a hidden route into a castle} -- \roll{Intelligence}{Stealth}.
 
-\paragraph{Scouting the forest for an enemy camp nearby} -- Speed + Vigilance, \tn[9] plus the enemy's Wits + Vigilance.
+\paragraph{Scouting the forest for an enemy camp nearby} -- \roll{Speed}{Vigilance}, \tn[9] plus the enemy's \roll{Wits}{Vigilance}.
 A tie indicates someone spotted you before you got away.
 Failure indicates not getting away.
 
