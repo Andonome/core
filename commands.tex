@@ -80,7 +80,7 @@
 }
 
 \newcommand{\weaponsChart}{
-  \begin{nametable}[XXXXX]{M\^{e}l\'{e}e Weapons}
+  \begin{nametable}[XYYYY]{M\^{e}l\'{e}e Weapons}
 
   \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsfmtshort{ap} Cost} & \textbf{\Gls{weight}} \\\hline
 
@@ -146,7 +146,7 @@
   \textbf{Armour} & \textbf{\Glsentrytext{dr}} & \textbf{Covering} & \textbf{Weight} \\\hline
 
   \ifnum\value{r4}=3
-    \armour[\addtocounter{weight}{-1}]{Elvish Ceramic}{2}{2} & \arabic{armourDR} & \arabic{covering} &  \arabic{weight} \\
+    \showArmour{\armour[\addtocounter{weight}{-1}]{Elvish Ceramic}{2}{2}} \\
   \fi
 
   \showArmour{\armour[\addtocounter{weight}{1}]{Padded Armour}{2}{2}} \\

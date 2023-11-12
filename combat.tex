@@ -104,8 +104,7 @@ If nobody succeeds in the roll, the character dies.
 
 \paragraph{A successful check}
 means that the character is unconscious for the remainder of the interval, but still alive.
-At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.
-Everyone's \glsentryname{weight} equals their maximum \glspl{hp}, so a character with Strength +2 can carry someone with up to 8 \glspl{hp}, or drag someone with up to 12 \glspl{hp}.%
+At this point, the rest of the party will have to carry their fallen comrade back to safety -- if they can.%
 \footnote{See page \pageref{weight} for \nameref{weight}.}
 
 
@@ -197,10 +196,7 @@ Each weapon has the following properties:
   \textbf{The \Gls{ap} Cost:} shows how many \glspl{ap} the player spends after engaging in an Attack roll (whether attacking or being attacked).
   It represents a weapon's inertia (and hence difficulty in pulling it back from a swing), and allows enemies with lighter weapons to `close the gap'.
   \item
-  \textbf{The \glsentryname{weight}:} shows the minimum Strength Bonus a character requires to use the weapon, if they don't want to gain encumbrance.
-  \item
-  \textbf{Cost:} The standard cost of the weapon in larger cities (which can easily be higher wherever the weapon is rare).
-
+  \textbf{The \glsentryname{weight}:} means that your character must have at least double this number of \glspl{hp}, or they will struggle to use the weapon.
 \end{itemize}
 
 \end{multicols}
@@ -569,7 +565,7 @@ requires a standard attack roll, without a weapon.
 Both combatants then count as \textit{Entangled}, as neither can move properly to defend themselves.
 \label{grab}
 
-No weapons can be used while grappling if they have a \gls{weight} above -2.
+No weapons can be used while grappling if they have a \gls{weight} above 1.
 
 \paragraph[Grapple: Make an opposted roll of Strength + Combat.  Success means the combatant can either break free or inflict Damage.  Cost: 3 \gls{ap}]{Grappling:}
 allows someone to deal Damage, or break free of a Grab.
@@ -627,7 +623,7 @@ Sneaking up on someone requires a Dexterity + Stealth check, vs the target's Wit
 A sleeping target will suffer extreme penalties, while anyone attempting this manoeuvre on a battlefield should receive a hearty laugh from the \gls{gm}, along with \gls{tn} 20.
 
 Heavy weapons do not help much with surprise attacks, as one needs to swing them up into position.
-Any weapon with a positive \gls{weight} adds its \gls{weight} to the \gls{tn}.
+Any weapon with a \gls{weight} higher than 1 adds its \gls{weight} to the \gls{tn}.
 
 If successful, the sneak attack deals +2 Damage, and provides an automatic \gls{vitalShot}.
 
@@ -635,7 +631,7 @@ If successful, the sneak attack deals +2 Damage, and provides an automatic \gls{
 \index{Combat!Dual Wielding}
 
 A character using two weapons -- perhaps a shield in one hand and a sword in the other -- can use either weapon at any point.
-However, both count as having +1 \glsentryname{weight}.
+However, both count as having double their standard \glsentryname{weight}.
 
 Shields can be strapped to the arm, without requiring any kind of dual-wielding.
 
@@ -729,9 +725,9 @@ Those with equal Bonuses can still fly, but must spend a full round sprinting at
 Finally, heavier flying creatures can only begin a glide by first climbing somewhere high, and then leaping into the air.
 Once soaring, they can often remain in the air for some time, and even gain a little altitude.
 
-Any \gls{dr} (whether from thick hide or armour) adds half its value to the Strength Bonus, while any other type of item with a positive \gls{weight} subtracts itself from the ability to fly properly.
+Half of a character's items' total \gls{weight} forms a penalty -- flying with sacks full of gold won't last long.
 
-Anyone with the Air Sphere can use this as a Bonus to aid their flight, but will have to spend 1 \gls{mp} to begin the spell.
+Anyone with the Air Sphere can use this as a Bonus to aid their flight, but will have to spend 1 \gls{mp} to begin the spell each \gls{interval}.
 
 \subsubsection{Swarms}
 
