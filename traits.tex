@@ -79,13 +79,7 @@ Charisma also covers characters' luck, and therefore some measure of their abili
 
 \begin{figure*}[t]
 
-\begin{tcolorbox}[
-  tabularx={>{\small}c||>{\small}X|>{\small}X|>{\small}X|>{\small}X|>{\small}X|>{\small}X},
-  ornamented,
-  top=10pt,
-  bottom=10pt
-  ]
-\tiny\raggedright
+\begin{boxtable}[L||L|L|L|L|L|L]
 
 & Strength & Dexterity & Speed & Intelligence & Wits & Charisma \\\hline\hline
 Academics & Orating to a massive crowd & Forgery & Courier Runs & Recalling facts & Resisting an enchantment spell & Storytelling \\\hline
@@ -95,7 +89,7 @@ Stealth & Hiding in a hay bail & Moving quietly & Escaping into a crowd & Identi
 Vigilance & Keeping watch all night & Feeling for an exit in the dark & Searching a full forest for a particular tree & Investigating a crime scene & Spotting an illusion spell & Finding the best con target at a banquet \\
 Wyldcrafting & Wrestling a~boar & Untying a~horse's bridle & Fleeing a stampede & Planning a new, hidden trail & Foraging for a quick meal & Selling vegetables \\\hline
 
-\end{tcolorbox}
+\end{boxtable}
 
 \end{figure*}
 
@@ -181,7 +175,7 @@ Academics study history, architecture, local politics, literature, and (very com
 This `study of study', can involve reading, mnemonics, and teaching.
 
 \sidebox{
-  \begin{tabularx}{\linewidth}{Yc}
+  \begin{boxtable}
 
     \hline
     \textbf{\glsentrytext{tn}} & \textbf{Question} \\\hline
@@ -196,8 +190,7 @@ This `study of study', can involve reading, mnemonics, and teaching.
 
     17 & Dangerous \\
 
-  \end{tabularx}
-
+  \end{boxtable}
 }
 
 \begin{description}
