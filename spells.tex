@@ -51,10 +51,6 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Water1}
 
-\subsection{Mind}
-
-\showSpells{mind1}
-
 \subsection{Death}
 
 \showSpells{Death1}
@@ -72,6 +68,10 @@ A good witch leaves no part of her prey unused.
 \showSpells{Life1}
 
 \pic{Roch_Hercka/polymorph}
+
+\subsection{Mind}
+
+\showSpells{mind1}
 
 \end{multicols}
 
@@ -102,6 +102,24 @@ A good witch leaves no part of her prey unused.
 \subsection{Death}
 
 \showSpells{Death2}
+
+\spell{Corpse Stench}% Name
+  {distant}% Enhancements
+  {Witness}% Action
+  {Fate, Air}% Spheres
+  {time since death}% Resist with
+  {Sniffing at the wind, the caster identifies any corpses within \spellRange}% Description
+  {
+    Casters typically use this trick to double-check if an immobile and wounded person might still have a chance of life.
+  }
+
+\spell{Infectious Migraine}% Name
+  {duplicated}% Enhancements
+  {Wax}% Action
+  {Fate, Air}% Spheres
+  {\roll{Strength}{Athletics}}% Resist with
+  {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellCost} \glspl{fatigue}}% Description
+  {}
 
 \subsection{Force}
 
@@ -151,6 +169,17 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Death3}
 
+\spell{Stench Sort}% Name
+  {distant, detailed}% Enhancements
+  {Witness}% Action
+  {Fate, Air}% Spheres
+  {time since death}% Resist with
+  {Detect the corpse of a named species within \spellRange}% Description
+  {
+    Sniffing at the wind, the caster identifies any corpses from a particular species within \spellRange.
+    Possible types include `elves', `woodspies', or `bats'.
+  }
+
 \subsection{Force}
 
 \showSpells{Force3}
@@ -169,7 +198,7 @@ A good witch leaves no part of her prey unused.
 
 \subsection{Divergent}
 
-\showSpells{AirFire3}
+\showSpells{FireWater3}
 
 \end{multicols}
 
