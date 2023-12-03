@@ -67,6 +67,46 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Life1}
 
+\spell{Forest Crown}% Name
+  {}% Enhancements
+  {Warp}% Action
+  {Earth, Water}% Spheres
+  {\roll{Strength}{Athletics}}% Resist with
+  {The target hears how good they would look with antlers, and antlers start to grow.
+  They grant +1 to Damage while using the Brawl Skill}% Description
+  {
+  The antlers will stop the target wearing a helmet, so they cannot wear Complete armour.
+  The antlers shed over any cold season.}
+
+\spell{Slashers}% Name
+  {}% Enhancements
+  {Warp}% Action
+  {Earth, Water}% Spheres
+  {\roll{Strength}{Athletics}}% Resist with
+  {The caster makes accusations of vile language, and the target grows needle-sharp claws.
+  They grant +1 Damage when using Brawl, but inflict a -1 penalty to using weapons or other tools}% Description
+  {
+  The claws grow out naturally, or can be cut off at any time.}
+
+\spell{Tweak}% Name
+  {}% Enhancements
+  {Warp}% Action
+  {Earth, Water}% Spheres
+  {target's \glspl{hp}}% Resist with
+  {The caster lists how the target looks like a different race, and their features begin to shift to match}% Description
+  {The target must have Attributes within the racial maximums and minimums of the target race, so a human with Strength +1 could become an elf, but Strength +3 would stop them looking remotely elf-like.
+
+  The spell lasts until the target makes use of any characteristic of their own race.
+  For humans, this means their ability to walk long-distances, and for gnomes it means trying to focus on anything.}
+
+\spell{Regeneration}% Name
+  {detailed}% Enhancements
+  {Wax}% Action
+  {Earth, Water}% Spheres
+  {current lost \glspl{hp} + 7}% Resist with
+  {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellCost} \glspl{hp} each week.}% Description
+  {During this time, the target's appetite grows substantially, and they need an extra \arabic{spellCost} meals every day to keep the spell going.}
+
 \pic{Roch_Hercka/polymorph}
 
 \subsection{Mind}
@@ -146,6 +186,44 @@ A good witch leaves no part of her prey unused.
 \subsection{Life}
 
 \showSpells{Life2}
+
+\spell{Breaths in the Air}% Name
+  {distant}% Enhancements
+  {Witness}% Action
+  {Earth, Water}% Spheres
+  {target's strangeness}% Resist with
+  {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits around \spellRange\ away}% Description
+  {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challange.}
+
+\spell{Herd Protection}% Name
+  {duplicated, distant}% Enhancements
+  {Warp}% Action
+  {Earth, Water}% Spheres
+  {current \glspl{hp}}% Resist with
+  {The caster yells warnings, and the targets gain \gls{dr}~\arabic{spellCost} as their skin becomes thick}% Description
+  {Unfortunately, the tough hide feels heavy, and effectively counts as an item with \pgls{weight} of \arabic{spellCost}.
+  The hide usually comes with fur, and protects against the cold as well as Damage.
+
+  When the spell combines with others, to boost the target's Strength and grant claws, they eventually look just like a regular bear.
+
+  The strange skin fades to normal once the target takes Damage and heals.}
+
+\spell{Crowded Limbs}% Name
+  {duplicated, detailed}% Enhancements
+  {Warp}% Action
+  {Earth, Water}% Spheres
+  {\glspl{hp}}% Resist with
+  {The caster demands the targets steal, grab, and snatch, and their hands deform into \arabic{spellCost} tentacles.
+  The tentacles grant +\arabic{spellCost} to Brawl, but inflict a -\arabic{spellCost} penalty to using tools}% Description
+  {
+  If the tentacles ever receive \arabic{spellCost} Damage or more, they begin to revert to normal limbs.}
+\spell{Regeneration}% Name
+  {detailed}% Enhancements
+  {Wax}% Action
+  {Earth, Water}% Spheres
+  {current lost \glspl{hp} + 7}% Resist with
+  {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellCost} \glspl{hp} each week.}% Description
+  {During this time, the target's appetite grows substantially, and they need an extra \arabic{spellCost} meals every day to keep the spell going.}
 
 \subsection{Light}
 
