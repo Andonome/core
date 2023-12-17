@@ -19,12 +19,7 @@ $(BOOK).sls: | $(BOOK).glo
 $(BOOK).pdf: $(BOOK).sls $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
-config/resources.pdf: config/bind.sty
-	@make -C config resources.pdf
-resources.pdf: config/resources.pdf
-	@cp config/resources.pdf .
-
-all: $(BOOK).pdf resources.pdf
+all: $(BOOK).pdf
 	@latexmk -jobname=$(BOOK) -shell-escape -pdf main.tex
 
 clean:
