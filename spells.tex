@@ -3,33 +3,25 @@
 \begin{multicols}{2}
 
 \noindent
-The world has a consistent logic to its workings, which you might think of as a language.
-A miracle-worker is someone who can speak sweetly to the logic of the world.
+Magic can do any number of things, but like anything else, it has standards.
+These standards are, of course, `spells'.
 
-The language of the world has five nouns -- Water, Earth, Fire, Air, and \textit{Fate}.
-Spellcasters can gain these as Skills in order to control these elements.
+Spells of the `low spheres', directly affect their elements (Earth, Fire, Water, Air, or Fate).
+They produce very powerful effects, but must affect people indirectly.
+A fire spell might make fire explode in someone's face, but if that someone does not stand near a fire, then the Fire Sphere will not affect them, because most people are not made out of fire.
 
-The language of the world has only four verbs -- Wax, Wane, Warp, and Witness.
-Spellcasters cannot create or destroy, but they can make an element blossom or whither.
-Each of these spells is a 'level one spell', and costs 1 \gls{mp} to cast.
+The `high spheres' (Death, Light, Life, Force, and Mind) each need two low spheres combined to cast their spells; level 2 Light magic requires Fire 2 and Air 2, and so on.
+These high spheres tend to affect people much more directly, but with smaller effects.
+Death spells will encourage the little seed of death which sits within us all, and Life magic can twist or prod anything which lives.
 
-The language of the world has four adjective, referred to by spellcasters as \textit{Enhancements}.
-Each adjective increases the spell's level, and the spell's level can dramatically increase every Enhancements's effects.
-Spellcasters find this dangerous cycle intoxicating.
-
-Each of these `low spheres' can combine with another to form a `high sphere' -- a new noun which the caster can speak to, and affect.
-Air and Fire create Light, Fire and Earth create Force.
-Affecting these high spheres takes considerably more skill; the caster has a rating in each high sphere equal to the \emph{lowest} of the two low spheres which comprise it.
-
-The primordial breath to speak this language comes from the wind, bringing inspiration to those who can listen.
+The primordial breath to speak the language of spells comes from the wind, bringing inspiration to those who can listen.
 Of course, spellcasters without the patience for inspiration often resort to just gutting a giant arachnid for its webbing, mixing in some griffin-feathers, and twisting the world by force.
 A good witch leaves no part of her prey unused. 
 
+\columnbreak
 \input{config/rules/spells.tex}
 
 \end{multicols}
-
-\vspace{3em}
 
 \section{First Level Spells}
 
@@ -62,9 +54,9 @@ A good witch leaves no part of her prey unused.
 \subsection{Light}
 
 \spell{Little Big}% Name
-  {Fire, Air}% Spheres
-  {Warp}% Action
   {}% Enhancements
+  {Warp}% Action
+  {Fire, Air}% Spheres
   {\roll{Wits}{Vigilance}}% Resist with
   {The caster mixes a malaphor, and the target's size contorts like a funhouse mirror, inflicting a -\arabic{spellCost} penalty to ranged attacks against them}% Description
   {A gnome seen from ten steps might appear to be the size of a human, or a human may appear the size of a gnome.
@@ -73,9 +65,9 @@ A good witch leaves no part of her prey unused.
 \showSpells{Light1}
 
 \spell{Shadow}% Name
-  {Fire, Air}% Spheres
-  {Wane}% Action
   {}% Enhancements
+  {Wane}% Action
+  {Fire, Air}% Spheres
   {\roll{Wits}{Vigilance}}% Resist with
   {As the caster whispers, a single patch of darkness, the length of a step, forms anywhere within range}% Description
   {It can completely obscure a candle's light, and diminish a torch's light to the strength of a candle.
@@ -104,8 +96,8 @@ A good witch leaves no part of her prey unused.
   {}% Enhancements
   {Warp}% Action
   {Earth, Water}% Spheres
-  {\roll{Strength}{Athletics}}% Resist with
   {The caster makes accusations of vile language, and the target grows needle-sharp claws.
+  {\roll{Strength}{Athletics}}% Resist with
   They grant +1 Damage when using Brawl, but inflict a -1 penalty to using weapons or other tools}% Description
   {
   The claws grow out naturally, or can be cut off at any time.}
@@ -114,8 +106,8 @@ A good witch leaves no part of her prey unused.
   {}% Enhancements
   {Warp}% Action
   {Earth, Water}% Spheres
-  {target's \glspl{hp}}% Resist with
   {The caster lists how the target looks like a different race, and their features begin to shift to match}% Description
+  {target's \glspl{hp}}% Resist with
   {The target must have Attributes within the racial maximums and minimums of the target race, so a human with Strength +1 could become an elf, but Strength +3 would stop them looking remotely elf-like.
 
   The spell lasts until the target makes use of any characteristic of their own race.
@@ -136,9 +128,9 @@ A good witch leaves no part of her prey unused.
 \showSpells{mind1}
 
 \spell{Shadow Check}% Name
-  {Fate, Water}% Spheres
-  {Witness}% Action
   {}% Enhancements
+  {Witness}% Action
+  {Fate, Water}% Spheres
   {quiet thoughts}% Resist with
   {This spell tells the caster if any particular patch (and it has to be a specific patch) contains anything which has a mind}% Description
   {Shadows, statues, or suspicious bushes can all hide all manner of things.
@@ -180,8 +172,8 @@ A good witch leaves no part of her prey unused.
   {distant}% Enhancements
   {Witness}% Action
   {Fate, Air}% Spheres
-  {time since death}% Resist with
   {Sniffing at the wind, the caster identifies any corpses within \spellRange}% Description
+  {time since death}% Resist with
   {
     Casters typically use this trick to double-check if an immobile and wounded person might still have a chance of life.
   }
@@ -193,6 +185,8 @@ A good witch leaves no part of her prey unused.
   {\roll{Strength}{Athletics}}% Resist with
   {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellCost} \glspl{fatigue}}% Description
   {}
+
+\widePic[t]{Roch_Hercka/flashing_light}
 
 \subsection{Force}
 
@@ -229,8 +223,6 @@ A good witch leaves no part of her prey unused.
   {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challange.}
 
 \subsection{Light}
-
-\pic{Roch_Hercka/flashing_light}
 
 \showSpells{Light2}
 
