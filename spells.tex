@@ -1,4 +1,5 @@
 \chapter[Chamber of Magic]{Magic}
+\toggletrue{examplecharacter}
 
 \begin{multicols}{2}
 
@@ -58,7 +59,7 @@ A good witch leaves no part of her prey unused.
   {Warp}% Action
   {Fire, Air}% Spheres
   {\roll{Wits}{Vigilance}}% Resist with
-  {The caster mixes a malaphor, and the target's size contorts like a funhouse mirror, inflicting a -\arabic{spellCost} penalty to ranged attacks against them}% Description
+  {The caster mixes a malaphor, and the target's size contorts like a funhouse mirror, inflicting a -\arabic{spellPlusOne} penalty to ranged attacks against them}% Description
   {A gnome seen from ten steps might appear to be the size of a human, or a human may appear the size of a gnome.
     The closer one approaches the target, the more normal it appears.}
 
@@ -73,7 +74,7 @@ A good witch leaves no part of her prey unused.
   {It can completely obscure a candle's light, and diminish a torch's light to the strength of a candle.
 
     The patch of shadow joins to a target.
-    If cast on a person, the shadow remains attached to them, inflicting a -1 penalty to noticing things (and becomes very irritating, very quickly).
+    If cast on a person, the shadow remains attached to them, inflicting a -\arabic{spellPlusOne} penalty to noticing things (and becomes very irritating, very quickly).
 
     The shadow fades once sunlight touches it for \pgls{interval}.}
 
@@ -90,7 +91,7 @@ A good witch leaves no part of her prey unused.
   They grant +1 to Damage while using the Brawl Skill}% Description
   {
   The antlers will stop the target wearing a helmet, so they cannot wear Complete armour.
-  The antlers shed over any cold season.}
+  The antlers shed over any cold season, or can be removed with a bone-knife.}
 
 \spell{Slashers}% Name
   {}% Enhancements
@@ -120,7 +121,7 @@ A good witch leaves no part of her prey unused.
   {Wax}% Action
   {Earth, Water}% Spheres
   {current lost \glspl{hp} + 7}% Resist with
-  {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellCost} \glspl{hp} each week.}% Description
+  {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellPlusOne} \glspl{hp} each week}% Description
   {During this time, the target's appetite grows substantially, and they need an extra \arabic{spellCost} meals every day to keep the spell going.}
 
 \subsection{Mind}
