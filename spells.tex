@@ -165,6 +165,15 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Water2}
 
+\spell{Detect Water}% Name
+  {distant}% Enhancements
+  {Witness}% Action
+  {Water}% Spheres
+  {water purity}% Resist with
+  {The caster detects liquid within \spellRange, but nothing within a few steps of the caster.
+    They know only the closest source within the range, but have no idea what kind of liquid the spell has revealled}% Description
+  {It might reveal a river, a tankard of ale, or any other body apparent of liquid.}
+
 \subsection{Death}
 
 \showSpells{Death2}
@@ -187,6 +196,26 @@ A good witch leaves no part of her prey unused.
   {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellCost} \glspl{fatigue}}% Description
   {}
 
+\spell{Preservation}% Name
+  {detailed}% Enhancements
+  {Wane}% Action
+  {Fate, Air}% Spheres
+  {existing rot}% Resist with
+  {The caster paints a picture -- with words or brush -- of food, a shirt, or a human corpse.
+  The target ceases all rotting when not in use.
+  Rain or snow may fall upon it, but it will not degrade}% Description
+  {
+    Anyone working with the undead must make use of this spell.
+    To work without it means any undead creatures summoned will not last long.
+
+    The spell degrades when the target begins moving, and fails within \arabic{spellPlusOne} \glspl{interval}.
+    Therefore, undead spellcasters, such as liches, must continuously cast this spell upon themselves.
+    It lasts
+
+    \index{Necromancy!Preservation}
+    If cast immediately, upon death, it can arrest the effects of \textit{rigor mortis} before they begin.
+  }
+
 \widePic[t]{Roch_Hercka/flashing_light}
 
 \subsection{Force}
@@ -208,14 +237,15 @@ A good witch leaves no part of her prey unused.
   {Earth, Fire}% Spheres
   {\roll{Speed}{Athletics}}% Resist with
   {The caster wishes the target a bad journey, and they immediately feel heavier.
-  For the next \arabic{spellCost}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellCost}}% Description
-  {}
+  For the next \arabic{spellCost}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
+  {
+  The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
 
 \subsection{Life}
 
 \showSpells{Life2}
 
-\spell{Breaths in the Air}% Name
+\spell{Scent in the Air}% Name
   {distant}% Enhancements
   {Witness}% Action
   {Earth, Water}% Spheres
@@ -243,6 +273,15 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Mind2}
 
+\spell{Fear}% Name
+  {detailed}% Enhancements
+  {Wane}% Action
+  {Water, Fate}% Spheres
+  {\roll{Wits}{Academics}}% Resist with
+  {The caster explains to the target their imminent death.
+    If the target ever finds themselves facing the danger the caster described, they take a -\arabic{spellPlusOne} penalty to Mind Attributes}% Description
+  {The spell lasts until the character gains \pgls{xp} for following their Code.}
+
 \spell{Watchman}% Name
   {detailed}% Enhancements
   {Warp}% Action
@@ -250,7 +289,7 @@ A good witch leaves no part of her prey unused.
   {spell's level}% Resist with
   {The caster speaks to a spell, and convinces it to copy their own Code of belief.
   It gains Intelligence and Charisma Bonuses of -1}% Description
-  {Casters use this spell to control illusions, to make water rage in one direction rather than another, to convince a large wind to leave their companions alone, or suggest to a curse spell the best time to spring a nasty surprise on the target.
+  {Casters can use this spell to control illusions, to make water rage in one direction rather than another, to convince a heavy wind to leave their companions alone, or suggest to a curse spell the best time to spring a nasty surprise on the target.
 
   The caster must be able to sense the spell in order to address it, which often demands a \textit{Witness} spell come first.
 
@@ -264,19 +303,54 @@ A good witch leaves no part of her prey unused.
 
 \subsection{Air}
 
+\spell{Clawing Wisps}% Name
+  {detailed, duplicated}% Enhancements
+  {Wax}% Action
+  {Air}% Spheres
+  {wind speed}% Resist with
+  {The caster gives a battle-cry, and cloud-lined spirits, appearing like small copies of the caster, push any enemies (but not allies) back, reducing their \glspl{ap} by \arabic{spellPlusOne}}% Description
+  {}
+
 \showSpells{Air3}
 
 \subsection{Earth}
 
+\spell{Mud Clamp}% Name
+  {duplicated, detailed}% Enhancements
+  {Wax}% Action
+  {Earth}% Spheres
+  {\roll{Strength}{Wyldcrafting}}% Resist with
+  {`Hold!', the caster shouts, as snow or mud becomes solid, encasing any feet pushed into the ground.
+  Targets then count as \textit{Entangled}}% Description
+  {
+  The spell suffers a -2 penalty when used against creatures without flat feet (such as hooves, or most other animal feet), but can also gain up to a +2 bonus in particularly deep mud or snow.}
+
 \showSpells{Earth3}
 
 \subsection{Fate}
+
+\spell{Blessed Army}% Name
+  {duplicated, distant}% Enhancements
+  {Wax}% Action
+  {Fate}% Spheres
+  {targets' Charisma (inverted)}% Resist with
+  {The caster gives good wishes, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}}% Description
+  {The \glspl{fp} remain until used.}
 
 \showSpells{Fate3}
 
 \subsection{Fire}
 
 \showSpells{Fire3}
+
+\spell{Naked Fire}% Name
+  {duplicated, distant}% Enhancements
+  {Warp}% Action
+  {Water}% Spheres
+  {size of fire}% Resist with
+  {After instructing all the fire around on proper etiquette, \arabic{spellTargets} \glspl{step} fires around \spellRange\ turns blue, and stops burning flesh.
+  It continues to act upon wood, hair, and clothing as normal}% Description
+  {}
 
 \subsection{Water}
 
@@ -305,12 +379,6 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Life3}
 
-\subsection{Light}
-
-\showSpells{Light3}
-
-\subsection{Mind}
-
 \spell{Herd Protection}% Name
   {duplicated, distant}% Enhancements
   {Warp}% Action
@@ -323,6 +391,21 @@ A good witch leaves no part of her prey unused.
   When the spell combines with others, to boost the target's Strength and grant claws, they eventually look just like a regular bear.
 
   The strange skin fades to normal once the target takes Damage and heals.}
+
+\spell{Piglet Farm}% Name
+  {duplicated, detailed}% Enhancements
+  {Wane}% Action
+  {Earth, Water}% Spheres
+  {\glspl{hp}}% Resist with
+  {`Pigs!', the caster cries, and the first \arabic{spellTargets} targets within \spellRange\ shrink, take a -\arabic{spellPlusOne} Strength Penalty}% Description
+  {
+  This penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this penalty, and then half of their regular Strength penalty, for a total of -\arabic{spellPlusTwo}.}
+
+\subsection{Light}
+
+\showSpells{Light3}
+
+\subsection{Mind}
 
 \showSpells{Mind3}
 
