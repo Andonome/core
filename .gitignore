@@ -16,10 +16,9 @@
 *.acn
 *.acr
 *.alg
-*.glg
-*.glo
-*.gls
-*.glsdefs
+*glg
+*glo
+*gls
 *.ist
 *ist
 *.maf
