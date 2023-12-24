@@ -1,6 +1,16 @@
 \makeindex[name=spells,title={Spell Summaries},columns=2]
 
-% for CS callout boxes
+\newcommand\makeRule[5]{
+  \subsubsection[#2: \roll{#3}{#4}, \glsentrytext{tn} #5]{#2}
+  \label{#1}%
+  \roll{#3}{#4}, \glsentrytext{tn}~#5.%
+}
+
+\newcommand\makeAutoRule[5]{
+  \subsubsection[#2: #3]{#2}
+  \MakeUppercase#3.
+  \label{#1}%
+}
 
 \newcommand{\initiativechart}{
 
@@ -232,8 +242,6 @@
 
 \end{boxtable}
 }
-
-
 
 \newcommand\larcenyChart{
   \begin{nametable}[cccL]{Larceny Roll}
