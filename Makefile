@@ -12,7 +12,7 @@ config/bind.sty:
 
 svg-inkscape: | config/bind.sty
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
-$(BOOK).pdf: $(wildcard *.tex) $(wildcard config/*.sty)
+$(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
 
 all: $(BOOK).pdf
