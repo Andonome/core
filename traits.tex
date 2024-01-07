@@ -902,6 +902,7 @@ Characters gain \glspl{fatigue} for exerting themselves, and if they accrue too 
 
 \input{config/rules/fatigue.tex}
 
+\noindent
 \Glspl{fatigue} might inflict penalties because the character has 6 \glspl{hp} but gains a total of 8 \glspl{fatigue}, which results in a -2 penalty to all actions.
 
 \begin{boxtable}[lllllllllX]
@@ -952,8 +953,7 @@ Of course, characters can push themselves as much as they want, and cover as muc
 \paragraph{Starvation} is another special case.
 \glspl{fatigue} inflicted from starvation are marked with an `$S$', and each of these points only heal once the character has had a full meal.
 
-\subsubsection{\Glsfmtplural{npc}}
-\label{npcFatigue}
+\makeAutoRule{npcFatigue}{\Glsfmtplural{npc} \Glsfmtplural{fatigue}}{assume \glsfmtplural{npc} start with half \glsfmtplural{fatigue} filled}
 
 \Glspl{npc} should acrue \glspl{fatigue}, just like the \glspl{pc} do.
 The \gls{gm} might assume \glspl{npc} have a number of \glspl{fatigue} equal to half their \glspl{hp} at any time, unless the situation suggests otherwise.
