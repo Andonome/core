@@ -281,6 +281,27 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Mind2}
 
+\spell{Awaken}% Name
+  {detailed}% Enhancements
+  {Wax}% Action
+  {Water, Fate}% Spheres
+  {spell's level}% Resist with
+  {The caster explains a plan to a spell, and the spell gains an Intelligence Bonus of +\arabic{spellPlusOne} and begins enacting the plan}% Description
+  {
+  All spells have a small spark of sentience, endowed by their creator, so this spell exploits that fact to make a spell behave more intelligently.
+
+  The spell begins with all of the caster's knowledge, although anything beyond general knowledge generally ends up as a tangled mess of half-memories.
+  Without any interest in socializing, any social memories will simply not make sense.
+  The spell has all of the caster's Skills which do not depend on any social intuition%
+  \footnote{The spell gains none of the caster's magic Spheres},
+  with a -1 penalty.
+  However, if given a Charisma Bonus, with the Social Spell spell (\vpageref{Social Spell}), the spell will have full access to the caster's Skills (again, with a -1 penalty to each of them).
+
+  The spell grants no Charisma Bonus, and the resulting mind has no interest in anyone, or anything, except as instruments for \emph{the plan}.
+  It operates methodically, and sometimes behaves in strange, and alien ways, given its single-pointed value system.%
+  \footnote{Look up `the paperclip maximizer' for an explanation of how this kind of spell can easily go horribly wrong.}
+  }
+
 \spell{Fear}% Name
   {detailed}% Enhancements
   {Wane}% Action
@@ -290,18 +311,21 @@ A good witch leaves no part of her prey unused.
     If the target ever finds themselves facing the danger the caster described, they take a -\arabic{spellPlusOne} penalty to Mind Attributes}% Description
   {The spell lasts until the character gains \pgls{xp} for following their Code.}
 
-\spell{Watchman}% Name
+\spell{Social Spell}% Name
   {detailed}% Enhancements
   {Warp}% Action
   {Water, Fate}% Spheres
   {spell's level}% Resist with
-  {The caster speaks to a spell, and convinces it to copy their own Code of belief.
-  It gains Intelligence and Charisma Bonuses of -1}% Description
-  {Casters can use this spell to control illusions, to make water rage in one direction rather than another, to convince a heavy wind to leave their companions alone, or suggest to a curse spell the best time to spring a nasty surprise on the target.
+  {The caster speaks to a spell like a dog, which awakens an instinct to socialize, and grants it a +\arabic{spellPlusOne} Charisma Bonus (but no Intelligence)}% Description
+  {
+  Casters might use this spell to let an illusion interact semi-realistically with people (it will smile and listen, but cannot speak).
 
-  The caster must be able to sense the spell in order to address it, which often demands a \textit{Witness} spell come first.
+  The newly created mind gains all of the caster's Skills which rely primarily on social graces (Deceit, Empathy, and Performance), with a -1 penalty to each.
+  It also gains their spell Spheres with a -1 penalty, but does not need an audible voice to use them.
 
-  These spells tend to take advice from the caster for a while, but soon after make their own interpretations of what they want.}
+  The spell typically tries to attack the caster's enemies, and then interact with the caster and their friends.
+
+  }
 
 \end{multicols}
 
