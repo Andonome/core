@@ -419,7 +419,7 @@ They work just as short bows, but their Damage is the normal weapon Damage minus
 \settoggle{creatureBox}{true}
 \javelin s deal \dmg{damage} when used in combat, but only
 \addtocounter{damage}{-2}%
-\dmg{damage} when thrown.
+\dmg{damage} when thrown. % I assume this a coding error, since javelins are listed with +1 damage, meaning they should deal 1d6+1 damage, and 1d6-1 when thrown. Code is probably looking just at +1 bonus, without the base damage.
 
 \subsubsection{Impromptu Weapons}
 \index{Projectiles!Impromptu}
@@ -427,7 +427,7 @@ They work just as short bows, but their Damage is the normal weapon Damage minus
 Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 steps distance from the target, and a -2 penalty to Damage.
 \longsword s don't make great projectiles, but they still deal
 \addtocounter{damage}{-2}%
-\dmg{damage} basic Damage.
+\dmg{damage} basic Damage. % Also seems like a coding error, since longswords have +2 damage, which should be 1d6+2 normally, and 1d6 when thrown. Again, it seems that code is taking just the +2 damage bonus, translating it into 1d6-2, which then becomes 1d6-4 when thrown
 \settoggle{creatureBox}{false}
 
 \end{multicols}
