@@ -4,13 +4,12 @@ output: $(BOOK).pdf
 
 .PHONY: clean all
 
-global: config/bind.sty .switch-gls
 .switch-gls:
 	@touch -r Makefile .switch-gls
 config/bind.sty:
 	@git submodule update --init
 
-svg-inkscape: | config/bind.sty
+svg-inkscape: | config/bind.sty .switch-gls
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
 $(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
