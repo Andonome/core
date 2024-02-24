@@ -3,41 +3,88 @@
 \begin{multicols}{2}
 
 \sideBySide{
-  Scheduling becomes much easier when you just run a game with anyone who's there.
-  So BIND has a little `restart' at the start of each session.
-
-  \Gls{fenestra} has twelve seasons (which map to our twelve months) so everyone can feel time marching on.
-  And it marches on regardless of who's at the table that week -- even if nobody's there, \gls{fenestra} keeps moving.
-
-  This copy of BIND's core rules was created during one \showTemperature\ \showSeason.
-}{
   \begin{description}
     \item[\gls{gm}:]
-    Fenestra is currently experiencing the freezing season of Qualmea, when the trees shed their leaves, letting sunlight shine on shining, white roads.
+    Fenestra is currently experiencing the freezing season of Qualmea, when the trees shed their leaves, letting sunlight shine on roads which are slowly turning white, with little specks of snow.
 
     \item[Mat:]
     Wasn't it raining last time? Are we jumping time again?
 
     \item[\gls{gm}:]
-    Yes - three weeks passes every session, so we've actually started a new 'cycle'.
+    Yes - three weeks passes every session, so we've actually started a new `\gls{cycle}' in \gls{fenestra}.
+    And as usual -- we'll start in \pgls{broch} -- one of the towers \gls{guard} towers between \glspl{village}.
+
+    Mark off any rations or \glspl{ingredient} from last session -- they've all been eaten or gone rotten.
   \end{description}
+
+}{
+  Scheduling becomes much easier when you just run a game with anyone who's there.
+  So BIND has a little `restart' at the start of each session.
+
+  \Gls{fenestra} has twelve seasons (which map to our twelve months) so every time we enter January, \gls{fenestra} enters \gls{Qualmea}.
+  And it marches on regardless of who's at the table -- even if nobody's there, \gls{fenestra} keeps moving.
+
+  This helps keep the table open, so Nina -- a new player -- can jump right in.
 }
 
 \sideBySide{
-  Character creation's fast, so don't worry about your \gls{pc} dying.
-  Most will begin as members of the \gls{guard} -- the place they put society's unwanted; the useless miscreants, bastards, and political agitators.
+  \begin{description}
+    \item[\gls{gm}:]
+    The \gls{broch}'s \Gls{jotter} wants a report from last week.
 
-  The character creation rules are in the book of stories%
-  \iftoggle{stories}{, \autopageref{character_rolls}.}{.}
-  This book just has a lot of notes on Traits, and details on resolution
-  (it's mostly good for reference).
+    What did you do?
+    \item[Alice:]
+    Well, Grogfen helped a trader getting to town\ldots
+    (but I don't want to tell her about going in, or the \glspl{sp} she paid us)
+    \item[\gls{gm}:]
+    So how will you explain how long the mission took?
+    Remember, she has a record of when Grogfen left the \gls{jotter} who gave her the mission.
+    \item[Alice:]
+    With lies\ldots?
+    Can I just roll this one?
+    \item[\gls{gm}:]
+    Sure.
+    You just need to keep it consistent with what she knows.
+    Roll \roll{Intelligence}{Deceit} at \glsentrytext{tn} 8.
+    \item[Alice:]
+    \dicef{7}
+    Okay, that's an `8', so\ldots
+    \item[\gls{gm}:]
+    That's a tie, I'm afraid.
+    You got what you wanted (the money), but \gls{jotter} Cartpike thinks you're lying.
+    The two of you end up in an argument, with accusations, but she can't prove anything for now.
+  \end{description}
 }{
+
+  Whenever the characters try to accomplish something risky, we use this system:
+
+  $$2D6 + \underbrace{Attribute + Skill} ~vs~ \glsentrytext{tn}$$
+
+  When players roll above the \gls{tn}, their character succeeds.
+  When they roll below, the character fails, and the danger occurs.
+  When they roll a tie, then both occur -- or neither.
+
+  Sometimes this depends on what makes sense.
+  If both make sense then the player can choose to accept the danger and their goal, or neither.
+
+  In this case, Grogfen has a -1 Penalty to Intelligence, and +2 Deceit.
+  So in total, the roll is:
+
+  $$2D6 + 1 ~vs~ 8$$
+
+  Sometimes a piece of equipment or a social contact can add to the roll, so the total Bonus can become very high.
+  A \gls{tn} of 14 is not unreasonable in some situations.
+
+  $$2D6 + \underbrace{Attribute + Skill + Equipment} ~vs~ \glsentrytext{tn}$$
+}
+
+\sideBySide{
   \begin{description}
     \item[Nina]
     Do I get a character?
     \item[\gls{gm}:]
     You sure do.
-    Take the book of stories and roll $2D6$ on these charts.
+    Take the Book of Stories and roll $2D6$ on these charts.
     \item[Nina:]
     Okay, I'm a human\ldots called\ldots `Sootfilch'.
     What's with the name?
@@ -47,17 +94,19 @@
     You can roll the stats up next.
     There's a guide on the character sheet as well as the players' book.
   \end{description}
+
+}{
+
+  Character creation's fast, so don't worry about your \gls{pc} dying.
+  Most will begin as members of the \gls{guard} -- the place they put society's unwanted; the useless miscreants, bastards, and political agitators.
+
+  The character creation rules are in the \textit{Book of Stories}%
+  \iftoggle{stories}{, \autopageref{character_rolls}.}{.}
+  This book just has a lot of notes on Traits, and details on resolution
+  (it's mostly good for reference).
 }
 
 \sideBySide{
-  Starting equipment and beliefs all come wrapped together with the core concept in character creation.
-  This lets new people get up and running quickly.
-
-  Some of them will grow to like their characters, but if they don't, they can always build their own character, with everything they want, after the first.
-
-  Starting pay for the \gls{guard} is roughly nothing.
-  This forces the \glspl{pc} into some side-jobs and creative thinking, if they want to get their hands on reasonable weapons and armour.
-}{
   \begin{description}
     \item[\gls{gm}:]
     Low Dexterity and high Intelligence, so we'll look up what that says.
@@ -65,27 +114,32 @@
     It says I'm a `Loner'.
     \item[\gls{gm}:]
     That makes sense.
-    Society and social ties are very important in \gls{fenestra}, so people can end up in the \gls{guard} just because they don't have ties to an employer.
+    Society and social ties are very important in \gls{fenestra}, so people can end up in the \gls{guard} just because they don't have anyone arranging a safe position for them.
     \item[Nina:]
     This equipment looks a bit rubbish.
     Can't I get something better?
     At least some proper armour?
   \end{description}
+
+}{
+
+  Starting equipment and beliefs all come wrapped together with the core concept in character creation.
+  This lets new people get up and running quickly.
+
+  Most players end up making more interesting characters with some random input, but if players really want to decide on every facet, a `point-buy' character creation system exists.
+
+  Starting pay for the \gls{guard} is roughly nothing.
+  This forces the \glspl{pc} into some side-jobs and creative thinking, if they want to get their hands on reasonable weapons and armour.
 }
 
 \sideBySide{
-  The `role-playing' aspect works as usual (i.e. you do you).
-  However, there's a light suggestion, especially for new players, that they should roll first and interpret the dice.
-
-  The \gls{gm} doesn't have an exact reference for asking for armour, but since \glspl{jotter} tend to be harsh, he sets the \gls{tn} to 10.
-}{
   \begin{description}
     \item[\gls{gm}:]
-    Sure -- you're in a \gls{broch}, so you can ask the \gls{jotter} here.
-    She does all the paperwork for the \gls{guard}, and decides who gets weapons.
+    Sure -- you're in a \gls{broch}, so you can ask \gls{jotter} Cartpike.
 
     Roll $2D6$, then add your \roll{Charisma}{Empathy}.
     \item[Nina:]
+    \dicef{9}
     \ldots that's an `11' in total?
     Do I pass?
     \item[\gls{gm}:]
@@ -95,16 +149,17 @@
     He's probably ask her when she's alone.
     Knock politely, and just explain he's not been given the tools to survive.
   \end{description}
+
+}{
+  The \gls{gm} doesn't have an exact reference for asking for armour, but since \glspl{jotter} tend to be harsh, he sets the \gls{tn} to 10.
+
+  Some people like to `roll for Charisma', because they want their characters to succeed, rather than make a performance.
+  Instead of asking for acting talent, I've found it's best to have people roll, then interpret that roll.
+  This lets players plan for their characters abilities (as usual), and opens the field for failures, without demanding that players fail in the party's rolls because `it's what my character would do'.
+  Or rather, it provides mechanical justification for `what my character would do'.
 }
 
 \sideBySide{
-  The \gls{gm} forgot to prepare anything for the session, but that's okay.
-  He's already determined the season, so he flips to the encounter charts and rolls $3D6$.
-  The result is: `a woodspy, with thunder, after 3 \glspl{interval}'.
-  The \gls{gm} notes that down on his sheet, then looks up the mission.
-
-  Rolling $3D6$ again, he finds the troupe must go to two nearby \glspl{village} and cut away at the perimeter.
-}{
   \begin{description}
     \item[\gls{gm}:]
     \Gls{jotter} Cartpike agrees to give you the armour, as long as you head out on the new mission, immediately.
@@ -118,28 +173,223 @@
 
     \Gls{jotter} Cartpike gives everyone a day's rations (hardened cheese and a pie), and lets you pick your poison.
   \end{description}
+
+}{
+  The \gls{gm} forgot to prepare anything for the session, but that's okay.
+  He's already determined the season, so he flips to the encounter charts and rolls $3D6$.
+  The result is: `4 trader caravans, and biting winds, after \pgls{interval}'.
+  The \gls{gm} notes that down on his sheet, then looks up the mission.
+
+  For the mission, he rolls $3D6$ again, and finds the troupe must go to two nearby \glspl{village} and cut away at the perimeter.
+
+  Finally, he rolls up a single \gls{village} while two players explain how armour works to Nina.
+  The \gls{village} has bear traps surrounding it (that might make expanding the perimeter challenging!) and rumours about the local swamp-hag who occasionally eats people.
+  Since it's near a marsh, he names the \gls{village} `Marshwall'.
+
+  The various encounter charts shouldn't be considered `hard rules' -- they exist more to support the \gls{gm}.
 }
 
 \sideBySide{
-  Travelling times are easy to work out.
-  Players can decide their characters travel any number of miles, but every two miles adds \pgls{fatigue}.
-}{
   \begin{description}
     \item[Mat:]
     May as well do the distant one first.
     Can we walk ten miles in an afternoon?
     \item[\gls{gm}:]
     Sure, that's just 5 \glspl{fatigue} along the road.
-    And an extra 1 \glspl{fatigue} for the freezing weather.
-    
+    Nina -- Sootfilch is human, so you can ignore the first \gls{fatigue}.
   \end{description}
+}{
+  Travelling times are easy to work out.
+  Players can decide their characters travel any number of miles, but every two miles along a road adds \pgls{fatigue}.
+
+  If they want to hard-march 20 miles in an afternoon, they can do so, but they'll receive 10~\glspl{fatigue}, which means serious penalties.
 }
 
-% Encounters
-% RP moment with dice
-% Travel
-% Combat
-% Stories
-% 
+\sideBySide{
+  \begin{description}
+    \item[\gls{gm}:]
+    So everyone heads off to Marshwall, and on the road traders try to sell you torch pitch and rope for 100~\glspl{cp} each.
+    \item[Mat:]
+    Nah we're\ldots actually, that'd be really handy.
+    I'll take both.
+    \item[\gls{gm}:]
+    Roll \roll{Wits}{Crafts} to determine the quality of the goods (\tn[9]).
+    \item[Mat:]
+    \dicef{7}
+    Crap\ldots
+  \end{description}
+}{
+  Purchases can get tricky, as tricksters are everywhere.
+  A bad roll can leave the buyer holding useless goods, or buying services from a chancer.
+
+  Most of the `secondary skills' (like Crafts and Wyldcrafting) can come in useful for trades.
+}
+
+\sideBySide{
+  \begin{description}
+    \item[\gls{gm}:]
+    Snow's started to fall, thicker than before.
+    By evening, the road is white, but you can see Marshwall's high wooden walls ahead, and an archer waves at you from his perch.
+    \item[Mat:]
+    Time to rest.
+    \item[\gls{gm}:]
+    Wait a minute\ldots
+    just checking for encounters.
+    \item[Mat:]
+    Crap\ldots
+    \item[\gls{gm}:]
+    Who's in the lead?
+    Grogfen has the highest Speed, so I think she would be.
+    Can you roll \roll{Wits}{Vigilance} (\tn[12])?
+    \item[Alice:]
+    \dicef{3}\dicef{2}
+    Crap\ldots
+  \end{description}
+}{
+  When two people (or creatures) act against each other, the player rolls at \tn[7], plus their opponent's score.
+
+  The creature's total Bonus is +5, so Alice must roll at \gls{tn} ($7 + 5 =$) 12.
+}
+
+\sideBySide{
+  \begin{description}
+    \item[Alice:]
+    I rolled a `4', so what happens to me?
+    \item[\gls{gm}:]
+    A bleach-white tentacle grabs you by the neck, another around your left leg, then the great woodspy rises.
+    \item[Nina:]
+    The what?
+    \item[\gls{gm}:]
+    ``Woodspy'' -- a great land-octopus, able to camouflage, with a load of tentacles.
+    It grabs her and starts to slither away, pulling its way through the trees while holding Grogfen tight above its head.
+    \item[Nina:]
+    What do we do?
+    Run after it.
+    \item[\gls{gm}:]
+    If you want to, spend \pgls{ap}.
+    You can roll \roll{Speed}{Athletics} at \tn[11].
+    \item[Nina:]
+    Okay, \dicef{7} \ldots sorry, Alice\ldots
+  \end{description}
+}{
+  Everyone starts combat with 3~\glspl{ap} plus their Speed Bonus.
+  Having more \glspl{ap} lets you act before others, and do more.
+
+  Most combat actions resist an opponent, so most involve both combatants spending \pgls{ap} as the same time.
+  Characters can even go into the negative, but having -2~\glspl{ap} means a -2 Penalty to all rolls.
+}
+
+\sideBySide{
+  \begin{description}
+    \item[Mat:]
+    Wait, Earth magic covers snow, doesn't it?
+    Can I make the snow solid around the woodspy's tentacles to stop it getting away?
+    \item[\gls{gm}:]
+    Yes -- it's still \tn[11], but you can roll your \roll{Charisma}{Earth} to cast.
+    \item[Mat:]
+    \dicef{9} Got it!
+    \item[\gls{gm}:]
+    What does he say?
+    \item[Mat:]
+    `Solid frost, and woodspy tomb'?
+    \item[\gls{gm}:]
+    Well the snow responds, and grabs a couple of tentacles.
+
+    Nina -- one \roll{Wits}{Vigilance} roll, please (\tn[11]).
+  \end{description}
+}{
+  Spells work like any other roll, including when making a Resisted roll -- the spellcaster uses their Bonus to resist the opponent, or players roll their \gls{pc}'s Bonus against the \gls{npc}'s.
+
+  Characters cast spells with Charisma plus an elemental Skill, as they literally speaks to the elements.
+  Most spells come with a suggested statement, but the player can fill in anything (or nothing).
+}
+
+\sideBySide{
+  \begin{description}
+    \item[Alice:]
+    I'm rolling to attack!
+    \item[\gls{gm}:]
+    Roll Brawl, \tn[13].
+    \item[Alice:]
+    \dicef{9}
+    \Glsentrylong{tn} what?
+    This is hopeless\ldots
+    \item[\gls{gm}:]
+    Yes, but then again, you and the woodspy both spend \pgls{ap} when you struggle.
+    \item[Alice:]
+    Okay, I spend every \glspl{ap} I have.
+    \dicef{3}\dicef{2}
+    All of them.
+    \dicef{8}.
+  \end{description}
+}{
+  Everyone starts combat with 3~\glspl{ap} plus their Speed Bonus.
+  Having more \glspl{ap} lets you act before others, and do more.
+
+  Most combat actions resist an opponent, so most involve both combatants spending \pgls{ap} as the same time.
+  Characters can even go into the negative, but having -2~\glspl{ap} means a -2 Penalty to all rolls.
+}
+
+\sideBySide{
+  \begin{description}
+    \item[Nina:]
+    \dicef{5}\dicef{1}
+    Does a `5' pass?
+    \item[\gls{gm}:]
+    A bear trap, hidden in the snow, leaps up dealing\ldots\dicef{6} 6 Damage.
+    You can remove your 5~\glspl{fp}.
+    \item[Nina:]
+    And the last Damage?
+    Does my armour get it?
+    \item[\gls{gm}:]
+    Not with a bear-trap I'm afraid.
+    Remove \pgls{hp}.
+
+    However, since the woodspy couldn't move, you're standing in front of it, with one leg bleeding from the frozen, iron jaws.
+  \end{description}
+}{
+  \Glspl{fp} measure a character's distance from death and (in some sense) their courage.
+  Once they run out, all further damage makes a real wound -- Sootfilch might carry this damage for the remainder of the session.
+  However, after \pgls{interval} the troupe will regenerate \glspl{fp}, so the wounds won't leave them near-death for the entire session.
+
+  BIND doesn't have much in the way of healing magic, but it has plenty of Fate spells.
+}
+
+\sideBySide{
+  \begin{description}
+    \item[Nina:]
+    I'll stab the woodspy.
+    \item[\gls{gm}:]
+    Okay -- spend \pgls{ap} to take out your sword.
+    \item[Nina:]
+    Spent.
+    I'll stab the woodspy!
+    \item[Alice:]
+    \dicef{11}
+    I'm free.
+    \item[Mat:]
+    I'll go for another binding spell, can I make it trapped so Sootfilch can stab it easier?
+    \item[\gls{gm}:]
+    Sure, and it's at \tn[10] this time.
+    \item[Nina:]
+    Can I not stab the woodspy?!
+    \item[\gls{gm}:]
+    Snow freezes around its every grounded tentacle, while Grogfen pulls away.
+    Roll \roll{Dexterity}{Combat} at \tn[7].
+    \item[Nina:]
+    \dicef{9}
+    That's 8, how do I Damage?
+    \item[Mat:]
+    $1D6$!
+    \item[Nina:]
+    \dicef{6} that's an 8 in total, with the shortsword.
+    \item[\gls{gm}:]
+    The shortsword enters, and its snow-white skin splits, blue blood runs down the wound and the skin writhes red, black, and mottled-brown.
+  \end{description}
+}{
+  The woodspy would usually flee at this point, but being bound by ice, and trapped, the troupe will destroy it in a moment.
+
+  Once it dies, Laiquon will pull its beak out, to create \pgls{talisman} for a Water spell, then the troupe can sell the rest of the body to the farmers in the \gls{village} for a few copper and a couple of favours, like a nice place to rest.
+}
 
 \end{multicols}
