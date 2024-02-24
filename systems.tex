@@ -59,6 +59,7 @@ The parts cost an additional 50\%, and the crafter must have both the Combat and
 Every margin on the roll reduces the armour's penalty by 1, to a minimum of -1.
 
 \makeRule{make_song}{Composing a new song}{Intelligence}{Performance}{10}
+This won't let the character perform the song -- just compose, and possibly explain it.
 
 \makeRule{tame_horse}{Taming a Horse}{Intelligence}{Wyldcrafting}{depends on Horse's \roll{Wits}{Brawl}}
 
@@ -68,7 +69,6 @@ Every margin on the roll reduces the armour's penalty by 1, to a minimum of -1.
 See also, verifying rumours, \vpageref{verify_rumours}.
 
 \makeRule{identify_talisman}{Identifying a \glsfmttext{talisman}}{Intelligence}{Academics}{12, then 14}
-
 Magical items do not darken people's doors often, but once they do, you had best get some educated advice.
 The initial roll tells someone how to activate \pgls{talisman}, and which Spheres created it (ties only tell the Spheres).
 A second roll, at \tn[14], is required to know what the \gls{talisman} does (ties indicate something about what it does), but not the full picture.
@@ -99,13 +99,11 @@ Those who know their environment have a knack for crawling efficiently, feeling 
 \index{Spelunking!Black Walking}
 
 \makeRule{build_shelter}{Building a shelter}{Intelligence}{Wyldcrafting}{11}
-
 Each point on the Margin allows an additional person to sleep inside the shelter.
 
 A tie indicates that the shelter holds for a few hours, then collapses.
 
 \makeRule{cure_poison}{Curing a poison}{Wits}{Medicine}{10, each margin cures 1 \glsfmttext{fatigue}}
-
 Each Margin cures 1 \glspl{fatigue} caused by poison by the end of the \gls{interval}.
 Of course if the roll fails, each Failure Margin \emph{inflicts} \pgls{fatigue}.
 
@@ -253,6 +251,8 @@ Cities are \tn[7], Towns are 9, and \glspl{village} are 13.
 A successful roll indicates a working knowledge of the place.
 
 \makeRule{ford_river}{Fording a rapid river}{Strength}{Seafaring}{9}
+Success gets you to the other side, and failure gets you washed downstream.
+A tie gets you a bit of both.
 
 \makeRule{gather_food}{Gathering Food}{Wits}{Wyldcrafting}{set by area}
 
@@ -342,7 +342,7 @@ If they do nothing but swimming, they can add their Athletics Skill to the total
 \paragraph{Intimidating someone into backing off} -- \roll{Strength}{Deceit} vs the target's \roll{Strength}{Empathy}.
 \index{Intimidation}
 
-\makeRule{scout}{Scouting the forest for an enemy camp nearby}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
+\makeRule{scout}{Scouting for an enemy camp}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
 A tie indicates someone spotted you before you got away.
 Failure indicates not getting away.
 
