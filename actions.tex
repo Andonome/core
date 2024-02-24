@@ -287,6 +287,11 @@ The basic \gls{tn} is 10, but it depends on the backpack.
 \subsection{Time}
 \label{time}
 
+\subsubsection{Setup}
+Each session has a small setup, and then the day starts to spin.
+
+\input{config/rules/start.tex}
+
 \subsubsection{Rounds}
 
 When everyone wants to talk and act at the same time, time switches to \glspl{round} (usually during combat).
@@ -300,26 +305,22 @@ All that matters is that \pgls{round} is a period of time in which players roll 
 
 \subsubsection{\Glsentrytext{downtime}}
 
-This covers any time `skipped over', and allows the \glspl{pc} to heal Damage, practice Skills, or take Resting actions.
-The troupe can declare \pgls{downtime} at any point.
-Likewise, the \gls{gm} can interrupt that \gls{downtime} at any point for some action.
-
 Players have a limited amount of \gls{downtime} to employ.
-Every week in our world, three weeks pass in the world of BIND.
-So a weekly session leaves the players with no more than three weeks for their characters to rest.
+Every week in our world, three weeks pass in \gls{fenestra}.
+So a weekly session leaves the players with no more than three weeks for the \glspl{pc} to rest.
 
 \subsubsection{Healing}
 \label{healing}
 \input{config/rules/healing.tex}
 So someone on -3~\glspl{hp} would recover 2~\glspl{hp} after a week, then reach 0~\glspl{hp} on week 2, 1 \gls{hp} on week 3, then 2, 3, 5, and so on.
 
-When a \gls{pc} has been reduced to 1~\gls{hp}, the player should consider taking a different character from the \gls{characterPool} on the next session.
+When a \gls{pc} has been reduced to 1~\gls{hp}, the player should consider taking a different character -- from their \gls{characterPool} or any relevant \gls{npc} -- for the rest of the session.
 
 \subsection{Space}
 \label{space}
 \index{Space}
 
-\subsubsection{Steps}
+\subsubsection{\Glsfmtplural{step}}
 \index{Steps}
 
 BIND tracks space with \glspl{step}.
