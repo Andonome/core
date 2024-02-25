@@ -236,14 +236,6 @@ This includes murder, crafting poisons, selling illegal items, et c.
 
 Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
 
-\makeRule{place_fire}{Placing fires}{Intelligence}{Caving}{11 to avoid filling the cavern with smoke, and receiving 2~\glsfmtplural{fatigue} per \glsentrytext{interval}}
-A fire in the wrong place underground can easily choke everyone around to death, or at least until they can't think properly.
-Of course, this provides an excellent weapon of war if one can do it properly.
-Light the wrong type of fire, and heavy smoke will fall down a tunnel instead of rising.
-\index{Spelunking!Placing Fire}
-
-Failure indicates nearby characters suffer 2~\glspl{fatigue}, and everyone in the area suffers \pgls{fatigue} each round after that.
-
 \subsection{Travel}
 
 \makeRule{area_knowledge}{Area knowledge}{Intelligence}{Academics}{set by area}
@@ -299,6 +291,14 @@ Each day they would accumulate 2 more \glspl{fatigue} in total.
 
 Travelling by road means the troupe can usually sleep in \pgls{village}, \pgls{broch} or at least \pgls{bothy}, so it affords more opportunity for rest.
 
+\makeAutoRule{cold}{Cold Seasons}{gain 2~\glsfmtplural{fatigue} each \glsfmttext{interval} and need fire to rest}
+\index{Winter}
+\index{Cold Seasons}
+\index{Snow}
+During the colder seasons of \gls{Alassea} and \gls{Minquesta}, the frigid air inflicts 4~\glspl{fatigue} each \gls{interval}, or 2~\glspl{fatigue} for characters wearing warm clothing.
+
+Characters can only rest with a fire, which may attract monsters (usually a 1 in 6 chance).
+
 \makeRule{navigate_land}{Navigating on land}{Intelligence}{Wyldcrafting}{by terrain type, Failure Margin adds 2 miles}
 \index{Navigation}
 \index{Marching}
@@ -326,6 +326,18 @@ A torch adds a +3 Bonus.
 A tie means the character comes to a sudden halt, without Damage.
 Failure means $1D6$ Damage, plus the character's Speed (running faster means more Damage).
 \index{Darkness!Running}
+
+\makeRule{place_fire}{Placing Fire Undergound}{Intelligence}{Caving}{11 to avoid filling the cavern with smoke, and receiving 2~\glsfmtplural{fatigue} per \glsentrytext{interval}}
+A fire in the wrong place underground can easily choke everyone around to death, or at least until they can't think properly.
+Of course, this provides an excellent weapon of war if one can do it properly.
+Light the wrong type of fire, and heavy smoke will fall down a tunnel instead of rising.
+\index{Spelunking!Placing Fire}
+
+Failure indicates nearby characters suffer 2~\glspl{fatigue}, and everyone in the area suffers \pgls{fatigue} each round after that.
+
+\makeRule{start_fire}{Starting a Fire}{Intelligence}{Wyldcrafting}{10}
+A little tinder-box will grant a +2 Bonus, and heavier boxes will allow reuse.
+During the cold seasons, fire is a necessity to remove \glspl{fatigue} (mentioned \vpageref[above]{cold}).
 
 \makeRule{swimming}{Swimming}{Speed}{Seafaring}{set by water speed}
 
