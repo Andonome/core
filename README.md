@@ -27,7 +27,7 @@ But reading two-columns of blinding-white PDF on a monitor will only give you a 
     * For Void Linux: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `texlive-latexmk`.
 1. Enter the repo, and do `make all`.
 
-Fine full installation instructions in the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
+For full installation instructions, see the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
 
 ## Related Books
 
