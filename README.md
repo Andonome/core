@@ -1,7 +1,3 @@
-# BIND
-
-BIND is an open-source, grunge-fantasy, tabletop RPG.
-
 |             Downloads                |         Questions             |
 |:-------------------------------------|:------------------------------|
 | [Core Book][core download]           | [Wiki][wiki]                  | 
@@ -9,24 +5,29 @@ BIND is an open-source, grunge-fantasy, tabletop RPG.
 | [Condensed Rules][rules summary]     | [Issues Board][board]         |
 | [Introduction Module][intro module]  |                               |
 
-# Setting
 
-Ever play an RPG, and get really pedantic thoughts?
+BIND is an open-source, grunge-fantasy, tabletop RPG, which:
 
->>>
-You finally arrive in the little hamlet of Encworth, exhausted from your fight with the Manticore, and still tending your wounds from the first day's battle with the cockatrice.
+- optimizes the crap out of everything (in ways you probably won't notice),
+- is an 'adult game' (meaning we all have jobs, and need to set-up-and-go without homework or very much prep),
+- will never have any house rules (because anyone can change the source files and reprint the PDF).
 
-The farmer's children stop their work, and come over to ask a thousand questions.
->>>
+# Getting the Book
 
-Sorry, whut?
-This land has 'wandering monsters', ready to turn people into stone, and *then* eat them.
-How does anyone raise a family here?
-Who put all these traps down here?
-How do people trade?
+Download it from the [link][core download], then take it to your local, friendly, print-shop.
+Everything in the book has been optimized for reading on paper.
+But reading two-columns of blinding-white PDF on a monitor will only give you a headache.
 
-The world emerged as a series of answers to pedantic questions.
-This is the fantasy world where dragons plan for inflation, and gnolls have a day-rate.
+## Compiling the Book Yourself
+
+1. Clone this repo.
+1. Install the required packages:
+    * For Debian/ Mint/ Ubuntu: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `latexmk`.
+    * For Arch Linux: `inkscape`, `make`, `texlive-most`, `git-lfs`, and `texlive-binextra`.
+    * For Void Linux: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `texlive-latexmk`.
+1. Enter the repo, and do `make all`.
+
+Fine full installation instructions in the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
 
 ## Related Books
 
@@ -48,23 +49,6 @@ All rules are geared towards fast resolutions and player choices.
     * Whoever has the most Action Points can interrupt and demand to go first.
 - GMs don't roll much, so they can focus on orchestration.
 - Spellcasters spend Mana Points.
-
-# Compiling
-
-The dependencies are
-
-- `texlive-full`
-- `git`
-- `git-lfs`
-- `inkscape`
-- `make`
-
-To make the document,
-
-1. type `make`.
-2. Take the pdf to your local, friendly, printing store.
-
-For more detailed instructions, see the wiki on [setting up](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
 
 # Get Involved
 
