@@ -69,8 +69,9 @@ If you want to get involved, there are a number of ways to contribute:
 [cs]: https://gitlab.com/bindrpg/core/-/blob/ods/calc_cs/bind_cs.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
-[rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf
+[rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
 [intro module]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
 [intro handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_handouts.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
 [judgement]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/judgement.pdf?job=build
+
