@@ -13,9 +13,6 @@
 \makeRule{break_door}{Breaking in a door}{Strength}{Crafts}{10}
 A tie could indicate that the door has a massive hole in the middle, allowing a sufficiently small person to squeeze through; or it might indicate that the door caves in after multiple, noisy strikes.
 
-\makeRule{excavation}{Excavation}{Strength}{Caving}{depends on the type of rock}
-\index{Spelunking!Excavation}
-
 \subsection{Downtime Activities}
 
 \makeRule{poison}{Brewing a poison}{Intelligence}{Medicine}{4}
@@ -100,7 +97,6 @@ Those who know their environment have a knack for crawling efficiently, feeling 
 
 \makeRule{build_shelter}{Building a shelter}{Intelligence}{Wyldcrafting}{11}
 Each point on the Margin allows an additional person to sleep inside the shelter.
-
 A tie indicates that the shelter holds for a few hours, then collapses.
 
 \makeRule{cure_poison}{Curing a poison}{Wits}{Medicine}{10, each margin cures 1 \glsfmttext{fatigue}}
@@ -120,33 +116,17 @@ If the \glspl{pc} fail the roll, the \gls{gm} should increase the \gls{tn} for a
 
 Once out, all penalties vanish, except for a single \gls{fatigue}.
 
-\makeRule{tracking}{Tracking}{Wits}{Wyldcrafting}{12}
-Excessive snow or rain means the \gls{tn} decreases by 2 due to mud or snow remembering every step.
-However, it also increases the \gls{tn} by 2 each \gls{interval}.
-\index{Tracking}
-
-Both the hunter and the hunted determine their rate of travel.
-The hunter continues making roll until they catch their quarry or lose them.
-
-\makeRule{walk_underground}{Walking Underground}{Dexterity}{Caving}{8, plus 2 per mile}
-Caverns offer all manner of impediments, from sudden drops to falling debris, and passages full of water.
-Each mile covered inflicts \pgls{fatigue}, as usual.
-
-\index{Spelunking!Walking}
-\caveTravelChart
-
-Each \gls{interval}, the \glspl{pc} decide how many miles they wish to cover, and make a roll.
-Proper equipment, such as ropes, good shoes, and a map, can add up to +3.
-Failure results in an additional 3~\glspl{fatigue}, as the characters bang their head, twist an ankle, or bruise their arse on slippery fall.
-A tie means they can see the danger coming, and choose to rest instead of taking the \glspl{fatigue}.
-
 \subsection{Town Activities}
 
 \makeRule{hookey}{Walking Through Town}{Wits}{Empathy}{depends on area, bonus for rank}
 The \gls{guard} should guard against the forest, not hide (nor drink) in towns.
+
 Of course people make exceptions for higher-ranking \gls{guard}, and plenty of the guard manage to sneak into town regularly.
 
-\sidebox[20]{
+\Gls{guard} characters can add any rank they have earned to any rolls.
+`Fodder' add nothing, while `Diggers' can add +1 to the roll.
+
+\sidebox[17]{
   \begin{boxtable}
 
     \textbf{\gls{tn}} & \textbf{Location} \\\hline
@@ -167,9 +147,6 @@ Of course people make exceptions for higher-ranking \gls{guard}, and plenty of t
 
   \end{boxtable}
 }
-
-\Gls{guard} characters can add any rank they have earned to any rolls.
-`Fodder' add nothing, while `Diggers' can add +1 to the roll.
 
 Entering a town requires an \roll{Intelligence}{Larceny} group roll (\tn[7]).
 \Glspl{guard} who cannot find alternative clothing to their standard, dark, uniforms, take a -4 penalty to this roll.
@@ -346,6 +323,24 @@ The \gls{tn} depends on the water's speed -- large rivers might have a \gls{tn} 
 
 Characters can swim 1 \gls{step} per \gls{ap} spent.
 If they do nothing but swimming, they can add their Athletics Skill to the total at the end of the round.
+
+\makeRule{tracking}{Tracking}{Wits}{Wyldcrafting}{12}\index{Tracking}
+Excessive snow or rain means the \gls{tn} decreases by 2 due to mud or snow remembering every step.
+However, it also increases the \gls{tn} by 2 each \gls{interval}.
+
+Both the hunter and the hunted determine their rate of travel.
+The hunter continues making roll until they catch their quarry or lose them.
+
+\makeRule{walk_underground}{Walking Underground}{Dexterity}{Caving}{8, plus 2 per mile}\index{Spelunking!Walking}
+Caverns offer all manner of impediments, from sudden drops to falling debris, and passages full of water.
+
+\caveTravelChart
+Each mile covered inflicts 2 \glspl{fatigue} -- double the usual.
+Each \gls{interval}, the \glspl{pc} decide how many miles they wish to cover, and make a roll.
+Proper equipment, such as ropes, good shoes, and a map, can add up to a +3 Bonus.
+
+Failure results in an additional 3~\glspl{fatigue}, as the characters bang their head, twist an ankle, or bruise their arse on slippery fall.
+A tie means they can see the danger coming, and choose to rest instead of taking the \glspl{fatigue}, then carrying on with a plan for the route.
 
 \subsection{War \& Battery}
 
