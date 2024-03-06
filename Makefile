@@ -1,15 +1,18 @@
 BOOK = $(shell basename "$$(pwd)")
+QR_TARGET = $(shell grep 'mailto' README.md | cut -d' ' -f2)
 
 output: $(BOOK).pdf
 
 .PHONY: clean all
 
+qr.tex: README.md
+	@echo '\qrcode[height=.2\\textwidth]{$(QR_TARGET)}' > qr.tex
 .switch-gls:
 	@touch -r Makefile .switch-gls
 config/bind.sty:
 	@git submodule update --init
 
-svg-inkscape: | config/bind.sty .switch-gls
+svg-inkscape: | config/bind.sty .switch-gls qr.tex
 	@pdflatex -shell-escape -jobname $(BOOK) main.tex
 $(BOOK).pdf: svg-inkscape $(wildcard *.tex) $(wildcard config/*.sty)
 	@pdflatex -jobname $(BOOK) main.tex
