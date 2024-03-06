@@ -33,5 +33,6 @@ clean:
 	*.pdf \
 	svg-inkscape \
 	*.fdb_latexmk \
+	qr.tex \
 	*.fls
 
