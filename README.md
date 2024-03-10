@@ -1,9 +1,9 @@
-|             Downloads                |         Questions             |
+|             Downloads                |         Resources             |
 |:-------------------------------------|:------------------------------|
 | [Core Book][core download]           | [Wiki][wiki]                  | 
-| [Character Sheets][resources]        | [Email an idea][issuesEmail]  |
-| [Condensed Rules][rules summary]     | [Issues Board][board]         |
-| [Introduction Module][intro module]  |                               |
+| [Character Sheets][resources]        | [World Wiki][fenwiki]         |
+| [Condensed Rules][rules summary]     | [Email an idea][issuesEmail]  |
+| [Introduction Module][intro module]  | [Issues Board][board]         |
 
 
 BIND is an open-source, grunge-fantasy, tabletop RPG, which:
@@ -73,5 +73,6 @@ If you want to get involved, there are a number of ways to contribute:
 [intro module]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
 [intro handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_handouts.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
+[fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
 [judgement]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/judgement.pdf?job=build
 
