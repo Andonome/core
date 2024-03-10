@@ -6,7 +6,7 @@ output: $(BOOK).pdf
 .PHONY: clean all
 
 qr.tex: README.md
-	@echo '\qrcode[height=.2\\textwidth]{$(QR_TARGET)}' > qr.tex
+	@printf '\qrcode[height=.2\\textwidth]{$(QR_TARGET)}' > qr.tex
 .switch-gls:
 	@touch -r Makefile .switch-gls
 config/bind.sty:
