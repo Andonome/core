@@ -47,8 +47,8 @@ All rules are geared towards fast resolutions and player choices.
     * If you miss, the enemy damages you.
     * No initiative rolls - just go!
     * Whoever has the most Action Points can interrupt and demand to go first.
-- GMs don't roll much, so they can focus on orchestration.
 - Spellcasters spend Mana Points.
+- GMs don't roll much, so they can focus on interpretation and reaction.
 
 # Get Involved
 
