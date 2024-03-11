@@ -93,20 +93,26 @@ A lot of Wyldcrafting means that someone can farm plants, and probably hunts, an
 Each Skill pairs up with different Attributes to show different overall ability levels.
 A craftsman with great Dexterity may create beautiful and intricate items, but won't always craft with Speed, and if their Intelligence is poor, they may not be able to create new moulds well.
 
-Have a look at this talented soldier:
+Have a look at this talented member of the \gls{guard}:
 
-\npc{\F\Hu}{Soldier \# 285}
+\npc{\F\Hu}{Grogfen}
 \person{1}% STRENGTH
-  {2}% DEXTERITY
-  {-1}% SPEED
-  {{-2}% INTELLIGENCE
-  {2}% WITS
+  {0}% DEXTERITY
+  {1}% SPEED
+  {{-1}% INTELLIGENCE
+  {-1}% WITS
   {1}}% CHARISMA
   {0}% DR
-  {1}% COMBAT
-  {Deceit~3, Empathy~1, Larceny~2}% SKILLS
-  {\longsword, dagger, \gls{wheatGuild} brooch.}% EQUIPMENT
-  {}
+  {0}% COMBAT
+  {}% SKILLS
+  {\shortsword, cheese, pies, 50' rope}% EQUIPMENT
+  {
+    \setcounter{Brawl}{1}
+    \setcounter{Empathy}{2}
+    \setcounter{Deceit}{3}
+    \setcounter{Larceny}{1}
+    \setcounter{Vigilance}{0}
+  }
 
 With only a few Skills, we can see a wealth of abilities.
 
@@ -114,25 +120,25 @@ With only a few Skills, we can see a wealth of abilities.
   \item[\roll{Strength}{Deceit}]
     allows her to intimidate with +4 to the roll.
   \item[\roll{Dexterity}{Empathy}]
-    gives her +3 to dancing.
+    gives her +2 to dancing.
   \item[\roll{Dexterity}{Larceny}]
-    gives her +4 to picking pockets.
+    gives her +1 to picking pockets.
   \item[\roll{Speed}{Larceny}]
-    shows +1 to snatch-and-run attempts.
+    shows +2 to snatch-and-run attempts.
   \item[\roll{Intelligence}{Deceit}]
-    gives +1 to planning a plausible lie.
+    gives +2 to planning a plausible lie.
   \item[\roll{Intelligence}{Empathy}]
-    means a -1 penalty to negotiations.
+    means a 0 penalty to negotiations.
   \item[\roll{Intelligence}{Larceny}]
     has her at +0 to plan a heist.
   \item[\roll{Wits}{Deceit}]
-    gives her +5 to pull out a plausible lie on the spot.
+    gives her +2 to pull out a plausible lie on the spot.
   \item[\roll{Wits}{Empathy}]
-    gives her +3 to see when someone lies to her.
+    gives her +1 to see when someone lies to her.
   \item[\roll{Charisma}{Deceit}]
     gives her +4 to confidently sell someone on an idea.
   \item[\roll{Charisma}{Empathy}]
-    gives her +2 when ingratiating herself with a new crowd.
+    gives her +3 when ingratiating herself with a new crowd.
 \end{description}
 
 Many pairings of an Attribute plus Skill will not come up very often, but you should think of each likely pairing as an individual talent.
