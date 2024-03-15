@@ -70,12 +70,8 @@ When they reach 0 \glspl{hp}, they fall over.
 \label{stackingDamage}
 
 Damage Bonuses cannot extend forever.
-If the Damage bonus ever exceeds +3 then 4 points of the bonus are replaced with a die.
-Therefore, what might usually be $1D6+4$ Damage becomes $2D6$ Damage.
-
-This applies to all Damage, including magical Damage.
-It continues through all Damage Bonuses, so $1D6+9$ Damage would be simply $3D6+1$ Damage after conversion.
-This also applies to lower Damage, so `2 Damage', would be $1D6-2$ damage.
+Replace every +4 Damage Bonus by an additional $D6$.
+It continues through all Damage Bonuses, so $1D6+9$ Damage becomes $3D6+1$ Damage after conversion.
 
 \subsubsection{\Glsfmtlongpl{hp}}
 
@@ -708,15 +704,17 @@ Such is life.
 
 \makeAutoRule{falling}{Falling Damage}{characters suffers 1 Damage per \glsfmttext{step} in height, plus their own Strength}
 \index{Falling}
-Characters who fall from a height suffer 2 Damage when falling from the height of a building.
-This 2 Damage alone converts to $1D6-2$ Damage, while 4 Damage would simply be $1D6$ and so on.
+Falling Damage is +1 per \gls{step}, plus the characters Strength.
+Every +4 Damage converts to $1D6$ as usual.
+
+Characters who fall off a building suffer $1D6-2$ + Strength.
 
 Smaller creatures suffer less from falling, so a gnome with Strength -2 can easily fall 2 \glspl{step} without pain, while a human who lands wrong can break an arm by falling badly from a horse.
 
 Characters falling straight downward can attempt to mitigate up to 4 Damage by rolling \roll{Dexterity}{Athletics} (\tn[5] +1 per Damage).
 Those falling forward and down in an arc can mitigate up to 6.
 
-The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$.
+The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$ + Strength.
 
 \subsection{Animals}
 
