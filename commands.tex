@@ -192,6 +192,22 @@
   \end{boxtable}
 }
 
+\newcommand{\coveringchart}{
+  \begin{boxtable}[lLL]
+
+    \textbf{Roll} & \textbf{Result} & \textbf{Damage} \\\hline
+
+    $\leq$ \gls{tn} - your Covering & Opponent scores \gls{vitalShot}! & You take full Damage \\
+
+    < \gls{tn} but > \gls{tn} - your Covering & Opponent hits you & Your \gls{dr} reduces Damage \\
+
+    > \gls{tn} but < \gls{tn} + opponent's Covering & You hit the opponent & Opponent's \gls{dr} reduces Damage \\
+
+    $\geq$ \gls{tn} + opponent's Covering & You score \gls{vitalShot}! & Opponent takes full Damage \\
+
+  \end{boxtable}
+}
+
 \newcommand{\armourchart}{
 
   \begin{boxtable}[Lccc]
