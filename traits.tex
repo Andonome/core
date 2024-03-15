@@ -1,8 +1,9 @@
 \chapter{Measurements}
 \index{Traits}
 
-We measure characters with three Primary Traits: their natural `Attributes', the `Skills' they've learnt, and specialized `Knacks'.
-All of the derived Traits come from these three.
+Characters have only three kinds of basic Traits: Attributes define general aptitudes, Skills show what the character does with their time, and Knacks add any other flourishes character might require.
+
+From these simple three, we can derive the other Traits, such as \glspl{hp}, their ability to start fires, et c.
 
 \section{Attributes}
 \label{randomAttributes}
@@ -10,16 +11,43 @@ All of the derived Traits come from these three.
 
 \begin{multicols}{2}
 
+\sidebox{
+  \small
+  \begin{boxtable}
+
+    \hline
+    \textbf{Trait} & \textbf{Description} \\\hline
+
+    -3 & Abysmal -- a total liability. \\
+
+    -2 & Useless and pathetic. \\
+
+    -1 & Poor, clumsy, and a constant irritation. \\
+
+    +0 & Mediocre and unremarkable. \\
+
+    +1 & Notable and worthy. \\
+
+    +2 & Outstanding. \\
+
+    +3 & Peak performance\ldots and often strange. \\
+
+  \end{boxtable}
+}
+
 \noindent
-Attributes generally range from -3 to +3, but these ranges vary by race.
-Humans have an extra +1 Strength Bonus, so their Strength Bonus range is -2 to +4; meanwhile gnomes have a Strength bonus of -5 to +1, with an average of -2, so an average gnome has about the muscle-power of a sickly human, and the strongest of gnomes could only hope to reach the strength of the average human.
+Each character's Attributes range range from -3 to +3, although most people have a Bonus of `0', in most Attributes.
+Since these Attribute Bonuses adjust nearly every roll a character makes, they make for an excellent character.
+
+These averages vary by race.
+Elves have a +1 penalty to Wits, so their `normal', is the equivalent of being quite sharp among other peoples.
+Meanwhile, humans (being the tallest of races) have a standard +1 Bonus to Strength, so their normal would be considered very strong by others' standards.
+
+The various monstrous predators of \gls{fenestra} often have Attributes which go beyond the numbers here -- there are no hard limits!
 
 \subsection{Body Attributes}
 \index{Body Attributes}
 \index{Physical Attributes}
-
-These are the Attributes determined wholly by the character's body.
-Monsters, beasts and stranger creatures are all described with these three Body~Attributes.
 
 \settoggle{examplecharacter}{false}
 
@@ -42,9 +70,7 @@ A low Speed Bonus in a weak person might simply represent small muscles, while a
 Speed might also be used in situations where a character's muscle to weight ratio are important, such as when climbing up a cliff or holding onto a ledge for a prolonged period of time.
 
 \subsection{Mind Attributes}
-
 \index{Mind Attributes}
-Mind Attributes determine the character's personality and how adept they are with thought-based Skills such as Academics. It is also the basis of a lot of magical ability and defences against magical abilities.
 
 \subsubsection[Intelligence]{Intelligence \hint{memory, logic, tenacity, cunning}}
 
@@ -57,6 +83,7 @@ Intelligence also covers artistic endeavours and a multitude of craftsmanship, w
 Where intelligence represents how well a character thinks, Wits just tells you how fast they think.
 The character's ability to observe, to tell enemy from friend, to spot people hiding in the bushes, to notice an off taste in that poisoned casserole or to just spot the perfect joke for the occasion are all covered under Wits.
 Wits is also the primary Attribute for resisting magical enchantments and spotting illusions.
+
 Wits is the only Mind Attribute available to animals.
 
 \subsubsection[Charisma]{Charisma \hint{magnetism, gravitas, glamour, friendliness, symmetry}}
@@ -69,11 +96,12 @@ Charisma also covers characters' luck, and therefore some measure of their abili
 \section{Skills}
 
 \index{Skills}
+\label{skills}
 
 \begin{multicols}{2}
 
 \noindent
-A characters Skills tell you what they do with most of their time.
+A character's Skills tell you what they do with most of their time.
 A lot of Wyldcrafting means that someone can farm plants, and probably hunts, and a high Academics score means they read a lot, and communicate with other Academics.
 
 \noindent
@@ -90,7 +118,7 @@ A lot of Wyldcrafting means that someone can farm plants, and probably hunts, an
 
 \end{boxtable}
 
-Each Skill pairs up with different Attributes to show different overall ability levels.
+Each Skill pairs up with different Attributes to show a multitude of different tasks.
 A craftsman with great Dexterity may create beautiful and intricate items, but won't always craft with Speed, and if their Intelligence is poor, they may not be able to create new moulds well.
 
 Have a look at this talented member of the \gls{guard}:
@@ -147,10 +175,9 @@ It's only two Skills on the sheet, but that's seven different ratings the charac
 
 See the table on \vpageref{skillChart} as an example of how to view Skills in multiple ways.
 
-\subsection{The List}
-\label{skills}
+\bigSkillsTable
 
-Most Skills allow people to perform a range of functions depending upon which Attribute it is paired with. A few examples are given with the list below.
+\subsubsection{Further Skills}
 
 The Skills here are examples, so this is not a complete list.
 If you want Skills not listed, just run them by the \gls{gm} and discuss what kinds of tasks they cover.
@@ -841,8 +868,6 @@ In calmer settings, wyldcrafting covers all the activities involved in farming -
 \end{exampletext}
 
 \end{multicols}
-
-\bigSkillsTable
 
 \section{\glsentrylongpl{fp}}
 \label{fate_points}
