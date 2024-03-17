@@ -2,7 +2,7 @@
 |:-------------------------------------|:------------------------------|
 | [Core Book][core download]           | [Wiki][wiki]                  | 
 | [Character Sheets][resources]        | [World Wiki][fenwiki]         |
-| [Condensed Rules][rules summary]     | [Email an idea][issuesEmail]  |
+| [Condensed Rules][rules summary]     | [Email an idea][issues email] |
 | [Introduction Module][intro module]  | [Issues Board][board]         |
 
 
@@ -52,10 +52,11 @@ All rules are geared towards fast resolutions and player choices.
 
 # Get Involved
 
-The book is under an open source licence, so whoever plays it decides how it gets to work.
+The book is under an open source licence, you have access to the same files which I do.
+Anyone who plays it can change the book with their own rules.
 If you want to get involved, there are a number of ways to contribute:
 
-- Emailing ideas [here][issuesEmail] and they will appear on the [issues board][board].
+- Emailing ideas [here][issues email] and they will appear on the [issues board][board].
 - Posting ideas directly on the [board][board].
 - Join the project, and start fixing issues.
 - Playtesting.
@@ -68,7 +69,7 @@ If you want to get involved, there are a number of ways to contribute:
 [aif]: https://gitlab.com/bindrpg/aif
 [cs]: https://gitlab.com/bindrpg/core/-/blob/ods/calc_cs/bind_cs.ods
 [board]: https://gitlab.com/bindrpg/core/issues
-[issuesEmail]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
+[issues email]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
 [rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
 [intro module]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
 [intro handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_handouts.pdf?job=build
