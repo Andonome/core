@@ -375,14 +375,16 @@ A good witch leaves no part of her prey unused.
   This spell relies on soft ground to make the target slip.
   Harder floors will not melt, and the spell will settle on the nearest soft earth it can find.}
 
-\spell{Turning the Tide}% Name
-  {divergent, duplicated}% Enhancements
-  {Wane}% Action
+\spell{Finding Courage}% Name
+  {divergent}% Enhancements
+  {Wax}% Action
   {Earth, Fate}% Spheres
-  {\roll{Dexterity}{Wyldcrafting}}% Resist with
-  {As the caster describes the targets' graves, they lose \arabic{spellPlusTwo}~\glspl{fp}, while the ground beneath them loosens subtly, causing them to fall prone}% Description
+  {malleability of the earth}% Resist with
+  {Reaching into some soft ground, such as snow or mud, the caster begs for a chance to fight, and the ground forms into a weapon.
+  The caster then gains \arabic{spellPlusTwo}~\glspl{fp}.
+  The shatters if it deals over \arabic{spellPlusTwo} Damage}% Description
   {
-  The two spells are one, so if the target resists, they do not fall prone, or lose any~\glspl{fp}.}
+  The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellCost}}
 
 \end{multicols}
 
@@ -519,6 +521,26 @@ A good witch leaves no part of her prey unused.
 
 \needspace{18em}
 \subsection{Divergent}
+
+\spell{Asking Rock}% Name
+  {detailed, divergent}% Enhancements
+  {Warp}% Action
+  {Earth, Fate}% Spheres
+  {civilization rating}% Resist with
+  {The sells a weapon to a rock in return for summoning a beast, and the rock becomes magnetic.
+  It has an effective Strength of \arabic{spellPlusTwo} to hold any iron weapon placed next to it.
+
+  Once the rock has a weapon, the \gls{gm} makes an encounter roll}% Description
+  {
+    The \gls{tn} depends on how close to civilization the spell is cast.
+    Attracting monsters to \pgls{village} makes more of a challenge than attracting them while past the \gls{edge}.%
+    \exRef{judgement}{Judgement}{civilizationRating}
+    If the encounter roll produces nothing, the \gls{gm} goes up the chart until they find an encounter.
+
+    \Glspl{npc} targeted by this spell will survive if only their \gls{cr} value is greater than the monster which finds them.
+    Otherwise, they end in the jaws of a beast.
+  }
+
 
 \showSpells{FireWater3}
 
