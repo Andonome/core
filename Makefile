@@ -13,7 +13,7 @@ qr.tex: README.md config/vars | .switch-gls
 .switch-gls:
 	@touch .switch-gls
 
-$(BOOK).pdf: $(wildcard *.tex) $(wildcard config/*.sty) | qr.tex
+$(BOOK).pdf: $(DEPS) | qr.tex
 	@$(COMPILER) main.tex
 
 clean:
