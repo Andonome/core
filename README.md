@@ -40,13 +40,18 @@ For full instructions on compiling, see the [wiki](https://gitlab.com/bindrpg/co
 All rules are geared towards fast resolutions and player choices.
 
 - One roll resolves almost everything.
-    * You roll for dangerous actions, so when characters fail, the danger occurs.
-    * If the first character couldn't 'lift the gate', the second has to take the same dice result and add their own Bonuses.  Luck won't help the weak.
+    * Roll `2D6 + Attribute + Skill + Bonus`.
+        - Bonuses come from weapons, items, or the situation.
+    * Players try to roll above the TN ('Tie Number') to achieve something, while avoiding some danger.
+        - If they roll above the TN, they succeed.
+        - If you roll below the TN, the danger occurs.
+        - If you roll equal to the TN, they succeed *but* the danger also occurs.
+    * Dice are never re-rolled.
+        - If a different character tries the action, they must use the same dice roll.  So if the first character rolled a '5', the second will also have rolled a '5' (but a higher Bonus means they may still succeed).
 - Combat works similarly.
-    * Attack and defence are the same roll.
-    * If you miss, the enemy damages you.
-    * No initiative rolls - just go!
-    * Whoever has the most Action Points can interrupt and demand to go first.
+    * In combat, attack and defence are the same roll.
+        - If you miss, the enemy damages you.
+        - Players spend Action Points to determine who goes first, and decide where their character is focussed.
 - Spellcasters spend Mana Points.
 - GMs don't roll often, so they can focus on interpretation and reaction.
 
