@@ -32,7 +32,7 @@ For full instructions on compiling, see the [wiki](https://gitlab.com/bindrpg/co
 ## Related Books
 
 - For a short introduction module, grab a copy of [Escape from the Horde][intro module], and the pre-gen [character handouts][intro handouts].
-- For personalized character creation, snatch the [players' guide][stories].
+- For character creation, print the [players' guide][stories].
 - To craft your own section of a monster-ridden world, open the [Book of Judgement][judgement].
 
 # Rules
@@ -48,7 +48,7 @@ All rules are geared towards fast resolutions and player choices.
     * No initiative rolls - just go!
     * Whoever has the most Action Points can interrupt and demand to go first.
 - Spellcasters spend Mana Points.
-- GMs don't roll much, so they can focus on interpretation and reaction.
+- GMs don't roll often, so they can focus on interpretation and reaction.
 
 # Get Involved
 
