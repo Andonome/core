@@ -31,7 +31,7 @@ For full instructions on compiling, see the [wiki](https://gitlab.com/bindrpg/co
 
 ## Related Books
 
-- For a short introduction module, grab a copy of [Escape from the Horde][intro module], and the pre-gen [character handouts][intro handouts].
+- For a short introduction module, grab a copy of [Escape from the Horde][intro module].  It comes with a running commentary of the rules, and pre-made character sheets, ready to be torn from the back.
 - For character creation, print the [players' guide][stories].
 - To craft your own section of a monster-ridden world, open the [Book of Judgement][judgement].
 
@@ -72,12 +72,10 @@ If you want to get involved, there are a number of ways to contribute:
 [resources]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/resources.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
-[cs]: https://gitlab.com/bindrpg/core/-/blob/ods/calc_cs/bind_cs.ods
 [board]: https://gitlab.com/bindrpg/core/issues
 [issues email]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
 [rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
 [intro module]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
-[intro handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_handouts.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
 [fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
 [judgement]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/judgement.pdf?job=build
