@@ -300,6 +300,7 @@ If the roll is an 8, the actual journey would be 18 miles.
 
 \makeRule{navigate_ocean}{Navigation open oceans}{Intelligence}{Seafaring}{12}
 \index{Sailing!Navigation}
+\vfill\null
 
 \makeRule{run_in_dark}{Running in the Dark}{Wits}{Caving}{12}
 \index{Spelunking!Running in the dark}%
@@ -350,7 +351,7 @@ A tie means they can see the danger coming, and choose to rest instead of taking
 
 \makeRule{calm_animal}{Calm an animal}{Intelligence}{Wyldcrafting}{set by animal's \roll{Wits}{Brawl}}
 
-\paragraph{Intimidating someone into backing off} -- \roll{Strength}{Deceit} vs the target's \roll{Strength}{Empathy}.
+\makeRule{intimidation}{Intimidating someone into backing off}{Intelligence}{Deceit}{9 plus the enemy's \roll{Strength}{Deceit}}
 \index{Intimidation}
 
 \makeRule{scout}{Scouting for an enemy camp}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
@@ -369,7 +370,7 @@ Noticing patterns in the rules can help you to remember them.
 Make the following principles a habit, and you'll find your role becomes a lot easier.
 And speaking of rolls, let's start with dice stats, and why `7' is the magic number.
 
-\vspace{10pt}
+\vspace{1\baselineskip}
 \noindent
 \begin{scriptsize}%
 \begin{boxtable}[clXX]
@@ -394,7 +395,7 @@ And speaking of rolls, let's start with dice stats, and why `7' is the magic num
 \paragraph{Always round up} -- whether someone is helping another character with half their Bonus, or combat calls for half Damage, or just any time someone divides a number, they round up at 0.5.
 One quarter of a +1 bonus is still 0, but half of a +3 bonus is always +2.
 
-Every rule in the book keeps to this pattern, so you will never have to wonder about which rules round up, and which down.
+Every rule in BIND holds to this pattern, so you will never have to wonder about which results should round up, and which down.
 You always round up.
 
 \paragraph{Dangerous actions are not Resting actions}
@@ -432,6 +433,16 @@ If you interpret the dice rolls as just how well a character has performed that 
 But if the first player to roll understands that the town \gls{warden}'s raging toothache has put him in a foul mood, the rest should understand that the result (or at least the roll) will remain no matter who tries to speak with him.
 This leaves room for some other \gls{pc}, with better stats, to succeed in the endeavour (by using the same roll), but does not encourage a ring of players rolling dice like a bunch of bored gamblers.
 
+\end{multicols}
+
+\Needspace{12\baselineskip}
+\begin{boxtable}[Lccccccccccc]
+  \roll{Speed}{Athletics}, \tn[9] & Fail & Fail & Fail & Fail & Draw & Win & Win & Win & Win & Win & Win \\
+  & \rollDice{2} & \rollDice{3} & \rollDice{4} & \rollDice{5} & \rollDice{6} & \rollDice{7} & \rollDice{8} & \rollDice{9} & \rollDice{10} & \rollDice{11} & \rollDice{12} \\
+  \roll{Dexterity}{Projectiles}, \tn[10] & Fail & Fail & Fail & Fail & Fail & Fail & Draw & Win & Win & Win & Win \\
+\end{boxtable}
+
+\begin{multicols}{2}
 \subsubsection{Everything is a Mirror}
 
 \begin{exampletext}
@@ -456,12 +467,6 @@ This might look different at a glance, but of course the archer wins on the top 
 Mechanically, the same roll has occurred in each instance.
 
 \end{multicols}
-
-\begin{boxtable}[Lccccccccccc]
-  \roll{Speed}{Athletics}, \tn[9] & Fail & Fail & Fail & Fail & Draw & Win & Win & Win & Win & Win & Win \\
-  & \rollDice{2} & \rollDice{3} & \rollDice{4} & \rollDice{5} & \rollDice{6} & \rollDice{7} & \rollDice{8} & \rollDice{9} & \rollDice{10} & \rollDice{11} & \rollDice{12} \\
-  \roll{Dexterity}{Projectiles}, \tn[10] & Fail & Fail & Fail & Fail & Fail & Fail & Draw & Win & Win & Win & Win \\
-\end{boxtable}
 
 \section{Rolling for the Role}
 \label{rollForRoles}
@@ -490,16 +495,16 @@ Asking for `roleplaying' in order to make an encounter go smoothly tells players
   Rolling a total of `1' won't get you into the keep.
   What exactly does Corbelch say to the guards?
 \end{quotation}
-
 This method of players rolling before roleplaying to indicate their roll gives value to the social characters' Traits and legitimacy to the antics of more socially clumsy players saying all the wrong things.
 The roll of the dice also acts as a way of saying `I am about to speak', so people can pace conversation without interruption.
 
 \end{multicols}
 
+\Needspace{18\baselineskip}
 \section*{The Right to Improve}
 
 \begin{multicols}{2}
-\noindent
+
 This book has problems, and that's fine.
 I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and make improvements.
 This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
