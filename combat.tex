@@ -698,19 +698,29 @@ As per the previous chart, a near-failure can be worse than a total failure.
 
 \begin{multicols}{2}
 
-\makeAutoRule{falling}{Falling Damage}{characters suffers 1 Damage per \glsfmttext{step} in height, plus their own Strength}
+\makeAutoRule{falling}{Falling Damage}{falling Damage equals half the \glsfmtplural{step} fallen, plus the characters Strength.}
 \index{Falling}
-Falling Damage is +1 per \gls{step}, plus the characters Strength.
-Every +4 Damage converts to $1D6$ as usual.
+Falling Damage equals half the \glspl{step} fallen, plus the characters Strength.
+The Damage then converts to a dice roll instead.
 
-Characters who fall off a building suffer $1D6-2$ + Strength.
+If the \glspl{pc} all fall off a building, 3~\glspl{step} high, they would start with 2~Damage.
+Smaller creatures have less body to fall, so a gnome, with Strength~-2 would take no Damage from this fall; while a dwarf with Strength~+0 would take 2 Damage (which converts to \dmg{2}).
+Larger creatures feel their own weight crushing down on them, so a gnoll with Strength~+4 would suffer 6~Damage (which converts to \dmg{6}).
 
-Smaller creatures suffer less from falling, so a gnome with Strength -2 can easily fall 2~\glspl{step} without pain, while a human who lands wrong can break an arm by falling badly from a horse.
+Characters who fell in a downward-arc can attempt to break their fall with a roll (in both senses), and avoid all Damage, with \roll{Speed}{Athletics}.
+The \gls{tn} is 7 plus the height of the fall.
+However, when falling straight downwards, the \gls{tn} is 7 plus \textit{double} the height in \glspl{step}.
 
-Characters falling straight downward can attempt to mitigate up to 4 Damage by rolling \roll{Dexterity}{Athletics} (\tn[5] +1 per Damage).
-Those falling forward and down in an arc can mitigate up to 6.
-
-The maximum Damage someone can suffer from a fall is 18, equating to $4D6+2$ + Strength.
+\begin{boxtable}[cYXX]
+  \textbf{Strength} & \textbf{Height} & \textbf{Damage} & \textbf{TN} \\
+  \hline
+  \calcFallingDamage{-2}{6}
+  \calcFallingDamage{0}{3}
+  \calcFallingDamage{0}{6}
+  \calcFallingDamage{3}{1}
+  \calcFallingDamage{3}{3}
+  \calcFallingDamage{3}{6}
+\end{boxtable}
 
 \subsection{Animals}
 

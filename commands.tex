@@ -344,3 +344,18 @@
     \end{boxtable}
   }%
 }
+
+
+\newcommand\calcFallingDamage[2]{%
+  \setcounter{Strength}{#1}%
+  \setcounter{enc}{#2}%
+  \setcounter{damage}{\value{enc}}%
+  \roundUp{damage}
+  \addtocounter{damage}{\value{Strength}}%
+  \setcounter{tn}{\value{damage}}%
+  \addtocounter{tn}{7}%
+  \setcounter{track}{\value{tn}}%
+  \addtocounter{track}{\value{enc}}%
+  \arabic{Strength} & \arabic{enc}~\ifnum\value{enc}>1\glspl{step}\else\gls{step}\fi & \dmg{damage} & \arabic{tn} / \arabic{track} \\
+}
+
