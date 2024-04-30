@@ -13,7 +13,7 @@
 \makeRule{break_door}{Breaking in a door}{Strength}{Crafts}{10}
 A tie could indicate that the door has a massive hole in the middle, allowing a sufficiently small person to squeeze through; or it might indicate that the door caves in after multiple, noisy strikes.
 
-\subsection{Downtime Activities}
+\subsection{\Glsfmttext{downtime} Activities}
 
 \makeRule{poison}{Brewing a poison}{Intelligence}{Medicine}{4}
 \index{Poisons}
@@ -62,6 +62,20 @@ This won't let the character perform the song -- just compose, and possibly expl
 \makeRule{tame_horse}{Taming a Horse}{Intelligence}{Wyldcrafting}{depends on Horse's \roll{Wits}{Brawl}}
 Wild horses still run wild in \gls{fenestra}, but catching one without injuring it is difficult, and getting it comfortable with people takes upwards of months.
 But if you have more time than money, then it's time well spent.
+
+\iftoggle{stories}{
+  \makeRule{make_spell}{Composing a Spell}{Intelligence}{Sphere}{10 plus Level}
+  \index{Spells!Creation}
+  Crafting new spells requires one week per level of the spell.
+  Players can look over the process in the \textit{Book of Stories}, \autopageref{spellWeaving}.
+  If the roll fails, then the \gls{gm} will swap one Action or Descriptor for another, and then work through the results, however horrifying.
+  The caster cannot use this botched spell -- it only works for that one occasion, by accident.
+  On a tie, the research fails to no effect, or the player can choose to have the spell fail and have their character learn the spell.
+  The player should not know how the spell will fail beforehand -- the \gls{gm} decides in secret.
+
+  If a spell fails, then the next session should probably open with the aftermath of that failure, and a run-through of all that it entails.
+}{}
+
 
 \subsection{News \& Information}
 
