@@ -233,6 +233,7 @@ This includes murder, crafting poisons, selling illegal items, et c.
 
 Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
 
+\columnbreak
 \subsection{Travel}
 
 \makeRule{area_knowledge}{Area knowledge}{Intelligence}{Academics}{set by area}
@@ -275,18 +276,26 @@ Nobody survives long underground unless they can tell if the ceiling might colla
 
 \makeRule{mend_sail}{Mending a sail}{Dexterity}{Seafaring}{10}
 
-\makeAutoRule{march}{Marching}{gain 1~\glsfmtlongpl{ep} each mile of rough terrain, and 1~\glsfmtlongpl{ep} for every 2~miles of road, each \glsfmttext{interval}}
+\makeAutoRule{march}{Marching}{Move 5 miles per~\glsfmttext{interval}, +1 per \glsentrytext{ep}}
 \index{Walking}
 \index{Marching}
 \index{Travel}
-Marching characters gain 1~\glspl{ep} each mile of rough terrain, and 1~\glsfmtlongpl{ep} for every 2~miles of road, each \gls{interval}.
-If \pgls{pc} has 5 \glspl{hp}, they can march for 3 miles in the morning, then rest and recuperate 3 \glspl{ep} over midday, then do the same over evening and night.
+Marching depends on the terrain.
+Good roads provide a smooth journey, rough roads provide less, and deep forests can demand attention and problem-solving twice a mile.
 
-Of course, if the rest of the troupe have more stamina, they might have to march further to keep up.
-A smaller person, marching 8 miles in the morning would gain 4 \glspl{ep}, then heal only 3 over the next rest.
-Each day they would accumulate 2 more \glspl{ep} in total.
+\sidebox{
+  \marchingChart
+}
 
-Travelling by road means the troupe can usually sleep in \pgls{village}, \pgls{broch} or at least \pgls{bothy}, so it affords more opportunity for rest.
+Each \gls{interval}, the troupe can travel the initial distance easily.
+Every mile after that adds \pgls{ep}.
+
+By default, characters might travel 10~miles per day, i.e. 5~miles in the morning, then 5~in the afternoon.
+Once the Sun sets in the evening, most will rest in \pgls{bothy}, and take time to cook, and potentially meet another travelling group moving in the opposite direction.
+
+An expedient troupe might add 2~miles each \gls{interval}, and eat nothing but dry rations, so they can march instead of cooking in the evening.
+With 3~\glspl{interval} of movement, the troupe could travel 21~miles in total.
+The night would allow them to remove \pgls{ep}, but the day would add 6 more, so they won't be moving like that for long.
 
 \makeAutoRule{cold}{Cold Seasons}{gain 2~\glsfmtlongpl{ep} each \glsfmttext{interval} and need fire to rest}
 \index{Winter}
@@ -517,11 +526,13 @@ The roll of the dice also acts as a way of saying `I am about to speak', so peop
 
 \end{multicols}
 
-\Needspace{18\baselineskip}
+\pagebreak
+
 \section*{The Right to Improve}
 
 \begin{multicols}{2}
 
+\noindent
 This book has problems, and that's fine.
 I've put this under a share-alike licence,\footnote{\tt GNU General Public License 3 or (at your option) any later version.} so anyone can grab a copy of the basic \LaTeX~ document it's written in and make improvements.
 This isn't the Open Gaming Licence of D20 where they magnanimously allow you to use their word for a mechanic and let you publish things for their products -- this is a publicly owned book.
