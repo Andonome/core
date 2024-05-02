@@ -92,6 +92,9 @@ Despite gradual gradients, or sharp ups and downs, a good caver knows exactly ho
 
 Rolling a tie might indicate knowing that one has descended or ascended, but with no idea how much.
 
+\makeRule{detect_sloping}{Detect sloping passages}{Wits}{Caving}{10}
+Understanding what altitude one has reached immediately indicates whether there might be running water, what type of rocks and minerals compose the surroundings (and therefore the chance of a cave-in), and how far one has to go to the surface.
+
 \makeRule{detect_cavein}{Detecting tunnel weaknesses}{Intelligence}{Caving}{9}
 Nobody survives long underground unless they can tell if the ceiling might collapse from heavy footfall.
 \index{Spelunking!Note weak tunnel}
@@ -148,7 +151,62 @@ A tie means they can see the danger coming, and choose to rest instead of taking
 
 \subsection{Journeys Past the \Glsfmttext{edge}}
 
+\makeRule{build_shelter}{Building a shelter}{Intelligence}{Wyldcrafting}{11}
+Each point on the Margin allows an additional person to sleep inside the shelter.
+A tie indicates that the shelter holds for \pgls{interval}, then collapses.
 
+\makeRule{climbing}{Climbing}{Speed}{Athletics}{varies greatly}
+
+Rolling a tie indicates that the climber knows they cannot make the climb, or at least fails on the first few holds.
+Failure with a Margin of 1 gives the worst possible result -- the climber fails while near the top, while a larger failure Margin means they travelled less far before falling.
+
+\makeRule{ford_river}{Fording a rapid river}{Strength}{Seafaring}{9}
+Success gets you to the other side, and failure gets you washed downstream.
+A tie gets you a bit of both.
+
+\makeRule{gather_food}{Gathering Food}{Wits}{Wyldcrafting}{set by area}
+Taking \pgls{interval} to forage 
+Groups can forage while on the road, but taking \pgls{restingaction} requires devoting \pgls{interval} to focussing on foraging.
+Of course, these fast excursions from the path, to check out anything that happens to catch their eye, can lead to quick decisions, or even to encounters with wandering beasts.
+\index{Gathering Food}
+
+\gatheringChart
+
+\makeRule{navigate_land}{Navigating Land}{Intelligence}{Wyldcrafting}{by terrain type, Failure Margin adds 2 miles}
+\index{Navigation}
+\index{Marching}
+\index{Travel!Navigation}
+
+\begin{itemize}
+  \item
+    Mountains are \tn[8].
+  \item
+    Forests are \tn[11].
+  \item
+    Marshes are \tn[12].
+\end{itemize}
+
+\noindent
+Each failure margin adds 2 miles to the journey time, so when trying to find a particular house somewhere in a forest, 10 miles away, the \gls{tn} would be 12.
+If the roll is an 8, the actual journey would be 18 miles.
+
+\makeRule{scout}{Scouting for an Enemy Camp}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
+A tie indicates someone spotted you before you got away.
+Failure indicates not getting away.
+
+\makeRule{start_fire}{Starting a Fire}{Intelligence}{Wyldcrafting}{10}
+A little tinder-box will grant a +2 Bonus, and heavier boxes will allow reuse.
+During the cold seasons, fire is a necessity to remove \glspl{ep} (mentioned \vpageref[above]{cold}).
+
+\makeRule{tracking}{Tracking}{Wits}{Wyldcrafting}{12}\index{Tracking}
+Excessive snow or rain means the \gls{tn} decreases by 2 due to mud or snow remembering every step.
+However, it also increases the \gls{tn} by 2 each \gls{interval}.
+
+Both the hunter and the hunted determine their rate of travel.
+The hunter continues making rolls until they catch their quarry or lose them.
+
+\makeRule{whittling}{Whittling Wood}{Dexterity}{Crafts}{10}
+Characters can fashion anything with a cost of less than 10~\gls{cp} in less than a day, with only basic woodworking tools.
 
 \subsection{News \& Information}
 
@@ -176,15 +234,6 @@ Opening such a letter and resealing it properly requires an \roll{Intelligence}{
 
 \makeRule{verify_rumours}{Verifying rumours}{Intelligence}{Empathy}{13}
 This usually takes a long time, and is best suited to \gls{downtime}.
-
-\subsection{Survival}
-
-\makeRule{build_shelter}{Building a shelter}{Intelligence}{Wyldcrafting}{11}
-Each point on the Margin allows an additional person to sleep inside the shelter.
-A tie indicates that the shelter holds for \pgls{interval}, then collapses.
-
-\makeRule{whittling}{Whittling Wood}{Dexterity}{Crafts}{10}
-Characters can fashion anything with a cost of less than 10~\gls{cp} in less than a day, with only basic woodworking tools.
 
 \subsection{Town Activities}
 
@@ -283,36 +332,14 @@ This includes murder, crafting poisons, selling illegal items, et c.
 
 Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
 
-\subsection{Travel}
+\subsection{Journeys by Road \& \Glsfmttext{village}}
 
 \makeRule{area_knowledge}{Area knowledge}{Intelligence}{Academics}{set by area}
 Cities are \tn[7], Towns are 9, and \glspl{village} are 13.
 A successful roll indicates a working knowledge of the place.
 
-\makeRule{ford_river}{Fording a rapid river}{Strength}{Seafaring}{9}
-Success gets you to the other side, and failure gets you washed downstream.
-A tie gets you a bit of both.
-
-\makeRule{gather_food}{Gathering Food}{Wits}{Wyldcrafting}{set by area}
-Taking \pgls{interval} to forage 
-Groups can forage while on the road, but taking \pgls{restingaction} requires devoting \pgls{interval} to focussing on foraging.
-Of course, these fast excursions from the path, to check out anything that happens to catch their eye, can lead to quick decisions, or even to encounters with wandering beasts.
-\index{Gathering Food}
-
-\gatheringChart
-
-\makeRule{keep_watch}{Keeping watch over night}{Strength}{Vigilance}{7.  3 \glsfmtlongpl{ep} between watchers}
-Success inflicts 3~\glspl{ep} on those staying up at night.
-They may divide these \glspl{ep} in any way, so one person could keep watch all night and gain all 3, or the first watcher might gain 2~\glspl{ep}, and the second only 1.%
-\footnote{\Glspl{gm} NB: you should take out three coins, each representing \pgls{ep}, and have the players take them.}
-
-\makeRule{climbing}{Climbing}{Speed}{Athletics}{varies greatly}
-
-Rolling a tie indicates that the climber knows they cannot make the climb, or at least fails on the first few holds.
-Failure with a Margin of 1 gives the worst possible result -- the climber fails while near the top, while a larger failure Margin means they travelled less far before falling.
-
-\makeRule{detect_sloping}{Detect sloping passages}{Wits}{Caving}{10}
-Understanding what altitude one has reached immediately indicates whether there might be running water, what type of rocks and minerals compose the surroundings (and therefore the chance of a cave-in), and how far one has to go to the surface.
+\makeRule{intimidation}{Intimidating someone into backing off}{Intelligence}{Deceit}{9 plus the enemy's \roll{Strength}{Deceit}}
+\index{Intimidation}
 
 \makeRule{mend_sail}{Mending a sail}{Dexterity}{Seafaring}{10}
 
@@ -347,34 +374,12 @@ Despite their slow gait, they can out-pace almost anything in the long-term.%
 \index{Snow}
 During the colder seasons of \gls{Alassea} and \gls{Minquesta}, the frigid air inflicts 4~\glspl{ep} each \gls{interval}, or 2~\glspl{ep} for characters wearing warm clothing.
 
-Characters can only rest with a fire, which may attract monsters (usually a 1 in 6 chance).
-
-\makeRule{navigate_land}{Navigating on land}{Intelligence}{Wyldcrafting}{by terrain type, Failure Margin adds 2 miles}
-\index{Navigation}
-\index{Marching}
-\index{Travel!Navigation}
-
-\begin{itemize}
-  \item
-    Mountains are \tn[8].
-  \item
-    Forests are \tn[11].
-  \item
-    Marshes are \tn[12].
-\end{itemize}
-
-\noindent
-Each failure margin adds 2 miles to the journey time, so when trying to find a particular house somewhere in a forest, 10 miles away, the \gls{tn} would be 12.
-If the roll is an 8, the actual journey would be 18 miles.
+Characters can only rest with a fire, which may attract monsters (usually a 1 in 6 chance per \gls{interval}).
 
 \makeRule{navigate_ocean}{Navigation open oceans}{Intelligence}{Seafaring}{12}
 Each Failure Margin puts the boat off course by 10 miles.
 A tie indicates that the navigator knows to remain for a day, and make further observations, rather than push towards an uncertain direction.
 \index{Sailing!Navigation}
-
-\makeRule{start_fire}{Starting a Fire}{Intelligence}{Wyldcrafting}{10}
-A little tinder-box will grant a +2 Bonus, and heavier boxes will allow reuse.
-During the cold seasons, fire is a necessity to remove \glspl{ep} (mentioned \vpageref[above]{cold}).
 
 \makeRule{swimming}{Swimming}{Speed}{Seafaring}{set by water speed}
 
@@ -383,24 +388,6 @@ The \gls{tn} depends on the water's speed -- large rivers might have a \gls{tn} 
 
 Characters can swim 1~\gls{step} per \gls{ap} spent.
 If they do nothing but swimming, they can add their Athletics Skill to the total at the end of the round.
-
-\makeRule{tracking}{Tracking}{Wits}{Wyldcrafting}{12}\index{Tracking}
-Excessive snow or rain means the \gls{tn} decreases by 2 due to mud or snow remembering every step.
-However, it also increases the \gls{tn} by 2 each \gls{interval}.
-
-Both the hunter and the hunted determine their rate of travel.
-The hunter continues making roll until they catch their quarry or lose them.
-
-\subsection{War \& Battery}
-
-\makeRule{calm_animal}{Calm an animal}{Intelligence}{Wyldcrafting}{set by animal's \roll{Wits}{Brawl}}
-
-\makeRule{intimidation}{Intimidating someone into backing off}{Intelligence}{Deceit}{9 plus the enemy's \roll{Strength}{Deceit}}
-\index{Intimidation}
-
-\makeRule{scout}{Scouting for an enemy camp}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
-A tie indicates someone spotted you before you got away.
-Failure indicates not getting away.
 
 \end{multicols}
 
