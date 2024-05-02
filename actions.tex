@@ -249,37 +249,70 @@ Characters cannot roll dice for a different result unless the situation has chan
 
 \end{multicols}
 
-\section{Weight \& Encumbrance}
-\index{Weight}
-\index{Encumbrance}
+\section{\Glsfmttext{weight}}
 \label{weight}
+\index{Encumbrance}
 
 \begin{multicols}{2}
 
-\noindent
-We measure weight in broad terms, just in case characters need to lift a wounded companion (or corpse), or try to put thirty shortswords in the backpack.
-Players should take care to note how much their character carries any time they pick up another item.
+\noindent%
+Everything in the game has \pgls{weight}, and when characters carry more than they should, ever point in excess inflicts a Penalty to all actions.
 
-\input{config/rules/weight.tex}
+\subsubsection{On the Back}
+Characters can hold a total \gls{weight} equal to their current \glspl{hp} without Penalty.
+After that, every spare shortsword, quiver, and cheese-wheel increases the Penalty by its own \gls{weight}.
 
-The increased weight from carrying an object in one hand generally makes dual-wielding axes about as practical as sprinting with a human sitting on your shoulders.
-
-\subsubsection{Encumbrance}
-\index{Encumbrance}
-
-Encumbrance can become normal, if character want to maintain a good store of rations,%
-\footnote{A day's rations has a \gls{weight} of 1.}
-and character may simply decide to put up with the penalties.
-The only real danger lies in unexpected combat.
-In these situations, characters can spend \pgls{ap} to remove their backpack with a \roll{Dexterity}{Wyldcrafting} check.
-The basic \gls{tn} is 10, but it depends on the backpack.
 \index{Backpacks}
+\begin{exampletext}
+  Skidvein has an impressive +3 Strength Bonus, and the Knack `Unstoppable', giving him 11~\glspl{hp} in total.
+  He decided to wear complete leather armour (2), take a longsword (3), then stuff his backpack with three days' worth of food (3), and a small tent (1).
+
+  His companions decided he could add their larger tent (3), medical supplies (1), and bagpipes (2).
+  The \gls{weight} of 15 puts him well over his 11~\glspl{hp}, so the penalty is -4.
+
+  However, if a fight breaks out, he could just remove the backpack by spending \pgls{ap}, and rolling \roll{Dexterity}{Wyldcrafting} (\tn[10]).
+\end{exampletext}
+
+All creatures have \pgls{weight} equal to their total \glspl{hp},%
+\footnote{If \glspl{pc} try to use goblins as a throwing weapon, remember that improvised weapons receive penalties (\autopageref{impromptuRanged}) because goblins are actually not made for throwing.}
+so if a gnomish companion receives a serious injury, the troupe may be able to lift them up once the danger has passed, and march them back to civilization from beyond the \gls{edge}.
+If a large human receives a serious injury, their companions may have a serious question on their hands.
+
+\subsubsection{In the Arms}
+Characters can carry a total \gls{weight} equal to half their \glspl{hp} in their arms.
+Someone with 8~\glspl{hp} who picks up a bronze statue, with \gls{weight}~12 would receive a -8~Penalty to all actions.
+Mounting it on their back reduces the Penalty to~-4.
+
+\subsubsection{To Hand}
+Using only one hand puts the limit to a quarter of their \glspl{hp}.
+If \pgls{pc} with 6~\glspl{hp} lifts a poleaxe with \gls{weight}~4, they would receive a -2 Penalty to attack.
+If the character actually hits, the Damage works as usual, so sometimes people find that picking up a weapon twice their height feels like the best option they have.
+
+\subsubsection{Bloodloss}
+
+Losing \glspl{hp} can mean \Gls{weight} Penalties.
+Carrying items with a total \gls{weight} of 5 seems fine until a shortsword to the gut leave the character with 2~\glspl{hp}.
 
 \pic{Roch_Hercka/dwarf_encumbrance}
 
+\subsection{\Glsfmtlongpl{ep}}
+\label{ep}
+
+\Glsentryfullpl{ep} are \pgls{weight} you cannot drop.
+They build up slowly, threatening quietly, then suddenly present an unfair choice --- should the \gls{pc} drop the last of their food (risking more \glspl{ep} later), stay and rest (in a forest of curious monsters) or endure (and listen to their croaking lungs degrade)?
+
+\Glsentrylongpl{fp} cannot mitigate \glspl{ep}.
+Characters with enough luck to avoid arrows and dragon-fire can still collapse after a long~run.
+
+\subsubsection{Special Categories}
+
+Characters can remove \glspl{ep} which result from tiredness with a little rest (covered \vpageref{healing}), but \glspl{ep} gained from starvation and sleep deprivation will continue stacking up on the character sheet until the character eats and sleeps.
+
+Some of \gls{fenestra}'s rare and wicked diseases accrue \glspl{ep} until healed with \pgls{ingredient} from the correct Sphere.
+
 \end{multicols}
 
-\pagebreak
+\pagebreak[0]
 \section{Time \& Space}
 
 \begin{multicols}{2}
