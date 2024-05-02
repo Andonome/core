@@ -369,13 +369,24 @@ A step might be ten metres wide as each one covers an entire house when the batt
 The precise distances represented do not matter, just so long as they consistently balance one character's ability to run away with another's ability to hit someone with a projectile.
 To track longer distances, without resorting to unnatural language like `250 metres', a couple of systems use broad relational terms:
 
+\setcounter{spellCost}{2}
 \begin{itemize}
   \item
-  `throwing distance'
+  \toggletrue{distant}
+  \setRange\stepcounter{spellCost}
+  `\spellRange'
   \item
-  `yelling distance'
+  \setRange\stepcounter{spellCost}
+  `\spellRange'
   \item
-  `on the horizon'
+  \setRange\stepcounter{spellCost}
+  `\spellRange'
+  \item
+  \setRange\stepcounter{spellCost}
+  `\spellRange'
+  \item
+  \setRange\stepcounter{spellCost}
+  `\spellRange'
 \end{itemize}
 
 \subsubsection{Areas}

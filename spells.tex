@@ -188,9 +188,8 @@ A good witch leaves no part of her prey unused.
   {Witness}% Action
   {Water}% Spheres
   {water purity}% Resist with
-  {The caster detects liquid within \spellRange, but nothing within a few steps of the caster.
-    They know only the closest source within the range, but have no idea what kind of liquid the spell has revealled}% Description
-  {It might reveal a river, a tankard of ale, or any other body apparent of liquid.}
+  {The caster detects liquid at \spellRange}% Description
+  {They cannot tell the type of liquid -- it could be a raging river, or a tankard of ale}
 
 \subsection{Death}
 
@@ -202,17 +201,15 @@ A good witch leaves no part of her prey unused.
   {Witness}% Action
   {Fate, Air}% Spheres
   {time since death}% Resist with
-  {Sniffing at the wind, the caster identifies any corpses within \spellRange}% Description
-  {
-    Casters typically use this trick to double-check if an immobile and wounded person might still have a chance of life.
-  }
+  {Sniffing at the wind, the caster identifies any corpses at \spellRange}% Description
+  {Most use this trick to double-check if an immobile and wounded person might still have a chance of life.}
 
 \spell{Infectious Migraine}% Name
   {duplicated}% Enhancements
   {Wax}% Action
   {Fate, Air}% Spheres
   {\roll{Strength}{Athletics}}% Resist with
-  {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellCost} \glspl{ep}}% Description
+  {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellPlusOne} \glspl{ep}}% Description
   {}
 
 \spell{Preservation}% Name
@@ -243,7 +240,7 @@ A good witch leaves no part of her prey unused.
   {Wane}% Action
   {Earth, Fire}% Spheres
   {carried items' total \gls{weight}}% Resist with
-  {The caster shouts `let's go', and two targets gain a plus \arabic{spellCost} bonus to running}% Description
+  {The caster shouts `let's go', and two targets gain a plus \arabic{spellPlusOne} bonus to running}% Description
   {They feel suddenly lighter, as if being carried.
   However, this spell does not help with carrying heavy items.}
 
@@ -253,7 +250,7 @@ A good witch leaves no part of her prey unused.
   {Earth, Fire}% Spheres
   {\roll{Speed}{Athletics}}% Resist with
   {The caster wishes the target a bad journey, and they immediately feel heavier.
-  For the next \arabic{spellCost}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
+  For the next \arabic{spellPlusOne}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
   {
   The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
 
@@ -266,8 +263,8 @@ A good witch leaves no part of her prey unused.
   {Witness}% Action
   {Earth, Water}% Spheres
   {target's strangeness}% Resist with
-  {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits around \spellRange\ away}% Description
-  {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challange.}
+  {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits at \spellRange\ in a particular direction}% Description
+  {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challenge.}
 
 \widePic[t]{Roch_Hercka/flashing_light}
 
@@ -395,7 +392,7 @@ A good witch leaves no part of her prey unused.
   The caster then gains \arabic{spellPlusTwo}~\glspl{fp}.
   The shatters if it deals over \arabic{spellPlusTwo} Damage}% Description
   {
-  The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellCost}}
+  The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellPlusTwo}}
 
 \end{multicols}
 
@@ -437,8 +434,8 @@ A good witch leaves no part of her prey unused.
   {Wax}% Action
   {Fate}% Spheres
   {targets' Charisma (inverted)}% Resist with
-  {The caster gives good wishes, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}}% Description
-  {The \glspl{fp} remain until used.}
+  {The caster gives good wishes to a troupe, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}}% Description
+  {The spell targets those with the highest Charisma before others.}
 
 \showSpells{Fate3}
 
@@ -451,7 +448,7 @@ A good witch leaves no part of her prey unused.
   {Warp}% Action
   {Water}% Spheres
   {size of fire}% Resist with
-  {After instructing all the fire around on proper etiquette, \arabic{spellTargets} \glspl{step} fires around \spellRange\ turns blue, and stops burning flesh.
+  {After instructing all the fire around on proper etiquette, \arabic{spellTargets} \glspl{step} fires at \spellRange\ turns blue, and stops burning flesh.
   It continues to act upon wood, hair, and clothing as normal}% Description
   {}
 
@@ -468,11 +465,10 @@ A good witch leaves no part of her prey unused.
   {Witness}% Action
   {Fate, Air}% Spheres
   {time since death}% Resist with
-  {Detect the corpse of a named species within \spellRange}% Description
+  {Detect the location of any corpse of a named species at \spellRange}% Description
   {
-    Sniffing at the wind, the caster identifies any corpses from a particular species within \spellRange.
-    Possible types include `elves', `woodspies', or `bats'.
-  }
+    Sniffing at the wind, the caster identifies any corpses from a particular species at \spellRange.
+    Possible types include `elves', `woodspies', or `bats'.}
 
 \subsection{Force}
 
@@ -566,8 +562,8 @@ A good witch leaves no part of her prey unused.
   {Wane}% Action
   {Fate, Fire}% Spheres
   {\roll{Charisma}{Wyldcrafting}}% Resist with
-  {A wail in the darkness, then a fire at \spellRange\ goes out.
-  And whoever held it loses \showDam~\glspl{fp}}% Description
+  {The caster calls the first line of a dirge from the darkness, then a fire at \spellRange\ goes out.
+  Whoever held it loses \showDam~\glspl{fp}}% Description
   {}
 
 \showSpells{FireWater3}
@@ -584,7 +580,6 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Air4}
 
-\null
 \subsection{Earth}
 
 \showSpells{Earth4}
@@ -605,13 +600,10 @@ A good witch leaves no part of her prey unused.
 
 \showSpells{Water4}
 
-\filbreak
 \subsection{Force}
 
 \showSpells{Force4}
-\filbreak
 
-\nobreak
 \subsection{Life}
 
 \showSpells{Life4}
