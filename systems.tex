@@ -8,11 +8,6 @@
 
 \togglefalse{examplecharacter}
 
-\subsection{Breaking Things}
-
-\makeRule{break_door}{Breaking in a door}{Strength}{Crafts}{10}
-A tie could indicate that the door has a massive hole in the middle, allowing a sufficiently small person to squeeze through; or it might indicate that the door caves in after multiple, noisy strikes.
-
 \subsection{\Glsfmttext{downtime} Activities}
 
 \makeRule{poison}{Brewing a poison}{Intelligence}{Medicine}{4}
@@ -187,7 +182,7 @@ Of course, these fast excursions from the path, to check out anything that happe
 \end{itemize}
 
 \noindent
-Each failure margin adds 2 miles to the journey time, so when trying to find a particular house somewhere in a forest, 10 miles away, the \gls{tn} would be 12.
+Each Failure Margin adds 2 miles to the journey time, so when trying to find a particular house somewhere in a forest, 10 miles away, the \gls{tn} would be 12.
 If the roll is an 8, the actual journey would be 18 miles.
 
 \makeRule{scout}{Scouting for an Enemy Camp}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
@@ -202,135 +197,11 @@ During the cold seasons, fire is a necessity to remove \glspl{ep} (mentioned \vp
 Excessive snow or rain means the \gls{tn} decreases by 2 due to mud or snow remembering every step.
 However, it also increases the \gls{tn} by 2 each \gls{interval}.
 
-Both the hunter and the hunted determine their rate of travel.
+Both the hunter and the hunted determine their own rate of travel.
 The hunter continues making rolls until they catch their quarry or lose them.
 
 \makeRule{whittling}{Whittling Wood}{Dexterity}{Crafts}{10}
 Characters can fashion anything with a cost of less than 10~\gls{cp} in less than a day, with only basic woodworking tools.
-
-\subsection{News \& Information}
-
-\makeRule{find_rumours}{Finding rumours}{Charisma}{Empathy}{3}
-See also, verifying rumours, \vpageref{verify_rumours}.
-
-\makeRule{identify_talisman}{Identifying a \glsfmttext{talisman}}{Intelligence}{Academics}{12, then 14}
-Magical items do not darken people's doors often, but once they do, you had best get some educated advice.
-The initial roll tells someone how to activate \pgls{talisman}, and which Spheres created it (ties only tell the Spheres).
-A second roll, at \tn[14], is required to know what the \gls{talisman} does (ties indicate something about what it does), but not the full picture.
-
-%\subsection{Schemes \& Plots}
-
-\makeRule{find_hidden_message}{Finding a hidden message in a book}{Intelligence}{Vigilance}{7}
-The message-hider can set any \gls{tn} they please.
-
-\makeRule{letter_sealing}{Letter sealing}{Dexterity}{Academics}{9}
-Proper seals have more than a blob of wax to keep them safe.
-Ultra secret letters have parts of the paper cut, then pierce the middle, and loop back around the outside.
-While anyone can open these letters, opening them without breaking the seal (so the letter does not appear to have been read) is nearly impossible.
-Failure indicates that the letter's seal breaks moments later, as the paper has been cut too thin.
-A tie indicates nothing special -- but of course opening the letter won't be quite the challenge it could be.
-
-Opening such a letter and resealing it properly requires an \roll{Intelligence}{Academics} roll, at \tn[14], plus the margin of whoever sealed the letter originally.
-
-\makeRule{verify_rumours}{Verifying rumours}{Intelligence}{Empathy}{13}
-This usually takes a long time, and is best suited to \gls{downtime}.
-
-\subsection{Town Activities}
-
-\makeRule{hookey}{Walking Through Town}{Wits}{Empathy}{depends on area, bonus for rank}
-The \gls{guard} should guard against the forest, not hide (nor drink) in towns.
-
-Of course people make exceptions for higher-ranking \gls{guard}, and plenty of the guard manage to sneak into town regularly.
-
-\Gls{guard} characters can add any rank they have earned to any rolls.
-`Fodder' add nothing, while `Diggers' can add +1 to the roll.
-
-\sidebox{
-  \begin{boxtable}[cY]
-
-    \textbf{\gls{tn}} & \textbf{Location} \\\hline
-
-    5 & \gls{healersGuild} \\
-
-    6 & Friend's Home \\
-
-    8 & Slums \\
-
-    9 & Tavern \\
-
-    9 & Rich Neighbourhood \\
-
-    10 & Market \\
-
-    12 & \gls{sunGuard} Station \\
-
-  \end{boxtable}
-}
-
-Entering a town requires an \roll{Intelligence}{Larceny} group roll (\tn[7]).
-\Glspl{guard} who cannot find alternative clothing to their standard, dark, uniforms, take a -4 penalty to this roll.
-
-A tie indicates that someone has caught the character (see below).
-Remaining in town requires a \roll{Wits}{Empathy} roll to go undetected.
-Rolling over the \gls{tn} by 1 allows an extra day, then 2 days, then 4, 8, and so on.
-
-\paragraph{Getting caught}
-demands an immediate \roll{Wits}{Deceit} roll (\tn[10]).
-Failure means a trip to the \gls{court}.
-Characters who flee will find their name known across the land, especially to the \gls{sunGuard}, and will find the \gls{warden} taking the failure to appear in their \gls{court} a personal insult.
-
-\makeRule{buyService}{Judging services}{Wits}{Empathy}{9}
-It's never easy knowing whom to hire.
-Every time someone hires someone as part of a service, they should make a roll.
-
-Humans are notoriously bad at this, and are known for hiring the first person they meet in a bar.
-
-Failing the roll means that the \gls{pc} has hired someone useless.
-Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off by taking a guess at the best route and hoping for the best.
-The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} should to make the roll in secret.
-
-A tie generally indicates noticing a serious problem with purchased services\ldots just after the purchase completes.
-
-\index{Bards}
-Given the stakes, people try to hire others based on previous experience.
-Others hope for a nearby bard of some kind -- not just any old minstrel, but someone who has a solid grasp on the reputation of everyone around, from multiple sources, and keeps up to date with all local markets of any size.
-The successes and failures of everyone in a marketplace -- from the over-ripe tomatoes they sold, to the sword-smith who makes exceptionally reliable blades -- often become the contents of songs; so anyone listening to a nearby bard can gain a Bonus to their ability to discern reliable services from useless ones.
-
-No Skill could cover this ability.
-The bard simply has to exchange gossip at the markets for some months.
-
-\makeRule{pick_pocket}{Picking a pocket}{Dexterity}{Larceny}{12}
-Stealing in larger, more populated areas, affords more opportunities, while small \glspl{village}, where everyone is aware of everyone in their personal space, and rarely carry larger sums of money, raises the \gls{tn} significantly.
-
-\index{Pickpocketing}
-
-A tie means the character gets the item, but the victim immediately notices the crime.
-
-\larcenyChart
-
-\makeRule{request_danger_job}{Hiring criminals}{Charisma}{Empathy}{depends on location}
-Thieves, brigands, and illegal adventurers cannot work with just anyone who wanders up to ask for `one assassination job, my good man'.
-Dangerous jobs require a level of trust.
-Charismatic characters who show care and tact stand a much better chance of hiring help.
-
-\sidebox{
-  \begin{boxtable}[lY]
-
-    \textbf{Location} & \textbf{Base} \textbf{\glsentrytext{tn}} \\\hline
-
-    City & 9 \\
-
-    Town & 11 \\
-
-    \Gls{village} & 14 \\
-
-  \end{boxtable}
-}
-
-Any attempt to hire services which put someone in danger should require a roll.
-This includes murder, crafting poisons, selling illegal items, et c.
-
-Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
 
 \subsection{Journeys by Road \& \Glsfmttext{village}}
 
@@ -383,13 +254,144 @@ Each Failure Margin puts the boat off course by 10 miles.
 A tie indicates that the navigator knows to remain for a day, and make further observations, rather than push towards an uncertain direction.
 \index{Sailing!Navigation}
 
-\makeRule{swimming}{Swimming}{Speed}{Seafaring}{set by water speed}
-
-The \gls{tn} depends on the water's speed -- large rivers might have a \gls{tn} of 8, while an open sea in a storm might be \gls{tn} 12.
+\makeRule{swimming}{Swimming}{Speed}{Seafaring}{set by water's speed}
+Large rivers might have \tn[8], while an open sea in a storm might be \tn[12].
 \index{Swimming}
 
 Characters can swim 1~\gls{step} per \gls{ap} spent.
 If they do nothing but swimming, they can add their Athletics Skill to the total at the end of the round.
+
+
+\subsection{News \& Information}
+
+\makeRule{find_rumours}{Finding rumours}{Charisma}{Empathy}{3}
+See also, verifying rumours, \vpageref{verify_rumours}.
+
+\makeRule{identify_talisman}{Identifying a \glsfmttext{talisman}}{Intelligence}{Academics}{12, then 14}
+Magical items do not darken people's doors often, but once they do, you had best get some educated advice.
+The initial roll tells someone how to activate \pgls{talisman}, and which Spheres created it (ties only tell the Spheres).
+A second roll, at \tn[14], is required to know what the \gls{talisman} does (ties indicate something about what it does), but not the full picture.
+
+%\subsection{Schemes \& Plots}
+
+\makeRule{find_hidden_message}{Finding a hidden message in a book}{Intelligence}{Vigilance}{7}
+The message-hider can set any \gls{tn} they please.
+
+\makeRule{letter_sealing}{Letter sealing}{Dexterity}{Academics}{9}
+Proper seals have more than a blob of wax to keep them safe.
+Ultra secret letters have parts of the paper cut, then pierce the middle, and loop back around the outside.
+While anyone can open these letters, opening them without breaking the seal (so the letter does not appear to have been read) is nearly impossible.
+Failure indicates that the letter's seal breaks moments later, as the paper has been cut too thin.
+A tie indicates nothing special -- but of course opening the letter won't be quite the challenge it could be.
+
+Opening such a letter and resealing it properly requires an \roll{Intelligence}{Academics} roll, at \tn[14], plus the margin of whoever sealed the letter originally.
+
+\makeRule{verify_rumours}{Verifying rumours}{Intelligence}{Empathy}{13}
+Rumours are bad, but someone trying to verify them is worse.
+A failure on this roll means that people around have been alerted to the investigation (whether the rumour was true or not).
+\index{Investigation}
+
+If the investigator doesn't care about alerting anyone, they can take this as \pgls{restingaction} during \gls{downtime}.
+
+\subsection{Town Activities}
+
+\makeRule{break_door}{Breaking in a door}{Strength}{Crafts}{10}
+A tie could indicate that the door has a massive hole in the middle, allowing a sufficiently small person to squeeze through; or it might indicate that the door caves in after multiple, noisy strikes.
+
+\makeRule{buyService}{Judging services}{Wits}{Empathy}{9}
+It's never easy knowing whom to hire.
+Every time someone hires someone as part of a service, they should make a roll.
+
+Humans are notoriously bad at this, and are known for hiring the first person they meet in a bar.
+
+Failing the roll means that the \gls{pc} has hired someone useless.
+Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off by taking a guess at the best route and hoping for the best.
+The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} should to make the roll in secret.
+
+A tie generally indicates noticing a serious problem with purchased services\ldots just after the purchase completes.
+
+\index{Bards}
+Given the stakes, people try to hire others based on previous experience.
+Others hope for a nearby bard of some kind -- not just any old minstrel, but someone who has a solid grasp on the reputation of everyone around, from multiple sources, and keeps up to date with all local markets of any size.
+The successes and failures of everyone in a marketplace -- from the over-ripe tomatoes they sold, to the sword-smith who makes exceptionally reliable blades -- often become the contents of songs; so anyone listening to a nearby bard can gain a Bonus to their ability to discern reliable services from useless ones.
+
+No Skill could cover this ability.
+The bard simply has to exchange gossip at the markets for some months.
+
+\makeRule{pick_pocket}{Picking a pocket}{Dexterity}{Larceny}{12}
+Stealing in larger, more populated areas, affords more opportunities, while small \glspl{village}, where everyone is aware of everyone in their personal space, and rarely carry larger sums of money, raises the \gls{tn} significantly.
+\index{Pickpocketing}
+
+A tie means the character gets the item, but the victim immediately notices the crime.
+
+\larcenyChart
+
+\makeRule{request_danger_job}{Hiring criminals}{Charisma}{Empathy}{depends on location}
+Thieves, brigands, and illegal adventurers cannot work with just anyone who wanders up to ask for `one assassination job, my good man'.
+Dangerous jobs require a level of trust.
+Charismatic characters who show care and tact stand a much better chance of hiring help.
+
+\sidebox{
+  \begin{boxtable}[lY]
+
+    \textbf{Location} & \textbf{Base} \textbf{\glsentrytext{tn}} \\\hline
+
+    City & 9 \\
+
+    Town & 11 \\
+
+    \Gls{village} & 14 \\
+
+  \end{boxtable}
+}
+
+Any attempt to hire services which put someone in danger should require a roll.
+This includes murder, crafting poisons, selling illegal items, et c.
+
+Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
+
+\makeRule{hookey}{Walking Through Town}{Wits}{Empathy}{depends on area, bonus for rank}
+The \gls{guard} should guard against the forest, not hide (nor drink) in towns.
+
+Of course people make exceptions for higher-ranking \gls{guard}, and plenty of the guard manage to sneak into town regularly.
+
+\Gls{guard} characters can add any rank they have earned to any rolls.
+`Fodder' add nothing, while `Diggers' can add +1 to the roll.
+
+\sidebox{
+  \begin{boxtable}[cY]
+
+    \textbf{\gls{tn}} & \textbf{Location} \\\hline
+
+    5 & \gls{healersGuild} \\
+
+    6 & Friend's Home \\
+
+    8 & Slums \\
+
+    9 & Tavern \\
+
+    9 & Rich Neighbourhood \\
+
+    10 & Market \\
+
+    12 & \gls{sunGuard} Station \\
+
+  \end{boxtable}
+}
+
+Entering a town requires an \roll{Intelligence}{Larceny} group roll (\tn[7]).
+\Glspl{guard} who cannot find alternative clothing to their standard, dark, uniforms, take a -4 penalty to this roll.
+
+A tie indicates that someone has caught the character (see below).
+Remaining in town requires a \roll{Wits}{Empathy} roll to go undetected.
+Rolling over the \gls{tn} by 1 allows an extra day, then 2 days, then 4, 8, and so on.
+
+\paragraph{Getting caught}
+demands an immediate \roll{Wits}{Deceit} roll (\tn[10]).
+Failure means a trip to the \gls{court}.
+Characters who flee will find their name known across the land, especially to the \gls{sunGuard}, and will find the \gls{warden} taking the failure to appear in their \gls{court} a personal insult.
+
 
 \end{multicols}
 
