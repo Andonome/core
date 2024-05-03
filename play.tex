@@ -205,9 +205,9 @@ This never entirely succeeds, so \glspl{pc} will often find themselves trying to
   \Gls{village} 2 has poisoned meat-on-sticks around its perimeter, to kill any wandering predators.
   It's a march South, so he thinks `South March', then names it `Soumarch'.
 
-  The \gls{gm} should not consider the \gls{village}-event charts and random tables `hard rules' -- they exist to support the \gls{gm} when they need to throw some chaos into the game.
-  You can find the random rolls in the \textit{Book of Judgement}%
-  \iftoggle{judgement}{, \autoref{encounters}, \autopageref{encounters}}{}.
+  %The \gls{gm} should not consider the \gls{village}-event charts and random tables `hard rules' -- they exist to support the \gls{gm} when they need to throw some chaos into the game.
+  %You can find the random rolls in the \textit{Book of Judgement}%
+  %\iftoggle{judgement}{, \autoref{encounters}, \autopageref{encounters}}{}.
 }
 
 \sideBySide{
@@ -218,16 +218,25 @@ This never entirely succeeds, so \glspl{pc} will often find themselves trying to
     I want to meet that hag.
     Can we walk ten miles in an afternoon?
     \item[\gls{gm}:]
-    Sure, you can travel 10~miles in a day without exertion.
-    Sootfilch and Grogfen are human, so they can ignore some \glsentrylongpl{ep} while marching.
+    10 miles in an afternoon is pushing it, especially in the cold.
+    You can push it, or just travel 5~miles, then go for another 5 in the evening.
     \item[Player 1:]
-    And Laiquon's an elf, so he can ignore the cold.
+    Laiquon's an elf, so he can ignore the cold.
     \item[\gls{gm}:]
-    Oh yea\ldots the \gls{jotter} will have warm clothes for everyone else, but you humans two will have to take 2~\glsentrylongpl{ep} from the freezing weather.
+    Oh yea\ldots the \gls{jotter} will have warm clothes for everyone else, but you humans two will have to take 1~\glsentrylong{ep} from the freezing weather.
   \end{description}
 }{
-  The \glspl{pc} can travel ten miles a day without exertion, which works out fine.
+  Each day has four \glspl{interval} -- morning, afternoon, evening, and night.
+  Characters can walk 5 miles in \pgls{interval} without exertion, so they usually go 10 miles a day, or 15 with good supplies and no distractions.
+
   If they find a time-sensitive mission, they can always endure the weight of a few \glsentrylongpl{ep} in order to get there faster.
+
+  \noindent
+  \begin{tabularx}{\linewidth}{YYYY}
+  \hiderowcolors
+    \showInterval{0} & \showInterval{1} & \showInterval{2} & \showInterval{3} \\
+    Preparation. & March 5 miles & Marching 5 more. & Sleep at the \gls{village}. \\
+  \end{tabularx}
 }
 
 \sideBySide{
@@ -277,9 +286,20 @@ This never entirely succeeds, so \glspl{pc} will often find themselves trying to
 }{
   When two people (or creatures) act against each other, the player rolls at \tn[7], plus their opponent's score.
 
+  \vspace{.5em}
+  \noindent
+  \begin{tabularx}{\linewidth}{YcY}
+  \hiderowcolors
+  Wits~-1 + Vigilance~0 & vs & Dexterity~2 + Stealth~3 \\
+  \end{tabularx}
+
   $$2D6 + \underbrace{-1 + 0} ~vs~ 7 + \underbrace{2 + 3}$$
 
-  The creature's total Bonus is +5, so Player 2 must roll at \gls{tn} 12.
+  $$2D6 + \underbrace{-1} ~vs~ 7 + \underbrace{5}$$
+
+  $$2D6 -1 ~vs~ 13$$
+
+  The creature's total Bonus is +5, so at \tn[12] Grogfen fails before Player 2 rolls.
 }
 
 \sideBySide{
@@ -306,9 +326,8 @@ This never entirely succeeds, so \glspl{pc} will often find themselves trying to
   Everyone starts combat with 3~\glsentryfullpl{ap} plus their Speed Bonus.
   Having more \glspl{ap} lets you act before others, and do more.
 
-  Since most combat actions resist an opponent, spending \pgls{ap} usually forces an opponent to spend one too.
-  These forced-expenditures can push characters into negative \glspl{ap}.
-  A character on negative \glspl{ap} feels seriously flustered, and takes the negative as a penalty to their actions.
+  When someone attacks you, it forces you to spend \glspl{ap} to resist.
+  This can push your \glspl{ap} below 0, and every step down inflicts a penalty to all actions.
 
   For example, a character on -2~\glspl{ap} would take a -2 penalty to all actions (and could only act in response to something acting against them).
 
@@ -334,10 +353,22 @@ This never entirely succeeds, so \glspl{pc} will often find themselves trying to
     Player 3 -- one \roll{Wits}{Vigilance} roll, please (\tn[11]).
   \end{description}
 }{
+  Characters cast spells with Charisma plus an elemental Skill, as they literally speak to the elements.
+
   Spells work like any other roll, including when making a Resisted roll -- the spellcaster uses their Bonus to resist the opponent, or players roll their \gls{pc}'s Bonus against the \gls{npc}'s.
 
-  Characters cast spells with Charisma plus an elemental Skill, as they literally speak to the elements.
-  Most spells come with a suggested statement, but the player can fill in anything (or nothing).
+  \vspace{.5em}
+  \noindent
+  \begin{tabularx}{\linewidth}{YcY}
+  \hiderowcolors
+  Charisma~2 + Earth~1 & vs & Speed~2 + Athletics~2 \\
+  \end{tabularx}
+
+  $$2D6 + \underbrace{2 + 1} ~vs~ 7 + \underbrace{2 + 2}$$
+
+  $$2D6 + \underbrace{3} ~vs~ 7 + \underbrace{4}$$
+
+  $$2D6+3 ~vs~ 11$$
 }
 
 \sideBySide{
@@ -345,7 +376,7 @@ This never entirely succeeds, so \glspl{pc} will often find themselves trying to
     \item[Player 2:]
     I'm rolling to attack!
     \item[\gls{gm}:]
-    Roll Brawl, \tn[13].
+    Roll \roll{Dexterity}{Brawl}, \tn[13].
     \item[Player 2:]
     \dicef{9}
     \Glsentrylong{tn} what?
