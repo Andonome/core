@@ -212,26 +212,25 @@
 
   \textbf{Armour} & \textbf{\Glsentrytext{dr}} & \textbf{\glsentrytext{covering}} & \textbf{Weight} \\\hline
 
-  \ifnum\value{r4}=3
-    \showArmour{\armour[\addtocounter{weight}{-1}]{Elvish Ceramic}{2}{2}} \\
+  \ifodd\value{r4}
+    \showArmour{\partialelvish} \\
   \fi
 
-  \showArmour{\armour[\addtocounter{weight}{1}]{Padded Armour}{2}{2}} \\
-
-  \showArmour{\armour{Partial Leather}{3}{2}} \\
-
-  \showArmour{\armour{Complete Leather}{3}{4}} \\
-
-  \showArmour{\armour{Partial Chain}{4}{2}}  \\
-
-  \showArmour{\armour{Complete Chain}{4}{4}} \\
-
-  \showArmour{\armour{Partial Plate}{5}{2}} \\
-
-  \showArmour{\armour{Complete Plate}{5}{4}} \\
+  \showArmour{\partialpadded} \\
+                                                                             
+  \showArmour{\partialleather} \\
+                                                                             
+  \showArmour{\completeleather} \\
+                                                                             
+  \showArmour{\partialchain} \\
+                                                                             
+  \showArmour{\completechain} \\
+                                                                             
+  \showArmour{\partialplate} \\
+                                                                             
+  \showArmour{\completeplate} \\
 
   \end{boxtable}
-
 }
 
 \newcommand{\chasechart}{
