@@ -232,6 +232,7 @@ Each weapon has the following properties:
 
 \subsection{Shields}
 \index{Shields}
+\label{shields}
 
 Shields allow characters to quickly parry blows, but do not deal much Damage.
 Shields provide a higher Bonus to combat rolls than other arms with their \gls{weight}, which allows the wielder to wear down an opponent's \glspl{ap} without spending many of their own.
@@ -480,29 +481,22 @@ basic Damage.
 These rules cover things that happen to characters.
 You can refer back to them when necessary with the list in \autoref{combatAppendix}.
 
-\subsubsection[Blindness: Roll at -6 penalty, + (Wits + Vigilance)/ 2]{Blindness}
+\makeAutoRule{blindness}{Blindness}{spend 1~\glsentrytext{ap} and make a \roll{Wits}{Vigilance} before any other action}
 \index{Combat!Blindness}
+in a battle requires responding to all attacks by spending \pgls{ap} and rolling \roll{Wits}{Vigilance}.
+Failure you receive Damage, but success achieves nothing.
+The same applies to initiating an attack, or moving anywhere.
+Loud noises (such as battle-cries) can easily increase this \gls{tn} to 12.
 
-Fighting while blind is no fun -- your opponent can see you coming, and you can't see them.
-Blinded suffer a -6 penalty, but can offset this with half their Wits + Vigilance total.
-For example, a character with a Wits + Vigilance total of -1 would receive a -7 penalty to attack, while their companion with a total Bonus of +3 would suffer only a -4 penalty.
+While fighting blind, if the dice make \pgls{natural} roll equal to the number of nearby people on the character's side (including themself) then they hit a companion accidentally.
+So if a troupe of 5 people become blinded, each of them would hit a companion on the \gls{natural} of 5 or less, if they tried to attack anything, whether as a response or not.
 
-This penalty only counts when one side of a fight is blind. When both sides are blind, we use the Darkness Fighting rules below.
-
-While fighting blind, if the dice make \pgls{natural} roll equal to the number of people on the character's side (including themself) then they hit a companion while also being hit.
-If the character is fighting with just one companion then there are two of them and they hit a companion on the roll of a 2.
-If they are part of a group of 5 people, any roll of 5 or under means they have accidentally hit a companion.
-Companions who are accidentally hit can evade by simply spending 1~\gls{ap}.
-It is possible to kill a companion while fighting blind.
-
-\subsubsection[Darkness: Roll Bonus cannot exceed Wits + Vigilance]{Darkness}
+\makeAutoRule{darkness}{Darkness}{maximum Bonus equals \roll{Wits}{Vigilance}}
 \label{darkness}
 \index{Darkness}
 \index{Combat!Darkness}
 \index{Spelunking!Fighting in darkness}
-
-Fighting in the darkness, or just twilight, can give a distinct advantage to those with sharper senses.
-Those who retain some basic vision while their opponents have none are in a similar situation to fighting a blinded opponent.
+or deep twilight, can give a distinct advantage to those with sharper senses.
 However, when both sides suffer from the darkness, the battle changes very little.
 Neither side can hit accurately, but then neither side can dodge or parry well either.
 
@@ -516,155 +510,103 @@ characters Attribute bonuses cannot go beyond the character's \roll{Wits}{Vigila
   The elves have a total \roll{Wits}{Vigilance} of +3, so their \roll{Dexterity}{Combat} has only a +3 cap.
 \end{exampletext}
 
-\paragraph*{Fighting in minimal light}
+\paragraph{Fighting in minimal light}
 (such as a moonless night)
 only gives a -1 penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
 
-\subsubsection[Dual Wielding: Both weapons count has having +1 \glsentrytext{weight}]{Dual Wielding}
-\index{Combat!Dual Wielding}
-
-A character using two weapons -- perhaps a dagger in one hand and a shortsword in the other -- can use either weapon at any point.
-However, both count as having double their standard \glsentryname{weight}.
-
-Shields strap to an arm, without requiring any kind of dual-wielding.
-
-\makeAutoRule{enclosedcombat}{Enclosed Combat}{penalty equals weapon's \glsentrytext{ap} cost minus 1}
+\makeAutoRule{enclosedcombat}{Enclosed Spaces}{penalty equals weapon's Attack Bonus}
 \index{Spelunking!Enclosed Combat}
-
-Enclosed spaces cause serious problems for people wielding longswords, battle axes, and other large weapons.
+cause serious problems for people wielding longswords, battle axes, and other large weapons.
 Daggers and shortswords often have an easier time in these locations.
 
-When a character has no space to swing a weapon -- either vertically or horizontally -- their Attack gains a penalty equal to the weapon's \gls{ap} cost minus 1.
+When a character has no space to swing a weapon -- either vertically or horizontally -- their Attack gains a penalty equal to the weapon's Attack Bonus.
 
-\subsubsection[Holding Breath: 1 \glsentrytext{ep} per negative \glsentrytext{ap} at the end of the round, plus 1~per round]{Holding Breath}
-\label{holdingBreath}
+\makeAutoRule{holdingBreath}{Holding the Breath}{+1~\glsentrytext{ep} per round, must breath in at -1~\glsentrytext{ap}}
 \index{Combat!Staying Silent}
+during combat allows one to stay silent, and not breath any nasty gasses in.
+While doing so, the character gains 1~\gls{ep} each round (these \glspl{ep} are tracked separately, and vanish soon after combat).
 
-Anyone holding their breath takes a number of \glspl{ep} equal to their negative \glspl{ap} at the end of the round, plus one.
-So someone ending a round on -3~\glspl{ap} would take 4~\glspl{ep}.
+If the character every falls below 0~\glspl{ap}, then their stamina and focus has run out, and they breathe in immediately.
 
-Those simply holding their tongue, and trying to kill silently, without battle-cries or similar, can do so as long as they do not fall below 0~\glspl{ap}.
-
-These \glspl{ep} points disappear at a rate of 1 per round as soon as the character can breathe again.
-
-\makeAutoRule{entangled}{Trapped, Entangled, or Prone}{the character loses their Dexterity Bonus, and takes -2 Attack penalty}
+\makeAutoRule{entangled}{Trapped, Entangled, or Prone}{-2~\glsentrytext{ap} Penalty}
 \label{trapped}
 \index{Combat!Prone}
 \index{Combat!Entangled}
 \label{prone}
+characters may be caught in mud, shackled to a pillar, or caught in a web.
+They take a penalty to Speed (the default is -2), which reduces their \glspl{ap}.
 
-Characters caught in mud, who slip over, or get shackled to a spot cannot move or dodge nearly as well as they could.
-They cannot use their Dexterity Bonus in Combat (penalties still apply), and take a -2 penalty to rolls using their Physical Attributes.
-
-\subsubsection[+1 to attack]{Higher Ground}
-
-Gaining the higher ground grants +1 to the Attack Bonus, as you target the enemy's head easier and gravity aids your downward swings.
+\makeAutoRule{higherGround}{The Higher Ground}{+1 Bonus}
+means gravity helps on the down-swing, while the opponent must bring their head a little bit closer, while moving one precious head further back.
 
 \subsection{Manoeuvres}
 
 These additional actions cover different ways to engage with enemies.
 Anyone can use them at any point, if they use the right weapons.
 
-\subsubsection[Brawling: Make a normal attack roll, but any attack with a Margin less than 5 only inflicts \glspl{ep} rather than Damage]{Brawling}
-\index{Combat!Brawling}
-\index{Brawling}
-
-Anyone can go for a brawling manoeuvre, even while using a weapon.
-Swinging an axe can place one in a vulnerable position -- on negative \glspl{ap}!
-But since these attacks cost only 1~\gls{ap}, they won't deplete \glspl{ap} too fast.
-
-Punches and kicks all use the Combat bonus.
-Such attacks inflict \glspl{ep}.
-Everyone gains a \gls{dr} against Brawling Damage equal to their Strength Bonus, which stacks with armour (\gls{dr} cannot be negative).
-This counts as Complete armour, so hitting someone in Partial chainmail with a \gls{tn} of 8 and a Strength of +1 would mean they have a total \gls{dr} of 6.
-However, an attack score of 11 would mean that the Partial armour's \gls{dr} could be ignored, leaving only a \gls{dr} of 1.
-An attack score of 13 would ignore both types of \gls{dr}, leaving nothing at all.
-Attacks which bypass a body's natural armour count as normal Damage as such attacks might hit vulnerable locations such as the eyes or crotch or twist an opponent's arm till breaking point.
-
-\subsubsection[Close Magic: Casters roll vs the enemy's standard Attack score]{Close Magic}
+\makeAutoRule{closeMagic}{Close Magic}{roll vs enemy's Attack as usual}
 \index{Combat!Magic}
 \index{Magic!Close}
 \index{Spells!Combat}
+happens when someone tries to stab a witch.
+The works like any other Resisted Action -- if she rolls higher, he spell works, but if the opponent rolls higher, she receives Damage.
 
-Casting spells in close-quarters combat works just like any other type of combat.
+Of course, one must use a spell which could plausibly impede the attack.
+Summoning a small cyclone in someone's face, or cursing their sword-arm with bad luck could both repel and attack, but a spell to make someone forget that it is Tuesday would not.
 
-\begin{exampletext}
-  A mage with Air 2 finds himself surprised by a cut-throat.
-  The cut-throat attacks with a knife, and with Dexterity +1 and Combat +2, making the attack's \tn[10].
+Spells retain their original \gls{tn} when used up close, so people can resist Mind spells with their \roll{Wits}{Academics} at the same time as \roll{Dexterity}{Brawl}.
+If the witch beats the former \gls{tn} but not the latter, she might confused someone just enough to avoid attack, but not enough for a successful Mind spell.
 
-  The caster decides to spend only 1~\gls{mp} for a fast, easy, \textit{Wind Blast} spell, and with a \roll{Charisma}{Air} total of +4, he will reach a tie on a \gls{natural} of 6.
-\end{exampletext}
+But if the \roll{Dexterity}{Brawl} resistance succeeds, the witch's spell automatically fails, as she her focus collapses.
+In this case, no \glspl{mp} are spent.
 
-Casters must meet their usual \gls{tn} to cast a spell -- if this fails, then they lose to their opponent, and receive Damage as usual.
+\makeAutoRule{drawWeapon}{Drawing a Weapon}{spend 1~\glsentrytext{ap}}
+from a scabbard simply costs \pgls{ap}.
+Drawing a weapon from a \textit{rucksack}, however, could cost a couple of rounds.
 
-If a mage fails to cast a spell in combat, they do not lose \glspl{mp} -- the enemy's weapon interrupts the spell before they can begin to cast.
-
-\subsubsection[Drawing Weapon -- Cost: 1 \glsentrytext{ap}]{Drawing Weapons}
-
-Drawing a weapon from a scabbard (or similar easily-reached location) costs 1~\gls{ap}.
-Weapons inside a bag or other hard-to-reach location can take a round or more to extract.
-
-\subsubsection[Dropping Weapon -- Cost: 0 \gls{ap}]{Dropping Weapons}
-
+\makeAutoRule{dropWeapon}{Dropping a Weapon}{free}
 Dropping a weapon costs no \glspl{ap}, though they will be defenceless unless they do this while picking up another weapon.
 
 \pic{Roch_Hercka/stances}
 
-\subsubsection[Flanking: Gain +2 to attack]{Flanking}\label{flank}
+\makeAutoRule{flank}{Flanking}{+2 Attack Bonus}
+grants a +2 Attack Bonus.
+Up to 6 opponents can attack a lone character, but only half can flank, and any available walls reduce this number.
 
-Attacks from someone's anterior side gain a +2 Bonus.
-Up to 6 opponents can attack a lone character, but any available walls can reduce this number.
-
-\subsubsection{Grabbing \& Grappling}
+\makeAutoRule{grab}{Grabbing}{attack with Brawl, both become Entangled}
 \index{Combat!Grappling}
+someone uses no weapons, and leaves both parties \textit{Entangled}.
+
+Some animals, with \textit{Teeth}, can grab and deal Damage, but most humanoids need to grab first, and \emph{then} deal Damage with a grapple.
+
+\makeAutoRule{grapple}{Grappling}{Resisted \roll{Strength}{Brawl} roll to deal Damage}
 \label{grappling}
-Some animals, with \textit{Teeth}, can grab and deal Damage.
-But most humanoids need to grab first, and \emph{then} deal Damage.
+with an opponent might consist in bites, headbutts, twisted bones, or strangulation-by-tentacle.
+However it goes, no weapons can be used while grappling if they have \pgls{weight} above 1.
 
-\paragraph[Grabs: Make an attack without any weapon bonus. Both combatants are \textit{Entangled}. Cost: 1 \gls{ap}]{Grabbing:}
-requires a standard attack roll, without a weapon.
-Both combatants then count as \textit{Entangled}, as neither can move properly to defend themselves.
-\label{grab}
-
-No weapons can be used while grappling if they have a \gls{weight} above 1.
-
-\paragraph[Grapple: Make an opposted roll of Strength + Combat.  Success means the combatant can either break free or inflict Damage.  Cost: 3~\gls{ap}]{Grappling:}
-allows someone to deal Damage, or break free of a Grab.
-Both combatants engage in a resisted \roll{Strength}{Combat} roll.
-If the winner decides to deal Damage, they inflict 1D6 + Strength.
-Otherwise, they break free, but are still lying prone until they get up.
-\label{grapple}
-
-\subsubsection[Guard: Someone must successfully hit you before they are allowed to hit whomever you are guarding. Cost: 1 \gls{ap}]{Guarding}
+\makeAutoRule{guarding}{Guarding}{redirect attacks against one person to yourself. Cost: 1~\glsentrytext{ap}}
 \index{Guarding}
+someone just requires standing in front of them.
+All attacks redirect to you after that point.
+This includes missile attacks only if you could otherwise evade them.
 
-If you guard someone by standing in front of them then all attacks have to go through you first.%
-\footnote{This includes missile attacks only if you could otherwise evade them.}
-Any enemy making a successful attack on you can choose to damage you, or to make another roll (as a free action, costing no \glspl{ap}) at their real target.
+If someone else tries to attack your charge, you will have to move to protect them, with a normal movement action.
 
-Guarding costs 1~\gls{ap}, and after that engaging in attacks costs the usual amount.
-If either character moves away from the other, the guarding stops.
-
-\subsubsection[Ram: Push the enemy back 2 steps plus the difference between your Strength Bonuses. Resisting costs 2 \glspl{ap}, and requires a resisted Strength + Combat roll. Cost: 3 \glspl{ap}]{Ram}
+\makeAutoRule{ram}{Ramming}{Force an enemy back with \roll{Strength}{Brawl}: 2~\glspl{ap}}
 \index{Combat!Ram}
-\label{ram}
+into someone with a should or shield can push them back half your standard movement.
+You spend 1~\gls{ap} for the movement, and another for the push.
+The standard Weapon Bonus from any shield gives a Bonus to this roll (\autopageref{shields}).
 
-In combat, it is possible to scare, push and stab at someone to force them to move backwards.
-The attacker spends 3~\glspl{ap} points to rush forward.
-The defender can either spend 3~\glspl{ap} and attempt to resist, or can simply acquiesce with a normal movement action, spending 1~\gls{ap}.
+If the opponent resists with \roll{Strength}{Brawl} (and possibly a shield), then success allows you to push them back as you advanced.
 
-Resisting means engaging in a Strength + Combat roll.
-When moving back, targets are pushed back 2 steps; the attacker's Strength adds to this and the opponent's Strength decreases it.
-Strong characters might also sacrifice the use of 1 point of Strength to push back an additional person.
+If they try jump out of the way with \roll{Speed}{Athletics}, then failure implies that they fall \textit{Prone}.
 
-Characters who have been rammed must be able to move far back enough as part of their normal movement action, otherwise they fall \textit{Prone}.
-
-\subsubsection[Sneak Attack: Dexterity + Stealth vs Wits + Vigilance; automatic \glsentrytext{vitalShot} with +2 Damage.]{Sneak Attacks}
+\makeAutoRule{sneakattack}{Sneak Attacks}{\roll{Dexterity}{Stealth}, roll Damage at +2}
 \label{sneakattack}
 \index{Combat!Sneak Attack}
-
-Sneaking up on someone requires a Dexterity + Stealth check, vs the target's Wits + Vigilance, but circumstances will change this roll dramatically.
-A sleeping target will suffer extreme penalties, while anyone attempting this manoeuvre on a battlefield should receive a hearty laugh from the \gls{gm}, along with \gls{tn}~20.
+aren't generally possible during a fight.
+Elsewhere, they might use Dexterity, Intelligence, or something else.
 
 Heavy weapons do not help much with surprise attacks, as one needs to swing them up into position.
 Any weapon with a \gls{weight} higher than 1 adds its \gls{weight} to the \gls{tn}.
