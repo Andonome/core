@@ -124,24 +124,20 @@ A craftsman with great Dexterity may create beautiful and intricate items, but w
 Have a look at this talented member of the \gls{guard}:
 
 \toggletrue{allyCharacter}
-\npc{\F\Hu}{Grogfen}
-\person{1}% STRENGTH
-  {0}% DEXTERITY
-  {1}% SPEED
-  {{-1}% INTELLIGENCE
-  {-1}% WITS
-  {1}}% CHARISMA
-  {0}% DR
-  {0}% COMBAT
-  {}% SKILLS
-  {\shortsword, cheese, pies, 50' rope}% EQUIPMENT
+\Person{\npc{\F\Hu}{Grogfen}}%
+  {{1}{0}{1}}% BODY
+  {{-1}{-1}{1}}% MIND
   {
     \setcounter{Brawl}{1}
     \setcounter{Empathy}{2}
     \setcounter{Deceit}{3}
     \setcounter{Larceny}{1}
     \setcounter{Vigilance}{0}
-  }
+    \shortsword
+  }% SKILLS
+  {}% KNACKS
+  {50' rope, \rations}% EQUIPMENT
+  {}% ABILITIES
 
 Each Skill determines a wealth of different abilities.
 

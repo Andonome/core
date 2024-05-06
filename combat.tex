@@ -170,28 +170,37 @@ lets the character travel up to 3 steps plus their Athletics Skill.
 requires 1~\gls{ap} if any player tells another to act, stop, or guard them.
 During combat, everyone should focus on the task at hand, and communicate sparingly, only when they need to say something vital.
 
-\subsection{\glsentrylongpl{fp}}
+\subsection{\Glsfmtlongpl{fp}}
 \label{fate_points}
-\index{Fate Points}
 
-\noindent
-Each of the \glspl{pc}, and some of the \glspl{npc} have a destiny.
-However, destiny has a limited supply, so \glspl{pc} had best not rely on it.
+The \glspl{pc} have a limited supply of luck -- often enough to prevent an injury, nearly always enough to hold back death.
+This makes a lesson from the first tooth, axe, or claw, and maybe even the second.
 
-\input{config/rules/fate.tex}
-
-\Glspl{fp} provide much of the game's narrative flow, as \glspl{pc} encounter near-misses, then damage, and decide to run away as they're completely `out of luck'.
-Soon after, they remain wounded, but their `luck has returned', and they can press-on, despite retaining a serious injury.
+\subsubsection{Narrative Flow}
+comes naturally from battles where the \glspl{pc} have a near-miss, then take a permanent injury, but revive through returned courage.
+\Glspl{fp} act just like `courage points' for \glspl{pc} (or even players) as a lot means battle, and none means `run'.
+However, if they survive, their `courage' can return, despite remaining on 1~\gls{hp} for the remainder of the session.
+\Pgls{pc} can go down to 1~\gls{fp}, then 2~\glspl{hp}, and \pgls{interval} later stand and persevere, as their luck returns.
 
 Losing \glspl{fp} can mean any number of things.
 \Pgls{pc} might stumble slip and catch themselves just in time, causing an arrow to narrowly miss their head; or the enemy might swing their sword and strike a stray tree-branch.
+Injury is paid in \glspl{fp} while they last, then Damage starts to take large chunks from the \glspl{pc}.
+This means \glspl{fp} work much like `courage points' -- characters fight with them, and leave when they run out.
 
-\Glspl{pc} begin with a full allotment of \glspl{fp}, while \glspl{npc} start with none.
-However, everyone (including \glspl{npc} present in the scene) regains $1D6$ \glspl{fp} at the end of each \gls{interval}.%
-\footnote{See \autopageref{intervals} for more on \glspl{interval}.}
+\subsubsection{The Mechanic}
+simply lets players spend \pgls{fp} instead of losing \pgls{hp}.
+\Glspl{pc} can store a number of \glspl{fp} equal to their total \glspl{xp}, divided by 10, plus their Charisma Bonus.
+$1D6$ return after \pgls{interval}.%
+\footnote{See \autopageref{intervals} for \glspl{interval}.}
+
+\begin{center}
+  $$\Glspl{fp} = \frac{Total~\glsfmtplural{xp}}{10} + Charisma$$
+\end{center}
+
+\Glspl{npc} begin with none, but gain as many \glspl{fp} as the \glspl{pc} if they took part in a scene.%
 
 \Glsentrylongpl{fp} never stop \glsentrylongpl{ep}.
-Character who can survive a dozen archers through luck can still become exhausted, or punched in the gut and dragged away.
+Character who can survive a dozen archers through luck can still become exhausted, or poisoned.
 
 \end{multicols}
 
@@ -204,7 +213,7 @@ Character who can survive a dozen archers through luck can still become exhauste
 \subsection{Weapons}
 
 \noindent
-Weapons are a great way of inflicting additional Damage, but they are an equally excellent way of defending oneself.
+Weapons are a great way of inflicting additional Damage, and an equally excellent way of defending oneself.
 Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about.
 Longer weapons grant an Attack Bonus, allowing someone to hit the enemy before the enemy hits them, and heavy weapons tend to deal more Damage.
 However, both of these come at the cost of extra \emph{heft}; they take more time to swing, and so cost more \glspl{ap} to use.
@@ -230,37 +239,37 @@ Each weapon has the following properties:
 \label{weaponschart}
 \index{Weapons}
 
-\subsection{Shields}
+\subsubsection{Shields}
 \index{Shields}
 \label{shields}
+are weapons.
+The wide size means a big `Attack' Bonus, which works great for not being hit.
+The wide size does not help with Damage, but \pgls{pc} might still manage to smack a woodspy in the eye with the edge on a lucky roll.
 
-Shields allow characters to quickly parry blows, but do not deal much Damage.
-Shields provide a higher Bonus to combat rolls than other arms with their \gls{weight}, which allows the wielder to wear down an opponent's \glspl{ap} without spending many of their own.
+Having a shield and a weapon lets character choose which one to use for each attack.
 
-\subsubsection{Bucklers}
+\paragraph{Bucklers}
+pair well with rapiers, but demand a full hand to hold -- the wielder must use the shield, not simply strap it to an arm.
 
-These small shields pair well with rapiers, but increase the \gls{weight} of both by 1, as the buckler requires a spare hand to hold.
-
-\subsubsection{Round Shields}
-
-The classic round shield can strap onto a characters arm, while allowing them two free hands to wield their weapon.
+\paragraph{Round Shields}
+can strap onto an arm, which allows two free hands to direct a weapon.
 They pair well with shortswords and mauls.
 
-\subsubsection{Kite Shields}
-
-Stand nearly as tall as the wielder.
+\paragraph{Kite Shields}
+stand nearly as tall as the wielder.
 They don't move as quickly, or easily as other shields, but still work well with a longsword or maul.
 
 \shieldchart
 
 \boxPair[t]{
-  \subsubsection*{Example}
-  \Pgls{sunGuard} stands with a flail.
-  His basic Attack Score is 10, so rolling 10 means a draw.
-  His full plate armour has \pgls{covering} of 5,
-  so to hit him, a \gls{pc} will need to roll the $\gls{tn} + 5$.
+  \subsubsection*{An Example}
+  \gls{sunGuard} stands with a flail, and a cocky attitude.
+  His basic Attack Score is 10, so rolling 10 means a tie.
+  His full plate armour has \pgls{covering} of 5 and \gls{dr} 5.
 
-  Rolling 9 or less means the \gls{pc} is hit, and since he has no armour, that won't go well!
+  To hit him, \pgls{pc} will need to roll at $\tn[10] + 5 = 15$.
+
+  Rolling 9 or less means the \gls{pc} is hit, unarmoured.
 
   \begin{boxtable}[cLc]
     \textbf{Roll} & \textbf{Result} & \textbf{Margin} \\
@@ -274,6 +283,7 @@ They don't move as quickly, or easily as other shields, but still work well with
       $\geq 15$ & \emph{\Gls{vitalShot}!} -- full Damage to \gls{npc} & \textit{5!} \\
   \end{boxtable}
 
+  You might think of each potential number you can roll as a location on the body, with armour adding \gls{covering} to certain numbers.
   In this case, the \gls{pc} rolls a 15, so he hits for 6 Damage, and the knight loses 6~\glspl{hp}.
 
 }{
@@ -302,27 +312,27 @@ They don't move as quickly, or easily as other shields, but still work well with
 \subsection{Armour}
 \index{Armour}
 
-\input{config/rules/armour.tex}
-
-When armour works, its \gls{dr} reduces incoming Damage.
-This occurs before Damage applies to \glspl{fp}, so \gls{dr} and \glspl{fp} make a powerful and steady combination.
+When armour works, its \glsentryfullpl{dr} reduces incoming Damage.
+It applies before \glspl{fp}, so \gls{dr} and \glspl{fp} make a powerful and steady combination.
 
 \subsubsection{\Glsfmtplural{vitalShot}}
 \label{vitals}
-Just as real armour covers parts of the body, armour in BIND covers numbers on the dice.
-An armour with \gls{covering} 2 can protect characters from a little Damage whenever they miss an Attack roll by 1 or 2.
-But if they roll lower than this, the armour does nothing, as the attack strikes flesh.
-We call this a `\gls{vitalShot}'.
+work when armour doesn't.
+Chain strips fixed with leather straps won't cover everything, so when you roll high enough to exceed your opponent's \gls{covering} you hit them between the armoured bits.
+And likewise, if you miss an Attack roll by more than your armour's \gls{covering}, the \gls{dr} does nothing.
 
-When trying to hit, \glspl{pc} will need to roll 3 over the creature's \gls{tn} (or more, for opponents with more \gls{covering}).
+We call this `\pgls{vitalShot}', because it's vital to make it happen, but not to let it happen.
+
+Creatures with a naturally tough hide (or chitin, or carapace) usually have \pgls{covering} of 5, but the same principle applies.
+If you hit 5 over the Attack target, you can bust an eye, spinneret, mandible, or some other unidentifiable part.
+Anything squishy makes a good target.
 
 \armourchart
 
-\noindent
 \subsubsection{Armour Types}
 
 \paragraph{Padded}
-if you tie enough wool, dishcloths, old shoes and sticks together, you can make some passable armour.
+pieces of fabric on top of other fabric, and eventually, you can slow down a blade a little.
 Of course it stinks, and weighs a tonne, so best leave it until the most desperate of times.
 
 \ifnum\value{r4}=3
@@ -349,18 +359,21 @@ Allowing someone to move within this pile of metal requires rare artisans.
 means tough skin (or scales, or chitin\ldots) thick enough to push back blades.
 Natural armour always has \pgls{covering} of 4 unless otherwise specified, because it covers almost all of the body, but still leaves weak spots open such as the eyes or the kneecaps.
 
-\subsubsection{Stacking Armour}
-\label{stackingarmour}
+\subsubsection{Banding \Glsfmttext{dr}}
+\label{bandingArmour}
+together won't work by just layering lots of armour, so the \glspl{pc} cannot usually attempt Banding with \gls{dr}.
+But undead creatures have \pgls{dr} to represent their complete corporeal apathy; this could combine with armour's \gls{dr} for even less corporeal concerns.
 
-Some creatures have a natural \gls{dr}, which would then stack with their armour.
-The primary armour counts for its full value, and the lower \gls{dr} score counts for half.
-Any tertiary armour counts for a quarter, and so on.
-Once you have a total, round up anything over half.
+As with any other Banding action,%
+\footnote{See \autopageref{banding}.}
+the highest \gls{dr} applies, then the second.
+So a ghast with chain armour (\gls{dr}~5) and their undead resistance (\gls{dr}~2), gains a total \gls{dr} of 6.
+
 Stacked armour can consist of different levels of \gls{covering}, meaning a roll could bypass one set of armour by rolling 3 over the creature's \gls{tn}, while another type of armour (with \pgls{covering} of 4) still applies.
 
-Consider this convoluted example: a basilisk with natural \gls{dr} 4 dies, and then get raised from the dead by a necromancer.
+Consider this convoluted example: a basilisk with its natural \gls{dr} of 4 dies, and then an over-curious \gls{seeker} raises it from the dead.
 The undead naturally have a \gls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
-If the necromancer fashioned plate armour to the basilisk, the total \gls{dr} would be\ldots
+If the \gls{seeker} fashioned plate armour to the basilisk, the total \gls{dr} would be\ldots
 
 \begin{center}
 {
@@ -370,13 +383,7 @@ If the necromancer fashioned plate armour to the basilisk, the total \gls{dr} wo
 
 \ldots or `8' (after rounding up).
 
-If the plate armour had a covering of only 2 then rolling 3 over the creature's \gls{tn} would leave it with a \gls{dr} of only 5.
-
-Standard armour cannot be stacked in this way.
-We assume plate, chain, and some leather-based armours already have padded armour underneath.
-Similarly, different types of natural \gls{dr} do not stack, and nobody becomes undead in different ways.
-
-The only different \emph{kinds} of armour can stack up in this manner, so players will almost never see it in a game.
+If the plate armour had \pgls{covering} of only 3 then rolling 3 over the creature's \gls{tn} would leave it with a \gls{dr} of only 5.
 
 \end{multicols}
 
@@ -386,15 +393,17 @@ The only different \emph{kinds} of armour can stack up in this manner, so player
 
 \noindent
 Projectiles have their own Martial Skill, which covers everything from javelins to bows.
-Archers roll to hit with Dexterity + Projectiles, resisted by the opponent's Speed + Vigilance, then (if successful) roll for Damage, just like toe-to-toe combat.
-
-\begin{figure*}[t!]
-  \projectilesChart
-\end{figure*}
-
+Archers
 \input{config/rules/projectiles.tex}
-
-However, unlike toe-to-toe combat, those on the receiving end cannot reflexively dodge; they must have at least 1~\gls{ap} to spend in order to add their \roll{Speed}{Vigilance} to the archer's \gls{tn}.
+\sidebox[20]{
+  \begin{nametable}{Projectiles Cover}
+    +1 & Large bushes \\
+    +2 & Tower shield \\
+    +3 & Murder hole  \\
+  \end{nametable}
+}
+A successful evasion allows someone to move -- usually behind cover, or towards the archer.
+However, unlike toe-to-toe combat, those on the receiving end cannot reflexively dodge; they must have at least 1~\gls{ap} to spend in order to resist with their \roll{Speed}{Vigilance}.
 
 Just as with weapon combat, a high enough roll can be a \gls{vitalShot},%
 \footnote{See \autopageref{vitals}.}
@@ -402,12 +411,6 @@ ignoring all \gls{dr}.
 
 All projectiles suffer from the need to reload.
 As with picking up any other item, characters must spend least 1~\gls{ap} to take out and use arrows.
-
-\begin{nametable}{Projectiles Cover}
-  +1 & Large bushes \\
-  +2 & Tower shield \\
-  +3 & Murder hole  \\
-\end{nametable}
 
 \subsubsection{The Long Bow}
 \index{Projectiles!Bow}
@@ -422,9 +425,6 @@ Having a Strength of 3 will not increase the Damage, but it can decrease the fir
 To pull back the heavy load on a long bow requires 2~\glspl{ap}, plus the bow's Damage bonus, so a bow which deals +3 Damage requires 5~\glspl{ap} to fire.%
 \footnote{
   This may seem harsh, but bows really are harsh.  Archers pointing their bow downwards and drawing an arrow back must pull a weight similar to lifting a human by their foot.
-
-  Oh, and nobody can aim a bow and just keep the arrow held like a gun.
-  Nobody's that strong.
 }
 
 Long bows can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim rather than the bow.
@@ -432,8 +432,7 @@ Long bows can be fired for hundreds of yards -- the maximum range is generally m
 \subsubsection{The Short Bow}
 \index{Projectiles!Short Bow}
 \index{Short Bow}
-
-A short bow, or `trick bow', is a smaller, lighter thing which can be used by anyone.
+or `trick bow', is a smaller, lighter thing which can be used by anyone.
 What it lacks in punch it makes up for in quick draw time.
 As usual, for every five steps beyond the first two the archer suffers a -1 penalty to hit.
 A short bow takes \pgls{ap} to reload, and \pgls{ap} to fire an arrow, so archers can loose an arrow or two each round.
@@ -444,31 +443,37 @@ They often bring down prey with multiple arrows rather than a single, deep-penet
 \subsubsection{The Crossbow}
 \index{Projectiles!Crossbow}
 \label{crossbow}
-Crossbows can be powerful, but are not easy to reload.
+can pierce plate armour, but cannot be reloaded without a thirty-minute lecture about leverage and torque.
 They have a standard Damage of $2D6$, though different crossbows vary in quality.
 Crossbows requires only 1~\gls{ap} to fire, but require 5 rounds, minus the user's Strength Bonus, to reload.
 Reloading always takes a minimum of 1 round.
 
-\subsubsection{Thrown Weapons}\index{Projectiles!Thrown Weapons}
-
-Thrown weapons such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
+\subsubsection{Thrown Weapons}
+\index{Projectiles!Thrown Weapons}
+such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
 They work just as short bows, but their Damage is the normal weapon Damage minus 2.
-\javelin s deal
-\addtocounter{damage}{4}\dmg{damage}
+\javelin\weaponName s deal
+\addtocounter{weaponDamage}{4}
+\dmg{weaponDamage} Damage
 when used in combat, but only
-\addtocounter{damage}{-2}%
-\dmg{damage} when thrown.
+\addtocounter{weaponDamage}{-2}%
+\dmg{weaponDamage} when thrown.
 
 \subsubsection{Impromptu Weapons}
 \label{impromptuRanged}
 \index{Projectiles!Impromptu}
-
-Weapons which were never made to be thrown, such as swords, axes, or most knives, receive a -2 penalty to hit for every 5 steps distance from the target, and a -2 penalty to Damage.
-\longsword s don't make great projectiles, but they still deal
-\addtocounter{damage}{2} \dmg{weaponDamage}
-basic Damage.
+are available only to the very rich, as sensible people don't throw swords, axes, knives, or cups away.
+But if a player insists on exotic financial ballistics, they can inflict cuts, bruises, and very bad headaches on enemies, as they receive a -2 penalty to hit for every 5 steps distance from the target, and a -2 penalty to Damage.
+\longsword\weaponName s don't make great projectiles, but they still deal
+\addtocounter{weaponDamage}{4}
+\dmg{weaponDamage} Damage
+when used in combat, but only
+\addtocounter{weaponDamage}{-2}%
+\dmg{weaponDamage} when thrown.
 
 \end{multicols}
+
+\projectilesChart
 
 \startcontents[Manoeuvres]
 
@@ -528,6 +533,9 @@ While doing so, the character gains 1~\gls{ep} each round (these \glspl{ep} are 
 
 If the character every falls below 0~\glspl{ap}, then their stamina and focus has run out, and they breathe in immediately.
 
+\makeAutoRule{higherGround}{The Higher Ground}{+1 Bonus}
+means gravity helps on the down-swing, while the opponent must bring their head a little bit closer, while moving one precious head further back.
+
 \makeAutoRule{entangled}{Trapped, Entangled, or Prone}{-2~\glsentrytext{ap} Penalty}
 \label{trapped}
 \index{Combat!Prone}
@@ -535,9 +543,6 @@ If the character every falls below 0~\glspl{ap}, then their stamina and focus ha
 \label{prone}
 characters may be caught in mud, shackled to a pillar, or caught in a web.
 They take a penalty to Speed (the default is -2), which reduces their \glspl{ap}.
-
-\makeAutoRule{higherGround}{The Higher Ground}{+1 Bonus}
-means gravity helps on the down-swing, while the opponent must bring their head a little bit closer, while moving one precious head further back.
 
 \subsection{Manoeuvres}
 
@@ -694,29 +699,30 @@ However, when falling straight downwards, the \gls{tn} is 7 plus \textit{double}
 
 \subsubsection{Claws}
 \label{claws}
-Long claws inflict +1 Damage during Brawl-based attacks.
+inflict +1 Damage during Brawl-based attacks.
 
 \subsubsection{Fangs}
 \label{teeth}
 \label{fangs}
-
-Pronounced fangs and allow animals to grapple and damage with the same attack.
+allow animals to grapple and damage with the same attack.
 So when an attack is successful, the target both receives Damage and counts as \textit{grappled}.%
-\footnote{See above, \autopageref{grappling}.}
+\footnote{Find them \vpageref{grappling}.}
 
 \subsubsection{Flight}
+demands delicate proportions.
+The sheer size of the wings mean their \gls{weight} equals half the creature's \glspl{hp}.
 
-Flying creatures generally have light, hollow bones, and delicate wings instead of muscular forearms -- they cannot take off into the air properly if their bodies are too heavy.
 
-For full flight, a creatures needs a higher Speed Bonus than their own Strength Bonus.
-These creatures can take off in a moment, and begin to soar at eight times their usual movement speed.
-Those with equal Bonuses can still fly, but must spend a full round sprinting at full speed in order to take off.
-Finally, heavier flying creatures can only begin a glide by first climbing somewhere high, and then leaping into the air.
-Once soaring, they can often remain in the air for some time, and even gain a little altitude.
+\begin{itemize}
+  \item
+  Creatures with a higher \gls{weight} than their own Speed Bonus cannot fly from the ground -- they must climb something high, and take off from a jump.
+  \item
+  Creatures with \pgls{weight} equal to their Speed Bonus can fly after sprinting for a full round.
+  \item
+  Finally, those with \pgls{weight} below their Speed Bonus can simply jump into flight, from the ground.
+\end{itemize}
 
-Half of a character's items' total \gls{weight} forms a penalty -- flying with sacks full of gold won't last long.
-
-Anyone with the Air Sphere can use this as a Bonus to aid their flight, but will have to spend 1~\gls{mp} to begin the spell each \gls{interval}.
+Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
 
 \pic{Roch_Hercka/conjuration_right}
 
