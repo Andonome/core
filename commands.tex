@@ -1,16 +1,5 @@
 \makeindex[name=spells,title={Spell Summaries},columns=2]
 
-\newcommand\makeRule[5]{
-  \subsubsection[#2: \roll{#3}{#4}, \glsentrytext{tn} #5]{#2}
-  \label{#1}%
-  \textit{\roll{#3}{#4}, \glsentrytext{tn}~#5.}%
-}
-
-\newcommand\makeAutoRule[3]{
-  \subsubsection[#2: #3]{#2}
-  \label{#1}%
-}
-
 \newcommand\bigSkillsTable{
   \begin{figure*}[t!]
   \small
@@ -358,7 +347,6 @@
     \end{boxtable}
   }%
 }
-
 
 \newcommand\calcFallingDamage[2]{%
   \setcounter{Strength}{#1}%
