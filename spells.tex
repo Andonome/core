@@ -243,16 +243,22 @@ A good witch leaves no part of her prey unused.
 
 \subsection{Force}
 
-\showSpells{Force2}
-
 \spell{Friendly Bolt}% Name
   {Duplicated}% Enhancements
   {Wane}% Action
   {Earth, Fire}% Spheres
-  {carried items' total \gls{weight}}% Resist with
+  {\gls{weight} carried}% Resist with
   {The caster shouts `let's go', and two targets gain a plus \arabic{spellPlusOne} bonus to running}% Description
   {They feel suddenly lighter, as if being carried.
   However, this spell does not help with carrying heavy items.}
+
+\spell{Migrating Butterfly}% Name
+  {Detailed}% Enhancements
+  {Wane}% Action
+  {Earth, Fire}% Spheres
+  {\gls{weight} carried}% Resist with
+  {The caster outright denies how heavy something is, despite obvious heft, and its \gls{weight} reduces by \arabic{spellPlusOne} when facing towards the direction the caster looks}% Description
+  {Items which fall below \gls{weight}~0 will float like a seed on the wind}
 
 \spell{Traveller's Curse}% Name
   {Distant}% Enhancements
@@ -263,6 +269,8 @@ A good witch leaves no part of her prey unused.
   For the next \arabic{spellPlusOne}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
   {
   The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
+
+\showSpells{Force2}
 
 \subsection{Life}
 
