@@ -176,17 +176,20 @@ When \pgls{pc} and \pgls{npc} act in opposition to each other, the player add th
     The guard will have to use his \roll{Dexterity}{Combat} to resist the curse, but if he wins, he will inflict Damage (covered in \autoref{combat}).
 \end{itemize}
 
-\subsection{Banding Bonuses Together}
+\subsection{\Glsfmtplural{bandAct}}
 \label{teamwork}
 \label{banding}
 \index{Teamwork}
 
 Some tasks lend themselves to working with others.
 Others can be difficult or impossible to do with companions.
-When the troupe want to work together to get a broken cart down a hill safely, track down a thief, or spot danger, they can benefit from \textit{Banding}.
+When the troupe want to work together to get a broken cart down a hill safely, track down a thief, or spot danger, they can benefit from \pgls{bandAct}.
 But when sneaking through an area, navigating, or understanding history, Banding together will not help.
 
-When characters can work together, one person rolls with their Bonus, then adds half the second Bonus, a quarter of the next Bonus, and so on.
+\gls{bandAct}
+
+When characters can work together, one person rolls with their Bonus, then adds half the second Bonus, a quarter of the next Bonus, and so on.%
+\footnote{Always round up on half, so $4 + \frac{1}{2} = 5$, but $5 + \frac{1}{4} = 5$.}
 
 \begin{exampletext}
 
@@ -194,24 +197,19 @@ Convincing the townsfolk that they need to rebel against the baron, and could ea
 
 \end{exampletext}
 
-\noindent%
-\begin{footnotesize}%
-  \begin{boxtable}[Y |cccc]
-                      & Pikerudd & Snowblight & Chatrik & Drake \\
-  \hline
-  Charisma + Tactics: &  +3     & $+3\frac{1}{2}$      & $+2\frac{1}{4}$      & $+1\frac{1}{8}$    \\
-  Roll Bonus:         &  +3     &     +2               &       +1             &  0 \\
-  \hline
-  Running Total:      &  +3     &     +5              &  +6     & +6    \\
-  \hline
-    Grand Total: & & & & \textbf{6} \\
-  \end{boxtable}
-\end{footnotesize}
+\begin{boxtable}[L|ccc]
+                          & Pikerudd & Snowblight      & Chatrik         \\
+\hline                                                                   
+\roll{Charisma}{Tactics}  &  +3     &     +3           & +3              \\
+Multiplier                &   1     & $\frac{1}{2}$    & $\frac{1}{4}$   \\
+Value:                    &   1     & $1+\frac{1}{2}$  & $\frac{3}{4}$   \\
+Running Total:            &   1     & $2+\frac{1}{2}$  & $3+\frac{1}{4}$ \\
+\hline
+  Grand Total: & & & \textbf{4} \\
+\end{boxtable}
 
-\subsubsection{Generalized Banding}
-\index{Banding}
-
-The Banding system works with more than standard action Bonuses.
+\subsubsection{Generalized \Glsfmtplural{bandAct}}
+means all accumulated Bonuses work the same way.
 If two people are pushing with Strength +2, they count as having a total Strength of +3.
 You'll find a few different rules are just the Banding rule applied to a different area (for example, \nameref{stackingarmour}, \vpageref{stackingarmour}).
 
@@ -359,6 +357,7 @@ A step might be ten metres wide as each one covers an entire house when the batt
 The precise distances represented do not matter, just so long as they consistently balance one character's ability to run away with another's ability to hit someone with a projectile.
 To track longer distances, without resorting to unnatural language like `250 metres', a couple of systems use broad relational terms:
 
+\null
 \setcounter{spellCost}{2}
 \begin{itemize}
   \item
