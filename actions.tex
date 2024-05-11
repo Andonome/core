@@ -186,32 +186,30 @@ Others can be difficult or impossible to do with companions.
 When the troupe want to work together to get a broken cart down a hill safely, track down a thief, or spot danger, they can benefit from \pgls{bandAct}.
 But when sneaking through an area, navigating, or understanding history, Banding together will not help.
 
-\gls{bandAct}
-
 When characters can work together, one person rolls with their Bonus, then adds half the second Bonus, a quarter of the next Bonus, and so on.%
 \footnote{Always round up on half, so $4 + \frac{1}{2} = 5$, but $5 + \frac{1}{4} = 5$.}
 
 \begin{exampletext}
-
-Convincing the townsfolk that they need to rebel against the baron, and could easily succeed, the troupe work together on a Charisma + Tactics roll.
-
+  Convincing the townsfolk that they need to rebel against the \gls{warden}, the troupe work together on a \roll{Charisma}{Tactics} roll.
+  Pikerudd has the highest Bonus, so he adds the full Bonus, then Snowblight adds half of his, and Chatrik, a quarter.
 \end{exampletext}
 
 \begin{boxtable}[L|ccc]
                           & Pikerudd & Snowblight      & Chatrik         \\
 \hline                                                                   
-\roll{Charisma}{Tactics}  &  +3     &     +3           & +3              \\
+\raggedright
+\roll{Charisma}{Tactics}  &  +4     &     +2           & +2              \\
 Multiplier                &   1     & $\frac{1}{2}$    & $\frac{1}{4}$   \\
-Value:                    &   1     & $1+\frac{1}{2}$  & $\frac{3}{4}$   \\
-Running Total:            &   1     & $2+\frac{1}{2}$  & $3+\frac{1}{4}$ \\
+Value:                    &   4     & $1$              & $\frac{1}{2}$   \\
+Running Total:            &   4     & $5$              & $5+\frac{1}{2}$ \\
 \hline
-  Grand Total: & & & \textbf{4} \\
+  Grand Total: & & & \textbf{5} \\
 \end{boxtable}
 
 \subsubsection{Generalized \Glsfmtplural{bandAct}}
 means all accumulated Bonuses work the same way.
 If two people are pushing with Strength +2, they count as having a total Strength of +3.
-You'll find a few different rules are just the Banding rule applied to a different area (for example, \nameref{stackingarmour}, \vpageref{stackingarmour}).
+You'll find a few different rules are just the Banding rule applied to a different area (for example, \nameref{bandingArmour}, \vpageref{bandingArmour}).
 
 \subsection{Margins}
 \index{Margins}
@@ -246,13 +244,13 @@ Everything in the game has \pgls{weight}, and when characters carry more than th
 \pic{Roch_Hercka/dwarf_encumbrance}
 
 \subsubsection{On the Back}
-Characters can hold a total \gls{weight} equal to their current \glspl{hp} without Penalty.
+characters can hold a total \gls{weight} equal to their current \glspl{hp} without Penalty.
 After that, every spare shortsword, quiver, and cheese-wheel increases the Penalty by its own \gls{weight}.
 
 \index{Backpacks}
 \begin{exampletext}
   Skidvein has an impressive +3 Strength Bonus, and the Knack `Unstoppable', giving him 11~\glspl{hp} in total.
-  He decided to wear complete leather armour (2), take a longsword (3), then stuff his backpack with three days' worth of food (3), and a small tent (1).
+  He decided to wear complete leather armour (\gls{weight} 2), take a longsword (3), then stuff his backpack with three days' worth of food (3), and a small tent (1).
 
   His companions decided he could add their larger tent (3), medical supplies (1), and bagpipes (2).
   The \gls{weight} of 15 puts him well over his 11~\glspl{hp}, so the penalty is -4.
@@ -266,19 +264,14 @@ so if a gnomish companion receives a serious injury, the troupe may be able to l
 If a large human receives a serious injury, their companions may have a serious question on their hands.
 
 \subsubsection{In the Arms}
-Characters can carry a total \gls{weight} equal to half their \glspl{hp} in their arms.
+characters can carry a total \gls{weight} equal to half their \glspl{hp} in their arms.
 Someone with 8~\glspl{hp} who picks up a bronze statue, with \gls{weight}~12 would receive a -8~Penalty to all actions.
 Mounting it on their back reduces the Penalty to~-4.
 
 \subsubsection{To Hand}
-Using only one hand puts the limit to a quarter of their \glspl{hp}.
+means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 If \pgls{pc} with 6~\glspl{hp} lifts a poleaxe with \gls{weight}~4, they would receive a -2 Penalty to attack.
 If the character actually hits, the Damage works as usual, so sometimes people find that picking up a weapon twice their height feels like the best option they have.
-
-\subsubsection{Bloodloss}
-
-Losing \glspl{hp} can mean \Gls{weight} Penalties.
-Carrying items with a total \gls{weight} of 5 seems fine until a shortsword to the gut leave the character with 2~\glspl{hp}.
 
 \subsection{\Glsfmtlongpl{ep}}
 \label{ep}
@@ -293,10 +286,9 @@ While mid-combat, characters should only gain \glspl{ep} from spells, not from t
 Characters with enough luck to avoid arrows and dragon-fire can still collapse after a long~run.
 
 \subsubsection{Special Categories}
-
-Characters can remove \glspl{ep} which result from tiredness with a little rest (covered \vpageref{healing}), but \glspl{ep} gained from starvation and sleep deprivation will continue stacking up on the character sheet until the character eats and sleeps.
-
-Some of \gls{fenestra}'s rare and wicked diseases accrue \glspl{ep} until healed with \pgls{ingredient} from the correct Sphere.
+of \glspl{ep} will not disappear with \pgls{interval}'s rest.
+Starvation and sleep deprivation inflict \glspl{ep} which only return with food and sleep.
+Likewise, poison and some wicked diseases accrue \glspl{ep} until healed with \pgls{ingredient} from the correct \gls{sphere}.
 
 \index{Coins!\Glsfmtlongpl{ep}}
 The character sheet holds a special place for a stack of coins to represent \glspl{ep}, below the space for \glspl{hp} coins.
@@ -312,16 +304,15 @@ Using different coins to represent different kinds of \gls{weight} and \glspl{ep
 \subsection{Time}
 \label{time}
 
-\subsubsection{Setup}
-Each session has a small setup, and then the day starts to spin.
+\subsubsection{Sessions}
+should keep a background rhythm of encounters and \glspl{sq} going.
+Encounters should fly by quickly, as half the encounters will be non-combat, and combat resolves quickly.
 
 \input{config/rules/start.tex}
 
-\subsubsection{Rounds}
-
-When everyone wants to talk and act at the same time, time switches to \glspl{round} (usually during combat).
-\Pgls{round} itself can then be further divided into \glspl{ap} (covered \vpageref{actionPoints}).
-All that matters is that \pgls{round} is a period of time in which players roll dice, then another \gls{round} occurs.
+\subsubsection{\Glsfmtplural{round}}
+begin when everyone tries to speak and act at the same time.
+The \gls{gm} goes round the table clockwise, as players spend \glspl{ap}.
 
 \input{config/rules/interval.tex}
 
@@ -330,17 +321,13 @@ A central pool of coins makes giving and tracking \glspl{fp} and \glspl{mp} fast
 Players have a space on their character sheets to track \glspl{fp}, just below the \glspl{hp} area.
 
 \subsubsection{\Glsentrytext{downtime}}
+\glsdesc{downtime}.
+So a weekly session leaves the players with no more than three weeks for the \glspl{pc} to rest, train, and plan.
+Find suggested \gls{downtime} actions \vpageref{downtimeActions}.
 
-Players have a limited amount of \gls{downtime} to employ.
-Every week in our world, three weeks pass in \gls{fenestra}.
-So a weekly session leaves the players with no more than three weeks for the \glspl{pc} to rest.
-
-\subsubsection{Healing}
 \label{healing}
 \input{config/rules/healing.tex}
-So someone on -3~\glspl{hp} would recover 2~\glspl{hp} after a week, then reach 0~\glspl{hp} on week 2, 1 \gls{hp} on week 3, then 2, 3, 5, and so on.
-
-When a \gls{pc} has been reduced to 1~\gls{hp}, the player should consider taking a different character -- from their \gls{characterPool} or any relevant \gls{npc} -- for the rest of the session.
+When \pgls{pc} has been reduced to 1~\gls{hp}, the player should consider taking a different character for the rest of the session, from their \gls{characterPool} if possible.
 
 \subsection{Space}
 \label{space}
@@ -348,20 +335,16 @@ When a \gls{pc} has been reduced to 1~\gls{hp}, the player should consider takin
 
 \subsubsection{\Glsfmtplural{step}}
 \index{Steps}
+are yards if you like yards, or metres if you like metres.
+Or just \glspl{step}.
 
-BIND tracks space with \glspl{step}.
-A \gls{step} is just any unit of space within the battlefield.
-If you are using a battlemap which has squares or hexagons marked out on it, then those tiles are the size of a step.
-A step might be ten metres wide as each one covers an entire house when the battlefield is a large town, or it might be just two yards wide when moving through a detailed map of a labyrinth.
+\subsubsection{Longer Distances}
+use these standard approximations, to save the \gls{gm} from having to say `250 metres North'.
 
-The precise distances represented do not matter, just so long as they consistently balance one character's ability to run away with another's ability to hit someone with a projectile.
-To track longer distances, without resorting to unnatural language like `250 metres', a couple of systems use broad relational terms:
-
-\null
-\setcounter{spellCost}{2}
 \begin{itemize}
   \item
   \toggletrue{Distant}
+  \setcounter{spellCost}{2}
   \setRange\stepcounter{spellCost}
   `\spellRange'
   \item
@@ -378,18 +361,11 @@ To track longer distances, without resorting to unnatural language like `250 met
   `\spellRange'
 \end{itemize}
 
-\subsubsection{Areas}
-\index{Areas}
+\subsubsection{\Glsfmtplural{area}}
+\glsdesc{area}.
 
-\Pgls{area} is just any place which looks different from another.
-While traipsing through a labyrinth, each room or passage might be thought of as \pgls{area}.
-When gallivanting through open plains one \gls{area} might be a copse of trees, another a lake, and then the next area, \pgls{village}.
-
-\subsubsection{Region}
-\index{Regions}
-
-Regions encompass a full forest, a town, or a collection of \glspl{village}.
-Each region has its own set of likely encounters, such as tradesmen in the \glspl{village}, cut-throats in town, and elves in the forest.
+\subsubsection{\Glsfmtplural{region}}
+\glsdesc{region}.
 
 \end{multicols}
 
