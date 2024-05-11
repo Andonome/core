@@ -304,11 +304,11 @@ Using different coins to represent different kinds of \gls{weight} and \glspl{ep
 \subsection{Time}
 \label{time}
 
-\subsubsection{Sessions}
-should keep a background rhythm of encounters and \glspl{sq} going.
-Encounters should fly by quickly, as half the encounters will be non-combat, and combat resolves quickly.
-
-\input{config/rules/start.tex}
+%\subsubsection{Sessions}
+%should keep a background rhythm of encounters and \glspl{sq} going.
+%Encounters should fly by quickly, as half the encounters will be non-combat, and combat resolves quickly.
+%
+%\input{config/rules/start.tex}
 
 \subsubsection{\Glsfmtplural{round}}
 begin when everyone tries to speak and act at the same time.
@@ -340,32 +340,35 @@ Or just \glspl{step}.
 
 \subsubsection{Longer Distances}
 use these standard approximations, to save the \gls{gm} from having to say `250 metres North'.
+In order, they are:
 
-\begin{itemize}
-  \item
-  \toggletrue{Distant}
-  \setcounter{spellCost}{2}
-  \setRange\stepcounter{spellCost}
-  `\spellRange'
-  \item
-  \setRange\stepcounter{spellCost}
-  `\spellRange'
-  \item
-  \setRange\stepcounter{spellCost}
-  `\spellRange'
-  \item
-  \setRange\stepcounter{spellCost}
-  `\spellRange'
-  \item
-  \setRange\stepcounter{spellCost}
-  `\spellRange'
-\end{itemize}
+\begin{multicols}{2}
+  \begin{enumerate}
+    \item
+    \toggletrue{Distant}
+    \setcounter{spellCost}{2}
+    \setRange\stepcounter{spellCost}
+    `\spellRange'
+    \item
+    \setRange\stepcounter{spellCost}
+    `\spellRange'
+    \item
+    \setRange\stepcounter{spellCost}
+    `\spellRange'
+    \item
+    \setRange\stepcounter{spellCost}
+    `\spellRange'
+    \item
+    \setRange\stepcounter{spellCost}
+    `\spellRange'
+  \end{enumerate}
+\end{multicols}
 
-\subsubsection{\Glsfmtplural{area}}
-\glsdesc{area}.
-
-\subsubsection{\Glsfmtplural{region}}
-\glsdesc{region}.
+%\subsubsection{\Glsfmtplural{area}}
+%\glsdesc{area}.
+%
+%\subsubsection{\Glsfmtplural{region}}
+%\glsdesc{region}.
 
 \end{multicols}
 
