@@ -2,14 +2,6 @@
 \index{Combat}
 \label{combat}
 
-Don't roll for initiative!
-Instead, each character's \textit{Speed} determines how many \glsentrylongpl{ap} they start with. 
-Characters attack with any number of Resisted rolls, but generally use their \textit{Dexterity} and a Martial Skill.
-With a standard attack, the winner of the Resisted roll then uses their \textit{Strength} to deal Damage.%
-\footnote{Having one roll for a `clash' saves a lot of time.  Instead of rolling for `initiative, attack, dodge, attack, damage', players can just spend \pgls{ap} and attack.}
-
-Combat will generally only last a couple of `rounds', during which the \glspl{pc} could take one action, or six, or even more, depending on circumstances and their Traits and equipment.
-
 \section{Raw Combat}
 
 \begin{multicols}{2}
@@ -18,40 +10,43 @@ Combat will generally only last a couple of `rounds', during which the \glspl{pc
 \label{attack}
 
 Characters generally fight with a Resisted \roll{Dexterity}{Combat} roll, but any kind of Resisted roll works, as long as it makes sense.
-In fact, a round of combat could easily go like this:
 
-\begin{exampletext}
-  Cleftrank charges towards the elven enchanter as the enchanter points behind Cleftrank, and asks `what is that thing, crawling over your shoulder?'.
-  The player insists his character would ignore this and keep on charging, so the \gls{gm} allows him to resist with a charge, as he already began the assault.
+\subsubsection{Standard Attacks}
+use \roll{Dexterity}{Combat}, plus any weapon Bonus.
+\Pgls{npc} adds their Bonuses to \tn[7], then the player attempts to beat it with a standard roll.
 
-  \small{(The \gls{gm} adds the enchanter's \roll{Charisma}{Mind} to the \gls{tn}, for a total \gls{tn} of 12; Cleftrank's player resists with his \roll{Speed}{Athletics}, and wins the roll)}
+Consider the following goblins:
+\vspace{1em}
+\toggletrue{genExamples}
 
-  My character swings his axe through the elf's jaw to shut him up.
+\goblin
 
-  \small{(The elf continues attempting the enchantment spell, so the player rolls at \gls{tn} 12 again, but this time he uses \roll{Dexterity}{Combat}, and the axe costs 3~\glspl{ap} to use)}
+The goblin's \roll{Dexterity}{Combat} totals \tn.
+We add the weapon's Bonus for a total of \gls{tn}~\arabic{toHit}.
 
-  `Cleftrank looks behind himself for a moment, then checks his other behind, and somewhere in his confusion he spots the enchanter beside him, taking out a dagger.'
+\toggletrue{allyCharacter}
+  \humansoldier[\npc{\M\Hu}{Keelvore}]
+\togglefalse{allyCharacter}
+\vspace{1em}
 
-  \small{(Cleftrank loses the roll, so the enchantment spell strips him of 2~\glspl{ap}, which puts him at -1~\glspl{ap}; he cannot run away)}
+When Keelvore attacks, the player rolls $2D6+\arabic{att}$.
 
-  The enchanter drives the dagger down!
+\begin{description}
+  \item[Beating the \gls{tn}]
+  means dealing Damage to a goblin.
+  \item[Rolling under the \gls{tn}]
+  means taking Damage from the goblins.
+  \item[Rolling just on the \gls{tn}]
+  means the player chooses -- both Damage, or neither.
+\end{description}
 
-  \small{(If Cleftrank defends with the axe, it will cost him 3 more \glspl{ap}, putting him down to -4.
-  He cannot deal with a -4 penalty, so he decides to use the Brawl Skill instead)}
+\subsubsection{Other Manoeuvres}
+include running away with \roll{Speed}{Athletics}, or casting a spell to make someone slip on mud with \roll{Charisma}{Earth}, or anything else a player can think of.
 
-  (The enchanter's \roll{Dexterity}{Combat} puts the \gls{tn} to 10.
-  Cleftrank rolls his \roll{Dexterity}{Brawl} with a -1 penalty\ldots and wins)
-
-  \small{(The elf buckles in pain from the kick, then turns to run)}
-
-\end{exampletext}
-
-When combat begins, roll your \roll{Dexterity}{Combat} against \tn[7], plus the enemy's \roll{Dexterity}{Combat}.
-If you win, roll to see how much Damage you deal to the opponent.
-If your opponent wins, the \gls{gm} rolls to see how much Damage your opponent deals you.
-Finally, on a tie, you can decide to both take \emph{and} deal Damage, or neither.
-In the former case, you and your opponent hit each other at the same time.
-In the latter, blades clash but nobody gets hurt.
+As long as an action resists the attack, it works.%
+\footnote{The kind of flow present in BIND may feel strange to people who have played other RPGs.
+There is nothing like an `attack of opportunity', because every time someone passes, you might attack\ldots and they can roll to resist with their ability to sprint, or they could stop to attack.
+In all cases, both parties spend \glspl{ap}.}
 
 \begin{figure*}[t!]
   \stackingDamageChart
@@ -62,20 +57,17 @@ In the latter, blades clash but nobody gets hurt.
 
 If you hit, roll $1D6$ plus your Strength Bonus to determine Damage.
 The Damage is then taken off the enemy's \glspl{hp}.
-Everyone has a number of \glspl{hp} to withstand Damage.
-When they reach 0~\glspl{hp}, they fall over.
+When characters reach 0~\glspl{hp}, they fall over.
 
 \subsubsection{Stacking Damage}
 \index{Combat!Stacking Damage}
 \label{stackingDamage}
-
-Damage Bonuses cannot extend forever.
+means Damage Bonuses cannot extend forever.
 Replace every +4 Damage Bonus by an additional $D6$.
 It continues through all Damage Bonuses, so $1D6+9$ Damage becomes $3D6+1$ Damage after conversion.
 
 \subsubsection{\Glsfmtlongpl{hp}}
-
-Each character has a number of \glsentryfullpl{hp} equal to 6 plus their Strength Bonus.
+are equal to 6 plus a character's Strength Bonus.
 Small gnomes typically have 4~\glspl{hp} while big, strong humans typically have 7.
 Losing even a single \gls{hp} means the character has suffered serious Damage.
 A long fall might have broken the character's bone.
@@ -89,7 +81,7 @@ Having a physical representation of waning health lets the other players see the
 \subsubsection{Death}
 \index{Death}
 \label{death}
-Once a character reaches 0~\glspl{hp}, they fall over, and don't get up.
+comes for characters at 0~\glspl{hp}.
 Anyone can attempt to save them by bandaging up their wounds, or staving off a concussion, with a \roll{Wits}{Medicine} roll.
 The \gls{tn} is 7 plus the number of \glspl{hp} the character has fallen below 0, so someone at -3~\glspl{hp} would need a roll at \gls{tn} 10 to save.
 
@@ -108,17 +100,18 @@ If nobody succeeds in the roll, the character dies.
 \paragraph{A successful check}
 means that the character is unconscious for the remainder of the \gls{interval}, but still alive.
 At this point, the rest of the troupe will have to carry their fallen comrade back to safety -- if they can.%
-\footnote{See page \pageref{weight} for \nameref{weight}.}
+\footnote{See \autopageref{weight} for \nameref{weight}.}
 
 \subsection{\Glsfmtlongpl{ap} \& Initiative}
 \label{actionPoints}
 \index{Initiative}
 
-Everyone begins combat with 3~\glsentryfullpl{ap} plus their Speed Bonus.%
+Everyone begins combat with 3~\glsentryfullpl{ap} plus their Speed Bonus, then spends their \glspl{ap} to attack.%
 \footnote{Anyone with a Speed Bonus of -3 can act on Initiative 0, but only once everyone else has reached Initiative 0.
 Those with a lower Initiatives must wait one cumulative round extra, before acting.}
-Every action requires spending some number of \glspl{ap}.
 Once someone reaches 0~\glspl{ap}, they cannot initiate any actions, but they can still engage in any Resisted actions if attacked.
+
+Whether or not someone has \glspl{ap} to spare, they must respond to an attack -- resistance is mandatory.
 
 \subsubsection{Negative \Glsfmtlongpl{ap}}
 Anyone overspending \glspl{ap} enters \emph{negative} \glspl{ap}, and receives a penalty to all actions equal to their negative score.
@@ -131,8 +124,8 @@ Anyone overspending \glspl{ap} enters \emph{negative} \glspl{ap}, and receives a
 
 \subsubsection{Combat Order}
 \index{Initiative}
-
-﻿During combat, anyone may take actions without a set sequence\ldots until two characters vie for priority.
+doesn't matter much\ldots until it does.
+The \gls{gm} can go clockwise round the table, but anyone can interrupt.
 At that point use the following method to determine who goes first:
 
 \begin{enumerate}
@@ -147,13 +140,6 @@ At that point use the following method to determine who goes first:
   \item
   Dice roll! ($1D6$ each)
 \end{enumerate}
-
-\subsubsection{\Glspl{quickaction}}
-
-\Glspl{quickaction} require spending an \gls{ap} immediately to react to a situation.
-This includes getting attacked by someone or moving away from someone who approaches you.
-
-Resolve priority upon simultaneous action with the Combat Order rules above.
 
 \paragraph{Guarding}
 \label{guarding}
@@ -174,18 +160,16 @@ During combat, everyone should focus on the task at hand, and communicate sparin
 \label{fate_points}
 
 The \glspl{pc} have a limited supply of luck -- often enough to prevent an injury, nearly always enough to hold back death.
-This makes a lesson from the first tooth, axe, or claw, and maybe even the second.
+The first tooth, axe, or claw, are a lesson; the rest probably death.
 
 \subsubsection{Narrative Flow}
 comes naturally from battles where the \glspl{pc} have a near-miss, then take a permanent injury, but revive through returned courage.
-\Glspl{fp} act just like `courage points' for \glspl{pc} (or even players) as a lot means battle, and none means `run'.
-However, if they survive, their `courage' can return, despite remaining on 1~\gls{hp} for the remainder of the session.
 \Pgls{pc} can go down to 1~\gls{fp}, then 2~\glspl{hp}, and \pgls{interval} later stand and persevere, as their luck returns.
+\Glspl{fp} act just like `courage points' for \glspl{pc} (or even players) as a lot means `battle', and none means `run'.
 
 Losing \glspl{fp} can mean any number of things.
 \Pgls{pc} might stumble slip and catch themselves just in time, causing an arrow to narrowly miss their head; or the enemy might swing their sword and strike a stray tree-branch.
 Injury is paid in \glspl{fp} while they last, then Damage starts to take large chunks from the \glspl{pc}.
-This means \glspl{fp} work much like `courage points' -- characters fight with them, and leave when they run out.
 
 \subsubsection{The Mechanic}
 simply lets players spend \pgls{fp} instead of losing \pgls{hp}.
@@ -309,6 +293,7 @@ They don't move as quickly, or easily as other shields, but still work well with
   \end{tikzpicture}
 }
 
+\columnbreak
 \subsection{Armour}
 \index{Armour}
 
@@ -416,8 +401,7 @@ As with picking up any other item, characters must spend least 1~\gls{ap} to tak
 \index{Projectiles!Bow}
 \index{Bows}
 \label{longbow}
-
-Long bows (or `hunting bows') are difficult things to work but well worth it once the archer practices enough.
+demands a lot of Strength to just pull back.
 To use a bow, the archer must have a Strength Bonus at least as high as the bow's Damage.
 So if a hunting bow deals $1D6+2$ Damage, the archer will need at least a Strength of +2 to draw the arrow properly (or at all).
 Having a Strength of 3 will not increase the Damage, but it can decrease the firing time.
@@ -528,6 +512,7 @@ When a character has no space to swing a weapon -- either vertically or horizont
 
 \makeAutoRule{holdingBreath}{Holding the Breath}{+1~\glsentrytext{ep} per round, must breath in at -1~\glsentrytext{ap}}
 \index{Combat!Staying Silent}
+\index{Hold Breath}
 during combat allows one to stay silent, and not breath any nasty gasses in.
 While doing so, the character gains 1~\gls{ep} each round (these \glspl{ep} are tracked separately, and vanish soon after combat).
 
@@ -640,9 +625,9 @@ Once a chase has begun, both sides make a Resisted Roll of \roll{Speed}{Athletic
 A success Margin of 3 means the characters flee far and fast enough to escape their pursuers, but gain \pgls{ep} for the distance run.
 
 \subsubsection{Switching Traits}
-
-Any smaller success Margin means the characters do not escape their pursuers, but can determine where the direction of the chase, leading their pursuers exactly where they want, changing the nature of the chase with a newfound \gls{area}.
-Changing \pgls{area} can change the Traits involved, so the characters can decide to hide, replacing \roll{Dexterity}{Athletics} with \roll{Dexterity}{Stealth}.
+represents changing tactics when the first attempt to flee fails.
+The troupe do not escape their pursuers, but can determine where the direction of the chase, leading their pursuers exactly where they want, changing the nature of the chase with a newfound \gls{area}.
+Changing \pgls{area} can change the \glspl{trait} involved, so the characters can decide to hide, replacing \roll{Dexterity}{Athletics} with \roll{Dexterity}{Stealth}.
 Or they might head straight into \pgls{area} of harsh bushes which demand strong limbs to move aside; this changes the roll to \roll{Strength}{Athletics}.
 
 Players can only select a Trait which makes sense in the current context.
@@ -651,9 +636,9 @@ Players can only select a Trait which makes sense in the current context.
 Whenever the troupe run together, each has an individual roll, so the troupe can either accept the result of the character with the lowest roll, or split up.
 The same applies when switching Traits -- one character may climb up a challenging wall (switching the roll to \roll{Dexterity}{Athletics}), while another ducks behind a wide tree (switching the roll to \roll{Speed}{Stealth}).
 
-\subsubsection{Failure}
-A small Failure Margin works the same way, but in reverse.
-A single Failure Margin means the pursuers chase the troupe through 2~\glspl{area}, herding them right where they want them, and switching to another Trait.
+\subsubsection{The Failure Margin}
+works the same way, but in reverse.
+A single Failure Margin means the pursuers chase the troupe through 2~\glspl{area}, herding them right where they want them, and switching to another \gls{trait}.
 
 A Failure Margin of 3 or more means the pursuers chase the characters through \pgls{area} before catching them.
 
@@ -671,9 +656,9 @@ As per the previous chart, a near-failure can be worse than a total failure.
 
 \begin{multicols}{2}
 
-\makeAutoRule{falling}{Falling Damage}{falling Damage equals half the \glsfmtplural{step} fallen, plus the characters Strength.}
+\makeAutoRule{falling}{Falling Damage}{equals half the \glsfmtplural{step} fallen, plus the characters Strength.}
 \index{Falling}
-Falling Damage equals half the \glspl{step} fallen, plus the characters Strength.
+equals half the \glspl{step} fallen, plus the characters Strength.
 The Damage then converts to a dice roll instead.
 
 If the \glspl{pc} all fall off a building, 3~\glspl{step} high, they would start with 2~Damage.
@@ -730,14 +715,19 @@ Creatures with any amount of encumbrance cannot take off.
 
 \makeAutoRule{swarms}{Swarms}{each \glsfmttext{hp} occupies one \glsfmttext{step}, which inflicts 1~\glsfmttext{hp} Damage per round. Swarms take up to 1~Damage per attack}
 \index{Swarms}
-
-This abstract spread of \glspl{hp} can represent a swarm of feral rats, a buzzing hive of blood-draining stirges, or any other tiny thing which can act as a unit.
-We can't track individual bites and stings -- instead the swarm moves as one, but dies separately.
-
-Swarms ignore Partial armour covering (as they can wriggle across the uncovered parts), but cannot attack anyone in Complete armour at all, unless they achieve a \gls{vitalShot}.
+abstract a mass of tiny enemies, such as feral rats, a buzzing hive, or a semi-aware pile of acidic gloop, moving as a single unit.
+We can't track individual bites and stings -- instead the swarm moves as one, but dies in part-by-part.
 
 \swarm{Rats}{3}{2}{3}{0}
 
 \input{config/rules/swarms.tex}
+
+\begin{exampletext}
+  The rats above have only 3~\glspl{hp}, so their Attack Bonus is 9.
+
+  A character with a massive axe, dealing top-Damage, would not fare well against the swarm; no matter how much Damage they would deal to a person, the swarm only loses 1~\gls{hp}.
+
+  A character with a dagger would do much better, but once only a single \gls{hp}-worth of rats remained, they would struggle to hit the last of them.
+\end{exampletext}
 
 \end{multicols}
