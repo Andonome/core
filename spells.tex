@@ -7,20 +7,25 @@
 
 \noindent
 Magic can do any number of things, but like anything else, it has standards.
-These standards are, of course, `spells'.
+These standards are `spells'.
 
-Spells of the `elemental spheres', directly affect their elements (Earth, Fire, Water, Air, or Fate).
-They produce powerful effects, but must affect people indirectly.
-A fire spell might make fire explode in someone's face, but if that someone does not stand near a fire, then the Fire Sphere will not affect them, because most people are not made out of fire.
+\subsubsection{The Elemental \glsfmtplural{sphere}}
+are Martial \glspl{skill}, just like Projectiles and Combat.
+To cast a spell, check the `Requirements'; if it says `Air 2', then the character needs the `Air' \gls{skill} at level 2 to learn and cast it.
 
-The `high spheres' (Death, Light, Life, Force, and Mind) each need two low spheres combined to cast their spells; level 2 Light magic requires Fire 2 and Air 2, and so on.
-These high spheres tend to affect people much more directly, but with smaller effects.
-Death spells will encourage the little seed of death which sits within us all, and Life magic can twist or prod anything which lives.
+\subsubsection{The High \glsfmtplural{sphere}}
+are a mix of the lower.
+Fire and Air make `Light', Fire and Earth make `Force'.
+Characters don't have to learn anything extra to learn these High \glspl{sphere} -- they only need the two elemental \glspl{skill}.
 
-The primordial breath to speak the language of spells comes from the wind, bringing inspiration to those who can listen.
-Of course, spellcasters without the patience for inspiration often resort to just gutting a giant arachnid for its webbing, mixing in some griffin-feathers, and twisting the world by force.
-A good \gls{witch} leaves no part of her prey unused.
+High \glspl{sphere} show their requirements as their base elements, so when you look up a `Death 2' spell, it will show the requirements as `Air 2, Fate 2'.
+As long as you have both of those at level 2 or above, you can cast the spell.
 
+\subsubsection{Casting Spells}
+means speaking to the elements indirectly.
+Most spells come with a suggested phrase for the caster to hint their desires, and player should feel free to improvise their own.
+
+Spells
 \input{config/rules/spells.tex}
 
 \end{multicols}
@@ -293,11 +298,11 @@ A good \gls{witch} leaves no part of her prey unused.
   {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits at \spellRange\ in a particular direction}% Description
   {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challenge.}
 
-\widePic[t]{Roch_Hercka/flashing_light}
-
 \subsection{Light}
 
 \showSpells{Light2}
+
+\pic{Roch_Hercka/flashing_light}
 
 \showSpells{Light2}
 
@@ -359,7 +364,8 @@ A good \gls{witch} leaves no part of her prey unused.
 
 \showSpells{Mind2}
 
-\null
+\pic{Roch_Hercka/elvish_enchanter}
+
 \spell{Social Spell}% Name
   {Detailed}% Enhancements
   {Warp}% Action
@@ -375,8 +381,6 @@ A good \gls{witch} leaves no part of her prey unused.
   The spell typically tries to attack the caster's enemies, and then interact with the caster and their friends.
 
   }
-
-\pic{Roch_Hercka/elvish_enchanter}
 
 \subsection{Divergent}
 
@@ -540,6 +544,8 @@ A good \gls{witch} leaves no part of her prey unused.
 
   The strange skin fades to normal once the target takes Damage and heals.}
 
+\null
+
 \spell{Piglet Farm}% Name
   {Duplicated, Detailed}% Enhancements
   {Wane}% Action
@@ -548,6 +554,8 @@ A good \gls{witch} leaves no part of her prey unused.
   {The caster cries `\textit{Pigs}', and the first \arabic{spellTargets} targets within \spellRange\ shrink, taking a -\arabic{spellPlusOne} Strength Penalty}% Description
   {
   This penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this penalty, and then half of their regular Strength penalty, for a total of -\arabic{spellPlusTwo}.}
+
+\null
 
 \subsection{Light}
 
