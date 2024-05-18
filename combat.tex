@@ -379,9 +379,9 @@ If the plate armour had \pgls{covering} of only 3 then rolling 3 over the creatu
 \begin{multicols}{2}
 
 \noindent
-Projectiles have their own Martial Skill, which covers everything from javelins to bows.
-Archers
-\input{config/rules/projectiles.tex}
+Projectiles have their own Martial \gls{skill}, which covers everything from javelins to bows.
+These \glsdesc{projectiles}.
+
 \sidebox[20]{
   \begin{nametable}{Projectiles Cover}
     +1 & Large bushes \\
@@ -399,7 +399,7 @@ ignoring all \gls{dr}.
 All projectiles suffer from the need to reload.
 As with picking up any other item, characters must spend least 1~\gls{ap} to take out and use arrows.
 
-\subsubsection{The Long Bow}
+\subsubsection{\Glsfmtplural{bow}}
 \index{Projectiles!Bow}
 \index{Bows}
 \label{longbow}
@@ -413,7 +413,7 @@ To pull back the heavy load on a long bow requires 2~\glspl{ap}, plus the bow's 
 
 Long bows can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim rather than the bow.
 
-\subsubsection{The Short Bow}
+\subsubsection{Short Bow}
 \index{Projectiles!Short Bow}
 \index{Short Bow}
 or `trick bow', is a smaller, lighter thing which can be used by anyone.
@@ -424,13 +424,13 @@ A short bow takes \pgls{ap} to reload, and \pgls{ap} to fire an arrow, so archer
 Shortbows have a maximum range of 20 steps, and deal $1D6-1$ Damage.
 They often bring down prey with multiple arrows rather than a single, deep-penetrating arrow.
 
-\subsubsection{The Crossbow}
-\index{Projectiles!Crossbow}
+\subsubsection{\Glsfmtplural{crossbow}}
+\glsdesc{crossbow}
 \label{crossbow}
 can pierce plate armour, but cannot be reloaded without a thirty-minute lecture about leverage and torque.
 They have a standard Damage of $2D6$, though different crossbows vary in quality.
-Crossbows requires only 1~\gls{ap} to fire, but require 5 rounds, minus the user's Strength Bonus, to reload.
-Reloading always takes a minimum of 1 round.
+Crossbows requires only 1~\gls{ap} to fire, but require 5 \glspl{round}, minus the user's Strength Bonus, to reload.
+Reloading always takes a minimum of 1 \gls{round}.
 
 \subsubsection{Thrown Weapons}
 \index{Projectiles!Thrown Weapons}
@@ -444,8 +444,6 @@ when used in combat, but only
 \dmg{weaponDamage} when thrown.
 
 \subsubsection{Impromptu Thrown Weapons}
-\label{impromptuRanged}
-\index{Projectiles!Impromptu}
 are available only to the very rich, as sensible people don't throw swords, axes, knives, or cups away.
 But if a player insists on ballistic financial decisions, they can inflict cuts, bruises, and very bad headaches on enemies; the weapon receives a -2 penalty to hit and -2 Damage, and another -1 penalty per~\gls{step} thrown.
 \longsword\weaponName s don't make great projectiles, but they deal
@@ -713,14 +711,10 @@ Creatures with any amount of encumbrance cannot take off.
 
 \pic{Roch_Hercka/conjuration_right}
 
-\makeAutoRule{swarms}{Swarms}{each \glsfmttext{hp} occupies one \glsfmttext{step}, which inflicts 1~\glsfmttext{hp} Damage per round. Swarms take up to 1~Damage per attack}
-\index{Swarms}
-abstract a mass of tiny enemies, such as feral rats, a buzzing hive, or a semi-aware pile of acidic gloop, moving as a single unit.
-We can't track individual bites and stings -- instead the swarm moves as one, but dies in part-by-part.
+\subsubsection{\Glsfmtplural{swarm}}
+\glsdesc{swarm}
 
 \swarm{Rats}{3}{2}{3}{0}
-
-\input{config/rules/swarms.tex}
 
 \begin{exampletext}
   The rats above have only 3~\glspl{hp}, so their Attack Bonus is 9.
