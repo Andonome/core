@@ -1,18 +1,18 @@
-\chapter[The Arena]{Combat}
-\index{Combat}
+\chapter[The Arena]{Melee}
+\index{Melee}
 \label{combat}
 
-\section{Raw Combat}
+\section{Raw Melee}
 
 \begin{multicols}{2}
 
 \subsection{Attacking}
 \label{attack}
 
-Characters generally fight with a Resisted \roll{Dexterity}{Combat} roll, but any kind of Resisted roll works, as long as it makes sense.
+Characters generally fight with a Resisted \roll{Dexterity}{Melee} roll, but any kind of Resisted roll works, as long as it makes sense.
 
 \subsubsection{Standard Attacks}
-use \roll{Dexterity}{Combat}, plus any weapon Bonus.
+use \roll{Dexterity}{Melee}, plus any weapon Bonus.
 \Pgls{npc} adds their Bonuses to \tn[7], then the player attempts to beat it with a standard roll.
 
 Consider the following goblins:
@@ -21,7 +21,7 @@ Consider the following goblins:
 
 \goblin
 
-The goblin's \roll{Dexterity}{Combat} totals \tn.
+The goblin's \roll{Dexterity}{Melee} totals \tn.
 We add the weapon's Bonus for a total of \gls{tn}~\arabic{toHit}.
 
 \toggletrue{allyCharacter}
@@ -60,7 +60,7 @@ The Damage is then taken off the enemy's \glspl{hp}.
 When characters reach 0~\glspl{hp}, they fall over.
 
 \subsubsection{Stacking Damage}
-\index{Combat!Stacking Damage}
+\index{Melee!Stacking Damage}
 \label{stackingDamage}
 means Damage Bonuses cannot extend forever.
 Replace every +4 Damage Bonus by an additional $D6$.
@@ -124,7 +124,7 @@ Anyone overspending \glspl{ap} enters \emph{negative} \glspl{ap}, and receives a
   Using big weapons gives big bonuses, but they bring their own dangers!
 \end{exampletext}
 
-\subsubsection{Combat Order}
+\subsubsection{Melee Order}
 \index{Initiative}
 doesn't matter much\ldots until it does.
 The \gls{gm} can go clockwise round the table, but anyone can interrupt.
@@ -374,12 +374,12 @@ If the plate armour had \pgls{covering} of only 3 then rolling 3 over the creatu
 
 \end{multicols}
 
-\section{Ranged Combat}\index{Ranged Combat}
+\section{Ranged Melee}\index{Ranged Melee}
 
 \begin{multicols}{2}
 
 \noindent
-Projectiles have their own Martial \gls{skill}, which covers everything from javelins to bows.
+Projectiles have their own Combat \gls{skill}, which covers everything from javelins to bows.
 These \glsdesc{projectiles}.
 
 \sidebox[20]{
@@ -469,7 +469,7 @@ These rules cover things that happen to characters.
 You can refer back to them when necessary with the list in \autoref{combatAppendix}.
 
 \makeAutoRule{blindness}{Blindness}{spend 1~\glsentrytext{ap} and make a \roll{Wits}{Vigilance} before any other action}
-\index{Combat!Blindness}
+\index{Melee!Blindness}
 in a battle requires responding to all attacks by spending \pgls{ap} and rolling \roll{Wits}{Vigilance}.
 Failure you receive Damage, but success achieves nothing.
 The same applies to initiating an attack, or moving anywhere.
@@ -481,7 +481,7 @@ So if a troupe of 5 people become blinded, each of them would hit a companion on
 \makeAutoRule{darkness}{Darkness}{maximum Bonus equals \roll{Wits}{Vigilance}}
 \label{darkness}
 \index{Darkness}
-\index{Combat!Darkness}
+\index{Melee!Darkness}
 \index{Caving!Fighting in darkness}
 or deep twilight, can give a distinct advantage to those with sharper senses.
 However, when both sides suffer from the darkness, the battle changes very little.
@@ -494,7 +494,7 @@ characters Attribute bonuses cannot go beyond the character's \roll{Wits}{Vigila
   For example, a human guard has caught a room full of elves with stolen goods.
   Thinking quickly, one of the elves douses the room's only lantern.
   The human has a Wits Bonus of -1 and no Vigilance Skill, so his maximum roll has a -1 penalty.
-  The elves have a total \roll{Wits}{Vigilance} of +3, so their \roll{Dexterity}{Combat} has only a +3 cap.
+  The elves have a total \roll{Wits}{Vigilance} of +3, so their \roll{Dexterity}{Melee} has only a +3 cap.
 \end{exampletext}
 
 \paragraph{Fighting in minimal light}
@@ -502,14 +502,14 @@ characters Attribute bonuses cannot go beyond the character's \roll{Wits}{Vigila
 only gives a -1 penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
 
 \makeAutoRule{enclosedcombat}{Enclosed Spaces}{penalty equals weapon's Attack Bonus}
-\index{Caving!Enclosed Combat}
+\index{Caving!Enclosed Melee}
 cause serious problems for people wielding longswords, battle axes, and other large weapons.
 Daggers and shortswords often have an easier time in these locations.
 
 When a character has no space to swing a weapon -- either vertically or horizontally -- their Attack gains a penalty equal to the weapon's Attack Bonus.
 
 \makeAutoRule{holdingBreath}{Holding the Breath}{+1~\glsentrytext{ep} per round, must breath in at -1~\glsentrytext{ap}}
-\index{Combat!Staying Silent}
+\index{Melee!Staying Silent}
 \index{Hold Breath}
 during combat allows one to stay silent, and not breath any nasty gasses in.
 While doing so, the character gains 1~\gls{ep} each round (these \glspl{ep} are tracked separately, and vanish soon after combat).
@@ -521,8 +521,8 @@ means gravity helps on the down-swing, while the opponent must bring their head 
 
 \makeAutoRule{entangled}{Trapped, Entangled, or Prone}{-2~\glsentrytext{ap} Penalty}
 \label{trapped}
-\index{Combat!Prone}
-\index{Combat!Entangled}
+\index{Melee!Prone}
+\index{Melee!Entangled}
 \label{prone}
 characters may be caught in mud, shackled to a pillar, or caught in a web.
 They take a penalty to Speed (the default is -2), which reduces their \glspl{ap}.
@@ -533,9 +533,9 @@ These additional actions cover different ways to engage with enemies.
 Anyone can use them at any point, if they use the right weapons.
 
 \makeAutoRule{closeMagic}{Close Magic}{roll vs enemy's Attack as usual}
-\index{Combat!Magic}
+\index{Melee!Magic}
 \index{Magic!Close}
-\index{Spells!Combat}
+\index{Spells!Melee}
 happens when someone tries to stab \pgls{witch}.
 The works like any other Resisted Action -- if she rolls higher, he spell works, but if the opponent rolls higher, she receives Damage.
 
@@ -562,7 +562,7 @@ grants a +2 Attack Bonus.
 Up to 6 opponents can attack a lone character, but only half can flank, and any available walls reduce this number.
 
 \makeAutoRule{grab}{Grabbing}{attack with Brawl, both become Entangled}
-\index{Combat!Grappling}
+\index{Melee!Grappling}
 someone uses no weapons, and leaves both parties \textit{Entangled}.
 
 Some animals, with \textit{Teeth}, can grab and deal Damage, but most humanoids need to grab first, and \emph{then} deal Damage with a grapple.
@@ -581,7 +581,7 @@ This includes missile attacks only if you could otherwise evade them.
 If someone else tries to attack your charge, you will have to move to protect them, with a normal movement action.
 
 \makeAutoRule{ram}{Ramming}{Force an enemy back with \roll{Strength}{Brawl}: 2~\glspl{ap}}
-\index{Combat!Ram}
+\index{Melee!Ram}
 into someone with a should or shield can push them back half your standard movement.
 You spend 1~\gls{ap} for the movement, and another for the push.
 The standard Weapon Bonus from any shield gives a Bonus to this roll (\autopageref{shields}).
@@ -592,7 +592,7 @@ If they try jump out of the way with \roll{Speed}{Athletics}, then failure impli
 
 \makeAutoRule{sneakattack}{Sneak Attacks}{\roll{Dexterity}{Stealth}, roll Damage at +2}
 \label{sneakattack}
-\index{Combat!Sneak Attack}
+\index{Melee!Sneak Attack}
 aren't generally possible during a fight.
 Elsewhere, they might use Dexterity, Intelligence, or something else.
 
@@ -615,7 +615,7 @@ If successful, the sneak attack deals +2 Damage, and provides an automatic \gls{
 
 \subsection{Fleeing}
 
-Running from a fight means a character rolls \roll{Speed}{Athletics} against the opponent's usual \gls{tn}, usually their \roll{Dexterity}{Combat}.
+Running from a fight means a character rolls \roll{Speed}{Athletics} against the opponent's usual \gls{tn}, usually their \roll{Dexterity}{Melee}.
 On success, the character starts to flee, and on failure, the character receives Damage.
 A tie always implies both.
 
