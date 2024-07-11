@@ -8,10 +8,77 @@
 
 \togglefalse{examplecharacter}
 
-\subsection{\Glsfmttext{caving}}
+\subsection{\Glsfmttext{downtime} Activities}
+\label{downtimeActions}
+
+\makeRule{poison}{Brewing a poison}{Intelligence}{Medicine}{4}
+\index{Poisons}
+
+Basic poisons inflict 2~\glspl{ep} over the course of \pgls{interval}, then stop.
+People can notice a poison by smell or taste before they drink it, by rolling \roll{Wits}{Vigilance} (\tn[7]).
+Poisons lose their potence over time -- the \gls{ep} loss suffered reduces by to half of what it was each week.
+
+The standard roll begins at \tn[7].
+The caster can add any of the following boons to the poison.
+However, each boon increases the \gls{tn} by 1.
+
+\begin{itemize}
+  \item
+  Inflict \pgls{ep} more per \pgls{interval}.
+  \item
+  Increase the number of \glspl{interval} the poison will work for.
+  \item
+  Increase the \gls{tn} to notice the poison.
+  \item
+  Increase the shelf-life of the poison by a week.
+\end{itemize}
+
+A poison worthy of \gls{abderian} might inflict 4~\glspl{ep} each \gls{interval}, for 3~\glspl{interval}, and require a \roll{Wits}{Vigilance} roll at \tn[10] but this would raise the \gls{tn} from 7 to 14.
+
+A tie indicates that the poison loses the first boon its creator gave it, and each Failure Margin takes another.
+When no boons are left, the poison does nothing but smell bad.
+
+\makeRule{sword_crafting}{Crafting a sword}{Strength}{Crafts}{15}
+
+This requires equipment, such as moulds, and a long night.
+It also requires a single level of the Melee Skill.
+
+A tie indicates a completed sword, but a shattered mould.
+
+\makeRule{make_mould}{Creating a weapon mould}{Intelligence}{Crafts}{11}
+A weapon mould grants a +2 Bonus to weapon-crafting rolls.
+Most metallurgists cannot form weapons without one.
+
+\makeRule{make_armour}{Creating silent plate armour}{Intelligence}{Crafts}{16}
+Creating silent plate requires planning from the outset -- existing armour cannot be properly modified.
+The parts cost an additional 50\%, and the crafter must have both the Melee and Stealth Skills at level 1.
+
+Every margin on the roll reduces the armour's penalty by 1, to a minimum of -1.
+
+\makeRule{make_song}{Composing a new song}{Intelligence}{Performance}{10}
+This won't let the character perform the song -- just compose, and possibly explain it.
+
+\makeRule{tame_horse}{Taming a Horse}{Intelligence}{Cultivation}{depends on Horse's \roll{Wits}{Brawl}}
+Wild horses still run wild in \gls{fenestra}, but catching one without injuring it is difficult, and getting it comfortable with people takes upwards of months.
+But if you have more time than money, then it's time well spent.
+
+\iftoggle{stories}{
+  \makeRule{make_spell}{Composing a Spell}{Intelligence}{Sphere}{10 plus Level}
+  \index{Spells!Creation}
+  Crafting new spells requires one week per level of the spell.
+  Players can look over the process in the \textit{Book of Stories}, \autopageref{spellWeaving}.
+  If the roll fails, then the \gls{gm} will swap one Action or Descriptor for another, and then work through the results, however horrifying.
+  The caster cannot use this botched spell -- it only works for that one occasion, by accident.
+  On a tie, the research fails to no effect, or the player can choose to have the spell fail and have their character learn the spell.
+  The player should not know how the spell will fail beforehand -- the \gls{gm} decides in secret.
+
+  If a spell fails, then the next session should probably open with the aftermath of that failure, and a run-through of all that it entails.
+}{}
+
+\subsection{Journeys in the \Glsfmttext{deep}}
 \index{Caving|textbf}
 \index{Spelunking|see {Caving}}
-\glsdesc{caving}
+Caving \glsdesc{caving}
 
 \subsubsection{\Glsfmttext{blackWalking}}
 \glsdesc{blackWalking}
@@ -151,73 +218,6 @@ Large rivers might have \tn[8], while an open sea in a storm might be \tn[12].
 
 Characters can swim 1~\gls{step} per \gls{ap} spent.
 If they do nothing but swimming, they can add their Athletics Skill to the total at the end of the round.
-
-\subsection{\Glsfmttext{downtime} Activities}
-\label{downtimeActions}
-
-\makeRule{poison}{Brewing a poison}{Intelligence}{Medicine}{4}
-\index{Poisons}
-
-Basic poisons inflict 2~\glspl{ep} over the course of \pgls{interval}, then stop.
-People can notice a poison by smell or taste before they drink it, by rolling \roll{Wits}{Vigilance} (\tn[7]).
-Poisons lose their potence over time -- the \gls{ep} loss suffered reduces by to half of what it was each week.
-
-The standard roll begins at \tn[7].
-The caster can add any of the following boons to the poison.
-However, each boon increases the \gls{tn} by 1.
-
-\begin{itemize}
-  \item
-  Inflict \pgls{ep} more per \pgls{interval}.
-  \item
-  Increase the number of \glspl{interval} the poison will work for.
-  \item
-  Increase the \gls{tn} to notice the poison.
-  \item
-  Increase the shelf-life of the poison by a week.
-\end{itemize}
-
-A poison worthy of \gls{abderian} might inflict 4~\glspl{ep} each \gls{interval}, for 3~\glspl{interval}, and require a \roll{Wits}{Vigilance} roll at \tn[10] but this would raise the \gls{tn} from 7 to 14.
-
-A tie indicates that the poison loses the first boon its creator gave it, and each Failure Margin takes another.
-When no boons are left, the poison does nothing but smell bad.
-
-\makeRule{sword_crafting}{Crafting a sword}{Strength}{Crafts}{15}
-
-This requires equipment, such as moulds, and a long night.
-It also requires a single level of the Melee Skill.
-
-A tie indicates a completed sword, but a shattered mould.
-
-\makeRule{make_mould}{Creating a weapon mould}{Intelligence}{Crafts}{11}
-A weapon mould grants a +2 Bonus to weapon-crafting rolls.
-Most metallurgists cannot form weapons without one.
-
-\makeRule{make_armour}{Creating silent plate armour}{Intelligence}{Crafts}{16}
-Creating silent plate requires planning from the outset -- existing armour cannot be properly modified.
-The parts cost an additional 50\%, and the crafter must have both the Melee and Stealth Skills at level 1.
-
-Every margin on the roll reduces the armour's penalty by 1, to a minimum of -1.
-
-\makeRule{make_song}{Composing a new song}{Intelligence}{Performance}{10}
-This won't let the character perform the song -- just compose, and possibly explain it.
-
-\makeRule{tame_horse}{Taming a Horse}{Intelligence}{Cultivation}{depends on Horse's \roll{Wits}{Brawl}}
-Wild horses still run wild in \gls{fenestra}, but catching one without injuring it is difficult, and getting it comfortable with people takes upwards of months.
-But if you have more time than money, then it's time well spent.
-
-\iftoggle{stories}{
-  \makeRule{make_spell}{Composing a Spell}{Intelligence}{Sphere}{10 plus Level}
-  \index{Spells!Creation}
-  Crafting new spells requires one week per level of the spell.
-  Players can look over the process in the \textit{Book of Stories}, \autopageref{spellWeaving}.
-  If the roll fails, then the \gls{gm} will swap one Action or Descriptor for another, and then work through the results, however horrifying.
-  The caster cannot use this botched spell -- it only works for that one occasion, by accident.
-  On a tie, the research fails to no effect, or the player can choose to have the spell fail and have their character learn the spell.
-  The player should not know how the spell will fail beforehand -- the \gls{gm} decides in secret.
-
-  If a spell fails, then the next session should probably open with the aftermath of that failure, and a run-through of all that it entails.
-}{}
 
 \subsection{News \& Information}
 
