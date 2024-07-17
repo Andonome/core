@@ -1,7 +1,7 @@
 include config/vars
 
 .PHONY: all
-all: $(BOOK).pdf
+all: .check $(BOOK).pdf
 
 config/vars:
 	@git submodule update --init
