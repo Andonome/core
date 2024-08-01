@@ -90,6 +90,21 @@ A tie indicates that the shelter holds for \pgls{interval}, then collapses.
 Rolling a tie indicates that the climber knows they cannot make the climb, or at least fails on the first few holds.
 Failure with a Margin of 1 gives the worst possible result -- the climber fails while near the top, while a larger failure Margin means they travelled less far before falling.
 
+\makeAutoRule{dragBody}{Dragging Bodies}{only requires no Penalty beyond -4}
+uses the standard \gls{weight} rules, but the character cannot drag anything while they have a Penalty above -4.
+This Penalty may come from carrying something too heavy, or from wounds; any Penalty above the limit will stop them dragging anything heavy about.
+
+Rope or other equipment might grant +1 to the effective Strength of the character for the purposes of pulling a massive item or beast.
+And many characters can work together, each adding any amount to their total \gls{weight} carried.
+
+\makeRule{fieldDress}{Field Dressing}{Dexterity}{Cultivation}{12}
+lets the \gls{guard} keep slain \glspl{monster} in good condition, until they can sell them.
+A knife cuts from arse to throat, organs are harvested, \glspl{ingredient} extracted, and the meat hung to dry.
+
+The \gls{tn} raises by +2 in the hot seasons, and reduces by -2 while snow rests on the ground.
+On a success, the process takes \pgls{interval}.
+On a failure, any \glspl{ingredient} in the \gls{monster}'s body spoil, and the rest halves in value.
+
 \makeRule{ford_river}{Fording a rapid river}{Strength}{Seafaring}{9}
 Success gets you to the other side, and failure gets you washed downstream.
 A tie gets you a bit of both.
@@ -144,13 +159,6 @@ Characters can fashion anything with a cost of less than 10~\gls{cp} in less tha
 Cities are \tn[7], Towns are 9, and \glspl{village} are 13.
 A successful roll indicates a working knowledge of the place.
 
-\makeAutoRule{dragBody}{Dragging Bodies}{only requires no Penalty beyond -4}
-uses the standard \gls{weight} rules, but the character cannot drag anything while they have a Penalty above -4.
-This Penalty may come from carrying something too heavy, or from wounds; any Penalty above the limit will stop them dragging anything heavy about.
-
-Rope or other equipment might grant +1 to the effective Strength of the character for the purposes of pulling a massive item or beast.
-And many characters can work together, each adding any amount to their total \gls{weight} carried.
-
 \makeRule{makeCamp}{Make Camp}{Intelligence}{Vigilance}{8}
 starts with a safety check of the area, during daylight.
 That secures enough space for people to wander a short distance to take a piss in the bushes, or just relax for a bit.
@@ -178,7 +186,6 @@ inflict 2~\glspl{ep} every \gls{interval}, unless the character has extremely wa
 
 Characters can only rest with a fire, which may attract \glspl{monster} (usually a 1 in 6 chance per \gls{interval}).
 
-\pagebreak
 \subsection{Journeys on Water}
 
 \makeRule{mend_sail}{Mending a sail}{Dexterity}{Seafaring}{10}
