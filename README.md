@@ -15,8 +15,7 @@ BIND is an open-source, grunge-fantasy, tabletop RPG, which:
 # Getting the Book
 
 Download it from the [link][core download], then take it to your local, friendly, print-shop.
-Everything in the book has been optimized for reading on paper.
-But reading two-columns of blinding-white PDF on a monitor will only give you a headache.
+Everything in the book has been optimized for reading on paper, and reading two-columns of blinding-white PDF on a monitor will only give you a headache.
 
 ## Compiling the Book Yourself
 
@@ -29,7 +28,7 @@ But reading two-columns of blinding-white PDF on a monitor will only give you a 
 
 For full instructions on compiling, see the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling).
 
-## Related Books
+# Related Books
 
 - For a short introduction module, grab a copy of [Escape from the Horde][intro module].  It comes with a running commentary of the rules, and pre-made character sheets, ready to be torn from the back.
 - For character creation, print the [players' guide][stories].
@@ -74,7 +73,7 @@ If you want to get involved, there are a number of ways to contribute:
 [aif]: https://gitlab.com/bindrpg/aif
 [board]: https://gitlab.com/bindrpg/core/issues
 [issues email]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
-[rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
+[rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
 [intro module]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
 [fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
