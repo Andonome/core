@@ -569,11 +569,12 @@ Dropping a weapon costs no \glspl{ap}, though they will be defenceless unless th
 grants a +2 Attack Bonus.
 Up to 6 opponents can attack a lone character, but only half can flank, and any available walls reduce this number.
 
-\makeAutoRule{grab}{Grabbing}{attack with Brawl, both become Entangled}
-\index{Melee!Grappling}
-someone uses no weapons, and leaves both parties \textit{Entangled}.
-
+\makeAutoRule{grab}{Grabbing}{attack with Brawl, both can grapple, and count as carrying the other's \glsentrytext{weight}}
+uses \roll{Dexterity}{Brawl} to attack -- success means either one can make a Grapple attack.
 Some animals, with \textit{Teeth}, can grab and deal Damage, but most humanoids need to grab first, and \emph{then} deal Damage with a grapple.
+
+While grappling, the characters count as carrying each other's \gls{weight}.
+So if \pgls{guard} with 9~\glspl{hp} picked up a goblin with 5~\glspl{hp}, then the \gls{guard} would count as carrying \pgls{weight} of 5, while the goblin would count as carrying \pgls{weight} of 9!
 
 \makeAutoRule{grapple}{Grappling}{Resisted \roll{Strength}{Brawl} roll to deal Damage}
 \label{grappling}
