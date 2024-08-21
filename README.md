@@ -1,3 +1,5 @@
+# Core Rules
+
 |             Downloads                |         Resources             |
 |:-------------------------------------|:------------------------------|
 | [Core Book][core download]           | [Wiki][wiki]                  | 
@@ -26,7 +28,7 @@ Everything in the book has been optimized for reading on paper, and reading two-
     * For Void Linux: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `texlive-latexmk`.
 1. Enter the repo, and do `make all`.
 
-For full instructions on compiling, see the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling).
+For full setup instructions, see the [wiki][compiling].
 
 # Related Books
 
@@ -67,7 +69,8 @@ If you want to get involved, there are a number of ways to contribute:
 - Contributing art.
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build
+[compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
+[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
 [resources]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/resources.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [aif]: https://gitlab.com/bindrpg/aif
