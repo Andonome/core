@@ -2,11 +2,10 @@
 
 |             Downloads                |         Resources             |
 |:-------------------------------------|:------------------------------|
-| [Core Book][core download]           | [Wiki][wiki]                  | 
+| [Core Book][core]                    | [Wiki][wiki]                  | 
 | [Character Sheets][resources]        | [World Wiki][fenwiki]         |
-| [Condensed Rules][rules summary]     | [Email an idea][issues email] |
-| [Introduction Module][intro module]  | [Issues Board][board]         |
-
+| [Condensed Rules][rules]             | [Email an idea][issues email] |
+| [Introduction Module][oneshot]       | [Issues Board][board]         |
 
 BIND is an open-source, grunge-fantasy, tabletop RPG, which:
 
@@ -70,15 +69,14 @@ If you want to get involved, there are a number of ways to contribute:
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
-[core download]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
-[resources]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/resources.pdf?job=build
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
-[aif]: https://gitlab.com/bindrpg/aif
 [board]: https://gitlab.com/bindrpg/core/issues
 [issues email]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
-[rules summary]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
-[intro module]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
-[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
 [fenwiki]: https://gitlab.com/bindrpg/aif/-/wikis/home
-[judgement]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/judgement.pdf?job=build
 
+[core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
+[resources]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/resources.pdf?job=build
+[judgement]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
+[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/Stories.pdf?job=build
+[oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
+[rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
