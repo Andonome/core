@@ -6,7 +6,7 @@ all: check $(RELEASE)
 config/vars:
 	@git submodule update --init
 
-$(DBOOK): $(DEPS) | qr.tex
+$(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL | qr.tex
 	@$(COMPILER) main.tex
 
 .PHONY: clean
