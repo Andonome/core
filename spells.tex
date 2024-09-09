@@ -39,11 +39,14 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Air1}
 
-\subsection{Earth}
+\iftoggle{verbose}{
+  \subsection{Earth}
 
-\showSpells{Earth1}
+  \showSpells{Earth1}
 
-\showSpells{Earth1}
+  \showSpells{Earth1}
+
+}{}
 
 \subsection{Fate}
 
@@ -64,12 +67,16 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 \showSpells{Death1}
 \showSpells{Death1}
 
-\Needspace{6\baselineskip}
-\subsection{Force}
 
-\showSpells{Force1}
+\iftoggle{verbose}{
+  \Needspace{6\baselineskip}
+  \subsection{Force}
 
-\null
+  \showSpells{Force1}
+
+  \null
+}{}
+
 \subsection{Light}
 
 \spell{Little Big}% Name
@@ -96,51 +103,54 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
     The shadow fades once sunlight touches it for \pgls{interval}.}
 
-\subsection{Life}
+\iftoggle{verbose}{
+  \subsection{Life}
 
-\showSpells{Life1}
+  \showSpells{Life1}
 
-\spell{Forest Crown}% Name
-  {}% Enhancements
-  {Warp}% Action
-  {Earth, Water}% Spheres
-  {\roll{Strength}{Athletics}}% Resist with
-  {The target hears how good they would look with antlers, and antlers start to grow.
-  They grant +1 to Damage while using the Brawl Skill}% Description
-  {
-  The antlers will stop the target wearing a helmet, so they cannot wear Complete armour.
-  The antlers shed over any cold season, or can be removed with a bone-knife.}
+  \spell{Forest Crown}% Name
+    {}% Enhancements
+    {Warp}% Action
+    {Earth, Water}% Spheres
+    {\roll{Strength}{Athletics}}% Resist with
+    {The target hears how good they would look with antlers, and antlers start to grow.
+    They grant +1 to Damage while using the Brawl Skill}% Description
+    {
+    The antlers will stop the target wearing a helmet, so they cannot wear Complete armour.
+    The antlers shed over any cold season, or can be removed with a bone-knife.}
 
-\spell{Slashers}% Name
-  {}% Enhancements
-  {Warp}% Action
-  {Earth, Water}% Spheres
-  {\roll{Strength}{Athletics}}% Resist with
-  {The caster makes accusations of vile language, and the target grows needle-sharp claws.
-  They grant +1 Damage when using Brawl, but inflict a -1 penalty to using weapons or other tools}% Description
-  {
-  The claws grow out naturally, or can be cut off at any time.}
+  \spell{Slashers}% Name
+    {}% Enhancements
+    {Warp}% Action
+    {Earth, Water}% Spheres
+    {\roll{Strength}{Athletics}}% Resist with
+    {The caster makes accusations of vile language, and the target grows needle-sharp claws.
+    They grant +1 Damage when using Brawl, but inflict a -1 penalty to using weapons or other tools}% Description
+    {
+    The claws grow out naturally, or can be cut off at any time.}
 
-\spell{Tweak}% Name
-  {}% Enhancements
-  {Warp}% Action
-  {Earth, Water}% Spheres
-  {target's \glspl{hp}}% Resist with
-  {The caster lists how the target looks like a different race, and their features begin to shift to match}% Description
-  {The target must have Attributes within the racial maximums and minimums of the target race, so a human with Strength +1 could become an elf, but Strength +3 would stop them looking remotely elf-like.
+  \spell{Tweak}% Name
+    {}% Enhancements
+    {Warp}% Action
+    {Earth, Water}% Spheres
+    {target's \glspl{hp}}% Resist with
+    {The caster lists how the target looks like a different race, and their features begin to shift to match}% Description
+    {The target must have Attributes within the racial maximums and minimums of the target race, so a human with Strength +1 could become an elf, but Strength +3 would stop them looking remotely elf-like.
 
-  The spell lasts until the target makes use of any characteristic of their own race.
-  For humans, this means their ability to walk long-distances, and for gnomes it means trying to focus on anything.}
+    The spell lasts until the target makes use of any characteristic of their own race.
+    For humans, this means their ability to walk long-distances, and for gnomes it means trying to focus on anything.}
 
-\pic{Roch_Hercka/polymorph}
+  \pic{Roch_Hercka/polymorph}
 
-\spell{Regeneration}% Name
-  {Detailed}% Enhancements
-  {Wax}% Action
-  {Earth, Water}% Spheres
-  {current lost \glspl{hp} + 7}% Resist with
-  {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellPlusOne} \glspl{hp} each week}% Description
-  {During this time, the target's appetite grows substantially, demanding an extra \arabic{spellCost} meals every day to keep the spell going.}
+  \spell{Regeneration}% Name
+    {Detailed}% Enhancements
+    {Wax}% Action
+    {Earth, Water}% Spheres
+    {current lost \glspl{hp} + 7}% Resist with
+    {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellPlusOne} \glspl{hp} each week}% Description
+    {During this time, the target's appetite grows substantially, demanding an extra \arabic{spellCost} meals every day to keep the spell going.}
+
+}{}
 
 \subsection{Mind}
 
@@ -178,11 +188,14 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Air2}
 
-\subsection{Earth}
+\iftoggle{verbose}{
 
-\showSpells{Earth2}
+  \subsection{Earth}
 
-\showSpells{Earth2}
+  \showSpells{Earth2}
+
+  \showSpells{Earth2}
+}{}
 
 \subsection{Fate}
 
@@ -254,48 +267,52 @@ As long as you have both of those at level 2 or above, you can cast the spell.
     If cast immediately, upon death, it can arrest the effects of \textit{rigor mortis} before they begin.
   }
 
-\subsection{Force}
 
-\spell{Friendly Bolt}% Name
-  {Duplicated}% Enhancements
-  {Wane}% Action
-  {Earth, Fire}% Spheres
-  {\gls{weight} carried}% Resist with
-  {The caster shouts `let's go', and two targets gain a plus \arabic{spellPlusOne} bonus to running}% Description
-  {They feel suddenly lighter, as if being carried.
-  However, this spell does not help with carrying heavy items.}
+\iftoggle{verbose}{
+  \subsection{Force}
 
-\spell{Migrating Butterfly}% Name
-  {Detailed}% Enhancements
-  {Wane}% Action
-  {Earth, Fire}% Spheres
-  {\gls{weight} carried}% Resist with
-  {The caster outright denies how heavy something is, despite obvious heft, and its \gls{weight} reduces by \arabic{spellPlusOne} when facing towards the direction the caster looks}% Description
-  {Items which fall below \gls{weight}~0 will float like a seed on the wind}
+  \spell{Friendly Bolt}% Name
+    {Duplicated}% Enhancements
+    {Wane}% Action
+    {Earth, Fire}% Spheres
+    {\gls{weight} carried}% Resist with
+    {The caster shouts `let's go', and two targets gain a plus \arabic{spellPlusOne} bonus to running}% Description
+    {They feel suddenly lighter, as if being carried.
+    However, this spell does not help with carrying heavy items.}
 
-\spell{Traveller's Curse}% Name
-  {Distant}% Enhancements
-  {Wax}% Action
-  {Earth, Fire}% Spheres
-  {\roll{Speed}{Athletics}}% Resist with
-  {The caster wishes the target a bad journey, and they immediately feel heavier.
-  For the next \arabic{spellPlusOne}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
-  {
-  The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
+  \spell{Migrating Butterfly}% Name
+    {Detailed}% Enhancements
+    {Wane}% Action
+    {Earth, Fire}% Spheres
+    {\gls{weight} carried}% Resist with
+    {The caster outright denies how heavy something is, despite obvious heft, and its \gls{weight} reduces by \arabic{spellPlusOne} when facing towards the direction the caster looks}% Description
+    {Items which fall below \gls{weight}~0 will float like a seed on the wind}
 
-\showSpells{Force2}
+  \spell{Traveller's Curse}% Name
+    {Distant}% Enhancements
+    {Wax}% Action
+    {Earth, Fire}% Spheres
+    {\roll{Speed}{Athletics}}% Resist with
+    {The caster wishes the target a bad journey, and they immediately feel heavier.
+    For the next \arabic{spellPlusOne}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
+    {
+    The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
 
-\subsection{Life}
+  \showSpells{Force2}
 
-\showSpells{Life2}
+  \subsection{Life}
 
-\spell{Scent in the Air}% Name
-  {Distant}% Enhancements
-  {Witness}% Action
-  {Earth, Water}% Spheres
-  {target's strangeness}% Resist with
-  {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits at \spellRange\ in a particular direction}% Description
-  {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challenge.}
+  \showSpells{Life2}
+
+  \spell{Scent in the Air}% Name
+    {Distant}% Enhancements
+    {Witness}% Action
+    {Earth, Water}% Spheres
+    {target's strangeness}% Resist with
+    {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits at \spellRange\ in a particular direction}% Description
+    {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challenge.}
+
+}{}
 
 \subsection{Light}
 
@@ -422,27 +439,31 @@ As long as you have both of those at level 2 or above, you can cast the spell.
   {
   The spell can destroy any fire up to those large enough to deal \showDam\ Damage, and larger fires grow dim.}
 
-\spell{Miner's Bane}% Name
-  {Divergent}% Enhancements
-  {Wane}% Action
-  {Earth, Air}% Spheres
-  {\roll{Speed}{Cultivation}}% Resist with
-  {As the caster curses the target's bread, air, and Sunlight, the ground underneath their feet softens, and their next breath of air sticks to the inside of their throat like thorny cotton.
-  Targets who fail to dart away quickly fall prone, and take \arabic{spellPlusTwo}~\glspl{ep} unless they held their breath}% Description
-  {
-  This spell relies on soft ground to make the target slip.
-  Harder floors will not melt, and the spell will settle on the nearest soft earth it can find.}
 
-\spell{Finding Courage}% Name
-  {Divergent}% Enhancements
-  {Wax}% Action
-  {Earth, Fate}% Spheres
-  {malleability of the earth}% Resist with
-  {Reaching into some soft ground, such as snow or mud, the caster begs for a chance to fight, and the ground forms into a weapon.
-  The caster then gains \arabic{spellPlusTwo}~\glspl{fp}.
-  The shatters if it deals over \arabic{spellPlusTwo} Damage}% Description
-  {
-  The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellPlusTwo}}
+\iftoggle{verbose}{
+  \spell{Miner's Bane}% Name
+    {Divergent}% Enhancements
+    {Wane}% Action
+    {Earth, Air}% Spheres
+    {\roll{Speed}{Cultivation}}% Resist with
+    {As the caster curses the target's bread, air, and Sunlight, the ground underneath their feet softens, and their next breath of air sticks to the inside of their throat like thorny cotton.
+    Targets who fail to dart away quickly fall prone, and take \arabic{spellPlusTwo}~\glspl{ep} unless they held their breath}% Description
+    {
+    This spell relies on soft ground to make the target slip.
+    Harder floors will not melt, and the spell will settle on the nearest soft earth it can find.}
+
+  \spell{Finding Courage}% Name
+    {Divergent}% Enhancements
+    {Wax}% Action
+    {Earth, Fate}% Spheres
+    {malleability of the earth}% Resist with
+    {Reaching into some soft ground, such as snow or mud, the caster begs for a chance to fight, and the ground forms into a weapon.
+    The caster then gains \arabic{spellPlusTwo}~\glspl{fp}.
+    The shatters if it deals over \arabic{spellPlusTwo} Damage}% Description
+    {
+    The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellPlusTwo}}
+
+}{}
 
 \end{multicols}
 
@@ -463,19 +484,22 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 \showSpells{Air3}
 \showSpells{Air3}
 
-\subsection{Earth}
 
-\spell{Mud Clamp}% Name
-  {Duplicated, Detailed}% Enhancements
-  {Wax}% Action
-  {Earth}% Spheres
-  {\roll{Strength}{Survival}}% Resist with
-  {The caster shouts `\textit{hold fast}', as snow or mud becomes solid, encasing any feet pushed into the ground.
-  Targets then count as \textit{Entangled}}% Description
-  {
-  The spell suffers a -2 penalty when used against creatures without flat feet (such as hooves, or most other animal feet), but can also gain up to a +2 bonus in particularly deep mud or snow.}
+\iftoggle{verbose}{
+  \subsection{Earth}
 
-\showSpells{Earth3}
+  \spell{Mud Clamp}% Name
+    {Duplicated, Detailed}% Enhancements
+    {Wax}% Action
+    {Earth}% Spheres
+    {\roll{Strength}{Survival}}% Resist with
+    {The caster shouts `\textit{hold fast}', as snow or mud becomes solid, encasing any feet pushed into the ground.
+    Targets then count as \textit{Entangled}}% Description
+    {
+    The spell suffers a -2 penalty when used against creatures without flat feet (such as hooves, or most other animal feet), but can also gain up to a +2 bonus in particularly deep mud or snow.}
+
+  \showSpells{Earth3}
+}{}
 
 \subsection{Fate}
 
@@ -542,39 +566,42 @@ As long as you have both of those at level 2 or above, you can cast the spell.
     Sniffing at the wind, the caster identifies any corpses from a particular species at \spellRange.
     Possible types include `elves', `\glspl{woodspy}', or `bats'.}
 
-\subsection{Force}
 
-\showSpells{Force3}
+\iftoggle{verbose}{
+  \subsection{Force}
 
-\subsection{Life}
+  \showSpells{Force3}
 
-\showSpells{Life3}
+  \subsection{Life}
 
-\spell{Herd Protection}% Name
-  {Duplicated, Distant}% Enhancements
-  {Warp}% Action
-  {Earth, Water}% Spheres
-  {current \glspl{hp}}% Resist with
-  {The caster yells warnings, and the targets gain \gls{dr}~\arabic{spellPlusOne} as their skin becomes thick}% Description
-  {Unfortunately, the tough hide feels heavy, and effectively counts as an item with \pgls{weight} of \arabic{spellPlusOne}.
-  The hide usually comes with fur, and protects against the cold as well as Damage.
+  \showSpells{Life3}
 
-  When the spell combines with others, to boost the target's Strength and grant claws, they eventually look just like a regular bear.
+  \spell{Herd Protection}% Name
+    {Duplicated, Distant}% Enhancements
+    {Warp}% Action
+    {Earth, Water}% Spheres
+    {current \glspl{hp}}% Resist with
+    {The caster yells warnings, and the targets gain \gls{dr}~\arabic{spellPlusOne} as their skin becomes thick}% Description
+    {Unfortunately, the tough hide feels heavy, and effectively counts as an item with \pgls{weight} of \arabic{spellPlusOne}.
+    The hide usually comes with fur, and protects against the cold as well as Damage.
 
-  The strange skin fades to normal once the target takes Damage and heals.}
+    When the spell combines with others, to boost the target's Strength and grant claws, they eventually look just like a regular bear.
 
-\null
+    The strange skin fades to normal once the target takes Damage and heals.}
 
-\spell{Piglet Farm}% Name
-  {Duplicated, Detailed}% Enhancements
-  {Wane}% Action
-  {Earth, Water}% Spheres
-  {\glspl{hp}}% Resist with
-  {The caster cries `\textit{Pigs}', and the first \arabic{spellTargets} targets within \spellRange\ shrink, taking a -\arabic{spellPlusOne} Strength Penalty}% Description
-  {
-  This penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this penalty, and then half of their regular Strength penalty, for a total of -\arabic{spellPlusTwo}.}
+  \null
 
-\null
+  \spell{Piglet Farm}% Name
+    {Duplicated, Detailed}% Enhancements
+    {Wane}% Action
+    {Earth, Water}% Spheres
+    {\glspl{hp}}% Resist with
+    {The caster cries `\textit{Pigs}', and the first \arabic{spellTargets} targets within \spellRange\ shrink, taking a -\arabic{spellPlusOne} Strength Penalty}% Description
+    {
+    This penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this penalty, and then half of their regular Strength penalty, for a total of -\arabic{spellPlusTwo}.}
+
+  \null
+}{}
 
 \subsection{Light}
 
@@ -619,26 +646,30 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 \showSpells{Mind3}
 \showSpells{Mind3}
 
-\subsection{Divergent}
 
-\spell{Asking Rock}% Name
-  {Detailed, Divergent}% Enhancements
-  {Warp}% Action
-  {Earth, Fate}% Spheres
-  {civilization rating}% Resist with
-  {The caster sells a weapon to a rock in return for summoning a beast, and the rock becomes magnetic.
-  It has an effective Strength of \arabic{spellPlusTwo} to hold any iron weapon placed next to it.
+\iftoggle{verbose}{
+  \subsection{Divergent}
 
-  Once the rock has a weapon, the \gls{gm} makes an encounter roll}% Description
-  {
-    The \gls{tn} depends on how close to civilization the spell is cast.
-    Attracting \glspl{monster} to \pgls{village} makes more of a challenge than attracting them while past the \gls{edge}.%
-    \exRef{judgement}{Judgement}{civilizationRating}
-    If the encounter roll produces nothing, the \gls{gm} goes up the chart until they find an encounter.
+  \spell{Asking Rock}% Name
+    {Detailed, Divergent}% Enhancements
+    {Warp}% Action
+    {Earth, Fate}% Spheres
+    {civilization rating}% Resist with
+    {The caster sells a weapon to a rock in return for summoning a beast, and the rock becomes magnetic.
+    It has an effective Strength of \arabic{spellPlusTwo} to hold any iron weapon placed next to it.
 
-    \Glspl{npc} targeted by this spell will survive if only their \gls{cr} value is greater than the \gls{monster} which finds them.
-    Otherwise, they end in the jaws of a beast.
-  }
+    Once the rock has a weapon, the \gls{gm} makes an encounter roll}% Description
+    {
+      The \gls{tn} depends on how close to civilization the spell is cast.
+      Attracting \glspl{monster} to \pgls{village} makes more of a challenge than attracting them while past the \gls{edge}.%
+      \exRef{judgement}{Judgement}{civilizationRating}
+      If the encounter roll produces nothing, the \gls{gm} goes up the chart until they find an encounter.
+
+      \Glspl{npc} targeted by this spell will survive if only their \gls{cr} value is greater than the \gls{monster} which finds them.
+      Otherwise, they end in the jaws of a beast.
+    }
+
+}{}
 
 \spell{River Smog}% Name
   {Divergent, Duplicated}% Enhancements
@@ -673,9 +704,13 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Air4}
 
-\subsection{Earth}
 
-\showSpells{Earth4}
+\iftoggle{verbose}{
+  \subsection{Earth}
+
+  \showSpells{Earth4}
+
+}{}
 
 \subsection{Death}
 
@@ -693,13 +728,16 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Water4}
 
-\subsection{Force}
+\iftoggle{verbose}{
+  \subsection{Force}
 
-\showSpells{Force4}
+  \showSpells{Force4}
 
-\subsection{Life}
+  \subsection{Life}
 
-\showSpells{Life4}
+  \showSpells{Life4}
+
+}{}
 
 \subsection{Light}
 
@@ -709,8 +747,10 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Mind4}
 
-\subsection{Divergent}
+\iftoggle{verbose}{
+  \subsection{Divergent}
 
-\showSpells{MindForce4}
+  \showSpells{MindForce4}
+}{}
 
 \end{multicols}

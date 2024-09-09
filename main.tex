@@ -12,9 +12,17 @@ Subject={TTRPG},
 Keywords={TTRPG,RPG,roleplaying}
 }}
 
-\externalReferent{core}
 \externalReferent{stories}
 \externalReferent{judgement}
+
+% The standard book does leaves some spells out, to cut down on
+% page-count, and to leave some mystery to magic for the Judge to
+% introduce.
+% 
+% When compiling with the book of Judgement, these spells will
+% disappear, but will still be present in other versions of the
+% book.
+\iftoggle{judgement}{\togglefalse{verbose}}{}
 
 \begin{document}
 
