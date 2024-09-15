@@ -29,7 +29,8 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \end{multicols}
 
-\section{First Level Spells}
+
+\section{Elemental \Glsfmtplural{sphere}}
 
 \begin{multicols}{2}
 
@@ -39,6 +40,71 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Air1}
 
+\spell{Sleep Fog}% Name
+  {Devious}% Enhancements
+  {Wane}% Action
+  {Air}% Spheres
+  {ventilation}% Resist with
+  {With a memory of a bad night's sleep, the caster thinks about suffocating air.
+  Within one \showOnset, the air in the room turns rancid, inflicting \arabic{spellPlusTwo}~\glspl{ep} over the course of a few hours}% Description
+  {Anyone inside rolls \roll{Strength}{Vigilance} (\tn[10]) to wake up each time they take another \gls{ep}.}
+
+
+\showSpells{Air2}
+
+\spell{Clawing Wisps}% Name
+  {Detailed, Duplicated}% Enhancements
+  {Wax}% Action
+  {Air}% Spheres
+  {wind speed}% Resist with
+  {The caster gives a battle-cry, and cloud-lined spirits, appearing like small copies of the caster, push any enemies (but not allies) back, reducing their \glspl{ap} by \arabic{spellPlusOne}}% Description
+  {}
+
+\showSpells{Air3}
+\showSpells{Air3}
+
+\showSpells{Air4}
+
+\subsection{Fire}
+
+\showSpells{Fire1}
+
+\showSpells{Fire2}
+
+\spell{Toothless Fire}% Name
+  {Duplicated}% Enhancements
+  {Warp}% Action
+  {Fire}% Spheres
+  {intensity of the flame}% Resist with
+  {This spell changes the basic nature of a fire, so it can no longer burn a certain type of material}% Description
+  {Casters generally use this to stop a fire damaging people, but it could just as easily stop a fire spreading to clothing.
+
+    The fire will not stop feeding on whatever allows it to currently burn, so a wood fire will continue burning its wood.}
+
+\showSpells{Fire3}
+
+\spell{Traiterous Camp}% Name
+  {Devious, Distant}% Enhancements
+  {Warp}% Action
+  {Fire}% Spheres
+  {\roll{Wits}{Survival}}% Resist with
+  {The caster gives a jealous stare at a fire at \spellRange.
+  After two \glsfmtplural{interval}, the fire gains some weight, and starts to burn low, and look strange.
+  After a full day, the fire collapses on top of the nearest person, inflicting \showDam~Damage}% Description
+  {}
+
+\spell{Naked Fire}% Name
+  {Duplicated, Distant}% Enhancements
+  {Warp}% Action
+  {Fire}% Spheres
+  {size of fire}% Resist with
+  {After instructing all the fire around on proper etiquette, fires with a total area up to \arabic{spellTargets} \glspl{step} at \spellRange\ turn blue, and stop burning flesh.
+  They continue to act upon wood, hair, and clothing as normal}% Description
+  {Large fires are more difficult to affect, as they're too busy eating to listen.}
+
+
+\showSpells{Fire4}
+
 \iftoggle{verbose}{
   \subsection{Earth}
 
@@ -46,35 +112,192 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
   \showSpells{Earth1}
 
+  \subsection{Earth}
+
+  \showSpells{Earth2}
+
+  \showSpells{Earth2}
+
+  \subsection{Earth}
+
+  \spell{Mud Clamp}% Name
+    {Duplicated, Detailed}% Enhancements
+    {Wax}% Action
+    {Earth}% Spheres
+    {\roll{Strength}{Survival}}% Resist with
+    {The caster shouts `\textit{hold fast}', as snow or mud becomes solid, encasing any feet pushed into the ground.
+    Targets then count as \textit{Entangled}}% Description
+    {
+    The spell suffers a -2 penalty when used against creatures without flat feet (such as hooves, or most other animal feet), but can also gain up to a +2 bonus in particularly deep mud or snow.}
+
+  \showSpells{Earth3}
+
+  \showSpells{Earth4}
 }{}
+
+\subsection{Water}
+
+\showSpells{Water1}
+
+\showSpells{Water2}
+
+\spell{Detect Water}% Name
+  {Distant}% Enhancements
+  {Witness}% Action
+  {Water}% Spheres
+  {smallness}% Resist with
+  {The caster detects liquid at \spellRange}% Description
+  {They cannot tell the type of liquid -- it could be a raging river, a tankard of ale, or a magma stream}
+
+\showSpells{Water3}
+
+\showSpells{Water3}
+
+\showSpells{Water4}
 
 \subsection{Fate}
 
 \showSpells{Fate1}
 \showSpells{Fate1}
 
-\subsection{Fire}
+\showSpells{Fate2}
+\showSpells{Fate2}
 
-\showSpells{Fire1}
+\spell{Blessed Army}% Name
+  {Duplicated, Distant}% Enhancements
+  {Wax}% Action
+  {Fate}% Spheres
+  {targets' Charisma (inverted)}% Resist with
+  {The caster gives good wishes to a troupe, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}}% Description
+  {The spell targets those with the highest Charisma before others.}
 
-\subsection{Water}
+\showSpells{Fate3}
 
-\showSpells{Water1}
+\spell{Wheel of Fate}% Name
+  {Devious, Duplicated}% Enhancements
+  {Warp}% Action
+  {Fate}% Spheres
+  {\roll{Charisma}{Survival}}% Resist with
+  {The caster wonders what the future holds, and the nearest \arabic{spellTargets} targets become locked into the same encounter, on repeat.
+  It begins half way through the \showOnset, then repeats again, until it has gone through \arabic{spellPlusTwo} iterations}% Description
+  {\par
+  Of course, the encounter cannot contain the same creatures or people each time, but whatever the \gls{gm} rolled for the encounter will repeat.
+  This might result in three griffins looking at troupe, then three griffins attacking, then three griffins nesting, and so on.
+  Each of these encounters will come in addition to the standard encounters.}
 
-\subsection{Death}
-\label{Death1}
+\showSpells{Fate4}
 
-\showSpells{Death1}
-\showSpells{Death1}
+\subsection{Divergent}
+
+\spell{Barrel Blast}% Name
+  {Divergent}% Enhancements
+  {Wane}% Action
+  {Air, Water}% Spheres
+  {\roll{Speed}{Cultivation}}% Resist with
+  {As the caster spits, \arabic{spellPlusTwo} barrels of water (or equivalent) turn to vapour and rush around a target.
+  If the target breathes in, they gain \arabic{spellPlusTwo}~\glspl{ep}}% Description
+  {
+    The water should be clearly visible, such as a stream or an actual barrel of water.}
+
+\spell{Dock Hickory}% Name
+  {Divergent}% Enhancements
+  {Warp}% Action
+  {Fire, Water}% Spheres
+  {\roll{Speed}{Athletics}}% Resist with
+  {As the caster sings a song in reverse, nearby fire falls from its wood and flows across the floor like water, while water gathers in place and swirls like flame}% Description
+  {
+  The fire only deals \showDam, spread evenly across the nearest four \glspl{step}; it dissipates at the end of the \gls{round}, unless it has fuel spread about the ground.
+  The water-flame remains upright until the wind eats through its peripheral `sparks'.
+  }
+
+\spell{Dark Doom}% Name
+  {Divergent}% Enhancements
+  {Wane}% Action
+  {Fate, Fire}% Spheres
+  {\roll{Charisma}{Survival}}% Resist with
+  {As the caster bids farewell to someone, they lose \showDam~\glspl{fp}, while the fire closest to the target dies}% Description
+  {
+  The spell can destroy any fire up to those large enough to deal \showDam\ Damage, and larger fires grow dim.}
 
 
 \iftoggle{verbose}{
-  \Needspace{6\baselineskip}
-  \subsection{Force}
+  \spell{Miner's Bane}% Name
+    {Divergent}% Enhancements
+    {Wane}% Action
+    {Earth, Air}% Spheres
+    {\roll{Speed}{Cultivation}}% Resist with
+    {As the caster curses the target's bread, air, and Sunlight, the ground underneath their feet softens, and their next breath of air sticks to the inside of their throat like thorny cotton.
+    Targets who fail to dart away quickly fall prone, and take \arabic{spellPlusTwo}~\glspl{ep} unless they held their breath}% Description
+    {
+    This spell relies on soft ground to make the target slip.
+    Harder floors will not melt, and the spell will settle on the nearest soft earth it can find.}
 
-  \showSpells{Force1}
+  \spell{Finding Courage}% Name
+    {Divergent}% Enhancements
+    {Wax}% Action
+    {Earth, Fate}% Spheres
+    {malleability of the earth}% Resist with
+    {Reaching into some soft ground, such as snow or mud, the caster begs for a chance to fight, and the ground forms into a weapon.
+    The caster then gains \arabic{spellPlusTwo}~\glspl{fp}.
+    The shatters if it deals over \arabic{spellPlusTwo} Damage}% Description
+    {
+    The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellPlusTwo}}
 
 }{}
+
+\iftoggle{verbose}{
+
+  \spell{Asking Rock}% Name
+    {Detailed, Divergent}% Enhancements
+    {Warp}% Action
+    {Earth, Fate}% Spheres
+    {civilization rating}% Resist with
+    {The caster sells a weapon to a rock in return for summoning a beast, and the rock becomes magnetic.
+    It has an effective Strength of \arabic{spellPlusTwo} to hold any iron weapon placed next to it.
+
+    Once the rock has a weapon, the \gls{gm} makes an encounter roll}% Description
+    {
+      The \gls{tn} depends on how close to civilization the spell is cast.
+      Attracting \glspl{monster} to \pgls{village} makes more of a challenge than attracting them while past the \gls{edge}.%
+      \exRef{judgement}{Judgement}{civilizationRating}
+      If the encounter roll produces nothing, the \gls{gm} goes up the chart until they find an encounter.
+
+      \Glspl{npc} targeted by this spell will survive if only their \gls{cr} value is greater than the \gls{monster} which finds them.
+      Otherwise, they end in the jaws of a beast.
+    }
+
+}{}
+
+\spell{River Smog}% Name
+  {Divergent, Duplicated}% Enhancements
+  {Wane}% Action
+  {Air, Water}% Spheres
+  {\roll{Speed}{Athletics}}% Resist with
+  {The caster spits prophecies of surreal catastrophe, and \arabic{spellTargets} worth of water turn into a putrid vapour.
+  Anyone who breathes it in receives \arabic{spellPlusTwo}~\glspl{ep}}% Description
+  {
+    The water should be clearly visible, such as a stream or an actual barrel of water.}
+
+\spell{Night Terrors}% Name
+  {Distant, Divergent}% Enhancements
+  {Wane}% Action
+  {Fate, Fire}% Spheres
+  {\roll{Charisma}{Survival}}% Resist with
+  {The caster calls the first line of a dirge from the darkness, then a fire at \spellRange\ goes out.
+  Whoever held it loses \showDam~\glspl{fp}}% Description
+  {}
+
+\showSpells{FireWater3}
+
+\showSpells{FireFate4}
+
+\showSpells{WaterAir4}
+
+\end{multicols}
+
+\section{High \Glsfmtplural{sphere}}
+
+\begin{multicols}{2}
 
 \subsection{Light}
 
@@ -102,7 +325,95 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
     The shadow fades once sunlight touches it for \pgls{interval}.}
 
-\iftoggle{verbose}{
+
+\showSpells{Light2}
+
+\pic{Roch_Hercka/flashing_light}
+
+\showSpells{Light2}
+
+\spell{Shadow Puppet}% Name
+  {Detailed}% Enhancements
+  {Wane}% Action
+  {Fire, Air}% Spheres
+  {\roll{Wits}{Vigilance}}% Resist with
+  {One target shadow forms a detailed silhouette, and may even stand up and away from the ground}% Description
+  {During the daylight, it simply looks weird; but at night these shadow puppets can easily fool someone into thinking \pgls{monster}, or even a particular person lies waiting, in the distance.
+
+  The shadows disappear once bright light hits them.}
+
+\spell{Quiet Campfire}% Name
+  {Devious}% Enhancements
+  {Wane}% Action
+  {Fire, Air}% Spheres
+  {size of fire}% Resist with
+  {The caster stares at a fire, and thinks dark thoughts.
+  After a couple of hours, the fire's light dims, though the noise and heat continue.
+  The spell lasts one \showOnset, so the light returns during the night}% Description
+  {Travellers sometimes use this spell to hide their fire when camping beyond the \gls{edge}, as it removes at last one chance of an encounter from the fire's light}
+
+
+\showSpells{Light3}
+
+\spell{Eternal Night}% Name
+  {Devious, Duplicated}% Enhancements
+  {Wane}% Action
+  {Fire, Air}% Spheres
+  {\roll{Intelligence}{Survival}}% Resist with
+  {The caster pulls on a memory of seeing darkness at the bottom of a clear loch, and the darkness comes.
+  After two \glsfmtplural{interval}, a patch of darkness forms, 5~\glsfmtplural{step} across.
+  Within four \glsfmtplural{interval}, all vision suffers a -4 Penalty}% Description
+  {
+  \Glspl{witch} commonly use this spell to make anyone in \pgls{bothy} or other sleeping-space miss the day.
+  They awaken late, in darkness, and generally assume they simply cannot sleep.
+  After all, they can see darkness, so it must be night, not day.
+
+  By the time people start to question their sanity, and light a fire, the next night may have already come.
+  }
+
+\pic{Roch_Hercka/polymorph}
+
+\showSpells{Light4}
+
+\iftoggle{verbose}{}{
+
+  \subsection{Force}
+
+  \showSpells{Force1}
+
+  \spell{Friendly Bolt}% Name
+    {Duplicated}% Enhancements
+    {Wane}% Action
+    {Earth, Fire}% Spheres
+    {\gls{weight} carried}% Resist with
+    {The caster shouts `let's go', and two targets gain a plus \arabic{spellPlusOne} bonus to running}% Description
+    {They feel suddenly lighter, as if being carried.
+    However, this spell does not help with carrying heavy items.}
+
+  \spell{Migrating Butterfly}% Name
+    {Detailed}% Enhancements
+    {Wane}% Action
+    {Earth, Fire}% Spheres
+    {\gls{weight} carried}% Resist with
+    {The caster outright denies how heavy something is, despite obvious heft, and its \gls{weight} reduces by \arabic{spellPlusOne} when facing towards the direction the caster looks}% Description
+    {Items which fall below \gls{weight}~0 will float like a seed on the wind}
+
+  \spell{Traveller's Curse}% Name
+    {Distant}% Enhancements
+    {Wax}% Action
+    {Earth, Fire}% Spheres
+    {\roll{Speed}{Athletics}}% Resist with
+    {The caster wishes the target a bad journey, and they immediately feel heavier.
+    For the next \arabic{spellPlusOne}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
+    {
+    The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
+
+  \showSpells{Force2}
+
+  \showSpells{Force3}
+
+  \showSpells{Force4}
+
   \subsection{Life}
 
   \showSpells{Life1}
@@ -147,7 +458,42 @@ As long as you have both of those at level 2 or above, you can cast the spell.
     {The caster gathers tiny gifts for the target, and they begin to regenerate Damage faster, recuperating an extra \arabic{spellPlusOne} \glspl{hp} each week}% Description
     {During this time, the target's appetite grows substantially, demanding an extra \arabic{spellCost} meals every day to keep the spell going.}
 
-}{}
+  \showSpells{Life2}
+
+  \spell{Scent in the Air}% Name
+    {Distant}% Enhancements
+    {Witness}% Action
+    {Earth, Water}% Spheres
+    {target's strangeness}% Resist with
+    {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits at \spellRange\ in a particular direction}% Description
+    {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challenge.}
+
+  \showSpells{Life3}
+
+  \spell{Herd Protection}% Name
+    {Duplicated, Distant}% Enhancements
+    {Warp}% Action
+    {Earth, Water}% Spheres
+    {current \glspl{hp}}% Resist with
+    {The caster yells warnings, and the targets gain \gls{dr}~\arabic{spellPlusOne} as their skin becomes thick}% Description
+    {Unfortunately, the tough hide feels heavy, and effectively counts as an item with \pgls{weight} of \arabic{spellPlusOne}.
+    The hide usually comes with fur, and protects against the cold as well as Damage.
+
+    When the spell combines with others, to boost the target's Strength and grant claws, they eventually look just like a regular bear.
+
+    The strange skin fades to normal once the target takes Damage and heals.}
+
+  \spell{Piglet Farm}% Name
+    {Duplicated, Detailed}% Enhancements
+    {Wane}% Action
+    {Earth, Water}% Spheres
+    {\glspl{hp}}% Resist with
+    {The caster cries `\textit{Pigs}', and the first \arabic{spellTargets} targets within \spellRange\ shrink, taking a -\arabic{spellPlusOne} Strength Penalty}% Description
+    {
+    This penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this penalty, and then half of their regular Strength penalty, for a total of -\arabic{spellPlusTwo}.}
+
+  \showSpells{Life4}
+}
 
 \subsection{Mind}
 
@@ -166,181 +512,6 @@ As long as you have both of those at level 2 or above, you can cast the spell.
     The spell will not say what kind of mind this is -- whether animal or person.
     It reports only `yes/ no', and often has false positives due to mice or insects (1/6 chance in daylight, 2/6 chance at night).}
 
-\end{multicols}
-
-\section{Second Level Spells}
-
-\begin{multicols}{2}
-
-\subsection{Air}
-
-\spell{Sleep Fog}% Name
-  {Devious}% Enhancements
-  {Wane}% Action
-  {Air}% Spheres
-  {ventilation}% Resist with
-  {With a memory of a bad night's sleep, the caster thinks about suffocating air.
-  Within one \showOnset, the air in the room turns rancid, inflicting \arabic{spellPlusTwo}~\glspl{ep} over the course of a few hours}% Description
-  {Anyone inside rolls \roll{Strength}{Vigilance} (\tn[10]) to wake up each time they take another \gls{ep}.}
-
-
-\showSpells{Air2}
-
-\iftoggle{verbose}{
-
-  \subsection{Earth}
-
-  \showSpells{Earth2}
-
-  \showSpells{Earth2}
-}{}
-
-\subsection{Fate}
-
-\showSpells{Fate2}
-\showSpells{Fate2}
-
-\subsection{Fire}
-
-\showSpells{Fire2}
-
-\spell{Toothless Fire}% Name
-  {Duplicated}% Enhancements
-  {Warp}% Action
-  {Fire}% Spheres
-  {intensity of the flame}% Resist with
-  {This spell changes the basic nature of a fire, so it can no longer burn a certain type of material}% Description
-  {Casters generally use this to stop a fire damaging people, but it could just as easily stop a fire spreading to clothing.
-
-    The fire will not stop feeding on whatever allows it to currently burn, so a wood fire will continue burning its wood.}
-
-\subsection{Water}
-
-\showSpells{Water2}
-
-\spell{Detect Water}% Name
-  {Distant}% Enhancements
-  {Witness}% Action
-  {Water}% Spheres
-  {smallness}% Resist with
-  {The caster detects liquid at \spellRange}% Description
-  {They cannot tell the type of liquid -- it could be a raging river, a tankard of ale, or a magma stream}
-
-\subsection{Death}
-
-\showSpells{Death2}
-\showSpells{Death2}
-
-\spell{Corpse Stench}% Name
-  {Distant}% Enhancements
-  {Witness}% Action
-  {Fate, Air}% Spheres
-  {time since death}% Resist with
-  {Sniffing at the wind, the caster identifies any corpses at \spellRange}% Description
-  {Most use this trick to double-check if an immobile and wounded person might still have a chance of life.}
-
-\spell{Infectious Migraine}% Name
-  {Duplicated}% Enhancements
-  {Wax}% Action
-  {Fate, Air}% Spheres
-  {\roll{Strength}{Athletics}}% Resist with
-  {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellPlusOne} \glspl{ep}}% Description
-  {}
-
-\spell{Preservation}% Name
-  {Detailed}% Enhancements
-  {Wane}% Action
-  {Fate, Air}% Spheres
-  {existing rot}% Resist with
-  {The caster paints a picture -- with words or brush -- of food, a shirt, or a human corpse.
-  The target ceases all rotting when not in use.
-  Rain or snow may fall upon it, but it will not degrade}% Description
-  {
-    Without this spell, any undead creatures would rot ever faster than a corpse in the ground.
-
-    The spell degrades when the target begins moving, and fails within \arabic{spellPlusOne} \glspl{interval}.
-    Therefore, undead spellcasters, such as liches, must continuously cast this spell upon themselves.
-
-    \index{Necromancy!Preservation}
-    If cast immediately, upon death, it can arrest the effects of \textit{rigor mortis} before they begin.
-  }
-
-
-\iftoggle{verbose}{
-  \subsection{Force}
-
-  \spell{Friendly Bolt}% Name
-    {Duplicated}% Enhancements
-    {Wane}% Action
-    {Earth, Fire}% Spheres
-    {\gls{weight} carried}% Resist with
-    {The caster shouts `let's go', and two targets gain a plus \arabic{spellPlusOne} bonus to running}% Description
-    {They feel suddenly lighter, as if being carried.
-    However, this spell does not help with carrying heavy items.}
-
-  \spell{Migrating Butterfly}% Name
-    {Detailed}% Enhancements
-    {Wane}% Action
-    {Earth, Fire}% Spheres
-    {\gls{weight} carried}% Resist with
-    {The caster outright denies how heavy something is, despite obvious heft, and its \gls{weight} reduces by \arabic{spellPlusOne} when facing towards the direction the caster looks}% Description
-    {Items which fall below \gls{weight}~0 will float like a seed on the wind}
-
-  \spell{Traveller's Curse}% Name
-    {Distant}% Enhancements
-    {Wax}% Action
-    {Earth, Fire}% Spheres
-    {\roll{Speed}{Athletics}}% Resist with
-    {The caster wishes the target a bad journey, and they immediately feel heavier.
-    For the next \arabic{spellPlusOne}~\glspl{interval}, the target counts as carrying something with \pgls{weight} of \arabic{spellPlusOne}}% Description
-    {
-    The curse wears off once the target has marched enough, but any \glspl{interval} the target spends stationary do not count towards the spell's duration.}
-
-  \showSpells{Force2}
-
-  \subsection{Life}
-
-  \showSpells{Life2}
-
-  \spell{Scent in the Air}% Name
-    {Distant}% Enhancements
-    {Witness}% Action
-    {Earth, Water}% Spheres
-    {target's strangeness}% Resist with
-    {Focussing on the air, and sniffing the wind, the caster asks politely if it will say whether or not some creature sits at \spellRange\ in a particular direction}% Description
-    {Other humanoids are \tn[7] to detect, beasts are \tn[9], and stranger creatures present a greater challenge.}
-
-}{}
-
-\subsection{Light}
-
-\showSpells{Light2}
-
-\pic{Roch_Hercka/flashing_light}
-
-\showSpells{Light2}
-
-\spell{Shadow Puppet}% Name
-  {Detailed}% Enhancements
-  {Wane}% Action
-  {Fire, Air}% Spheres
-  {\roll{Wits}{Vigilance}}% Resist with
-  {One target shadow forms a detailed silhouette, and may even stand up and away from the ground}% Description
-  {During the daylight, it simply looks weird; but at night these shadow puppets can easily fool someone into thinking \pgls{monster}, or even a particular person lies waiting, in the distance.
-
-  The shadows disappear once bright light hits them.}
-
-\spell{Quiet Campfire}% Name
-  {Devious}% Enhancements
-  {Wane}% Action
-  {Fire, Air}% Spheres
-  {size of fire}% Resist with
-  {The caster stares at a fire, and thinks dark thoughts.
-  After a couple of hours, the fire's light dims, though the noise and heat continue.
-  The spell lasts one \showOnset, so the light returns during the night}% Description
-  {Travellers sometimes use this spell to hide their fire when camping beyond the \gls{edge}, as it removes at last one chance of an encounter from the fire's light}
-
-\subsection{Mind}
 
 \spell{Awaken}% Name
   {Detailed}% Enhancements
@@ -405,223 +576,6 @@ As long as you have both of those at level 2 or above, you can cast the spell.
   {The desire must be something which would \textit{directly} grant at least one \glsentrytext{xp}.%
   \exRef{stories}{Stories}{codes}}
 
-\subsection{Divergent}
-
-\spell{Barrel Blast}% Name
-  {Divergent}% Enhancements
-  {Wane}% Action
-  {Air, Water}% Spheres
-  {\roll{Speed}{Cultivation}}% Resist with
-  {As the caster spits, \arabic{spellPlusTwo} barrels of water (or equivalent) turn to vapour and rush around a target.
-  If the target breathes in, they gain \arabic{spellPlusTwo}~\glspl{ep}}% Description
-  {
-    The water should be clearly visible, such as a stream or an actual barrel of water.}
-
-\spell{Dock Hickory}% Name
-  {Divergent}% Enhancements
-  {Warp}% Action
-  {Fire, Water}% Spheres
-  {\roll{Speed}{Athletics}}% Resist with
-  {As the caster sings a song in reverse, nearby fire falls from its wood and flows across the floor like water, while water gathers in place and swirls like flame}% Description
-  {
-  The fire only deals \showDam, spread evenly across the nearest four \glspl{step}; it dissipates at the end of the \gls{round}, unless it has fuel spread about the ground.
-  The water-flame remains upright until the wind eats through its peripheral `sparks'.
-  }
-
-\spell{Dark Doom}% Name
-  {Divergent}% Enhancements
-  {Wane}% Action
-  {Fate, Fire}% Spheres
-  {\roll{Charisma}{Survival}}% Resist with
-  {As the caster bids farewell to someone, they lose \showDam~\glspl{fp}, while the fire closest to the target dies}% Description
-  {
-  The spell can destroy any fire up to those large enough to deal \showDam\ Damage, and larger fires grow dim.}
-
-
-\iftoggle{verbose}{
-  \spell{Miner's Bane}% Name
-    {Divergent}% Enhancements
-    {Wane}% Action
-    {Earth, Air}% Spheres
-    {\roll{Speed}{Cultivation}}% Resist with
-    {As the caster curses the target's bread, air, and Sunlight, the ground underneath their feet softens, and their next breath of air sticks to the inside of their throat like thorny cotton.
-    Targets who fail to dart away quickly fall prone, and take \arabic{spellPlusTwo}~\glspl{ep} unless they held their breath}% Description
-    {
-    This spell relies on soft ground to make the target slip.
-    Harder floors will not melt, and the spell will settle on the nearest soft earth it can find.}
-
-  \spell{Finding Courage}% Name
-    {Divergent}% Enhancements
-    {Wax}% Action
-    {Earth, Fate}% Spheres
-    {malleability of the earth}% Resist with
-    {Reaching into some soft ground, such as snow or mud, the caster begs for a chance to fight, and the ground forms into a weapon.
-    The caster then gains \arabic{spellPlusTwo}~\glspl{fp}.
-    The shatters if it deals over \arabic{spellPlusTwo} Damage}% Description
-    {
-    The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellPlusTwo}}
-
-}{}
-
-\end{multicols}
-
-\section{Third Level Spells}
-
-\begin{multicols}{2}
-
-\subsection{Air}
-
-\spell{Clawing Wisps}% Name
-  {Detailed, Duplicated}% Enhancements
-  {Wax}% Action
-  {Air}% Spheres
-  {wind speed}% Resist with
-  {The caster gives a battle-cry, and cloud-lined spirits, appearing like small copies of the caster, push any enemies (but not allies) back, reducing their \glspl{ap} by \arabic{spellPlusOne}}% Description
-  {}
-
-\showSpells{Air3}
-\showSpells{Air3}
-
-
-\iftoggle{verbose}{
-  \subsection{Earth}
-
-  \spell{Mud Clamp}% Name
-    {Duplicated, Detailed}% Enhancements
-    {Wax}% Action
-    {Earth}% Spheres
-    {\roll{Strength}{Survival}}% Resist with
-    {The caster shouts `\textit{hold fast}', as snow or mud becomes solid, encasing any feet pushed into the ground.
-    Targets then count as \textit{Entangled}}% Description
-    {
-    The spell suffers a -2 penalty when used against creatures without flat feet (such as hooves, or most other animal feet), but can also gain up to a +2 bonus in particularly deep mud or snow.}
-
-  \showSpells{Earth3}
-}{}
-
-\subsection{Fate}
-
-\spell{Blessed Army}% Name
-  {Duplicated, Distant}% Enhancements
-  {Wax}% Action
-  {Fate}% Spheres
-  {targets' Charisma (inverted)}% Resist with
-  {The caster gives good wishes to a troupe, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}}% Description
-  {The spell targets those with the highest Charisma before others.}
-
-\showSpells{Fate3}
-
-\spell{Wheel of Fate}% Name
-  {Devious, Duplicated}% Enhancements
-  {Warp}% Action
-  {Fate}% Spheres
-  {\roll{Charisma}{Survival}}% Resist with
-  {The caster wonders what the future holds, and the nearest \arabic{spellTargets} targets become locked into the same encounter, on repeat.
-  It begins half way through the \showOnset, then repeats again, until it has gone through \arabic{spellPlusTwo} iterations}% Description
-  {\par
-  Of course, the encounter cannot contain the same creatures or people each time, but whatever the \gls{gm} rolled for the encounter will repeat.
-  This might result in three griffins looking at troupe, then three griffins attacking, then three griffins nesting, and so on.
-  Each of these encounters will come in addition to the standard encounters.}
-
-\subsection{Fire}
-
-\showSpells{Fire3}
-
-\spell{Traiterous Camp}% Name
-  {Devious, Distant}% Enhancements
-  {Warp}% Action
-  {Fire}% Spheres
-  {\roll{Wits}{Survival}}% Resist with
-  {The caster gives a jealous stare at a fire at \spellRange.
-  After two \glsfmtplural{interval}, the fire gains some weight, and starts to burn low, and look strange.
-  After a full day, the fire collapses on top of the nearest person, inflicting \showDam~Damage}% Description
-  {}
-
-\spell{Naked Fire}% Name
-  {Duplicated, Distant}% Enhancements
-  {Warp}% Action
-  {Fire}% Spheres
-  {size of fire}% Resist with
-  {After instructing all the fire around on proper etiquette, fires with a total area up to \arabic{spellTargets} \glspl{step} at \spellRange\ turn blue, and stop burning flesh.
-  They continue to act upon wood, hair, and clothing as normal}% Description
-  {Large fires are more difficult to affect, as they're too busy eating to listen.}
-
-\subsection{Water}
-
-\showSpells{Water3}
-
-\subsection{Death}
-
-\showSpells{Death3}
-
-\spell{Stench Sort}% Name
-  {Distant, Detailed}% Enhancements
-  {Witness}% Action
-  {Fate, Air}% Spheres
-  {time since death}% Resist with
-  {Detect the location of any corpse of a named species at \spellRange}% Description
-  {
-    Sniffing at the wind, the caster identifies any corpses from a particular species at \spellRange.
-    Possible types include `elves', `\glspl{woodspy}', or `bats'.}
-
-
-\iftoggle{verbose}{
-  \subsection{Force}
-
-  \showSpells{Force3}
-
-  \subsection{Life}
-
-  \showSpells{Life3}
-
-  \spell{Herd Protection}% Name
-    {Duplicated, Distant}% Enhancements
-    {Warp}% Action
-    {Earth, Water}% Spheres
-    {current \glspl{hp}}% Resist with
-    {The caster yells warnings, and the targets gain \gls{dr}~\arabic{spellPlusOne} as their skin becomes thick}% Description
-    {Unfortunately, the tough hide feels heavy, and effectively counts as an item with \pgls{weight} of \arabic{spellPlusOne}.
-    The hide usually comes with fur, and protects against the cold as well as Damage.
-
-    When the spell combines with others, to boost the target's Strength and grant claws, they eventually look just like a regular bear.
-
-    The strange skin fades to normal once the target takes Damage and heals.}
-
-  \spell{Piglet Farm}% Name
-    {Duplicated, Detailed}% Enhancements
-    {Wane}% Action
-    {Earth, Water}% Spheres
-    {\glspl{hp}}% Resist with
-    {The caster cries `\textit{Pigs}', and the first \arabic{spellTargets} targets within \spellRange\ shrink, taking a -\arabic{spellPlusOne} Strength Penalty}% Description
-    {
-    This penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this penalty, and then half of their regular Strength penalty, for a total of -\arabic{spellPlusTwo}.}
-
-}{}
-
-\subsection{Light}
-
-\showSpells{Light3}
-
-\spell{Eternal Night}% Name
-  {Devious, Duplicated}% Enhancements
-  {Wane}% Action
-  {Fire, Air}% Spheres
-  {\roll{Intelligence}{Survival}}% Resist with
-  {The caster pulls on a memory of seeing darkness at the bottom of a clear loch, and the darkness comes.
-  After two \glsfmtplural{interval}, a patch of darkness forms, 5~\glsfmtplural{step} across.
-  Within four \glsfmtplural{interval}, all vision suffers a -4 Penalty}% Description
-  {
-  \Glspl{witch} commonly use this spell to make anyone in \pgls{bothy} or other sleeping-space miss the day.
-  They awaken late, in darkness, and generally assume they simply cannot sleep.
-  After all, they can see darkness, so it must be night, not day.
-
-  By the time people start to question their sanity, and light a fire, the next night may have already come.
-  }
-
-\pic{Roch_Hercka/polymorph}
-
-\subsection{Mind}
-
 \label{carrierCrow}
 \spell{Carrier Crow}% Name
   {Detailed, Distant}% Enhancements
@@ -644,101 +598,64 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Mind3}
 
-\iftoggle{verbose}{
-  \subsection{Divergent}
-
-  \spell{Asking Rock}% Name
-    {Detailed, Divergent}% Enhancements
-    {Warp}% Action
-    {Earth, Fate}% Spheres
-    {civilization rating}% Resist with
-    {The caster sells a weapon to a rock in return for summoning a beast, and the rock becomes magnetic.
-    It has an effective Strength of \arabic{spellPlusTwo} to hold any iron weapon placed next to it.
-
-    Once the rock has a weapon, the \gls{gm} makes an encounter roll}% Description
-    {
-      The \gls{tn} depends on how close to civilization the spell is cast.
-      Attracting \glspl{monster} to \pgls{village} makes more of a challenge than attracting them while past the \gls{edge}.%
-      \exRef{judgement}{Judgement}{civilizationRating}
-      If the encounter roll produces nothing, the \gls{gm} goes up the chart until they find an encounter.
-
-      \Glspl{npc} targeted by this spell will survive if only their \gls{cr} value is greater than the \gls{monster} which finds them.
-      Otherwise, they end in the jaws of a beast.
-    }
-
-}{}
-
-\spell{River Smog}% Name
-  {Divergent, Duplicated}% Enhancements
-  {Wane}% Action
-  {Air, Water}% Spheres
-  {\roll{Speed}{Athletics}}% Resist with
-  {The caster spits prophecies of surreal catastrophe, and \arabic{spellTargets} worth of water turn into a putrid vapour.
-  Anyone who breathes it in receives \arabic{spellPlusTwo}~\glspl{ep}}% Description
-  {
-    The water should be clearly visible, such as a stream or an actual barrel of water.}
-
-\spell{Night Terrors}% Name
-  {Distant, Divergent}% Enhancements
-  {Wane}% Action
-  {Fate, Fire}% Spheres
-  {\roll{Charisma}{Survival}}% Resist with
-  {The caster calls the first line of a dirge from the darkness, then a fire at \spellRange\ goes out.
-  Whoever held it loses \showDam~\glspl{fp}}% Description
-  {}
-
-\showSpells{FireWater3}
-
-\end{multicols}
-
-\section{Fourth Level Spells}
-
-\begin{multicols}{2}
-
-\subsection{Air}
-
-\showSpells{Air4}
-
-\iftoggle{verbose}{
-  \subsection{Earth}
-
-  \showSpells{Earth4}
-}{}
+\showSpells{Mind4}
 
 \subsection{Death}
+\label{Death1}
+
+\showSpells{Death1}
+\showSpells{Death1}
+
+\showSpells{Death2}
+\showSpells{Death2}
+
+\spell{Corpse Stench}% Name
+  {Distant}% Enhancements
+  {Witness}% Action
+  {Fate, Air}% Spheres
+  {time since death}% Resist with
+  {Sniffing at the wind, the caster identifies any corpses at \spellRange}% Description
+  {Most use this trick to double-check if an immobile and wounded person might still have a chance of life.}
+
+\spell{Infectious Migraine}% Name
+  {Duplicated}% Enhancements
+  {Wax}% Action
+  {Fate, Air}% Spheres
+  {\roll{Strength}{Athletics}}% Resist with
+  {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellPlusOne} \glspl{ep}}% Description
+  {}
+
+\spell{Preservation}% Name
+  {Detailed}% Enhancements
+  {Wane}% Action
+  {Fate, Air}% Spheres
+  {existing rot}% Resist with
+  {The caster paints a picture -- with words or brush -- of food, a shirt, or a human corpse.
+  The target ceases all rotting when not in use.
+  Rain or snow may fall upon it, but it will not degrade}% Description
+  {
+    Without this spell, any undead creatures would rot ever faster than a corpse in the ground.
+
+    The spell degrades when the target begins moving, and fails within \arabic{spellPlusOne} \glspl{interval}.
+    Therefore, undead spellcasters, such as liches, must continuously cast this spell upon themselves.
+
+    \index{Necromancy!Preservation}
+    If cast immediately, upon death, it can arrest the effects of \textit{rigor mortis} before they begin.
+  }
+
+\showSpells{Death3}
+
+\spell{Stench Sort}% Name
+  {Distant, Detailed}% Enhancements
+  {Witness}% Action
+  {Fate, Air}% Spheres
+  {time since death}% Resist with
+  {Detect the location of any corpse of a named species at \spellRange}% Description
+  {
+    Sniffing at the wind, the caster identifies any corpses from a particular species at \spellRange.
+    Possible types include `elves', `\glspl{woodspy}', or `bats'.}
 
 \showSpells{Death4}
-
-\subsection{Fate}
-
-\showSpells{Fate4}
-
-\subsection{Fire}
-
-\showSpells{Fire4}
-
-\subsection{Water}
-
-\showSpells{Water4}
-
-\iftoggle{verbose}{
-  \subsection{Force}
-
-  \showSpells{Force4}
-
-  \subsection{Life}
-
-  \showSpells{Life4}
-
-}{}
-
-\subsection{Light}
-
-\showSpells{Light4}
-
-\subsection{Mind}
-
-\showSpells{Mind4}
 
 \iftoggle{verbose}{
   \subsection{Divergent}
@@ -747,3 +664,4 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 }{}
 
 \end{multicols}
+
