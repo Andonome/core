@@ -126,6 +126,7 @@ each inflict a penalty, so characters can find themselves pushed into taking hea
 
 \subsubsection{Melee Order}
 \index{Initiative}
+\label{initiativeOrdering}
 doesn't matter much\ldots until it does.
 The \gls{gm} can go clockwise round the table, but anyone can interrupt.
 At that point use the following method to determine who goes first:
@@ -554,6 +555,12 @@ These actions use the same \gls{natural}.
 
 If the \roll{Dexterity}{Melee} resistance succeeds, the \gls{witch}'s spell automatically fails, because their focus collapses.
 In this case, no \glspl{mp} are spent.
+
+\makeAutoRule{disarm}{Disarming}{make a normal attack with a -2 Penalty against an opponent with fewer \glsfmtplural{ap}}
+someone usually involves striking their hand, or the but of their weapon, making them drop the weapon.
+The manoeuvre uses any a standard \roll{Dexterity}{Melee} \gls{resistedaction} with a -2 Penalty, and can only be performed while when the target has fewer \glspl{ap}.
+
+If successful, the opponent's weapon flies a number of \glspl{step} equal to the first attack die, towards the next acting character (determined by \nameref{initiativeOrdering}, \vpageref{initiativeOrdering}), who can try to avoid the missile as usual, at \tn[12].
 
 \makeAutoRule{drawWeapon}{Drawing a Weapon}{spend 1~\glsentrytext{ap}}
 from a scabbard simply costs \pgls{ap}.
