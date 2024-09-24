@@ -63,11 +63,16 @@ Keywords={TTRPG,RPG,roleplaying}
 \include{systems}
 
 \startappendix
+\setglossarypreamble[mech]{\label{glosPreamble}%
+  Now for a quick recap of the last \pageref{glosPreamble} pages\ldots
+}
 
 \printglossary[
   style=topicmcols,
   type=mech,
   ]
+
+\vspace{2\baselineskip}
 
 \input{appendix.tex}
 
