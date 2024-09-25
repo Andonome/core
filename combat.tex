@@ -108,20 +108,30 @@ The player then decides which god will take the character's soul, and writes the
 \label{actionPoints}
 \index{Initiative}
 
-Everyone begins combat with 3~\glsentryfullpl{ap} plus their Speed Bonus, then spends their \glspl{ap} to attack.%
-\footnote{Anyone with a Speed Bonus of -3 can act on Initiative 0, but only once everyone else has reached Initiative 0.
-Those with a lower Initiatives must wait one cumulative round extra, before acting.}
-Once someone reaches 0~\glspl{ap}, they cannot initiate any actions, but they can still engage in any Resisted actions if attacked.
-
-Whether or not someone has \glspl{ap} to spare, they must respond to an attack -- resistance is mandatory.
+Everyone begins each \gls{combat} \gls{round} with a number of \glsentryfullpl{ap} equal to their \roll{Speed}{3}; then they spend \glspl{ap} for each action.%
+\footnote{Anyone with a Speed Bonus of -3 can act on Initiative 0, but only after everyone else has reached Initiative 0.
+Those with a lower Speed Bonus must wait one cumulative round extra, before acting.}
 
 \subsubsection{Negative \Glsfmtlongpl{ap}}
-each inflict a penalty, so characters can find themselves pushed into taking heavy penalties once overwhelmed.
+inflict a Penalty to all \glspl{action}.
+Once someone reaches 0~\glspl{ap}, they cannot initiate any actions, but they must engage in \pgls{quickaction} if \pgls{npc} attacks them -- resistance is mandatory.
 
 \begin{exampletext}
-  A character on 2~\glspl{ap} who attacks with a greatsword (which costs 4~\glspl{ap}) would then go to -2~\glspl{ap}.
-  If someone attacked them, they would have to respond with a -2 penalty to their action, then reduce to -6~\glspl{ap}.
-  Using big weapons gives big bonuses, but they bring their own dangers!
+  \noindent
+  Kosh loves using massive, human weapons, like the \greatsword\weaponName\ -- a sharp slab of metal so heavy he can slice the guts out of \pgls{basilisk}.
+  However, he really struggles with goblins\ldots
+
+  As four goblins attack, Kosh starts the \gls{round} with 4~\glspl{ap} (his Speed Bonus is +1).
+  His weapon's Bonus of \absNum{weaponBonus} means he destroys the first goblin easily, but each swing of the hefty \weaponName\ also costs him \arabic{heft}~\glspl{ap}.
+  \setcounter{track}{4}
+  \addtocounter{track}{-\value{heft}}
+
+  The player shifts the \gls{ap}-tracker on her character sheet to \arabic{track}, and a second goblin attacks, which pushes the \gls{ap}-tracker down to
+  \addtocounter{track}{-\value{heft}}
+  \arabic{track}.
+  When the third goblin attacks, he has a \absNum{track} Penalty to attack -- he swings the weighty sword again, decapitating the maggoty-gremlin, then spends another \arabic{heft}~\glspl{ap}.
+  \addtocounter{track}{-\value{heft}}
+  As the last goblin attacks, he tries to resist, but his \absNum{track} Penalty stops him pulling the sword back in time, and the goblin stabs the massive gnoll in the gut with a javelin, inflicting 4~Damage.
 \end{exampletext}
 
 \subsubsection{Initiative Order}
