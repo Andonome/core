@@ -1,7 +1,7 @@
 include config/vars
 
 .PHONY: all
-all: check $(RELEASE)
+all: check $(RELEASE) cover.pdf
 
 config/vars:
 	@git submodule update --init
@@ -11,9 +11,9 @@ $(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL | qr.tex
 
 images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg images/extracted/inclusion.tex
 	$(CP) $< $@
-$(DROSS)/cover.pdf: config/cover.tex cover.tex images/extracted/cover.jpg $(DBOOK)
-	$(RUN) $<
-cover.pdf: $(DROSS)/cover.pdf
+$(DROSS)/$(BOOK)_cover.pdf: config/cover.tex cover.tex images/extracted/cover.jpg $(DBOOK)
+	$(RUN) -jobname $(BOOK)_cover $<
+cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 	$(CP) $< $@
 
 .PHONY: clean
