@@ -3,7 +3,7 @@
 |             Downloads                |         Resources             |
 |:-------------------------------------|:------------------------------|
 | [Core Book][core]                    | [Wiki][wiki]                  | 
-| [Character Sheets][resources]        | [World Wiki][fenwiki]         |
+| [Character Sheets][cs]               | [World Wiki][fenwiki]         |
 | [Condensed Rules][rules]             | [Email an idea][issues email] |
 | [Introduction Module][oneshot]       | [Issues Board][board]         |
 
@@ -79,4 +79,4 @@ If you want to get involved, there are a number of ways to contribute:
 [judgement]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
-[resources]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/resources.pdf?job=build
+[cs]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/character_sheets.pdf?job=build
