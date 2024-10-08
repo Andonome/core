@@ -567,6 +567,8 @@ On a failure, the \gls{gm} describes how this plan goes wrong.
 happens when someone tries to stab \pgls{witch}.
 This works like any other \gls{resistedaction} -- if the \gls{witch} rolls higher, the spell works, but if the opponent rolls higher, the spell fails and the caster receives Damage.
 
+\sidepic[4]{Roch_Hercka/conjuration_left}{}
+
 Of course, one must use a spell which could plausibly impede the attack.
 Summoning a small cyclone in someone's face, or cursing their sword-arm with bad luck could both repel an attack, but a spell to make someone forget that it is Tuesday would not.
 
@@ -733,23 +735,6 @@ allow animals to grapple and damage with the same attack.
 So when an attack is successful, the target both receives Damage and counts as \textit{grappled}.%
 \footnote{Find them \vpageref{grappling}.}
 
-\subsubsection{Flight}
-demands delicate proportions.
-The sheer size of the wings mean their \gls{weight} equals half the creature's \glspl{hp}.
-
-\begin{itemize}
-  \item
-  Creatures with a higher \gls{weight} than their own Speed Bonus cannot fly from the ground -- they must climb something high, and take off from a jump.
-  \item
-  Creatures with \pgls{weight} equal to their Speed Bonus can fly after sprinting for a full round.
-  \item
-  Finally, those with \pgls{weight} below their Speed Bonus can simply jump into flight, from the ground.
-\end{itemize}
-
-Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
-
-Creatures with any amount of encumbrance cannot take off.
-
 \subsubsection{\Glsfmtplural{swarm}}
 \glsentrydesc{swarm}
 
@@ -769,20 +754,37 @@ Creatures with any amount of encumbrance cannot take off.
 made by big creatures can become extremely strong.
 Pulling away from a web requires a \roll{Strength}{Athletics} roll, with \pgls{tn} equal to the spinner's \roll{Strength}{8}.
 
-\sidebox[20]{
+\sidebox[17]{
   \begin{boxtable}
     \textbf{\Glsentrytext{tn}} & \textbf{Situation} \\
     \hline
-    +2 & Twilight \glsentrytext{evening} \\
-    +4 & Darkness \glsentrytext{night} \\
-    +2 & Foliage \\
-    +2 & Running \\
+    +2 & \small Twilight \glsentrytext{evening} \\
+    +4 & \small Darkness \glsentrytext{night} \\
+    +2 & \small Foliage \\
+    +2 & \small Running \\
   \end{boxtable}
 }
-Spotting a web demands \pgls{bandAct} of \roll{Wits}{Vigilance}.
+Spotting webs demands a \roll{Wits}{Vigilance} roll.
 The \gls{tn} starts at 6, with heavy modifiers for lighting, or characters moving quickly.
 
 Webs degrade slowly.
 Each \gls{interval} the \gls{tn} to break them decreases by 1.
+
+\subsubsection{Wings}
+demand delicate proportions.
+Their sheer size mean their \gls{weight} equals half the creature's \glspl{hp}.
+
+\begin{itemize}
+  \item
+  Creatures with a higher \gls{weight} than their own Speed Bonus cannot fly from the ground -- they must climb something high, and take off from a jump.
+  \item
+  Creatures with \pgls{weight} equal to their Speed Bonus can fly after sprinting for a full round.
+  \item
+  Finally, those with \pgls{weight} below their Speed Bonus can simply jump into flight, from the ground.
+\end{itemize}
+
+Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
+
+Creatures with any amount of encumbrance cannot take off.
 
 \end{multicols}
