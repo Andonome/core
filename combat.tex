@@ -207,8 +207,6 @@ Losing \glspl{fp} can mean any number of things.
 
 \end{multicols}
 
-\widePic[t]{Roch_Hercka/cave_fight}
-
 \section{Equipment}
 
 \begin{multicols}{2}
@@ -518,10 +516,10 @@ characters Attribute bonuses cannot go beyond the character's \roll{Wits}{Vigila
 
 \paragraph{Fighting in minimal light}
 (such as a moonless night)
-only gives a -1 penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
+only gives a -1 Penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
 
-\makeAutoRule{enclosedcombat}{Enclosed Spaces}{Weapons' Attack Bonus counts for half}
 \index{Caving!Enclosed Melee}
+\makeAutoRule{enclosedcombat}{Enclosed Spaces}{Weapons' Attack Bonus counts for half}
 cause serious problems for people wielding longswords, battle axes, and other large weapons.
 Daggers and shortswords often have an easier time in these locations.
 
@@ -529,24 +527,24 @@ When a character has no space to swing a weapon -- either vertically or horizont
 So weapons with a +1 Attack Bonus remain as they were, but weapons with a +3 Attack Bonus reduce their usefulness to a +2 Attack Bonus.
 
 \makeAutoRule{holdingBreath}{Holding the Breath}{+1~\glsentrytext{ep} per round, must breath in at -1~\glsentrytext{ap}}
-\index{Melee!Staying Silent}
-\index{Hold Breath}
 during combat allows one to stay silent, and not breath any nasty gasses in.
 While doing so, the character gains 1~\gls{ep} each round (these \glspl{ep} are tracked separately, and vanish soon after combat).
+\index{Melee!Staying Silent}
+\index{Hold Breath}
 
 If the character every falls below 0~\glspl{ap}, then their stamina and focus has run out, and they breathe in immediately.
 
-\makeAutoRule{higherGround}{The Higher Ground}{+1 Bonus}
+\makeAutoRule{higherGround}{The Higher Ground}{+1 to Attack}
 means gravity helps on the down-swing, while the opponent must bring their head a little bit closer.
 This position grants a +1 Bonus to attack.
 
-\makeAutoRule{entangled}{Trapped, Entangled, or Prone}{-2~\glsentrytext{ap} Penalty}
-\label{trapped}
 \index{Melee!Prone}
 \index{Melee!Entangled}
-\label{prone}
+\makeAutoRule{entangled}{Trapped, Entangled, or Prone}{-2~\glsentrytext{ap} Penalty}
+\label{trapped}
 characters may be caught in mud, shackled to a pillar, or caught in a web.
 They take a penalty to Speed (the default is -2), which reduces their \glspl{ap}.
+\label{prone}
 
 \subsection{Manoeuvres}
 
@@ -558,16 +556,23 @@ Anyone can use them at any point, if they use the right weapons.
 
 If a player has a plan, they describe it, and make a roll.
 On a success, the scene plays out as planned.
-On a failure, the \gls{gm} describes how this plan goes wrong.
+On a failure, the \gls{gm} describes how this plan goes wrong, and the Failure Margin becomes \pgls{ap} Penalty.
 
-\makeAutoRule{closeMagic}{Close Magic}{roll vs enemy's Attack as usual}
+\begin{exampletext}
+  If the \glspl{pc} roll a total of `6' at \tn[10], they each lose 4~\glspl{ap} on the first \gls{round}.
+\end{exampletext}
+
+%!
+\columnbreak
+
 \index{Melee!Magic}
 \index{Magic!Close}
 \index{Spells!Melee}
+\makeAutoRule{closeMagic}{Close Magic}{roll vs enemy's Attack as usual}
 happens when someone tries to stab \pgls{witch}.
 This works like any other \gls{resistedaction} -- if the \gls{witch} rolls higher, the spell works, but if the opponent rolls higher, the spell fails and the caster receives Damage.
 
-\sidepic[4]{Roch_Hercka/conjuration_left}{}
+\sidepic[25]{Roch_Hercka/conjuration_left}{}
 
 Of course, one must use a spell which could plausibly impede the attack.
 Summoning a small cyclone in someone's face, or cursing their sword-arm with bad luck could both repel an attack, but a spell to make someone forget that it is Tuesday would not.
@@ -580,7 +585,7 @@ In this case, no \glspl{mp} are spent.
 
 \makeAutoRule{disarm}{Disarming}{make a normal attack with a -2 Penalty against an opponent with fewer \glsfmtplural{ap}}
 someone usually involves striking their hand, or the but of their weapon, making them drop the weapon.
-The manoeuvre uses a standard \roll{Dexterity}{Melee} \gls{resistedaction} with a -2 Penalty, and can only be performed while when the target has fewer \glspl{ap}.
+The manoeuvre uses a standard \roll{Dexterity}{Melee} \gls{resistedaction} with a -2 Penalty, and can only be performed while when the target has fewer~\glspl{ap}.
 
 If successful, the opponent's weapon flies a number of \glspl{step} equal to the first attack die, towards the next acting character (determined by \nameref{initiativeOrdering}, \vpageref{initiativeOrdering}), who can try to avoid the missile as usual, at \tn[12].
 
@@ -591,11 +596,11 @@ Drawing a weapon from a \textit{rucksack}, however, could cost a couple of \glsp
 \makeAutoRule{dropWeapon}{Dropping a Weapon}{costs 0~\glsfmtplural{ap}}
 costs no \glspl{ap}, though they will be defenceless unless they do this while picking up another weapon.
 
-\pic{Roch_Hercka/stances}
-
 \makeAutoRule{flank}{Flanking}{grants a +2 Attack Bonus}
 grants a +2 Attack Bonus.
 Up to 6 opponents can attack a lone character, but only half can flank, and any available walls reduce this number.
+
+\pic{Roch_Hercka/stances}
 
 \makeAutoRule{grab}{Grabbing}{attack with Brawl, both can grapple, and count as carrying the other's \glsentrytext{weight}}
 uses \roll{Dexterity}{Brawl} to attack -- success means either one can make a Grapple attack.
@@ -748,8 +753,6 @@ So when an attack is successful, the target both receives Damage and counts as \
   A character with a dagger would do much better, but once only a single \gls{hp}-worth of rats remained, they would struggle to hit the last of them.
 \end{exampletext}
 
-\pic{Roch_Hercka/conjuration_right}
-
 \makeAutoRule{webs}{Webs}{are resisted with \roll{Strength}{Athletics} (\glsentrytext{tn} equals creature's \roll{Strength}{8})}
 made by big creatures can become extremely strong.
 Pulling away from a web requires a \roll{Strength}{Athletics} roll, with \pgls{tn} equal to the spinner's \roll{Strength}{8}.
@@ -786,5 +789,7 @@ Their sheer size mean their \gls{weight} equals half the creature's \glspl{hp}.
 Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
 
 Creatures with any amount of encumbrance cannot take off.
+
+\pic{Roch_Hercka/conjuration_right}
 
 \end{multicols}
