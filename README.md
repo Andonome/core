@@ -15,7 +15,7 @@ BIND is an open-source, grunge-fantasy, tabletop RPG, which:
 
 # Getting the Book
 
-Download it from the [link][core download], then take it to your local, friendly, print-shop.
+Download it from the [link][core], then take it to your local, friendly, print-shop.
 Everything in the book has been optimized for reading on paper, and reading two-columns of blinding-white PDF on a monitor will only give you a headache.
 
 ## Compiling the Book Yourself
@@ -31,7 +31,7 @@ For full setup instructions, see the [wiki][compiling].
 
 # Related Books
 
-- For a short introduction module, grab a copy of [Escape from the Horde][intro module].  It comes with a running commentary of the rules, and pre-made character sheets, ready to be torn from the back.
+- For a short introduction module, grab a copy of [Escape from the Horde][oneshot].  It comes with a running commentary of the rules, and pre-made character sheets, ready to be torn from the back.
 - For character creation, print the [players' guide][stories].
 - To craft your own section of a monster-ridden world, open the [Book of Judgement][judgement].
 
