@@ -20,11 +20,11 @@ Everything in the book has been optimized for reading on paper, and reading two-
 
 ## Compiling the Book Yourself
 
-1. Clone this repo.
 1. Install the required packages:
     * For Debian/ Mint/ Ubuntu: `apt install inkscape make texlive-full git-lfs latexmk`.
     * For Arch Linux: `pacman -S inkscape make git git-lfs texlive-binextra texlive-latexextra texlive-fontsrecommended texlive-fontsextra && git lfs install`
     * For Void Linux: `xbps-install inkscape make texlive-full git-lfs texlive-latexmk`.
+1. Clone this repo.
 1. Enter the repo, and do `make all`.
 
 For full setup instructions, see the [wiki][compiling].
