@@ -215,7 +215,7 @@ Losing \glspl{fp} can mean any number of things.
 
 \noindent
 \Glspl{weapon} help to attack and defend, in varying degrees.
-Spears help to hit \glspl{monster} (or people) before they hit you, and provide a little extra Damage; mauls provide only a small bonus to hit enemies, but inflict massive Damage when they make contact.
+Spears help to hit \glspl{monster} (or people) before they hit you, and provide a little extra Damage; mauls provide only a small Bonus to hit enemies, but inflict massive Damage when they make contact.
 Swords provide a balance between the two.
 
 Weapons with larger Bonuses have a higher \gls{weight}; they take more time to swing, so each attack costs more \glspl{ap}.
@@ -265,7 +265,12 @@ They don't move as quickly, or easily as other shields, but still work well with
 
 \shieldchart
 
-\boxPair[t]{
+\subsubsection{Quality}
+depends on the local metal supplies, and the skills of the local \gls{armourHall}.
+\Glspl{pc} may find \pgls{weapon} with poor stats, such as a sword with \pgls{weight} higher than expected.
+The differing stats are not an error -- they simply represent varying quality.
+
+\boxPair[b]{
   \begin{exampletext}
   \Pgls{sunGuard} stands with a flail, and a cocky attitude.
   His basic Attack Score is 10, so rolling a 10 means a tie.
@@ -318,7 +323,16 @@ They don't move as quickly, or easily as other shields, but still work well with
 \index{Armour}
 
 Armour provides \glsentryfullpl{dr}, which reduces incoming Damage.
-\Gls{dr} applies before \glspl{fp}, so if a character with leather armour (\gls{dr}~3) and 5~\glspl{fp} took 10~Damage, they would reduce the Damage by 3, then remove all 5~\glspl{fp}, and finally apply 2~Damage.
+\Gls{dr} applies before \glspl{fp}.
+
+\begin{exampletext}
+  Toesplint has leather armour (\gls{dr}~3) and 5~\glspl{fp}.
+  \Pgls{basilisk} tramples over him, inflicting 10~Damage.
+
+  The player mentally subtracts 3 Damage for the armour, then removes all 5~\glspl{fp}, and finally accepts 2~Damage.
+  The next \gls{round}, the \gls{basilisk} inflicts 7~Damage more with a bite.
+  The character has no more \glspl{fp}, so the player has to accept 4~Damage.
+\end{exampletext}
 
 \subsubsection{\Glsfmtplural{vitalShot}}
 \label{vitals}
