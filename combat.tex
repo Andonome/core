@@ -214,26 +214,29 @@ Losing \glspl{fp} can mean any number of things.
 \subsection{\Glsfmtplural{weapon}}
 
 \noindent
-\Glspl{weapon} are a great way of inflicting additional Damage, and an equally excellent way of defending oneself.
-Having a longsword to keep scary opponents at bay is always better than trying to nimbly dodge about.
-Longer \glspl{weapon} grant an Attack Bonus, allowing someone to hit the enemy before the enemy hits them, and heavy \glspl{weapon} tend to deal more Damage.
-However, both of these come at the cost of extra \emph{heft}; they take more time to swing, and so cost more \glspl{ap} to use.
+\Glspl{weapon} help to attack and defend, in varying degrees.
+Spears help to hit \glspl{monster} (or people) before they hit you, and provide a little extra Damage; mauls provide only a small bonus to hit enemies, but inflict massive Damage when they make contact.
+Swords provide a balance between the two.
+
+Weapons with larger Bonuses have a higher \gls{weight}; they take more time to swing, so each attack costs more \glspl{ap}.
 
 Each \gls{weapon} has the following properties:
 
 \begin{itemize}
-
   \item
-  \textbf{The Attack Bonus:} adds to the Attack roll, representing reach and manoeuvrability.
+  \textbf{The Attack Bonus}
+  adds to the Attack roll, representing reach and manoeuvrability.
   \item
-  \textbf{The Damage Bonus:} adds to the Damage of a successful Attack roll.
+  \textbf{The Damage Bonus}
+  adds to the Damage of a successful Attack roll.
   This might represent sharpness in a dagger, or just sheer weight in the case of a war hammer.
   \item
-  \textbf{The \Gls{ap} Cost:} shows how many \glspl{ap} the player spends after engaging in an Attack roll (whether attacking or being attacked).
-  It represents a weapon's inertia (and hence difficulty in pulling it back from a swing), and allows enemies with lighter weapons to `close the gap'.
-  \item
-  \textbf{The \glsentryname{weight}:} means that your character must have at least double this number of \glspl{hp}, or they will struggle to use the weapon.
-  %! update
+  \textbf{The \glsentryname{weight}}
+  tells you how many \glspl{ap} you need to swing the weapon.
+  \shortsword\weaponName s
+  only provides a \absNum{weaponBonus} Bonus to hit, but also only need \arabic{weaponWeight}~\gls{ap} to attack.
+  \greatsword\weaponName s
+  provide a \absNum{weaponBonus} Bonus to hit, but costs \arabic{weaponWeight}~\glspl{ap}.
 \end{itemize}
 
 \weaponsChart
@@ -314,8 +317,8 @@ They don't move as quickly, or easily as other shields, but still work well with
 \subsection{Armour}
 \index{Armour}
 
-When armour works, its \glsentryfullpl{dr} reduces incoming Damage.
-It applies before \glspl{fp}, so \gls{dr} and \glspl{fp} make a powerful and steady combination.
+Armour provides \glsentryfullpl{dr}, which reduces incoming Damage.
+\Gls{dr} applies before \glspl{fp}, so if a character with leather armour (\gls{dr}~3) and 5~\glspl{fp} took 10~Damage, they would reduce the Damage by 3, then remove all 5~\glspl{fp}, and finally apply 2~Damage.
 
 \subsubsection{\Glsfmtplural{vitalShot}}
 \label{vitals}
