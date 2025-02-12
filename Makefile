@@ -1,8 +1,5 @@
 include config/vars
 
-.PHONY: all
-all: check $(RELEASE) cover.pdf
-
 config/vars:
 	@git submodule update --init
 
@@ -16,7 +13,5 @@ $(DROSS)/$(BOOK)_cover.pdf: config/cover.tex cover.tex images/extracted/cover.jp
 cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 	$(CP) $< $@
 
-.PHONY: clean
-clean:
-	$(CLEAN)
-	$(RM) -r images/extracted
+targets += cover.pdf
+
