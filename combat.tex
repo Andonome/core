@@ -49,6 +49,7 @@ There is nothing like an `attack of opportunity', because every time someone pas
 In all cases, both parties spend \glspl{ap}.}
 
 \begin{figure*}[t!]
+  \label{stackingDamageChart}%
   \stackingDamageChart
 \end{figure*}
 
@@ -62,19 +63,20 @@ When characters reach 0~\glspl{hp}, they fall over.
 \subsubsection{Stacking Damage}
 \index{Melee!Stacking Damage}
 \label{stackingDamage}
-means Damage Bonuses cannot extend forever.
-Replace every +4 Damage Bonus by an additional $D6$.
-It continues through all Damage Bonuses, so $1D6+9$ Damage becomes $3D6+1$ Damage after conversion.
+could lead to rolling $1D6+7$ Damage, which would create predictable and deterministic results.
+To avoid predictable outcomes, every four points of Damage becomes $1D6$;
+so $1D6 + 4$ becomes $2D6$ Damage.
+Check the chart \vpageref{stackingDamageChart}.
 
 \subsubsection{\Glsfmtlongpl{hp}}
 are equal to 6 plus a character's Strength Bonus.
-Small gnomes typically have 4~\glspl{hp} while big, strong humans typically have 7.
+Small gnomes typically have 4~\glspl{hp} while big, strong humans typically have~7.
 Losing even a single \gls{hp} means the character has suffered serious Damage.
 A long fall might have broken the character's bone.
 A dagger could have slashed veins open.
 Characters do not have many \glspl{hp} so losing even one is a serious matter.
 
-\index{Coins!\Glsfmtlongpl{hp}}
+\index{Coins!Damage}
 Players have a space on their character sheets to track \glspl{hp} using coins.
 Having a physical representation of waning health lets the other players see their injuries at a glance.
 
@@ -497,12 +499,12 @@ when used in combat, so they can inflict
 
 \section{Complications}
 
+`Circumstances' cover what happens to characters, while `Manoeuvres' (\vpageref{manoeuvres}) covers what characters might decide to do.
+Everything in this section has a short reference-list under the \nameref{combatAppendix}, \vpageref{combatAppendix}.
+
 \begin{multicols}{2}
 
 \subsection{Circumstances}
-
-These rules cover things that happen to characters.
-You can refer back to them when necessary with the list \vpageref{combatAppendix}.
 
 \makeAutoRule{blindness}{Blindness}{spend 1~\glsentrytext{ap} and make a \roll{Wits}{Vigilance} before any other action}
 \index{Melee!Blindness}
@@ -566,6 +568,7 @@ They take a Speed Penalty (the default is -2), which reduces their \glspl{ap}.
 \label{prone}
 
 \subsection{Manoeuvres}
+\label{manoeuvres}
 
 These additional actions cover different ways to engage with enemies.
 Anyone can use them at any point, if they use the right weapons.
@@ -773,8 +776,6 @@ So when an attack is successful, the target both receives Damage and counts as \
   A character with a dagger would do much better, but once only a single \gls{hp}-worth of rats remained, they would struggle to hit the last of them.
 \end{exampletext}
 
-\pic{Roch_Hercka/conjuration_right}
-
 \makeAutoRule{webs}{Webs}{are resisted with \roll{Strength}{Athletics} (\glsentrytext{tn} equals creature's \roll{Strength}{8})}
 made by big creatures can become extremely strong.
 Pulling away from a web requires a \roll{Strength}{Athletics} roll, with \pgls{tn} equal to the spinner's \roll{Strength}{8}.
@@ -811,5 +812,7 @@ Their sheer size mean their \gls{weight} equals half the creature's \glspl{hp}.
 Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
 
 Creatures with any amount of encumbrance cannot take off.
+
+\pic{Roch_Hercka/conjuration_right}
 
 \end{multicols}
