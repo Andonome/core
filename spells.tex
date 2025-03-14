@@ -673,6 +673,22 @@ As long as you have both of those at level 2 or above, you can cast the spell.
 
 \showSpells{Death3}
 
+\spell{Vomit Mana}% Name
+  {Detailed, Duplicated}% Enhancements
+  {Wane}% Action
+  {Fate, Air}% Spheres
+  {\roll{Charisma}{Athletics}}% Resist with
+  {`\textit{Breathe ash and piss rocks}' -- the caster shouts malformed bodily actions, and \arabic{spellTargets} release \arabic{spellPlusOne}~\glspl{mp} into the air}% Description
+  {Anyone without \glspl{mp} loses \glspl{ep}, as the energy rips from their body.
+
+  The released \glspl{mp} dissipate into the surrounding \glspl{area} quickly, so the total \glspl{mp} should be divided by the number of \glspl{mp} replenished each \gls{interval}.
+  In most cases, the spell will rip out
+  \set{track}{spellPlusOne}%
+  \multiply\value{track} by \value{spellTargets}%
+  \arabic{track}~\glspl{mp}, but leave only
+  \divide\value{track} by 3%
+  \arabic{track}~\glspl{mp} in the \gls{area}.}
+
 \spell{Stench Sort}% Name
   {Distant, Detailed}% Enhancements
   {Witness}% Action
