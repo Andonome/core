@@ -199,7 +199,7 @@ Most \glspl{npc} begin without any \glspl{fp}, but every \gls{npc} with a name g
 \Glspl{npc} can store a number of \glspl{fp} equal to their \roll{Charisma}{5}.
 
 \subsubsection{Narrative Flow}
-often adjusts to \glspl{fp}, as the troupe will often retreat when their luck runs low, and become fiercer after \pgls{interval} or two of rest.
+often adjusts to \glspl{fp}, as the troupe will often \gls{retreat} when their luck runs low, and become fiercer after \pgls{interval} or two of rest.
 However, \glspl{fp} are not a `meta-currency' -- they are diegetic.
 \Glspl{witch} can detect someone's \glspl{fp} with \glspl{spell}, and people have a vague sense of their own \glspl{fp} as a feeling of courage.
 The players will likely feel the same as a lot of `courage points' lets the character charge into battle, while running low means `run'.
@@ -676,46 +676,76 @@ If successful, the sneak attack deals standard Damage with a +2 Bonus, and provi
 \index{Chases}
 \label{chases}
 
-\chasechart
-
 \begin{multicols}{2}
 
-\subsection{Fleeing}
+\subsection{\Glsfmttext{retreat}}
 
-Running from a fight means a character rolls \roll{Speed}{Athletics} against the opponent's usual \gls{tn}, usually their \roll{Dexterity}{Melee}.
-On success, the character starts to flee, and on failure, the character receives Damage.
-A tie implies both.
+\Gls{retreat} works like any other \gls{resistedaction} -- players roll their character's \roll{Speed}{Athletics} against their opponents'.
+A Margin of 3 ends \pgls{retreat}, as the \glspl{pc} flee, or (with a Failure Margin of 3) the \glspl{npc} catch up.
+A lower Margin means both sides run through \pgls{area} and gain \pgls{ep}, then the winner changes one \gls{trait} in the \gls{resistedaction}, and decides which \gls{area} to approach next.
 
-Once a chase has begun, both sides make a Resisted Roll of \roll{Speed}{Athletics}.
-A success Margin of 3 means the characters flee far and fast enough to escape their pursuers, but gain \pgls{ep} for the distance run.
+\begin{exampletext}
+  The \glspl{sunGuard} have caught the \glspl{pc} red-handed, so the \glspl{pc} flee.
 
-\subsubsection{Switching Traits}
-represents changing tactics when the first attempt to flee fails.
-The troupe do not escape their pursuers, but can determine where the direction of the chase, leading their pursuers exactly where they want, changing the nature of the chase with a newfound \gls{area}.
-Changing \pgls{area} can change the \glspl{trait} involved, so the characters can decide to hide, replacing \roll{Dexterity}{Athletics} with \roll{Dexterity}{Stealth}.
-Or they might head straight into \pgls{area} of harsh bushes which demand strong limbs to move aside; this changes the roll to \roll{Strength}{Athletics}.
+  {\sffamily ``Gimme a group roll of \roll{Speed}{Athletics}''}, says the \gls{gm}, then calculates  the \glspl{sunGuard} Bonus.
+  They have Speed~+1 and Athletics~0.
 
-Players can only select a Trait which makes sense in the current context.
-\Pgls{pc} might use \roll{Speed}{Empathy} when hurriedly asking a farmer to hide them, but they can't use Academics just because they're in a library.
+  {\sffamily ``The \glsentrylong{tn} is 8 to flee, but you'll need 11 to get away clear.''}
 
-Whenever the troupe run together, each has an individual roll, so the troupe can either accept the result of the character with the lowest roll, or split up.
-The same applies when switching Traits -- one character may climb up a challenging wall (switching the roll to \roll{Dexterity}{Athletics}), while another ducks behind a wide tree (switching the roll to \roll{Speed}{Stealth}).
+  One player roll the dice: \dicef{7}.
+  \begin{itemize}
+    \item
+    \composeHumanName\ has a +4 Bonus, for a total of 11.
+    She sprints out the door, faster than the wind, and then slows down\ldots she wants to remain with her companions, so she waits to see if the rest can flee.
+    \item
+    \composeHumanName's player rolls 9 in total, so he won't get away, but the player changes one \gls{trait} in the \gls{resistedaction}.
 
-\subsubsection{The Failure Margin}
-works the same way, but in reverse.
-A single Failure Margin means the pursuers chase the troupe through 2~\glspl{area}, herding them right where they want them, and switching to another \gls{trait}.
+  {\textit\sffamily ``Can I jump into the marketplace, and use the way the crowds move to get away?''}
 
-A Failure Margin of 3 or more means the pursuers chase the characters through \pgls{area} before catching them.
+  {\sffamily ``Sure, the market is nearby.
+  So you run into the market, and the next roll will use \roll{Speed}{Empathy}.
+  Gain \pgls{ep}!''}
+  \item
+  \composeHumanName's player rolls 8, hitting the \gls{tn} precisely.
 
-\subsection{Hunting}
+  {\sffamily ``You can't keep up with everyone, so you dive away into the slums as one of the \glspl{sunGuard} breaks away from the rest to follow you.
+  Add \pgls{ep}!''}
+  \item
+  \composeHumanName's player rolls a 7, so the \glspl{sunGuard} are beginning to catch up, and hound him into a herd of cattle.
+  That changes the field, and on the next roll, he and the \glspl{sunGuard} will roll \roll{Strength}{Athletics} (pushing past cows takes muscle).
 
-Running after prey follows exactly the same rules, but in reverse.
+  {\sffamily ``Three of the \glspl{sunGuard} chase you into a herd of cows, bound for slaughter at the market.
+  Add \pgls{ep}.''}
+  \item
+  \composeHumanName\ goes last, and her player rolls a total of 5.
+
+  {\sffamily ``One of the \glspl{sunGuard} stops to grab you, while the rest run after everyone else.
+  Roll for the attack, if you want to avoid going to the \gls{court}.''}
+
+  {\textit\sffamily ``Hang on -- I can outrun them, but I think I'll stay here, and fight.''}
+  \end{itemize}
+
+  So the fastest \gls{pc} decided to stay and help the slowest member, and doubled-back to fight the guard.
+  The second, third, and fourth will have to make another roll, though the second has selected more favourable \glspl{trait} (\roll{Speed}{Empathy}) and stands a better chance of getting that Margin of 3 to get clean away.
+\end{exampletext}
+
+If \glspl{npc} successfully catch up to the \glspl{pc}, they can instigate combat while right next to the \glspl{pc}.
+Of course, the \glspl{pc} can try another \gls{retreat}, but they'll have to roll \roll{Speed}{Athletics} against their opponent's \roll{Dexterity}{Melee} as the \glspl{npc} attempt an attack.
+Success on that roll just means the \gls{pc} has spent \pgls{ap} on jumping back.
+If they keep away until the end of the \gls{round}, \emph{then} they can begin another \gls{retreat}.
+
+\subsubsection{Switching \Glsfmtplural{trait}}
+during a chase represents how changing to a new \gls{area} can change how the chase progresses.
+Down in the \gls{deep}, characters may only have one or two caverns they can flee towards, but with a forest, the \gls{gm} should mention nearby features, such as streams, thorny bushes, or somewhere with low-hanging branches (suitable for climbing).
+
+When players suggest switching \glspl{trait}, any combination works fine, as long as it's minimally intelligible.
+Changing to \roll{Intelligence}{Athletics} because you're jumping through a bunch of guild halls, where you can jump through certain windows and open some doors, depending on which institutions are open and working before Sunrise works fine, but switching to \roll{Intelligence}{Athletics} because `\textit{I have +2 in Intelligence}' does not.
+
+\subsubsection{Hunting}
+follows exactly the same rules, but in reverse.
 The players roll so the \glspl{pc} can catch their prey.
-As per the previous chart, a near-failure can be worse than a total failure.
 
 \end{multicols}
-
-\huntchart
 
 \section{Further Dangers}
 
