@@ -495,14 +495,82 @@ when used in combat, so they can inflict
 
 \projectilesChart
 
-\startcontents[Manoeuvres]
-
 \section{Complications}
 
 `Circumstances' cover what happens to characters, while `Manoeuvres' (\vpageref{manoeuvres}) covers what characters might decide to do.
 Everything in this section has a short reference-list under the \nameref{combatAppendix}, \vpageref{combatAppendix}.
 
 \begin{multicols}{2}
+
+\subsection{Animal Features}
+
+Some animal features have \pgls{weight}, especially when the feature comes as a magical augmentation, rather than a natural feature.
+
+\subsubsection{Claws}
+\label{claws}
+inflict +1 Damage during Brawl-based attacks.
+
+\subsubsection{Fangs}
+\label{teeth}
+\label{fangs}
+allow animals to grapple and damage with the same attack.
+So when an attack is successful, the target both receives Damage and counts as \textit{grappled}.%
+\footnote{Find them \vpageref{grappling}.}
+
+\subsubsection{\Glsfmtplural{swarm}}
+\glsentrydesc{swarm}.
+
+\swarm{Rats}{3}{2}{3}{0}
+
+\begin{exampletext}
+  The rats above have only 3~\glspl{hp}, so their Attack Bonus is 9.
+
+  A character with a massive axe, dealing top-Damage, would not fare well against the swarm; no matter how much Damage they would deal to a person, the swarm only loses 1~\gls{hp}.
+
+  A character with a dagger would do much better, but once only a single \gls{hp}-worth of rats remained, they would struggle to hit the last of them.
+\end{exampletext}
+
+\makeAutoRule{webs}{Webs}{are resisted with \roll{Strength}{Athletics} (\glsentrytext{tn} equals creature's \roll{Strength}{8})}
+made by big creatures can become extremely strong.
+Pulling away from a web requires a \roll{Strength}{Athletics} roll, with \pgls{tn} equal to the spinner's \roll{Strength}{8}.
+
+\pic{Roch_Hercka/conjuration_right}
+
+\sidebox[17]{
+  \begin{boxtable}
+    \textbf{\Glsentrytext{tn}} & \textbf{Situation} \\
+    \hline
+    +2 & \small Twilight \glsentrytext{evening} \\
+    +4 & \small Darkness \glsentrytext{night} \\
+    +2 & \small Foliage \\
+    +2 & \small Running \\
+  \end{boxtable}
+}
+Spotting webs demands a \roll{Wits}{Vigilance} roll.
+The \gls{tn} starts at 6, with heavy modifiers for lighting, or characters moving quickly.
+
+Webs degrade slowly.
+Each \gls{interval} the \gls{tn} to break them decreases by 1.
+
+\subsubsection{Wings}
+demand delicate proportions.
+Their sheer size mean their \gls{weight} equals half the creature's \glspl{hp}.
+
+\begin{itemize}
+  \item
+  Creatures with a higher \gls{weight} than their own Speed Bonus cannot fly from the ground -- they must climb something high, and take off from a jump.
+  \item
+  Creatures with \pgls{weight} equal to their Speed Bonus can fly after sprinting for a full round.
+  \item
+  Finally, those with \pgls{weight} below their Speed Bonus can simply jump into flight, from the ground.
+\end{itemize}
+
+Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
+
+Creatures with any amount of encumbrance cannot take off.
+
+
+\startcontents[Manoeuvres]
 
 \subsection{Circumstances}
 
@@ -546,6 +614,33 @@ Daggers and shortswords often have an easier time in these locations.
 
 When a character has no space to swing a weapon -- either vertically or horizontally -- their weapon's Attack Bonus only counts for half the usual amount (rounded up).
 So weapons with a +1 Attack Bonus remain as they were, but weapons with a +3 Attack Bonus reduce their usefulness to a +2 Attack Bonus.
+
+\makeAutoRule{falling}{Falling Damage}{equals half the \glsfmtplural{step} fallen, plus the character's Strength.}
+\index{Falling}
+equals half the \glspl{step} fallen, plus the characters Strength.%
+\footnote{``\textit{You can drop a mouse down a thousand-yard mine shaft and, on arriving at the bottom, it gets a slight shock and walks away.
+A rat is killed, a man is broken, a horse splashes.}'' -- J.B.S. Haldane, biologist.}
+The Damage then converts to a dice roll as usual.%
+\footnote{See `\nameref{stackingDamage}' \vpageref{stackingDamage}.}
+
+If the \glspl{pc} all fall off a building, 3~\glspl{step} high, they would start with 2~Damage.
+Smaller creatures have less body to fall, so a gnome, with Strength~-2 would take no Damage from this fall; while a dwarf with Strength~+0 would take 2 Damage (which converts to \dmg{2}).
+Larger creatures feel their own weight crushing down on them, so a gnoll with Strength~+4 would suffer 6~Damage (which converts to \dmg{6}).
+
+Characters who fell in a downward-arc can attempt to break their fall with a roll (in both senses), and avoid all Damage, with \roll{Speed}{Athletics}.
+The \gls{tn} is 7 plus the height of the fall.
+However, when falling straight downwards, the \gls{tn} is 7 plus \textit{double} the height in \glspl{step}.
+
+\begin{boxtable}[cYXX]
+  \textbf{Strength} & \textbf{Height} & \textbf{Damage} & \textbf{TN} \\
+  \hline
+  \calcFallingDamage{-2}{6}
+  \calcFallingDamage{0}{3}
+  \calcFallingDamage{0}{6}
+  \calcFallingDamage{3}{1}
+  \calcFallingDamage{3}{3}
+  \calcFallingDamage{3}{6}
+\end{boxtable}
 
 \makeAutoRule{holdingBreath}{Holding the Breath}{+1~\glsentrytext{ep} per round, must breath in at -1~\glsentrytext{ap}}
 during combat allows one to stay silent, and not breath any nasty gasses in.
@@ -666,19 +761,13 @@ Heavy weapons do not help much with surprise attacks, as one needs to swing them
 Sneak attacks work better with smaller weapons, while longer weapons can signal an attack before hit happens.
 Therefore, every weapon's attack Bonus becomes a Penalty when attempting a sneak attack.
 
-If successful, the sneak attack deals standard Damage with a +2 Bonus, and provides an automatic \gls{vitalShot}.
+If successful, the sneak attack deals standard Damage with a +2~Bonus, and provides an automatic \gls{vitalShot}.
 
 \stopcontents[Manoeuvres]
 
-\end{multicols}
-
-\section{Chases}
+\subsection{\Glsfmttext{retreat}}
 \index{Chases}
 \label{chases}
-
-\begin{multicols}{2}
-
-\subsection{\Glsfmttext{retreat}}
 
 \Gls{retreat} works like any other \gls{resistedaction} -- players roll their character's \roll{Speed}{Athletics} against their opponents'.
 A Margin of 3 ends \pgls{retreat}, as the \glspl{pc} flee, or (with a Failure Margin of 3) the \glspl{npc} catch up.
@@ -744,105 +833,5 @@ Changing to \roll{Intelligence}{Athletics} because you're jumping through a bunc
 \subsubsection{Hunting}
 follows exactly the same rules, but in reverse.
 The players roll so the \glspl{pc} can catch their prey.
-
-\end{multicols}
-
-\section{Further Dangers}
-
-\begin{multicols}{2}
-
-\makeAutoRule{falling}{Falling Damage}{equals half the \glsfmtplural{step} fallen, plus the character's Strength.}
-\index{Falling}
-equals half the \glspl{step} fallen, plus the characters Strength.%
-\footnote{``\textit{You can drop a mouse down a thousand-yard mine shaft and, on arriving at the bottom, it gets a slight shock and walks away.
-A rat is killed, a man is broken, a horse splashes.}'' -- J.B.S. Haldane, biologist.}
-The Damage then converts to a dice roll as usual.%
-\footnote{See `\nameref{stackingDamage}' \vpageref{stackingDamage}.}
-
-If the \glspl{pc} all fall off a building, 3~\glspl{step} high, they would start with 2~Damage.
-Smaller creatures have less body to fall, so a gnome, with Strength~-2 would take no Damage from this fall; while a dwarf with Strength~+0 would take 2 Damage (which converts to \dmg{2}).
-Larger creatures feel their own weight crushing down on them, so a gnoll with Strength~+4 would suffer 6~Damage (which converts to \dmg{6}).
-
-Characters who fell in a downward-arc can attempt to break their fall with a roll (in both senses), and avoid all Damage, with \roll{Speed}{Athletics}.
-The \gls{tn} is 7 plus the height of the fall.
-However, when falling straight downwards, the \gls{tn} is 7 plus \textit{double} the height in \glspl{step}.
-
-\begin{boxtable}[cYXX]
-  \textbf{Strength} & \textbf{Height} & \textbf{Damage} & \textbf{TN} \\
-  \hline
-  \calcFallingDamage{-2}{6}
-  \calcFallingDamage{0}{3}
-  \calcFallingDamage{0}{6}
-  \calcFallingDamage{3}{1}
-  \calcFallingDamage{3}{3}
-  \calcFallingDamage{3}{6}
-\end{boxtable}
-
-\subsection{Animal Features}
-
-Some animal features have \pgls{weight}, especially when the feature comes as a magical augmentation, rather than a natural feature.
-
-\subsubsection{Claws}
-\label{claws}
-inflict +1 Damage during Brawl-based attacks.
-
-\subsubsection{Fangs}
-\label{teeth}
-\label{fangs}
-allow animals to grapple and damage with the same attack.
-So when an attack is successful, the target both receives Damage and counts as \textit{grappled}.%
-\footnote{Find them \vpageref{grappling}.}
-
-\subsubsection{\Glsfmtplural{swarm}}
-\glsentrydesc{swarm}.
-
-\swarm{Rats}{3}{2}{3}{0}
-
-\begin{exampletext}
-  The rats above have only 3~\glspl{hp}, so their Attack Bonus is 9.
-
-  A character with a massive axe, dealing top-Damage, would not fare well against the swarm; no matter how much Damage they would deal to a person, the swarm only loses 1~\gls{hp}.
-
-  A character with a dagger would do much better, but once only a single \gls{hp}-worth of rats remained, they would struggle to hit the last of them.
-\end{exampletext}
-
-\makeAutoRule{webs}{Webs}{are resisted with \roll{Strength}{Athletics} (\glsentrytext{tn} equals creature's \roll{Strength}{8})}
-made by big creatures can become extremely strong.
-Pulling away from a web requires a \roll{Strength}{Athletics} roll, with \pgls{tn} equal to the spinner's \roll{Strength}{8}.
-
-\pic{Roch_Hercka/conjuration_right}
-
-\sidebox[17]{
-  \begin{boxtable}
-    \textbf{\Glsentrytext{tn}} & \textbf{Situation} \\
-    \hline
-    +2 & \small Twilight \glsentrytext{evening} \\
-    +4 & \small Darkness \glsentrytext{night} \\
-    +2 & \small Foliage \\
-    +2 & \small Running \\
-  \end{boxtable}
-}
-Spotting webs demands a \roll{Wits}{Vigilance} roll.
-The \gls{tn} starts at 6, with heavy modifiers for lighting, or characters moving quickly.
-
-Webs degrade slowly.
-Each \gls{interval} the \gls{tn} to break them decreases by 1.
-
-\subsubsection{Wings}
-demand delicate proportions.
-Their sheer size mean their \gls{weight} equals half the creature's \glspl{hp}.
-
-\begin{itemize}
-  \item
-  Creatures with a higher \gls{weight} than their own Speed Bonus cannot fly from the ground -- they must climb something high, and take off from a jump.
-  \item
-  Creatures with \pgls{weight} equal to their Speed Bonus can fly after sprinting for a full round.
-  \item
-  Finally, those with \pgls{weight} below their Speed Bonus can simply jump into flight, from the ground.
-\end{itemize}
-
-Creatures with the Air Sphere can spend \pgls{mp} to add their Air Sphere to Speed for the purposes of taking off.
-
-Creatures with any amount of encumbrance cannot take off.
 
 \end{multicols}
