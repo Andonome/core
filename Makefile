@@ -1,9 +1,11 @@
+EXTERNAL_REFERENTS = stories judgement
+
 include config/vars
 
 config/vars:
 	@git submodule update --init
 
-$(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL | qr.tex
+$(DBOOK): $(DEPS) HANDOUTS STYLE_FILES | qr.tex
 	@$(COMPILER) main.tex
 
 images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg images/extracted/inclusion.tex
