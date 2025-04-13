@@ -9,7 +9,6 @@
 Magic can do any number of things, but like anything else, it has standards.
 These standards are `spells'.
 \index{Mana!Spending}
-
 \Glspl{casting}
 \glsentrydesc{casting}.
 
@@ -690,7 +689,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
     The spell degrades when the target begins moving, and fails within \arabic{spellPlusOne} \glspl{interval}.
     Therefore, undead spellcasters, such as liches, must continuously cast this spell upon themselves.
 
-    \index{Necromancy!Preservation}
+    \index{Preservation}
     If cast immediately, upon death, it can arrest the effects of \textit{rigor mortis} before they begin.
   }
 
@@ -709,7 +708,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
   \set{track}{spellPlusOne}%
   \multiply\value{track} by \value{spellTargets}%
   \arabic{track}~\glspl{mp}, but leave only
-  \divide\value{track} by 3%
+  \divide\value{track} by 3\addtocounter{track}{0}%
   \arabic{track}~\glspl{mp} in the \gls{area}.}
 
 \spell{Stench Sort}% Name
