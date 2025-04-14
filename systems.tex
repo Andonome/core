@@ -269,8 +269,31 @@ A second roll, at \tn[14], is required to know what the \gls{talisman} does (tie
 
 %\subsection{Schemes \& Plots}
 
-\makeRule{find_hidden_message}{Finding a hidden message in a book}{Intelligence}{Vigilance}{7}
-The message-hider can set any \gls{tn} they please.
+\makeRule{cryptography}{Secret Messages}{Intelligence}{Vigilance}{against the cypher's \glsentrytext{tn}}
+Some cyphers are easy to write, easy to teach, and easy to crack.
+Others less so, and some are none of the above.
+\index{Encryption}
+\index{Coded Messages|see {Encryption}}
+
+Creating a cypher requires an \roll{Intelligence}{Stealth} roll at \gls{tn}~7 plus the cypher's level.
+Writing the cypher requires an \roll{Intelligence}{Academics} roll at \gls{tn}~7 plus double the cypher's level, and reading the cypher is the same (assuming the reader already understands it).
+
+Decrypting a cypher requires an \roll{Intelligence}{Academics} roll at \gls{tn}~7 plus triple the level.
+The decryption takes one day per level (and a failed roll mean the message has been misinterpreted) while taking \pgls{restingaction} requires one week per level (but uses no guesswork, and never suggests the wrong message).
+
+\begin{boxtable}[cYYY]
+  \textbf{Level} & \textbf{Creation \Glsentrytext{tn}} & \textbf{Reading \& Writing \Glsentrytext{tn}} & \textbf{Decryption \Glsentrytext{tn}} \\
+  \hline
+  1   &    8  &    9  &  10 \\
+  2   &    9  &   11  &  13 \\
+  3   &   10  &   13  &  16 \\
+  4   &   11  &   15  &  19 \\
+  5   &   12  &   17  &  22 \\
+\end{boxtable}
+
+Plenty of writing equipment can add a +1~Bonus, and a book on cyphers can add another~+1.
+
+When a character decrypts a message as \pgls{restingaction}, they have no idea how many weeks they will need -- only that the current time has been insufficient.
 
 \makeRule{letter_sealing}{Letter sealing}{Dexterity}{Academics}{9}
 Proper seals have more than a blob of wax to keep them safe.
