@@ -232,3 +232,58 @@
   \arabic{Strength} & \arabic{enc}~\ifnum\value{enc}>1\glspl{step}\else\gls{step}\fi & \dmg{damage} & \arabic{tn} / \arabic{track} \\
 }
 
+\newcommand\retreatCommentary[1][b]{
+  \playCommentary[#1]{
+    The \glspl{sunGuard} have caught the \glspl{pc} red-handed, so the \glspl{pc} flee.
+
+    \begin{description}
+      \item[\Glsentrytext{gm}:]
+      Gimme a roll of \roll{Speed}{Athletics} for the group.
+      It's \glsentrylong{tn}~8 to run, but you need 11 to get away clear.
+      \item[Player 1:]
+      Got it!
+      \twoDice{7}
+      I've got a +4~Bonus, so the total is~11.
+      \item[\Glsentrytext{gm}:]
+      She's out the door, faster than the wind!
+      \item[Player 1:]
+      Can I stay behind with the rest?
+      \item[\Glsentrytext{gm}:]
+      Sure -- let's see where she ends up later.
+      You can always run slower.
+      \item[Player 2:]
+      \composeHumanName\ has 9 in total, so does he get away?
+      \item[\Glsentrytext{gm}:]
+      No, but you can lead the \glspl{sunGuard} where you want to run, and change one of the \glspl{trait}; you're using \roll{Speed}{Athletics}, so change one of those two.
+      Can I use Empathy?
+      \item[\Glsentrytext{gm}:]
+      How does empathy help you run away?
+      \item[Player 2:]
+      We were at the market recently.
+      I'll run into the marketplace, and pick the stalls I think will let me go through, or run past animals that get spooked, so they slow down anyone following me.
+      \item[\Glsentrytext{gm}:]
+      That makes sense.
+      Next \gls{round}, roll \roll{Speed}{Empathy}.
+      For now, take \pgls{ep}.
+      \item[Player 3:]
+      I have an 8 in total, so nothing happens, right?
+      \item[\Glsentrytext{gm}:]
+      Right -- \composeHumanName\ flees down the street, \pgls{sunGuard} breaks from the group to follow, and you take \pgls{ep}.
+      \item[Player 4:]
+      My total is 5.
+      This is not a fast gnome.
+      \item[\Glsentrytext{gm}:]
+      \Pgls{sunGuard} breaks from the group to grab you.
+      He's grabbing you, and the \glsentrylong{tn} is~11.
+      What do you do?
+      \item[Player 1:]
+      I jump in, and move to guard her.
+      You said just one \gls{sunGuard}, right?
+    \end{description}
+  }{
+    So the fastest \gls{pc} decided to stay and help the slowest member fight, while the rest of the \glspl{sunGuard} chase the others.
+
+    Once combat resolves (probably a fast fight), the other two players will need to roll again.
+    Changing \glspl{trait} helps represent how people flee, and prompts players to use the environment to their advantage; but it also resolves chase-scenes faster, as people will pick \pgls{attribute} or \gls{skill} which gives them a decisive advantage.
+  }
+}
