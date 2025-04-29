@@ -179,27 +179,30 @@
   \end{boxtable}
 }
 
-
 \newcommand{\projectilesChart}{
-\begin{boxtable}[XXXXX]
+\begin{boxtable}[lYYXYYY]
 
-  \textbf{Projectile} & \textbf{\Gls{ap}} & \textbf{Damage} & \textbf{Weight}  & \textbf{Reload Time} \\\hline
+  \textbf{Projectile} &   \textbf{\Glsfmttext{ap} Cost} & \textbf{Bonus} & \textbf{Damage} & \textbf{\Glsfmttext{weight}}  & \textbf{Reload Time} & \textbf{Min. Strength} \\\hline
 
-  Light Crossbow &  1 & \dmg{4} & 2 & 1 \glspl{round}  \\
+  Light Crossbow      &               2                &    +2           & \dmg{4}         & 2                             & 1 \gls{round}        &    -2    \\
 
-  Standard Crossbow &  1 & \dmg{8} & 4 & 2 \glspl{round}  \\
+  Standard Crossbow   &               2                &    +2           & \dmg{8}         & 4                             & 2 \glspl{round}      &    -1    \\
 
-  Heavy Crossbow &  1 & \dmg{10} & 5 & 2 \glspl{round}  \\
+  Heavy Crossbow      &               2                &    +2           & \dmg{10}        & 5                             & 2 \glspl{round}      &    0     \\
   \hline
 
-  Shortbow &  1 & \dmg{3} & 1 & 1 \gls{ap} \\
+  Shortbow            &               1                &    +0           & \dmg{3}         & 1                             & 1 \gls{ap}           &    -1    \\
 
-  Hunting Bow &  3 & \dmg{5} & 1 & 4 - extra Str \glspl{ap} \\
+  Light Bow           &               2                &    +0           & \dmg{4}         & 1                             & 1 \gls{ap}           &    +1    \\
 
-  Longbow &  5 & \dmg{7} & 1 & 4 - extra Str \glspl{ap} \\
+  Hunting Bow         &               3                &    +1           & \dmg{5}         & 1                             & 1 \gls{ap}           &    +1    \\
+
+  Longbow             &               5                &    +3           & \dmg{7}         & 1                             & 1 \gls{ap}           &    +3    \\
+
+  Great Bow           &               7                &    +4           & \dmg{8}         & 2                             & 1 \gls{ap}           &    +4    \\
   \hline
 
-  Throwing knives & 2 & \dmg{3} & 1/10 & 1 \gls{ap} \\
+  Throwing knives     &               1                &    +0           & \dmg{3}         & 1/10                          & 1 \gls{ap}           &    -2    \\
 
 \end{boxtable}
 }
