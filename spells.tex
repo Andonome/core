@@ -130,7 +130,14 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 
 \showSpells{Fire4}
 
-\iftoggle{verbose}{
+% The standard book leaves some spells out, to cut down on
+% page-count, and to leave some mystery to magic for the Judge to
+% introduce.
+% 
+% When compiling with the book of Judgement, these spells will
+% disappear, but will still be present in other versions of the
+% book.
+\iftoggle{verbose}{}{
   \subsection{Earth}
   \label{earthSpells}
 
@@ -155,7 +162,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
   \showSpells{Earth3}
 
   \showSpells{Earth4}
-}{}
+}
 
 \subsection{Water}
 \label{waterSpells}
@@ -250,7 +257,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
   The spell can destroy any fire up to those large enough to deal \showDam\ Damage, and larger fires grow dim.}
 
 
-\iftoggle{verbose}{
+\iftoggle{verbose}{}{
   \spell{Miner's Bane}% Name
     {Divergent}% Enhancements
     {Wane}% Action
@@ -273,9 +280,9 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
     {
     The weapon can be anything the caster has used before, up to \pgls{weight} of \arabic{spellPlusTwo}}
 
-}{}
+}
 
-\iftoggle{verbose}{
+\iftoggle{verbose}{}{
 
   \spell{Asking Rock}% Name
     {Detailed, Divergent}% Enhancements
@@ -289,14 +296,14 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
     {
       The \gls{tn} depends on how close to civilization the spell is cast.
       Attracting \glspl{monster} to \pgls{village} makes more of a challenge than attracting them while past the \gls{edge}.%
-      \exRef{judgement}{Judgement}{civilizationRating}
+      \exRef{verbose}{Judgement}{civilizationRating}
       If the encounter roll produces nothing, the \gls{gm} goes up the chart until they find an encounter.
 
       \Glspl{npc} targeted by this spell will survive if only their \gls{cr} value is greater than the \gls{monster} which finds them.
       Otherwise, they end in the jaws of a beast.
     }
 
-}{}
+}
 
 \spell{River Smog}% Name
   {Divergent, Duplicated}% Enhancements
@@ -407,7 +414,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 
 \showSpells{Light4}
 
-\iftoggle{verbose}{
+\iftoggle{verbose}{}{
 
   \subsection{Force}
   \label{forceSpells}
@@ -529,7 +536,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
     This Penalty stacks as usual, so targets who already have a basic Strength Penalty of -2 would take this Penalty, and then half of their regular Strength Penalty, for a total of -\arabic{spellPlusTwo}.}
 
   \showSpells{Life4}
-}{}
+}
 
 \subsection{Mind}
 \label{mindSpells}
@@ -728,9 +735,9 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 
 \showSpells{MindLight3}
 
-\iftoggle{verbose}{
+\iftoggle{verbose}{}{
   \showSpells{MindForce4}
-}{}
+}
 
 \end{multicols}
 
