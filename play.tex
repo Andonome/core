@@ -1,6 +1,6 @@
 \section[Example of Play]{So It Goes}
 
-\begin{multicols}{2}
+\begin{multicols}{3}
 
 \noindent
 Three players have arrived for a game of \gls{bind}.
@@ -14,451 +14,487 @@ The session always begins with a recap, where any \gls{guard} recaps their last 
 The \gls{jotter} then gives low-rank \glspl{guard} a mission, which should keep them away from civilization (such as towns), and stop them wandering off on any \glspl{sq}.
 This never entirely succeeds.
 
+\begin{description}
+  \item[\gls{gm}:]
+  Fenestra is currently experiencing the freezing season of \gls{cTwo}, when the trees shed their leaves, letting sunlight shine on roads which are slowly turning white, with little specks of snow.
+
+  \item[Player 1:]
+  (Laiquon)
+  Wasn't it raining last time? Are we jumping time again?
+
+  \item[\gls{gm}:]
+  Yes -- thirty days passes every session.
+  And as usual -- we'll start in \pgls{broch} -- one of the \gls{guard} towers which sit between \glspl{village}.
+  Mark off any rations or \glspl{ingredient} from last session -- if your character hasn't eaten them then they've gone rotten.
+  \glsadd{broch}%
+  \glsadd{village}%
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+Scheduling becomes much easier when you just run a game with anyone who's there.
+So \gls{bind} has a little `restart' between sessions where characters live their lives.
+
+Every sixty days, \gls{fenestra} endures \pgls{storm}, then the weather changes as a new \gls{cycle} begins.
+And it marches on regardless of who's at the table -- even if nobody's there, \gls{fenestra} keeps moving.
+
+This helps keep the table open, so Player 3 -- a new player -- can jump right in.
+
+\bigLine
+\vspace{\baselineskip}
+
+\begin{description}
+  \item[\gls{gm}:]
+  You'll start in \pgls{broch}, as usual.
+  The \Gls{jotter} wants a report from last week.
+  \glsadd{jotter}
+
+  What did you do?
+  \item[Player 2:]
+  (Grogfen)
+  Well, Grogfen helped a trader getting to town\ldots
+  (but I don't want to tell her about entering a town, or the \glsentrylongpl{sp} she paid us).
+  \item[\gls{gm}:]
+  So how will you explain how long the mission took?
+  Remember, she has a record of when Grogfen left the \gls{jotter} who gave her the mission.
+  \item[Player 2:]
+  With lies\ldots?
+  Can I just roll this one?
+  I'll still tell her about the strange markings on all the trees.
+  \item[\gls{gm}:]
+  Sure.
+  You just need to keep it consistent with what she knows.
+  Roll \roll{Intelligence}{Deceit} at \glsentrytext{tn} 8.
+  \item[Player 2:]
+  \dicef{7}
+  Okay, that's an `8', so\ldots
+  \item[\gls{gm}:]
+  That's a tie, I'm afraid.
+  You got what you wanted (the money), but \gls{jotter} Cartpike thinks you're lying.
+  The two of you end up in an argument, but she doesn't have any evidence for her accusations.
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+\noindent
+Whenever the characters try to accomplish something with a little danger, the player rolls:
+
+$$2D6 + \underbrace{Attribute + Skill} ~vs~ \glsentrytext{tn}$$
+
+\noindent
+When players roll above the \gls{tn}, their character succeeds.
+When they roll below, the character fails, and the danger occurs.
+When they roll a tie, then both occur -- or neither.
+
+Sometimes this depends on what makes sense.
+If both make sense then the player can choose to accept the danger and their goal, or neither.
+
+In this case, Grogfen has a -1 Penalty to Intelligence, and +2 Deceit.
+So in total, the roll is:
+
+$$2D6 + 1 ~vs~ 8$$
+
+\noindent
+Sometimes a piece of equipment or a social contact can add to the roll, so the total Bonus can become very high.
+A \gls{tn} of 14 is not unreasonable in some situations.
+In full, the formula is:
+
+$$2D6 + \underbrace{Attribute + Skill + Equipment}$$
+
+\bigLine
+\vspace{\baselineskip}
+
+\begin{description}
+  \item[Player 3:]
+  Do I get a character?
+  \item[\gls{gm}:]
+  You sure do.
+  Take the Book of Stories and roll $2D6$ on these charts.
+  \item[Player 3:]
+  Okay, I'm a human\ldots called\ldots `Sootfilch'.
+  What's with the name?
+  \item[\gls{gm}:]
+  People in \gls{fenestra} believe that the gods takes the best in life, so it's bad luck to name their children after good things.
+
+  Roll the Attributes next.
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+Character creation's fast, so don't worry about \glspl{pc} dying.
+Most will begin as members of the \gls{guard} -- the place they put society's unwanted; the useless miscreants, bastards, and political agitators.
+
+The character creation rules are in the \textit{Book of Stories}%
+\iftoggle{stories}{, \autopageref{character_rolls}.}{.}
+This book focusses on resolution mechanics, details of Traits, and spells.
+
+\begin{description}
+  \item[\gls{gm}:]
+  Low Dexterity and high Intelligence, so we'll look up what that says.
+  \item[Player 3:]
+  It says I'm a `Loner'.
+  \item[\gls{gm}:]
+  That makes sense.
+  Family and social ties are vital in \gls{fenestra}, so people can end up in the \gls{guard} just because they don't have anyone arranging a safe position for them.
+  \item[Player 3:]
+  This equipment looks a bit rubbish.
+  Can't I get something better?
+  At least some proper armour?
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+Starting equipment and beliefs all come wrapped together with the core concept in character creation.
+This helps new people get up and running quickly.
+
+Most players end up making more interesting characters with some random input, but if players really want to decide every facet of their character, they can use the `point-buy' character creation system.
+
+\begin{description}
+  \item[\gls{gm}:]
+  Sure -- you're in a \gls{broch}, so you can ask \gls{jotter} Cartpike.
+  Roll $2D6$, then add your \roll{Charisma}{Empathy}.
+  \item[Player 3:]
+  \dicef{9}
+  \ldots that's an `11' in total?
+  Do I pass?
+  \item[\gls{gm}:]
+  Sure, but how would a loner ask for equipment?
+  What would they do?
+  \item[Player 3:]
+  He'd probably ask her when she's alone.
+  Knock politely, and just explain he's doesn't have the tools he needs to survive.
+\end{description}
+
+Some people like to `roll for Charisma', because they want their characters to succeed, rather than make a performance.
+Instead of asking for acting talent, I've found it's best to have people roll, then interpret that roll.
+This lets players plan for their characters abilities (as usual), and opens the field for failures with justification -- often some of the most interesting results.
+
+Instead of \gls{pc} blunders happening because `it's what my character would do', they happen because of the dice.
+This stops other players feeling like someone is ruining the game; they're not, they're just interpreting the result they rolled.%
+\footnote{For more on this, see the discussion \vpageref{rollForRoles}.}
+
+\bigLine
+\vspace{\baselineskip}
+
+\begin{description}
+  \item[\gls{gm}:]
+  \Gls{jotter} Cartpike agrees to give you the armour, as long as you head out on the new mission, immediately.
+  Sootfilch, Grogfen and Mossboke will journey out to two neighbouring \glspl{village} -- that means a `walled village' -- and cut around the perimeter.
+  \item[Player 1:]
+  We're bush-whacking?
+  \item[\gls{gm}:]
+  Yes.
+  If the forest grows too dense, and approaches \pgls{village}, it means predators can get close, and attack the farmers there.
+  %!
+  Sinkwall lies ten miles North, and they say that the swamp hag lives nearby.
+  Soumarch takes fourteen miles march South, but has \pgls{bothy} half way along.
+
+  \Gls{jotter} Cartpike gives everyone two days' rations (hardened cheese and mutton pies), and lets you pick your destination.
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+The \gls{gm} forgot to prepare anything for the session, but that's okay.
+He's already determined the season, so he flips to the encounter charts and rolls $3D6$.
+The result is: `4 trader caravans, and biting winds, on the first day'\ldots which is now.
+
+For the mission, he rolls $3D6$ again, and finds the troupe must go to two nearby \glspl{village} and cut away at the perimeter.
+
+Finally, he rolls up both \glspl{village} while two players explain how armour works to Player 3.
+
+\Gls{village} 1 has bear-traps along the perimeter, and rumours about the local swamp-hag occasionally eating people.
+It's near a swamp, so he names it `Sinkwall'.
+
+\Gls{village} 2 has poisoned meat-on-sticks around its perimeter, to kill any wandering predators.
+It's a march South, so he thinks `South March', then names it `Soumarch'.
+
+
+\begin{description}
+  \item[Player 1:]
+  May as well do the distant one first.
+  \item[Player 2:]
+  I want to meet that hag.
+  Can we walk ten miles in an afternoon?
+  \item[\gls{gm}:]
+  10 miles in an afternoon is pushing it, especially in the cold.
+  You can push it, or just travel 5~miles, then go for another 5 in the evening.
+  \item[Player 1:]
+  Laiquon's an elf, so he can ignore the cold.
+  \item[\gls{gm}:]
+  Oh yea\ldots the \gls{jotter} will have warm clothes for everyone else, but you humans two will have to take 1~\glsentrylong{ep} from the freezing weather.
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+Each day has four \glspl{interval} -- morning, afternoon, evening, and night.
+Characters can walk 5 miles in \pgls{interval} without exertion, so they usually go 10 miles a day, or 15 with good supplies and no distractions.
+
+If they find a time-sensitive mission, they can always endure the weight of a few \glsentrylongpl{ep} in order to get there faster.
+
+\vspace{\baselineskip}
+
+\noindent
+\begin{tabularx}{\linewidth}{YYYY}
+\hiderowcolors
+  \showInterval{0} & \showInterval{1} & \showInterval{2} & \showInterval{3} \\
+  Preparation. & March 5 miles & Marching 5 more. & Sleep at the \gls{village}. \\
+\end{tabularx}
+
+
+\bigLine
+\vspace{\baselineskip}
+
+\begin{description}
+  \item[\gls{gm}:]
+  So everyone heads North to Sinkwall.
+  By the time you've gone two miles, a caravan of traders approach, hail you, and try to sell you torch pitch and rope for 100~\glspl{cp} each.
+  \item[Player 1:]
+  Nah we're\ldots actually, that'd be really handy.
+  I'll take both.
+  \item[\gls{gm}:]
+  Roll \roll{Wits}{Crafts} to determine the quality of the goods (\tn[9]).
+  \item[Player 1:]
+  \dicef{7}
+  Is an `8' good?
+  \item[\gls{gm}:]
+  Laiquon \emph{thinks} the rope and pitch are serviceable.
+  We'll see later\ldots
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+Purchases can get tricky, as tricksters are everywhere.
+A bad roll can leave the buyer holding useless goods, or buying services from a chancer.
+Most of the `secondary skills' (like Crafts and Survival) can come in useful for trades.
+
+The \gls{gm} could have broken the `encounter' with traders into a back-and-forth series of `hail, good traveller', but skipping to the decision-points gives the game a faster pace.
+
+
+\bigLine
+\vspace{\baselineskip}
+
+
+\begin{description}
+  \item[\gls{gm}:]
+  Snow's started to fall, thicker than before.
+  By evening, the road is white, but you can see Sinkwall's high wooden walls ahead, and an archer waves at you from his perch.
+  \item[Player 1:]
+  Time to rest.
+  \item[\gls{gm}:]
+  Wait a minute\ldots
+  just checking for encounters.
+  \item[Player 1:]
+  Crap\ldots
+  \item[\gls{gm}:]
+  Who's in the lead?
+  Grogfen has the highest Speed, so I think she would be.
+  Can you roll \roll{Wits}{Vigilance} (\tn[13])?
+  \item[Player 2:]
+  Crap\ldots
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+When two people (or creatures) act against each other, the player rolls at \tn[7], plus their opponent's score.
+
+\vspace{.5em}
+\noindent
+\begin{tabularx}{\linewidth}{YcY}
+\hiderowcolors
+Wits~-1 + Vigilance~0 & vs & Dexterity~2 + Stealth~3 \\
+\end{tabularx}
+
+$$2D6 + \underbrace{-1 + 0} ~vs~ 7 + \underbrace{2 + 3}$$
+
+$$2D6 + \underbrace{-1} ~vs~ 7 + \underbrace{5}$$
+
+$$2D6 -1 ~vs~ 13$$
+
+The creature's total Bonus is +5, so at \tn[12] Grogfen fails before Player 2 rolls.
+
+
+\bigLine
+\vspace{\baselineskip}
+
+
+\begin{description}
+  \item[Player 2:]
+  I can't make the roll, so what happens to me?
+  \item[\gls{gm}:]
+  A bleach-white tentacle grabs you by the neck, another around your left leg, then the great \gls{woodspy} rises.
+  \item[Player 3:]
+  The what?
+  \item[\gls{gm}:]
+  ``\Gls{woodspy}'' -- a great land-octopus, with a load of tentacles, able to camouflage.
+  It grabs her and starts to slither away, yanking its way through the trees while holding Grogfen tight above its head.
+  \item[Player 3:]
+  What do we do?
+  Run after it?
+  \item[\gls{gm}:]
+  If you want to, spend \pgls{ap}.
+  You can roll \roll{Speed}{Athletics} at \tn[11].
+  \item[Player 3:]
+  Okay, \dicef{7} \ldots sorry, Grogfen\ldots
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+Everyone starts combat with 3~\glsentryfullpl{ap} plus their Speed Bonus.
+Having more \glspl{ap} lets you act before others, and do more.
+\par
+
+When someone attacks you, it forces you to spend \glspl{ap} to resist.
+This can push your \glspl{ap} below 0, and every step down inflicts a Penalty to all actions.
+
+For example, a character on -2~\glspl{ap} would take a -2~Penalty to all actions (and could only act in response to something acting against them).
+
+Using \glspl{ap} means you don't need to be too precious about which order people act in -- every character receives the actions they're due by the end of the round.
+
+
+\bigLine
+\vspace{\baselineskip}
+
+
+\begin{description}
+  \item[Player 1:]
+  Wait, Earth magic covers snow, doesn't it?
+  Can I make the snow solid around the \gls{woodspy}'s tentacles to stop it getting away?
+  \item[\gls{gm}:]
+  Yes -- it's still \tn[11], but you can roll your \roll{Charisma}{Earth} to cast.
+  \item[Player 1:]
+  \dicef{9} Got it!
+  \item[\gls{gm}:]
+  What does he say?
+  \item[Player 1:]
+  `Solid frost, make \pgls{woodspy} tomb'?
+  \item[\gls{gm}:]
+  Well the snow responds, freezing solid, and holding a couple of tentacles tight.
+
+  Player 3 -- one \roll{Wits}{Vigilance} roll, please (\tn[11]).
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+Characters cast spells with Charisma plus an elemental Skill, as they literally speak to the elements.
+
+Spells work like any other roll, including when making a Resisted roll -- the spellcaster uses their Bonus to resist the opponent, or players roll their \gls{pc}'s Bonus against the \gls{npc}'s.
+
+\vspace{.5em}
+\noindent
+\begin{tabularx}{\linewidth}{YcY}
+\hiderowcolors
+Charisma~2 + Earth~1 & vs & Speed~2 + Athletics~2 \\
+\end{tabularx}
+
+$$2D6 + \underbrace{2 + 1} ~vs~ 7 + \underbrace{2 + 2}$$
+
+$$2D6 + \underbrace{3} ~vs~ 7 + \underbrace{4}$$
+
+$$2D6+3 ~vs~ 11$$
+
+
+\bigLine
+\vspace{\baselineskip}
+
+
+\begin{description}
+  \item[Player 2:]
+  I'm rolling to attack!
+  \item[\gls{gm}:]
+  Roll \roll{Dexterity}{Brawl}, \tn[13].
+  \item[Player 2:]
+  \dicef{9}
+  \Glsentrylong{tn} what?
+  This is hopeless\ldots
+  \item[\gls{gm}:]
+  Yes, but then again, you and the \gls{woodspy} both spend \pgls{ap} when you struggle.
+  \item[Player 2:]
+  Okay, I spend every \glspl{ap} I have.
+  \dicef{3}\dicef{2}
+  All of them.
+  \dicef{8}.
+  \item[Player 3:]
+  \dicef{5}\dicef{1}
+  Does a `5' pass?
+  \item[\gls{gm}:]
+  A bear trap, hidden in the snow, leaps up dealing\ldots\dicef{6} 6 Damage.
+  You can remove your 5~\glspl{fp}.
+  \item[Player 3:]
+  And the last Damage?
+  Does my armour get it?
+  \item[\gls{gm}:]
+  Not with a bear-trap I'm afraid.
+  Remove \pgls{hp}.
+
+  However, since the \gls{woodspy} couldn't move, you're standing in front of it, with one leg bleeding from the frozen, iron jaws.
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+\Glsentryfullpl{fp} measure a character's distance from death and (in some sense) their courage.
+Once they run out, all further damage makes a real wound -- Sootfilch might carry this damage for the remainder of the session.
+However, after \pgls{interval} the troupe will regenerate \glspl{fp}, so the wounds won't leave them near-death for the entire session -- they can persevere while wounded, and rely on their luck.
+
+\Gls{bind} doesn't have much in the way of healing magic, but it has plenty of Fate spells.
+
+
+\bigLine
+\vspace{\baselineskip}
+
+
+\begin{description}
+  \item[Player 3:]
+  I'll stab the \gls{woodspy}.
+  \item[\gls{gm}:]
+  Okay -- spend \pgls{ap} to take out your sword.
+  \item[Player 3:]
+  Spent.
+  I'll stab the \gls{woodspy}!
+  \item[Player 2:]
+  \dicef{11}
+  I'm free, but out of \glspl{ap}.
+  \item[Player 1:]
+  I'll go for another binding spell, can I make it trapped so Sootfilch can stab it easier?
+  \item[\gls{gm}:]
+  Sure, and it's at \tn[10] this time.
+  \item[Player 3:]
+  Can I not stab the \gls{woodspy}?!
+  \item[\gls{gm}:]
+  Snow freezes around its every grounded tentacle, while Grogfen pulls away.
+  Roll \roll{Dexterity}{Melee} at \tn[7].
+  \item[Player 3:]
+  \dicef{9}
+  That's 8, how do I Damage?
+  \item[Player 1:]
+  $1D6$!
+  \item[Player 3:]
+  \dicef{6} that's an 8 in total, with the shortsword.
+  \item[\gls{gm}:]
+  The shortsword enters, and its snow-white skin splits, blue blood runs down the wound and the skin writhes, turning red, black, then mottled-brown.
+\end{description}
+
+\bigLine
+\vspace{\baselineskip}
+
+The \gls{woodspy} would usually flee at this point, but ice has trapped its lower tentacles, so the troupe will destroy it in a moment.
+Once it dies, Laiquon will pull its beak out, to create \pgls{talisman} for a Water spell, then the troupe can sell the rest of the body to the farmers in the \gls{village} for some silver and a couple of favours, such as a nice place to rest.
+
+The \gls{gm} hasn't introduced the real hooks yet -- the \gls{sq} \glspl{segment}.
+Last session involved small plot-\glspl{segment} which provided foreshadowing for the swamp-hag's plans.
+The next \gls{segment} in the forests will be the reckoning, but if the players decide to stick to their mission, on the roads, the \gls{gm} will have to start a new \gls{sq} to throw at them.
+
+Running multiple \glspl{sq} isn't a problem.
+The old plot can wait, and new \glspl{guard} will hear about the important background from the \glspl{jotter}' records.
+
+
 \end{multicols}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    Fenestra is currently experiencing the freezing season of \gls{cTwo}, when the trees shed their leaves, letting sunlight shine on roads which are slowly turning white, with little specks of snow.
-
-    \item[Player 1:]
-    (Laiquon)
-    Wasn't it raining last time? Are we jumping time again?
-
-    \item[\gls{gm}:]
-    Yes -- thirty days passes every session.
-    And as usual -- we'll start in \pgls{broch} -- one of the \gls{guard} towers which sit between \glspl{village}.
-    Mark off any rations or \glspl{ingredient} from last session -- if your character hasn't eaten them then they've gone rotten.
-    \glsadd{broch}%
-    \glsadd{village}%
-  \end{description}
-  \columnbreak
-}{
-  Scheduling becomes much easier when you just run a game with anyone who's there.
-  So \gls{bind} has a little `restart' between sessions where characters live their lives.
-
-  Every sixty days, \gls{fenestra} endures \pgls{storm}, then the weather changes as a new \gls{cycle} begins.
-  And it marches on regardless of who's at the table -- even if nobody's there, \gls{fenestra} keeps moving.
-
-  This helps keep the table open, so Player 3 -- a new player -- can jump right in.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    You'll start in \pgls{broch}, as usual.
-    The \Gls{jotter} wants a report from last week.
-    \glsadd{jotter}
-
-    What did you do?
-    \item[Player 2:]
-    (Grogfen)
-    Well, Grogfen helped a trader getting to town\ldots
-    (but I don't want to tell her about entering a town, or the \glsentrylongpl{sp} she paid us).
-    \item[\gls{gm}:]
-    So how will you explain how long the mission took?
-    Remember, she has a record of when Grogfen left the \gls{jotter} who gave her the mission.
-    \item[Player 2:]
-    With lies\ldots?
-    Can I just roll this one?
-    I'll still tell her about the strange markings on all the trees.
-    \item[\gls{gm}:]
-    Sure.
-    You just need to keep it consistent with what she knows.
-    Roll \roll{Intelligence}{Deceit} at \glsentrytext{tn} 8.
-    \item[Player 2:]
-    \dicef{7}
-    Okay, that's an `8', so\ldots
-    \item[\gls{gm}:]
-    That's a tie, I'm afraid.
-    You got what you wanted (the money), but \gls{jotter} Cartpike thinks you're lying.
-    The two of you end up in an argument, but she doesn't have any evidence for her accusations.
-  \end{description}
-}{
-
-  Whenever the characters try to accomplish something with a little danger, the player rolls:
-
-  $$2D6 + \underbrace{Attribute + Skill} ~vs~ \glsentrytext{tn}$$
-
-  \noindent
-  When players roll above the \gls{tn}, their character succeeds.
-  When they roll below, the character fails, and the danger occurs.
-  When they roll a tie, then both occur -- or neither.
-
-  Sometimes this depends on what makes sense.
-  If both make sense then the player can choose to accept the danger and their goal, or neither.
-
-  In this case, Grogfen has a -1 Penalty to Intelligence, and +2 Deceit.
-  So in total, the roll is:
-
-  $$2D6 + 1 ~vs~ 8$$
-
-  \noindent
-  Sometimes a piece of equipment or a social contact can add to the roll, so the total Bonus can become very high.
-  A \gls{tn} of 14 is not unreasonable in some situations.
-  In full, the formula is:
-
-  $$2D6 + \underbrace{Attribute + Skill + Equipment} ~vs~ \glsentrytext{tn}$$
-}
-
-\playCommentary{
-  \begin{description}
-    \item[Player 3:]
-    Do I get a character?
-    \item[\gls{gm}:]
-    You sure do.
-    Take the Book of Stories and roll $2D6$ on these charts.
-    \item[Player 3:]
-    Okay, I'm a human\ldots called\ldots `Sootfilch'.
-    What's with the name?
-    \item[\gls{gm}:]
-    People in \gls{fenestra} believe that the gods takes the best in life, so it's bad luck to name their children after good things.
-
-    Roll the Attributes next.
-  \end{description}
-}{
-
-  \columnbreak
-  Character creation's fast, so don't worry about \glspl{pc} dying.
-  Most will begin as members of the \gls{guard} -- the place they put society's unwanted; the useless miscreants, bastards, and political agitators.
-
-  The character creation rules are in the \textit{Book of Stories}%
-  \iftoggle{stories}{, \autopageref{character_rolls}.}{.}
-  This book focusses on resolution mechanics, details of Traits, and spells.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    Low Dexterity and high Intelligence, so we'll look up what that says.
-    \item[Player 3:]
-    It says I'm a `Loner'.
-    \item[\gls{gm}:]
-    That makes sense.
-    Family and social ties are vital in \gls{fenestra}, so people can end up in the \gls{guard} just because they don't have anyone arranging a safe position for them.
-    \item[Player 3:]
-    This equipment looks a bit rubbish.
-    Can't I get something better?
-    At least some proper armour?
-  \end{description}
-}{
-  \columnbreak
-  Starting equipment and beliefs all come wrapped together with the core concept in character creation.
-  This helps new people get up and running quickly.
-
-  Most players end up making more interesting characters with some random input, but if players really want to decide every facet of their character, they can use the `point-buy' character creation system.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    Sure -- you're in a \gls{broch}, so you can ask \gls{jotter} Cartpike.
-    Roll $2D6$, then add your \roll{Charisma}{Empathy}.
-    \item[Player 3:]
-    \dicef{9}
-    \ldots that's an `11' in total?
-    Do I pass?
-    \item[\gls{gm}:]
-    Sure, but how would a loner ask for equipment?
-    What would they do?
-    \item[Player 3:]
-    He'd probably ask her when she's alone.
-    Knock politely, and just explain he's doesn't have the tools he needs to survive.
-  \end{description}
-}{
-  \columnbreak
-  Some people like to `roll for Charisma', because they want their characters to succeed, rather than make a performance.
-  Instead of asking for acting talent, I've found it's best to have people roll, then interpret that roll.
-  This lets players plan for their characters abilities (as usual), and opens the field for failures with justification -- often some of the most interesting results.
-
-  Instead of \gls{pc} blunders happening because `it's what my character would do', they happen because of the dice.
-  This stops other players feeling like someone is ruining the game; they're not, they're just interpreting the result they rolled.%
-  \footnote{For more on this, see the discussion \vpageref{rollForRoles}.}
-}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    \Gls{jotter} Cartpike agrees to give you the armour, as long as you head out on the new mission, immediately.
-    Sootfilch, Grogfen and Mossboke will journey out to two neighbouring \glspl{village} -- that means a `walled village' -- and cut around the perimeter.
-    \item[Player 1:]
-    We're bush-whacking?
-    \item[\gls{gm}:]
-    Yes.
-    If the forest grows too dense, and approaches \pgls{village}, it means predators can get close, and attack the farmers there.
-    %!
-    Sinkwall lies ten miles North, and they say that the swamp hag lives nearby.
-    Soumarch takes fourteen miles march South, but has \pgls{bothy} half way along.
-
-    \Gls{jotter} Cartpike gives everyone two days' rations (hardened cheese and mutton pies), and lets you pick your destination.
-  \end{description}
-
-}{
-  \columnbreak
-  The \gls{gm} forgot to prepare anything for the session, but that's okay.
-  He's already determined the season, so he flips to the encounter charts and rolls $3D6$.
-  The result is: `4 trader caravans, and biting winds, on the first day'\ldots which is now.
-
-  For the mission, he rolls $3D6$ again, and finds the troupe must go to two nearby \glspl{village} and cut away at the perimeter.
-
-  Finally, he rolls up both \glspl{village} while two players explain how armour works to Player 3.
-
-  \Gls{village} 1 has bear-traps along the perimeter, and rumours about the local swamp-hag occasionally eating people.
-  It's near a swamp, so he names it `Sinkwall'.
-
-  \Gls{village} 2 has poisoned meat-on-sticks around its perimeter, to kill any wandering predators.
-  It's a march South, so he thinks `South March', then names it `Soumarch'.
-
-  %The \gls{gm} should not consider the \gls{village}-event charts and random tables `hard rules' -- they exist to support the \gls{gm} when they need to throw some chaos into the game.
-  %You can find the random rolls in the \textit{Book of Judgement}%
-  %\iftoggle{judgement}{, \autoref{encounters}, \autopageref{encounters}}{}.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[Player 1:]
-    May as well do the distant one first.
-    \item[Player 2:]
-    I want to meet that hag.
-    Can we walk ten miles in an afternoon?
-    \item[\gls{gm}:]
-    10 miles in an afternoon is pushing it, especially in the cold.
-    You can push it, or just travel 5~miles, then go for another 5 in the evening.
-    \item[Player 1:]
-    Laiquon's an elf, so he can ignore the cold.
-    \item[\gls{gm}:]
-    Oh yea\ldots the \gls{jotter} will have warm clothes for everyone else, but you humans two will have to take 1~\glsentrylong{ep} from the freezing weather.
-  \end{description}
-}{
-  \columnbreak
-  Each day has four \glspl{interval} -- morning, afternoon, evening, and night.
-  Characters can walk 5 miles in \pgls{interval} without exertion, so they usually go 10 miles a day, or 15 with good supplies and no distractions.
-
-  If they find a time-sensitive mission, they can always endure the weight of a few \glsentrylongpl{ep} in order to get there faster.
-
-  \noindent
-  \begin{tabularx}{\linewidth}{YYYY}
-  \hiderowcolors
-    \showInterval{0} & \showInterval{1} & \showInterval{2} & \showInterval{3} \\
-    Preparation. & March 5 miles & Marching 5 more. & Sleep at the \gls{village}. \\
-  \end{tabularx}
-}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    So everyone heads North to Sinkwall.
-    By the time you've gone two miles, a caravan of traders approach, hail you, and try to sell you torch pitch and rope for 100~\glspl{cp} each.
-    \item[Player 1:]
-    Nah we're\ldots actually, that'd be really handy.
-    I'll take both.
-    \item[\gls{gm}:]
-    Roll \roll{Wits}{Crafts} to determine the quality of the goods (\tn[9]).
-    \item[Player 1:]
-    \dicef{7}
-    Is an `8' good?
-    \item[\gls{gm}:]
-    Laiquon \emph{thinks} the rope and pitch are serviceable.
-    We'll see later\ldots
-  \end{description}
-}{
-  Purchases can get tricky, as tricksters are everywhere.
-  A bad roll can leave the buyer holding useless goods, or buying services from a chancer.
-  Most of the `secondary skills' (like Crafts and Survival) can come in useful for trades.
-
-  The \gls{gm} could have broken the `encounter' with traders into a back-and-forth series of `hail, good traveller', but skipping to the decision-points gives the game a faster pace.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[\gls{gm}:]
-    Snow's started to fall, thicker than before.
-    By evening, the road is white, but you can see Sinkwall's high wooden walls ahead, and an archer waves at you from his perch.
-    \item[Player 1:]
-    Time to rest.
-    \item[\gls{gm}:]
-    Wait a minute\ldots
-    just checking for encounters.
-    \item[Player 1:]
-    Crap\ldots
-    \item[\gls{gm}:]
-    Who's in the lead?
-    Grogfen has the highest Speed, so I think she would be.
-    Can you roll \roll{Wits}{Vigilance} (\tn[13])?
-    \item[Player 2:]
-    Crap\ldots
-  \end{description}
-}{
-  When two people (or creatures) act against each other, the player rolls at \tn[7], plus their opponent's score.
-
-  \vspace{.5em}
-  \noindent
-  \begin{tabularx}{\linewidth}{YcY}
-  \hiderowcolors
-  Wits~-1 + Vigilance~0 & vs & Dexterity~2 + Stealth~3 \\
-  \end{tabularx}
-
-  $$2D6 + \underbrace{-1 + 0} ~vs~ 7 + \underbrace{2 + 3}$$
-
-  $$2D6 + \underbrace{-1} ~vs~ 7 + \underbrace{5}$$
-
-  $$2D6 -1 ~vs~ 13$$
-
-  The creature's total Bonus is +5, so at \tn[12] Grogfen fails before Player 2 rolls.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[Player 2:]
-    I can't make the roll, so what happens to me?
-    \item[\gls{gm}:]
-    A bleach-white tentacle grabs you by the neck, another around your left leg, then the great \gls{woodspy} rises.
-    \item[Player 3:]
-    The what?
-    \item[\gls{gm}:]
-    ``\Gls{woodspy}'' -- a great land-octopus, with a load of tentacles, able to camouflage.
-    It grabs her and starts to slither away, yanking its way through the trees while holding Grogfen tight above its head.
-    \item[Player 3:]
-    What do we do?
-    Run after it?
-    \item[\gls{gm}:]
-    If you want to, spend \pgls{ap}.
-    You can roll \roll{Speed}{Athletics} at \tn[11].
-    \item[Player 3:]
-    Okay, \dicef{7} \ldots sorry, Grogfen\ldots
-  \end{description}
-}{
-  \columnbreak
-  Everyone starts combat with 3~\glsentryfullpl{ap} plus their Speed Bonus.
-  Having more \glspl{ap} lets you act before others, and do more.
-  \par
-
-  When someone attacks you, it forces you to spend \glspl{ap} to resist.
-  This can push your \glspl{ap} below 0, and every step down inflicts a Penalty to all actions.
-
-  For example, a character on -2~\glspl{ap} would take a -2~Penalty to all actions (and could only act in response to something acting against them).
-
-  Using \glspl{ap} means you don't need to be too precious about which order people act in -- every character receives the actions they're due by the end of the round.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[Player 1:]
-    Wait, Earth magic covers snow, doesn't it?
-    Can I make the snow solid around the \gls{woodspy}'s tentacles to stop it getting away?
-    \item[\gls{gm}:]
-    Yes -- it's still \tn[11], but you can roll your \roll{Charisma}{Earth} to cast.
-    \item[Player 1:]
-    \dicef{9} Got it!
-    \item[\gls{gm}:]
-    What does he say?
-    \item[Player 1:]
-    `Solid frost, make \pgls{woodspy} tomb'?
-    \item[\gls{gm}:]
-    Well the snow responds, freezing solid, and holding a couple of tentacles tight.
-
-    Player 3 -- one \roll{Wits}{Vigilance} roll, please (\tn[11]).
-  \end{description}
-}{
-  Characters cast spells with Charisma plus an elemental Skill, as they literally speak to the elements.
-
-  Spells work like any other roll, including when making a Resisted roll -- the spellcaster uses their Bonus to resist the opponent, or players roll their \gls{pc}'s Bonus against the \gls{npc}'s.
-
-  \vspace{.5em}
-  \noindent
-  \begin{tabularx}{\linewidth}{YcY}
-  \hiderowcolors
-  Charisma~2 + Earth~1 & vs & Speed~2 + Athletics~2 \\
-  \end{tabularx}
-
-  $$2D6 + \underbrace{2 + 1} ~vs~ 7 + \underbrace{2 + 2}$$
-
-  $$2D6 + \underbrace{3} ~vs~ 7 + \underbrace{4}$$
-
-  $$2D6+3 ~vs~ 11$$
-}
-
-\playCommentary{
-  \begin{description}
-    \item[Player 2:]
-    I'm rolling to attack!
-    \item[\gls{gm}:]
-    Roll \roll{Dexterity}{Brawl}, \tn[13].
-    \item[Player 2:]
-    \dicef{9}
-    \Glsentrylong{tn} what?
-    This is hopeless\ldots
-    \item[\gls{gm}:]
-    Yes, but then again, you and the \gls{woodspy} both spend \pgls{ap} when you struggle.
-    \item[Player 2:]
-    Okay, I spend every \glspl{ap} I have.
-    \dicef{3}\dicef{2}
-    All of them.
-    \dicef{8}.
-    \item[Player 3:]
-    \dicef{5}\dicef{1}
-    Does a `5' pass?
-    \item[\gls{gm}:]
-    A bear trap, hidden in the snow, leaps up dealing\ldots\dicef{6} 6 Damage.
-    You can remove your 5~\glspl{fp}.
-    \item[Player 3:]
-    And the last Damage?
-    Does my armour get it?
-    \item[\gls{gm}:]
-    Not with a bear-trap I'm afraid.
-    Remove \pgls{hp}.
-
-    However, since the \gls{woodspy} couldn't move, you're standing in front of it, with one leg bleeding from the frozen, iron jaws.
-  \end{description}
-}{
-  \Glsentryfullpl{fp} measure a character's distance from death and (in some sense) their courage.
-  Once they run out, all further damage makes a real wound -- Sootfilch might carry this damage for the remainder of the session.
-  However, after \pgls{interval} the troupe will regenerate \glspl{fp}, so the wounds won't leave them near-death for the entire session -- they can persevere while wounded, and rely on their luck.
-
-  \Gls{bind} doesn't have much in the way of healing magic, but it has plenty of Fate spells.
-}
-
-\playCommentary{
-  \begin{description}
-    \item[Player 3:]
-    I'll stab the \gls{woodspy}.
-    \item[\gls{gm}:]
-    Okay -- spend \pgls{ap} to take out your sword.
-    \item[Player 3:]
-    Spent.
-    I'll stab the \gls{woodspy}!
-    \item[Player 2:]
-    \dicef{11}
-    I'm free, but out of \glspl{ap}.
-    \item[Player 1:]
-    I'll go for another binding spell, can I make it trapped so Sootfilch can stab it easier?
-    \item[\gls{gm}:]
-    Sure, and it's at \tn[10] this time.
-    \item[Player 3:]
-    Can I not stab the \gls{woodspy}?!
-    \item[\gls{gm}:]
-    Snow freezes around its every grounded tentacle, while Grogfen pulls away.
-    Roll \roll{Dexterity}{Melee} at \tn[7].
-    \item[Player 3:]
-    \dicef{9}
-    That's 8, how do I Damage?
-    \item[Player 1:]
-    $1D6$!
-    \item[Player 3:]
-    \dicef{6} that's an 8 in total, with the shortsword.
-    \item[\gls{gm}:]
-    The shortsword enters, and its snow-white skin splits, blue blood runs down the wound and the skin writhes, turning red, black, then mottled-brown.
-  \end{description}
-}{
-  The \gls{woodspy} would usually flee at this point, but ice has trapped its lower tentacles, so the troupe will destroy it in a moment.
-  Once it dies, Laiquon will pull its beak out, to create \pgls{talisman} for a Water spell, then the troupe can sell the rest of the body to the farmers in the \gls{village} for some silver and a couple of favours, such as a nice place to rest.
-
-  The \gls{gm} hasn't introduced the real hooks yet -- the \gls{sq} \glspl{segment}.
-  Last session involved small plot-\glspl{segment} which provided foreshadowing for the swamp-hag's plans.
-  The next \gls{segment} in the forests will be the reckoning, but if the players decide to stick to their mission, on the roads, the \gls{gm} will have to start a new \gls{sq} to throw at them.
-
-  Running multiple \glspl{sq} isn't a problem.
-  The old plot can wait, and new \glspl{guard} will hear about the important background from the \glspl{jotter}' records.
-}
 
 \clearpage
