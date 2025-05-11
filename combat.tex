@@ -445,7 +445,7 @@ As with picking up any other item, characters must spend least 1~\gls{ap} to tak
 \subsubsection{\Glsfmtplural{bow}}
 \label{longbow}
 demand a lot of Strength to just pull back.
-The Damage and Attack Bonuses equal the minimum Strength requirements.
+They \glsentrydesc{bow}.
 
 \Glspl{bow} can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim rather than the bow.
 
@@ -470,7 +470,6 @@ Reloading always takes a minimum of 1 \gls{round}.
 such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
 They work just as short bows, but their Damage is the normal weapon Damage minus 2.
 \javelin\weaponName s deal
-\addtocounter{weaponDamage}{4}
 \dmg{weaponDamage} Damage
 when used in combat, but only
 \addtocounter{weaponDamage}{-2}%
@@ -480,7 +479,6 @@ when used in combat, but only
 are available only to the rich, as sensible people don't throw swords, axes, knives, or cups away.
 But if a player insists on ballistic financial decisions, they can inflict cuts, bruises, and serious headaches on enemies; the weapon receives a -2~Penalty to hit and -2 Damage.
 \longsword\weaponName s don't make great projectiles, but they deal
-\addtocounter{weaponDamage}{4}
 \dmg{weaponDamage} Damage
 when used in combat, so they can inflict
 \addtocounter{weaponDamage}{-2}%
@@ -627,7 +625,7 @@ Characters who fell in a downward-arc can attempt to break their fall with a rol
 The \gls{tn} is 7 plus the height of the fall.
 However, when falling straight downwards, the \gls{tn} is 7 plus \textit{double} the height in \glspl{step}.
 
-\begin{boxtable}[cYXX]
+\begin{boxtable}[cYYY]
   \textbf{Strength} & \textbf{Height} & \textbf{Damage} & \textbf{TN} \\
   \hline
   \calcFallingDamage{-2}{6}
