@@ -5,7 +5,7 @@ include config/vars
 config/vars:
 	@git submodule update --init
 
-$(DBOOK): qr.tex
+$(DBOOK): qr.tex $(wildcard *.tex)
 
 images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg images/extracted/inclusion.tex
 	$(CP) $< $@
