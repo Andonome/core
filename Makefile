@@ -2,10 +2,10 @@ EXTERNAL_REFERENTS = stories judgement
 
 include config/vars
 
+$(DBOOK): qr.tex .switch-gls $(wildcard *.tex)
+
 config/vars:
 	@git submodule update --init
-
-$(DBOOK): qr.tex $(wildcard *.tex)
 
 images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg images/extracted/inclusion.tex
 	$(CP) $< $@
