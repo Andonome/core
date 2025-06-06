@@ -1,15 +1,14 @@
 ---
 variables:
-  LATEX_IMAGE: andonome/texbind
+  LATEX_IMAGE: registry.gitlab.com/bindrpg/config:latest
 
 build:
   image: $LATEX_IMAGE
   script:
-    - git lfs pull
     - make all
-  only:
-    - master
-    - run
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+    - if: $CI_COMMIT_BRANCH == "run"
   artifacts:
     paths:
       - "*.pdf"
