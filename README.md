@@ -69,7 +69,7 @@ If you want to get involved, there are a number of ways to contribute:
 [stories]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Stories.pdf?job=build
 [judgement]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Judgement.pdf?job=build
 [goblin_horde]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
-[rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/booklet.pdf?job=build
+[rules]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/rules.pdf?job=build
 [cs]: https://gitlab.com/bindrpg/config/-/jobs/artifacts/master/raw/character_sheets.pdf?job=build
 [goblin_hole]: https://gitlab.com/bindrpg/gitlab-profile/-/jobs/artifacts/master/raw/output/The_Goblin_Hole.pdf?job=pdfs
 [feylands]: https://gitlab.com/bindrpg/gitlab-profile/-/jobs/artifacts/master/raw/output/Snail_Trails.pdf?job=pdfs
