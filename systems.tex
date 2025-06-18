@@ -38,6 +38,8 @@ A poison worthy of \gls{abderian} might inflict 4~\glspl{ep} each \gls{interval}
 A tie indicates that the poison loses the first boon its creator gave it, and each Failure Margin takes another.
 When no boons are left, the poison does nothing but smell bad.
 
+\null
+
 \makeRule{sword_crafting}{Crafting a sword}{Strength}{Crafts}{15}
 
 This requires equipment, such as moulds, and a long night.
@@ -45,9 +47,13 @@ It also requires a single level of the Melee \gls{skill}.
 
 A tie indicates a completed sword, but a shattered mould.
 
+\null
+
 \makeRule{make_mould}{Creating a weapon mould}{Intelligence}{Crafts}{11}
 A weapon mould grants a +2 Bonus to weapon-crafting rolls.
 Most metallurgists cannot form weapons without one.
+
+\null
 
 \makeRule{make_armour}{Creating silent plate armour}{Intelligence}{Crafts}{16}
 Creating silent plate requires planning from the outset -- existing armour cannot be properly modified.
@@ -61,7 +67,7 @@ This won't let the character perform the song -- just compose, and possibly expl
 Songs can boost or tarnish reputations, granting a Bonus or Penalty to social interactions, equal to half the roll's Margin.
 
 \makeRule{tame_horse}{Taming a Horse}{Intelligence}{Cultivation}{depends on Horse's \roll{Wits}{Brawl}}
-Wild horses still run wild in \gls{fenestra}, but catching one without injuring it is difficult, and getting it comfortable with people takes upwards of months.
+Wild horses exist \gls{fenestra}, but catching one without injuring it is difficult, and getting it comfortable with people takes upwards of months.
 But if you have more time than money, then it's time well spent.
 
 \iftoggle{stories}{
@@ -77,7 +83,42 @@ But if you have more time than money, then it's time well spent.
   If a spell fails, then the next session should probably open with the aftermath of that failure, and a run-through of all that it entails.
 }{}
 
-\columnbreak
+\subsection{Journeys by Road \& \Glsfmttext{village}}
+
+\makeRule{area_knowledge}{Area knowledge}{Intelligence}{Academics}{set by area}
+Cities are \tn[7], Towns are 9, and \glspl{village} are 13.
+A successful roll indicates a working knowledge of the place.
+
+\makeRule{makeCamp}{Make Camp}{Intelligence}{Vigilance}{8}
+\index{Camping}%
+starts with a safety check of the area, during daylight.
+That secures enough space for people to wander a short distance to take a piss in the bushes, or just relax for a bit.
+
+\index{Hardened Half-Yurt}
+Once night falls, most bed in \pgls{bothy}.
+If the \gls{bothy} hasn't the space for the mounts, some traders make space for a horse or two inside their wagons.
+Others carry a `hardened half-yurt' -- a large covering, made of leather and wooden latices, which they affix to \pgls{bothy}'s side, to make space for a couple of horses.
+
+\subsubsection{\Glsfmtname{rambling}}
+\glsentrydesc{rambling}
+
+Humans can endure a hard-march better than most.
+Despite their slow gait, they can out-pace almost anything in the long-term.%
+\exRef{stories}{Stories}{humanInheritance}
+
+\makeRule{dawnDoor}{Opening Dawn's Door}{Intelligence}{Survival}{8}
+\index{Doors!Dolly}
+\index{Doors!Dawn|glsentrytext{morning}}
+Opening doors is a dangerous business -- anything might be on the other side, especially first thing in the morning.
+If \pgls{crawler} or \gls{woodspy} encounter occurs during the night, the \gls{monster} may sit on a roof, waiting for people to come out the front door.
+
+Rolling a tie indicates the inhabitant spots the creature, but still comes just within grabbing distance; the creature receives a -2~Penalty to their first attack roll.
+
+Co\"ordinating with a neighbour grants a +2~Bonus to the roll, assuming the neighbour can look out some spy-hole and confirm the roof and doorway have nothing lurking on them.
+
+Many in \gls{fenestra} also carry \pgls{dawnDolly} -- a kind of scare-crow on a stick which people can waggle outside their door, so that anything lurking on the roof will grab the doll, rather than the inhabitants.
+\Glspl{dawnDolly} add a +3 Bonus to gaining a non-lethal morning.
+
 
 \subsection{Journeys Past the \Glsfmttext{edge}}
 
@@ -86,7 +127,6 @@ Each point on the Margin allows an additional person to sleep inside the shelter
 A tie indicates that the shelter holds for \pgls{interval}, then collapses.
 
 \makeRule{climbing}{Climbing}{Speed}{Athletics}{varies greatly}
-
 Rolling a tie indicates that the climber knows they cannot make the climb, or at least fails on the first few holds.
 Failure with a Margin of 1 gives the worst possible result -- the climber fails while near the top, while a larger failure Margin means they travelled less far before falling.
 
@@ -172,42 +212,6 @@ The hunter continues making rolls until they catch their quarry or lose them.
 
 \makeRule{whittling}{Whittling Wood}{Dexterity}{Crafts}{10}
 Characters can fashion anything with a cost of less than 10~\gls{cp} in less than a day, with only basic woodworking tools.
-
-\subsection{Journeys by Road \& \Glsfmttext{village}}
-
-\makeRule{area_knowledge}{Area knowledge}{Intelligence}{Academics}{set by area}
-Cities are \tn[7], Towns are 9, and \glspl{village} are 13.
-A successful roll indicates a working knowledge of the place.
-
-\makeRule{makeCamp}{Make Camp}{Intelligence}{Vigilance}{8}
-\index{Camping}%
-starts with a safety check of the area, during daylight.
-That secures enough space for people to wander a short distance to take a piss in the bushes, or just relax for a bit.
-
-\index{Hardened Half-Yurt}
-Once night falls, most bed in \pgls{bothy}.
-If the \gls{bothy} hasn't the space for the mounts, some traders make space for a horse or two inside their wagons.
-Others carry a `hardened half-yurt' -- a large covering, made of leather and wooden latices, which they affix to \pgls{bothy}'s side, to make space for a couple of horses.
-
-\subsubsection{\Glsfmtname{rambling}}
-\glsentrydesc{rambling}
-
-Humans can endure a hard-march better than most.
-Despite their slow gait, they can out-pace almost anything in the long-term.%
-\exRef{stories}{Stories}{humanInheritance}
-
-\makeRule{dawnDoor}{Opening Dawn's Door}{Intelligence}{Survival}{8}
-\index{Doors!Dolly}
-\index{Doors!Dawn|glsentrytext{morning}}
-Opening doors is a dangerous business -- anything might be on the other side, especially first thing in the morning.
-If \pgls{crawler} or \gls{woodspy} encounter occurs during the night, the \gls{monster} may sit on a roof, waiting for people to come out the front door.
-
-Rolling a tie indicates the inhabitant spots the creature, but still comes just within grabbing distance; the creature receives a -2~Penalty to their first attack roll.
-
-Co\"ordinating with a neighbour grants a +2~Bonus to the roll, assuming the neighbour can look out some spy-hole and confirm the roof and doorway have nothing lurking on them.
-
-Many in \gls{fenestra} also carry \pgls{dawnDolly} -- a kind of scare-crow on a stick which people can waggle outside their door, so that anything lurking on the roof will grab the doll, rather than the inhabitants.
-\Glspl{dawnDolly} add a +3 Bonus to gaining a non-lethal morning.
 
 \subsection{Journeys on Water}
 
