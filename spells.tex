@@ -47,8 +47,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 \label{airSpells}
 
 % Reorder spells so they can be alphabetical
-
-\setcounter{diceNo}{0}%
+\setcounter{diceNo}{1}%
 
 \showSpells{Air1}
 
@@ -665,8 +664,23 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 
   The spell lasts until a target gains \arabic{spellCost}~\pgls{xp} for following their Code, or completes the plan.}
 
-
 \showSpells{Mind4}
+
+\spell{Town Crier}% Name
+  {Detailed, Distant, Duplicated}% Enhancements
+  {Warp}% Action
+  {Water, Fate}% Spheres
+  {complexity of plan}% Resist with
+  {The caster writes out a plan for \arabic{spellTargets} targets while looking at them from \spellRange\ away, and by \showOnset's end, each one know the plan, and knows that the others know the plan.
+  The spell does not compel them to do anything, they simply understand the plan}% Description
+  {
+  The spell begin's subtly, half-way through the \showOnset.
+  For one person thinks of the plan as if they had their own idea, then three more.
+  Soon, everyone reaches the same conclusion.
+
+  Plans like `let's all have a feast to honour our fallen friends' have \tn[7], while more complex plans like `we could invest in a bridge, then tax it' might have \tn[10].
+  Pushing a pyramid-scheme based around fake \glspl{talisman} should require at least \tn[13].}
+
 
 \subsection{Death}
 \label{deathSpells}
