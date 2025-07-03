@@ -570,6 +570,17 @@ Spending \pgls{mp} adds a +3~Bonus to Speed for the purposes of taking off.
 
 \subsection{Circumstances}
 
+\makeAutoRule{acid}{Acid}{\Glsfmttext{armour} removes Damage equal to its \glsfmttext{covering}}
+\index{Melee!Acid}
+splashes can inflict Damage, but anything covering the body reduces the Damage by an amount equal to the \gls{covering}.
+Standard clothing has \pgls{covering} of 5 when the weather is cold or mild, so it reduces all Damage from acid splashes by~5.
+However, if the Damage is equal or greater than the `armour's \gls{dr}, then it is destroyed.
+Plate armour receiving 5~Damage will fall apart as leather straps break, and normal clothing dissolves at the first hit, forcing the wearer to tear them off (failure to do so means half the Damage still applies).
+
+Submersion in acid will damage any \gls{armour} (or clothing) \emph{and} full Damage applies, as it soaks through clothing.
+Acids dilute throughout \pgls{area} if they can, reducing in strength.
+\Glspl{spell} which turn a river acidic will disappear within \pgls{round}, while a stagnant (but large) pool may reduce the acid's Damage by 1 each \gls{round}.
+
 \makeAutoRule{blindness}{Blindness}{spend 1~\glsentrytext{ap} and make a \roll{Wits}{Vigilance} before any other action}
 \index{Melee!Blindness}
 in a battle requires responding to all attacks by spending \pgls{ap} and rolling \roll{Wits}{Vigilance}.
