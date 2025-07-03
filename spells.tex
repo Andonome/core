@@ -34,7 +34,7 @@ This is a dangerous tactic, as the \gls{witch} will constantly be without \glspl
 \index{Mana!Vacuum}
 
 To keep the vacuum at `full pull', the \gls{witch} indulges in repeated \glspl{casting}, until the vacuum is larger than any other's nearby.
-An entire \gls{region} can feel the pull, but more distant \glspl{area} will only have their ambient \glspl{mp} reduced by one or two.
+An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} will only have their ambient \glspl{mp} reduced by one or two.
 \Glspl{witch} approaching a powerful foe often feel the stagnation in the air, as they come closer to the vacuum.
 
 \end{multicols}
@@ -59,8 +59,11 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
   {Air}% Spheres
   {ventilation}% Resist with
   {With a memory of a bad night's sleep, the caster thinks about suffocating air.
-  Within one \showOnset, the air in the room turns rancid, inflicting \arabic{spellPlusTwo}~\glspl{ep} over the course of a few hours}% Description
-  {Anyone inside rolls \roll{Strength}{Vigilance} (\tn[10]) to wake up each time they take another \gls{ep}.}
+  Within one \showOnset, the air in the room turns rancid, inflicting \arabic{spellPlusTwo}~\glspl{ep}}% Description
+  {Anyone inside rolls \roll{Strength}{Vigilance} (\tn[10]) to wake up each time they take another \gls{ep}.
+
+  Any kind of draft increases the \gls{tn} to cast the spell by +2, and a windy night adds +2 more.
+  When cast outdoors, the \gls{tn} rises to 12, with extra penalties for wind.}
 
 \showSpells{Air2}
 \label{ManaVoidSpell}
@@ -171,6 +174,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 
 \showSpells{Water1}
 
+\setcounter{diceNo}{1}
 \showSpells{Water2}
 
 \spell{Detect Water}% Name
@@ -192,6 +196,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 \subsection{Fate}
 \label{fateSpells}
 
+\setcounter{diceNo}{1}
 \showSpells{Fate1}
 \showSpells{Fate1}
 
@@ -202,8 +207,9 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
   {Duplicated, Distant}% Enhancements
   {Wax}% Action
   {Fate}% Spheres
-  {targets' Charisma (inverted)}% Resist with
-  {The caster gives good wishes to a troupe, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}}% Description
+  {targets' highest Charisma Penalty}% Resist with
+  {The caster gives good wishes to a troupe, and \arabic{spellTargets} targets receive \showDam~\glspl{fp}.
+  The \gls{spell} is resisted with Charisma Penalties, so if the worst Charisma Penalty in the crowd is -2, then the \gls{spell} has \tn[9]}% Description
   {The spell targets those with the highest Charisma before others.}
 
 \showSpells{Fate3}
@@ -343,9 +349,8 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
   {Warp}% Action
   {Fire, Air}% Spheres
   {\roll{Wits}{Vigilance}}% Resist with
-  {The caster mixes a malaphor, and the target's apparent size contorts like a fun-house mirror, inflicting a -\arabic{spellPlusOne} Penalty to ranged attacks against them}% Description
-  {A gnome seen from ten steps might appear to be the size of a human, or a human may appear the size of a gnome.
-    The closer one approaches the target, the more normal it appears.}
+  {The caster minces a malaphor, and the target's apparent size contorts like a fun-house mirror, inflicting a -\arabic{spellPlusOne}~Penalty to ranged attacks against them}% Description
+  {A gnome seen from ten steps might appear to be the size of a human, or a human may appear the size of a gnome.}
 
 \showSpells{Light1}
 
@@ -686,6 +691,7 @@ An entire \gls{region} can feel the pull, but more distant \glspl{area} will onl
 \label{deathSpells}
 \label{Death1}
 
+\setcounter{diceNo}{1}
 \showSpells{Death1}
 \showSpells{Death1}
 
