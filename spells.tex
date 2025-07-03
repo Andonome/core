@@ -75,7 +75,7 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {Wax}% Action
   {Air}% Spheres
   {wind speed}% Resist with
-  {The caster gives a battle-cry, and cloud-lined spirits, appearing like small copies of the caster, push any enemies (but not allies) back, reducing their \glspl{ap} by \arabic{spellPlusOne}}% Description
+  {The caster gives a battle-cry, and cloud-lined spirits, appearing like small copies of the caster, push any enemies (but not allies) back, reducing their \glspl{ap} by \arabic{spellPlusTwo}}% Description
   {}
 
 \showSpells{Air3}
@@ -231,16 +231,6 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
 \subsection{Divergent}
 \label{divergentSpells}
 
-\spell{Barrel Blast}% Name
-  {Divergent}% Enhancements
-  {Wane}% Action
-  {Air, Water}% Spheres
-  {\roll{Speed}{Cultivation}}% Resist with
-  {As the caster spits, \arabic{spellPlusTwo} barrels of water (or equivalent) turn to vapour and rush around a target.
-  If the target breathes in, they gain \arabic{spellPlusTwo}~\glsfmtplural{ep}}% Description
-  {
-    The water should be clearly visible, such as a stream or an actual barrel of water.}
-
 \spell{Dock Hickory}% Name
   {Divergent}% Enhancements
   {Warp}% Action
@@ -356,20 +346,26 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
 
 \showSpells{Light1}
 
-\spell{Shadow}% Name
+\spell{Dank Stench}% Name
   {}% Enhancements
   {Wane}% Action
   {Fire, Air}% Spheres
   {\roll{Wits}{Vigilance}}% Resist with
-  {As the caster whispers, a single patch of darkness, the length of a step, forms anywhere within range}% Description
-  {It can obscure a candle's light, and diminish a torch's light to the strength of a candle.
-
-    The patch of shadow joins to a target.
-    If cast on a person, the shadow remains attached to them, inflicting a -\arabic{spellPlusOne}~Penalty to noticing things (and becomes quickly irritating).
-
-    The shadow fades once sunlight touches it for \pgls{interval}.}
+  {As the caster whispers a goodnight lullaby, the target's shadow comes loose, and flits about randomly, wandering over their face, covering candles, and quickly becomes an irritation which inflicts a -2~Penalty to see properly}% Description
+  {The shadow fades once it spends \pgls{interval} in Sunlight or water.}
 
 \pic{Roch_Hercka/polymorph}
+
+\spell{Mirror}% Name
+  {Duplicated}% Enhancements
+  {Wax}% Action
+  {Fire, Air}% Spheres
+  {\roll{Wits}{Vigilance}}% Resist with
+  {The caster introduces the target to their twins, and \arabic{spellTargets} copies of the target appear, facing different directions.  They disappear when they don't have direct line of sight to another}% Description
+  {The copies make no adjustments for light sources, so if the character has a shadow on the left-hand side of their face, the duplicates have the same shadow, no matter where they face.
+  All duplicates move away from the target whenever they move away from where the \gls{spell} began, and move back towards the origin point when the target does the same.
+
+  Anyone can spot which is the original by spending \pgls{ap} to observe the lot.}
 
 \showSpells{Light2}
 
@@ -382,8 +378,8 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {Wane}% Action
   {Fire, Air}% Spheres
   {\roll{Wits}{Vigilance}}% Resist with
-  {One target shadow forms a detailed silhouette, and may even stand up and away from the ground}% Description
-  {During the daylight, it simply looks weird; but at night these shadow puppets can easily fool someone into thinking \pgls{monster}, or even a particular person lies waiting, in the distance.
+  {The \gls{witch} tells a story with a shadow puppet, and it stands up and moves like a creature cloaked in darkness}% Description
+  {Under direct torchlight, the shadow simply looks weird; but at night these puppets can easily fool someone into thinking \pgls{monster}, or even a particular person lies waiting, in the distance.
 
   The shadows disappear once bright light hits them.}
 
@@ -406,8 +402,8 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {Fire, Air}% Spheres
   {\roll{Intelligence}{Survival}}% Resist with
   {The caster pulls on a memory of seeing darkness at the bottom of a clear loch, and the darkness comes.
-  After two \glsfmtplural{interval}, a patch of darkness forms, 5~\glsfmtplural{step} across.
-  Within four \glsfmtplural{interval}, all vision suffers a -4 Penalty}% Description
+  After two \glsfmtplural{interval}, a patch of darkness forms.
+  Within four \glsfmtplural{interval}, all vision suffers a -\arabic{spellPlusOne}~Penalty as the darkness grows to the size of a room}% Description
   {
   \Glspl{witch} commonly use this spell to make anyone in \pgls{bothy} or other sleeping-space miss the day.
   They awaken late, in darkness, and generally assume they simply cannot sleep.
@@ -584,9 +580,7 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
 
   The spell begins with all of the caster's knowledge, although anything beyond general knowledge generally ends up as a tangled mess of half-memories.
   Without any interest in socializing, any social memories will simply not make sense.
-  The spell has all of the caster's Skills which do not depend on any social intuition%
-  \footnote{The spell gains none of the caster's magic Spheres},
-  with a -1~Penalty.
+  The spell has all of the caster's Skills which do not depend on any social intuition with a -1~Penalty.
   However, if given a Charisma Bonus, with the Social Spell (\vpageref{Social Spell}), the spell will have full access to the caster's Skills (again, with a -1~Penalty to each of them).
 
   The spell grants no Charisma Bonus, and the resulting mind has no interest in anyone, or anything, except as instruments for \emph{the plan}.
@@ -631,10 +625,11 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {Witness}% Action
   {Water, Fate}% Spheres
   {\roll{Wits}{Academics}}% Resist with
-  {The \glsentrytext{witch} commands the target to state their `truest desires', while locking eyes.
+  {The \glsentrytext{witch} asks the target their `truest desires', while locking eyes.
     The spell confirms whether or not the target's statement conforms to their Code}% Description
   {The desire must be something which would \textit{directly} grant at least one \glsentrytext{xp}.%
-  \exRef{stories}{Stories}{codes}}
+  \exRef{stories}{Stories}{codes}
+  In the case of \glspl{npc}, the \gls{gm} just has to look at their primary `want'.}
 
 \label{carrierCrow}
 \spell{Carrier Crow}% Name
