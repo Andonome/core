@@ -1,5 +1,8 @@
 EXTERNAL_REFERENTS = stories judgement
 
+targets += Monsters.pdf
+targets += Knacks.pdf
+
 include config/common.mk
 
 $(DBOOK): qr.tex .switch-gls $(wildcard *.tex)
