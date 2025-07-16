@@ -3,6 +3,8 @@ EXTERNAL_REFERENTS = stories judgement
 targets += Monsters.pdf
 targets += Knacks.pdf
 
+output += booklets
+
 include config/common.mk
 
 $(DBOOK): qr.tex .switch-gls $(wildcard *.tex)
@@ -17,7 +19,7 @@ $(DROSS)/$(BOOK)_cover.pdf: config/share/cover.tex cover.tex images/extracted/co
 cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 	$(CP) $< $@
 
-booklets/a7_Knacks.tex: knacks.tex | booklets/
+booklets/a7_Knacks.tex: knacks.tex | booklets/ $(RELEASE)
 	\printf '%s\n' '\documentclass[10pt,twoside]{book}' > $@
 	\printf '%s\n' '\usepackage{config/bind}\usepackage{config/booklet}' >> $@
 	\printf '%s\n' '\externalReferent{core}' >> $@
@@ -29,7 +31,7 @@ booklets/a7_Knacks.tex: knacks.tex | booklets/
 	sed '1 d;/multicols/d;/footnote/d; s/\\section/\\subsection/; s/footnote/exRef{core}{Core Rules}/' $< >> $@
 	\printf '%s\n' '\end{document}' >> $@
 
-booklets/a7_Monsters.tex: whales.tex eyeline.tex | booklets/
+booklets/a7_Monsters.tex: whales.tex eyeline.tex | booklets/ $(RELEASE)
 	\printf '%s\n' '\documentclass[10pt,twoside]{book}' > $@
 	\printf '%s\n' '\usepackage{config/bind}\usepackage{config/booklet}' >> $@
 	\printf '%s\n' '\begin{document}' >> $@
