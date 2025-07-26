@@ -1,7 +1,7 @@
 EXTERNAL_REFERENTS = stories judgement
 
-targets += Monsters.pdf
-targets += Knacks.pdf
+zines += Monsters.pdf
+zines += Knacks.pdf
 
 output += booklets
 
