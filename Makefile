@@ -22,6 +22,7 @@ cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 booklets/a7_Knacks.tex: knacks.tex | booklets/ $(RELEASE)
 	\printf '%s\n' '\documentclass[10pt,twoside]{book}' > $@
 	\printf '%s\n' '\usepackage{config/bind}\usepackage{config/booklet}' >> $@
+	\printf '%s\n' '\setcounter{bookLevel}{3}' >> $@
 	\printf '%s\n' '\externalReferent{core}' >> $@
 	\printf '%s\n' '\externalReferent{stories}' >> $@
 	\printf '%s\n' '\externalReferent{judgement}' >> $@
