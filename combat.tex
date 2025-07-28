@@ -215,32 +215,57 @@ Losing \glspl{fp} can mean any number of things.
 \begin{multicols}{2}
 
 \subsection{\Glsfmtplural{weapon}}
+\index{Weapons}
 
-\noindent
-\Glspl{weapon} help to attack and defend, in varying degrees.
-Spears help to hit \glspl{monster} (or people) before they hit you, and provide a little extra Damage; mauls provide only a small Bonus to hit enemies, but inflict massive Damage when they make contact.
-Swords provide a balance between the two.
+\Glspl{weapon} are what separate us from the beasts.
+The longer the \gls{weapon}, the more separation it provides.
 
-Weapons with larger Bonuses have a higher \gls{weight}; they take more time to swing, so each attack costs more \glspl{ap}.
+\Dagger
+\paragraph{Daggers}
+come cheap, which makes them the most popular weapon among \glspl{guard} who's first mission is also their last.
+The short blade won't help hitting an opponent much, but they do provide \absNum{weaponDamage}~Damage due to the sharpened tip.
 
-Each \gls{weapon} has the following properties:
+\longsword
+\paragraph{Longswords}
+make a descent all-round \gls{weapon}, providing a \absNum{weaponBonus}~Bonus to hit and \absNum{weaponDamage}~Damage.
+However, with \pgls{weight} of \arabic{weaponWeight}, they also cost 2~\glspl{ap} for every swing, as the long blade quickly becomes unwieldy.
 
-\begin{itemize}
-  \item
-  \textbf{The Attack Bonus}
-  adds to the Attack roll, representing reach and manoeuvrability.
-  \item
-  \textbf{The Damage Bonus}
-  adds to the Damage of a successful Attack roll.
-  This might represent sharpness in a dagger, or just sheer weight in the case of a war hammer.
-  \item
-  \textbf{The \glsentryname{weight}}
-  tells you how many \glspl{ap} you need to swing the weapon.
-  \shortsword\weaponName s
-  only provides a \absNum{weaponBonus} Bonus to hit, but also only need \arabic{weaponWeight}~\gls{ap} to attack.
-  \greatsword\weaponName s
-  provide a \absNum{weaponBonus} Bonus to hit, but costs \arabic{weaponWeight}~\glspl{ap}.
-\end{itemize}
+\begin{exampletext}
+  \Pgls{crawler} attacks a new recruit --- \gls{fodder}~Hulkis.
+  Each time it spends \pgls{ap} to attack, Hulkiss must spend~2.
+\end{exampletext}
+
+\begin{boxtable}[ccL]
+  \textbf{\Glsfmttext{crawler}} & \textbf{Hulkiss} & \textbf{Actions} \\\hline
+            4~\glspl{ap}        &     4~\glspl{ap} & The \glsfmttext{crawler} attacks, stabbing at Hulkis with its knife-point claws. \\
+            3~\glspl{ap}        &     2~\glspl{ap} & Hulkis' player rolls the \gls{tn} exactly, and decides that neither deal Damage. \\
+            2~\glspl{ap}        &     0~\glspl{ap} & Hulkis beats the \gls{tn}, but only deals 2~Damage, and the \gls{crawler} steps into close-range. \\
+            1~\glspl{ap}        &     -2~\glspl{ap} & Hulkis has a -2~Penalty to combat, due to being on -2~\glspl{ap}, and takes 4~Damage. \\
+            0~\glspl{ap}        &     -4~\glspl{ap} & Hulkis has a -4~Penalty, takes 9~Damage, and dies. \\
+\end{boxtable}
+
+\poleaxe
+\paragraph{Poleaxes}
+provide a \absNum{weaponBonus}~Bonus to hitting enemies and chopping wood.
+Since \glspl{guard} spend more time chopping wood than hitting \glspl{monster}, many consider this the quintessential \gls{weapon} of the \gls{templeOfBeasts}.
+Also, the \absNum{weaponDamage}~Damage comes in handy.
+
+With \pgls{weight} of \arabic{weaponWeight}, poleaxes cost \arabic{weaponWeight}~\glspl{ap} to strike.
+This heavy Penalty means the weapon can only work when the troupe work together to protect each other.
+
+\spear
+\paragraph{Spears}
+keep opponents far away, providing a \absNum{weaponBonus}~Bonus to hit, and \absNum{weaponDamage}~Damage.
+In this right hands, a spear's ability to his precisely can deal more Damage against tougher \glspl{monster}, as it lets \glspl{guard} target weak-spots, like \pgls{basilisk}'s eyes, or \pgls{crawler}'s lower thorax.%
+\footnote{See \nameref{vitals} \vpageref{vitals}.}
+
+The \gls{weight} of \arabic{weaponWeight} means each strike costs \arabic{weaponWeight}~\glspl{ap}.
+
+\subsubsection{Quality}
+varies a lot.
+\Glspl{pc} may find \pgls{weapon} with poor stats, such as a sword with \pgls{weight} higher than expected.
+It depends on the local metal supplies, and the skills of the local \gls{armourHall}.
+The differing stats are not an error -- they simply represent varying quality.
 
 \weaponsChart
 \label{weaponschart}
@@ -250,28 +275,24 @@ Each \gls{weapon} has the following properties:
 \index{Shields}
 \label{shields}
 are weapons.
-The wide size means a big `Attack' Bonus, helps avoid Damage.
-The wide size does not help with Damage, but \pgls{pc} can still hurt their opponent with a shield-strike.
+The wide size means a big `Attack' Bonus, but low Damage.
 
-Having a shield and a weapon lets character choose which one to use for each attack.
-
+\buckler
 \paragraph{Bucklers}
-pair well with rapiers, but demand a full hand to hold -- the wielder must use the shield, not simply strap it to an arm.
+don't help much against \glspl{monster}, but work great people with long weapons.
+They have a \absNum{weaponBonus}~Bonus, but cost only \arabic{weaponWeight}.
+Once an opponent with a large weapon has spent their \glspl{ap}, the wielder can move in to strike with their other weapon.
 
+\roundshield
 \paragraph{Round Shields}
-can strap onto an arm, which allows two free hands to direct a weapon.
-They pair well with shortswords and mauls.
+can strap onto an arm, which allows two free hands to direct \pgls{weapon}.
+A couple of \glspl{guard} with these shields can protect themselves, and each other, with a \absNum{weaponBonus} Bonus.%
+\footnote{See `Guarding', \vpageref{guarding}.}
+Once the opponent focusses on the shields (and spends their \glspl{ap}), others can step forward and strike.
 
-\paragraph{Kite Shields}
-stand nearly as tall as the wielder.
-They don't move as quickly, or easily as other shields, but still work well with a longsword or maul.
+Also, having \absNum{weaponDamage}~Damage means occasionally knocking someone's teeth in with the shield's edge.
 
 \shieldchart
-
-\subsubsection{Quality}
-depends on the local metal supplies, and the skills of the local \gls{armourHall}.
-\Glspl{pc} may find \pgls{weapon} with poor stats, such as a sword with \pgls{weight} higher than expected.
-The differing stats are not an error -- they simply represent varying quality.
 
 \boxPair[b]{
   \begin{exampletext}
