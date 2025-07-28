@@ -294,7 +294,7 @@ Also, having \absNum{weaponDamage}~Damage means occasionally knocking someone's 
 
 \shieldchart
 
-\boxPair[b]{
+\boxPair[t]{
   \begin{exampletext}
   \Pgls{sunGuard} stands with a flail, and a cocky attitude.
   His basic Attack Score is 10, so rolling a 10 means a tie.
@@ -446,23 +446,34 @@ If the plate armour had \pgls{covering} of only 3 then rolling 3 over the creatu
 
 \noindent
 Projectiles have their own Combat \gls{skill}, which covers everything from javelins to bows.
-These \glsentrydesc{projectile}.
 
-\sidebox[20]{
-  \begin{nametable}{Projectiles Cover}
-    +1 & Large bushes \\
-    +2 & Tower shield \\
-    +3 & Murder hole  \\
-  \end{nametable}
-}
-A successful evasion allows someone to move -- usually behind cover, or towards the archer.
-However, unlike toe-to-toe combat, those on the receiving end cannot reflexively dodge; they must have at least 1~\gls{ap} to spend in order to dodge with their \roll{Speed}{Vigilance}.
-
-Just as with weapon combat, a high enough roll means \pgls{vitalShot}.
-\footnote{As covered \vpageref{vitals}.}
-
-All projectiles suffer from the need to reload.
-As with picking up any other item, characters must spend least 1~\gls{ap} to take out and use arrows.
+\begin{itemize}
+  \item
+  Characters spend \pgls{ap} to take out an arrow or throwing knife.
+  \item
+  Characters roll \roll{Dexterity}{Projectiles} to hit opponents at \tn[7].
+  \item
+  Every 5~\glspl{step} distance adds +1 to the \gls{tn}.
+  \item
+  Enemies under cover also raises the \gls{tn}.
+  \begin{itemize}
+    \item
+    Bushes raise the \gls{tn} by +1.
+    \item
+    A tower shield raises the \gls{tn} by +2.
+    \item
+    A murder hole raises the \gls{tn} by +3.
+    \index{Murder Hole}
+  \end{itemize}
+  \item
+  Opponents can resist with \roll{Speed}{Vigilance} to take a movement action.
+  They don't have to move a single \gls{step} in order to dodge, but \emph{must} spend \pgls{ap}.
+  Those without any \glspl{ap} cannot dodge.
+  \item
+  Most \glspl{monster} do not attempt to dodge, as they don't understand what projectile weapons are.
+  \item
+  A high enough roll means \pgls{vitalShot}.
+\end{itemize}
 
 \subsubsection{\Glsfmtplural{bow}}
 \label{longbow}
@@ -479,13 +490,10 @@ What it lacks in punch it makes up for in draw time.
 \Pgls{ap} cost of 1 (and 1 more for reloading) means a fast archer can loose 2 or 3 arrows each \gls{round}, and an archer with the \nameref{snapDraw} Knack (\vpageref{snapDraw}) might release 4 or 5 each \gls{round}.
 
 \subsubsection{\Glsfmtplural{crossbow}}
-\glsentrydesc{crossbow}
-\glsadd{crossbow}
 \label{crossbow}
-can pierce plate armour, but cannot be reloaded without a thirty-minute lecture about leverage and torque.
-They have a standard Damage of $2D6$, though different crossbows vary in quality.
-Crossbows requires only 1~\gls{ap} to fire, but require 5 \glspl{round}, minus the user's Strength Bonus, to reload.
-Reloading always takes a minimum of 1 \gls{round}.
+lead to endless arguments.
+\Glspl{guard} mostly deal with ambush predators, which makes \pgls{crossbow} useless, unless one keeps it constantly loaded.
+But a loaded \gls{crossbow}, strapped on someone's back as they walk, means someone will lose an eye or a foot sooner or later.
 
 \subsubsection{Thrown Weapons}
 \index{Projectiles!Thrown Weapons}
