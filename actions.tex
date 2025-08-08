@@ -245,6 +245,21 @@ Characters cannot roll dice for a different result unless the situation has chan
 Every character can carry a total \gls{weight} equal to their \glspl{hp}, so characters with 4~\glspl{hp} can carry four regular items (with \pgls{weight} of~1).
 Each point of excess inflicts a -1~Penalty, so if someone carries items with a total \gls{weight} of~`4', and their \glspl{hp} go down to `2', then they would receive a -2~Penalty.
 
+
+\begin{boxtable}[YYYY|c]
+           1  &              2  &      3  &       4  &     5  \\\hline
+  chain-- & --mail  &  shortsword  & 50~\glspl{cp}  &  \underline{\rations}  \\
+  \rations &  \glsentrysymbol{weight} &  \glsentrysymbol{weight}  &  \glsentrysymbol{weight} & \underline{\glsentrysymbol{weight}} \\
+\end{boxtable}
+
+\begin{boxtable}[YY|Y|cc]
+       1  &      2  &       3      &   4  &  5  \\\hline
+  chain-- & --mail  &  \underline{shortsword}  & ---  & --- \\
+  50~\glspl{cp} &  \glsentrysymbol{weight}  &   \underline{\glsentrysymbol{weight}} & & \\
+  \glsentrysymbol{weight} &  \glsentrysymbol{weight} &  &  & \\
+\end{boxtable}
+
+
 \subsubsection{Smaller Items}
 like arrows or sewing kits may show \pgls{weight} of `$\frac{1}{3}$' or `$\frac{1}{10}$'.
 These items take up a regular slot, but you can stack them together; so thirteen arrows have \pgls{weight} of `2', and one arrow has \pgls{weight} of~`1'.
