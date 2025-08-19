@@ -41,6 +41,8 @@ When no boons are left, the poison does nothing but smell bad.
 \null
 
 \makeRule{sword_crafting}{Crafting a sword}{Strength}{Crafts}{15}
+\index{Weapons!Crafting}
+\index{Crafting!\glsentryname{weapon}}
 
 This requires equipment, such as moulds, and a long night.
 It also requires a single level of the Melee \gls{skill}.
@@ -49,22 +51,24 @@ A tie indicates a completed sword, but a shattered mould.
 
 \null
 
-\makeRule{make_mould}{Creating a weapon mould}{Intelligence}{Crafts}{11}
+\makeRule{make_mould}{Crafting a weapon mould}{Intelligence}{Crafts}{11}
+\index{Crafting!\glsentryname{weapon}}
 A weapon mould grants a +2 Bonus to weapon-crafting rolls.
 Most metallurgists cannot form weapons without one.
 
 \null
 
-\makeRule{make_armour}{Creating silent plate armour}{Intelligence}{Crafts}{16}
+\makeRule{make_silent_armour}{Crafting silent plate armour}{Intelligence}{Crafts}{16}
 Creating silent plate requires planning from the outset -- existing armour cannot be properly modified.
 The parts cost an additional 50\%, and the crafter must have both the Melee and Stealth Skills at level~1.
+\index{Armour!Silent}
 
 Every Margin on the roll reduces the armour's Penalty by~1, to a minimum of~-1.
 
 \makeRule{make_song}{Composing a new song}{Intelligence}{Performance}{10}
 This won't let the character perform the song -- just compose, and possibly explain it.
-
 Songs can boost or tarnish reputations, granting a Bonus or Penalty to social interactions, equal to half the roll's Margin.
+Players are strongly encouraged to come up with a working title, and at least one rhyme from the song.
 
 \makeRule{tame_horse}{Taming a Horse}{Intelligence}{Cultivation}{depends on Horse's \roll{Wits}{Brawl}}
 Wild horses exist \gls{fenestra}, but catching one without injuring it is difficult, and getting it comfortable with people takes upwards of months.
@@ -129,6 +133,7 @@ A tie indicates that the shelter holds for \pgls{interval}, then collapses.
 \makeRule{climbing}{Climbing}{Speed}{Athletics}{varies greatly}
 Rolling a tie indicates that the climber knows they cannot make the climb, or at least fails on the first few holds.
 Failure with a Margin of 1 gives the worst possible result -- the climber fails while near the top, while a larger failure Margin means they travelled less far before falling.
+\index{Climbing}
 
 \makeAutoRule{dragBody}{Dragging Bodies}{only requires no Penalty beyond -4}
 uses the standard \gls{weight} rules, but the character cannot drag anything while they have a Penalty above -4.
@@ -137,15 +142,24 @@ This Penalty may come from carrying something too heavy, or from wounds; any Pen
 Rope or other equipment might grant +1 to the effective Strength of the character for the purposes of pulling a massive item or beast.
 And many characters can work together, each adding any amount to their total \gls{weight} carried.
 
-\makeRule{fieldDress}{Field Dressing}{Dexterity}{Cultivation}{12}
-lets the \gls{guard} cut and preserve \pgls{monster}'s corpse to sell later.
-A knife cuts from arse to throat, organs are harvested, \glspl{ingredient} extracted, and the meat hung to dry.
-
-The \gls{tn} raises by +2 in the hot \gls{cFive} \gls{cycle}, and reduces by -2 over snowy \gls{cTwo}.
-On a failure, any \glspl{ingredient} in the \gls{monster}'s body spoil, and the rest halves in value.
+\subsubsection{\Glsfmttext{harvesting}}
+is how \glspl{guard} earn a living.
+\glsadd{harvesting}%
+It \glsentrydesc{harvesting}.
 
 Eating the body provides 1~\gls{ration} per \gls{hp}.
 \index{Monsters@\glsentryname{monster}!Eating}
+\ifnum\thetemperature>1
+  \label{\jobname:harvestBasilisk}
+  \label{\jobname:harvestStirge}
+\else
+  \label{\jobname:harvestWatcher}
+  \label{\jobname:harvestGriffin}
+  \label{\jobname:harvestMshrooms}
+\fi
+\label{\jobname:harvestBear}
+\label{\jobname:harvestAuroch}
+\label{\jobname:harvestDigger}
 
 \makeRule{ford_river}{Fording a rapid river}{Strength}{Seafaring}{9}
 Success gets you to the other side, and failure gets you washed downstream.
@@ -385,7 +399,7 @@ Working well with someone means that someone can gain a good local reputation (p
 
 \makeRule{hookey}{Entering a town}{Wits}{Empathy}{depends on area, Bonus for rank}
 The \gls{guard} should guard against the forest, not hide (nor drink) in towns.
-\Glspl{guard} of rank `\gls{fodder}', and `\gls{gDigger}' are prohibited from entering towns without written authorization, and should not enter \glspl{village} except to perform their duties.
+\Glspl{guard} of rank `\gls{fodder}', and `\gls{gDigger}' are prohibited from entering towns without written authorization, or enter \glspl{village} except to protect it.
 
 \sidebox{
   \begin{boxtable}[cY]
