@@ -20,23 +20,16 @@ cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
 	$(CP) $< $@
 
 booklets/a7_Knacks.tex: knacks.tex | booklets/ $(RELEASE)
-	\printf '%s\n' '\documentclass[10pt,twoside]{book}' > $@
-	\printf '%s\n' '\usepackage{config/bind}\usepackage{config/booklet}' >> $@
-	\printf '%s\n' '\setcounter{bookLevel}{3}' >> $@
-	\printf '%s\n' '\externalReferent{core}' >> $@
-	\printf '%s\n' '\externalReferent{stories}' >> $@
-	\printf '%s\n' '\externalReferent{judgement}' >> $@
-	\printf '%s\n' '\begin{document}' >> $@
-	\printf '%s\n' '\miniCover{Knacks}{}' >> $@
+	$(file > $@, $(zineheader) )
+	@sed -i '/begin{document}/ i \\\setcounter{bookLevel}{3}' $@
+	\printf '%s\n' '\miniCover{\MakeUppercase $(basename $<)}{}' >> $@
 	\printf '%s\n' '\cleardoublepage\pagestyle{minizine}' >> $@
 	sed '1 d;/multicols/d;/footnote/d; s/\\section/\\subsection/; s/footnote/exRef{core}{Core Rules}/' $< >> $@
 	\printf '%s\n' '\end{document}' >> $@
 
 booklets/a7_Monsters.tex: whales.tex eyeline.tex | booklets/ $(RELEASE)
-	\printf '%s\n' '\documentclass[10pt,twoside]{book}' > $@
-	\printf '%s\n' '\usepackage{config/bind}\usepackage{config/booklet}' >> $@
-	\printf '%s\n' '\begin{document}' >> $@
-	\printf '%s\n' '\miniCover{Monsters}{}' >> $@
+	$(file > $@, $(zineheader) )
+	\printf '%s\n' '\miniCover{\MakeUppercase $(basename $<)}{}' >> $@
 	\printf '%s\n' '\cleardoublepage\pagestyle{minizine}\normalsize' >> $@
 	sed '/multicols/d;/epigraph{/d;s/\\section/\\subsection/' $^ >> $@
 	\printf '%s\n' '\clearpage\null\end{document}' >> $@
