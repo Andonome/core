@@ -566,9 +566,12 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {quiet thoughts}% Resist with
   {Shadows, statues, or suspicious bushes can all hide all manner of things.
   This spell tells the caster if any particular patch (and it has to be a specific patch) contains anything which has a mind}% Description
-  {
-    The spell will not say what kind of mind this is -- whether animal or person.
-    It reports only `yes/ no', and often has false positives due to sometimes detecting mice or insects (1/6 chance in daylight, 2/6 chance at night).}
+  {%
+    The spell will not say what kind of mind this is --- whether animal, person, \gls{talisman}, or \gls{artefact}.
+    It reports only `yes/ no', and often has false positives due to sometimes detecting mice or insects (1/6 chance in daylight, 2/6 chance at night).
+
+    Every \gls{talisman} has some consciousness, so the \gls{spell} can confirm if some \gls{alchemy} enhanced an item, but will not give any details.
+  }
 
 
 \spell{Awaken}% Name
@@ -613,12 +616,12 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {spell's level}% Resist with
   {The caster speaks to a spell like a dog, which awakens an instinct to socialize, and grants it a +\arabic{spellPlusOne} Charisma Bonus (but no Intelligence)}% Description
   {
-  Casters might use this spell to let an illusion interact semi-realistically with people (it will smile and listen, but cannot speak).
+    Casters might use this spell to let an illusion interact semi-realistically with people (it will smile and listen, but cannot speak).
 
-  The newly created mind gains all of the caster's Skills which rely primarily on social graces (Deceit, Empathy, and Performance), with a -1~Penalty to each.
-  It also gains their spell Spheres with a -1~Penalty, but does not need an audible voice to use them.
+    The newly created mind gains all of the caster's Skills which rely primarily on social graces (Deceit, Empathy, and Performance), with a -1~Penalty to each.
+    It also gains their spell Spheres with a -1~Penalty, but does not need an audible voice to use them.
 
-  The spell typically tries to attack the caster's enemies, and then interact with the caster and their friends.
+    The spell typically tries to attack the caster's enemies, and then interact with the caster and their friends.
 
   }
 
@@ -629,9 +632,11 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {\roll{Wits}{Academics}}% Resist with
   {The \glsentrytext{witch} asks the target their `truest desires', while locking eyes.
     The spell confirms whether or not the target's statement conforms to their Code}% Description
-  {The desire must be something which would \textit{directly} grant at least one \glsentrytext{xp}.%
-  \exRef{stories}{Stories}{codes}
-  In the case of \glspl{npc}, the \gls{gm} just has to look at their primary `want'.}
+  {%
+    The desire must be something which would \textit{directly} grant at least one \glsentrytext{xp}.%
+    \exRef{stories}{Stories}{codes}
+    In the case of \pgls{npc}, the \gls{gm} checks if their `wants', and otherwise looks to their highest \glspl{skill}.
+  }
 
 \label{carrierCrow}
 \spell{Carrier Crow}% Name
