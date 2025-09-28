@@ -7,7 +7,7 @@ output += booklets
 
 include config/common.mk
 
-$(DBOOK): qr.tex .switch-gls $(wildcard *.tex)
+$(DBOOK): qr.tex $(DROSS)/$(BOOK)-switch-gls $(wildcard *.tex)
 
 config/common.mk:
 	@git submodule update --init
