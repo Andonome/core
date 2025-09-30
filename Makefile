@@ -25,6 +25,7 @@ booklets/a7_Knacks.tex: knacks.tex | booklets/ $(RELEASE)
 	\printf '%s\n' '\miniCover{\MakeUppercase $(basename $<)}{}' >> $@
 	\printf '%s\n' '\cleardoublepage\pagestyle{minizine}' >> $@
 	sed '1 d;/multicols/d;/footnote/d; s/\\section/\\subsection/; s/footnote/exRef{core}{Core Rules}/' $< >> $@
+	\printf '%s\n' '\ifnum\thepage<14\clearpage\null\fi' >> $@
 	\printf '%s\n' '\end{document}' >> $@
 
 booklets/a7_Monsters.tex: whales.tex eyeline.tex | booklets/ $(RELEASE)
