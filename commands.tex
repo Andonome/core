@@ -291,3 +291,55 @@
     Changing \glspl{trait} helps represent how people flee, and prompts players to use the environment to their advantage; but it also resolves chase-scenes faster, as people will pick \pgls{attribute} or \gls{skill} which gives them a decisive advantage.
   }
 }
+
+\newcommand\throwGoblinCommentary{
+  \playCommentary{
+    \begin{description}
+      \item[Player 1:]
+      I grab the goblin, then throw it at the far goblin with the javelin.
+      Is there a rule for throwing goblins?
+      \item[Player 2:]
+      I don't think there's rules for throwing goblins.
+      \item[\Gls{gm}:]
+      Well there's a grab rule.
+      Grab him with \roll{Dexterity}{Brawl} at \glsfmtlong{tn}~9.
+      \item[Player 1:]
+      \twoDice{7}
+      Got him!
+      I grab his skinny neck!
+      \item[\Gls{gm}:]
+      And there's also a rule for \glspl{projectile}.
+      But first, he has five~\glsfmtlongpl{hp}, so his \gls{weight} is 15.
+      \item[Player 1:]
+      So\ldots minus two penalty?
+      \item[\Gls{gm}:]
+      Right, and another minus two penalty for using \pgls{impromptuThrownWeapons}, since goblins are not designed for throwing.
+      \item[Player 2:]
+      Do the rules actually say that goblins are `impromptu'?
+      \item[\Gls{gm}:]
+      Goblins are nothing if not impromptu.
+      Ask anyone.
+
+      Roll \roll{Dexterity}{Projectiles} at \glsfmttext{tn} 8.
+      \item[Player 1:]
+      \twoDice{10}
+      That hits, and the Damage is
+      \dicef{4}\ldots
+      what's the Damage Bonus on a Goblin?
+      \item[\Gls{gm}:]
+      I think `bugger all', seems generous, but that's enough to kill the target anyway.
+      The skinny, white mass of bone and teeth is flung forward, skull-first into the goblin with the javelin.
+      Both lie motionless.
+
+      Now the goblin had \pgls{weight} of fifteen, so spend 15~\glsfmtplural{ap} for throwing him.
+
+      Two more goblins aim javelins at you.
+      \item[Player 1:]
+      Fifteen!?
+      I'm at negative fourteen \glsfmtplural{ap}.
+    \end{description}
+  }{
+    No rules can cover every situation, but breaking \pgls{action} down into little bits often works out well enough.
+  }
+
+}
