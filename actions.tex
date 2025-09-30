@@ -283,12 +283,10 @@ These items take up a regular slot, but you can stack them together; so thirteen
 such as `a bit of paper' have \pgls{weight} of `0', but if \pgls{pc} needs to carry over fifty then they should be tracked as having \pgls{weight} of $\frac{1}{100}$.
 So four tomes, each with a hundred pages, have \pgls{weight} of~`4'.
 
-\subsubsection{On the Back}
-characters can hold a total \gls{weight} equal to their current \glspl{hp} without Penalty.
-After that, every spare shortsword, quiver, and cheese-wheel increases the Penalty by its own \gls{weight}.
-
+\subsubsection{Backpacks}
 \index{Backpacks}
-\pic{Roch_Hercka/dwarf_encumbrance}
+let characters hold more items easily, but dropping the \gls{weight} can become tricky in a tight situation.
+Dropping a backpack needs a \roll{Dexterity}{Survival} roll at \tn[6] for most backpacks, and the character spends \pgls{ap} as usual.
 
 \subsubsection{In the Arms}
 characters can carry a total \gls{weight} equal to half their \glspl{hp} in their arms.
@@ -300,9 +298,12 @@ means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 If \pgls{pc} with 6~\glspl{hp} lifts a poleaxe with \gls{weight}~4, they would receive a -2~Penalty to attack.
 If the character actually hits, the Damage works as usual, so sometimes people find that picking up \pgls{weapon} twice their height feels like the best option they have.
 
-\subsection{Bodies}
+\pic{Roch_Hercka/dwarf_encumbrance}
 
-All creatures have \pgls{weight} equal to triple their maximum \glspl{hp}.
+\subsection{The \Glsfmttext{weight} of Flesh}
+
+\makeAutoRule{bodyweight}{Bodyweight}{triple the maximum \glsfmtplural{hp}}
+equals the creature's maximum $\glsfmtplural{hp} \times 3$.
 If a human with 7~\glspl{hp} picks up another with 7~\glspl{hp}, they receive a -3~Penalty; the same goes for gnomes and gnolls, or any two people with equal body-sizes, because the \gls{weight} equals their own \glspl{hp} times three.
 
 \subsubsection{Creature Features}
@@ -336,7 +337,7 @@ Using different coins to represent different kinds of \gls{weight} and \glspl{ep
 
 \end{multicols}
 
-\pagebreak[0]
+\needspace{18\baselineskip}
 \section{Time \& Space}
 
 \begin{multicols}{2}
