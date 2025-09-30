@@ -234,7 +234,7 @@ Characters cannot roll dice for a different result unless the situation has chan
 
 \end{multicols}
 
-\section{\Glsfmttext{weight}}
+\section{\Glsfmtname{weight}}
 \label{weight}
 \index{Encumbrance}
 
@@ -242,23 +242,38 @@ Characters cannot roll dice for a different result unless the situation has chan
 
 \noindent%
 \Glspl{weight} track how much characters can carry in broad terms.
-Every character can carry a total \gls{weight} equal to their \glspl{hp}, so characters with 4~\glspl{hp} can carry four regular items (with \pgls{weight} of~1).
-Each point of excess inflicts a -1~Penalty, so if someone carries items with a total \gls{weight} of~`4', and their \glspl{hp} go down to `2', then they would receive a -2~Penalty.
+Small items, like a dagger or \gls{ration} have \pgls{weight} of~1,
+a small tent or longsword could have \pgls{weight} of 2, and bulky items, like a cartwheel have a higher \gls{weight}, to reflect difficulty carrying them.
 
+Once a character carries a total \gls{weight} equal to their current \glspl{hp}, they take a -1~Penalty to all \glspl{attribute}.
 
-\begin{boxtable}[YYYY|c]
-           1  &              2  &      3  &       4  &     5  \\\hline
-  chain-- & --mail  &  shortsword  & 50~\glspl{cp}  &  \underline{\rations}  \\
-  \rations &  \glsentrysymbol{weight} &  \glsentrysymbol{weight}  &  \glsentrysymbol{weight} & \underline{\glsentrysymbol{weight}} \\
+\begin{exampletext}
+  Sind\"e puts on her chainmail armour, and she's already regretting joining the \gls{guard}.
+  It's heavy, and occupies her first two `\glsfmttext{hp}-slots'.
+  The shortsword has \pgls{weight} of 1, so that occupies the third place, then a few coins in the fourth.
+  At this point she can move fine, without Penalty; but once she picks up \pgls{ration} for the day, the total \gls{weight} equals her \glspl{hp}, and she takes a -1~Penalty to all \glspl{attribute}.
+  She won't be fighting so well or \gls{running} so fast.
+\end{exampletext}
+
+\begin{boxtable}[YYYYY|c]
+           1  &              2  &      3  &       4  &     5   & Penalty  \\\hline
+  chain-- & --mail  &  \footnotesize shortsword  & 50~\glspl{cp}  &  \footnotesize\rations & \textbf{-1} \\
+  %\rations &  \glsentrysymbol{weight} &  \glsentrysymbol{weight}  &  \glsentrysymbol{weight} & \glsentrysymbol{weight} & \textbf{-2} \\
 \end{boxtable}
 
-\begin{boxtable}[YY|Y|cc]
-       1  &      2  &       3      &   4  &  5  \\\hline
-  chain-- & --mail  &  \underline{shortsword}  & ---  & --- \\
-  50~\glspl{cp} &  \glsentrysymbol{weight}  &   \underline{\glsentrysymbol{weight}} & & \\
-  \glsentrysymbol{weight} &  \glsentrysymbol{weight} &  &  & \\
-\end{boxtable}
+\sidebox{
+  \begin{boxtable}[YY|c]
+             1  &              2  & Penalty  \\\hline
+    chain-- & --mail & \\
+    \footnotesize shortsword  & 50~\glspl{cp}  & \textbf{-2} \\
+  \end{boxtable}
+}
+\begin{exampletext}
+  Battling \pgls{basilisk} leaves Sind\"e with a broken and bleeding arm.
+  She only has 2~\glspl{hp} left, and carries \pgls{weight} of 4 in total, so she's carrying \pgls{weight} equal to her \glspl{hp} twice, which means a -2~Penalty to all \glspl{attribute}.
+\end{exampletext}
 
+\subsection{\Glsfmttext{equipment}}
 
 \subsubsection{Smaller Items}
 like arrows or sewing kits may show \pgls{weight} of `$\frac{1}{3}$' or `$\frac{1}{10}$'.
@@ -273,23 +288,7 @@ characters can hold a total \gls{weight} equal to their current \glspl{hp} witho
 After that, every spare shortsword, quiver, and cheese-wheel increases the Penalty by its own \gls{weight}.
 
 \index{Backpacks}
-\begin{exampletext}
-  Skidvein has an impressive +3 Strength Bonus, and the Knack `Unstoppable', giving him 11~\glspl{hp} in total.
-  He decided to wear complete leather armour (\gls{weight} 2), take a longsword (3), then stuff his backpack with three days' worth of food (3), and a small tent (1).
-
-  His companions decided he could add their larger tent (3), medical supplies (1), and bagpipes (2).
-  The \gls{weight} of 15 puts him well over his 11~\glspl{hp}, so the Penalty is -4.
-
-  However, if a fight breaks out, he could just remove the backpack by spending \pgls{ap}, and rolling \roll{Dexterity}{Survival} (\tn[10]).
-\end{exampletext}
-
 \pic{Roch_Hercka/dwarf_encumbrance}
-
-All creatures have \pgls{weight} equal to their total \glspl{hp},%
-\footnote{If \glspl{pc} try to use goblins as a throwing weapon, remember that improvised weapons receive Penalties because goblins are actually not made for throwing.}
-so if a gnomish companion receives a serious injury, the troupe may be able to lift them up once the danger has passed, and march them back to civilization from beyond the \gls{edge}.
-If a large human receives a serious injury, their companions may have a serious question on their hands.
-In either case, the character's items will add to the total \gls{weight}, so a standard-issue gnome with two items can easily have \pgls{weight} of 6.
 
 \subsubsection{In the Arms}
 characters can carry a total \gls{weight} equal to half their \glspl{hp} in their arms.
@@ -300,6 +299,15 @@ Mounting it on their back reduces the Penalty to~-4.
 means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 If \pgls{pc} with 6~\glspl{hp} lifts a poleaxe with \gls{weight}~4, they would receive a -2~Penalty to attack.
 If the character actually hits, the Damage works as usual, so sometimes people find that picking up \pgls{weapon} twice their height feels like the best option they have.
+
+\subsection{Bodies}
+
+All creatures have \pgls{weight} equal to triple their maximum \glspl{hp}.
+If a human with 7~\glspl{hp} picks up another with 7~\glspl{hp}, they receive a -3~Penalty; the same goes for gnomes and gnolls, or any two people with roughly equal body-sizes, because the \gls{weight} equals their own \glspl{hp} times three.
+
+so if a gnomish companion receives a serious injury, the troupe may be able to lift them up once the danger has passed, and march them back to civilization from beyond the \gls{edge}.
+If a large human receives a serious injury, their companions may have a serious question on their hands.
+In either case, the character's items will add to the total \gls{weight}, so a standard-issue gnome with two items can easily have \pgls{weight} of 6.
 
 \subsubsection{Creature Features}
 such as natural \gls{dr}, wings, a web-spinning thorax, or any other natural ability which add a sizeable feature to an animal's body will have \pgls{weight}.
