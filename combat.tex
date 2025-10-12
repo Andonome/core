@@ -446,36 +446,44 @@ If the plate armour had \pgls{covering} of only 3 then rolling 3 over the creatu
 
 \begin{multicols}{2}
 
-\noindent
-Projectiles have their own Combat \gls{skill}, which covers everything from javelins to bows.
+\subsection{General Rules}
 
-\begin{itemize}
-  \item
-  Characters spend \pgls{ap} to take out an arrow or throwing knife.
-  \item
-  Characters roll \roll{Dexterity}{Projectiles} to hit opponents at \tn[7].
-  \item
-  Every 5~\glspl{step} distance adds +1 to the \gls{tn}.
-  \item
-  Enemies under cover also raises the \gls{tn}.
-  \begin{itemize}
-    \item
-    Bushes raise the \gls{tn} by +1.
-    \item
-    A tower shield raises the \gls{tn} by +2.
-    \item
-    A murder hole raises the \gls{tn} by +3.
-    \index{Murder Hole}
-  \end{itemize}
-  \item
-  Opponents can resist with \roll{Speed}{Vigilance} to take a movement action.
-  They don't have to move a single \gls{step} in order to dodge, but \emph{must} spend \pgls{ap}.
-  Those without any \glspl{ap} cannot dodge.
-  \item
-  Most \glspl{monster} do not attempt to dodge, as they don't understand what projectile weapons are.
-  \item
-  A high enough roll means \pgls{vitalShot}.
-\end{itemize}
+\Glspl{projectile} use the standard combat rules --- roll \roll{Dexterity}{Projectiles} to make \pgls{resistedaction}.
+Characters can make \pgls{vitalShot} in the usual way (covered \vpageref{vitals}),
+and may fall to negative \glspl{ap} if someone attacks them with \pgls{weapon}, forcing them into \pgls{resistedaction}.
+
+\subsubsection{Characters Dodge Missiles}
+by spending \pgls{ap} and rolling \roll{Speed}{Vigilance}.
+If they beat the \gls{tn}, they can take \pgls{running} \gls{action} to move a few \glspl{step}, or simply duck and remain where they are.
+
+Of course, anyone close enough can just stab an archer as usual by rolling \roll{Dexterity}{Melee} instead of moving.
+
+\subsubsection{Dumb Animals}
+have no idea they \emph{should} dodge, so the \gls{tn} to hit them begins at \tn[7].
+However, they also spend no \glspl{ap} to dodge, and most \glspl{monster} have many legs, and a wide stride.
+\Pgls{crawler} might cover 8~\glspl{step} with each \gls{ap}, so if they spend 4~\glspl{ap}, they can run 32~\glspl{step}.
+
+\subsubsection{Distance}
+adds +1 to the \gls{tn} for every 5~\glspl{step}.
+So targeting \pgls{griffin} 20~\glspl{step} away would increase the \gls{tn} by 4, which brings the \gls{tn} from the default~7, up to \tn[11].
+
+\subsubsection{Drawing a Missile}
+needs \pgls{ap}, like drawing any other weapon.%
+\footnote{See \nameref{drawWeapon} \vpageref{drawWeapon}.}
+Anyone using \glspl{projectile} will be `unarmed' once they actually use the missile.
+
+\subsubsection{Standing behind Cover}
+raises the \gls{tn} to hit.
+Tall bushes add~+1, a wall adds~+2, and a murder hole adds~+3.
+
+\subsubsection{Rolling a Tie}
+means fumbling the missile, but keeping it in hand, ready to use again.
+An attacker with a sword may flinch from a locked arrow, just before the string fails to hold it properly.
+Neither hit, both remain ready to to attack again.
+
+Fumbling with a missile means spending only 1~\gls{ap}, even if the weapon would normally require more to use.
+
+\subsection{Particular \Glsfmttext{projectile}}
 
 \subsubsection{\Glsfmtplural{bow}}
 \label{longbow}
@@ -500,7 +508,7 @@ But a loaded \gls{crossbow}, strapped on someone's back as they walk, means some
 \subsubsection{Thrown Weapons}
 \index{Projectiles!Thrown Weapons}
 such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
-They work just as short bows, but their Damage is the normal weapon Damage minus 2.
+They work just as short bows, but their Damage equals the \gls{weapon}'s normal Damage minus 2.
 \javelin\weaponName s deal
 \dmg{weaponDamage} Damage
 when used in combat, but only
