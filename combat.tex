@@ -294,53 +294,7 @@ Also, having \absNum{weaponDamage}~Damage means occasionally knocking someone's 
 
 \shieldchart
 
-\boxPair[t]{
-  \begin{exampletext}
-  \Pgls{sunGuard} stands with a flail, and a cocky attitude.
-  His basic Attack Score is 10, so rolling a 10 means a tie.
-  His full plate armour has \pgls{covering} of 5 and \gls{dr} 5.
-
-  To inflict \pgls{vitalShot}, \pgls{pc} needs to roll at \mbox{$\tn[10] + 5 = 15$}.
-  Rolling 9 or less means the \gls{pc} is hit, unarmoured.
-
-  \begin{boxtable}[cLc]
-    \textbf{Roll} & \textbf{Result} & \textbf{Margin} \\
-    \hline
-       $\leq 9$ & \gls{pc} is hit, taking full Damage! & -1! \\
-      10 & \emph{Draw} (\gls{dr} applies) & 0 \\
-      11 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{1} \\
-      12 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{2} \\
-      13 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{3} \\
-      14 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{4} \\
-      $\geq 15$ & \emph{\Gls{vitalShot}!} -- full Damage to \gls{npc} & \textit{5!} \\
-  \end{boxtable}
-
-  You might think of each potential number you can roll as a location on the body, with armour adding \gls{covering} to certain numbers.
-  In this case, the \gls{pc} rolls a 15, so he hits for 6 Damage, and the knight loses 6~\glspl{hp}.
-  \end{exampletext}
-
-}{
-
-  \begin{tikzpicture}
-      \node[anchor=south west,inner sep=0] (image) at (0,0) {\pic{Roch_Hercka/vitals_shot}};
-      \begin{scope}[
-          x={(image.south east)},
-          y={(image.north west)}
-      ]
-          \foreach \mNum/\mX/\mY in {%
-            {\huge$\leq 9$!}/22/25,
-            10/54/20,
-            11/30/63,
-            12/37/45,
-            13/52/63,
-            14/31/70,
-            {\huge 15!}/42/38,
-          }{
-            \mapLegend{\outline{\mNum}}{\mX}{\mY}{\large}
-          }
-      \end{scope}
-  \end{tikzpicture}
-}
+\armourExample
 
 \subsection{Armour}
 \index{Armour}
@@ -411,7 +365,7 @@ together won't work by just layering lots of armour, so the \glspl{pc} cannot us
 But undead creatures have \pgls{dr} to represent their complete corporeal apathy; this could combine with armour's \gls{dr} for even less corporeal concerns.
 
 As with any other \gls{bandAct},%
-\footnote{See \autopageref{banding}.}
+\footnote{Covered \vpageref{banding}.}
 the highest \gls{dr} applies, then half of the second, and so on.
 So \glsfmttext{ghast} with chain armour (\gls{dr}~5) and their undead resistance (\gls{dr}~2), gains a total \gls{dr} of 6.
 
@@ -421,12 +375,9 @@ Consider this convoluted example: \pgls{basilisk} with its natural \gls{dr} of 4
 The undead naturally have \pgls{dr} of 2, so this secondary source of damage would count for half, giving it a total \gls{dr} of 5.
 If the \gls{seeker} fashioned plate armour to the \gls{basilisk} the total \gls{dr} would be\ldots
 
-%!
-\null
+\medskip
 \begin{center}
-{
   \LARGE $5 + $ \Large$\frac{1}{2}\cdot4 + $ \normalsize$\frac{1}{4}\cdot2 =  7.5$
-}
 \end{center}
 
 \ldots or `8' (after rounding up).
@@ -436,8 +387,6 @@ If the plate armour had \pgls{covering} of only 3 then rolling 3 over the creatu
 \end{multicols}
 
 \needspace{8\baselineskip}
-
-\throwGoblinCommentary
 
 \section{\Glsfmtplural{projectile}}
 \index{Projectiles}
@@ -493,12 +442,14 @@ They \glsentrydesc{bow}.
 
 \Glspl{bow} can be fired for hundreds of yards -- the maximum range is generally more determined by the archer's ability to aim rather than the bow.
 
-\paragraph{Short Bows}
+\subsubsection{Short Bows}
 \index{Projectiles!Short Bow}
 \index{Short Bow}
 or `trick bows', are a smaller, lighter thing which can be used by anyone.
 What it lacks in punch it makes up for in draw time.
 \Pgls{ap} cost of 1 (and 1 more for reloading) means a fast archer can loose 2 or 3 arrows each \gls{round}, and an archer with the \nameref{snapDraw} Knack (\vpageref{snapDraw}) might release 4 or 5 each \gls{round}.
+
+%\throwGoblinCommentary[t]
 
 \subsubsection{\Glsfmtplural{crossbow}}
 \label{crossbow}
@@ -528,6 +479,8 @@ when used in combat, so they can inflict
 \end{multicols}
 
 \projectilesChart
+
+\bigbreak
 
 \section{Complications}
 
@@ -587,6 +540,9 @@ The \gls{tn} starts at 6, with heavy modifiers for lighting, or characters movin
 Webs degrade slowly.
 Each \gls{interval} the \gls{tn} to break them decreases by 1.
 
+\medskip
+\pic{Roch_Hercka/conjuration_right}
+
 \subsubsection{Wings}
 demand delicate proportions.
 Larger creatures need proportionally large wings to let them take off, but large wings weigh creatures down, and weight makes flight difficult.
@@ -605,9 +561,6 @@ Wings have \pgls{weight} equal to the creature's Strength Bonus (if it's positiv
 
 Creatures with the Air \gls{sphere} often have \glspl{spell} to help them fly.
 Spending \pgls{mp} adds a +3~Bonus to Speed for the purposes of taking off.
-
-\vspace{\baselineskip}
-\pic{Roch_Hercka/conjuration_right}
 
 \startcontents[Manoeuvres]
 

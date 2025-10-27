@@ -60,6 +60,54 @@
   \end{boxtable}
 }
 
+\newcommand\armourExample[1][t]{
+  \boxPair[#1]{
+    \begin{exampletext}
+    \Pgls{sunGuard} stands with a flail, and a cocky attitude.
+    His basic Attack Score is 10, so rolling a 10 means a tie.
+    His full plate armour has \pgls{covering} of 5 and \gls{dr} 5.
+
+    To inflict \pgls{vitalShot}, \pgls{pc} needs to roll at \mbox{$\tn[10] + 5 = 15$}.
+    Rolling 9 or less means the \gls{pc} is hit, unarmoured.
+
+    \begin{boxtable}[cLc]
+      \textbf{Roll} & \textbf{Result} & \textbf{Margin} \\
+      \hline
+         $\leq 9$ & \gls{pc} is hit, taking full Damage! & -1! \\
+        10 & \emph{Draw} (\gls{dr} applies) & 0 \\
+        11 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{1} \\
+        12 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{2} \\
+        13 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{3} \\
+        14 & \Glsentrytext{npc} is hit, but \gls{dr} applies & \textbf{4} \\
+        $\geq 15$ & \emph{\Gls{vitalShot}!} -- full Damage to \gls{npc} & \textit{5!} \\
+    \end{boxtable}
+
+    You might think of each potential number you can roll as a location on the body, with armour adding \gls{covering} to certain numbers.
+    In this case, the \gls{pc} rolls a 15, so he hits for 6 Damage, and the knight loses 6~\glspl{hp}.
+    \end{exampletext}
+  }{%
+    \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {\pic{Roch_Hercka/vitals_shot}};
+        \begin{scope}[
+            x={(image.south east)},
+            y={(image.north west)}
+        ]
+            \foreach \mNum/\mX/\mY in {%
+              {\huge$\leq 9$!}/22/25,
+              10/54/20,
+              11/30/63,
+              12/37/45,
+              13/52/63,
+              14/31/70,
+              {\huge 15!}/42/38,
+            }{
+              \mapLegend{\outline{\mNum}}{\mX}{\mY}{\large}
+            }
+        \end{scope}
+    \end{tikzpicture}
+  }
+}
+
 \newcommand\larcenyChart{
   \begin{nametable}[cccL]{Larceny Roll}
     \textbf{\Gls{village}} & \textbf{Town} & \textbf{City} & \textbf{Result} \\
@@ -145,8 +193,8 @@
   }
 }
 
-\newcommand\throwGoblinCommentary{
-  \playCommentary{
+\newcommand\throwGoblinCommentary[1][t]{
+  \playCommentary[#1]{
     \begin{description}
       \item[Player 1:]
       I grab the goblin, then throw it at the far goblin with the javelin.
