@@ -253,7 +253,6 @@ Once a character carries a total \gls{weight} equal to their current \glspl{hp},
   The shortsword has \pgls{weight} of 1, so that occupies the third place, then a few coins in the fourth.
   At this point she can move fine, without Penalty; but once she picks up \pgls{ration} for the day, the total \gls{weight} equals her \glspl{hp}, and she takes a -1~Penalty to all \glspl{attribute}.
   She won't be fighting so well or \gls{running} so fast.
-\end{exampletext}
 
 \begin{boxtable}[YYYYY|c]
            1  &              2  &      3  &       4  &     5   & Penalty  \\\hline
@@ -261,19 +260,18 @@ Once a character carries a total \gls{weight} equal to their current \glspl{hp},
   %\rations &  \glsentrysymbol{weight} &  \glsentrysymbol{weight}  &  \glsentrysymbol{weight} & \glsentrysymbol{weight} & \textbf{-2} \\
 \end{boxtable}
 
-\sidebox{
-  \begin{boxtable}[YY|c]
-             1  &              2  & Penalty  \\\hline
-    chain-- & --mail & \\
-    \footnotesize shortsword  & 50~\glspl{cp}  & \textbf{-2} \\
-  \end{boxtable}
-}
+\end{exampletext}
+
 \begin{exampletext}
   Battling \pgls{basilisk} leaves Sind\"e with a broken and bleeding arm.
   She only has 2~\glspl{hp} left, and carries \pgls{weight} of 4 in total, so she's carrying \pgls{weight} equal to her \glspl{hp} twice, which means a -2~Penalty to all \glspl{attribute}.
 \end{exampletext}
 
-\pic{Roch_Hercka/dwarf_encumbrance}
+\begin{boxtable}[YYYYY|c]
+             1  &              2  &     3     &     4   &   5    & Penalty  \\\hline
+    chain-- & --mail              &     X     &     X   &   X    &           \\
+    \footnotesize shortsword  & 50~\glspl{cp}  &           &     &    & \textbf{-2} \\
+\end{boxtable}
 
 \subsection{\Glsfmttext{equipment}}
 
@@ -299,6 +297,8 @@ Mounting it on their back reduces the Penalty to~-4.
 means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 If \pgls{pc} with 6~\glspl{hp} lifts a poleaxe with \gls{weight}~4, they would receive a -2~Penalty to attack.
 If the character actually hits, the Damage works as usual, so sometimes people find that picking up \pgls{weapon} twice their height feels like the best option they have.
+
+\pic{Roch_Hercka/dwarf_encumbrance}
 
 \subsection{The \Glsfmttext{weight} of Flesh}
 
