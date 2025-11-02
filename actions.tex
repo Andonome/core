@@ -192,18 +192,22 @@ When characters can work together, one person rolls with their Bonus, then adds 
 \begin{exampletext}
   Convincing the townsfolk that they need to rebel against \pgls{warden}, the troupe work together on a \roll{Charisma}{Combat} roll.
   Pikerudd has the highest Bonus, so he adds the full Bonus, then Snowblight adds half of his, and Chatrik, a quarter.
+
+  \begin{boxtable}[L|ccc]
+                            & Pikerudd & Snowblight      & Chatrik         \\
+  \hline                                                                   
+  Charisma + Combat         &  +4     &     +2           & +2              \\
+  Multiplier                &   1     & $\frac{1}{2}$    & $\frac{1}{4}$   \\
+  Value:                    &   4     & $1$              & $\frac{1}{2}$   \\
+  Running Total:            &   4     & $5$              & $5+\frac{1}{2}$ \\
+  \hline
+    Grand Total: & & & \textbf{6} \\
+  \end{boxtable}
 \end{exampletext}
 
-\begin{boxtable}[L|ccc]
-                          & Pikerudd & Snowblight      & Chatrik         \\
-\hline                                                                   
-Charisma + Combat         &  +4     &     +2           & +2              \\
-Multiplier                &   1     & $\frac{1}{2}$    & $\frac{1}{4}$   \\
-Value:                    &   4     & $1$              & $\frac{1}{2}$   \\
-Running Total:            &   4     & $5$              & $5+\frac{1}{2}$ \\
-\hline
-  Grand Total: & & & \textbf{6} \\
-\end{boxtable}
+\index{Searching}
+Working together doesn't have to mean staying together.
+When searching \pgls{area}, \pgls{bandAct} generally involves splitting up.
 
 \subsubsection{Generalized \Glsfmtplural{bandAct}}
 means all accumulated Bonuses work the same way.
@@ -305,6 +309,11 @@ If the character actually hits, the Damage works as usual, so sometimes people f
 \makeAutoRule{bodyweight}{Bodyweight}{triple the maximum \glsfmtplural{hp}}
 equals the creature's maximum $\glsfmtplural{hp} \times 3$.
 If a human with 7~\glspl{hp} picks up another with 7~\glspl{hp}, they receive a -3~Penalty; the same goes for gnomes and gnolls, or any two people with equal body-sizes, because the \gls{weight} equals their own \glspl{hp} times three.
+
+\index{Caving!Narrow Tunnels}
+Narrow cave tunnels often measure who can enter by their \gls{weight}.
+The \gls{weight} of items counts towards this total, so characters may not be able to enter a small tunnel until they remove their backpack, or even \gls{armour}.
+These items can be pushed through first, or grabbed after.
 
 \subsubsection{Creature Features}
 \label{featureWeight}%
