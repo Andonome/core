@@ -104,18 +104,13 @@ involves convincing every trader that their animals will not suffer long-term pr
 Traders may agree to travel a number of extra miles equal to half the Margin, but caravans have their limits.
 Horses can die from exhaustion, and donkeys simpy refuse to rush.
 
-\makeRule{makeCamp}{Making Camp}{Intelligence}{Vigilance}{8}
-\index{Camping}%
+\makeRule{checkBothy}{Checking \Glsfmtplural{bothy}}{Intelligence}{Vigilance}{7}
 First, the troupe begin a safety check, hopefully during daylight.
 That secures enough space for people to wander a short distance to take a piss in the bushes, or just relax for a bit.
 
-\index{Hardened Half-Yurt}
-Once night falls, most bed in \pgls{bothy}.
 If the \gls{bothy} hasn't the space for the mounts, some traders make space for a horse or two inside their wagons.
+\index{Hardened Half-Yurt}%
 Others carry a `hardened half-yurt' -- a large covering, made of leather and wooden latices, which they affix to \pgls{bothy}'s side, to make space for a couple of horses.
-
-\subsubsection{\Glsfmtname{rambling}}
-\glsentrydesc{rambling}.
 
 \makeRule{dawnDoor}{Opening Dawn's Door}{Intelligence}{Survival}{8}
 \index{Doors!Dolly}
@@ -227,6 +222,9 @@ Each Failure Margin adds 2 miles to the journey time, so when trying to find a p
 \noindent
 If the roll is an 8, the actual journey would be 18 miles.
 
+\subsubsection{\Glsfmttext{rambling}}
+\glsentrydesc{rambling}.
+
 \makeRule{scout}{Scouting for an Enemy Camp}{Speed}{Vigilance}{9 plus the enemy's \roll{Wits}{Vigilance}}
 A tie indicates someone spotted you before you got away.
 Failure indicates not getting away.
@@ -291,7 +289,7 @@ Tall hats add a +1~Bonus, as they let one feel a low ceiling before receiving a 
 
 \makeRule{run_in_dark}{Running in the Dark}{Wits}{Caving}{12}
 \index{Caving!Running in the dark}%
-A bright \gls{torch} adds a +3~Bonus.
+Each \gls{torch} adds a +3~Bonus.
 A tie means the character comes to a sudden halt, without Damage.
 Failure means $1D6$ Damage, plus the character's Speed (running faster means more Damage).
 
@@ -348,65 +346,13 @@ Rumours are bad, but someone trying to verify them is worse.
 A failure on this roll means that people around have been alerted to the investigation (whether the rumour was true or not).
 \index{Investigation}
 
-If the investigator doesn't care about alerting anyone, they can take this as \pgls{restingaction} during \gls{downtime}.
+If the investigator doesn't care about alerting anyone, they make take this \pgls{restingaction} during \gls{downtime}.
 
 \subsection{Town Activities}
 
 \makeRule{break_door}{Breaking in a door}{Strength}{Crafts}{10}
 A tie could indicate that the door has a massive hole in the middle, allowing a sufficiently small person to squeeze through; or it might indicate that the door caves in after multiple, noisy strikes.
 \index{Doors!Breaking}
-
-\index{Services}
-\makeRule{buyService}{Judging services}{Wits}{Empathy}{9}
-It's never easy knowing whom to hire.
-Every time someone hires someone as part of a service, they should make a roll.
-
-Humans are notoriously bad at this, and are known for hiring the first person they meet in a bar.
-
-Failing the roll means that the \gls{pc} has hired someone useless.
-Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off by taking a guess at the best route and hoping for the best.
-The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} should to make the roll in secret.
-
-A tie generally indicates noticing a serious problem with purchased services\ldots just after the purchase completes.
-
-\index{Bards}
-Given the stakes, people try to hire others based on previous experience.
-Others hope for a nearby bard of some kind -- not just any old minstrel, but someone who has a solid grasp on the reputation of everyone around, from multiple sources, and keeps up to date with all local markets of any size.
-The successes and failures of everyone in a marketplace -- from the over-ripe tomatoes they sold, to the sword-smith who makes exceptionally reliable blades -- often become the contents of songs; so anyone listening to a nearby bard can gain a Bonus to their ability to discern reliable services from useless ones.
-
-No Skill could cover this ability.
-The bard simply has to exchange gossip at the markets for some months.
-
-\makeRule{pick_pocket}{Picking a pocket}{Dexterity}{Larceny}{12}
-Stealing in larger, more populated areas, affords more opportunities, while small \glspl{village}, where everyone is aware of everyone in their personal space, and rarely carry larger sums of money, raises the \gls{tn} significantly.
-
-A tie means the character gets the item, but the victim immediately notices the crime.
-
-\larcenyChart
-
-\makeRule{request_danger_job}{Hiring criminals}{Charisma}{Empathy}{depends on location}
-Thieves, brigands, and illegal adventurers cannot work with just anyone who wanders up to ask for `one assassination job, my good man'.
-Dangerous jobs require a level of trust.
-Charismatic characters who show care and tact stand a much better chance of hiring help.
-
-\sidebox{
-  \begin{boxtable}[lY]
-
-    \textbf{Location} & \textbf{Base} \textbf{\glsentrytext{tn}} \\\hline
-
-    City & 9 \\
-
-    Town & 11 \\
-
-    \Gls{village} & 14 \\
-
-  \end{boxtable}
-}
-
-Any attempt to hire services which put someone in danger should require a roll.
-This includes murder, crafting poisons, selling illegal items, et c.
-
-Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
 
 \makeRule{hookey}{Entering a town}{Wits}{Empathy}{depends on area, Bonus for rank}
 The \gls{guard} should guard against the forest, not hide (nor drink) in towns.
@@ -446,6 +392,58 @@ Failure means a trip to the \gls{court}.
 Characters who flee will find the \glspl{sunGuard} chasing them through the city, and \glspl{ranger} will begin hunting for them outside the city soon after.
 Once they appear in \gls{court}, their cowardice will be taken as an insult by the \gls{warden} who tries them.%
 \exRef{judgement}{Judgement}{courtVerdicts}
+
+\makeRule{request_danger_job}{Hiring criminals}{Charisma}{Empathy}{depends on location}
+Thieves, brigands, and illegal adventurers cannot work with just anyone who wanders up to ask for `one assassination job, my good man'.
+Dangerous jobs require a level of trust.
+Charismatic characters who show care and tact stand a much better chance of hiring help.
+
+\sidebox{
+  \begin{boxtable}[lY]
+
+    \textbf{Location} & \textbf{Base} \textbf{\glsentrytext{tn}} \\\hline
+
+    City & 9 \\
+
+    Town & 11 \\
+
+    \Gls{village} & 14 \\
+
+  \end{boxtable}
+}
+
+Any attempt to hire services which put someone in danger should require a roll.
+This includes murder, crafting poisons, selling illegal items, et c.
+
+Working well with someone means that someone can gain a good local reputation (perhaps just among mercenaries, dodgy apothecaries, or librarians), while returning from a job with a missing man means a mark on the \gls{pc}'s reputation.
+
+\index{Services}
+\makeRule{buyService}{Judging services}{Wits}{Empathy}{9}
+It's never easy knowing whom to hire.
+Every time someone hires someone as part of a service, they should make a roll.
+
+Humans are notoriously bad at this, and are known for hiring the first person they meet in a bar.
+
+Failing the roll means that the \gls{pc} has hired someone useless.
+Perhaps they want to work with you because they have no idea how bad they are at their job, or perhaps they simply want to rip you off by taking a guess at the best route and hoping for the best.
+The Failure Margin should indicate just how bad the henchman is, so the \gls{gm} should to make the roll in secret.
+
+A tie generally indicates noticing a serious problem with purchased services\ldots just after the purchase completes.
+
+\index{Bards}
+Given the stakes, people try to hire others based on previous experience.
+Others hope for a nearby bard of some kind -- not just any old minstrel, but someone who has a solid grasp on the reputation of everyone around, from multiple sources, and keeps up to date with all local markets of any size.
+The successes and failures of everyone in a marketplace -- from the over-ripe tomatoes they sold, to the sword-smith who makes exceptionally reliable blades -- often become the contents of songs; so anyone listening to a nearby bard can gain a Bonus to their ability to discern reliable services from useless ones.
+
+No Skill could cover this ability.
+The bard simply has to exchange gossip at the markets for some months.
+
+\makeRule{pick_pocket}{Picking a pocket}{Dexterity}{Larceny}{12}
+Stealing in larger, more populated areas, affords more opportunities, while small \glspl{village}, where everyone is aware of everyone in their personal space, and rarely carry larger sums of money, raises the \gls{tn} significantly.
+
+A tie means the character gets the item, but the victim immediately notices the crime.
+
+\larcenyChart
 
 \end{multicols}
 
