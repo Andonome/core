@@ -77,14 +77,14 @@ But if you have more time than money, then it's time well spent.
 \iftoggle{stories}{
   \makeRule{make_spell}{Composing a Spell}{Intelligence}{Sphere}{10 plus Level}
   \index{Spells!Creation}
-  Crafting new spells requires one week per level of the spell.
+  Crafting new \glspl{spell} requires one week per level of the \gls{spell}.
   Players can look over the process in the \textit{Book of Stories}, \autopageref{spellWeaving}.
   If the roll fails, then the \gls{gm} will swap one Action or \gls{descriptor} for another, and then work through the results, however horrifying.
-  The caster cannot use this botched spell -- it only works for that one occasion, by accident.
-  On a tie, the research fails to no effect, or the player can choose to have the spell fail and have their character learn the spell.
-  The player should not know how the spell will fail beforehand -- the \gls{gm} decides in secret.
+  The caster cannot use this botched \gls{spell} -- it only works for that one occasion, by accident.
+  On a tie, the research fails to no effect, or the player can choose to have the \gls{spell} fail and have their character learn the \gls{spell}.
+  The player should not know how the \gls{spell} will fail beforehand; the \gls{gm} decides in secret.
 
-  If a spell fails, then the next session should probably open with the aftermath of that failure, and a run-through of all that it entails.
+  If \pgls{spell} fails, then the next session should probably open with the aftermath of that failure, and a run-through of all that it entails.
 }{}
 
 \subsection{Journeys by Road \& \Glsfmttext{village}}
@@ -125,9 +125,18 @@ Co\"ordinating with a neighbour grants a +2~Bonus to the roll, assuming the neig
 Many in \gls{fenestra} also carry \pgls{dawnDolly} -- a kind of scare-crow on a stick which people can waggle outside their door, so that anything lurking on the roof will grab the doll, rather than the inhabitants.
 \Glspl{dawnDolly} add a +3 Bonus to gaining a non-lethal morning.
 
-\needspace{12\baselineskip}
-
 \subsection{Journeys Past the \Glsfmttext{edge}}
+
+\makeRule{makeElixir}{Brewing \pgls{elixir}}{Intelligence}{Cultivation}{varies}
+\index{Disease!Curing|glsentrysymbol{eldren}}%
+Once someone has the right \gls{ingredient}, they can make the roll to craft \pgls{elixir} which cures a particular disease.
+Diseases vary in \gls{tn}, but the creator can always gain a +1~Bonus from using \emph{one} more \gls{ingredient}.
+
+Basic cooking equipment is essential, and the creator suffers a -1~Penalty for using bog-standard camping equipment.
+A particularly good workshop or kitchen gives a +1 or +2~Bonus, and a large enough library can grant a +1~Bonus.
+
+Standard brewing takes \pgls{interval}, and if preparation fails, a new \gls{ingredient} is required.
+And of course, the disease must first be identified (see \vpageref{identifyDisease}).
 
 \makeRule{build_shelter}{Building a shelter}{Strength}{Cultivation}{11}
 Each point on the Margin allows an additional person to sleep inside the shelter.
@@ -185,6 +194,14 @@ does not require any additional rules.
 The \gls{gm}'s random encounters include goats, boar, auroch, and deer.%
 \exRef{judgement}{Judgement}{randomEncounters}
 In order to hunt, \pgls{pc} simply has to keep their eyes open on the road.
+
+\makeRule{identifyDisease}{Curing a Disease}{Intelligence}{Medicine}{12}
+\index{Disease!Identifying|glsentrysymbol{eldren}}%
+Each disease has \pgls{sphere} which creates it.
+Once someone knows the disease's \gls{sphere}, they can create \pgls{elixir} from an opposing \gls{sphere}.
+
+The doctor can gain a Bonus for tools, such as herbs, or rare stones (up to +1), or from access to medical treatise (+1 to a weighty tome, +2~for a full library).
+Once someone has seen a disease once, the \gls{tn} to identify it reduces to~7.
 
 \subsubsection{\Glsfmttext{navigation}}
 \label{navigate_land}
