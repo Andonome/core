@@ -315,12 +315,22 @@ Failure means $1D6$ Damage, plus the character's Speed (running faster means mor
 \makeRule{find_rumours}{Finding rumours}{Charisma}{Empathy}{3}
 See also, verifying rumours, \vpageref{verify_rumours}.
 
-\makeRule{identify_talisman}{Identifying \glsfmtplural{talisman}}{Intelligence}{Academics}{12, then 14}
-Magical items do not darken people's doors often, but once they do, you had best get some educated advice.
-The initial roll tells someone how to activate \pgls{talisman}, and which \glspl{sphere} created it (ties only tell the \glspl{sphere}).
-A second roll, at \tn[14], is required to know what the \gls{talisman} does (ties indicate something about what it does), but not the full picture.
+\makeRule{identify_item}{Identifying a Local Item}{Intelligence}{Academics}{12}
+\index{Talisman@\glsentryname{talisman}!Identify}%
+\index{Identify|textbf}%
+means guessing out who made it, when they made it, and how.
+When identifying a local \gls{talisman}, most people can guess at the maker, and most \glspl{ingredient} remain visible once \pgls{talisman}'s made.
 
-%\subsection{Schemes \& Plots}
+A bad roll means the guess identifies the wrong creator.
+A tie indicates no guess at all.
+
+\makeRule{identify_foreign_item}{Identifying a Foreign Item}{Intelligence}{Academics}{14}
+means learning something of its origin,such as the culture, or the century it was created.
+\index{Identify!Foreign item}%
+\index{Artefact@\glsentryname{artefact}!Identify}%
+\Pgls{artefact}'s identity always hints at its initial purpose (not always the current purpose).
+
+A good library can add up to a +2~Bonus.
 
 \makeRule{cryptography}{Secret Messages}{Intelligence}{Vigilance}{against the cypher's \glsentrytext{tn}}
 Some cyphers are easy to write, easy to teach, and easy to crack.
