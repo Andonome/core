@@ -2,6 +2,7 @@ EXTERNAL_REFERENTS = stories judgement
 
 zines += Monsters.pdf
 zines += Knacks.pdf
+targets += $(TITLE)_cover.pdf
 
 output += booklets
 
@@ -12,11 +13,7 @@ $(DBOOK): qr.tex $(DROSS)/$(BOOK)-switch-gls $(wildcard *.tex)
 config/common.mk:
 	@git submodule update --init
 
-images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg images/extracted/inclusion.tex
-	$(CP) $< $@
-$(DROSS)/$(BOOK)_cover.pdf: config/share/cover.tex cover.tex images/extracted/cover.jpg $(DBOOK)
-	$(RUN) -jobname $(BOOK)_cover $<
-cover.pdf: $(DROSS)/$(BOOK)_cover.pdf
+images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg | images/extracted/inclusion.tex
 	$(CP) $< $@
 
 booklets/a7_Knacks.tex: knacks.tex | booklets/ $(RELEASE)
