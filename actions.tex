@@ -347,21 +347,51 @@ Using different coins to represent different kinds of \gls{weight} and \glspl{ep
 
 \end{multicols}
 
-\needspace{18\baselineskip}
+\needspace{.3\pageheight}
+
 \section{Time \& Space}
 
 \begin{multicols}{2}
 
 \noindent
-\Gls{travel} is the beating heart and background noise of the game.
-\Glsentrydesc{travel}, so standard journeys take a caravan 10 miles per day as they march during the morning and afternoon, then rest throughout the darkness.
+If \gls{bind} had a soundtrack, track two would feature squeaking wagon-wheels, huffing donkeys, and traders grumbling about prices.
+It would last for twenty minutes.
 
-A troupe might rush 7~miles each \gls{interval} until night, and cover 21 miles in a day.
-But mostly, people don't.
-Almost everyone travels together in a caravan, at the pace of their slowest member (the over-burdened horses and donkeys).
+Encountering \pgls{monster} happens rarely, despite the fact that \gls{fenestra}'s economic and political structure depend entirely on defending against them and \gls{harvesting} their bodies.
+The \gls{gm} can glide over a journey of 30~miles by giving a brief description of how the terrain changes, and asking the players to mark off 3~\glspl{ration}.
 
-Encountering \pgls{monster} happens rarely, despite the fact that \gls{fenestra}'s economic and political structure depend entirely on defending against them and using their bodies.
-The \gls{gm} can glide over a journey of 30~miles quickly, by giving a brief description of how the terrain changes, and asking the players to mark off 3~\glspl{ration}.
+\needspace{.2\pageheight}
+\label{travelChart}%
+\sidebox{
+  \setcounter{track}{10}
+  \setcounter{gold}{0}
+  \setcounter{age}{0}
+  \begin{boxtable}[YYY]
+    \bf Miles \gls{morning}~\gls{afternoon} & \bf \Glsfmtplural{ep} & \bf \Glsfmtplural{ep} (\Hu) \\\hline
+    \Repeat{11}{ \arabic{track}\stepcounter{track} & \arabic{gold}\stepcounter{gold}  & \arabic{age}\ifodd\thetrack\stepcounter{age}\fi \\ }
+  \end{boxtable}
+}
+\Glsentrydesc{travel}.
+Most people travel in a caravan, moving between \glspl{village} and \glspl{bothy} (the speed depends entirely on how far apart they lie).
+The final rate of travel usually sits under 10~miles per day, and anyone who wants to move faster must convince every trader and donkey.
+
+Troupes who set their own rate of travel can gain \pgls{ep} and add a extra mile each \gls{interval}.
+Humans march better than anyone, and add 2~miles for each \gls{ep} they gain.%
+\iftoggle{stories}{\footnote{Covered in \textit{Stories}, \autopageref{humanInheritance}.}}{}
+If they're lucky enough to rest over the evening and night, the troupe can recuperate 2~\glspl{ep}, and march 12~miles per day without accumulating \glspl{ep} (or 14~miles per day for humans).
+
+\sidebox{
+  \setcounter{track}{15}
+  \setcounter{gold}{0}
+  \setcounter{age}{0}
+  \begin{boxtable}[YYY]
+    \bf Miles \gls{morning}~\gls{afternoon}~\gls{evening} & \bf \Glsfmtplural{ep} & \bf \Glsfmtplural{ep} (\Hu) \\\hline
+    \Repeat{5}{ \arabic{track}\stepcounter{track} & \arabic{gold}\stepcounter{gold}  & \arabic{age}\ifodd\thetrack\else\stepcounter{age}\fi \\ }
+  \end{boxtable}
+}
+Troupes can march even faster by marching through an evening, if they have enough light.
+Throughout \gls{cFive}, the \gls{ainumar} shines so brightly at night that people can see without \glspl{torch}.
+For the rest of the year, travelling through a dark \gls{interval} requires 3~\glspl{torch} for every five member of the troupe (including the beasts of burden).
 
 \subsubsection{\Glsfmtplural{ration}}
 \label{hunger}
@@ -374,7 +404,7 @@ The \glspl{pc} rest and chew multiple times a day, but players should only track
 When taverns sell `\rations', or when \glspl{npc} have `\rations', or `\rations' written on the \gls{statblock}, this always counts as `\pgls{ration}', and provides a day's sustenance.
 
 Characters who haven't eaten by night lose \pgls{hp}.
-After three days without food, characters will have lost 3~\glsentrylongpl{hp}, and their ability to carry heavy loads on a long march as they become emaciated.
+After three days without food, characters will have lost 3~\glsentrylongpl{hp}, and their ability to carry heavy loads on a long march suffers, as they become emaciated.
 
 \subsubsection{Dreams}
 \index{Sleep Deprivation}
