@@ -3,6 +3,7 @@ EXTERNAL_REFERENTS = stories judgement
 zines += Monsters.pdf
 zines += Knacks.pdf
 targets += $(TITLE)_cover.pdf
+DEPS += images/extracted/cave-0.jpg images/extracted/cave-1.jpg
 
 output += booklets
 
@@ -12,6 +13,9 @@ $(DBOOK): qr.tex $(DROSS)/$(BOOK)-switch-gls $(wildcard *.tex)
 
 config/common.mk:
 	@git submodule update --init
+
+images/extracted/cave-0.jpg images/extracted/cave-1.jpg &: images/Roch_Hercka/cave_fight.jpg | images/extracted/
+	magick $<  -crop 1754x0  images/extracted/cave.jpg
 
 images/extracted/cover.jpg: images/Roch_Hercka/cave_fight.jpg | images/extracted/inclusion.tex
 	$(CP) $< $@
