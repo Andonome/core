@@ -3,6 +3,36 @@
 
 \settoggle{genExamples}{true}
 
+\playCommentary[t]{
+  \begin{description}\sf
+    \item[Player 1:]
+    If it's night, we can just sneak up to the \gls{bothy} and listen, right?
+    \item[\Glsfmttext{gm}:]
+    Tonight's quite bright.
+    The \gls{ainumar}'s shining down so bright the stars seem dim.
+    \item[Player 2:]
+    How big are the \gls{bothy}'s windows?
+    Can we keep out of line-of-sight?
+    \item[\Glsfmttext{gm}:]
+    Sneak up just by pure planning?
+    Maybe.
+    Make the roll with Intelligence and Stealth, \glsfmtlong{tn} eight.
+    \item[Player 2:]
+    I have three plus\ldots
+    \twoDice{9}\ldots
+    a total of twelve.
+    \item[Player 3:]
+    \twoDice{5}\ldots
+    sorry, looks like they caught me.
+    I have minus one Intelligence, so that makes four in total.
+    \item[\Glsfmttext{gm}:]
+    It's already been rolled, so your total is eight.
+    You tie.
+  \end{description}
+}{
+  Players only make one roll for each \gls{action}.
+}
+
 \section{Resolution}
 \label{basicaction}
 
@@ -38,22 +68,19 @@
   \end{boxtable}
 }
 
-\subsection{Basic Actions}
-When \glspl{pc} attempt something dangerous and difficult, the \gls{gm} states the \gls{tn}, and the players try to beat it by rolling $2D6$ plus any Bonuses.
-The more difficult the action, the higher the \gls{tn}.
 
-Players add one of their character's Attributes and Skills to the roll, and sometimes a Bonus for equipment.
+\subsection{Basic \Glsfmtname{action}}
+Standard rolls give you the danger, or the prize.
+The \gls{gm} selects \pgls{attribute} plus \gls{skill} pair and states the \gls{tn}, then a player rolls two dice.
 
 \begin{multicols}{2}
 \begin{itemize}
-
   \item
-  If the player rolls above the \gls{tn}, they succeed!
+  If the total beats the \gls{tn}, the character gains their prize.
   \item
-  If they roll below, they fail, and the danger occurs.
+  Roll below below, the danger becomes reality.
   \item
   If they roll equal to the \gls{tn}, the \gls{gm} can give them the choice to succeed, as long as they accept the danger.
-
 \end{itemize}
 
 \columnbreak
@@ -63,178 +90,215 @@ Players add one of their character's Attributes and Skills to the roll, and some
 
 \end{multicols}
 
-\begin{exampletext}
-  Hugi listens carefully at the keyhole, trying to figure out what the elves on the other side are plotting.
-  The \gls{tn} is 10, and he matches it exactly.
-
-  ``One of the elves sounds like he's wandering closer to the door, but you think you almost heard a familiar word'', the \gls{gm} says.
-
-  ``I'll stay and listen'', Hugi's player says.
-
-  ``They use your name, though you can't understand the elvish -- just your name -- then one opens the door, saying `well here he sits, or stands, I can never tell with dwarves'.
-  The other elves stand up quickly.''
-
-\end{exampletext}
-
 Assume all actions have \pgls{tn} of 7 unless your \gls{gm} states otherwise.
 Don't ask -- just roll!%
 \footnote{\Glspl{gm} never forget to state the \gls{tn}, so if you're told to roll, but don't hear any \gls{tn}, then the \gls{tn} \emph{must} be 7.
 This is legally binding.}
 
-These standard rules should cover any situation, with the right interpretation.
-However, for suggested interpretations with more detail, see \nameref{skill_uses}, \vpageref{skill_uses}.
+\playCommentary[t]{
+  \begin{description}\sf
+    \item[Player 3:]
+    So do I sneak up?
+    \item[\Glsfmttext{gm}:]
+    Yes, and a voice inside barks out `look, did you see that?'.
+    They discuss, now quieter.
+    \item[Player 2:]
+    So they know we're here?
+    \item[\Glsfmttext{gm}:]
+    The door stays shut.
+    Voices murmur and shift about the room.
+    \item[Player 1:]
+    I'll listen at the door.
+    \item[\Glsfmttext{gm}:]
+    Roll Wits and Empathy at \glsfmtlong{tn} nine.
+    \item[Player 1:]
+    \epsdice[black]{2}~\epsdice{4}
+    Nope, total failure.
+    \item[\Glsfmttext{gm}:]
+    Their voices carry through the door, but gusts of wind interrupt at all the wrong times.
+    The door remains still.
+    You can listen for a while if you want, and turn that two to a six.
+  \end{description}
+}{
+  Since the \gls{gm} knows the door won't open, so there's no danger of being caught.
+  And without danger, the characters can just try again until things improve.
 
-\subsection{One Roll Only}
-\index{Group actions}
+  The \gls{gm} interpreted that `\epsdice[black]{2}' as the wind's interference (a short-term problem) and the `\epsdice{4}' as the long-term situation (the voices continue to chat nearby).
+  The interpretation's completely arbitrary, but it can help to make sense of \glspl{restingaction}.
+}
 
-Players only make one \gls{natural} per action.
-If a player wants to re-try an action, the result remains the same unless circumstances change.
+\subsection{The \Glsfmttext{natural}}
+\index{Group \glsfmtplural{action}}
+
+Players only make one \gls{natural} per \gls{action}.
+If a player wants to re-try \pgls{action}, the result remains the same unless circumstances change.
 
 When many characters are trying to do the same task, one player rolls, and all players consult the same results.
 
-\begin{exampletext}
-\begin{itemize}
-  \item
-  Everyone wants to kick in the door, the \gls{tn} is 10, and the roll uses \roll{Strength}{Crafts}.
-  \index{Doors!Teamwork}
-    \begin{itemize}
-    \item
-    Pikerudd's player rolls \twoDice{7}.
-    Her \roll{Strength}{Crafts} Bonus is 0, so she fails.
-    \item
-    Snowblight's \roll{Strength}{Crafts} total is +2, so his total is 9, and he also fails.
-    \item
-    Chatrik's \roll{Strength}{Crafts} total is +4, so her total is 11 -- she succeeds.
-    \end{itemize}
-  \item
-  These look like the famous Catacombs from the national anthem, but how do the words go?
-  Did the hero take two lefts and a right, or two rights and a left?
-    \begin{itemize}
-    \item
-    Water is filling the area, so time will be lost if they get muddled.
-    \item
-    Everyone rolls, and the highest result is Dzo's -- but he only equals the \gls{tn}.
-    \item
-    Dzo's player decides to guess left, rather let his companions think about the song for another moment.
-    They fail, but avoid wasting time.
-    \end{itemize}
-\end{itemize}
-
-\end{exampletext}
 
 If the troupe are all attempting the same action, then they only make one roll, while adding different \gls{attribute} to obtain their individual result.
+
+\subsubsection{The Dice Reveal}
+the unknown.
+Just how stuck has this door become?
+How irritable does this \gls{sunGuard} feel?
+The world represents the known difficulties by increasing or decreasing the \gls{tn}, but only the dice can reveal the complete picture.
+
+Once that picture reveals itself, it remains a stable point in the world.
+
+\playCommentary{
+  \begin{description}\sf
+    \item[\Glsfmttext{gm}:]
+    They begin discussing what kind of \gls{monster} might be waiting outside for them, and ready their swords to poke through the roof, but soon after the first begins doubting his senses, and says he might have imagined it.
+    It's been an hour, and they discuss sleeping.
+    \item[Player 1:]
+    We could kick down the door and take them by surprise?
+    \item[Player 2:]
+    Yea, let's go for it.
+    \item[\Glsfmttext{gm}:]
+    It's Strength and Crafts to hit the right spot and burst through, \glsfmtlong{tn} twelve.
+    \item[Player 1:]
+    I have a plus three total bonus.
+    \large I kick down
+    \twoDice{7}
+    the door!
+    \normalsize
+    \item[Player 1:]
+    I do not kick down the door.
+    \item[Player 2:]
+    I've got a plus four bonus, so I'll try busting the door down.
+    \twoDice{9}
+    The total's\ldots
+    \item[\Glsfmttext{gm}:]
+    The roll remains nine, I'm afraid, so your total is just ten.
+    The door remains barred, despite your kick.
+    The voices panic and the distinct sound of metal follows.
+    The loudest says `help me get the plate on, quick!'.
+    \item[Player 3:]
+    One of them has \emph{plate armour}?
+    \item[Player 2:]
+    At least one.
+
+    Can we both kick at the same time?
+  \end{description}
+}{
+  The first character's +4 Bonus, and half of the second charcter's +3 Bonus add up to $+5\frac{1}{2}$, so we round up for a +6 total Bonus.
+  The door splinters open and the group rush in.
+}
 
 \subsection{\Glsfmtplural{restingaction}}
 \label{restingactions}
 
-Difficult, but safe actions allow players to repeat the same task until they get it right or give up.
-In these cases, the player sets one die to a `6', and rolls only the other die.
+When there's no danger, characters can try the same thing until the situation improves.
+The player turns the darker die to face `six'.
+If the dice roll a tie, the \gls{gm} might allow a re-roll where it makes sense to sink further time into a project to acheive a different result.
 
-\begin{exampletext}
-\begin{itemize}
-  \item
-    The troupe really need a favour from a local \gls{warden}, but he has no time to meet with \gls{guard}~\glspl{fodder}.
-  \begin{itemize}
-    \item
-    The \gls{gm} disallows this as \pgls{restingaction}.
-    \item
-    After the first failure, the noble tells his servants not to pay them any more attention -- they can no longer succeed via the official channels.
-  \end{itemize}
-  \item
-  The group want to sneak into a noble's house, and have plenty of time to plan the heist.
-  The \gls{gm} says they can wander past without suspicion, but it will take a week to plan and gather all the information they need.
-  The roll is \roll{Intelligence}{Stealth} at \tn[12].
-    \begin{itemize}
-    \item
-    The players accept, and roll: \dicef{4}.
-    \item
-    With \dicef{6}~\dicef{4} on the table, the dice show `10', and the total is `13' -- a narrow success.
-    \end{itemize}
-\end{itemize}
-\end{exampletext}
-
-\subsection{Resisted Actions}
-\label{resistedactions}
-
-When \pgls{pc} and \pgls{npc} act in opposition to each other, the player adds their characters \gls{attribute} + \gls{skill} Bonuses as usual, and the \gls{tn} equals \tn[7] plus the \gls{npc}'s \gls{attribute} + \gls{skill}.%
-\footnote{In general, only players roll for actions.}
-
-\begin{exampletext}
-  \begin{itemize}
-    \item
-      A local cutthroat wants to sneak up on \pgls{pc} while they go shopping for armour, and corner them alone.
-      Her \roll{Wits}{Stealth} gives her a +3 Bonus, so the \gls{gm} asks for a \roll{Wits}{Vigilance} roll at \tn[10].
-    \item
-      The troupe need to convince the locals not to trust a particular psychotic, lying, bastard.
-      Despite him not being present, the \gls{gm} notes that he his \roll{Charisma}{Empathy} grants a +5 Bonus, so he states the \gls{tn} is 12.
-    \item
-    \Pgls{witch} begins a curse against a member of the \gls{guard}, so he decides to stab her.
-    Her \roll{Charisma}{Fate} total is +2, so the \gls{tn} is ($7+2$) 9.
-
-    The guard uses his \roll{Dexterity}{Melee} to resist the curse, so if he wins, he will inflict Damage (covered in \autoref{combat}).
-    But if the \gls{witch}'s spell works, the \gls{guard} will fumble his attack, and lose some \glspl{fp}.
-  \end{itemize}
-\end{exampletext}
+If \pgls{restingaction} fails, the \gls{action} fails forever.
 
 \subsection{\Glsfmtplural{bandAct}}
 \label{teamwork}
 \label{banding}
 \index{Teamwork}
 
-Some tasks lend themselves to working with others.
-Others can be difficult or impossible to do with companions.
-When the troupe want to work together to get a broken cart down a hill safely, track down a thief, or spot danger, they can benefit from \pgls{bandAct}.
-But when sneaking through an area, navigating, or understanding history, \glspl{bandAct} together will not help.
+When many hands make light work, the character with the highest Bonus makes the roll, and another can add half their Bonus (always round up on halves).
 
-When characters can work together, one person rolls with their Bonus, then adds half the second Bonus, a quarter of the next Bonus, and so on.%
-\footnote{Always round up on half, so $4 + \frac{1}{2} = 5$, but $5 + \frac{1}{4} = 5$.}
+Every time a character joins, their score cuts in half again, making the next worth only a quarter, an eighth, and so on.%
+\footnote{You'll find a few different rules are just the \gls{bandAct} rule applied to a different area.
+For example, \nameref{bandingArmour}, \vpageref{bandingArmour}.}
 
-\begin{exampletext}
-  Convincing the townsfolk that they need to rebel against \pgls{warden}, the troupe work together on a \roll{Charisma}{Combat} roll.
-  Pikerudd has the highest Bonus, so he adds the full Bonus, then Snowblight adds half of his, and Chatrik, a quarter.
-
-  \begin{boxtable}[L|ccc]
-                            & Pikerudd & Snowblight      & Chatrik         \\
+\begin{boxtable}[L|ccc]
+  \bf\Glsfmttext{bandAct} Example & \bf First & \bf Second & \bf Third     \\
   \hline                                                                   
-  Charisma + Combat         &  +4     &     +2           & +2              \\
+  Total Bonus               &  +4     &     +3           & +1              \\
   Multiplier                &   1     & $\frac{1}{2}$    & $\frac{1}{4}$   \\
-  Value:                    &   4     & $1$              & $\frac{1}{2}$   \\
-  Running Total:            &   4     & $5$              & $5+\frac{1}{2}$ \\
+  Value:                    &   4     & $1\frac{1}{2}$   & $\frac{1}{4}$   \\
+  %Running Total:            &   4     & $5\frac{1}{2}$   & $5+\frac{3}{4}$ \\
   \hline
     Grand Total: & & & \textbf{6} \\
-  \end{boxtable}
-\end{exampletext}
+\end{boxtable}
 
 \index{Searching}
 Working together doesn't have to mean staying together.
 When searching \pgls{area}, \pgls{bandAct} generally involves splitting up.
 
-\subsubsection{Generalized \Glsfmtplural{bandAct}}
-means all accumulated Bonuses work the same way.
-If two people are pushing with Strength +2, they count as having a total Strength of +3.
-You'll find a few different rules are just the \gls{bandAct} rule applied to a different area (for example, \nameref{bandingArmour}, \vpageref{bandingArmour}).
+For most \glspl{action}, working together does not help, and the troupe cannot attempt \pgls{bandAct}.
+Asking friends to sneak into a castle will not make anyone more silent, and asking for help writing a letter usually just means having someone else write the letter.
+
+\playCommentary[t]{
+  \begin{description}\sf
+    \item[\Glsfmttext{gm}:]
+    The door shutters inwards as the bar flies off its perch.
+    Three men at the door scowl as they hold their swords up in defence.
+    Half a dozen spear-points above them descend to point towards you, bristling through the door.
+    \item[Player 1:]
+    There are nine in there?
+    \item[\Glsfmttext{gm}:]
+    Or more.
+    It's hard to count the heads past the wall of spears and shadows.
+    \item[Player 1:]
+    Run away?
+    \item[Player 2:]
+    Run away!
+    \item[\Glsfmttext{gm}:]
+    Roll Speed and Athletics at \glsfmtlong{tn} six.
+    \item[Player 1:]
+    Okay,
+    \twoDice{7} we got a seven, so I have\ldots just seven.
+    But we get away, right?
+    \item[\Glsfmttext{gm}:]
+    You certainly run down the road a while, but the \gls{ainumar}'s still shining bright above.
+    You keep on \gls{running}  down the road, after a minute of flat-out sprinting, you look behind and you can still see them.
+    \item[Player 2:]
+    I got a total of nine, so can I get away?
+    \item[\Glsfmttext{gm}:]
+    Yes --- you want to sprint ahead to safety?
+    \item[Player 3:]
+    Same here.
+    No use in all of us dying.
+    Sorry!
+    \item[\Glsfmttext{gm}:]
+    Where do you run?
+    Just down the road, or into the dark forest?
+    \item[Player 1:]
+    Down the road, screaming probably.
+    \item[\Glsfmttext{gm}:]
+    That's an encounter check then\ldots\dicef{1}\ldots yip, the noise of screaming draws something from the forest.
+    \item[Player 1:]
+    Nine-or-more bandits and \pgls{monster} of some kind.
+    In the dark.
+    No problem.
+    \item[\Glsfmttext{gm}:]
+    Glancing behind, a shadow descends from the skies and snatches a man in complete silence.
+    The rest stop, look up, and point their spears towards the \gls{ainumar}.
+  \end{description}
+}{
+  The random encounter roll produced \pgls{griffin}, so the \gls{gm} thought about how the world might look to \pgls{griffin}.
+  The big group of people would appear more intersting, and catching one among that `herd' would be easier.
+}
 
 \subsection{Margins}
 \index{Margins}
 \index{Failure Margin}
 \label{margin}
 
-If you ever need detail on how well an action went, look at how many points above the \gls{tn} the dice show.
+If you ever need detail on how well \pgls{action} went, look at how many points above the \gls{tn} the dice show.
 With \pgls{tn} of 12, rolling 14 means a Margin of~2.
 
-The \gls{gm} might use a Margin for some variable, for example a bard attempting to charm a crowd into giving him money might gain $2D6$ copper pieces plus the Margin, so if the Margin is 3 then he would get $2D6+3$ copper pieces.
-Margins might also be used to gain Bonuses on later rolls.
-Someone attempting to impress a noble court might roll \roll{Charisma}{Combat}; the bigger the Margin the more troops they will be trusted with, granting a Bonus to later strategy rolls.
+Someone building a raft might be able to fit an extra person for each Margin on the roll.
+Spreading embarrassing stories about \pgls{warden} might use the Margin to track the number of embarrassing stories the \gls{pc} which spread successfully.
 
 `Failure Margins' measure how far someone falls short of \pgls{tn}.
 When the \gls{tn} to attack someone is `12', then rolling `9' means a Failure Margin of `3', which often means that \gls{armour} counts for nothing, and the opponent scores \pgls{vitalShot}.
 
-\subsection{What the Dice Mean}
+\subsection{\Glsfmtname{resistedaction}}
+\label{resistedactions}
 
-You might think of the dice as representing random chance in the environment. Just how irritated is that person you're trying to question, and how creative is that craftsman feeling today? Dice are never re-rolled for different results on the same action because once the dice have told you what the situation is, the situation stays put.
+When \pgls{pc} clashes directly with \pgls{npc}, the \gls{npc}'s \glspl{trait} increase \gls{tn}.
+In general, only players roll for \glspl{action}; even if \pgls{npc} instigates the \gls{action}, a player makes the roll to resist.
 
-Such a do-over still suggests initial failure; it just means that the character is trying over and over again until they obtain a better result.
-Characters cannot roll dice for a different result unless the situation has changed notably, and generally not during the same day.
+In some sense, every \gls{action} is \pgls{resistedaction}.
+\Gls{foraging} can be phrased as \pgls{pc} resisting a forest with the \glspl{trait} `{\scshape Boggy 2, Cold 3}'.
+But nobody wants \pgls{statblock} for a forest, so it's easier to record a final \gls{tn} instead.
 
 \end{multicols}
 
@@ -287,6 +351,8 @@ These items take up a regular slot, but you can stack them together; so thirteen
 such as `a bit of paper' have \pgls{weight} of `0', but if \pgls{pc} needs to carry over fifty then they should be tracked as having \pgls{weight} of $\frac{1}{100}$.
 So four tomes, each with a hundred pages, have \pgls{weight} of~`4'.
 
+\pic{Roch_Hercka/dwarf_encumbrance}
+
 \subsubsection{Backpacks}
 \index{Backpacks}
 let characters hold more items easily, but dropping the \gls{weight} can become tricky in a tight situation.
@@ -301,8 +367,6 @@ Mounting it on their back reduces the Penalty to~-4.
 means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 If \pgls{pc} with 6~\glspl{hp} lifts a poleaxe with \gls{weight}~4, they would receive a -2~Penalty to attack.
 If the character actually hits, the Damage works as usual, so sometimes people find that picking up \pgls{weapon} twice their height feels like the best option they have.
-
-\pic{Roch_Hercka/dwarf_encumbrance}
 
 \subsection{The \Glsfmttext{weight} of Flesh}
 
