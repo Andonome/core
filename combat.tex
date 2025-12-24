@@ -179,6 +179,28 @@ lets the character travel up to 3 steps plus their Athletics Skill.
 requires 1~\gls{ap} if any player tells another to act, stop, or guard them.
 During combat, everyone should focus on the task at hand, and communicate sparingly, only when they need to say something vital.
 
+\startcontents[Manoeuvres]
+
+\subsection{Brawling}
+\index{Brawling}
+
+The Brawl \gls{skill} covers unarmed attacks.
+
+Standard strikes cost \pgls{ap} and deal $1D6$ + Strength Damage.
+
+\makeAutoRule{grab}{Grabbing}{attack with Brawl, both can grapple, and count as carrying the other's \glsentrytext{weight}}
+uses \roll{Dexterity}{Brawl} to attack -- success means either one can make a Grapple attack.
+Some animals, with \textit{Teeth}, can grab and deal Damage, but most humanoids need to grab first, and \emph{then} deal Damage with a grapple.
+
+While grappling, the characters count as carrying each other's \gls{weight}.
+So if \pgls{guard} with 9~\glspl{hp} picked up a goblin with 5~\glspl{hp}, then the \gls{guard} would count as carrying \pgls{weight} of 5, while the goblin would count as carrying \pgls{weight} of 9!
+
+\makeAutoRule{grapple}{Grappling}{Resisted \roll{Strength}{Brawl} roll to deal Damage} \label{grappling}
+with an opponent might consist in bites, headbutts, twisted bones, or strangulation-by-tentacle.
+However it goes, no \gls{weapon} can be used while grappling if they have \pgls{weight} above 1.
+
+\stopcontents[Manoeuvres]
+
 \subsection{\Glsfmtlongpl{fp}}
 \label{fate_points}
 
@@ -591,7 +613,7 @@ Creatures with the Air \gls{sphere} often have \pgls{spell} to help them fly.
 Spending \pgls{mp} adds a +3~Bonus to Speed for the purposes of taking off.%
 \footnote{This \gls{spell} is listed nowhere, because nobody needs further elaboration on how \glspl{dragon} fly.}
 
-\startcontents[Manoeuvres]
+\resumecontents[Manoeuvres]
 
 \subsection{Circumstances}
 
@@ -760,17 +782,6 @@ Defenders with more \glspl{ap} than the attacker can turn to face them.
 Up to 6 opponents can attack a lone character, but only half can flank, and any available walls reduce this number.
 
 \retreatCommentary[t]
-
-\makeAutoRule{grab}{Grabbing}{attack with Brawl, both can grapple, and count as carrying the other's \glsentrytext{weight}}
-uses \roll{Dexterity}{Brawl} to attack -- success means either one can make a Grapple attack.
-Some animals, with \textit{Teeth}, can grab and deal Damage, but most humanoids need to grab first, and \emph{then} deal Damage with a grapple.
-
-While grappling, the characters count as carrying each other's \gls{weight}.
-So if \pgls{guard} with 9~\glspl{hp} picked up a goblin with 5~\glspl{hp}, then the \gls{guard} would count as carrying \pgls{weight} of 5, while the goblin would count as carrying \pgls{weight} of 9!
-
-\makeAutoRule{grapple}{Grappling}{Resisted \roll{Strength}{Brawl} roll to deal Damage} \label{grappling}
-with an opponent might consist in bites, headbutts, twisted bones, or strangulation-by-tentacle.
-However it goes, no weapons can be used while grappling if they have \pgls{weight} above 1.
 
 \makeAutoRule{guarding}{Guarding}{redirect attacks against one person to yourself. Cost: 1~\glsentrytext{ap}}
 \index{Guarding}
