@@ -333,76 +333,6 @@ Failure means $1D6$ Damage, plus the character's Speed (running faster means mor
 \index{Hats!Caving}
 Tall hats add a +1~Bonus, as they let one feel a low ceiling before receiving a conk to the head.
 
-\subsection{News \& Information}
-
-This is \gls{yonder}'s domain, so \pgls{templeOfCuriosity} can add a Bonus to any task.
-
-\makeRule{find_rumours}{Finding rumours}{Charisma}{Empathy}{3}
-See also, verifying rumours, \vpageref{verify_rumours}.
-
-\makeRule{identify_item}{Identifying a Local Item}{Intelligence}{Academics}{12}
-\index{Talisman@\glsentryname{talisman}!Identify}%
-\index{Identify|textbf}%
-means guessing out who made it, when they made it, and how.
-When identifying a local \gls{talisman}, most people can guess at the maker, and most \glspl{ingredient} remain visible once \pgls{talisman}'s made.
-
-A bad roll means the guess identifies the wrong creator.
-A tie indicates no guess at all.
-
-\makeRule{identify_foreign_item}{Identifying a Foreign Item}{Intelligence}{Academics}{14}
-means learning something of its origin,such as the culture, or the century it was created.
-\index{Identify!Foreign item}%
-\index{Artefact@\glsentryname{artefact}!Identify}%
-\Pgls{artefact}'s identity always hints at its initial purpose (not always the current purpose).
-
-A good library can add up to a +2~Bonus.
-
-\makeRule{cryptography}{Secret Messages}{Intelligence}{Vigilance}{against the cypher's \glsentrytext{tn}}
-Some cyphers are easy to write, easy to teach, and easy to crack.
-Others less so, and some are none of the above.
-\index{Encryption|textbf}
-\index{Coded Messages|see {Encryption}}
-
-Creating a cypher requires an \roll{Intelligence}{Stealth} roll at \gls{tn}~7 plus the cypher's level.
-Writing the cypher requires an \roll{Intelligence}{Academics} roll at \gls{tn}~7 plus double the cypher's level, and reading the cypher is the same (assuming the reader already understands it).
-
-Decrypting a cypher requires an \roll{Intelligence}{Academics} roll at \gls{tn}~7 plus triple the level.
-The decryption takes one day per level (and a failed roll mean the message has been misinterpreted) while taking \pgls{restingaction} requires one week per level (but uses no guesswork, and never suggests the wrong message).
-
-\begin{boxtable}[cYYY]
-  \textbf{Level} & \textbf{Creation \Glsentrytext{tn}} & \textbf{Reading \& Writing \Glsentrytext{tn}} & \textbf{Decryption \Glsentrytext{tn}} \\
-  \hline
-  1   &    8  &    9  &  10 \\
-  2   &    9  &   11  &  13 \\
-  3   &   10  &   13  &  16 \\
-  4   &   11  &   15  &  19 \\
-  5   &   12  &   17  &  22 \\
-\end{boxtable}
-
-Plenty of writing equipment can add a +1~Bonus, and a book on cyphers can add another~+1.
-
-When a character decrypts a message as \pgls{restingaction}, they have no idea how many weeks they will need -- only that the current time has been insufficient.
-
-\makeRule{letter_sealing}{Letter sealing}{Dexterity}{Academics}{9}
-\index{Letter Sealing}
-Proper seals have more than a blob of wax to keep them safe.
-Ultra secret letters have parts of the paper cut, then pierce the middle, and loop back around the outside.
-While anyone can open these letters, opening them without breaking the seal (so the letter does not appear to have been read) is nearly impossible.
-Failure indicates that the letter's seal breaks moments later, as the paper has been cut too thin.
-A tie indicates nothing special -- but of course opening the letter won't be quite the challenge it could be.
-
-Opening such a letter and resealing it properly requires an \roll{Intelligence}{Academics} roll, at \tn[14], plus the margin of whoever sealed the letter originally.
-
-\makeRule{verify_rumours}{Verifying rumours}{Intelligence}{Empathy}{13}
-Rumours are bad, but someone trying to verify them is worse.
-A failure on this roll means that people around have been alerted to the investigation (whether the rumour was true or not).
-\index{Investigation}
-
-If the investigator doesn't care about alerting anyone, they make take this \pgls{restingaction} during \gls{downtime}.
-
-\null
-\bigbreak
-
 \subsection{Town Activities}
 
 \makeRule{break_door}{Breaking in a door}{Strength}{Crafts}{10}
@@ -499,8 +429,75 @@ A tie means the character gets the item, but the victim immediately notices the 
 
 \larcenyChart
 
-\end{multicols}
+\subsection{Secrecy \& Discovery}
 
+This is \gls{yonder}'s domain, so \pgls{templeOfCuriosity} can add a Bonus to any task.
+
+\makeRule{cryptography}{Decrypting a Message}{Intelligence}{Academics}{14}
+\index{Decryption|textbf}
+\index{Coded Messages|see {Decryption}}
+\index{Cyphers|see {Decryption}}
+Many academics can break standard cyphers with enough time.
+Non-standard cyphers can raise the \gls{tn} considerably.
+
+Plenty of writing equipment can add a +1~Bonus, and a book on cyphers can add
+another~+1.
+
+When a character decrypts a message as \pgls{restingaction}, they have no idea
+how many weeks they will need --- only that the current time has been
+insufficient.
+
+\makeRule{encrypting}{Encryption}{Intelligence}{Stealth}{12}
+Sending an encrypted message just requires telling the recipient how to decrypt it.
+But for real secrets, it's always better to create one's own method of sharing secrets.
+
+Some write in invisible ink.
+Others hide the message inside a false message by placing three irrelevant words behind every intended word.
+Some have the intended message visible in a vertical zig-zag.
+And many combine methods, often using one to hide the text, and another to garble it.
+
+\preto\subsectionList{Fgnaqneq Rapelcgvba vf Onq Rapelcgvba }
+
+On a failed roll, the recipient cannot understand the message.
+
+\makeRule{find_rumours}{Finding rumours}{Charisma}{Empathy}{3}
+See also, verifying rumours, \vpageref{verify_rumours}.
+
+\makeRule{identify_item}{Identifying a Local Item}{Intelligence}{Academics}{12}
+\index{Talisman@\glsentryname{talisman}!Identify}%
+\index{Identify|textbf}%
+means guessing out who made it, when they made it, and how.
+When identifying a local \gls{talisman}, most people can guess at the maker, and most \glspl{ingredient} remain visible once \pgls{talisman}'s made.
+
+A bad roll means the guess identifies the wrong creator.
+A tie indicates no guess at all.
+
+\makeRule{identify_foreign_item}{Identifying a Foreign Item}{Intelligence}{Academics}{14}
+means learning something of its origin,such as the culture, or the century it was created.
+\index{Identify!Foreign item}%
+\index{Artefact@\glsentryname{artefact}!Identify}%
+\Pgls{artefact}'s identity always hints at its initial purpose (not always the current purpose).
+
+A good library can add up to a +2~Bonus.
+
+\makeRule{letter_sealing}{Letter sealing}{Dexterity}{Academics}{9}
+\index{Letter Sealing}
+Proper seals have more than a blob of wax to keep them safe.
+Ultra secret letters have parts of the paper cut, then pierce the middle, and loop back around the outside.
+While anyone can open these letters, opening them without breaking the seal (so the letter does not appear to have been read) is nearly impossible.
+Failure indicates that the letter's seal breaks moments later, as the paper has been cut too thin.
+A tie indicates nothing special -- but of course opening the letter won't be quite the challenge it could be.
+
+Opening such a letter and resealing it properly requires an \roll{Intelligence}{Academics} roll, at \tn[14], plus the margin of whoever sealed the letter originally.
+
+\makeRule{verify_rumours}{Verifying rumours}{Intelligence}{Empathy}{13}
+Rumours are bad, but someone trying to verify them is worse.
+A failure on this roll means that people around have been alerted to the investigation (whether the rumour was true or not).
+\index{Investigation}
+
+If the investigator doesn't care about alerting anyone, they make take this \pgls{restingaction} during \gls{downtime}.
+
+\end{multicols}
 
 \section{Standards}
 
