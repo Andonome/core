@@ -107,9 +107,9 @@ The player then decides which god will take the character's soul, and writes the
 \label{actionPoints}
 \index{Initiative}
 
-Everyone begins each \gls{combat} \gls{round} with a number of \glsentryfullpl{ap} equal to their \roll{Speed}{3}; then they spend \glspl{ap} for each action.%
-\footnote{Anyone with a Speed Bonus of -3 can act on Initiative 0, but only after everyone else has reached Initiative 0.
-Those with a lower Speed Bonus must wait one cumulative round extra, before acting.}
+Everyone begins each \gls{combat} \gls{round} with a number of \glsentryfullpl{ap} equal to their \roll{Speed}{3}; then they spend \glspl{ap} for each action.
+Characters don't need `enough' \glspl{ap} to act --- they just keep going, and keep spending \glspl{ap}.
+A character with 1~\gls{ap} using an axe which costs 3~\glspl{ap} simply goes down to -2~\glspl{ap}.
 
 \subsubsection{Negative \Glsfmtlongpl{ap}}
 inflict a Penalty to all \glspl{action}.
@@ -132,6 +132,9 @@ Once someone reaches 0~\glspl{ap}, they cannot initiate any actions, but they mu
   \addtocounter{track}{-\value{heft}}
   As the last goblin attacks, he tries to resist, but his \absNum{track} Penalty stops him pulling the sword back in time, and the goblin stabs the massive gnoll in the gut with a javelin, inflicting 4~Damage.
 \end{exampletext}
+
+\makeAutoRule{slow_characters}{Slow Characters}{act last, with the usual Penalty for \glsfmtplural{ap}}
+who begin with no \glspl{ap} can still act at the end of each \gls{round}.
 
 \subsubsection{Initiative Order}
 \index{Initiative}
