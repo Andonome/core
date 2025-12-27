@@ -802,11 +802,17 @@ Up to 6 opponents can attack a lone character, but only half can flank, and any 
 \makeAutoRule{guarding}{Guarding}{redirect attacks against one person to yourself. Cost: 1~\glsentrytext{ap}}
 \index{Guarding}
 \index{Melee!Guarding}
-someone just requires standing in front of them.
-All attacks redirect to you after that point.
+someone just requires standing in front of them and a little focus.
+The character spends \pgls{ap} so that all attacks redirect to them instead of the target.
 This includes missile attacks only if you could otherwise evade them.
 
-If someone else tries to attack your charge, you will have to move to protect them, with a normal movement action.
+The attacker can use a single \gls{natural} to attack the target, so if that roll of \twoDice{10} is high enough to hit the defender, then it applies to the target at an attack (at which point the target must spend \gls{ap} to defend).
+
+Attackers can attempt to bypass the guardian with any \gls{action} that makes sense.
+They might roll \roll{Dexterity}{Athletics} to beat the guardian's \roll{Dexterity}{Melee}; on a fail, guardian strikes them, on a success the attacker sprints next to the target (and can make another attack roll later, if they have \glspl{ap} remaining).
+Or \pgls{witch} might roll \roll{Charisma}{Air} to cast \pgls{spell} to knock the opponent and target back with a gust of wind; again, failure means the guardian hits, and success means the Air \gls{spell} applies to the target (who can try to resist with their own action, using the same \gls{natural}).
+
+Guarding does not require \glspl{weapon} --- someone might just as easily use \glspl{spell}, or even pick a target up onto their shoulders, and `guard' by running away with \roll{Speed}{Athletics}.
 
 \makeAutoRule{ram}{Ramming}{Force an enemy back with \roll{Strength}{Brawl}: 2~\glspl{ap}}
 \index{Melee!Ram}
