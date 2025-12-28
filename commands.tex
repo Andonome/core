@@ -245,6 +245,51 @@
   }
 }
 
+
+\newcommand\guardCommentary[1][t]{
+  \playCommentary[#1]{
+    \begin{description}\sffamily
+      \item[\Gls{gm}:]
+      What do you do?
+      \item[Player 1:]
+      I need to stop anyone getting through that door, or attacking the \gls{baker}.
+      \item[\Gls{gm}:]
+      You're guarding then?
+      Spend two \glsfmtlongpl{ap} --- one for each of them.
+      Two of the \glspl{sunGuard} batter their shoulders at the door as their commander shouts at them to hurry up.
+      \item[Player 1:]
+      I'll wedge my poleaxe under the door so nobody can open it.
+      \item[\Gls{gm}:]
+      Huh.
+      No rules for that, so I guess you're rolling Dexterity and Crafts.
+      The \glsfmtlong{tn} would be seven, plus the first \gls{sunGuard}'s Strength and Crafts (which is zero).
+      That's \glsfmtlong{tn} nine.
+      \item[Player 1:]
+      \twoDice{7}
+      I got nine in total.
+      So what does that mean?
+      \item[\Gls{gm}:]
+      Well, you wedge the door, but also \pgls{sunGuard} enters just before you manage to wedge it shut.
+      He raises his sword to kill \Gls{baker} \composeHumanName.
+      \Glsfmtlong{tn}~twelve.
+      \item[Player 1:]
+      I have zero \glsfmtlongpl{ap}.
+      \item[\Gls{gm}:]
+      You're guarding him, so you can still make the \gls{resistedaction}.
+      \item[Player 1:]
+      \twoDice{6}
+      Nine in total.
+      So\ldots
+      \item[\Gls{gm}:]
+      \dicef{2}
+      The \gls{sunGuard} cuts down the \gls{baker}, then turns to you, with blood-spatter on his face.
+    \end{description}
+  }{
+    In this battle, the lone \gls{pc} acted perfectly.
+    But the dice are fickle, and bad luck comes for them all eventually.
+  }
+}
+
 \newcommand\cavePic{
   \clearpage
   \pagestyle{empty}

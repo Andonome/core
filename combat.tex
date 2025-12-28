@@ -747,6 +747,8 @@ While doing so, the character gains 1~\gls{ep} each round (these \glspl{ep} are 
 
 If the character ever falls below 0~\glspl{ap}, then their stamina and focus has run out, and they breathe in immediately.
 
+\guardCommentary[b]
+
 \makeAutoRule{higherGround}{Higher Ground}{+1 to Attack}
 means gravity helps on the down-swing, while the opponent must bring their head a little bit closer.
 This position grants a +1~Bonus to attack.
@@ -811,15 +813,13 @@ Drawing a weapon from a \textit{rucksack}, however, could cost a couple of \glsp
 \makeAutoRule{dropWeapon}{Dropping a Weapon}{costs 0~\glsfmtplural{ap}}
 costs no \glspl{ap}, though they will be defenceless unless they do this while picking up another weapon.
 
-\vspace{.5em}
-\pic{Roch_Hercka/stances}
-
 \makeAutoRule{flank}{Flanking}{grants a +2 Attack Bonus}
 grants a +2 Attack Bonus when attacking someone from the rear.
 Defenders with more \glspl{ap} than the attacker can turn to face them.
 Up to 6 opponents can attack a lone character, but only half can flank, and any available walls reduce this number.
 
-\retreatCommentary[t]
+\vspace{.5em}
+\pic{Roch_Hercka/stances}
 
 \makeAutoRule{guarding}{Guarding}{redirect attacks against one person to yourself. Cost: 1~\glsentrytext{ap}}
 \index{Guarding}
@@ -848,6 +848,8 @@ The standard Weapon Bonus from any shield gives a Bonus to this roll (\autopager
 If the opponent resists with \roll{Strength}{Brawl} (and possibly a shield), then success allows you to push them back as you advanced.
 
 If they try jump out of the way with \roll{Speed}{Athletics}, then failure implies that they fall \textit{Prone}.
+
+\retreatCommentary[t]
 
 \makeAutoRule{sneakattack}{Sneak Attacks}{\roll{Dexterity}{Stealth}, roll Damage at +2}
 \label{sneakattack}
