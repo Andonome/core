@@ -290,6 +290,116 @@
   }
 }
 
+\newcommand\guardCommentaryII[1][t]{
+  \playCommentary[#1]{
+    \composeHumanName\ is fetching three \glspl{fodder} from town, but they've begun to fight.
+    \begin{description}\sffamily
+      \item[\Gls{gm}:]
+      She wants his fancy armour, her blade comes out in a flash, and she rushes forward.
+      Her \glsfmtlong{tn} is ten.
+      What do you do?
+
+      \bigLine\par
+      \toggletrue{examplecharacter}
+      \setcounter{ap}{2}
+      \setcounter{dr}{0}
+      \togglefalse{allyCharacter}
+      \setcounter{covering}{0}
+      \setcounter{toHit}{10}
+      \setcounter{hp}{8}
+      {\scshape (Crawshank)}
+      \par\nobreak\derivedstats
+
+      \setcounter{ap}{3}
+      \setcounter{dr}{3}
+      \setcounter{covering}{3}
+      \toggletrue{allyCharacter}
+      \setcounter{att}{2}
+      \setcounter{damage}{2}
+      \setcounter{hp}{8}
+      {\scshape (\currentName)}\smallbreak
+      \par\noindent \derivedstats
+      \item[Player 1:]
+      Guard the young lad\ldots and take out my axe?
+      Can't do both.
+      I guess I'll guard him first and kick her as she approaches; but I can only add the dexterity bonus, I don't have the brawl skill.
+
+      \bigLine\par
+      \setcounter{ap}{2}
+      \setcounter{dr}{3}
+      \setcounter{covering}{3}
+      \toggletrue{allyCharacter}
+      \setcounter{att}{1}
+      \setcounter{damage}{1}
+      \setcounter{hp}{8}
+      {\scshape (\currentName)}\smallbreak
+      \par\noindent \derivedstats
+
+      \twoDice{6}
+      Missed!
+
+      \setcounter{ap}{0}
+      \setcounter{dr}{3}
+      \setcounter{covering}{3}
+      \toggletrue{allyCharacter}
+      \setcounter{att}{2}
+      \setcounter{damage}{2}
+      \setcounter{hp}{8}
+      {\scshape (\currentName)}\smallbreak
+      \par\noindent \derivedstats
+
+      \item[\Gls{gm}:]
+      \dicef{2}
+      She steps past you and stabs the lad.
+      He's lost four \glsfmtlongpl{hp}.
+
+      \bigLine\par
+      \setcounter{ap}{1}
+      \setcounter{dr}{0}
+      \togglefalse{allyCharacter}
+      \setcounter{covering}{0}
+      \setcounter{toHit}{10}
+      \setcounter{hp}{8}
+      {\scshape (Crawshank)}
+      \par\nobreak\derivedstats
+
+      Finally, she turns to stab you as the young lad runs.
+
+      \bigLine\par
+      \setcounter{ap}{0}
+      \setcounter{dr}{0}
+      \togglefalse{allyCharacter}
+      \setcounter{covering}{0}
+      \setcounter{toHit}{10}
+      \setcounter{hp}{8}
+      {\scshape (Crawshank)}
+      \par\nobreak\derivedstats
+
+      \item[Player 1:]
+      She's going back into the \gls{court} she I survive.
+
+      \bigLine\par
+      \setcounter{ap}{-2}
+      \setcounter{dr}{3}
+      \setcounter{covering}{3}
+      \toggletrue{allyCharacter}
+      \setcounter{att}{-1}
+      \setcounter{damage}{2}
+      \setcounter{hp}{8}
+      {\scshape (\currentName)}\smallbreak
+      \par\noindent \derivedstats
+
+      \twoDice{11}
+      I hit!
+      \item[\Gls{gm}:]
+      I'm afraid not.
+      The \glsfmtlong{ap} penalty brings you down to ten.
+      That's a tie.
+
+    \end{description}
+  }{}
+}
+
 \newcommand\cavePic{
   \clearpage
   \pagestyle{empty}
