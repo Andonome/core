@@ -21,6 +21,9 @@ Consider the following goblins:
 \toggletrue{genExamples}
 
 \goblin
+\label{completelyDifferentGoblins}
+\set{enc}{damage}
+\addtocounter{enc}{4}
 
 The goblin's \roll{Dexterity}{Melee} totals \tn.
 We add the weapon's Bonus for a total of \gls{tn}~\arabic{toHit}.
@@ -64,10 +67,18 @@ When characters reach 0~\glspl{hp}, they fall over.
 \subsubsection{Stacking Damage}
 \index{Melee!Stacking Damage}
 \label{stackingDamage}
-could lead to rolling $1D6+7$ Damage, which would create predictable and deterministic results.
-To avoid predictable outcomes, every four points of Damage becomes $1D6$;
-so $1D6 + 4$ becomes $2D6$ Damage.
-Check the chart \vpageref{stackingDamageChart}.
+turns into another die every 4 increments, because Damage is always rolled.
+With a +3 Damage Bonus, you roll $1D6+3$, but with a +4~Bonus you turn that 4~Damage into $+1D6$ (and roll $2D6$).
+This continues until the Bonus is less than 3
+(check the chart \vpageref{stackingDamageChart}).
+
+Most of the time, this process is applied before anyone sees it.
+By default, people deal 4~Damage (which automatically turns into $1D6$).
+The goblins \vpageref{completelyDifferentGoblins} deal \arabic{enc}~Damage, but their \gls{statblock} converts this automatically.
+
+\paragraph{Small amounts of Damage}
+is also rolled, so 3 Damage becomes $1D6-1$.
+Only 1~Damage remains `1~Damage' when applied.
 
 \subsubsection{\Glsfmtlongpl{hp}}
 are equal to 6 plus a character's Strength Bonus.
