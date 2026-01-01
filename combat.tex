@@ -892,27 +892,53 @@ If successful, the sneak attack deals standard Damage with a +2~Bonus, and provi
 \index{Retreat@\Glsentrytext{retreat}}
 \label{chases}
 
-\Gls{retreat} works like any other \gls{resistedaction} -- players roll their character's \roll{Speed}{Athletics} against their opponents'.
-A Margin of 3 ends \pgls{retreat}, as the \glspl{pc} flee, or (with a Failure Margin of 3) the \glspl{npc} catch up.
-A lower Margin means both sides run through \pgls{area} and gain \pgls{ep}, then the winner changes one \gls{trait} in the \gls{resistedaction}, and decides which \gls{area} to approach next.
+Characters can begin \pgls{retreat} at any point.
+They roll \roll{Speed}{Athletics} in \pgls{resistedaction} and everyone takes \pgls{ep}.
+Each Margin on the roll changes the distance between the two groups by \pgls{area}.
 
-If \glspl{npc} successfully catch up to the \glspl{pc}, they can instigate combat while right next to the \glspl{pc}.
-Of course, the \glspl{pc} can try another \gls{retreat}, but they'll have to roll \roll{Speed}{Athletics} against their opponent's \roll{Dexterity}{Melee} as the \glspl{npc} attempt an attack.
-Success on that roll just means the \gls{pc} has spent \pgls{ap} on jumping back.
-If they keep away until the end of the \gls{round}, \emph{then} they can begin another \gls{retreat}.
+\paragraph{On a successful roll}
+characters can decide where the chase goes, and exchange \pgls{trait} --- either Speed or Athletics --- for another \gls{trait} to represent the changing landscape.
 
-\subsubsection{Switching \Glsfmtplural{trait}}
-during a chase represents how changing to a new \gls{area} can change how the chase progresses.
+\begin{exampletext}
+  \composeHumanName\ flees from a hungry \gls{griffin}.
+
+  {\sffamily The \gls{griffin} has Speed 2 and Athletics 1, so players rolls \roll{Speed}{Athletics} at \tn[10].
+  The total is 11, so the player exchanges Speed for Dexterity and adds \pgls{ep}.}
+
+  \currentName\ flees through the forest, spots \pgls{thornyThicket} ahead, and runs right next to it while avoiding the spikes.
+  The less co\"ordinated \gls{griffin} has to slow down to unstick a wing.
+
+  {\sffamily The player rolls again with \roll{Dexterity}{Athletics}.
+  The \gls{griffin} has a Dexterity Bonus of +0, so the \gls{tn} is 8.
+  The player rolls a 10 in total, and adds another \gls{ep}.}
+
+  \currentName\ sprints away, over a river, and into the thick fur trees.
+  The \gls{griffin} begins looking for a place to take off and fly, but \currentName\ has long gone by that point.
+\end{exampletext}
+
+\paragraph{On a failed roll}
+the distance between the pursuer and prey decreases by \pgls{area}.
+Once the two have zero \glspl{area} between them, the hunter catches their prey, and combat can begin with zero \glspl{step} between them.
+
+They prey can attempt to run again on the \emph{next} \gls{round}.
+
+\paragraph{On a tie}
+the two run in a small circle then roll again.
+The \glspl{trait} remain the same as before, and no change occurs except gaining the usual \gls{ep}.
+
+\paragraph{The distance to escape}
+depends on the landscape, but by default, characters must be 3~\glspl{area} ahead of their pursuers to completely escape (meaning a Margin of 3 must be rolled in total).
+\Gls{retreat} down a barren mountain might demand four or five \glspl{area}, since the hunter can see their prey from such long way.
+But in a dense forest at Dusk, 2~\glspl{area} should be enough to escape.
+\index{Twilight!\Glsfmtname{retreat}}
+\index{Darkness}
+
+\subsubsection{Leading the \Glsfmttext{retreat} through New \Glsfmtplural{area}}
+changes the landscape, so the rules represent this by switching the relevant \glspl{trait}.
 Down in the \gls{deep}, characters may only have one or two caverns they can flee towards, but with a forest, the \gls{gm} should mention nearby features, such as streams, thorny bushes, or somewhere with low-hanging branches (suitable for climbing).
 
 When players suggest switching \glspl{trait}, any combination works fine, as long as it's minimally intelligible.
-Changing to \roll{Intelligence}{Athletics} because you're jumping through a bunch of guild halls, where you can jump through certain windows and open some doors, depending on which institutions are open and working before Sunrise works fine, but switching to \roll{Intelligence}{Athletics} because `\textit{I have +2 in Intelligence}' does not.
-
-\subsubsection{Twilight \& Darkness}
-can reduce how far someone needs to run to really escape.
-Characters running through a forest at dusk only need a Margin of 2 to flee far enough that nothing can see them.
-\index{Twilight!\Glsfmtname{retreat}}
-\index{Darkness}
+Changing to \roll{Intelligence}{Athletics} because you're moving through guild halls, where you can jump through certain windows and open some doors, depending on which institutions are open and working before Sunrise works fine; but switching to \roll{Intelligence}{Athletics} because `\textit{I have +2 in Intelligence}' does not work.
 
 \subsubsection{Chasing}
 \index{Chases|see {\expandafter\Glsentrytext{retreat}}}%
