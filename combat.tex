@@ -718,12 +718,19 @@ characters Attribute Bonuses cannot go beyond the character's \roll{Wits}{Vigila
 only gives a -1 Penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
 
 \index{Caving!Enclosed Melee}
-\makeAutoRule{enclosedcombat}{Enclosed Spaces}{Weapons' Attack Bonus counts for half}
+\makeAutoRule{enclosedcombat}{Enclosed Spaces}{Penalty equals lowest of weapon's \glsfmttext{weight} or Attack~Bonus}
 cause serious problems for people wielding longswords, battle axes, and other large weapons.
 Daggers and shortswords often have an easier time in these locations.
 
-When a character has no space to swing a weapon -- either vertically or horizontally -- their weapon's Attack Bonus only counts for half the usual amount (rounded up).
-So weapons with a +1 Attack Bonus remain as they were, but weapons with a +3 Attack Bonus reduce their usefulness to a +2 Attack Bonus.
+When a character has no space to swing a weapon, suffer a Penalty equal to the \gls{weapon}'s to-hit Bonus or \gls{weight} (whichever is lowest).
+
+\begin{exampletext}
+  Daggers have no Penalty (we can round their small \gls{weight} down).
+  \maul
+  \weaponName s have \pgls{weight} of \arabic{weaponWeight} and inflict \arabic{weaponDamage}~Damage, which gives them a -\arabic{weaponWeight}~Penalty in small passages.
+  \greatsword
+  \weaponName s have \pgls{weight} of \arabic{weaponWeight} and inflict \arabic{weaponDamage}~Damage, which gives them a -\arabic{weaponWeight}~Penalty in small passages.
+\end{exampletext}
 
 \makeAutoRule{falling}{Falling Damage}{equals half the \glsfmtplural{step} fallen, plus the character's Strength.}
 \index{Falling}
