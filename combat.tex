@@ -672,44 +672,56 @@ Spending \pgls{mp} adds a +3~Bonus to Speed for the purposes of taking off.%
 
 \subsection{Circumstances}
 
-\makeAutoRule{blindness}{Blindness}{spend 1~\glsentrytext{ap} and make a \roll{Wits}{Vigilance} before any other action}
-\index{Melee!Blindness}
+\makeAutoRule{blindness}{Blindness \& Darkness}{spend 1~\glsentrytext{ap} and make a \roll{Wits}{Vigilance} before any other action}
+work the same way --- the character must take time to sense their surroundings before any \gls{action}.
 \index{Blindness}
-in a battle requires responding to all attacks by spending \pgls{ap} and rolling \roll{Wits}{Vigilance}.
-On failure you receive Damage, but success achieves nothing.
-The same applies to initiating an attack, or moving anywhere.
-Loud noises (such as battle-cries) can easily increase this \gls{tn} to~12.
-
-While fighting blind, if the dice make \pgls{natural} roll equal to the number of nearby people on the character's side (including themself) then they hit a companion accidentally.
-So if a troupe of 5 people become blinded, each of them would hit a companion on the \gls{natural} of 5 or less, if they tried to attack anything, whether as a response or not.
-
-\makeAutoRule{darkness}{Darkness}{maximum Bonus equals \roll{Wits}{Vigilance}}
 \label{darkness}
-\index{Darkness}
+\index{Darkness|textbf}
 \index{Melee!Darkness}
 \index{Caving!Fighting in darkness}
-or deep twilight, can give a distinct advantage to those with sharper senses.
-However, when both sides suffer from the darkness, the battle hardly changes.
-Neither side can hit accurately, but then neither side can dodge or parry well either.
+They spend \pgls{ap} and roll \roll{Wits}{Vigilance}.
 
-\paragraph*{When fighting in total darkness}
-characters Attribute Bonuses cannot go beyond the character's \roll{Wits}{Vigilance}.
+The \gls{tn} begins at 7 and rises by 2 for each additional problem.
+
+\paragraph{On a tie}
+the character completes the \gls{action}, 
+with the wrong target (they run to the wrong place, or hit the wrong person).
+
+\paragraph{On a basic failure}
+the character may fall over, going \textit{prone}.
+
+\paragraph{With a Failure Margin of 3 or more}
+the character receives \dmg{0} from knocking into a tree, or getting hit by a stray sword.
 
 \begin{exampletext}
-  For example, a human guard has caught a room full of elves with stolen goods.
-  Thinking quickly, one of the elves douses the room's only lantern.
-  The human has a Wits Bonus of -1 and no Vigilance Skill, so his maximum roll has a -1~Penalty.
-  The elves have a total \roll{Wits}{Vigilance} of +3, so their \roll{Dexterity}{Melee} has only a +3 cap.
+  A cloud passes over the moon, just as the goblins attack.
+
+  {\sffamily
+    The \gls{gm} rolls \roll{Wits}{Vigilance} for each goblin, and asks the players to do the same for the \glspl{pc}.
+  }
+
+  Two characters and one goblin fall over.
+  One sensible person simply stands still, in the darkness, hoping to make fewer mistakes than everyone else.
+
+  {\sffamily
+    Only one \gls{pc} attacks and hits.
+    The two who fell over have a -2~Penalty and get hit.
+  }
+
+  Blades strike from the dark, and the screaming lets the goblins know where to strike again.
+  At least they did, until another began to scream louder.
+
+  {\sffamily
+    Now the goblins have hit their marks and the wounded \glspl{pc} cry out in pain, they can roll \roll{Wits}{Vigilance} at \tn[5] to find the screamers again in the darkness.
+    The lone \glspl{pc} who did not roll anything, but stood perfectly still in the darkness begins to scream too, not out of pain, but to stop the goblins hitting their mark.
+    Standing in the darkness and screaming does not require a roll.
+  }
 \end{exampletext}
 
-\paragraph{Fighting in minimal light}
-(such as a moonless night)
-only gives a -1 Penalty to characters with a \roll{Wits}{Vigilance} lower than their roll.
-
-\index{Caving!Enclosed Melee}
 \makeAutoRule{enclosedcombat}{Enclosed Spaces}{Penalty equals lowest of weapon's \glsfmttext{weight} or Attack~Bonus}
 cause serious problems for people wielding longswords, battle axes, and other large weapons.
 Daggers and shortswords often have an easier time in these locations.
+\index{Caving!Enclosed Melee}
 
 When a character has no space to swing a weapon, suffer a Penalty equal to the \gls{weapon}'s Damage Bonus or \gls{weight} (whichever is lowest).
 
