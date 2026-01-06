@@ -728,14 +728,19 @@ cause serious problems for people wielding longswords, battle axes, and other la
 Daggers and shortswords often have an easier time in these locations.
 \index{Caving!Enclosed Melee}
 
-When a character has no space to swing a weapon, suffer a Penalty equal to the \gls{weapon}'s Damage Bonus or \gls{weight} (whichever is lowest).
+When a character has no space to swing a weapon, their attacks suffer a Penalty equal to the \gls{weapon}'s Damage Bonus or \gls{weight} (whichever is lowest).
+If the Damage~Bonus is negative, the Penalty is~0.
 
 \begin{exampletext}
   Daggers have no Penalty (we can round their small \gls{weight} down).
   \maul
+
   \weaponName s have \pgls{weight} of \arabic{weaponWeight} and inflict \arabic{weaponDamage}~Damage, which gives them a -\arabic{weaponWeight}~Penalty in small passages.
+
   \greatsword
   \weaponName s have \pgls{weight} of \arabic{weaponWeight} and inflict \arabic{weaponDamage}~Damage, which gives them a -\arabic{weaponWeight}~Penalty in small passages.
+
+  The kite shield has a Damage Penalty, so cramped spaces do not add a Penalty to using one.
 \end{exampletext}
 
 \makeAutoRule{falling}{Falling Damage}{equals half the \glsfmtplural{step} fallen, plus the character's Strength.}
