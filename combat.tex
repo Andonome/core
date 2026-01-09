@@ -835,6 +835,8 @@ On a failure, the \gls{gm} describes how this plan goes wrong, and if the Failur
   If the \glspl{pc} roll a total of `6' at \tn[10], they each lose 4~\glspl{ap} on the first \gls{round}.
 \end{exampletext}
 
+Impromptu, or `mindless' \glspl{ambush} use the rules for \textit{Sneak Attacks} (\vpageref{sneakattack}).
+
 \index{Melee!Magic}
 \index{Magic!Close}
 \index{Spells!Melee}
@@ -913,7 +915,7 @@ On a success they can move as usual, but on failure they get pushed back and fal
 
 \retreatCommentary[t]
 
-\makeAutoRule{sneakattack}{Sneak Attacks}{\roll{Dexterity}{Stealth}, roll Damage at +2}
+\makeAutoRule{sneakattack}{Sneak Attacks}{\roll{Dexterity}{Stealth}, roll Damage at +2 with \glsfmttext{vitalShot}}
 \label{sneakattack}
 \index{Melee!Sneak Attack}
 can use different \glspl{attribute}, depending on the situation -- Dexterity helps when moving behind someone silently, while Intelligence helps moving to somewhere unremarkable and just letting the target approach.
@@ -925,6 +927,18 @@ Sneak attacks work better with smaller weapons, while longer weapons can signal 
 Therefore, every weapon's attack Bonus becomes a Penalty when attempting a sneak attack.
 
 If successful, the sneak attack deals standard Damage with a +2~Bonus, and provides an automatic \gls{vitalShot}.
+
+\begin{exampletext}
+  \composeHumanName\ enters the \glspl{warden}' bed chambers, through the
+  window.  The \gls{ainumar} illuminates their sleeping faces across a shadowy
+  floor.  He just needs to step across the room without waking them.
+
+  {\sffamily The player rolls \roll{Dexterity}{Stealth} at \tn[7].  The result
+  is a tie, so the player rolls Damage, and the total is~8.}
+
+  \currentName\ trips over a chamberpot, but decides to persevere, stabbing the
+  man in the neck as his wife screams for the \glspl{sunGuard}.
+\end{exampletext}
 
 \stopcontents[Manoeuvres]
 
