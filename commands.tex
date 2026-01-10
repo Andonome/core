@@ -138,6 +138,38 @@
   \arabic{Strength} & \arabic{enc}~\ifnum\value{enc}>1\glspl{step}\else\gls{step}\fi & \dmg{damage} & \arabic{tn} / \arabic{track} \\
 }
 
+\newcommand\sneakCommntary[1][b]{
+  \playCommentary[#1]{
+    \begin{description}\sf
+      \item[Player 1:]
+      If it's night, we can just sneak up to the \gls{bothy} and listen, right?
+      \item[\Glsfmttext{gm}:]
+      Tonight's quite bright.
+      The \gls{ainumar}'s shining down so bright the stars seem dim.
+      \item[Player 2:]
+      How big are the \gls{bothy}'s windows?
+      Can we keep out of line-of-sight?
+      \item[\Glsfmttext{gm}:]
+      Sneak up just by pure planning?
+      Maybe.
+      Make the roll with Intelligence and Stealth, \glsfmtlong{tn} eight.
+      \item[Player 2:]
+      I have three plus\ldots
+      \twoDice{9}\ldots
+      a total of twelve.
+      \item[Player 3:]
+      \twoDice{5}\ldots
+      sorry, looks like they caught me.
+      I have minus one Intelligence, so that makes four in total.
+      \item[\Glsfmttext{gm}:]
+      It's already been rolled, so your total is eight.
+      You tie.
+    \end{description}
+  }{
+    Players only make one roll for each \gls{action}.
+  }
+}
+
 \newcommand\retreatCommentary[1][b]{
   \playCommentary[#1]{
     The \glspl{sunGuard} have caught the \glspl{pc} red-handed, so the \glspl{pc} flee.
