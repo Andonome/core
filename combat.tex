@@ -323,35 +323,6 @@ The \gls{weight} of \arabic{weaponWeight} means each strike costs \arabic{weapon
             0~\glspl{ap}        &     -4~\glspl{ap} & Hulkis has a -4~Penalty, takes 9~Damage, and dies. \\
 \end{boxtable}
 
-\subsubsection{Using Two \Glsfmtplural{weapon}}
-\index{Dual Wielding}%
-\index{Weapons!Dual Wielding}%
-lets someone decide which to use for each \gls{action}, which can be useful, especially if one costs less \glspl{ap} to wield than the other.
-However, wielding \pgls{weapon} in one hand comes with \gls{weight} limitations (see `\nameref{oneHandedWeight}', \vpageref{oneHandedWeight}).
-
-Wielding two \glspl{weapon} of the same kind has no benefit.
-
-\vspace{1\baselineskip}
-\pic{Roch_Hercka/stances}{}
-
-\begin{exampletext}
-  \noindent Sindon hacks at the approaching goblin with his longsword.
-  Another attacks from behind.
-  He defends with his small shield faster than bringing the sword round, and knocks a goblin-tooth flying out its mouth.
-  But it doesn't dissuade the goblins, who keep hacking at him.
-
-  {\sffamily
-    The first attack takes Sindon from 3~\glspl{ap} to 1~\glspl{ap}.
-    For the second, he uses the buckler which leaves him with 0~\glspl{ap}.
-
-    The third attack put him down to -1, so he makes the fourth attack roll with a -1~Penalty, and the fifth with a -2~Penalty.
-
-    If Sindon only had the longsword, he would have spent 2~\glspl{ap} for each attack, and would have rolled that last attack with a -5~Penalty.
-  }
-\end{exampletext}
-
-\vspace{1\baselineskip}
-
 \subsubsection{Quality}
 varies a lot.
 \Glspl{pc} may find \pgls{weapon} with poor stats, such as a sword with \pgls{weight} higher than expected.
@@ -646,6 +617,9 @@ So when an attack is successful, the target both receives Damage and counts as \
 \subsubsection{\Glsfmtname{swarm}}
 \glsentrydesc{swarm}.
 
+\vspace{2\baselineskip}
+\pic{Roch_Hercka/conjuration_right}{}
+
 \swarm{Rats}{3}{2}{3}{0}
 
 \begin{exampletext}
@@ -847,6 +821,8 @@ On a failure, the \gls{gm} describes how this plan goes wrong, and if the Failur
 
 Impromptu, or `mindless' \glspl{ambush} use the rules for \textit{Sneak Attacks} (\vpageref{sneakattack}).
 
+\columnbreak
+
 \index{Melee!Magic}
 \index{Magic!Close}
 \index{Spells!Melee}
@@ -884,8 +860,34 @@ Drawing a weapon from a \textit{rucksack}, however, could cost a couple of \glsp
 \makeAutoRule{dropWeapon}{Dropping a Weapon}{costs 0~\glsfmtplural{ap}}
 costs no \glspl{ap}, though they will be defenceless unless they do this while picking up another weapon.
 
-\vspace{.5em}
-\pic{Roch_Hercka/conjuration_right}{}
+\subsubsection{Dual Wielding}
+\index{Dual Wielding}%
+\index{Weapons!Dual Wielding}%
+lets someone decide which to use for each \gls{action}, which can be useful, especially if one costs less \glspl{ap} to wield than the other.
+However, wielding \pgls{weapon} in one hand comes with \gls{weight} limitations (see `\nameref{oneHandedWeight}', \vpageref{oneHandedWeight}).
+
+Wielding two \glspl{weapon} of the same kind has no benefit.
+
+\vspace{1\baselineskip}
+\pic{Roch_Hercka/stances}{}
+
+\vspace{1\baselineskip}
+
+\begin{exampletext}
+  \noindent Sindon hacks at the approaching goblin with his longsword.
+  Another attacks from behind.
+  He defends with his small shield faster than bringing the sword round, and knocks a goblin-tooth flying out its mouth.
+  But it doesn't dissuade the goblins, who keep hacking at him.
+
+  {\sffamily
+    The first attack takes Sindon from 3~\glspl{ap} to 1~\glspl{ap}.
+    For the second, he uses the buckler which leaves him with 0~\glspl{ap}.
+
+    The third attack put him down to -1, so he makes the fourth attack roll with a -1~Penalty, and the fifth with a -2~Penalty.
+
+    If Sindon only had the longsword, he would have spent 2~\glspl{ap} for each attack, and would have rolled that last attack with a -5~Penalty.
+  }
+\end{exampletext}
 
 \makeAutoRule{flank}{Flanking}{grants a +2 Attack Bonus}
 grants a +2 Attack Bonus when attacking someone from the rear.
