@@ -307,9 +307,6 @@ Once a character carries a total \gls{weight} equal to their current \glspl{hp},
   %\rations &  \glsentrysymbol{weight} &  \glsentrysymbol{weight}  &  \glsentrysymbol{weight} & \glsentrysymbol{weight} & \textbf{-2} \\
 \end{boxtable}
 
-\end{exampletext}
-
-\begin{exampletext}
   Battling \pgls{basilisk} leaves Sind\"e with a broken and bleeding arm.
   She only has 2~\glspl{hp} left, and carries \pgls{weight} of 4 in total, so she's carrying \pgls{weight} equal to her \glspl{hp} twice, which means a -2~Penalty to all \glspl{attribute}.
 \end{exampletext}
@@ -333,7 +330,7 @@ So four tomes, each with a hundred pages, have \pgls{weight} of~`4'.
 \index{Coins!\Glsfmttext{weight}}
 100~\glspl{cp} are worth \pgls{sp}, but carrying \pgls{sp} has negligible weight, while the same value in \glspl{cp} adds up quickly.
 
-\pic{Roch_Hercka/dwarf_encumbrance}
+\bigbreak
 
 \subsubsection{Backpacks}
 \index{Backpacks}
@@ -353,6 +350,9 @@ means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 Breaching this limit means another \gls{ap} lost during combat.
 So an average gnome (with 4~\glspl{hp}) who insists on lifting a poleaxe in one hand will receive -2~\glspl{ap} during combat.
 
+\pic{Roch_Hercka/dwarf_encumbrance}
+
+\needspace{8\baselineskip}
 \subsection{The \Glsfmttext{weight} of Flesh}
 
 \makeAutoRule{bodyweight}{Bodyweight}{triple the maximum \glsfmtplural{hp}}
@@ -393,12 +393,15 @@ wicked diseases accrue \glspl{ep} until healed with \pgls{elixir}%
 \footnote{Find \glspl{elixir} \vpageref{makeElixir}.}
 from the correct \gls{sphere}.
 
-See `\nameref{trackingTokens}' \vpageref{trackingTokens} for how to track \glsentrylongpl{ep}.
+\iftoggle{intro}{
+  See `\nameref{trackingTokens}' \vpageref{trackingTokens} for how to track \glsentrylongpl{ep}.
+}{}
 
 \end{multicols}
 
-\needspace{.3\pageheight}
-\null
+%!
+\needspace{.2\pageheight}
+%\null
 
 \section{Time \& Space}
 
