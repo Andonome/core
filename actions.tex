@@ -118,46 +118,6 @@ How irritable does this \gls{sunGuard} feel?
 The world represents the known difficulties by increasing or decreasing the \gls{tn}, but only the dice can reveal the complete picture.
 Once that picture reveals itself, it remains a stable point in the world.
 
-\playCommentary{
-  \begin{description}\sf
-    \item[\Glsfmttext{gm}:]
-    They begin discussing what kind of \gls{monster} might be waiting outside for them, and ready their swords to poke through the roof, but soon after the first begins doubting his senses, and says he might have imagined it.
-    It's been an hour, and they discuss sleeping.
-    \item[Player 1:]
-    We could kick down the door and take them by surprise?
-    \item[Player 2:]
-    Yea, let's go for it.
-    \item[\Glsfmttext{gm}:]
-    It's Strength and Crafts to hit the right spot and burst through, \glsfmtlong{tn} twelve.
-    \item[Player 1:]
-    I have a plus three total bonus.
-    \large I kick down
-    \twoDice{7}
-    the door!
-    \normalsize
-    \item[Player 1:]
-    I do not kick down the door.
-    \item[Player 2:]
-    I've got a plus four bonus, so I'll try busting the door down.
-    \twoDice{9}
-    The total's\ldots
-    \item[\Glsfmttext{gm}:]
-    The roll remains nine, I'm afraid, so your total is just ten.
-    The door remains barred, despite your kick.
-    The voices panic and the distinct sound of metal follows.
-    The loudest says `help me get the plate on, quick!'.
-    \item[Player 3:]
-    One of them has \emph{plate armour}?
-    \item[Player 2:]
-    At least one.
-
-    Can we both kick at the same time?
-  \end{description}
-}{
-  The first character's +4 Bonus, and half of the second charcter's +3 Bonus add up to $+5\frac{1}{2}$, so we round up for a +6 total Bonus.
-  The door splinters open and the group rush in.
-}
-
 \subsection{\Glsfmtplural{restingaction}}
 \label{restingactions}
 
@@ -201,57 +161,7 @@ When searching \pgls{area}, \pgls{bandAct} generally involves splitting up.
 For most \glspl{action}, working together does not help, and the troupe cannot attempt \pgls{bandAct}.
 Asking friends to sneak into a castle will not make anyone more silent, and asking for help writing a letter usually just means having someone else write the letter.
 
-\playCommentary[t]{
-  \begin{description}\sf
-    \item[\Glsfmttext{gm}:]
-    The door shutters inwards as the bar flies off its perch.
-    Three men at the door scowl as they hold their swords up in defence.
-    Half a dozen spear-points above them descend to point towards you, bristling through the door.
-    \item[Player 1:]
-    There are nine in there?
-    \item[\Glsfmttext{gm}:]
-    Or more.
-    It's hard to count the heads past the wall of spears and shadows.
-    \item[Player 1:]
-    Run away?
-    \item[Player 2:]
-    Run away!
-    \item[\Glsfmttext{gm}:]
-    Roll Speed and Athletics at \glsfmtlong{tn} six.
-    \item[Player 1:]
-    Okay,
-    \twoDice{7} we got a seven, so I have\ldots just seven.
-    But we get away, right?
-    \item[\Glsfmttext{gm}:]
-    You certainly run down the road a while, but the \gls{ainumar}'s still shining bright above.
-    You keep on \gls{running}  down the road, after a minute of flat-out sprinting, you look behind and you can still see them.
-    \item[Player 2:]
-    I got a total of nine, so can I get away?
-    \item[\Glsfmttext{gm}:]
-    Yes --- you want to sprint ahead to safety?
-    \item[Player 3:]
-    Same here.
-    No use in all of us dying.
-    Sorry!
-    \item[\Glsfmttext{gm}:]
-    Where do you run?
-    Just down the road, or into the dark forest?
-    \item[Player 1:]
-    Down the road, screaming probably.
-    \item[\Glsfmttext{gm}:]
-    That's an encounter check then\ldots\dicef{1}\ldots yip, the noise of screaming draws something from the forest.
-    \item[Player 1:]
-    Nine-or-more bandits and \pgls{monster} of some kind.
-    In the dark.
-    No problem.
-    \item[\Glsfmttext{gm}:]
-    Glancing behind, a shadow descends from the skies and snatches a man in complete silence.
-    The rest stop, look up, and point their spears towards the \gls{ainumar}.
-  \end{description}
-}{
-  The random encounter roll produced \pgls{griffin}, so the \gls{gm} thought about how the world might look to \pgls{griffin}.
-  The big group of people would appear more intersting, and catching one among that `herd' would be easier.
-}
+\banditCommentary[t]
 
 \subsection{Margins}
 \index{Margins}
@@ -286,6 +196,8 @@ But nobody wants \pgls{statblock} for a forest, so it's easier to record a final
 \index{Encumbrance}
 
 \begin{multicols}{2}
+
+\griffinCommentary
 
 \noindent%
 \Glspl{weight} track how much characters can carry in broad terms.
@@ -348,7 +260,9 @@ means using only one hand, and puts the limit to a quarter of their \glspl{hp}.
 Breaching this limit means another \gls{ap} lost during combat.
 So an average gnome (with 4~\glspl{hp}) who insists on lifting a poleaxe in one hand will receive -2~\glspl{ap} during combat.
 
-\pic{Roch_Hercka/dwarf_encumbrance}
+%\pic{Roch_Hercka/dwarf_encumbrance}
+
+\smallbreak
 
 \needspace{8\baselineskip}
 \subsection{The \Glsfmttext{weight} of Flesh}
@@ -361,6 +275,8 @@ If a human with 7~\glspl{hp} picks up another with 7~\glspl{hp}, they receive a 
 Narrow cave tunnels often measure who can enter by their \gls{weight}.
 The \gls{weight} of items counts towards this total, so characters may not be able to enter a small tunnel until they remove their backpack, or even \gls{armour}.
 These items can be pushed through first, or grabbed after.
+
+\bigbreak
 
 \subsubsection{Creature Features}
 \label{featureWeight}%
@@ -385,10 +301,12 @@ While mid-combat, characters should only gain \glspl{ep} from spells, not from t
 \Glsentrylongpl{fp} cannot mitigate \glspl{ep}.
 Characters with enough luck to avoid arrows and dragon-fire can still collapse after a long~run.
 
+\smallbreak
+
 \subsubsection{Special Categories}
 of \glspl{ep} will not disappear with \pgls{interval}'s rest.  Poison and some
 wicked diseases accrue \glspl{ep} until healed with \pgls{elixir}%
-\footnote{Find \glspl{elixir} \vpageref{makeElixir}.}
+%\footnote{Find \glspl{elixir} \vpageref{makeElixir}.}
 from the correct \gls{sphere}.
 
 \iftoggle{intro}{
@@ -398,7 +316,7 @@ from the correct \gls{sphere}.
 \end{multicols}
 
 %!
-\needspace{.2\pageheight}
+%\needspace{.2\pageheight}
 %\null
 
 \section{Time \& Space}
@@ -433,7 +351,7 @@ The final rate of travel usually sits under 10~miles per day, and anyone who wan
 
 Troupes who set their own rate of travel can gain \pgls{ep} and add a extra mile each \gls{interval}.
 Humans march better than anyone, and add 2~miles for each \gls{ep} they gain.%
-\iftoggle{stories}{\footnote{Covered in \textit{Stories}, \autopageref{humanInheritance}.}}{}
+%\iftoggle{stories}{\footnote{Covered in \textit{Stories}, \autopageref{humanInheritance}.}}{}
 If they're lucky enough to rest over the evening and night, the troupe can recuperate 2~\glspl{ep}, and march 12~miles per day without accumulating \glspl{ep} (or 14~miles per day for humans).
 
 \sidebox{
