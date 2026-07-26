@@ -810,6 +810,10 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
 
 \showSpells{Death2}
 \showSpells{Death2}
+  \iftoggle{judgement}{%
+  	Anyone with the Xenology \gls{skill} can attempt to speak with \glspl{artefact} or the \gls{undead}.
+	See \textit{Judgement} (\autopageref{Xenology}) for more.
+  }{}%
 
 \spell{Corpse Stench}% Name
   {Distant}% Enhancements
