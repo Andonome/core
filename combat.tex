@@ -814,34 +814,34 @@ If the Damage~Bonus is negative, the Penalty is~0.
   The kite shield has a Damage Penalty, so cramped spaces do not add a Penalty to using one.
 \end{exampletext}
 
-\makeAutoRule{falling}{Falling Damage}{equals half the \glsfmtplural{step} fallen, plus the character's Strength.}
+\makeAutoRule{falling}{Falling}{Damage equals the height in \glsfmtplural{step} + character's Strength, \roll{Speed}{Athletics} (\glsfmttext{tn}~7+ height) for half Damage.}
 \index{Falling}
-equals half the \glspl{step} fallen, plus the characters Strength.%
+inflicts Damage equal to the number of \glspl{step} fallen plus the character's Strength.%
 \footnote{``\textit{You can drop a mouse down a thousand-yard mine shaft and, on arriving at the bottom, it gets a slight shock and walks away.
 A rat is killed, a man is broken, a horse splashes.}'' -- J.B.S. Haldane, biologist.}
-The Damage then converts to a dice roll as usual.%
+So a dwarf falling 4~\glspl{step} would receive 4~Damage, which converts to \dmg{0}~Damage;%
 \footnote{See `\nameref{stackingDamage}' \vpageref{stackingDamage}.}
+a human with Strength +2 would receive \dmg{2}~Damage, and a gnome with Strength~-2 would receive only \dmg{-2}~Damage.
 
-If the \glspl{pc} all fall off a building, 3~\glspl{step} high, they would start with 2~Damage.
-Smaller creatures have less body to fall, so a gnome, with Strength~-2 would take no Damage from this fall; while a dwarf with Strength~+0 would take 2 Damage (which converts to \dmg{-2}).
-Larger creatures feel their own weight crushing down on them, so a gnoll with Strength~+4 would suffer 6~Damage (which converts to \dmg{2}).
+Characters can try to land gracefully, spreading the impact and halving the Damage by rolling \roll{Speed}{Athletics} at \tn[7] plus the height.
+That fall from 4~\glspl{step} height would have \tn[11].
 
-Characters who fell in a downward-arc can attempt to break their fall with a roll (in both senses), and avoid all Damage, with \roll{Speed}{Athletics}.
-The \gls{tn} is 7 plus the height of the fall.
-However, when falling straight downwards, the \gls{tn} is 7 plus \textit{double} the height in \glspl{step}.
+Falling \emph{onto} someone inflicts exactly the same Damage as the character receives, and a successful landing-roll lets the character add their weapon's Damage.
 
-\begin{boxtable}[cYYY]
-  \textbf{Strength} & \textbf{Height} & \textbf{Damage} & \textbf{TN} \\
-  \hline
-  \calcFallingDamage{-2}{6}
-  \calcFallingDamage{0}{3}
-  \calcFallingDamage{0}{6}
-  \calcFallingDamage{3}{1}
-  \calcFallingDamage{3}{3}
-  \calcFallingDamage{3}{6}
-\end{boxtable}
+\Gls{armour} protects the characters as usual, because any reasonable armour has a layer of padding (but does not protect anyone they fall onto).
+\index{Armour!Falling}
 
-\Gls{armour} counts as usual.
+When characters intentionally jump in a downward arc, rather than straight down, they are `Leaping' (\vpageref{leaping}).
+
+\begin{exampletext}
+  \Pgls{sunGuard} kicks \composeHumanName\ from the citadel's window, to the ground, 3~\glspl{step} below (where more \glspl{sunGuard} stand guard, unaware of the descending weight above their heads).
+  ``\textit{Best make the most of this}'', he thinks, and tries to land halberd-spike-first onto \pgls{sunGuard}'s head.
+
+  \sffamily
+  The player rolls \roll{Speed}{Athletics} at \tn[10], and adds a +2 Bonus for using the halberd to land properly.
+  The player rolls `13` so with +2~Strength the character receives only \dmg{-1}~Damage.
+  The \gls{sunGuard} receives all of that heft, delivered through a metal spike, and takes \dmg{4}~Damage (the high roll also means \pgls{vitalShot}).
+\end{exampletext}
 
 \makeAutoRule{holdingBreath}{Holding the Breath}{+1~\glsentrytext{ep} per round, must breath in at -1~\glsentrytext{ap}}
 during combat allows one to stay silent, and not breath any nasty gasses in.
@@ -854,6 +854,28 @@ If the character ever falls below 0~\glspl{ap}, then their stamina and focus has
 \makeAutoRule{higherGround}{Higher Ground}{+1 to Attack}
 means gravity helps on the down-swing, while the opponent must bring their head a little bit closer.
 This position grants a +1~Bonus to attack.
+
+\makeAutoRule{leaping}{Leaping}{\roll{Speed}{Athletics} (\glsfmttext{tn} equals double height) or Damage equals \glsfmtplural{step} fallen plus Strength.}
+works just like falling (\vpageref{falling}) but the \gls{tn} to land safely equals double the \glspl{step} fallen, and a successful roll mitigates all Damage.
+
+Each \gls{step} a character drops is \pgls{step} forwards, so leaping from a balcony 4~\glspl{step} in the air lets the character travel an extra 4~\glspl{step} forward (in addition to their regular \gls{running} action).
+
+\begin{exampletext}
+  \composeHumanName\ sees \gls{crawler} hammering through the wheat, towards two children, just 9~\glspl{step} away.
+  The \gls{village} walls stand 3~\glspl{step} tall, so he leaps forwards, spear at the ready.
+
+  {\sffamily
+    The player spends \pgls{ap} to move 4~\glspl{step}, and adds 3~\glspl{step} more for leaping from 3~\glspl{step} in the air.
+    That's not nearly enough, until the \gls{gm} remembers that the children can run 2~\glspl{step} and the \gls{crawler} must be right behind them.
+    The total distance is 7~\glspl{step}, but he's not resisting the fall, he's resisting the upwards-facing claws of the \gls{crawler}.
+    Instead of \tn[6] he has to beat \tn[11] with \roll{Speed}{Athletics}.
+
+    The player rolls `3', the \gls{crawler} inflicts \dmg{4}~Damage, and the ground inflicts \dmg{1}.
+  }
+  \currentName\ falls unconscious as the \gls{crawler} takes his body back to the forest, but at least the children returned safely.
+\end{exampletext}
+
+\index{Leaping}
 
 \makeAutoRule{entangled}{Trapped, Entangled, or Prone}{-2~Speed Penalty}
 \label{trapped}
