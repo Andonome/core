@@ -816,11 +816,6 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
 \showSpells{Death1}
 
 \showSpells{Death2}
-\showSpells{Death2}
-  \iftoggle{judgement}{%
-  	Anyone with the Xenology \gls{skill} can attempt to speak with \glspl{artefact} or the \gls{undead}.
-	See \textit{Judgement} (\autopageref{Xenology}) for more.
-  }{}%
 
 \spell{Corpse Stench}% Name
   {Distant}% Enhancements
@@ -837,6 +832,16 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   {\roll{Strength}{Athletics}}% Resist with
   {As the caster roars, a deathly feeling flows over the targets, who gain \arabic{spellPlusOne} \glspl{ep}}% Description
   {}
+
+\spell{Insensitivity}% Name
+  {Detailed}% Enhancements
+  {Wane}% Action
+  {Fate, Air}% Spheres
+  {target's current \glsfmtplural{ep}}% Resist with
+  {The caster flat-out denies the target's reasons for feeling tired (`\textit{blood-loss? Who needs blood?  What does it even do?}') and the target puts aside \arabic{spellPlusOne} \glsentrytext{ep} for \arabic{spellPlusOne} \glspl{interval} (at which point, they all return)}% Description
+  {
+  	The \gls{spell} can be cast any number of times.
+  }
 
 \spell{Preservation}% Name
   {Detailed}% Enhancements
@@ -856,7 +861,22 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
     If cast immediately, upon death, it can arrest the effects of \textit{rigor mortis} before they begin.
   }
 
+\showSpells{Death2}
+  \iftoggle{judgement}{%
+  	Anyone with the Xenology \gls{skill} can attempt to speak with \glspl{artefact} or the \gls{undead}.
+	See \textit{Judgement} (\autopageref{Xenology}) for more.
+  }{}%
+
 \showSpells{Death3}
+
+\spell{Stench Sort}% Name
+  {Distant, Detailed}% Enhancements
+  {Witness}% Action
+  {Fate, Air}% Spheres
+  {time since death}% Resist with
+  {Sniffing at the wind, the caster identifies any corpses from a particular species at \spellRange\ in the chosen direction}% Description
+  {Possible types include `elves', `\glspl{woodspy}', or `bats'.
+  The spell only confirms if such a corpse exists.}
 
 \spell{Vomit Mana}% Name
   {Detailed, Duplicated}% Enhancements
@@ -873,15 +893,6 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
   \arabic{track}~\glspl{mp}, but leave only
   \divide\value{track} by 3\addtocounter{track}{0}%
   \arabic{track}~\glspl{mp} in the \gls{area}.}
-
-\spell{Stench Sort}% Name
-  {Distant, Detailed}% Enhancements
-  {Witness}% Action
-  {Fate, Air}% Spheres
-  {time since death}% Resist with
-  {Sniffing at the wind, the caster identifies any corpses from a particular species at \spellRange\ in the chosen direction}% Description
-  {Possible types include `elves', `\glspl{woodspy}', or `bats'.
-  The spell only confirms if such a corpse exists.}
 
 \showSpells{Death4}
 
