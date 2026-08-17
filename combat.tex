@@ -593,7 +593,7 @@ work just like arrows, but need a smaller quiver.
 \subsubsection{Thrown Weapons}
 \index{Thrown Weapons|see {Projectiles}}
 such as knives, spears or others are typically not great at killing enemies, but they can certainly wound them.
-They work just as short bows, but their Damage equals the \gls{weapon}'s normal Damage minus 2.
+Their Damage equals the \gls{weapon}'s normal Damage minus 2, plus the wielder's Strength.
 \javelin\weaponName s deal
 \dmg{weaponDamage} Damage
 when used in combat, but only
@@ -602,12 +602,26 @@ when used in combat, but only
 
 \subsubsection{\Glsfmtname{impromptuThrownWeapons}}
 are available only to the rich, as sensible people don't throw swords, axes, knives, or cups away.
-But if a player insists on ballistic financial decisions, they can inflict cuts, bruises, and serious headaches on enemies; the weapon receives a -2~Penalty to hit and -2~Damage.
-\longsword\weaponName s don't make great projectiles, but they deal
-\dmg{weaponDamage} Damage
-when used in combat, so they can inflict
-\addtocounter{weaponDamage}{-2}%
-\dmg{weaponDamage} when thrown.
+But if a player insists on ballistic financial decisions, they can inflict cuts, bruises, and serious headaches on enemies; the weapon receives a -2~Penalty to hit and -2~Damage plus the usual Strength~Bonus.
+
+\begin{exampletext}
+  \composeHumanName\ takes her last throwing knife out, and it hits the \gls{crawler} with a `thunk'.
+
+  {\sffamily
+    \currentName\ has Strength~+3 and the knife grants +1~Damage, but throwing it inflicts only \dmg{2}~Damage.
+  }
+
+  The \gls{crawler} flees, but \currentName\ wants the corpse.
+  She still has her \longsword\weaponName\ in hand.
+
+  {\sffamily
+    The player rolls \roll{Dexterity}{Projectiles} with a -2~Penalty at \tn[8] (the target fled 5~\glspl{step} already).
+    \addtocounter{weaponDamage}{3}%
+    The standard \dmg{weaponDamage}~Damage becomes
+    \addtocounter{weaponDamage}{-2}%
+    \dmg{weaponDamage}.
+  }
+\end{exampletext}
 
 \end{multicols}
 
