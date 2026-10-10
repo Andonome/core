@@ -59,7 +59,7 @@ If you want to get involved, there are a number of ways to contribute:
 - Contributing art.
 - Or if you don't like how I'm handling the book, fork it and make your own.
 
-[compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
+[compiling]: https://gitlab.com/bindrpg/core/-/wikis/Development/Compiling
 [wiki]: https://gitlab.com/bindrpg/core/-/wikis/home
 [board]: https://gitlab.com/bindrpg/core/issues
 [issues email]: mailto:incoming+bindrpg-core-16324687-issue-@incoming.gitlab.com
