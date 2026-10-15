@@ -584,7 +584,8 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
     {The caster makes accusations of vile language, and the target grows needle-sharp claws.
     They grant +\arabic{spellPlusOne}~Damage when using Brawl, but inflict a -\arabic{spellPlusOne}~Penalty to using weapons or other tools}% Description
     {
-    The claws grow out naturally, or can be cut off at any time.}
+    The claws grow out naturally after \pgls{cycle}.
+    Cutting them off inflicts \arabic{spellPlusOne}~Damage.}
 
   \spell{Tweak}% Name
     {}% Enhancements
@@ -596,6 +597,16 @@ An entire \glsfmttext{region} can feel the pull, but more distant \glspl{area} w
 
     The spell lasts until the target makes use of any characteristic of their own race.
     For humans, this means their ability to walk long-distances, and for gnomes it means trying to focus on anything.}
+
+  \spell{Allergies}% Name
+    {Devious}% Enhancements
+    {Wane}% Action
+    {Earth, Water}% Spheres
+    {\roll{Speed}{Survival}}% Resist with
+    {The caster imagines what kinds of mould the target would become (if they were a mould).
+    After one \showOnset\ the target becomes allergic to the nearest food, plant, or animal, and takes a -\arabic{spellPlusOne}~Penalty to all actions while in its presence}% Description
+    {
+    The target can make another roll to resist the \gls{spell} after an exposure, once each week.}
 
   \spell{Regeneration}% Name
     {Detailed}% Enhancements
